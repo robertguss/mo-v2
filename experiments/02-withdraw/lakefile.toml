@@ -1,0 +1,10 @@
+name = "withdraw"
+version = "0.1.0"
+defaultTargets = ["Withdraw", "score"]
+
+[[lean_lib]]
+name = "Withdraw"
+
+[[lean_exe]]
+name = "score"
+root = "Main"
