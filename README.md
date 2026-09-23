@@ -12,6 +12,7 @@ without a decision in `DECISIONS.md`.
 - `DECISIONS.md`: every decision, one line each. Only Robert makes them.
 - `DECISION-MAP.md`: the open questions v2 must answer, in the order to answer
   them, each with options and a recommendation.
+- `PICTURE.md`: the big picture: what Mo is and its seven areas.
 - `CLAUDE.md`: working rules for any AI agent in this repo.
 
 ## Status
