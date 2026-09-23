@@ -9,6 +9,7 @@ without a decision in `DECISIONS.md`.
 
 ## Files
 
+- `HANDOFF.md`: where things stand and how to continue. Read first.
 - `DECISIONS.md`: every decision, one line each. Only Robert makes them.
 - `DECISION-MAP.md`: the open questions v2 must answer, in the order to answer
   them, each with options and a recommendation.

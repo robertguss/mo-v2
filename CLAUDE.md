@@ -1,5 +1,7 @@
 # Working rules for AI agents in Mo v2
 
+Lead sessions start by reading `HANDOFF.md`. Builders follow their brief.
+
 Mo v1 went wrong because AI agents made most of the decisions and checked their
 own work. These rules exist to stop that happening again.
 
