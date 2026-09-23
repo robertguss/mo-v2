@@ -1,0 +1,6 @@
+name = "tiny"
+version = "0.1.0"
+defaultTargets = ["Tiny"]
+
+[[lean_lib]]
+name = "Tiny"
