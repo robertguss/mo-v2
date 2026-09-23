@@ -13,6 +13,6 @@ decide. A row states the decision, not the argument; the argument lives in
 | D5  | 22 Sep 2026 | Robert does not read v2's code, including the code of the language itself. He verifies through specs, tests, simulation and proofs. v2 has to prove its own premise.                   |
 | D6  | 22 Sep 2026 | Robert makes every design decision. AI agents propose options and build what is decided.                                                                                               |
 | D7  | 22 Sep 2026 | v2 starts in a fresh repo, `~/Projects/startups/mo-v2`, local git only; a remote comes when Robert chooses. v1 is archived as reference.                                               |
-| D8  | 22 Sep 2026 | Answer the decision map before building anything.                                                                                                                                      |
+| D8  | 22 Sep 2026 | ~~Answer the decision map before building anything.~~ Superseded by D10 the same day.                                                                                                                                      |
 | D9 | 22 Sep 2026 | Robert is new to language design and formal methods. For every decision, the AI guides: it explains the concepts, lays out options and tradeoffs, and makes a recommendation. Robert still decides. |
 | D10 | 22 Sep 2026 | Build in small steps with quick feedback: pick a small idea, then implement, validate and verify it before adding the next. No large upfront brainstorming. |
