@@ -39,7 +39,7 @@ SHA-256: `856b1fd1…`.
 | Can an AI build and prove this in Lean?       | Yes. About 1 minute, and the proofs worked on the first attempt.                                                         |
 | Does the lock hold?                           | Yes. The builder hit a bug in a locked file and reported it instead of editing it.                                       |
 | Is a proof with only a safety promise enough? | No. A checker that rejects everything passes `Safe`; Lean proved it. Examples Robert approves (`Useful`) close that gap. |
-| Can Robert follow what the theorem promises?  | Robert's call; see the conversation of 22 Sep.                                                                           |
+| Can Robert follow what the theorem promises? | Yes, after a plain-English walk-through. He also drew the key conclusion himself: Lean alone is not enough (D15). |
 
 ## Limits
 
