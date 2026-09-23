@@ -13,11 +13,12 @@ without a decision in `DECISIONS.md`.
 - `DECISIONS.md`: every decision, one line each. Only Robert makes them.
 - `DECISION-MAP.md`: the open questions v2 must answer, in the order to answer
   them, each with options and a recommendation.
-- `PICTURE.md`: the big picture: what Mo is and its seven areas.
+- The big picture (what Mo is and its seven areas) lives in TheBrain's Mo
+  Research brain, as the Big Picture thought.
 - `CLAUDE.md`: working rules for any AI agent in this repo.
 
 ## Status
 
 23 Sep 2026: two experiments done (`experiments/`), and the big picture is
-accepted (`PICTURE.md`). Next: work through the seven areas at the concept
+accepted (Big Picture, in TheBrain). Next: work through the seven areas at the concept
 level, one at a time.

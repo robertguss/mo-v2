@@ -1,6 +1,7 @@
 # Handoff
 
-Read this first, then `CLAUDE.md`, `PICTURE.md` and `DECISIONS.md`. Last updated
+Read this first, then `CLAUDE.md`, the Big Picture thought in TheBrain's Mo
+Research brain, and `docs/DECISIONS.md`. Last updated
 23 Sep 2026, at the end of the session that created this repo.
 
 ## Where we are
@@ -10,7 +11,7 @@ software that no human writes or reads (D1–D5). The repo is two days old. It h
 two finished experiments and an accepted big picture, and no language code yet.
 
 **The open question to Robert** (ask it first, as the only question in your
-first message): _We're about to work through the seven areas in `PICTURE.md` at
+first message): _We're about to work through the seven areas of the Big Picture at
 the concept level. The recommendation is to start with area 1, the spec layer.
 Both experiments showed it's the part everything depends on, it's the part only
 Robert writes, and it's what makes Mo different. Should we start there, or with
