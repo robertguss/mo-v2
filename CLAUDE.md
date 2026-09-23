@@ -2,6 +2,14 @@
 
 Lead sessions start by reading `HANDOFF.md`. Builders follow their brief.
 
+Decisions (D1, D2, ...) are recorded in `docs/DECISIONS.md`.
+
+TheBrain is the source of truth for Mo's research documents (decided
+2026-09-23): the Mo Research brain, starting with its Session Orientation
+thought, which explains how to reach TheBrain's local API. The Tinderbox
+document `~/Documents/Tinderbox/mo-research.tbx` is a frozen copy; do not edit
+it.
+
 Mo v1 went wrong because AI agents made most of the decisions and checked their
 own work. These rules exist to stop that happening again.
 
@@ -17,9 +25,9 @@ own work. These rules exist to stop that happening again.
   the work starts. Changing an expected output to match a program's actual
   output is forbidden.
 - **Every piece of work has a written stop condition** before it starts.
-- **Builders work where Robert can see them** (D14): start each builder as a
-  new Claude Code session in a Herdr pane (`herdr agent start --kind claude`),
-  never as a hidden subagent.
+- **Builders work where Robert can see them** (D14): start each builder as a new
+  Claude Code session in a Herdr pane (`herdr agent start --kind claude`), never
+  as a hidden subagent.
 - **Nothing from v1 comes over without a decision.** `../mo-lang` is reference
   only.
 - **No process machinery** (auditors, handoff protocols, extra review layers)
