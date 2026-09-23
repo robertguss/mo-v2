@@ -1,5 +1,9 @@
 # Decision map
 
+> **Parking lot, not a queue (D10).** These questions get answered one at a
+> time, when an experiment makes one of them concrete. Don't try to settle them
+> in advance.
+
 The questions Mo v2 has to answer, in the order to answer them: each depends on
 the ones above it. Every question has options, what the v1 evidence says, and a
 recommendation. The recommendations are Claude's; none of them is a decision
