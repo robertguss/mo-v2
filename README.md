@@ -17,4 +17,6 @@ without a decision in `DECISIONS.md`.
 
 ## Status
 
-22 Sep 2026: repo created. No code. Answering the decision map comes first.
+23 Sep 2026: two experiments done (`experiments/`), and the big picture is
+accepted (`PICTURE.md`). Next: work through the seven areas at the concept
+level, one at a time.
