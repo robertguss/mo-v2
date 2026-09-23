@@ -1,0 +1,15 @@
+import Withdraw.Spec
+
+namespace Withdraw.Mutants.M02
+
+open Withdraw
+
+def withdraw : Impl := fun balance amount =>
+  if amount = 0 then
+    .error .invalidAmount
+  else if balance < amount then
+    .error .invalidAmount
+  else
+    .ok (balance - amount)
+
+end Withdraw.Mutants.M02
