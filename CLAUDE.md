@@ -15,6 +15,9 @@ own work. These rules exist to stop that happening again.
   the work starts. Changing an expected output to match a program's actual
   output is forbidden.
 - **Every piece of work has a written stop condition** before it starts.
+- **Builders work where Robert can see them** (D14): start each builder as a
+  new Claude Code session in a Herdr pane (`herdr agent start --kind claude`),
+  never as a hidden subagent.
 - **Nothing from v1 comes over without a decision.** `../mo-lang` is reference
   only.
 - **No process machinery** (auditors, handoff protocols, extra review layers)
