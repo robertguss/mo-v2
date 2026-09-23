@@ -1,3 +1,6 @@
+import Tiny.Spec
+import Tiny.Checker
+
 /-!
 # Experiment 1: acceptance
 
@@ -7,8 +10,6 @@ the proofs rely on: anything beyond Lean's standard axioms (`propext`,
 `Classical.choice`, `Quot.sound`), such as `sorryAx`, means the work is not
 accepted.
 -/
-import Tiny.Spec
-import Tiny.Checker
 
 namespace Tiny
 
