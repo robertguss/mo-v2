@@ -1,0 +1,23 @@
+{
+  "note": "diagnostic only, not scored",
+  "seed": 44891071,
+  "runs": 10,
+  "machine": {
+    "os": "macOS 26.6.2",
+    "cpu": "Apple M3 Max",
+    "koka": "Koka 3.2.9, 05:24:29 Sep 18 2026 (ghc release version)",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)"
+  },
+  "build_command": "koka -O2 -c --builddir=/Users/robertguss/Projects/startups/mo-v2/experiments/03-in-place/build/.koka-diag -o /Users/robertguss/Projects/startups/mo-v2/experiments/03-in-place/build/diagnostics/b4i64 /Users/robertguss/Projects/startups/mo-v2/experiments/03-in-place/diagnostics/b4i64.kk",
+  "medians_seconds": {
+    "koka-int64": 0.32092,
+    "koka-int": 0.5380355,
+    "rust-same-mimalloc": 0.2865835
+  },
+  "all_outputs_ok": true,
+  "ratios": {
+    "koka-int / koka-int64": 1.676540882462919,
+    "koka-int64 / rust-same-mimalloc": 1.1198132481458283,
+    "koka-int / rust-same-mimalloc": 1.877412691240075
+  }
+}

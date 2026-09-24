@@ -24,12 +24,13 @@ Candidates for later comparison (not commitments): Swift, OCaml or Haskell, Futh
 * Takeaways: tree insertion is about 1x of C or C++; the published worst case is about 1.8x, where reuse is impossible; the memory allocator alone moves C++ by about 1.5x.
 * Sources: https://www.microsoft.com/en-us/research/wp-content/uploads/2020/11/perceus-tr-v4.pdf and https://www.microsoft.com/en-us/research/wp-content/uploads/2023/05/fip-tr-v2.pdf
 
-## Result (23 Sep 2026): all four claims pass
+## Result (23 Sep 2026): claims A, C and D pass; claim B is observational
 
-Full write-up: [RESULT.md](../../../../../experiments/03-in-place/RESULT.md).
+Full write-up, corrected after the Codex verification (D55): [RESULT.md](../../../../../experiments/03-in-place/RESULT.md).
 
-* A (speed, pass): pure Koka vs same-container Rust with the same mimalloc: b1 0.84x, b2 0.83x, b3 1.06x, b4 1.82x. b4 is arithmetic-bound; a diagnostic with fixed-size int64 numbers ran at 1.16x, so the gap is Koka's unlimited-size numbers, not the trick. Idiomatic Rust arrays are 3-9x faster than any linked structure.
+* A (speed, pass): pure Koka vs same-container Rust with the same mimalloc: b1 0.84x, b2 0.83x, b3 1.06x, b4 1.82x. b4 is dominated by arithmetic. In a diagnostic, Koka with fixed-size int64 numbers was 1.68x faster than with its default int, leaving 1.12x against Rust. The allocator's build settings differ between the sides (8- vs 16-byte alignment).
 * B (fragility, observational): keeping an extra holder cost 1-4% on lists, with no warning. The helper and store-and-take-back changes were optimised away by the compiler, so B tested less than planned.
 * C (detection, pass): all 12 as expected, each broken test with its specific warning. Koka only warns.
-* D (realistic code, pass): 7 of 10 with the relaxed demand; 3 of 10 with the strict one (the lead corrected invoice-total, which fails through its helper). Failures: tree-insert and parse-csv-line (inherent), update-stock (library gap).
+* D (realistic code, pass): 7 of 10 with the relaxed demand; 3 of 10 with the strict one (invoice-total fails through its helper). Failures: tree-insert and parse-csv-line (inherent), update-stock (library gap).
+* Idiomatic Rust collections were 2.6-8.5x faster than the linked versions on b1-b3.
 * The lead's readings are proposals for Robert to decide.

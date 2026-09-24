@@ -28,5 +28,6 @@ without a decision in `DECISIONS.md`.
 23 Sep 2026: three experiments done (`experiments/`). The nine big design
 choices are made (D24–D33). Mo is one Ruby/Elixir-like language that does
 everything through its compiler and runtime (D34). Experiment 3 tested D26 in
-Koka, and all four claims passed (`experiments/03-in-place/RESULT.md`). Next: Robert
+Koka: claims A, C and D passed, and claim B is observational
+(`experiments/03-in-place/RESULT.md`). Next: Robert
 decides what the result means for D26, then Experiment 3b.

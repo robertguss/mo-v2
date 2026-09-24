@@ -5,3 +5,4 @@
 ## Contents
 
 * [Syntax](syntax.md)
+* [Core Semantics](../1-spec-layer/core-semantics.md) (also filed here)

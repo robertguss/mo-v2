@@ -5,3 +5,4 @@
 ## Contents
 
 * [Standard Library and Interop](standard-library-and-interop.md)
+* [Core Semantics](../1-spec-layer/core-semantics.md) (also filed here)

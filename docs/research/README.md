@@ -8,3 +8,4 @@ The research documents for Mo, moved from TheBrain's Mo Research brain into this
 * [Documents](documents/README.md)
 * [Parking lot](parking-lot/README.md)
 * [Session Orientation](session-orientation.md)
+* [Tools](tools/README.md) (added 23 Sep 2026, after the move from TheBrain)
