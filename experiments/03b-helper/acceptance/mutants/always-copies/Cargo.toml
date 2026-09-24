@@ -1,0 +1,7 @@
+[package]
+name = "mutant-always-copies"
+version = "0.1.0"
+edition = "2021"
+
+# Written by the lead. A deliberately wrong helper for claim C2's control: it keeps
+# every value correct but never updates in place, so it must pass C1 and fail C2.

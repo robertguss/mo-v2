@@ -1,0 +1,8 @@
+[package]
+name = "mutant-shared-mutation"
+version = "0.1.0"
+edition = "2021"
+
+# Written by the lead. A deliberately wrong helper for claim C1's control: every holder
+# shares one mutable store, so an update through one holder is seen by the others.
+# It must fail C1.

@@ -1,0 +1,21 @@
+CHECK unique-add-one allocations 10013 rule exactly-0 FAIL
+CHECK unique-reverse allocations 10000 rule exactly-0 FAIL
+CHECK unique-running-totals allocations 10013 rule exactly-0 FAIL
+CHECK hold-and-release-list allocations 0 rule exactly-0 ok
+CHECK unique-pop-front allocations 0 rule exactly-0 ok
+CHECK shared-list-push-front allocations 1 rule exactly-1 ok
+CHECK reuse-restored-list allocations 10013 rule exactly-0 FAIL
+CHECK hold-and-release-tree allocations 0 rule exactly-0 ok
+CHECK reuse-restored-tree allocations 13 rule exactly-1 FAIL
+CHECK unique-tree-insert-new allocations 17234 rule exactly-1000 FAIL
+CHECK unique-tree-insert-existing allocations 10832 rule exactly-0 FAIL
+CHECK shared-tree-insert allocations 13 rule at-most-28 ok
+CHECK list-kept-while-held live-change 0 rule exactly-0 ok
+CHECK list-freed live-change 0 rule exactly-0 ok
+CHECK tree-kept-while-held live-change 0 rule exactly-0 ok
+CHECK tree-freed live-change 0 rule exactly-0 ok
+COPYPATH share-new-copy-each-round live-change 1000000 rule at-least-1000000 ok
+COPYPATH share-nothing-piles-up live-change 0 rule exactly-0 ok
+DONE
+
+--- exit 0 ---

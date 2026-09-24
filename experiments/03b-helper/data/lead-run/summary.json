@@ -1,0 +1,903 @@
+{
+  "machine": {
+    "os": "macOS 26.6.2",
+    "cpu": "Apple M3 Max",
+    "koka": "Koka 3.2.9, 05:24:29 Sep 18 2026 (ghc release version)",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+    "mimalloc": {
+      "source": "/opt/homebrew/Cellar/koka/3.2.9/share/koka/v3.2.9/kklib/mimalloc",
+      "present_in_timed_rust": true
+    }
+  },
+  "runs_per_program": 10,
+  "acceptance_run": true,
+  "helper_screen_problems": [],
+  "build_problems": [],
+  "claim_c1": {
+    "ran": true,
+    "exit": 0,
+    "complete": true,
+    "passed": true,
+    "fixed": {
+      "unique-add-one": {
+        "ok": true,
+        "detail": ""
+      },
+      "unique-reverse": {
+        "ok": true,
+        "detail": ""
+      },
+      "unique-running-totals": {
+        "ok": true,
+        "detail": ""
+      },
+      "unique-push-front": {
+        "ok": true,
+        "detail": ""
+      },
+      "unique-pop-front": {
+        "ok": true,
+        "detail": ""
+      },
+      "empty-list": {
+        "ok": true,
+        "detail": ""
+      },
+      "unique-tree-insert": {
+        "ok": true,
+        "detail": ""
+      },
+      "tree-insert-existing": {
+        "ok": true,
+        "detail": ""
+      },
+      "shared-add-one": {
+        "ok": true,
+        "detail": ""
+      },
+      "shared-reverse": {
+        "ok": true,
+        "detail": ""
+      },
+      "shared-running-totals": {
+        "ok": true,
+        "detail": ""
+      },
+      "shared-push-pop": {
+        "ok": true,
+        "detail": ""
+      },
+      "shared-tree-insert": {
+        "ok": true,
+        "detail": ""
+      },
+      "shared-tail": {
+        "ok": true,
+        "detail": ""
+      },
+      "shared-subtree": {
+        "ok": true,
+        "detail": ""
+      },
+      "drop-long-list": {
+        "ok": true,
+        "detail": ""
+      },
+      "drop-large-tree": {
+        "ok": true,
+        "detail": ""
+      }
+    },
+    "generated": {
+      "lists": {
+        "sequences": 2000,
+        "failures": 0
+      },
+      "trees": {
+        "sequences": 2000,
+        "failures": 0
+      }
+    },
+    "failure_count": 0,
+    "failures_first_3": [],
+    "panics": 0,
+    "value_mismatches": {
+      "lists": 0,
+      "trees": 0
+    }
+  },
+  "claim_c2": {
+    "ran": true,
+    "exit": 0,
+    "complete": true,
+    "passed": true,
+    "checks": {
+      "unique-add-one": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "unique-reverse": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "unique-running-totals": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "hold-and-release-list": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "unique-pop-front": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "shared-list-push-front": {
+        "measure": "allocations",
+        "value": 1,
+        "rule": "exactly-1",
+        "ok": true,
+        "values_wrong": false
+      },
+      "reuse-restored-list": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "hold-and-release-tree": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "reuse-restored-tree": {
+        "measure": "allocations",
+        "value": 1,
+        "rule": "exactly-1",
+        "ok": true,
+        "values_wrong": false
+      },
+      "unique-tree-insert-new": {
+        "measure": "allocations",
+        "value": 1000,
+        "rule": "exactly-1000",
+        "ok": true,
+        "values_wrong": false
+      },
+      "unique-tree-insert-existing": {
+        "measure": "allocations",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "shared-tree-insert": {
+        "measure": "allocations",
+        "value": 13,
+        "rule": "at-most-28",
+        "ok": true,
+        "values_wrong": false
+      },
+      "list-kept-while-held": {
+        "measure": "live-change",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "list-freed": {
+        "measure": "live-change",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "tree-kept-while-held": {
+        "measure": "live-change",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      },
+      "tree-freed": {
+        "measure": "live-change",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      }
+    },
+    "copypath": {
+      "share-new-copy-each-round": {
+        "measure": "live-change",
+        "value": 1000000,
+        "rule": "at-least-1000000",
+        "ok": true,
+        "values_wrong": false
+      },
+      "share-nothing-piles-up": {
+        "measure": "live-change",
+        "value": 0,
+        "rule": "exactly-0",
+        "ok": true,
+        "values_wrong": false
+      }
+    },
+    "copypath_ok": true
+  },
+  "controls": {
+    "C1 catches a helper that changes shared values (shared-mutation): finished without panics, wrong values in every shared case and in generated sequences of both kinds": true,
+    "C1 accepts a correct helper that always copies (always-copies): finished and passed": true,
+    "C2 catches a helper that always copies (always-copies): finished, values right, allocations over the limit on every unique update": true
+  },
+  "control_runs": {
+    "c1": {
+      "check-copies": {
+        "ran": true,
+        "exit": 0,
+        "complete": true,
+        "passed": true,
+        "fixed": {
+          "unique-add-one": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-reverse": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-running-totals": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-push-front": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-pop-front": {
+            "ok": true,
+            "detail": ""
+          },
+          "empty-list": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-tree-insert": {
+            "ok": true,
+            "detail": ""
+          },
+          "tree-insert-existing": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-add-one": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-reverse": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-running-totals": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-push-pop": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-tree-insert": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-tail": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-subtree": {
+            "ok": true,
+            "detail": ""
+          },
+          "drop-long-list": {
+            "ok": true,
+            "detail": ""
+          },
+          "drop-large-tree": {
+            "ok": true,
+            "detail": ""
+          }
+        },
+        "generated": {
+          "lists": {
+            "sequences": 2000,
+            "failures": 0
+          },
+          "trees": {
+            "sequences": 2000,
+            "failures": 0
+          }
+        },
+        "failure_count": 0,
+        "failures_first_3": [],
+        "panics": 0,
+        "value_mismatches": {
+          "lists": 0,
+          "trees": 0
+        }
+      },
+      "check-shares": {
+        "ran": true,
+        "exit": 0,
+        "complete": true,
+        "passed": false,
+        "fixed": {
+          "unique-add-one": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-reverse": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-running-totals": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-push-front": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-pop-front": {
+            "ok": true,
+            "detail": ""
+          },
+          "empty-list": {
+            "ok": true,
+            "detail": ""
+          },
+          "unique-tree-insert": {
+            "ok": true,
+            "detail": ""
+          },
+          "tree-insert-existing": {
+            "ok": true,
+            "detail": ""
+          },
+          "shared-add-one": {
+            "ok": false,
+            "detail": "other holder: expected [1, 2, 3], got [2, 3, 4]"
+          },
+          "shared-reverse": {
+            "ok": false,
+            "detail": "other holder: expected [1, 2, 3], got [3, 2, 1]"
+          },
+          "shared-running-totals": {
+            "ok": false,
+            "detail": "other holder: expected [1, 2, 3], got [1, 3, 6]"
+          },
+          "shared-push-pop": {
+            "ok": false,
+            "detail": "other holder: expected [1, 2, 3], got [9, 2, 3]"
+          },
+          "shared-tree-insert": {
+            "ok": false,
+            "detail": "other holder: expected [10, 20, 30], got [10, 15, 20, 30]"
+          },
+          "shared-tail": {
+            "ok": false,
+            "detail": "updated: expected [11, 2, 3, 4], got [21, 11, 2, 3, 4]"
+          },
+          "shared-subtree": {
+            "ok": false,
+            "detail": "updated: expected [5, 10, 15, 20, 25, 30, 35, 40, 50], got [5, 10, 15, 20, 25, 30, 35, 40, 50, 60]"
+          },
+          "drop-long-list": {
+            "ok": true,
+            "detail": ""
+          },
+          "drop-large-tree": {
+            "ok": true,
+            "detail": ""
+          }
+        },
+        "generated": {
+          "lists": {
+            "sequences": 2000,
+            "failures": 2000
+          },
+          "trees": {
+            "sequences": 2000,
+            "failures": 2000
+          }
+        },
+        "failure_count": 4000,
+        "failures_first_3": [
+          "FAILURE lists seed 20260923 step 2 slot 1: expected [55, 94, 36, 4, 61, 15, 33, 79, 64, 79], got [55, 149, 185, 189, 250, 265, 298, 377, 441, 520] (first Some(55)) ops new[55, 94, 36, 4, 61, 15, 33, 79, 64, 79] hold(0) running-totals(0)",
+          "FAILURE lists seed 20260924 step 12 slot 1: expected [], got [13] (first Some(13)) ops new[54, 16, 45, 39] push-front(0,95) pop-front(0) drop(0) new[4] pop-front(1) reverse(1) reverse(1) running-totals(1) running-totals(1) new[39, 77, 29, 14, 8, 7, 74, 0, 2] running-totals(2) push-front-keep(1,13)",
+          "FAILURE lists seed 20260925 step 7 slot 0: expected [29, 37, 552, 502, 483, 413, 377, 311, 277, 184, 88, 34, 15], got [45, 29, 37, 552, 502, 483, 413, 377, 311, 277, 184, 88, 34, 15] (first Some(45)) ops new[50, 19, 70, 36, 66, 34, 93, 96, 54, 19, 14] reverse(0) running-totals(0) reverse(0) add-one(0) push-front(0,37) push-front(0,29) push-front-keep(0,45)"
+        ],
+        "panics": 0,
+        "value_mismatches": {
+          "lists": 2000,
+          "trees": 2000
+        }
+      }
+    },
+    "c2": {
+      "check-copies": {
+        "ran": true,
+        "exit": 0,
+        "complete": true,
+        "passed": false,
+        "checks": {
+          "unique-add-one": {
+            "measure": "allocations",
+            "value": 10013,
+            "rule": "exactly-0",
+            "ok": false,
+            "values_wrong": false
+          },
+          "unique-reverse": {
+            "measure": "allocations",
+            "value": 10000,
+            "rule": "exactly-0",
+            "ok": false,
+            "values_wrong": false
+          },
+          "unique-running-totals": {
+            "measure": "allocations",
+            "value": 10013,
+            "rule": "exactly-0",
+            "ok": false,
+            "values_wrong": false
+          },
+          "hold-and-release-list": {
+            "measure": "allocations",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          },
+          "unique-pop-front": {
+            "measure": "allocations",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          },
+          "shared-list-push-front": {
+            "measure": "allocations",
+            "value": 1,
+            "rule": "exactly-1",
+            "ok": true,
+            "values_wrong": false
+          },
+          "reuse-restored-list": {
+            "measure": "allocations",
+            "value": 10013,
+            "rule": "exactly-0",
+            "ok": false,
+            "values_wrong": false
+          },
+          "hold-and-release-tree": {
+            "measure": "allocations",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          },
+          "reuse-restored-tree": {
+            "measure": "allocations",
+            "value": 13,
+            "rule": "exactly-1",
+            "ok": false,
+            "values_wrong": false
+          },
+          "unique-tree-insert-new": {
+            "measure": "allocations",
+            "value": 17234,
+            "rule": "exactly-1000",
+            "ok": false,
+            "values_wrong": false
+          },
+          "unique-tree-insert-existing": {
+            "measure": "allocations",
+            "value": 10832,
+            "rule": "exactly-0",
+            "ok": false,
+            "values_wrong": false
+          },
+          "shared-tree-insert": {
+            "measure": "allocations",
+            "value": 13,
+            "rule": "at-most-28",
+            "ok": true,
+            "values_wrong": false
+          },
+          "list-kept-while-held": {
+            "measure": "live-change",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          },
+          "list-freed": {
+            "measure": "live-change",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          },
+          "tree-kept-while-held": {
+            "measure": "live-change",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          },
+          "tree-freed": {
+            "measure": "live-change",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          }
+        },
+        "copypath": {
+          "share-new-copy-each-round": {
+            "measure": "live-change",
+            "value": 1000000,
+            "rule": "at-least-1000000",
+            "ok": true,
+            "values_wrong": false
+          },
+          "share-nothing-piles-up": {
+            "measure": "live-change",
+            "value": 0,
+            "rule": "exactly-0",
+            "ok": true,
+            "values_wrong": false
+          }
+        },
+        "copypath_ok": true
+      }
+    }
+  },
+  "timing": {
+    "order": "interleaved, random per round",
+    "seed": 659084380,
+    "warm_up_runs": 1,
+    "timeout_seconds_per_run": 600,
+    "missing_programs": []
+  },
+  "programs": {
+    "helper b1": {
+      "median": 0.17097002049922594,
+      "fastest": 0.16869212500023423,
+      "slowest": 0.17569595800159732,
+      "runs": 10,
+      "median_peak_bytes": 34160640.0,
+      "all_outputs_ok": true
+    },
+    "helper b2": {
+      "median": 0.28802920849921065,
+      "fastest": 0.28506566699797986,
+      "slowest": 0.30724345799535513,
+      "runs": 10,
+      "median_peak_bytes": 68288512.0,
+      "all_outputs_ok": true
+    },
+    "helper b3": {
+      "median": 0.15613904150086455,
+      "fastest": 0.15536333299678518,
+      "slowest": 0.16030862500338117,
+      "runs": 10,
+      "median_peak_bytes": 34160640.0,
+      "all_outputs_ok": true
+    },
+    "helper b4": {
+      "median": 0.3066464999974414,
+      "fastest": 0.30515945800289046,
+      "slowest": 0.3170915419977973,
+      "runs": 10,
+      "median_peak_bytes": 34177024.0,
+      "all_outputs_ok": true
+    },
+    "helper share-b1": {
+      "median": 0.6504320000021835,
+      "fastest": 0.6409269170035259,
+      "slowest": 0.6644260000030044,
+      "runs": 10,
+      "median_peak_bytes": 68288512.0,
+      "all_outputs_ok": true
+    },
+    "rust-same b1": {
+      "median": 0.16304062549897935,
+      "fastest": 0.16270158299448667,
+      "slowest": 0.16782237499865005,
+      "runs": 10,
+      "median_peak_bytes": 18087936.0,
+      "all_outputs_ok": true
+    },
+    "rust-same b2": {
+      "median": 0.2604856249963632,
+      "fastest": 0.2591660000034608,
+      "slowest": 0.2731331670001964,
+      "runs": 10,
+      "median_peak_bytes": 34406400.0,
+      "all_outputs_ok": true
+    },
+    "rust-same b3": {
+      "median": 0.13078220800161944,
+      "fastest": 0.12580387499474455,
+      "slowest": 0.1347849169978872,
+      "runs": 10,
+      "median_peak_bytes": 18087936.0,
+      "all_outputs_ok": true
+    },
+    "rust-same b4": {
+      "median": 0.3036181875031616,
+      "fastest": 0.29961170900060097,
+      "slowest": 0.3135801669995999,
+      "runs": 10,
+      "median_peak_bytes": 18087936.0,
+      "all_outputs_ok": true
+    },
+    "koka b1": {
+      "median": 0.1373869585004286,
+      "fastest": 0.13653104200056987,
+      "slowest": 0.14109374999679858,
+      "runs": 10,
+      "median_peak_bytes": 26624000.0,
+      "all_outputs_ok": true
+    },
+    "koka b2": {
+      "median": 0.21299437500420026,
+      "fastest": 0.21150920899526682,
+      "slowest": 0.2318362919977517,
+      "runs": 10,
+      "median_peak_bytes": 54476800.0,
+      "all_outputs_ok": true
+    },
+    "koka b3": {
+      "median": 0.13855037500252365,
+      "fastest": 0.136033791997761,
+      "slowest": 0.141900667003938,
+      "runs": 10,
+      "median_peak_bytes": 26624000.0,
+      "all_outputs_ok": true
+    },
+    "koka b4": {
+      "median": 0.5527688955007761,
+      "fastest": 0.5332632909994572,
+      "slowest": 0.5708774999948218,
+      "runs": 10,
+      "median_peak_bytes": 26640384.0,
+      "all_outputs_ok": true
+    },
+    "koka share-b1": {
+      "median": 0.5132123750008759,
+      "fastest": 0.5091940829952364,
+      "slowest": 0.5297104159981245,
+      "runs": 10,
+      "median_peak_bytes": 68747264.0,
+      "all_outputs_ok": true
+    }
+  },
+  "claim_a": {
+    "benchmarks": [
+      {
+        "benchmark": "b1",
+        "helper": {
+          "median": 0.17097002049922594,
+          "fastest": 0.16869212500023423,
+          "slowest": 0.17569595800159732,
+          "runs": 10,
+          "median_peak_bytes": 34160640.0,
+          "all_outputs_ok": true
+        },
+        "rust_same": {
+          "median": 0.16304062549897935,
+          "fastest": 0.16270158299448667,
+          "slowest": 0.16782237499865005,
+          "runs": 10,
+          "median_peak_bytes": 18087936.0,
+          "all_outputs_ok": true
+        },
+        "koka": {
+          "median": 0.1373869585004286,
+          "fastest": 0.13653104200056987,
+          "slowest": 0.14109374999679858,
+          "runs": 10,
+          "median_peak_bytes": 26624000.0,
+          "all_outputs_ok": true
+        },
+        "ratio_to_rust_same": 1.049,
+        "ratio_to_koka": 1.244,
+        "within_2x": true
+      },
+      {
+        "benchmark": "b2",
+        "helper": {
+          "median": 0.28802920849921065,
+          "fastest": 0.28506566699797986,
+          "slowest": 0.30724345799535513,
+          "runs": 10,
+          "median_peak_bytes": 68288512.0,
+          "all_outputs_ok": true
+        },
+        "rust_same": {
+          "median": 0.2604856249963632,
+          "fastest": 0.2591660000034608,
+          "slowest": 0.2731331670001964,
+          "runs": 10,
+          "median_peak_bytes": 34406400.0,
+          "all_outputs_ok": true
+        },
+        "koka": {
+          "median": 0.21299437500420026,
+          "fastest": 0.21150920899526682,
+          "slowest": 0.2318362919977517,
+          "runs": 10,
+          "median_peak_bytes": 54476800.0,
+          "all_outputs_ok": true
+        },
+        "ratio_to_rust_same": 1.106,
+        "ratio_to_koka": 1.352,
+        "within_2x": true
+      },
+      {
+        "benchmark": "b3",
+        "helper": {
+          "median": 0.15613904150086455,
+          "fastest": 0.15536333299678518,
+          "slowest": 0.16030862500338117,
+          "runs": 10,
+          "median_peak_bytes": 34160640.0,
+          "all_outputs_ok": true
+        },
+        "rust_same": {
+          "median": 0.13078220800161944,
+          "fastest": 0.12580387499474455,
+          "slowest": 0.1347849169978872,
+          "runs": 10,
+          "median_peak_bytes": 18087936.0,
+          "all_outputs_ok": true
+        },
+        "koka": {
+          "median": 0.13855037500252365,
+          "fastest": 0.136033791997761,
+          "slowest": 0.141900667003938,
+          "runs": 10,
+          "median_peak_bytes": 26624000.0,
+          "all_outputs_ok": true
+        },
+        "ratio_to_rust_same": 1.194,
+        "ratio_to_koka": 1.127,
+        "within_2x": true
+      },
+      {
+        "benchmark": "b4",
+        "helper": {
+          "median": 0.3066464999974414,
+          "fastest": 0.30515945800289046,
+          "slowest": 0.3170915419977973,
+          "runs": 10,
+          "median_peak_bytes": 34177024.0,
+          "all_outputs_ok": true
+        },
+        "rust_same": {
+          "median": 0.3036181875031616,
+          "fastest": 0.29961170900060097,
+          "slowest": 0.3135801669995999,
+          "runs": 10,
+          "median_peak_bytes": 18087936.0,
+          "all_outputs_ok": true
+        },
+        "koka": {
+          "median": 0.5527688955007761,
+          "fastest": 0.5332632909994572,
+          "slowest": 0.5708774999948218,
+          "runs": 10,
+          "median_peak_bytes": 26640384.0,
+          "all_outputs_ok": true
+        },
+        "ratio_to_rust_same": 1.01,
+        "ratio_to_koka": 0.555,
+        "within_2x": true
+      }
+    ],
+    "verdict": "PASS",
+    "validity_failures": []
+  },
+  "claim_b": {
+    "helper": {
+      "valid_output": true,
+      "plain": {
+        "median": 0.17097002049922594,
+        "fastest": 0.16869212500023423,
+        "slowest": 0.17569595800159732,
+        "runs": 10,
+        "median_peak_bytes": 34160640.0,
+        "all_outputs_ok": true
+      },
+      "share": {
+        "median": 0.6504320000021835,
+        "fastest": 0.6409269170035259,
+        "slowest": 0.6644260000030044,
+        "runs": 10,
+        "median_peak_bytes": 68288512.0,
+        "all_outputs_ok": true
+      },
+      "raw_time_ratio": 3.804,
+      "raw_peak_memory_ratio": 1.999,
+      "copying_gate": {
+        "share-new-copy-each-round": {
+          "measure": "live-change",
+          "value": 1000000,
+          "rule": "at-least-1000000",
+          "ok": true,
+          "values_wrong": false
+        },
+        "share-nothing-piles-up": {
+          "measure": "live-change",
+          "value": 0,
+          "rule": "exactly-0",
+          "ok": true,
+          "values_wrong": false
+        }
+      },
+      "copying_gate_ok": true,
+      "validated": true
+    },
+    "koka": {
+      "valid_output": true,
+      "plain": {
+        "median": 0.1373869585004286,
+        "fastest": 0.13653104200056987,
+        "slowest": 0.14109374999679858,
+        "runs": 10,
+        "median_peak_bytes": 26624000.0,
+        "all_outputs_ok": true
+      },
+      "share": {
+        "median": 0.5132123750008759,
+        "fastest": 0.5091940829952364,
+        "slowest": 0.5297104159981245,
+        "runs": 10,
+        "median_peak_bytes": 68747264.0,
+        "all_outputs_ok": true
+      },
+      "raw_time_ratio": 3.736,
+      "raw_peak_memory_ratio": 2.582,
+      "retention_in_compiled_program": "PENDING: the lead reads Koka's compiled C and records the finding in RESULT.md",
+      "validated": false
+    },
+    "raw_helper_share_vs_koka_share": 1.267,
+    "note": "raw ratios are measurements only; a ratio is interpreted only once its gates hold"
+  },
+  "d66_outcome": "2 (provisional): a valid helper meets the speed budget; supports going on to 3c with it as a candidate foundation",
+  "pending_lead_review": [
+    "source review of the measured helper (ACCEPTANCE.md, 'The lead's recorded review')",
+    "step-for-step algorithm correspondence with Experiment 3's same-container Rust",
+    "Koka sharing program holds the kept version across the update (compiled C)"
+  ]
+}

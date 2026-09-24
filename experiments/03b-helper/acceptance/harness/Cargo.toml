@@ -1,0 +1,36 @@
+# Experiment 3b harness. Written by the lead; the builder may not change it.
+# It links exactly one helper: the builder's (feature `real`) or one of the lead's two
+# deliberately broken controls (`copies`, `shares`). Timed builds add `mimalloc`;
+# check builds add `counting`, which counts every allocation.
+[package]
+name = "harness"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+helper = { path = "../../bench/helper", optional = true }
+mutant-always-copies = { path = "../mutants/always-copies", optional = true }
+mutant-shared-mutation = { path = "../mutants/shared-mutation", optional = true }
+
+[build-dependencies]
+cc = "1"
+
+[features]
+real = ["dep:helper"]
+copies = ["dep:mutant-always-copies"]
+shares = ["dep:mutant-shared-mutation"]
+mimalloc = []
+counting = []
+
+[[bin]]
+name = "c1"
+required-features = ["counting"]
+
+[[bin]]
+name = "c2"
+required-features = ["counting"]
+
+[profile.release]
+codegen-units = 1
+lto = true

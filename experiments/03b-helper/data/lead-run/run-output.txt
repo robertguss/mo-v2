@@ -1,0 +1,43 @@
+Experiment 3b results
+Controls (the checks must tell right from wrong):
+  ok   C1 catches a helper that changes shared values (shared-mutation): finished without panics, wrong values in every shared case and in generated sequences of both kinds
+  ok   C1 accepts a correct helper that always copies (always-copies): finished and passed
+  ok   C2 catches a helper that always copies (always-copies): finished, values right, allocations over the limit on every unique update
+Claim C1 (values preserved in these tests): PASS
+  generated lists: 2000 sequences, 0 failures
+  generated trees: 2000 sequences, 0 failures
+Claim C2 (no copying with one holder; shared values copy only what they must; memory freed): PASS
+  unique-add-one: allocations 0, rule exactly-0, ok
+  unique-reverse: allocations 0, rule exactly-0, ok
+  unique-running-totals: allocations 0, rule exactly-0, ok
+  hold-and-release-list: allocations 0, rule exactly-0, ok
+  unique-pop-front: allocations 0, rule exactly-0, ok
+  shared-list-push-front: allocations 1, rule exactly-1, ok
+  reuse-restored-list: allocations 0, rule exactly-0, ok
+  hold-and-release-tree: allocations 0, rule exactly-0, ok
+  reuse-restored-tree: allocations 1, rule exactly-1, ok
+  unique-tree-insert-new: allocations 1000, rule exactly-1000, ok
+  unique-tree-insert-existing: allocations 0, rule exactly-0, ok
+  shared-tree-insert: allocations 13, rule at-most-28, ok
+  list-kept-while-held: live-change 0, rule exactly-0, ok
+  list-freed: live-change 0, rule exactly-0, ok
+  tree-kept-while-held: live-change 0, rule exactly-0, ok
+  tree-freed: live-change 0, rule exactly-0, ok
+Claim A (helper within 2x of same-container Rust, each benchmark): PASS
+  b1: helper 0.17097002049922594, rust-same 0.16304062549897935, ratio 1.049, vs koka 1.244
+  b2: helper 0.28802920849921065, rust-same 0.2604856249963632, ratio 1.106, vs koka 1.352
+  b3: helper 0.15613904150086455, rust-same 0.13078220800161944, ratio 1.194, vs koka 1.127
+  b4: helper 0.3066464999974414, rust-same 0.3036181875031616, ratio 1.01, vs koka 0.555
+Claim B (observational):
+  helper gate share-new-copy-each-round: live-change 1000000, rule at-least-1000000, ok
+  helper gate share-nothing-piles-up: live-change 0, rule exactly-0, ok
+  helper: sharing costs 3.804x time; peak memory 1.999x (reported, not judged)
+  koka: raw ratios 3.736x time, 2.582x peak memory; NOT INTERPRETED (Koka retention check pending)
+  raw helper sharing vs koka sharing: 1.267 (not interpreted until Koka's retention check is recorded)
+  Koka retention: PENDING: the lead reads Koka's compiled C and records the finding in RESULT.md
+Outcome under D66: 2 (provisional): a valid helper meets the speed budget; supports going on to 3c with it as a candidate foundation
+  Final only after the lead's recorded review:
+    source review of the measured helper (ACCEPTANCE.md, 'The lead's recorded review')
+    step-for-step algorithm correspondence with Experiment 3's same-container Rust
+    Koka sharing program holds the kept version across the update (compiled C)
+Wrote /Users/robertguss/Projects/startups/mo-v2/experiments/03b-helper/data/summary.json and /Users/robertguss/Projects/startups/mo-v2/experiments/03b-helper/data/timings.csv

@@ -1,0 +1,22 @@
+FIXED unique-add-one ok
+FIXED unique-reverse ok
+FIXED unique-running-totals ok
+FIXED unique-push-front ok
+FIXED unique-pop-front ok
+FIXED empty-list ok
+FIXED unique-tree-insert ok
+FIXED tree-insert-existing ok
+FIXED shared-add-one ok
+FIXED shared-reverse ok
+FIXED shared-running-totals ok
+FIXED shared-push-pop ok
+FIXED shared-tree-insert ok
+FIXED shared-tail ok
+FIXED shared-subtree ok
+FIXED drop-long-list ok
+FIXED drop-large-tree ok
+GENERATED lists sequences 2000 failures 0
+GENERATED trees sequences 2000 failures 0
+DONE
+
+--- exit 0 ---
