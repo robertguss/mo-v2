@@ -4,9 +4,10 @@ Lead sessions start by reading `HANDOFF.md`. Builders follow their brief.
 
 Decisions (D1, D2, ...) are recorded in `docs/DECISIONS.md`.
 
-TheBrain is the source of truth for Mo's research documents (decided
-2026-09-23): the Mo Research brain, starting with its Session Orientation
-thought, which explains how to reach TheBrain's local API.
+All of Mo's research documents and data live in this repo, under version
+control (D54): research in `docs/research/`, experiments in `experiments/`.
+TheBrain is no longer used. The repo is public at
+https://github.com/robertguss/mo-v2.
 
 Mo v1 went wrong because AI agents made most of the decisions and checked their
 own work. These rules exist to stop that happening again.

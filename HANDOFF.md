@@ -1,7 +1,7 @@
 # Handoff
 
-Read this first, then `CLAUDE.md`, the Design choices thought in TheBrain's Mo
-Research brain (Documents > Design choices), and `docs/DECISIONS.md`. Last
+Read this first, then `CLAUDE.md`, `docs/research/documents/design-choices/`
+and `docs/DECISIONS.md`. Last
 updated 23 Sep 2026, in the session that made the design choices and set up
 Experiment 3.
 
@@ -19,7 +19,8 @@ Experiment 3.
   - memory freed by counting holders, with pools to explore
   - Ruby/Elixir syntax
 
-  Each choice is a thought in TheBrain, with its options as child nodes.
+  Each choice is a folder in `docs/research/documents/design-choices/`, with its
+  options inside.
 - **What Mo is now, D34 and D35.** Mo is one Ruby/Elixir-like language that
   does all of that through its compiler and runtime. The two-languages picture
   in D20 is superseded. Syntax and how promises are written are deferred.

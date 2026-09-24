@@ -1,0 +1,2234 @@
+{
+ "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8": {
+  "name": "Mo Research",
+  "label": null,
+  "parent": null,
+  "note": "",
+  "children": [
+   "a5168d68-0a8e-4205-b5a3-24207e73006d",
+   "d0dd9b89-c564-447a-823f-adbc2e6ca47b",
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+   "d4414b19-abe2-4969-8127-b9ac1041011d"
+  ],
+  "parents": [],
+  "jumps": [],
+  "names": {
+   "a5168d68-0a8e-4205-b5a3-24207e73006d": "Documents",
+   "d0dd9b89-c564-447a-823f-adbc2e6ca47b": "Session Orientation",
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "d4414b19-abe2-4969-8127-b9ac1041011d": "Parking lot"
+  }
+ },
+ "a5168d68-0a8e-4205-b5a3-24207e73006d": {
+  "name": "Documents",
+  "label": null,
+  "parent": "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+  "note": "The Mo project's written documents: the design doc and the glossary. These notes are the source of truth. The link at the top of each points to an older hosted copy in Claude Docs, frozen on 2026-09-23.",
+  "children": [
+   "ba0e8864-48c2-4274-9d25-20da257d8622",
+   "5f2cf67f-b6b3-4628-ab3f-d278cf42437b",
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+   "c6015ae1-0623-4149-97fe-817c63161a80"
+  ],
+  "parents": [
+   [
+    "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+    "Mo Research",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8": "Mo Research",
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "5f2cf67f-b6b3-4628-ab3f-d278cf42437b": "Design Doc",
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": "Glossary",
+   "c6015ae1-0623-4149-97fe-817c63161a80": "Language design primer"
+  }
+ },
+ "ba0e8864-48c2-4274-9d25-20da257d8622": {
+  "name": "Design choices",
+  "label": null,
+  "parent": "a5168d68-0a8e-4205-b5a3-24207e73006d",
+  "note": "Working through the big design choices with Robert, one at a time, from a blank slate (started 23 Sep 2026).\n\n* Each child is one choice. Its children are the options discussed.\n* The option Robert chose carries the label Chosen, with its decision number. Decisions are recorded in the repo's [DECISIONS.md](https://github.com/robertguss/mo-v2/blob/main/docs/DECISIONS.md).\n* Working assumption behind the recommendations: the code is written by AI agents, and it has to be trustworthy without a human reading it.\n\n## Summary (23 Sep 2026)\n* 1 Mistakes caught: static floor, contracts and proof on top (D24).\n* 2 Guessing: never; risky conversions can fail (D25).\n* 3 Change: pure, invisible in-place updates, provable demands; to be tested (D26). Speed very important, not fastest possible (D27).\n* 4 Nothing: no null; maybe is a value (D28).\n* 5 Errors: failures as values, bugs stop the part (D29).\n* 6 Effects: listed effects plus keys, runtime holds the doors (D30).\n* 7 Organisation: plain data, modules, limited shared abilities; no OOP (D31).\n* 8 Memory: counting holders; pools to explore (D32).\n* 9 Look: keywords and end, Ruby and Elixir spirit (D33).\n\nOpen threads: experiment for D26 (and suggested for D30); pools and where long-lived state lives (running programs); how limited shared abilities are; the spec language's look. Close neighbour worth studying: Gleam (typed, BEAM).\n\nNext (D34, D35): one Ruby/Elixir-like language doing all of the above through its compiler and runtime; syntax and how promises are written are deferred; next step is experiments on D24\u2013D33.\n",
+  "children": [
+   "6360e891-897d-4df5-bad2-c83716b41211",
+   "49775e37-735c-4951-a7a0-5b96696754d6",
+   "b87a54b9-8266-41fb-9275-0d3e08666235",
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+   "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+   "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+   "f4366958-1331-4d06-89cd-b2a445330594",
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4"
+  ],
+  "parents": [
+   [
+    "a5168d68-0a8e-4205-b5a3-24207e73006d",
+    "Documents",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "a5168d68-0a8e-4205-b5a3-24207e73006d": "Documents",
+   "6360e891-897d-4df5-bad2-c83716b41211": "4 How is nothing represented?",
+   "49775e37-735c-4951-a7a0-5b96696754d6": "1 When are mistakes caught?",
+   "b87a54b9-8266-41fb-9275-0d3e08666235": "2 Does the language guess what you meant?",
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?",
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa": "5 How do errors work?",
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": "6 What can code do behind your back?",
+   "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe": "7 How is a program organised?",
+   "635ba7b9-4c7c-4598-9803-0a2bc1dbd099": "8 Who cleans up memory?",
+   "f4366958-1331-4d06-89cd-b2a445330594": "9 What does it look like?",
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "6360e891-897d-4df5-bad2-c83716b41211": {
+  "name": "4 How is nothing represented?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "Programs constantly deal with things that might not be there: a customer who doesn't exist, an empty list's first item, a blank form field. How does the language represent nothing is here?\n\nStatus: Decided: D28.",
+  "children": [
+   "bc9d5157-f5ed-49e1-a752-7fb65db906a3",
+   "8cc99e33-abfd-44e4-8360-a28832b8134b",
+   "ecbf3e69-8236-4c26-9e8d-a87995aff962",
+   "a3eca426-b485-41bb-8453-8c17536248c6"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "bc9d5157-f5ed-49e1-a752-7fb65db906a3": "Null anywhere, unchecked",
+   "8cc99e33-abfd-44e4-8360-a28832b8134b": "Blank value instead",
+   "ecbf3e69-8236-4c26-9e8d-a87995aff962": "Null tracked by the checker",
+   "a3eca426-b485-41bb-8453-8c17536248c6": "No null, maybe is an ordinary value"
+  }
+ },
+ "bc9d5157-f5ed-49e1-a752-7fb65db906a3": {
+  "name": "Null anywhere, unchecked",
+  "label": null,
+  "parent": "6360e891-897d-4df5-bad2-c83716b41211",
+  "note": "A special nothing (null, nil, None) can sit where any value should be. Forget to check and the program crashes later, far from the cause. Tony Hoare's billion-dollar mistake.\n\n* Languages: Java, C, JavaScript (null and undefined), Python, Ruby.",
+  "children": [],
+  "parents": [
+   [
+    "6360e891-897d-4df5-bad2-c83716b41211",
+    "4 How is nothing represented?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "6360e891-897d-4df5-bad2-c83716b41211": "4 How is nothing represented?"
+  }
+ },
+ "8cc99e33-abfd-44e4-8360-a28832b8134b": {
+  "name": "Blank value instead",
+  "label": null,
+  "parent": "6360e891-897d-4df5-bad2-c83716b41211",
+  "note": "Missing becomes a default: empty text, zero. No crash, but fake data carries on silently.\n\n* Languages: Go (zero values).",
+  "children": [],
+  "parents": [
+   [
+    "6360e891-897d-4df5-bad2-c83716b41211",
+    "4 How is nothing represented?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "6360e891-897d-4df5-bad2-c83716b41211": "4 How is nothing represented?"
+  }
+ },
+ "ecbf3e69-8236-4c26-9e8d-a87995aff962": {
+  "name": "Null tracked by the checker",
+  "label": null,
+  "parent": "6360e891-897d-4df5-bad2-c83716b41211",
+  "note": "A type can be marked might-be-nothing, and the checker refuses reads until it is checked. Safer, with rough edges and trust-me escape hatches.\n\n* Languages: Kotlin, TypeScript strict mode, C#, Swift.",
+  "children": [],
+  "parents": [
+   [
+    "6360e891-897d-4df5-bad2-c83716b41211",
+    "4 How is nothing represented?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "6360e891-897d-4df5-bad2-c83716b41211": "4 How is nothing represented?"
+  }
+ },
+ "a3eca426-b485-41bb-8453-8c17536248c6": {
+  "name": "No null, maybe is an ordinary value",
+  "label": "Chosen (D28)",
+  "parent": "6360e891-897d-4df5-bad2-c83716b41211",
+  "note": "Robert's choice (D28). A lookup returns either here it is or nothing; the only way to use the value is to handle both cases, and the checker makes sure.\n\n* Languages: Rust (Option), Elm and Haskell (Maybe), OCaml, Roc.\n\nWhy:\n* Removes a whole category of crash.\n* Never fakes data (fits D25).\n* Simpler than a tracked null: no special rules or escape hatches.\n* Natural in a pure language (D26).",
+  "children": [],
+  "parents": [
+   [
+    "6360e891-897d-4df5-bad2-c83716b41211",
+    "4 How is nothing represented?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "6360e891-897d-4df5-bad2-c83716b41211": "4 How is nothing represented?"
+  }
+ },
+ "49775e37-735c-4951-a7a0-5b96696754d6": {
+  "name": "1 When are mistakes caught?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "How early a mistake is discovered: before the program runs, while it runs, or never.\n\nStatus: Decided: D24.",
+  "children": [
+   "dd1a0c66-ddf1-41bd-afa8-c2a6b772db79",
+   "351e1082-9cd8-4ac8-b754-91fc46c7f5c8",
+   "8c6eddbb-61e5-4698-b647-9d8580298b47",
+   "d51944eb-22bc-48c9-a9db-4bb86bce5612",
+   "b45417e3-100b-4087-b991-1c9f482c9b72",
+   "6befb046-862b-4971-b0e2-6054a30d5570"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "dd1a0c66-ddf1-41bd-afa8-c2a6b772db79": "Fully dynamic",
+   "351e1082-9cd8-4ac8-b754-91fc46c7f5c8": "Optional checking",
+   "8c6eddbb-61e5-4698-b647-9d8580298b47": "Static checking",
+   "d51944eb-22bc-48c9-a9db-4bb86bce5612": "Checking plus runtime contracts",
+   "b45417e3-100b-4087-b991-1c9f482c9b72": "Checking plus proof",
+   "6befb046-862b-4971-b0e2-6054a30d5570": "Static floor, contracts and proof on top"
+  }
+ },
+ "dd1a0c66-ddf1-41bd-afa8-c2a6b772db79": {
+  "name": "Fully dynamic",
+  "label": null,
+  "parent": "49775e37-735c-4951-a7a0-5b96696754d6",
+  "note": "Nothing is checked before running. A mistake surfaces when that line runs, if it ever runs.\n\n* Languages: Python, Ruby, JavaScript.",
+  "children": [],
+  "parents": [
+   [
+    "49775e37-735c-4951-a7a0-5b96696754d6",
+    "1 When are mistakes caught?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "49775e37-735c-4951-a7a0-5b96696754d6": "1 When are mistakes caught?"
+  }
+ },
+ "351e1082-9cd8-4ac8-b754-91fc46c7f5c8": {
+  "name": "Optional checking",
+  "label": null,
+  "parent": "49775e37-735c-4951-a7a0-5b96696754d6",
+  "note": "There is a checker, but the writer can skip it or switch it off for any part of the program.\n\n* Languages: TypeScript, Python with type hints.",
+  "children": [],
+  "parents": [
+   [
+    "49775e37-735c-4951-a7a0-5b96696754d6",
+    "1 When are mistakes caught?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "49775e37-735c-4951-a7a0-5b96696754d6": "1 When are mistakes caught?"
+  }
+ },
+ "8c6eddbb-61e5-4698-b647-9d8580298b47": {
+  "name": "Static checking",
+  "label": null,
+  "parent": "49775e37-735c-4951-a7a0-5b96696754d6",
+  "note": "The program is refused unless it passes the checker. There is no way around it. Catches mismatched kinds of values; cannot catch wrong logic.\n\n* Languages: Go, Rust, Haskell, Swift.",
+  "children": [],
+  "parents": [
+   [
+    "49775e37-735c-4951-a7a0-5b96696754d6",
+    "1 When are mistakes caught?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "49775e37-735c-4951-a7a0-5b96696754d6": "1 When are mistakes caught?"
+  }
+ },
+ "d51944eb-22bc-48c9-a9db-4bb86bce5612": {
+  "name": "Checking plus runtime contracts",
+  "label": null,
+  "parent": "49775e37-735c-4951-a7a0-5b96696754d6",
+  "note": "Static checking, plus promises such as amount <= balance checked while the program runs. Catches wrong logic, but only when a run hits it.\n\n* Languages: Eiffel, Ada, Racket.",
+  "children": [],
+  "parents": [
+   [
+    "49775e37-735c-4951-a7a0-5b96696754d6",
+    "1 When are mistakes caught?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "49775e37-735c-4951-a7a0-5b96696754d6": "1 When are mistakes caught?"
+  }
+ },
+ "b45417e3-100b-4087-b991-1c9f482c9b72": {
+  "name": "Checking plus proof",
+  "label": null,
+  "parent": "49775e37-735c-4951-a7a0-5b96696754d6",
+  "note": "Promises are proven before running, for every possible input. The most demanding option; some promises are very hard to prove.\n\n* Languages: Dafny, SPARK Ada, F*, Lean, Idris.",
+  "children": [],
+  "parents": [
+   [
+    "49775e37-735c-4951-a7a0-5b96696754d6",
+    "1 When are mistakes caught?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "49775e37-735c-4951-a7a0-5b96696754d6": "1 When are mistakes caught?"
+  }
+ },
+ "6befb046-862b-4971-b0e2-6054a30d5570": {
+  "name": "Static floor, contracts and proof on top",
+  "label": "Chosen (D24)",
+  "parent": "49775e37-735c-4951-a7a0-5b96696754d6",
+  "note": "Robert's choice (D24). No program runs unless it passes the checker, which cannot be switched off. Promises about logic can be stated; they are proven where possible and checked while running where not. This is the SPARK approach.\n\nWhy:\n* The extra writing effort falls on agents, not people.\n* With no human reading the code, whatever the checker misses reaches the running program.\n* Mandatory proof everywhere would make some ordinary programs very hard to write.",
+  "children": [],
+  "parents": [
+   [
+    "49775e37-735c-4951-a7a0-5b96696754d6",
+    "1 When are mistakes caught?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "49775e37-735c-4951-a7a0-5b96696754d6": "1 When are mistakes caught?"
+  }
+ },
+ "b87a54b9-8266-41fb-9275-0d3e08666235": {
+  "name": "2 Does the language guess what you meant?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "When two things don't quite match, does the language quietly convert one, or refuse and make the writer say exactly what they mean? Test cases: \"5\" + 3, 2 + 0.5, 3.9 into a whole number, if customer_list, 0 == \"0\".\n\nStatus: Decided: D25.",
+  "children": [
+   "ac35aa13-ae33-4ff8-9acb-4f7e7482a06c",
+   "4d1abd7c-5762-4f61-8aed-464bb8420636",
+   "932e7cad-4dfa-44ab-bd5a-b12b1d056947",
+   "3fc99589-8678-4751-9049-cf6d0ffaf158"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "ac35aa13-ae33-4ff8-9acb-4f7e7482a06c": "Guesses freely",
+   "4d1abd7c-5762-4f61-8aed-464bb8420636": "Guesses only safe-looking cases",
+   "932e7cad-4dfa-44ab-bd5a-b12b1d056947": "Never guesses",
+   "3fc99589-8678-4751-9049-cf6d0ffaf158": "Never guesses, risky conversions can fail"
+  }
+ },
+ "ac35aa13-ae33-4ff8-9acb-4f7e7482a06c": {
+  "name": "Guesses freely",
+  "label": null,
+  "parent": "b87a54b9-8266-41fb-9275-0d3e08666235",
+  "note": "\"5\" + 3 gives \"53\"; 3.9 quietly becomes 3; an empty list counts as false; 0 == \"0\" is true.\n\n* Languages: JavaScript, PHP, Perl.",
+  "children": [],
+  "parents": [
+   [
+    "b87a54b9-8266-41fb-9275-0d3e08666235",
+    "2 Does the language guess what you meant?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b87a54b9-8266-41fb-9275-0d3e08666235": "2 Does the language guess what you meant?"
+  }
+ },
+ "4d1abd7c-5762-4f61-8aed-464bb8420636": {
+  "name": "Guesses only safe-looking cases",
+  "label": null,
+  "parent": "b87a54b9-8266-41fb-9275-0d3e08666235",
+  "note": "Text and numbers don't mix, but whole numbers quietly become decimals, decimals may be quietly truncated, and empty values count as false.\n\n* Languages: Python, Ruby, C, Java.",
+  "children": [],
+  "parents": [
+   [
+    "b87a54b9-8266-41fb-9275-0d3e08666235",
+    "2 Does the language guess what you meant?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b87a54b9-8266-41fb-9275-0d3e08666235": "2 Does the language guess what you meant?"
+  }
+ },
+ "932e7cad-4dfa-44ab-bd5a-b12b1d056947": {
+  "name": "Never guesses",
+  "label": null,
+  "parent": "b87a54b9-8266-41fb-9275-0d3e08666235",
+  "note": "Every conversion is written explicitly. Conditions must be true or false. Different kinds of values cannot be compared.\n\n* Languages: Rust, Go, Haskell, Swift, OCaml.",
+  "children": [],
+  "parents": [
+   [
+    "b87a54b9-8266-41fb-9275-0d3e08666235",
+    "2 Does the language guess what you meant?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b87a54b9-8266-41fb-9275-0d3e08666235": "2 Does the language guess what you meant?"
+  }
+ },
+ "3fc99589-8678-4751-9049-cf6d0ffaf158": {
+  "name": "Never guesses, risky conversions can fail",
+  "label": "Chosen (D25)",
+  "parent": "b87a54b9-8266-41fb-9275-0d3e08666235",
+  "note": "As Never guesses, plus any conversion that could lose information or fail (text to number, big number into a small container) gives success or failure, which must be handled.\n\n* Languages: Rust's strict conversions, Ada, Elm.\n* Robert chose this (D25). Why: a guess is a hidden decision nobody would notice; being explicit costs an agent almost nothing; it keeps everything the checker reasons about written down.",
+  "children": [],
+  "parents": [
+   [
+    "b87a54b9-8266-41fb-9275-0d3e08666235",
+    "2 Does the language guess what you meant?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b87a54b9-8266-41fb-9275-0d3e08666235": "2 Does the language guess what you meant?"
+  }
+ },
+ "0b10ccdf-972d-44cc-94d2-9329d93560b7": {
+  "name": "3 Can things change after they are made?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "Two kinds of change: renaming (pointing a name at a new value) and changing a value in place, which anyone else holding it sees. The second causes who-changed-this bugs.\n\nStatus: Decided for now: D26, to be tested by experiments. Related: D27 (speed is very important, but not the fastest possible).",
+  "children": [
+   "83949bc0-f8c2-4306-8dd3-0f6a00600c87",
+   "a88e58f8-c4b1-4f92-b047-8b832e63020c",
+   "98623af9-d0a8-42bf-af57-fe120d67f234",
+   "e935c118-5f44-4cc8-909a-4adbf82f80e4",
+   "6a42bbee-a8f7-4e52-b64b-63a4f3ad4c0d",
+   "4d4e54c4-5679-4a82-9364-96f53cc69dcc",
+   "63050b80-50bb-48aa-ab21-73b1f71329e1"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "83949bc0-f8c2-4306-8dd3-0f6a00600c87": "Everything can change",
+   "a88e58f8-c4b1-4f92-b047-8b832e63020c": "Changeable by default, locking opt-in",
+   "98623af9-d0a8-42bf-af57-fe120d67f234": "Fixed by default, changing opt-in",
+   "e935c118-5f44-4cc8-909a-4adbf82f80e4": "Shared values never change, private scratch work may",
+   "6a42bbee-a8f7-4e52-b64b-63a4f3ad4c0d": "Nothing ever changes",
+   "4d4e54c4-5679-4a82-9364-96f53cc69dcc": "Pure, with invisible in-place updates and provable demands",
+   "63050b80-50bb-48aa-ab21-73b1f71329e1": "Experiment 3: in place"
+  }
+ },
+ "83949bc0-f8c2-4306-8dd3-0f6a00600c87": {
+  "name": "Everything can change",
+  "label": null,
+  "parent": "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+  "note": "Any value can be edited in place by anyone holding it.\n\n* Languages: C, Python, JavaScript, Ruby.",
+  "children": [],
+  "parents": [
+   [
+    "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+    "3 Can things change after they are made?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?"
+  }
+ },
+ "a88e58f8-c4b1-4f92-b047-8b832e63020c": {
+  "name": "Changeable by default, locking opt-in",
+  "label": null,
+  "parent": "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+  "note": "Values change unless marked fixed; the lock is often shallow.\n\n* Languages: Java (final), JavaScript (const), C (const).",
+  "children": [],
+  "parents": [
+   [
+    "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+    "3 Can things change after they are made?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?"
+  }
+ },
+ "98623af9-d0a8-42bf-af57-fe120d67f234": {
+  "name": "Fixed by default, changing opt-in",
+  "label": null,
+  "parent": "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+  "note": "Values are fixed unless marked changeable. Rust adds the borrowing rule: at any moment a value has many readers or exactly one writer, never both. Excellent speed and control; the hardest rules to learn, prove things about and build a checker for. Also decides memory cleanup.\n\n* Languages: Rust (mut), Swift (let/var), Kotlin, F#.",
+  "children": [],
+  "parents": [
+   [
+    "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+    "3 Can things change after they are made?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?"
+  }
+ },
+ "e935c118-5f44-4cc8-909a-4adbf82f80e4": {
+  "name": "Shared values never change, private scratch work may",
+  "label": null,
+  "parent": "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+  "note": "Anything handed to anyone else is frozen; a function may use private working variables inside. Mutable value semantics: changing your copy never affects anyone else's.\n\n* Languages: Swift value types, Hylo, Koka.",
+  "children": [],
+  "parents": [
+   [
+    "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+    "3 Can things change after they are made?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?"
+  }
+ },
+ "6a42bbee-a8f7-4e52-b64b-63a4f3ad4c0d": {
+  "name": "Nothing ever changes",
+  "label": null,
+  "parent": "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+  "note": "No in-place changes anywhere; changing makes a new value.\n\n* Languages: Haskell, Elm, Erlang, Clojure.",
+  "children": [],
+  "parents": [
+   [
+    "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+    "3 Can things change after they are made?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?"
+  }
+ },
+ "4d4e54c4-5679-4a82-9364-96f53cc69dcc": {
+  "name": "Pure, with invisible in-place updates and provable demands",
+  "label": "Chosen (D26)",
+  "parent": "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+  "note": "Robert's choice for now (D26), to be tested by experiments.\n\n* No value is ever changed in place, from the program's point of view.\n* The compiler counts who holds each value and edits in place when only one does (functional but in-place; used by Lean 4, Koka, Roc).\n* Where speed matters, the writer can demand in-place updating; the checker proves it or refuses the program (Koka's fip, Clean's uniqueness types).\n\nWhy: Robert wants Rust's speed, control and if-it-compiles-it-runs confidence with a functional language's simplicity. The confidence comes mostly from strict checking (D24, D25); this blend adds guaranteed speed where it matters.\n\nCaveats:\n* Research territory; Koka's fip covers fewer programs than Rust.\n* Counting holders has a small cost; slower than Rust at the extremes (fine under D27).\n* Linked to choice 8 (memory cleanup).\n* Experiment needed: does the helper fire reliably, and can agents use the in-place demands?",
+  "children": [],
+  "parents": [
+   [
+    "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+    "3 Can things change after they are made?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?"
+  }
+ },
+ "63050b80-50bb-48aa-ab21-73b1f71329e1": {
+  "name": "Experiment 3: in place",
+  "label": "Planned",
+  "parent": "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+  "note": "Tests D26 (D36). Plan: https://github.com/robertguss/mo-v2/blob/main/experiments/03-in-place/PLAN.md\n\n* Tool: Koka, with edit-in-place Rust as the baseline (D40).\n* Claim A: the in-place trick makes pure code fast; passes within 2x of Rust (D37).\n* Claim B: how fragile the trick is; observational.\n* Claim C: every broken demand detected, every correct one accepted; Koka only warns, which counts as a refusal (D41).\n* Claim D: demands work on at least 7 of 10 realistic functions (D39), counting Koka's relaxed demand fbip (D46).\n* Claim A compares against Rust with the same container; Rust's best container is extra data (D45).\n* Lean 4 is not in the benchmarks; its role is proving the in-place rules correct, in 3c and in Mo (D47, superseding D43).\n* Follow-ons (D42): 3b, the helper in Rust; 3c, a toy language with a demand checker, if 3b looks promising.\n* Principle (D38): decisions rest on measured data; alternatives are tested the same way and compared.\n\nFound while setting up: Koka's fip check only warns and still accepts the program.\n\nCandidates for later comparison (not commitments): Swift, OCaml or Haskell, Futhark, Idris 2, Roc; TLA+ for running programs and concurrency.\n\n## Published evidence on speed (read 23 Sep 2026, from the papers' own figures)\n* Perceus paper (Reinking, Xie, de Moura, Leijen; MSR-TR-2020-42, Fig. 9; AMD 3600XT, Linux; times relative to Koka): rbtree, C++ std::map 0.92, so Koka is about 1.09x C++ (\"within 10%\"). nqueens: C++ 0.79, so Koka about 1.27x. OCaml 1.26, Java 1.67, Haskell 2.40 on rbtree. Koka with reuse turned off: 2.45.\n* FP2 paper (Lorenzen, Leijen, Swierstra; ICFP 2023, Fig. 11; AMD 7950X, Linux; relative to Koka fip): rbtree, C++ std::map 1.44 with the standard allocator and 0.95 with mimalloc. tmap (a shared tree, so no reuse is possible): C 1.25 with the standard allocator and 0.56 with mimalloc, so fip is about 1.8x the fastest C. No C versions for ftree, msort or qsort.\n* Takeaways: tree insertion is about 1x of C or C++; the published worst case is about 1.8x, where reuse is impossible; the memory allocator alone moves C++ by about 1.5x.\n* Sources: https://www.microsoft.com/en-us/research/wp-content/uploads/2020/11/perceus-tr-v4.pdf and https://www.microsoft.com/en-us/research/wp-content/uploads/2023/05/fip-tr-v2.pdf",
+  "children": [],
+  "parents": [
+   [
+    "0b10ccdf-972d-44cc-94d2-9329d93560b7",
+    "3 Can things change after they are made?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0b10ccdf-972d-44cc-94d2-9329d93560b7": "3 Can things change after they are made?"
+  }
+ },
+ "2502af3f-f12d-47fa-afa4-3684fdeebefa": {
+  "name": "5 How do errors work?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "Two kinds of going wrong:\n* Failures: the world misbehaved (file missing, card declined, network down). Expected; a good program plans for them.\n* Bugs: the program misbehaved (divide by zero, overflow, a promise turning out false). Not expected; the program is wrong.\n\nStatus: Decided: D29.",
+  "children": [
+   "0efc8a99-590b-41bf-b813-b891db848210",
+   "20273697-57a9-4a30-81ae-4f62b2a1263c",
+   "0905b8c2-ddd2-415a-90bc-901dcba51ba1",
+   "9889087e-3262-4dad-825e-45bf447eee00",
+   "32fcd2f2-5321-499a-a994-6b6320eeec75",
+   "1f6f43ba-b84c-46e6-85e8-3123c33f5ca6"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "0efc8a99-590b-41bf-b813-b891db848210": "Error codes you might check",
+   "20273697-57a9-4a30-81ae-4f62b2a1263c": "Exceptions",
+   "0905b8c2-ddd2-415a-90bc-901dcba51ba1": "Declared exceptions",
+   "9889087e-3262-4dad-825e-45bf447eee00": "Errors as values",
+   "32fcd2f2-5321-499a-a994-6b6320eeec75": "Let it crash, supervisor restarts",
+   "1f6f43ba-b84c-46e6-85e8-3123c33f5ca6": "Failures as values, bugs stop the part"
+  }
+ },
+ "0efc8a99-590b-41bf-b813-b891db848210": {
+  "name": "Error codes you might check",
+  "label": null,
+  "parent": "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+  "note": "A function returns a special value or error slot you are supposed to check; nothing forces you.\n\n* Languages: C, Go.",
+  "children": [],
+  "parents": [
+   [
+    "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+    "5 How do errors work?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa": "5 How do errors work?"
+  }
+ },
+ "20273697-57a9-4a30-81ae-4f62b2a1263c": {
+  "name": "Exceptions",
+  "label": null,
+  "parent": "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+  "note": "Errors are thrown and fly up until caught. Invisible paths: you cannot see what might fly out of a function.\n\n* Languages: Python, JavaScript, Ruby, C#, Java.",
+  "children": [],
+  "parents": [
+   [
+    "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+    "5 How do errors work?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa": "5 How do errors work?"
+  }
+ },
+ "0905b8c2-ddd2-415a-90bc-901dcba51ba1": {
+  "name": "Declared exceptions",
+  "label": null,
+  "parent": "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+  "note": "Exceptions, but each function lists what it may throw. Visible, and so tedious people wrapped everything in a generic failure.\n\n* Languages: Java checked exceptions.",
+  "children": [],
+  "parents": [
+   [
+    "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+    "5 How do errors work?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa": "5 How do errors work?"
+  }
+ },
+ "9889087e-3262-4dad-825e-45bf447eee00": {
+  "name": "Errors as values",
+  "label": null,
+  "parent": "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+  "note": "A function that can fail returns success or failure; both must be handled; a shortcut passes failures upward.\n\n* Languages: Rust (Result and ?), Elm, Haskell, OCaml, Roc, Swift.",
+  "children": [],
+  "parents": [
+   [
+    "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+    "5 How do errors work?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa": "5 How do errors work?"
+  }
+ },
+ "32fcd2f2-5321-499a-a994-6b6320eeec75": {
+  "name": "Let it crash, supervisor restarts",
+  "label": null,
+  "parent": "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+  "note": "A part that hits a bug stops cleanly; a supervisor reports and restarts it. Handles bugs, not planned-for failures.\n\n* Languages: Erlang, Elixir.",
+  "children": [],
+  "parents": [
+   [
+    "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+    "5 How do errors work?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa": "5 How do errors work?"
+  }
+ },
+ "1f6f43ba-b84c-46e6-85e8-3123c33f5ca6": {
+  "name": "Failures as values, bugs stop the part",
+  "label": "Chosen (D29)",
+  "parent": "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+  "note": "Robert's choice (D29).\n* Failures are success-or-failure values; the checker makes sure they are handled; a shortcut passes them upward; each function lists the failures it can produce.\n* Bugs stop that part of the program immediately and are reported. What restarts it is left to running programs.\n* No thrown exceptions.\n\nWhy:\n* Every failure is visible where it can happen (same rule as D25, D28).\n* A program that has proven itself wrong should not keep writing data.\n* Natural in a pure language; how Rust and Erlang split the two kinds.",
+  "children": [],
+  "parents": [
+   [
+    "2502af3f-f12d-47fa-afa4-3684fdeebefa",
+    "5 How do errors work?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "2502af3f-f12d-47fa-afa4-3684fdeebefa": "5 How do errors work?"
+  }
+ },
+ "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": {
+  "name": "6 What can code do behind your back?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "A side effect is anything a function does to the world outside itself: printing, files, network, email, the clock, randomness, payments. Can a function walk out the front door whenever it likes, or does it need to be handed a key? Also answers where long-lived state lives in a pure language (from choice 3).\n\nStatus: Decided: D30.",
+  "children": [
+   "27c78d57-97d6-424a-9423-0d28f2cec603",
+   "e6f3efe9-54a2-41ac-9f00-af94e280dfcb",
+   "7e9f6bbf-bb75-4ee0-8d78-0a2a0e7af9a9",
+   "f1f1a5d8-f60a-4041-879f-0edaa4f9623c",
+   "73a1f729-5b55-4607-80d8-4ea86b06c8b1",
+   "48eb16ee-269d-4ec5-9450-abdef4c04d02"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "27c78d57-97d6-424a-9423-0d28f2cec603": "Anything goes",
+   "e6f3efe9-54a2-41ac-9f00-af94e280dfcb": "One on-off switch",
+   "7e9f6bbf-bb75-4ee0-8d78-0a2a0e7af9a9": "Listed effects",
+   "f1f1a5d8-f60a-4041-879f-0edaa4f9623c": "Keys (capabilities)",
+   "73a1f729-5b55-4607-80d8-4ea86b06c8b1": "Program asks, runtime does",
+   "48eb16ee-269d-4ec5-9450-abdef4c04d02": "Listed effects plus keys, runtime holds the doors"
+  }
+ },
+ "27c78d57-97d6-424a-9423-0d28f2cec603": {
+  "name": "Anything goes",
+  "label": null,
+  "parent": "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+  "note": "Any function can do anything; its description does not say.\n\n* Languages: Python, JavaScript, Go, Java, Rust, C.",
+  "children": [],
+  "parents": [
+   [
+    "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+    "6 What can code do behind your back?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": "6 What can code do behind your back?"
+  }
+ },
+ "e6f3efe9-54a2-41ac-9f00-af94e280dfcb": {
+  "name": "One on-off switch",
+  "label": null,
+  "parent": "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+  "note": "A function is pure or marked does-things, without saying which things.\n\n* Languages: Haskell (IO), Roc (functions marked !).",
+  "children": [],
+  "parents": [
+   [
+    "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+    "6 What can code do behind your back?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": "6 What can code do behind your back?"
+  }
+ },
+ "7e9f6bbf-bb75-4ee0-8d78-0a2a0e7af9a9": {
+  "name": "Listed effects",
+  "label": null,
+  "parent": "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+  "note": "A function's description lists the kinds of things it does, checked to be honest. Callers can swap in a pretend world (fake network, frozen clock) for tests and exact replay.\n\n* Languages: Koka, Unison, Flix, Effekt.",
+  "children": [],
+  "parents": [
+   [
+    "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+    "6 What can code do behind your back?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": "6 What can code do behind your back?"
+  }
+ },
+ "f1f1a5d8-f60a-4041-879f-0edaa4f9623c": {
+  "name": "Keys (capabilities)",
+  "label": null,
+  "parent": "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+  "note": "A function can touch only what it was handed: this folder, not the whole disk. Limits which things, not just what kinds.\n\n* Languages: E, Pony, Austral, WebAssembly component model; Deno for whole programs.",
+  "children": [],
+  "parents": [
+   [
+    "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+    "6 What can code do behind your back?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": "6 What can code do behind your back?"
+  }
+ },
+ "73a1f729-5b55-4607-80d8-4ea86b06c8b1": {
+  "name": "Program asks, runtime does",
+  "label": null,
+  "parent": "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+  "note": "The program never acts; it returns requests, and the runtime carries them out. The runtime also holds long-lived state.\n\n* Languages: Elm, Roc platforms.",
+  "children": [],
+  "parents": [
+   [
+    "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+    "6 What can code do behind your back?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": "6 What can code do behind your back?"
+  }
+ },
+ "48eb16ee-269d-4ec5-9450-abdef4c04d02": {
+  "name": "Listed effects plus keys, runtime holds the doors",
+  "label": "Chosen (D30)",
+  "parent": "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+  "note": "Robert's choice (D30).\n* Every function lists the kinds of effects it has, checked to be complete; no effects listed means it only calculates.\n* Code can touch only what it is handed; the program starts with the keys the runtime gives it.\n* Tests and replays can swap in pretend worlds.\n* Long-lived state is held by the runtime or long-running parts (Erlang-style); details belong to running programs.\n\nWhy:\n* With nobody reading code, a function's description has to be the truth, about effects too.\n* Makes promises like never touches the network checkable (D24).\n* Contains damage from bugs and bad dependencies.\n\nCaveat: the most machinery of any choice so far; effect systems are young, research-heavy territory. An experiment was suggested.",
+  "children": [],
+  "parents": [
+   [
+    "55ff73a6-bf62-4b28-9868-a6cc49c09c5d",
+    "6 What can code do behind your back?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "55ff73a6-bf62-4b28-9868-a6cc49c09c5d": "6 What can code do behind your back?"
+  }
+ },
+ "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe": {
+  "name": "7 How is a program organised?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "How data and the functions that work on it are grouped and shaped. Two building blocks of data:\n* Records: this AND this AND this (a customer has a name and an email and a balance).\n* Choice types: this OR this OR this (a payment is a card, or cash, or an invoice); the checker makes sure every case is covered.\n\nStatus: Decided: D31.",
+  "children": [
+   "864c1dbf-6e23-4c99-86bb-69276ed86daf",
+   "9b20ffb4-470e-43f7-9b8a-9ae302f4f65f",
+   "e00293d0-bc85-4b0c-bed9-cce8a942e451",
+   "b872aa03-c980-418e-9245-1b456bf446fa",
+   "c956dc57-f48d-4013-8091-59db6a515881"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "864c1dbf-6e23-4c99-86bb-69276ed86daf": "Classes and inheritance",
+   "9b20ffb4-470e-43f7-9b8a-9ae302f4f65f": "Plain data plus functions in modules",
+   "e00293d0-bc85-4b0c-bed9-cce8a942e451": "Plain data plus powerful shared abilities",
+   "b872aa03-c980-418e-9245-1b456bf446fa": "Describe the result",
+   "c956dc57-f48d-4013-8091-59db6a515881": "Plain data, modules, limited shared abilities"
+  }
+ },
+ "864c1dbf-6e23-4c99-86bb-69276ed86daf": {
+  "name": "Classes and inheritance",
+  "label": null,
+  "parent": "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+  "note": "Data and behaviour bundled into objects; new kinds inherit from old ones. Deep family trees are hard to change.\n\n* Languages: Java, C#, Python, Ruby.",
+  "children": [],
+  "parents": [
+   [
+    "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+    "7 How is a program organised?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe": "7 How is a program organised?"
+  }
+ },
+ "9b20ffb4-470e-43f7-9b8a-9ae302f4f65f": {
+  "name": "Plain data plus functions in modules",
+  "label": null,
+  "parent": "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+  "note": "Records and choice types hold data; functions live separately, grouped by topic. No inheritance. Without shared abilities, near-duplicate code (Elm's most criticised gap).\n\n* Languages: Elm, OCaml, Erlang, Roc; Go is close.",
+  "children": [],
+  "parents": [
+   [
+    "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+    "7 How is a program organised?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe": "7 How is a program organised?"
+  }
+ },
+ "e00293d0-bc85-4b0c-bed9-cce8a942e451": {
+  "name": "Plain data plus powerful shared abilities",
+  "label": null,
+  "parent": "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+  "note": "As above, plus a rich way to say many kinds of thing can be compared or printed. Very reusable; among the hardest parts to learn and to check.\n\n* Languages: Haskell (type classes), Rust (traits), Swift (protocols).",
+  "children": [],
+  "parents": [
+   [
+    "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+    "7 How is a program organised?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe": "7 How is a program organised?"
+  }
+ },
+ "b872aa03-c980-418e-9245-1b456bf446fa": {
+  "name": "Describe the result",
+  "label": null,
+  "parent": "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+  "note": "State what you want; the language works out how. Usually for parts of a program.\n\n* Languages: SQL, Datalog, spreadsheets.",
+  "children": [],
+  "parents": [
+   [
+    "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+    "7 How is a program organised?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe": "7 How is a program organised?"
+  }
+ },
+ "c956dc57-f48d-4013-8091-59db6a515881": {
+  "name": "Plain data, modules, limited shared abilities",
+  "label": "Chosen (D31)",
+  "parent": "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+  "note": "Robert's choice (D31). Records and choice types with every-case-covered checking; functions in modules; no classes, objects or inheritance; a small, deliberately limited system of shared abilities (how limited is a later question). Robert: he hates OOP and inheritance and much prefers composability.\n\nWhy:\n* Choice types are the best tool for if-it-compiles-it-runs confidence.\n* Inheritance adds tangled relationships agents and checkers handle badly.\n* Limited abilities avoid Elm's duplication without Haskell's complexity.\n* Describe-the-result is not ruled out for the spec language.\n\n* Similar languages: Roc (abilities), Go (interfaces).",
+  "children": [],
+  "parents": [
+   [
+    "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe",
+    "7 How is a program organised?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c4d68cc9-47c8-4876-8a3c-e13bfb3a84fe": "7 How is a program organised?"
+  }
+ },
+ "635ba7b9-4c7c-4598-9803-0a2bc1dbd099": {
+  "name": "8 Who cleans up memory?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "Every value takes memory; when nobody needs it, the space must be freed. Who notices, and when?\n\nStatus: Decided: D32. Pools are open: Robert wants to explore them (he loves Erlang and the BEAM).",
+  "children": [
+   "f959f93d-eeb7-4b8c-a65e-1a418bfb256e",
+   "c692c76c-7c7e-4dfc-bf0a-282dc39137d0",
+   "dd0fd65d-e8ce-40c2-b689-3af9f5fd34a2",
+   "9d7d429d-a46e-4423-8084-1c190f8905ef",
+   "3fa1bd8b-cc17-4132-8cfc-afec05c5b224"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "f959f93d-eeb7-4b8c-a65e-1a418bfb256e": "Manual",
+   "c692c76c-7c7e-4dfc-bf0a-282dc39137d0": "Garbage collector",
+   "dd0fd65d-e8ce-40c2-b689-3af9f5fd34a2": "Counting holders",
+   "9d7d429d-a46e-4423-8084-1c190f8905ef": "Ownership rules",
+   "3fa1bd8b-cc17-4132-8cfc-afec05c5b224": "Pools (regions)"
+  }
+ },
+ "f959f93d-eeb7-4b8c-a65e-1a418bfb256e": {
+  "name": "Manual",
+  "label": null,
+  "parent": "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+  "note": "The writer frees memory by hand. Fastest and dangerous; the source of most C security holes.\n\n* Languages: C, Zig.",
+  "children": [],
+  "parents": [
+   [
+    "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+    "8 Who cleans up memory?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "635ba7b9-4c7c-4598-9803-0a2bc1dbd099": "8 Who cleans up memory?"
+  }
+ },
+ "c692c76c-7c7e-4dfc-bf0a-282dc39137d0": {
+  "name": "Garbage collector",
+  "label": null,
+  "parent": "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+  "note": "A cleaner periodically pauses the program and frees unreachable values. Easy; unpredictable pauses, higher memory use.\n\n* Languages: Java, Go, Haskell, OCaml, JavaScript, Elm; Erlang has one small collector per process.",
+  "children": [],
+  "parents": [
+   [
+    "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+    "8 Who cleans up memory?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "635ba7b9-4c7c-4598-9803-0a2bc1dbd099": "8 Who cleans up memory?"
+  }
+ },
+ "dd0fd65d-e8ce-40c2-b689-3af9f5fd34a2": {
+  "name": "Counting holders",
+  "label": "Chosen (D32)",
+  "parent": "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+  "note": "Robert's choice (D32). Each value counts its holders and is freed the moment the count reaches zero. Predictable, no pauses, and it powers D26's in-place updates. Its weakness, cycles, essentially cannot form in a pure language.\n\n* Languages: Swift, Koka, Roc, Lean 4; Python in part.\n\nCost: a small counting overhead; fine under D27.",
+  "children": [],
+  "parents": [
+   [
+    "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+    "8 Who cleans up memory?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "635ba7b9-4c7c-4598-9803-0a2bc1dbd099": "8 Who cleans up memory?"
+  }
+ },
+ "9d7d429d-a46e-4423-8084-1c190f8905ef": {
+  "name": "Ownership rules",
+  "label": null,
+  "parent": "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+  "note": "The checker works out before running when each value dies. Fastest safe option; Rust's hard rules, chosen against in D26.\n\n* Languages: Rust.",
+  "children": [],
+  "parents": [
+   [
+    "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+    "8 Who cleans up memory?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "635ba7b9-4c7c-4598-9803-0a2bc1dbd099": "8 Who cleans up memory?"
+  }
+ },
+ "3fa1bd8b-cc17-4132-8cfc-afec05c5b224": {
+  "name": "Pools (regions)",
+  "label": "To explore",
+  "parent": "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+  "note": "Values made for one job go into a pool freed all at once when the job ends. Very fast for job-shaped work; usually combined with another option.\n\n* Languages: Erlang (per-process heaps), Zig arenas, MLKit.\n\nOpen: Robert wants to explore this (Erlang and the BEAM), for example each long-running part owning its memory, so a part stopped by a bug (D29) frees everything at once. Belongs with running programs.",
+  "children": [],
+  "parents": [
+   [
+    "635ba7b9-4c7c-4598-9803-0a2bc1dbd099",
+    "8 Who cleans up memory?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "635ba7b9-4c7c-4598-9803-0a2bc1dbd099": "8 Who cleans up memory?"
+  }
+ },
+ "f4366958-1331-4d06-89cd-b2a445330594": {
+  "name": "9 What does it look like?",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "Syntax: the spelling and punctuation of the code agents write, chosen last so it serves the meaning. The spec language Robert reads may need a different look; that is a separate question.\n\nStatus: Decided: D33. Exact details (do ... end or just end, how functions are written) are later questions.",
+  "children": [
+   "7fafebf7-5b56-4d8c-a037-9824ee37cd65",
+   "61222f23-7612-427b-996c-db3a62c13c42",
+   "7ba0905d-981d-4d28-a4f4-8d4c1e86f9b9",
+   "215a332c-385b-4139-8637-96736fb9d609",
+   "73b086c6-fbd7-4f1b-947f-345697464255"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "7fafebf7-5b56-4d8c-a037-9824ee37cd65": "Curly braces",
+   "61222f23-7612-427b-996c-db3a62c13c42": "Indentation",
+   "7ba0905d-981d-4d28-a4f4-8d4c1e86f9b9": "Keywords and end",
+   "215a332c-385b-4139-8637-96736fb9d609": "Parentheses everywhere",
+   "73b086c6-fbd7-4f1b-947f-345697464255": "Near-English"
+  }
+ },
+ "7fafebf7-5b56-4d8c-a037-9824ee37cd65": {
+  "name": "Curly braces",
+  "label": null,
+  "parent": "f4366958-1331-4d06-89cd-b2a445330594",
+  "note": "if amount > balance { ... } else { ... }\n\n* Languages: C, Java, JavaScript, Rust, Go, Swift, Gleam.",
+  "children": [],
+  "parents": [
+   [
+    "f4366958-1331-4d06-89cd-b2a445330594",
+    "9 What does it look like?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "f4366958-1331-4d06-89cd-b2a445330594": "9 What does it look like?"
+  }
+ },
+ "61222f23-7612-427b-996c-db3a62c13c42": {
+  "name": "Indentation",
+  "label": null,
+  "parent": "f4366958-1331-4d06-89cd-b2a445330594",
+  "note": "Blocks marked by indentation, no closing marks. A lost space silently changes meaning.\n\n* Languages: Python, Haskell, Elm, F#.",
+  "children": [],
+  "parents": [
+   [
+    "f4366958-1331-4d06-89cd-b2a445330594",
+    "9 What does it look like?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "f4366958-1331-4d06-89cd-b2a445330594": "9 What does it look like?"
+  }
+ },
+ "7ba0905d-981d-4d28-a4f4-8d4c1e86f9b9": {
+  "name": "Keywords and end",
+  "label": "Chosen (D33)",
+  "parent": "f4366958-1331-4d06-89cd-b2a445330594",
+  "note": "Robert's choice (D33). if amount > balance do ... else ... end. Ruby and Elixir are his favourite languages.\n\n* Languages: Ruby, Elixir, Lua, Julia.\n\nWith:\n* one official formatter and no alternative spellings;\n* an unambiguous grammar that gives precise errors for half-broken programs.\n\nWhy: named block endings help error messages (where Mo teaches agents); Elixir's look fits the BEAM taste and is familiar to models; reads closer to English than braces.",
+  "children": [],
+  "parents": [
+   [
+    "f4366958-1331-4d06-89cd-b2a445330594",
+    "9 What does it look like?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "f4366958-1331-4d06-89cd-b2a445330594": "9 What does it look like?"
+  }
+ },
+ "215a332c-385b-4139-8637-96736fb9d609": {
+  "name": "Parentheses everywhere",
+  "label": null,
+  "parent": "f4366958-1331-4d06-89cd-b2a445330594",
+  "note": "(if (> amount balance) ...)\n\n* Languages: Lisp, Clojure, Racket.",
+  "children": [],
+  "parents": [
+   [
+    "f4366958-1331-4d06-89cd-b2a445330594",
+    "9 What does it look like?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "f4366958-1331-4d06-89cd-b2a445330594": "9 What does it look like?"
+  }
+ },
+ "73b086c6-fbd7-4f1b-947f-345697464255": {
+  "name": "Near-English",
+  "label": null,
+  "parent": "f4366958-1331-4d06-89cd-b2a445330594",
+  "note": "If the amount is greater than the balance, fail.\n\n* Languages: SQL, COBOL, AppleScript, Inform 7. A candidate look for the spec language, not the code.",
+  "children": [],
+  "parents": [
+   [
+    "f4366958-1331-4d06-89cd-b2a445330594",
+    "9 What does it look like?",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "f4366958-1331-4d06-89cd-b2a445330594": "9 What does it look like?"
+  }
+ },
+ "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": {
+  "name": "Neighbouring languages",
+  "label": null,
+  "parent": "ba0e8864-48c2-4274-9d25-20da257d8622",
+  "note": "Existing languages that share parts of Mo's design choices (D24-D33), and what each lacks. No single language combines them all; the novel part is the combination and the purpose (a spec a human reads, code agents write, a checker joining them).\n\nWhat is new territory:\n* Proof and contracts together with listed effects plus capabilities, in one checker (F* comes closest, without capabilities).\n* In-place demands the checker proves, inside a language that also proves logic.\n* A spec language designed for a human who never reads code.\n* Designing every choice around agents as the writers.\n\nThe risk: each piece exists, but the pieces interact, and the integration is research-level.",
+  "children": [
+   "4dc05197-0fa1-4ffa-a963-6def2c25b279",
+   "d2626282-b7f4-4cf4-87e2-84a0e65c7870",
+   "909d1853-511a-4065-9942-a1e0bde0b856",
+   "215296cd-f4bc-441c-8a38-e2a8be968d4f",
+   "3801efbe-8f01-4a9c-84b3-7173a37a9643",
+   "68495afc-19cf-452f-87bf-78605674badc",
+   "d3c82445-f456-4694-8b49-1ace62ccd059",
+   "d2bec90d-11b1-4f5e-84c8-a55e11969194"
+  ],
+  "parents": [
+   [
+    "ba0e8864-48c2-4274-9d25-20da257d8622",
+    "Design choices",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "ba0e8864-48c2-4274-9d25-20da257d8622": "Design choices",
+   "4dc05197-0fa1-4ffa-a963-6def2c25b279": "Koka",
+   "d2626282-b7f4-4cf4-87e2-84a0e65c7870": "Roc",
+   "909d1853-511a-4065-9942-a1e0bde0b856": "Gleam",
+   "215296cd-f4bc-441c-8a38-e2a8be968d4f": "Lean 4",
+   "3801efbe-8f01-4a9c-84b3-7173a37a9643": "F*",
+   "68495afc-19cf-452f-87bf-78605674badc": "Dafny and SPARK Ada",
+   "d3c82445-f456-4694-8b49-1ace62ccd059": "Pony and Austral",
+   "d2bec90d-11b1-4f5e-84c8-a55e11969194": "Elixir and Erlang"
+  }
+ },
+ "4dc05197-0fa1-4ffa-a963-6def2c25b279": {
+  "name": "Koka",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Microsoft Research. Shares: pure, listed effects with swappable handlers (D30), counting holders with invisible in-place updates and fip demands (D26, D32), no null. Lacks: capabilities, proofs and contracts, Ruby-like look. A research language.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "d2626282-b7f4-4cf4-87e2-84a0e65c7870": {
+  "name": "Roc",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Shares: pure, counting holders with in-place updates (D26, D32), platforms where the runtime holds the doors (D30), limited shared abilities (D31), no null, errors as values, bugs crash. Lacks: listed effects (only an on-off mark), proofs, provable in-place demands. Young.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "909d1853-511a-4065-9942-a1e0bde0b856": {
+  "name": "Gleam",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Runs on the BEAM. Shares: statically checked, immutable, no null, errors as values, no OOP, plain data and modules. Lacks: effect tracking, capabilities, proofs, counting holders (uses BEAM garbage collection). Brace syntax.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "215296cd-f4bc-441c-8a38-e2a8be968d4f": {
+  "name": "Lean 4",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Shares: pure, counting holders with in-place updates, full proofs (D24, D26, D32). Lacks: listed effects and capabilities, provable in-place demands; built for mathematicians, indentation syntax.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "3801efbe-8f01-4a9c-84b3-7173a37a9643": {
+  "name": "F*",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Shares: proofs plus effects tracked in function descriptions, no null, errors as values. The closest on verification plus effects. Lacks: capabilities, in-place demands, familiar syntax; very demanding to use.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "68495afc-19cf-452f-87bf-78605674badc": {
+  "name": "Dafny and SPARK Ada",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Share: static checking with contracts, proven where possible (D24's model). Lack: purity by default, effect lists, capabilities.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "d3c82445-f456-4694-8b49-1ace62ccd059": {
+  "name": "Pony and Austral",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Share: capabilities, code touches only what it is handed (D30). Lack: purity, proofs; Austral uses Rust-like ownership instead of counting.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "d2bec90d-11b1-4f5e-84c8-a55e11969194": {
+  "name": "Elixir and Erlang",
+  "label": null,
+  "parent": "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+  "note": "Share: the look (D33), the BEAM runtime, let-it-crash with supervisors (D29), per-process memory (pools, D32). Lack: static checking (Elixir is adding a type system), effect tracking, proofs.",
+  "children": [],
+  "parents": [
+   [
+    "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4",
+    "Neighbouring languages",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "64a7c70a-2ad3-4fd5-b5ab-ae8f8610b7d4": "Neighbouring languages"
+  }
+ },
+ "5f2cf67f-b6b3-4628-ab3f-d278cf42437b": {
+  "name": "Design Doc",
+  "label": null,
+  "parent": "a5168d68-0a8e-4205-b5a3-24207e73006d",
+  "note": "AI-First Programming Language \u2014 Design Doc\nCopied 2026-09-23 from https://claude.ai/code/artifact/46a80a81-a308-4775-8f04-7959bf8a5536\n\n## Thesis\n\nWhen agents write the code, a programming language should be designed first as a verification system. It should make it easy for AI to do the right thing, hard to do the wrong thing, and fast to discover when something went wrong.\n\nMost languages were designed for human authors, trading strictness for ergonomics. AI-first flips that trade: annotation is cheap, ambiguity is expensive. Strictness that humans found too costly to write becomes affordable when agents pay the cost.\n\n## Guiding principles\n\nFive principles are settled. Every later design decision should serve them.\n\n1. Humans own intent and decisions; agents own implementation. Humans may not write code, but they remain accountable for their programs. The language never takes humans out of important decisions.\n2. Verification and fast feedback are the core purpose. The compiler and runtime give fast, precise, machine-readable feedback so an agent knows how to fix a mistake immediately.\n3. Strict by default. Rules drawn from safety-critical engineering are enforced by the compiler, not left to style guides and code review.\n4. Waivers are explicit, visible, and human-approved. Flexibility exists, but it is never the default. A waiver downgrades a guarantee (from proven, to runtime-checked, to trusted) rather than deleting it. The compiler can list every waiver in a project.\n5. Bugs are inevitable; catch them early. The goal is not bug-free code but finding and fixing bugs quickly, as far from production as possible.\n\n## Project scope\n\nThis is a research experiment, not a competitor to existing languages. The aim is to explore ideas, push into directions not yet tried, and see how far AI-built software can go.\n\n* Roles: Robert designs; agents build the compiler and tooling.\n* Scope: general purpose in the long run, but grown from concrete targets.\n* First target: a simple CLI. A web server and REST API come later.\n* Success criteria: still open. Candidates include deep personal understanding of language design, measurable evidence that agents ship fewer bugs in this language, and ideas strong enough to influence others.\n\n## Traditions to draw on\n\nMost of this wisdom was enforced by human discipline, not by languages. The AI-first move is to ask why each rule existed: rules for machine analyzability become compiler-enforced; rules for human cognition get reconsidered.\n\n* NASA/JPL Power of Ten: bounded loops, no recursion, no dynamic allocation after startup, assertions, check every return value. Rethink: keep the rules that make programs provable; enforce them in the compiler.\n* Tiger Style (TigerBeetle): assertions everywhere, explicit limits, static allocation, handle every error. Rethink: limits and assertions become language features.\n* Negative space programming: assert what must never happen, not only what should. Rethink: first-class contracts, checked statically where possible.\n* Design by Contract (Eiffel): preconditions, postconditions, invariants. Rethink: contracts are the primary verification surface.\n* Ada/SPARK, Dafny: statically proven correctness. Rethink: make proof practical for everyday application code.\n* Make illegal states unrepresentable; parse, don't validate: types rule out bad data by construction. Rethink: no null, sum types, exhaustive matching.\n* Erlang, \"let it crash\": isolate failure and recover. Rethink: open question for the error model.\n\n## Open questions\n\n* Where does human intent live? Agents may write contracts freely, so the plain-language requirement they are checked against needs a home.\n* How do we stop weak contracts and self-confirming tests? Candidates: mutation testing, property-based testing, independent agents.\n* Type system: what is it responsible for?\n* Error model: how do failures propagate and get handled?\n* Effects: how do functions declare what they do to the outside world?\n* Memory management: garbage collection or ownership?\n* Concurrency model.\n* Compilation target: interpreter first, then what?\n* What does success look like?",
+  "children": [],
+  "parents": [
+   [
+    "a5168d68-0a8e-4205-b5a3-24207e73006d",
+    "Documents",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "a5168d68-0a8e-4205-b5a3-24207e73006d": "Documents"
+  }
+ },
+ "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": {
+  "name": "Glossary",
+  "label": null,
+  "parent": "a5168d68-0a8e-4205-b5a3-24207e73006d",
+  "note": "Mo \u2014 Glossary\nCopied 2026-09-23 from https://claude.ai/code/artifact/fce3fb95-c54b-4941-99fb-475b4bdb6514\n\nThe shared vocabulary for the Mo project, used by every session and every agent. When a term's meaning changes, update it here first. Each child note holds one section of terms.",
+  "children": [
+   "d21c4f2b-4bee-480f-8465-ef6581b0c8fb",
+   "bf13d07f-dabe-4af3-80e6-bcee1bafb88c",
+   "2a79b894-cf98-424f-b0a7-c9404087fc62",
+   "5ce86a6d-02be-4b23-9947-712771040bfe",
+   "620257dd-ade2-4625-83af-7d2d6bda12e8",
+   "e28c51ea-ca3d-4890-a7ba-67fc09704111"
+  ],
+  "parents": [
+   [
+    "a5168d68-0a8e-4205-b5a3-24207e73006d",
+    "Documents",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "a5168d68-0a8e-4205-b5a3-24207e73006d": "Documents",
+   "d21c4f2b-4bee-480f-8465-ef6581b0c8fb": "Core Concepts",
+   "bf13d07f-dabe-4af3-80e6-bcee1bafb88c": "Errors",
+   "2a79b894-cf98-424f-b0a7-c9404087fc62": "Rules, Waivers, and Approval",
+   "5ce86a6d-02be-4b23-9947-712771040bfe": "Verification and Testing",
+   "620257dd-ade2-4625-83af-7d2d6bda12e8": "Borrowed Terms",
+   "e28c51ea-ca3d-4890-a7ba-67fc09704111": "Proposed Terms"
+  }
+ },
+ "d21c4f2b-4bee-480f-8465-ef6581b0c8fb": {
+  "name": "Core Concepts",
+  "label": null,
+  "parent": "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+  "note": "Mo: The AI-first, verification-focused programming language this project designs. A research experiment, not a competitor to existing languages.\n\nAI-first: Designed on the assumption that agents write the code and humans own the decisions. Contrasts with human-first languages, which trade strictness for human ergonomics.\n\nAgent: An AI system that writes, tests, and fixes code. In Mo, agents own implementation.\n\nHuman: The person accountable for a program. Humans own intent and decisions, approve waivers, and review specs rather than implementations.\n\nIntent: What a human wants a program to do, in plain language (\"a discount is never more than 50% off\"). Where intent lives in Mo is still open.\n\nImplementation: The code that does the work. Written by agents; not routinely read by humans.\n\nVerification: Checking that an implementation matches what was declared about it. Always verification against something: types, contracts, tests, or intent.\n\nFeedback loop: The cycle of an agent writing code, getting a check result, and fixing it. Mo aims to make every loop fast and precise.\n\nStructured diagnostic: A machine-readable compiler or runtime message: a stable error code, the exact location, what went wrong, and a suggested fix. Written for agents first.",
+  "children": [],
+  "parents": [
+   [
+    "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+    "Glossary",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": "Glossary"
+  }
+ },
+ "bf13d07f-dabe-4af3-80e6-bcee1bafb88c": {
+  "name": "Errors",
+  "label": null,
+  "parent": "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+  "note": "Mo splits all errors into two kinds that never mix.\n\nFailure: The world misbehaved: a missing file, a dropped network, bad user input. Declared in a function's signature; the compiler forces every caller to handle it. Not a bug.\n\nDefect: The program misbehaved: a broken contract, an impossible state, a wrong result. A bug in agent-written code. Never handled or caught; it stops the unit of work and produces a defect report.\n\nDefect report: The structured diagnostic a defect produces: which contract failed, the values involved, and where. Always sent somewhere a human or agent will see it, even when the system recovers.\n\nFail fast: Stop at the first sign of a defect instead of continuing with bad state.\n\nSupervision: Erlang-style recovery: when a unit of work hits a defect, only that unit stops, and a supervisor keeps the rest of the program running. Decided for Mo.\n\nSupervisor: The part of a program that watches units of work and restarts or replaces them after a defect. If a unit fails too often in a short window, the supervisor escalates instead of retrying.\n\nCompiler bug: A defect in Mo's own compiler or tooling. Distinct from a defect in a Mo program.",
+  "children": [],
+  "parents": [
+   [
+    "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+    "Glossary",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": "Glossary"
+  }
+ },
+ "2a79b894-cf98-424f-b0a7-c9404087fc62": {
+  "name": "Rules, Waivers, and Approval",
+  "label": null,
+  "parent": "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+  "note": "Strict by default: Mo's rules apply everywhere unless a waiver is declared. Flexibility exists but is never the default.\n\nWaiver: A declared, justified departure from one of Mo's default rules (for example, allowing recursion). Agents may propose waivers; only humans grant them.\n\nException: Not a Mo term. Mo has no thrown exceptions, and a departure from a rule is a waiver. Named this way because agents trained on other languages would misread \"exception.\"\n\nGuarantee level: How strongly a property is checked. Three levels: proven, bounded, trusted. A waiver moves code down a level instead of removing the guarantee.\n\nProven: The compiler proves the property statically, before the program runs. The default.\n\nBounded: The compiler can't prove the property, so the author declares a limit that is checked at runtime (for example, a maximum recursion depth).\n\nTrusted: No check at all, only a written justification. Rare and conspicuous.\n\nApproval: A human's sign-off on a waiver.\n\nPinned approval: An approval tied to a hash of the code it covers. If the code changes, the approval becomes invalid and returns to a human.\n\nWaiver list: The compiler-generated list of every waiver in a project: the rule waived, where, and why. Part of what humans review.\n\nApproval fatigue: When approval requests are so frequent that humans stop reading them. Mo's defaults must be good enough that waivers stay rare.",
+  "children": [],
+  "parents": [
+   [
+    "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+    "Glossary",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": "Glossary"
+  }
+ },
+ "5ce86a6d-02be-4b23-9947-712771040bfe": {
+  "name": "Verification and Testing",
+  "label": null,
+  "parent": "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+  "note": "Signature: What a function declares about itself: inputs, output, effects, failures, and contracts. The part of the code the compiler checks everything else against.\n\nContract: A checkable promise attached to a function. Preconditions (what must be true on the way in), postconditions (what the function guarantees on the way out, written `ensures`), and invariants (what is always true).\n\nWeak contract: A contract that passes but doesn't capture the real intent. Example: `ensures: result >= 0` when the rule is \"never more than 50% off.\"\n\nEffect: Something a function does to the outside world, such as reading files or using the network. Declared in the signature so an agent can't add a side effect silently.\n\nLanguage spec: The prose description of what Mo is, what it guarantees, and why. Robert's main design artifact.\n\nGolden test: A small example program paired with its expected output or expected diagnostic. The golden test corpus is the executable spec agents build the compiler against.\n\nMutation testing: Deliberately breaking code (for example, changing `0.5` to `0.2`) to check whether contracts and tests notice. Surviving mutations reveal weak contracts.\n\nProperty-based testing: Generating many inputs automatically to check that a property always holds.\n\nFuzzing: Feeding random or malformed input to find crashes and defects.",
+  "children": [],
+  "parents": [
+   [
+    "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+    "Glossary",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": "Glossary"
+  }
+ },
+ "620257dd-ade2-4625-83af-7d2d6bda12e8": {
+  "name": "Borrowed Terms",
+  "label": null,
+  "parent": "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+  "note": "Terms from other traditions, with the meaning Mo uses.\n\nNegative space programming: From Tiger Style: asserting what must never happen, not only what should. In Mo, a first-class part of contracts.\n\nTiger Style: TigerBeetle's engineering philosophy: assertions everywhere, explicit limits, static allocation, handle every error.\n\nPower of Ten: NASA/JPL's ten rules for safety-critical C (Gerard Holzmann, 2006): bounded loops, no recursion, no dynamic allocation after startup, and more.\n\nDesign by Contract: Bertrand Meyer's method, from the Eiffel language: preconditions, postconditions, and invariants.\n\nCorrection ladder: Lauren Tan's ranking of where a correction to an agent can live, hardest first: the codebase, static analysis, rules, skills, the style guide. Mo adds a rung above them all: the language itself.\n\nFence: From Rat Stack: the lint rules, hooks, and CI checks that keep agents on the right path in an existing language. A fence can be climbed; a language rule can't.\n\nFloor: The worst outcome on a normal run. Raising the floor lets agents run longer unattended.\n\nMake illegal states unrepresentable: Yaron Minsky's principle: design types so invalid data can't exist.\n\nParse, don't validate: Alexis King's principle: convert raw input into precise types once, at the edge, instead of re-checking it everywhere.",
+  "children": [],
+  "parents": [
+   [
+    "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+    "Glossary",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": "Glossary"
+  }
+ },
+ "e28c51ea-ca3d-4890-a7ba-67fc09704111": {
+  "name": "Proposed Terms",
+  "label": null,
+  "parent": "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+  "note": "Under discussion, not yet decided. Move a term into its section once it's settled.\n\nIsolated unit: A unit of work with its own memory that communicates only by messages, as in Erlang. Would let one unit stop on a defect without corrupting others. Not yet committed.\n\nShare-nothing: A concurrency model where units never share memory; shared data lives in a dedicated owner unit. Shared memory would be a declared, approved waiver. Not yet committed.",
+  "children": [],
+  "parents": [
+   [
+    "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e",
+    "Glossary",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "0dae7f87-dbb2-4c84-a6c1-9fde9ecc362e": "Glossary"
+  }
+ },
+ "c6015ae1-0623-4149-97fe-817c63161a80": {
+  "name": "Language design primer",
+  "label": null,
+  "parent": "a5168d68-0a8e-4205-b5a3-24207e73006d",
+  "note": "Learning notes from a conversation with Robert on 23 Sep 2026. These are explanations, not decisions. Decisions are in DECISIONS.md.\n\n## Two halves of a language\n* **Design:** what the language is: the rules a person (or agent) learns in order to write it.\n* **Implementation:** the program that makes those rules do something on a computer.\n* Design can be worked out without knowing the implementation. For Mo, the design is Robert's part (D5, D6).\n\n## The design questions every language answers\n* **Syntax:** what valid writing looks like (spelling and grammar).\n* **Semantics:** what valid writing means when it runs. Most hard design decisions are here.\n* **Values and types:** what kinds of things exist (numbers, text, true/false, lists, records).\n* **Names and scope:** how things get names, and where a name can be seen.\n* **Control flow:** how a program decides and repeats.\n* **Functions:** how reusable logic is packaged.\n* **Errors:** what happens when something goes wrong, and when you find out.\n* **Mutability:** whether things can change after they are made.\n* **Modules:** how a big program is split into parts.\n* **Standard library:** what comes built in.\n\n## The big tradeoffs\n* **When are mistakes caught?** Before running (static checking) or while running (dynamic).\n* **Does the language guess what you meant?** For example, whether \"5\" + 3 quietly becomes \"53\", or is refused.\n* **Can things change?** Mutable by default, or immutable by default.\n* **How is \"nothing\" represented?** A null that can hide anywhere, or a \"might be missing\" case that must be handled.\n* **How do errors work?** Thrown and caught far away, or returned as ordinary results the caller must handle.\n* **What can code do behind your back?** Any function may touch the outside world, or side effects are tracked.\n* **How is a program organised?** Step-by-step instructions, transforming values, objects, or describing the result.\n* **Who cleans up memory?** Automatic, manual, or rules the checker enforces.\n* **Syntax comes last.** Settle meaning first, then choose a look that makes it clear.\n\n## Principles designers learn the hard way\n* Every feature has a cost, and features interact.\n* Restrictions are features: what a language forbids is what lets it make guarantees.\n* A small core with a rich library.\n* Error messages are part of the design.\n\n## How designers work\n* Start from purpose: who writes programs in the language, and what are they for? Every other choice follows.\n* Write the example programs you wish you could write, then ask what rules make them valid, and what those rules also allow by accident.\n* The examples become the spec, and later the tests.\n\n## The implementation pipeline (for reference)\n* Lexer: splits text into words (tokens).\n* Parser: checks the grammar and builds a tree of the program (the AST).\n* Checker: asks whether the program makes sense (type checking lives here).\n* Execution: an interpreter runs the tree directly; a compiler translates it to run later.\n* Runtime: what must exist while the program runs (memory, built-ins, error reporting).\n* Learning resource: Crafting Interpreters by Robert Nystrom (craftinginterpreters.com).\n\n## Where Mo already stands on the purpose question\n* Who writes Mo: AI agents, not humans (D2). Robert reads and approves specs, never code (D5).\n* What Mo is for: reliable, safe software; verification is the central problem (D2). General purpose, no single domain (D4).\n* Guiding principle: make it really hard to do the wrong thing and very easy to do the right thing (D3).\n* Earlier research (a proposal, not a decision) named a simple CLI as the first target, with a web server and REST API later.\n* Where Mo stands on the tradeoffs above is not yet decided. Robert's v1 preferences (immutable by default, errors as values, no nulls) are in the parking lot until he decides.\n",
+  "children": [],
+  "parents": [
+   [
+    "a5168d68-0a8e-4205-b5a3-24207e73006d",
+    "Documents",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "a5168d68-0a8e-4205-b5a3-24207e73006d": "Documents"
+  }
+ },
+ "d0dd9b89-c564-447a-823f-adbc2e6ca47b": {
+  "name": "Session Orientation",
+  "label": null,
+  "parent": "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+  "note": "Read this at the start of every Mo session.\n\n## What this brain is\nThe Mo Research brain in TheBrain is the research space for Mo, an AI-first, verification-focused programming language. Robert designs; agents build. It is a research experiment, not a product.\n\n## Source of truth\nTheBrain is the source of truth for all Mo project documents (decided 2026-09-23). The hosted Claude Docs versions are older frozen copies.\n\n## Where things live\n* Big Picture: the working picture of Mo (D20). Its seven children are the areas we design, 1 Spec layer to 7 Ecosystem. This is the only copy; it changes only by decision.\n* Thoughts of type Earlier research hold research done before the Big Picture. They are proposals, not decisions, and hang under the areas they feed. Their jumps are named \"coupled with\" (explore together or in close sequence), \"depends on\" (the source waits on decisions in the destination) or \"tests\".\n* Parking lot: earlier research outside the seven areas.\n* Documents > Design Doc and Documents > Glossary. Use the glossary terms exactly.\n* Decisions are recorded only in the repo's docs/DECISIONS.md.\n* The mo-v2 repo is public at https://github.com/robertguss/mo-v2. Reference repo docs by URL, e.g. https://github.com/robertguss/mo-v2/blob/main/docs/DECISIONS.md\n\n## Working style Robert has asked for\n* Stay high level. Map the territory before getting granular; go deep in one area per session.\n* One question at a time.\n* Direct, honest feedback over validation.\n* Concrete examples over abstractions; explain unfamiliar concepts plainly.\n\n## Terminology to watch\n* Say waiver, never exception, for a departure from a rule. Mo has no thrown exceptions.\n* Failure = the world misbehaved (handled). Defect = the program misbehaved (stops the unit, reported).\n\n## Working through TheBrain's local API\n* The API runs at http://localhost:8001/api while the desktop app is open. Docs: http://localhost:8001/api/index.html\n* The key is THE_BRAIN_API_KEY in the mo-v2 repo's fnox.toml. Read it with fnox get, run from the repo folder. Never write the key to a file or print it.\n* In notes, start plain bullets with an asterisk. A dash makes an unticked checkbox and a plus makes a ticked one.\n* A note update replaces the whole note. Read it first and send back the full text.\n",
+  "children": [],
+  "parents": [
+   [
+    "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+    "Mo Research",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8": "Mo Research"
+  }
+ },
+ "b4043471-2ac9-4c75-be49-bb3ebed49f41": {
+  "name": "Big Picture",
+  "label": null,
+  "parent": "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+  "note": "# The big picture\n\nWorking picture of Mo v2, accepted by Robert on 23 Sep 2026 (D20). It changes only by decision.\n\n**Update, 23 Sep 2026 (D34, D35):** Mo is a single programming language with a familiar Ruby/Elixir-like syntax that does everything in the Design choices (D24\u2013D33) through its compiler and runtime. The two-languages picture below is superseded in that respect. Syntax, the language surface and how promises are written are deferred; next is small programs and experiments to verify the D24\u2013D33 ideas.\n\n**Mo is two languages joined by a machine:** a small *spec language* Robert reads and approves, and a *code language* agents write, with a checker proving or testing that the code keeps the spec.\n\n```\n   ROBERT                       THE MACHINE                     AGENTS\n \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510          \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510         \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n \u2502 Spec layer   \u2502  \u2500\u2500\u2500\u2500\u2500\u2500\u25b6 \u2502 Checker + verifier \u2502 \u25c0\u2500\u2500\u2500\u2500\u2500\u2500 \u2502 Code layer   \u2502\n \u2502 intent,      \u2502          \u2502 proofs, tests,     \u2502         \u2502 functions,   \u2502\n \u2502 promises,    \u2502 \u25c0\u2500\u2500\u2500\u2500\u2500\u2500  \u2502 simulation         \u2502 \u2500\u2500\u2500\u2500\u2500\u2500\u25b6 \u2502 data, effects\u2502\n \u2502 examples     \u2502 evidence \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518 feedback\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n```\n\n## The seven areas\n\n1. **Spec layer (what Robert reads).** Intent, promises and examples in near-English. A proof is only as good as its spec (Experiments 1 and 2).\n2. **Code layer (what agents write).** Data, functions, errors. Robert's v1 picks live here: Ruby's look, no OOP, immutable by default, errors as values, no nulls.\n3. **Feedback loop (how agents learn Mo).** Instant, precise explanations of what's wrong and how to fix it, so agents that have never seen Mo reach correct programs (D13).\n4. **Built-in verification (how the link is checked).** Which methods the language provides natively, and when each runs.\n5. **Effects and authority (what code may touch).** Capabilities: code uses only what it is handed, so specs can make promises about side effects.\n6. **Running programs.** Runtime, concurrency, exact replay of any run.\n7. **Ecosystem.** Packages, dependencies, supply-chain safety. Last.\n\n## Evidence so far\n\n|Area|Experiment|What it showed|:(table=\"column-widths:-1,0,0,0;justification:default\"):\n|---|---|---|\n| 1, 4 | 1: tiny safe checker       | Lean can prove a checker safe, but a safety promise alone lets a checker that rejects everything pass. Robert's examples close the gap.             |\n| 1, 4 | 2: withdraw, seven methods | A proof against a complete spec caught all 10 planted bugs. Every testing method missed the rare-input bugs. A proof is only as strong as its spec. |\n",
+  "children": [
+   "96fc7b8f-7947-4e33-b6ad-e4e7da269837",
+   "fbfefa00-0d07-49bf-88de-b47875d7d831",
+   "260982f5-9158-4dc7-bf12-b84dce0c30f4",
+   "6503a007-a711-4149-8e90-38176ffb8eb1",
+   "102aff3c-2bb6-4720-ac08-47932a3d496a",
+   "1033d1f0-9f46-4da4-8af0-ead11225b011",
+   "d51779d6-e7b1-42d6-aaad-7724c399bb1a",
+   "ae6a0734-495a-4144-8c0e-b8d116d95155"
+  ],
+  "parents": [
+   [
+    "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+    "Mo Research",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8": "Mo Research",
+   "96fc7b8f-7947-4e33-b6ad-e4e7da269837": "1 Spec layer",
+   "fbfefa00-0d07-49bf-88de-b47875d7d831": "2 Code layer",
+   "260982f5-9158-4dc7-bf12-b84dce0c30f4": "3 Feedback loop",
+   "6503a007-a711-4149-8e90-38176ffb8eb1": "4 Built-in verification",
+   "102aff3c-2bb6-4720-ac08-47932a3d496a": "5 Effects and authority",
+   "1033d1f0-9f46-4da4-8af0-ead11225b011": "6 Running programs",
+   "d51779d6-e7b1-42d6-aaad-7724c399bb1a": "7 Ecosystem",
+   "ae6a0734-495a-4144-8c0e-b8d116d95155": "Foundations"
+  }
+ },
+ "96fc7b8f-7947-4e33-b6ad-e4e7da269837": {
+  "name": "1 Spec layer",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "**Spec layer (what Robert reads).** Intent, promises and examples in near-English. A proof is only as good as its spec (Experiments 1 and 2).",
+  "children": [
+   "e1090d9c-a6a9-4489-af00-404e92d4748b",
+   "24002551-baa3-48a4-b57d-eafe13005732"
+  ],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics",
+   "24002551-baa3-48a4-b57d-eafe13005732": "Human and Agent Workflow"
+  }
+ },
+ "e1090d9c-a6a9-4489-af00-404e92d4748b": {
+  "name": "Core Semantics",
+  "label": null,
+  "parent": "96fc7b8f-7947-4e33-b6ad-e4e7da269837",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nWhat Mo programs mean: the heart of the language.\n\nStatus: errors partly explored; everything else open.\n\nTerritory:\n* Type system: what it is responsible for\n* Data: records, sum types, no null\n* Functions and signatures: inputs, outputs, effects, failures, contracts\n* Contracts: preconditions, postconditions, invariants, negative space\n* Effects: how functions declare what they do to the outside world\n* Errors: failures vs. defects (settled)\n* Modules and visibility",
+  "children": [],
+  "parents": [
+   [
+    "102aff3c-2bb6-4720-ac08-47932a3d496a",
+    "5 Effects and authority",
+    1
+   ],
+   [
+    "fbfefa00-0d07-49bf-88de-b47875d7d831",
+    "2 Code layer",
+    1
+   ],
+   [
+    "96fc7b8f-7947-4e33-b6ad-e4e7da269837",
+    "1 Spec layer",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "depends on",
+    "a": "72d71bca-9c63-41e0-84c7-4c87a07dc1f2",
+    "b": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "other": "72d71bca-9c63-41e0-84c7-4c87a07dc1f2"
+   },
+   {
+    "name": "coupled with",
+    "a": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "b": "1eef7c60-8e75-4808-a338-159d351b1f6c",
+    "other": "1eef7c60-8e75-4808-a338-159d351b1f6c"
+   },
+   {
+    "name": "coupled with",
+    "a": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "b": "82c5ce7a-9f0a-46e6-8320-f872327dba87",
+    "other": "82c5ce7a-9f0a-46e6-8320-f872327dba87"
+   },
+   {
+    "name": "depends on",
+    "a": "41eae48b-6a17-4607-b217-a70ab430c182",
+    "b": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "other": "41eae48b-6a17-4607-b217-a70ab430c182"
+   },
+   {
+    "name": "depends on",
+    "a": "dbcc26e8-e875-4082-a939-9d8720c73710",
+    "b": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "other": "dbcc26e8-e875-4082-a939-9d8720c73710"
+   }
+  ],
+  "names": {
+   "102aff3c-2bb6-4720-ac08-47932a3d496a": "5 Effects and authority",
+   "fbfefa00-0d07-49bf-88de-b47875d7d831": "2 Code layer",
+   "96fc7b8f-7947-4e33-b6ad-e4e7da269837": "1 Spec layer",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "72d71bca-9c63-41e0-84c7-4c87a07dc1f2": "Standard Library and Interop",
+   "1eef7c60-8e75-4808-a338-159d351b1f6c": "Verification and Feedback",
+   "82c5ce7a-9f0a-46e6-8320-f872327dba87": "Runtime Model",
+   "41eae48b-6a17-4607-b217-a70ab430c182": "Implementation",
+   "dbcc26e8-e875-4082-a939-9d8720c73710": "Syntax"
+  }
+ },
+ "24002551-baa3-48a4-b57d-eafe13005732": {
+  "name": "Human and Agent Workflow",
+  "label": null,
+  "parent": "96fc7b8f-7947-4e33-b6ad-e4e7da269837",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nHow humans and agents divide the work, and what humans actually review.\n\nStatus: partly explored.\n\nTerritory:\n* Where human intent lives (the plain-language rule a contract is checked against)\n* What humans review: specs, contracts, and the waiver list, not implementations\n* How waivers are proposed and approved; pinned approvals\n* Avoiding approval fatigue\n* Preventing self-confirming work (agents grading their own homework)",
+  "children": [],
+  "parents": [
+   [
+    "6503a007-a711-4149-8e90-38176ffb8eb1",
+    "4 Built-in verification",
+    1
+   ],
+   [
+    "96fc7b8f-7947-4e33-b6ad-e4e7da269837",
+    "1 Spec layer",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "coupled with",
+    "a": "24002551-baa3-48a4-b57d-eafe13005732",
+    "b": "1eef7c60-8e75-4808-a338-159d351b1f6c",
+    "other": "1eef7c60-8e75-4808-a338-159d351b1f6c"
+   }
+  ],
+  "names": {
+   "6503a007-a711-4149-8e90-38176ffb8eb1": "4 Built-in verification",
+   "96fc7b8f-7947-4e33-b6ad-e4e7da269837": "1 Spec layer",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "1eef7c60-8e75-4808-a338-159d351b1f6c": "Verification and Feedback"
+  }
+ },
+ "fbfefa00-0d07-49bf-88de-b47875d7d831": {
+  "name": "2 Code layer",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "**Code layer (what agents write).** Data, functions, errors. Robert's v1 picks live here: Ruby's look, no OOP, immutable by default, errors as values, no nulls.",
+  "children": [
+   "e1090d9c-a6a9-4489-af00-404e92d4748b",
+   "dbcc26e8-e875-4082-a939-9d8720c73710"
+  ],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics",
+   "dbcc26e8-e875-4082-a939-9d8720c73710": "Syntax"
+  }
+ },
+ "dbcc26e8-e875-4082-a939-9d8720c73710": {
+  "name": "Syntax",
+  "label": null,
+  "parent": "fbfefa00-0d07-49bf-88de-b47875d7d831",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nWhat Mo looks like on the page. Deliberately late.\n\nStatus: open.\n\nTerritory:\n* Familiar shapes models already write well\n* One way to do each thing\n* A spec small enough to fit in a prompt",
+  "children": [],
+  "parents": [
+   [
+    "fbfefa00-0d07-49bf-88de-b47875d7d831",
+    "2 Code layer",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "depends on",
+    "a": "dbcc26e8-e875-4082-a939-9d8720c73710",
+    "b": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "other": "e1090d9c-a6a9-4489-af00-404e92d4748b"
+   }
+  ],
+  "names": {
+   "fbfefa00-0d07-49bf-88de-b47875d7d831": "2 Code layer",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics"
+  }
+ },
+ "260982f5-9158-4dc7-bf12-b84dce0c30f4": {
+  "name": "3 Feedback loop",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "**Feedback loop (how agents learn Mo).** Instant, precise explanations of what's wrong and how to fix it, so agents that have never seen Mo reach correct programs (D13).",
+  "children": [
+   "1eef7c60-8e75-4808-a338-159d351b1f6c",
+   "72b0086d-1517-4427-a8ca-9028916c7568"
+  ],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "1eef7c60-8e75-4808-a338-159d351b1f6c": "Verification and Feedback",
+   "72b0086d-1517-4427-a8ca-9028916c7568": "Toolchain and Agent Interface"
+  }
+ },
+ "1eef7c60-8e75-4808-a338-159d351b1f6c": {
+  "name": "Verification and Feedback",
+  "label": null,
+  "parent": "260982f5-9158-4dc7-bf12-b84dce0c30f4",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nHow Mo checks programs and tells agents what went wrong. The core purpose of the language.\n\nStatus: open.\n\nTerritory:\n* What is proven statically vs. checked at runtime (guarantee levels: proven, bounded, trusted)\n* Structured diagnostics written for agents\n* Built-in testing: golden tests, property-based testing, fuzzing, mutation testing\n* Detecting weak contracts\n* Speed of each feedback loop, from milliseconds to production",
+  "children": [],
+  "parents": [
+   [
+    "260982f5-9158-4dc7-bf12-b84dce0c30f4",
+    "3 Feedback loop",
+    1
+   ],
+   [
+    "6503a007-a711-4149-8e90-38176ffb8eb1",
+    "4 Built-in verification",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "coupled with",
+    "a": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "b": "1eef7c60-8e75-4808-a338-159d351b1f6c",
+    "other": "e1090d9c-a6a9-4489-af00-404e92d4748b"
+   },
+   {
+    "name": "coupled with",
+    "a": "24002551-baa3-48a4-b57d-eafe13005732",
+    "b": "1eef7c60-8e75-4808-a338-159d351b1f6c",
+    "other": "24002551-baa3-48a4-b57d-eafe13005732"
+   },
+   {
+    "name": "depends on",
+    "a": "72b0086d-1517-4427-a8ca-9028916c7568",
+    "b": "1eef7c60-8e75-4808-a338-159d351b1f6c",
+    "other": "72b0086d-1517-4427-a8ca-9028916c7568"
+   }
+  ],
+  "names": {
+   "260982f5-9158-4dc7-bf12-b84dce0c30f4": "3 Feedback loop",
+   "6503a007-a711-4149-8e90-38176ffb8eb1": "4 Built-in verification",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics",
+   "24002551-baa3-48a4-b57d-eafe13005732": "Human and Agent Workflow",
+   "72b0086d-1517-4427-a8ca-9028916c7568": "Toolchain and Agent Interface"
+  }
+ },
+ "72b0086d-1517-4427-a8ca-9028916c7568": {
+  "name": "Toolchain and Agent Interface",
+  "label": null,
+  "parent": "260982f5-9158-4dc7-bf12-b84dce0c30f4",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nThe tools around the language, designed for agents first.\n\nStatus: open.\n\nTerritory:\n* The compiler as a service agents can query (what's in scope, what type is needed, which contracts apply)\n* Errors that ship machine-applicable fixes\n* The waiver list and approval tooling\n* Formatter, package management, editor support",
+  "children": [],
+  "parents": [
+   [
+    "260982f5-9158-4dc7-bf12-b84dce0c30f4",
+    "3 Feedback loop",
+    1
+   ],
+   [
+    "d51779d6-e7b1-42d6-aaad-7724c399bb1a",
+    "7 Ecosystem",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "depends on",
+    "a": "72b0086d-1517-4427-a8ca-9028916c7568",
+    "b": "1eef7c60-8e75-4808-a338-159d351b1f6c",
+    "other": "1eef7c60-8e75-4808-a338-159d351b1f6c"
+   }
+  ],
+  "names": {
+   "260982f5-9158-4dc7-bf12-b84dce0c30f4": "3 Feedback loop",
+   "d51779d6-e7b1-42d6-aaad-7724c399bb1a": "7 Ecosystem",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "1eef7c60-8e75-4808-a338-159d351b1f6c": "Verification and Feedback"
+  }
+ },
+ "6503a007-a711-4149-8e90-38176ffb8eb1": {
+  "name": "4 Built-in verification",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "**Built-in verification (how the link is checked).** Which methods the language provides natively, and when each runs.",
+  "children": [
+   "1eef7c60-8e75-4808-a338-159d351b1f6c",
+   "24002551-baa3-48a4-b57d-eafe13005732"
+  ],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "1eef7c60-8e75-4808-a338-159d351b1f6c": "Verification and Feedback",
+   "24002551-baa3-48a4-b57d-eafe13005732": "Human and Agent Workflow"
+  }
+ },
+ "102aff3c-2bb6-4720-ac08-47932a3d496a": {
+  "name": "5 Effects and authority",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "**Effects and authority (what code may touch).** Capabilities: code uses only what it is handed, so specs can make promises about side effects.",
+  "children": [
+   "e1090d9c-a6a9-4489-af00-404e92d4748b",
+   "72d71bca-9c63-41e0-84c7-4c87a07dc1f2"
+  ],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics",
+   "72d71bca-9c63-41e0-84c7-4c87a07dc1f2": "Standard Library and Interop"
+  }
+ },
+ "72d71bca-9c63-41e0-84c7-4c87a07dc1f2": {
+  "name": "Standard Library and Interop",
+  "label": null,
+  "parent": "102aff3c-2bb6-4720-ac08-47932a3d496a",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nWhat Mo programs can do out of the box, and how they reach existing code.\n\nStatus: open.\n\nTerritory:\n* File, network, and process IO, with effects declared\n* Command-line arguments and exit codes (needed for the first CLI)\n* Calling into existing code and ecosystems",
+  "children": [],
+  "parents": [
+   [
+    "102aff3c-2bb6-4720-ac08-47932a3d496a",
+    "5 Effects and authority",
+    1
+   ],
+   [
+    "d51779d6-e7b1-42d6-aaad-7724c399bb1a",
+    "7 Ecosystem",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "depends on",
+    "a": "72d71bca-9c63-41e0-84c7-4c87a07dc1f2",
+    "b": "82c5ce7a-9f0a-46e6-8320-f872327dba87",
+    "other": "82c5ce7a-9f0a-46e6-8320-f872327dba87"
+   },
+   {
+    "name": "depends on",
+    "a": "72d71bca-9c63-41e0-84c7-4c87a07dc1f2",
+    "b": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "other": "e1090d9c-a6a9-4489-af00-404e92d4748b"
+   }
+  ],
+  "names": {
+   "102aff3c-2bb6-4720-ac08-47932a3d496a": "5 Effects and authority",
+   "d51779d6-e7b1-42d6-aaad-7724c399bb1a": "7 Ecosystem",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "82c5ce7a-9f0a-46e6-8320-f872327dba87": "Runtime Model",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics"
+  }
+ },
+ "1033d1f0-9f46-4da4-8af0-ead11225b011": {
+  "name": "6 Running programs",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "**Running programs.** Runtime, concurrency, exact replay of any run.",
+  "children": [
+   "82c5ce7a-9f0a-46e6-8320-f872327dba87"
+  ],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "82c5ce7a-9f0a-46e6-8320-f872327dba87": "Runtime Model"
+  }
+ },
+ "82c5ce7a-9f0a-46e6-8320-f872327dba87": {
+  "name": "Runtime Model",
+  "label": null,
+  "parent": "1033d1f0-9f46-4da4-8af0-ead11225b011",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nHow Mo programs behave while running.\n\nStatus: fault tolerance partly explored; the rest open.\n\nTerritory:\n* Fault tolerance: Erlang-style supervision, fail fast and keep moving (settled)\n* Concurrency model: share-nothing isolated units? (open)\n* Memory management: garbage collection or ownership? (open)\n* How defect reports are delivered while the system keeps running",
+  "children": [],
+  "parents": [
+   [
+    "1033d1f0-9f46-4da4-8af0-ead11225b011",
+    "6 Running programs",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "depends on",
+    "a": "72d71bca-9c63-41e0-84c7-4c87a07dc1f2",
+    "b": "82c5ce7a-9f0a-46e6-8320-f872327dba87",
+    "other": "72d71bca-9c63-41e0-84c7-4c87a07dc1f2"
+   },
+   {
+    "name": "coupled with",
+    "a": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "b": "82c5ce7a-9f0a-46e6-8320-f872327dba87",
+    "other": "e1090d9c-a6a9-4489-af00-404e92d4748b"
+   },
+   {
+    "name": "depends on",
+    "a": "41eae48b-6a17-4607-b217-a70ab430c182",
+    "b": "82c5ce7a-9f0a-46e6-8320-f872327dba87",
+    "other": "41eae48b-6a17-4607-b217-a70ab430c182"
+   }
+  ],
+  "names": {
+   "1033d1f0-9f46-4da4-8af0-ead11225b011": "6 Running programs",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "72d71bca-9c63-41e0-84c7-4c87a07dc1f2": "Standard Library and Interop",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics",
+   "41eae48b-6a17-4607-b217-a70ab430c182": "Implementation"
+  }
+ },
+ "d51779d6-e7b1-42d6-aaad-7724c399bb1a": {
+  "name": "7 Ecosystem",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "**Ecosystem.** Packages, dependencies, supply-chain safety. Last.",
+  "children": [
+   "72d71bca-9c63-41e0-84c7-4c87a07dc1f2",
+   "72b0086d-1517-4427-a8ca-9028916c7568"
+  ],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "72d71bca-9c63-41e0-84c7-4c87a07dc1f2": "Standard Library and Interop",
+   "72b0086d-1517-4427-a8ca-9028916c7568": "Toolchain and Agent Interface"
+  }
+ },
+ "ae6a0734-495a-4144-8c0e-b8d116d95155": {
+  "name": "Foundations",
+  "label": null,
+  "parent": "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nThe thesis, principles, roles, and shared vocabulary for Mo.\n\nStatus: mostly settled. Captured in the design doc and glossary.\n\nSettled so far:\n* Thesis: when agents write the code, a language should be designed first as a verification system.\n* Humans own intent and decisions; agents own implementation.\n* Strict by default; waivers are explicit and human-approved.\n* Bugs are inevitable; catch them early and loudly.\n\nOpen: what does success look like?",
+  "children": [],
+  "parents": [
+   [
+    "b4043471-2ac9-4c75-be49-bb3ebed49f41",
+    "Big Picture",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "tests",
+    "a": "b7e001cb-35d1-45c6-b421-d208e8ba4244",
+    "b": "ae6a0734-495a-4144-8c0e-b8d116d95155",
+    "other": "b7e001cb-35d1-45c6-b421-d208e8ba4244"
+   }
+  ],
+  "names": {
+   "b4043471-2ac9-4c75-be49-bb3ebed49f41": "Big Picture",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "b7e001cb-35d1-45c6-b421-d208e8ba4244": "The Experiment"
+  }
+ },
+ "d4414b19-abe2-4969-8127-b9ac1041011d": {
+  "name": "Parking lot",
+  "label": null,
+  "parent": "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+  "note": "Earlier research that sits outside the seven areas of the Big Picture.",
+  "children": [
+   "41eae48b-6a17-4607-b217-a70ab430c182",
+   "b7e001cb-35d1-45c6-b421-d208e8ba4244"
+  ],
+  "parents": [
+   [
+    "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8",
+    "Mo Research",
+    1
+   ]
+  ],
+  "jumps": [],
+  "names": {
+   "c3f6f1c7-7e0e-4013-b2fd-bd6952debed8": "Mo Research",
+   "41eae48b-6a17-4607-b217-a70ab430c182": "Implementation",
+   "b7e001cb-35d1-45c6-b421-d208e8ba4244": "The Experiment"
+  }
+ },
+ "41eae48b-6a17-4607-b217-a70ab430c182": {
+  "name": "Implementation",
+  "label": null,
+  "parent": "d4414b19-abe2-4969-8127-b9ac1041011d",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nHow Mo itself gets built. Agents build it; Robert designs.\n\nStatus: open.\n\nTerritory:\n* Interpreter first, compiler later?\n* Compilation target: LLVM, C, WebAssembly, or TypeScript\n* The language the compiler is written in\n* Building against the golden test corpus",
+  "children": [],
+  "parents": [
+   [
+    "d4414b19-abe2-4969-8127-b9ac1041011d",
+    "Parking lot",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "depends on",
+    "a": "41eae48b-6a17-4607-b217-a70ab430c182",
+    "b": "e1090d9c-a6a9-4489-af00-404e92d4748b",
+    "other": "e1090d9c-a6a9-4489-af00-404e92d4748b"
+   },
+   {
+    "name": "depends on",
+    "a": "41eae48b-6a17-4607-b217-a70ab430c182",
+    "b": "82c5ce7a-9f0a-46e6-8320-f872327dba87",
+    "other": "82c5ce7a-9f0a-46e6-8320-f872327dba87"
+   }
+  ],
+  "names": {
+   "d4414b19-abe2-4969-8127-b9ac1041011d": "Parking lot",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "e1090d9c-a6a9-4489-af00-404e92d4748b": "Core Semantics",
+   "82c5ce7a-9f0a-46e6-8320-f872327dba87": "Runtime Model"
+  }
+ },
+ "b7e001cb-35d1-45c6-b421-d208e8ba4244": {
+  "name": "The Experiment",
+  "label": null,
+  "parent": "d4414b19-abe2-4969-8127-b9ac1041011d",
+  "note": "Earlier research: proposals, not decisions. Decisions are in DECISIONS.md.\n\nHow we learn whether Mo's ideas work.\n\nStatus: open.\n\nTerritory:\n* Benchmark tasks, starting with a simple CLI\n* What to measure: iterations to success, bugs that escape the checker\n* Comparison against the same tasks in TypeScript\n* Success criteria (still open)",
+  "children": [],
+  "parents": [
+   [
+    "d4414b19-abe2-4969-8127-b9ac1041011d",
+    "Parking lot",
+    1
+   ],
+   [
+    "d1074675-12b1-40ab-aa5b-0f774c611a37",
+    "Earlier research",
+    2
+   ]
+  ],
+  "jumps": [
+   {
+    "name": "tests",
+    "a": "b7e001cb-35d1-45c6-b421-d208e8ba4244",
+    "b": "ae6a0734-495a-4144-8c0e-b8d116d95155",
+    "other": "ae6a0734-495a-4144-8c0e-b8d116d95155"
+   }
+  ],
+  "names": {
+   "d4414b19-abe2-4969-8127-b9ac1041011d": "Parking lot",
+   "d1074675-12b1-40ab-aa5b-0f774c611a37": "Earlier research",
+   "ae6a0734-495a-4144-8c0e-b8d116d95155": "Foundations"
+  }
+ }
+}
