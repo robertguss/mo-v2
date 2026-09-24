@@ -28,9 +28,9 @@ Candidates for later comparison (not commitments): Swift, OCaml or Haskell, Futh
 
 Full write-up, corrected after the Codex verification (D55): [RESULT.md](../../../../../experiments/03-in-place/RESULT.md).
 
-* A (speed, pass): pure Koka vs same-container Rust with the same mimalloc: b1 0.84x, b2 0.83x, b3 1.06x, b4 1.82x. b4 is dominated by arithmetic. In a diagnostic, Koka with fixed-size int64 numbers was 1.68x faster than with its default int, leaving 1.12x against Rust. The allocator's build settings differ between the sides (8- vs 16-byte alignment).
+* A (speed, pass): pure Koka vs same-container Rust with the same mimalloc: b1 0.84x, b2 0.82x, b3 1.06x, b4 1.84x (re-run after the D56 scoring fixes). b4 is dominated by arithmetic. In a diagnostic, Koka with fixed-size int64 numbers was 1.68x faster than with its default int, leaving 1.12x against Rust. The allocator's build settings differ between the sides (8- vs 16-byte alignment).
 * B (fragility, observational): keeping an extra holder cost 1-4% on lists, with no warning. The helper and store-and-take-back changes were optimised away by the compiler, so B tested less than planned.
 * C (detection, pass): all 12 as expected, each broken test with its specific warning. Koka only warns.
 * D (realistic code, pass): 7 of 10 with the relaxed demand; 3 of 10 with the strict one (invoice-total fails through its helper). Failures: tree-insert and parse-csv-line (inherent), update-stock (library gap).
-* Idiomatic Rust collections were 2.6-8.5x faster than the linked versions on b1-b3.
+* Idiomatic Rust collections were about 2.6-8.5x faster than the linked versions on b1-b3.
 * The lead's readings are proposals for Robert to decide.

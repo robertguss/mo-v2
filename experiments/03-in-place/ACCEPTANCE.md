@@ -53,7 +53,8 @@ Best-container Rust is exempt, since it is extra data about idiomatic Rust.
 ### Measuring
 
 - Each version of each benchmark runs 10 times on this Mac, with nothing else
-  heavy running. Every version gets one untimed warm-up run. Then, in each of
+  heavy running. Every version gets one untimed warm-up run, and its output is
+  checked too (D56). Then, in each of
   the 10 rounds, every version runs once, in a fresh random order drawn from a
   recorded seed. That way no version gets its own block of time, which could
   be skewed by heat or background load (D51). The time is the whole program's run time, including building
@@ -169,8 +170,7 @@ tests were fixed with Robert's approval, and none changed its expected verdict:
 - **good-swap:** changed to stored records for the same reason, so the test
   checks real reuse.
 
-Fingerprints (SHA-256) of the test files at approval: to be recorded once Robert
-approves.
+Fingerprints (SHA-256) of the test files are recorded in `LOCK.md`.
 
 ## Review and changes after approval
 
@@ -196,3 +196,16 @@ Finding 4, the same algorithms on both sides, was fixed with Robert's approval
 (D52); see "The same algorithm on both sides" above. Finding 5 was fixed with
 Robert's approval (D53): the extra-holder change now keeps a stated value for a
 stated time, and has its own expected output.
+
+A second independent verification by Codex (`council/verify-codex.md`) led to
+four more fixes, approved by Robert (D56):
+
+- **Claim D:** warnings on a function's local helpers now count against it,
+  under both demands. Full compiler logs are kept. Before this, invoice-total
+  was wrongly scored as passing the strict demand.
+- **Claims A and B:** each version's warm-up run must also give the correct
+  output. A wrong warm-up voids that version's times. The warm-up is recorded
+  as round 0 in `data/timings.csv`.
+- **Plan:** claim D's row and benchmark 3's reversal count were corrected; see
+  `PLAN.md`, "Corrections after approval".
+- The fingerprint placeholder above now points to `LOCK.md`.

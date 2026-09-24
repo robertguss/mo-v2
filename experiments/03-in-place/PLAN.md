@@ -28,7 +28,7 @@ that the in-place rules are correct, in 3c and later in Mo.
 | A     | The in-place trick makes pure code fast. | Each benchmark program is run in pure Koka and in edit-in-place Rust.                                                    | Pure Koka is within 2× of Rust on every program (D37).                                                                                                                                                                   |
 | B     | We know how fragile the trick is.        | Small, innocent-looking changes are made to each program, such as keeping an extra copy of a value. We time each change. | Observational: for every change, the result records whether it slowed the program, by how much, and whether anything warned about it. There is no pass or fail.                                                          |
 | C     | The checker enforces demands.            | Correct `fip` functions are written, plus planted broken ones that secretly copy or allocate.                            | The checker accepts every correct function and refuses every broken one. Accepting a broken one fails. So does refusing a correct one, because a checker that refuses everything proves nothing (Experiment 1's lesson). |
-| D     | Demands work on realistic code.          | Try `fip` on 10 realistic functions (list below).                                                                        | At least 7 of the 10 succeed (D39).                                                                                                                                                                   |
+| D     | Demands work on realistic code.          | Try the relaxed demand (`fbip`, D46) on 10 realistic functions (list below). The strict demand (`fip`) is recorded too. | At least 7 of the 10 succeed (D39).                                                                                                                                                                   |
 
 Note on claim C (D41): Koka only warns about a broken demand; it still
 accepts the program. The experiment counts that warning as a refusal, so claim C
@@ -42,7 +42,7 @@ Each program is small, and each updates a large value many times.
 1. **Update every item:** add one to each of 1,000,000 numbers in a list.
 2. **Build a sorted tree:** insert 1,000,000 numbers into a balanced tree. This
    is the standard benchmark for this technique.
-3. **Reverse a list:** reverse a 1,000,000-item list, 100 times.
+3. **Reverse a list:** reverse a 1,000,000-item list, 101 times.
 4. **Running totals:** turn a list of 1,000,000 amounts into a list of running
    balances.
 
@@ -118,3 +118,11 @@ Candidates, not commitments (agreed 23 Sep 2026):
 - **TLA+:** not for this experiment. It is for running programs (supervisors,
   processes, where state lives) and for checking the helper when several
   threads share counts.
+
+## Corrections after approval
+
+Recorded 23 Sep 2026 with Robert's approval (D56), after the Codex verification
+(`council/verify-codex.md`). Claim D's row said to try the strict demand (`fip`),
+but D46 changed claim D to the relaxed demand (`fbip`). Benchmark 3 said 100
+reversals, but the acceptance file and both implementations use 101, so the
+list ends reversed. Both lines now match what was approved and run.

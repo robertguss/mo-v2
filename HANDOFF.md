@@ -37,18 +37,15 @@ verified Experiment 3, and moved the research from TheBrain into this repo.
   language with a checker for in-place demands, only if 3b looks promising.
   Lean's role is proving the rules (D47).
 
-**Next step:** Experiment 3 is done. Claims A, C and D pass, and claim B is
-observational; see `experiments/03-in-place/RESULT.md`. Codex verified it
-(`council/verify-codex.md`), and the reporting corrections are made (D55). Still
-open, each needing Robert's approval:
+**Next step:** Experiment 3 is done and verified. Claims A, C and D pass, and
+claim B is observational; see `experiments/03-in-place/RESULT.md`. Codex's
+verification (`council/verify-codex.md`) led to reporting corrections (D55) and
+locked-file fixes (D56). The experiment was then re-run and re-locked. Still
+open, each needing Robert's decision:
 
-1. The locked-file fixes from that verification: the strict-demand scoring bug,
-   the plan's stale claim D and reversal wording, the warm-up output check, and
-   the acceptance file's fingerprint placeholder. After those, a re-run and a
-   new lock.
-2. The lead's readings in RESULT.md's last section. Bring them to Robert one at
+1. The lead's readings in RESULT.md's last section. Bring them to Robert one at
    a time; none is decided.
-3. Then Experiment 3b, the in-place helper in Rust (D42).
+2. Then Experiment 3b, the in-place helper in Rust (D42).
 
 ## How to work with Robert
 

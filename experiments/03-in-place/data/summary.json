@@ -17,7 +17,7 @@
   "build_problems": [],
   "timing": {
     "order": "interleaved, random per round",
-    "seed": 251389865,
+    "seed": 62851760,
     "warm_up_runs": 1
   },
   "claim_a": {
@@ -25,165 +25,189 @@
       {
         "benchmark": "b1",
         "koka": {
-          "median": 0.13743150049776887,
-          "fastest": 0.13655683300021337,
-          "slowest": 0.14086991600197507,
+          "median": 0.13813768749969313,
+          "fastest": 0.13637108400143916,
+          "slowest": 0.14076079199730884,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "baseline": {
-          "median": 0.1634106250021432,
-          "fastest": 0.16249041699484223,
-          "slowest": 0.16583508299663663,
+          "median": 0.1635104585038789,
+          "fastest": 0.16271641699859174,
+          "slowest": 0.1703814589927788,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-mimalloc": {
-          "median": 0.1634106250021432,
-          "fastest": 0.16249041699484223,
-          "slowest": 0.16583508299663663,
+          "median": 0.1635104585038789,
+          "fastest": 0.16271641699859174,
+          "slowest": 0.1703814589927788,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-std": {
-          "median": 0.1713291880005272,
-          "fastest": 0.17026854200230446,
-          "slowest": 0.17707891700410983,
+          "median": 0.1731641039987153,
+          "fastest": 0.1698311250002007,
+          "slowest": 0.18020954199892003,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-mimalloc": {
-          "median": 0.016150854498846456,
-          "fastest": 0.015724916993349325,
-          "slowest": 0.016821999997773673,
+          "median": 0.016296437501296168,
+          "fastest": 0.015804582995770033,
+          "slowest": 0.017687709005258512,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-std": {
-          "median": 0.016049625002779067,
-          "fastest": 0.01578216699999757,
-          "slowest": 0.016396625003835652,
+          "median": 0.01666420800393098,
+          "fastest": 0.016032874998927582,
+          "slowest": 0.01730350000434555,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
-        "ratio": 0.841,
+        "ratio": 0.845,
         "within_2x": true
       },
       {
         "benchmark": "b2",
         "koka": {
-          "median": 0.21704077050526394,
-          "fastest": 0.21142550000513438,
-          "slowest": 0.2277164580009412,
+          "median": 0.21688004150200868,
+          "fastest": 0.21271933299431112,
+          "slowest": 0.22929316699446645,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "baseline": {
-          "median": 0.2624949579985696,
-          "fastest": 0.25940020800044294,
-          "slowest": 0.2849224579986185,
+          "median": 0.26406539600066026,
+          "fastest": 0.2576225839948165,
+          "slowest": 0.2809699589997763,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-mimalloc": {
-          "median": 0.2624949579985696,
-          "fastest": 0.25940020800044294,
-          "slowest": 0.2849224579986185,
+          "median": 0.26406539600066026,
+          "fastest": 0.2576225839948165,
+          "slowest": 0.2809699589997763,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-std": {
-          "median": 0.28053383299993584,
-          "fastest": 0.27817445800610585,
-          "slowest": 0.3030333749993588,
+          "median": 0.28301589600232546,
+          "fastest": 0.27428724999481346,
+          "slowest": 0.31603195799834793,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-mimalloc": {
-          "median": 0.08427450049930485,
-          "fastest": 0.08335704099590657,
-          "slowest": 0.08484275000228081,
+          "median": 0.08507039600226562,
+          "fastest": 0.08423791699897265,
+          "slowest": 0.08977045800565975,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-std": {
-          "median": 0.08609614599845372,
-          "fastest": 0.08532170800026506,
-          "slowest": 0.0880949159982265,
+          "median": 0.0857507295004325,
+          "fastest": 0.08492758300417336,
+          "slowest": 0.0931962089962326,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
-        "ratio": 0.827,
+        "ratio": 0.821,
         "within_2x": true
       },
       {
         "benchmark": "b3",
         "koka": {
-          "median": 0.13819847900231252,
-          "fastest": 0.13715441599924816,
-          "slowest": 0.1386608749962761,
+          "median": 0.13923927049836493,
+          "fastest": 0.13754574999620672,
+          "slowest": 0.14497070899960818,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "baseline": {
-          "median": 0.13077174999853014,
-          "fastest": 0.1293241669991403,
-          "slowest": 0.1348802499996964,
+          "median": 0.13105912499668193,
+          "fastest": 0.13057754100009333,
+          "slowest": 0.13874712499818997,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-mimalloc": {
-          "median": 0.13077174999853014,
-          "fastest": 0.1293241669991403,
-          "slowest": 0.1348802499996964,
+          "median": 0.13105912499668193,
+          "fastest": 0.13057754100009333,
+          "slowest": 0.13874712499818997,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-std": {
-          "median": 0.06768393749734969,
-          "fastest": 0.06586008400336141,
-          "slowest": 0.12703725000028498,
+          "median": 0.06859225049993256,
+          "fastest": 0.06637829100509407,
+          "slowest": 0.13354345900006592,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-mimalloc": {
-          "median": 0.016796124997199513,
-          "fastest": 0.016498832999786828,
-          "slowest": 0.017807708005420864,
+          "median": 0.017159520499262726,
+          "fastest": 0.01641545899474295,
+          "slowest": 0.017825874994741753,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-std": {
-          "median": 0.016700145497452468,
-          "fastest": 0.016062666996731423,
-          "slowest": 0.017685750004602596,
+          "median": 0.016715187499357853,
+          "fastest": 0.015950666995195206,
+          "slowest": 0.01785537499381462,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
-        "ratio": 1.057,
+        "ratio": 1.062,
         "within_2x": true
       },
       {
         "benchmark": "b4",
         "koka": {
-          "median": 0.5545219169980555,
-          "fastest": 0.5403997089961194,
-          "slowest": 0.5677410000062082,
+          "median": 0.5793542705032451,
+          "fastest": 0.5695500410001841,
+          "slowest": 0.5889817909992416,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "baseline": {
-          "median": 0.30438733299888554,
-          "fastest": 0.2996999590031919,
-          "slowest": 0.30982120800035773,
+          "median": 0.3151574584990158,
+          "fastest": 0.3039354579959763,
+          "slowest": 0.3216075830059708,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-mimalloc": {
-          "median": 0.30438733299888554,
-          "fastest": 0.2996999590031919,
-          "slowest": 0.30982120800035773,
+          "median": 0.3151574584990158,
+          "fastest": 0.3039354579959763,
+          "slowest": 0.3216075830059708,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-same-std": {
-          "median": 0.3137052505007887,
-          "fastest": 0.310894250003912,
-          "slowest": 0.31794187499326654,
+          "median": 0.31668502050160896,
+          "fastest": 0.3120459169949754,
+          "slowest": 0.3240502499975264,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-mimalloc": {
-          "median": 0.29271520800102735,
-          "fastest": 0.28572916600387543,
-          "slowest": 0.29877895900426665,
+          "median": 0.30623362449841807,
+          "fastest": 0.29999429199961014,
+          "slowest": 0.31360587499511894,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
         "rust-best-std": {
-          "median": 0.2942138545004127,
-          "fastest": 0.2819035420034197,
-          "slowest": 0.29959949999465607,
+          "median": 0.3009637704999477,
+          "fastest": 0.2997269999978016,
+          "slowest": 0.30815425000037067,
+          "warmup_output_ok": true,
           "all_outputs_ok": true
         },
-        "ratio": 1.822,
+        "ratio": 1.838,
         "within_2x": true
       }
     ],
@@ -194,9 +218,10 @@
       "benchmark": "b1",
       "change": "keep",
       "timing": {
-        "median": 0.14222814599634148,
-        "fastest": 0.14156987499882234,
-        "slowest": 0.14594204100285424,
+        "median": 0.14300691700191237,
+        "fastest": 0.14155154200125253,
+        "slowest": 0.1478308340010699,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
       "slowdown": 1.035,
@@ -207,12 +232,13 @@
       "benchmark": "b1",
       "change": "box",
       "timing": {
-        "median": 0.13805410450004274,
-        "fastest": 0.13634108300175285,
-        "slowest": 0.14040741699864157,
+        "median": 0.13818637499571196,
+        "fastest": 0.13675658300053328,
+        "slowest": 0.14408662499772618,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 1.005,
+      "slowdown": 1.0,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -220,12 +246,13 @@
       "benchmark": "b1",
       "change": "helper",
       "timing": {
-        "median": 0.13787245850107865,
-        "fastest": 0.13707962499756832,
-        "slowest": 0.14136179199704202,
+        "median": 0.13795693750216742,
+        "fastest": 0.1365450419980334,
+        "slowest": 0.14299100000062026,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 1.003,
+      "slowdown": 0.999,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -233,12 +260,13 @@
       "benchmark": "b2",
       "change": "keep",
       "timing": {
-        "median": 0.21134260399776394,
-        "fastest": 0.20772512500116136,
-        "slowest": 0.2510115000040969,
+        "median": 0.21165335449768463,
+        "fastest": 0.20917366600042442,
+        "slowest": 0.23729087499668822,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 0.974,
+      "slowdown": 0.976,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -246,12 +274,13 @@
       "benchmark": "b2",
       "change": "box",
       "timing": {
-        "median": 0.21307666649954626,
-        "fastest": 0.20980370899633272,
-        "slowest": 0.2157988339968142,
+        "median": 0.21852860400031204,
+        "fastest": 0.2126916670022183,
+        "slowest": 0.2276867089967709,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 0.982,
+      "slowdown": 1.008,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -259,12 +288,13 @@
       "benchmark": "b2",
       "change": "helper",
       "timing": {
-        "median": 0.21423981249972712,
-        "fastest": 0.21186795800167602,
-        "slowest": 0.22972429199580802,
+        "median": 0.21798045800096588,
+        "fastest": 0.212922750004509,
+        "slowest": 0.251968874996237,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 0.987,
+      "slowdown": 1.005,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -272,12 +302,13 @@
       "benchmark": "b3",
       "change": "keep",
       "timing": {
-        "median": 0.14382902049692348,
-        "fastest": 0.1431218750003609,
-        "slowest": 0.14929491700604558,
+        "median": 0.14352652100569685,
+        "fastest": 0.1423522920013056,
+        "slowest": 0.15061891700315755,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 1.041,
+      "slowdown": 1.031,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -285,12 +316,13 @@
       "benchmark": "b3",
       "change": "box",
       "timing": {
-        "median": 0.13780318749923026,
-        "fastest": 0.1365548750036396,
-        "slowest": 0.1416792500021984,
+        "median": 0.13838774949908839,
+        "fastest": 0.13760887500393437,
+        "slowest": 0.14555020799889462,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 0.997,
+      "slowdown": 0.994,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -298,9 +330,24 @@
       "benchmark": "b3",
       "change": "helper",
       "timing": {
-        "median": 0.1382122499999241,
-        "fastest": 0.13774716699845158,
-        "slowest": 0.13977695899666287,
+        "median": 0.13803347900466179,
+        "fastest": 0.1369207909956458,
+        "slowest": 0.14344995799910976,
+        "warmup_output_ok": true,
+        "all_outputs_ok": true
+      },
+      "slowdown": 0.991,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b4",
+      "change": "keep",
+      "timing": {
+        "median": 0.5791228954985854,
+        "fastest": 0.5763061249963357,
+        "slowest": 0.5925207500040415,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
       "slowdown": 1.0,
@@ -309,27 +356,15 @@
     },
     {
       "benchmark": "b4",
-      "change": "keep",
-      "timing": {
-        "median": 0.5624668124983145,
-        "fastest": 0.5468111250011134,
-        "slowest": 0.5804678749991581,
-        "all_outputs_ok": true
-      },
-      "slowdown": 1.014,
-      "koka_warnings": [],
-      "output_ok": true
-    },
-    {
-      "benchmark": "b4",
       "change": "box",
       "timing": {
-        "median": 0.5626381045003654,
-        "fastest": 0.5435367499958375,
-        "slowest": 0.5834392499964451,
+        "median": 0.5786363120023452,
+        "fastest": 0.574384250001458,
+        "slowest": 0.585617333999835,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 1.015,
+      "slowdown": 0.999,
       "koka_warnings": [],
       "output_ok": true
     },
@@ -337,12 +372,13 @@
       "benchmark": "b4",
       "change": "helper",
       "timing": {
-        "median": 0.5608261250017677,
-        "fastest": 0.5371885419954197,
-        "slowest": 0.5735781250041327,
+        "median": 0.5792944585009536,
+        "fastest": 0.5704287909975392,
+        "slowest": 0.590113083999313,
+        "warmup_output_ok": true,
         "all_outputs_ok": true
       },
-      "slowdown": 1.011,
+      "slowdown": 1.0,
       "koka_warnings": [],
       "output_ok": true
     }
@@ -482,11 +518,13 @@
   "claim_d": {
     "compiled": true,
     "strict_compiled": true,
-    "strict_log_tail": "",
     "uses_unsafe": false,
     "functions": [
       {
         "function": "invoice-total",
+        "local_helpers": [
+          "total-from"
+        ],
         "marked_fbip": true,
         "fbip_warnings": [],
         "examples": [
@@ -495,11 +533,14 @@
         ],
         "examples_ok": true,
         "success": true,
-        "passes_strict_fip": true,
-        "strict_warnings": []
+        "passes_strict_fip": false,
+        "strict_warnings": [
+          "functions.kk(11,13): warning: fip fun total-from: the matched constructor Cons/16 is not reused"
+        ]
       },
       {
         "function": "apply-price-change",
+        "local_helpers": [],
         "marked_fbip": true,
         "fbip_warnings": [],
         "examples": [
@@ -513,6 +554,7 @@
       },
       {
         "function": "update-stock",
+        "local_helpers": [],
         "marked_fbip": true,
         "fbip_warnings": [
           "functions.kk(24,14): warning: fbip fun update-stock: calling a non-fip function: string/(==)",
@@ -536,6 +578,9 @@
       },
       {
         "function": "rotate-queue",
+        "local_helpers": [
+          "append-cell"
+        ],
         "marked_fbip": true,
         "fbip_warnings": [],
         "examples": [
@@ -549,6 +594,7 @@
       },
       {
         "function": "tree-insert",
+        "local_helpers": [],
         "marked_fbip": true,
         "fbip_warnings": [
           "functions.kk(44,14): warning: fbip fun tree-insert: function allocates at most 1 but was declared as allocating nothing"
@@ -566,6 +612,9 @@
       },
       {
         "function": "tree-remove",
+        "local_helpers": [
+          "lift-min"
+        ],
         "marked_fbip": true,
         "fbip_warnings": [],
         "examples": [
@@ -576,12 +625,15 @@
         "success": true,
         "passes_strict_fip": false,
         "strict_warnings": [
+          "functions.kk(64,13): warning: fip fun lift-min: binding a wildcard pattern of type types/tree causes deallocation",
+          "functions.kk(64,13): warning: fip fun lift-min: non-tail call to a (mutually) recursive function: lift-min",
           "functions.kk(53,13): warning: fip fun tree-remove: binding a wildcard pattern of type types/tree causes deallocation",
           "functions.kk(53,13): warning: fip fun tree-remove: not all branches can reuse the space provided by types/Node/24"
         ]
       },
       {
         "function": "parse-csv-line",
+        "local_helpers": [],
         "marked_fbip": true,
         "fbip_warnings": [
           "functions.kk(73,14): warning: fbip fun parse-csv-line: calling a non-fip function: string/sep/split"
@@ -599,6 +651,7 @@
       },
       {
         "function": "merge-sorted",
+        "local_helpers": [],
         "marked_fbip": true,
         "fbip_warnings": [],
         "examples": [
@@ -611,6 +664,9 @@
       },
       {
         "function": "sort-ints",
+        "local_helpers": [
+          "insert-cell"
+        ],
         "marked_fbip": true,
         "fbip_warnings": [],
         "examples": [
@@ -621,11 +677,13 @@
         "success": true,
         "passes_strict_fip": false,
         "strict_warnings": [
+          "functions.kk(94,13): warning: fip fun insert-cell: binding a wildcard pattern of type list<int> causes deallocation",
           "functions.kk(88,13): warning: fip fun sort-ints: non-tail call to a (mutually) recursive function: sort-ints"
         ]
       },
       {
         "function": "set-city",
+        "local_helpers": [],
         "marked_fbip": true,
         "fbip_warnings": [],
         "examples": [
@@ -640,7 +698,9 @@
       }
     ],
     "successes": 7,
+    "strict_successes": 3,
     "passed": true,
-    "log_tail": "ug/std_core_int.kki\nload    : std/core/string from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_string.kki\nload    : std/core/sslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_sslice.kki\nload    : std/core/list from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_list.kki\nload    : std/core/bslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bslice.kki\nload    : std/core/either from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_either.kki\nload    : std/core/result from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_result.kki\nload    : std/core/maybe2 from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe2.kki\nload    : std/core/tuple from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_tuple.kki\nload    : std/core/lazy from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_lazy.kki\nload    : std/core/show from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_show.kki\nload    : std/core/delayed from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_delayed.kki\nload    : std/core/debug from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_debug.kki\nload    : std/core/maybe from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe.kki\nload    : std/core/console from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_console.kki\nparse   : .../types.kk\nparse   : .../examples.kk\nparse   : .../functions.kk\ncheck   : types\ncheck   : functions\ncheck   : examples\nlinking : examples/@main\ncompile : kklib from: /opt/homebrew/Cellar/koka/3.2.9/share/koka/v3.2.9/kklib\ncreated : /var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/exp3-d-1wuy0qw1/.koka/v3.2.9/clang-debug-c1af0d/examples__main\nfunctions.kk(24,14): warning: fbip fun update-stock: calling a non-fip function: string/(==)\n\nfunctions.kk(24,14): warning: fbip fun update-stock: the variable s is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(24,14): warning: fbip fun update-stock: the variable sku is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(44,14): warning: fbip fun tree-insert: function allocates at most 1 but was declared as allocating nothing\n\nfunctions.kk(73,14): warning: fbip fun parse-csv-line: calling a non-fip function: string/sep/split\n\nok   invoice-total empty\nok   invoice-total two lines\nok   price-change +10\nok   price-change -50 rounds down\nok   update-stock sale\nok   update-stock unknown\nok   rotate-queue\nok   rotate-queue empty\nok   tree-insert new\nok   tree-insert existing\nok   tree-remove middle\nok   tree-remove missing\nok   parse-csv-line\nok   parse-csv-line empty\nok   merge-sorted\nok   sort-ints\nok   sort-ints duplicates\nok   set-city\nvfs: [\"/@virtual/examples/@main.kk\"]\nvfs: [\"/@virtual/examples/@main.kk\"]\n"
+    "log": "load    : std/core from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core.kki\nload    : std/core/types from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_types.kki\nload    : std/core/unsafe from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_unsafe.kki\nload    : std/core/undiv from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_undiv.kki\nload    : std/core/hnd from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_hnd.kki\nload    : std/core/bytes from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bytes.kki\nload    : std/core/bool from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bool.kki\nload    : std/core/exn from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_exn.kki\nload    : std/core/order from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_order.kki\nload    : std/core/int from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_int.kki\nload    : std/core/char from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_char.kki\nload    : std/core/vector from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_vector.kki\nload    : std/core/string from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_string.kki\nload    : std/core/bslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bslice.kki\nload    : std/core/sslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_sslice.kki\nload    : std/core/list from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_list.kki\nload    : std/core/maybe from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe.kki\nload    : std/core/either from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_either.kki\nload    : std/core/tuple from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_tuple.kki\nload    : std/core/maybe2 from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe2.kki\nload    : std/core/result from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_result.kki\nload    : std/core/show from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_show.kki\nload    : std/core/delayed from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_delayed.kki\nload    : std/core/lazy from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_lazy.kki\nload    : std/core/debug from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_debug.kki\nload    : std/core/console from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_console.kki\nparse   : .../types.kk\nparse   : .../functions.kk\nparse   : .../examples.kk\ncheck   : types\ncheck   : functions\ncheck   : examples\nlinking : examples/@main\ncompile : kklib from: /opt/homebrew/Cellar/koka/3.2.9/share/koka/v3.2.9/kklib\ncreated : /var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/exp3-d-k7v5usv6/.koka/v3.2.9/clang-debug-6cd398/examples__main\nfunctions.kk(24,14): warning: fbip fun update-stock: calling a non-fip function: string/(==)\n\nfunctions.kk(24,14): warning: fbip fun update-stock: the variable s is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(24,14): warning: fbip fun update-stock: the variable sku is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(44,14): warning: fbip fun tree-insert: function allocates at most 1 but was declared as allocating nothing\n\nfunctions.kk(73,14): warning: fbip fun parse-csv-line: calling a non-fip function: string/sep/split\n\nok   invoice-total empty\nok   invoice-total two lines\nok   price-change +10\nok   price-change -50 rounds down\nok   update-stock sale\nok   update-stock unknown\nok   rotate-queue\nok   rotate-queue empty\nok   tree-insert new\nok   tree-insert existing\nok   tree-remove middle\nok   tree-remove missing\nok   parse-csv-line\nok   parse-csv-line empty\nok   merge-sorted\nok   sort-ints\nok   sort-ints duplicates\nok   set-city\nvfs: [\"/@virtual/examples/@main.kk\"]\nvfs: [\"/@virtual/examples/@main.kk\"]\n",
+    "strict_log": "load    : std/core from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core.kki\nload    : std/core/types from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_types.kki\nload    : std/core/unsafe from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_unsafe.kki\nload    : std/core/hnd from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_hnd.kki\nload    : std/core/int from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_int.kki\nload    : std/core/bytes from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bytes.kki\nload    : std/core/bool from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bool.kki\nload    : std/core/order from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_order.kki\nload    : std/core/exn from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_exn.kki\nload    : std/core/vector from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_vector.kki\nload    : std/core/bslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bslice.kki\nload    : std/core/sslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_sslice.kki\nload    : std/core/list from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_list.kki\nload    : std/core/char from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_char.kki\nload    : std/core/undiv from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_undiv.kki\nload    : std/core/maybe2 from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe2.kki\nload    : std/core/string from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_string.kki\nload    : std/core/either from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_either.kki\nload    : std/core/tuple from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_tuple.kki\nload    : std/core/result from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_result.kki\nload    : std/core/maybe from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe.kki\nload    : std/core/show from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_show.kki\nload    : std/core/lazy from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_lazy.kki\nload    : std/core/delayed from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_delayed.kki\nload    : std/core/console from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_console.kki\nload    : std/core/debug from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_debug.kki\nparse   : .../types.kk\nparse   : .../functions.kk\nparse   : .../examples.kk\ncheck   : types\ncheck   : functions\ncheck   : examples\nlinking : examples/@main\ncompile : kklib from: /opt/homebrew/Cellar/koka/3.2.9/share/koka/v3.2.9/kklib\ncreated : /var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/exp3-d-cyz7jcg5/.koka/v3.2.9/clang-debug-517a35/examples__main\nfunctions.kk(11,13): warning: fip fun total-from: the matched constructor Cons/16 is not reused\n\nfunctions.kk(24,13): warning: fip fun update-stock: not all branches use the same variables:\n  (True) -> (rest/1, s/1)\n  (False) -> (rest/1, s/1, sku/1)\n\nfunctions.kk(24,13): warning: fip fun update-stock: calling a non-fip function: string/(==)\n\nfunctions.kk(24,13): warning: fip fun update-stock: the variable s is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(24,13): warning: fip fun update-stock: not all branches use the same variables:\n  (Cons(types/Stock(s, c), rest)) -> (sku/2)\n  (Nil) -> ()\n\nfunctions.kk(24,13): warning: fip fun update-stock: the variable sku is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(44,13): warning: fip fun tree-insert: function allocates at most 1 but was declared as allocating nothing\n\nfunctions.kk(64,13): warning: fip fun lift-min: binding a wildcard pattern of type types/tree causes deallocation\n\nfunctions.kk(64,13): warning: fip fun lift-min: non-tail call to a (mutually) recursive function: lift-min\n\nfunctions.kk(53,13): warning: fip fun tree-remove: binding a wildcard pattern of type types/tree causes deallocation\n\nfunctions.kk(53,13): warning: fip fun tree-remove: not all branches can reuse the space provided by types/Node/24\n\nfunctions.kk(73,13): warning: fip fun parse-csv-line: calling a non-fip function: string/sep/split\n\nfunctions.kk(94,13): warning: fip fun insert-cell: binding a wildcard pattern of type list<int> causes deallocation\n\nfunctions.kk(88,13): warning: fip fun sort-ints: non-tail call to a (mutually) recursive function: sort-ints\n\nfunctions.kk(105,13): warning: fip fun set-city: binding a wildcard pattern of type string causes deallocation\n\nok   invoice-total empty\nok   invoice-total two lines\nok   price-change +10\nok   price-change -50 rounds down\nok   update-stock sale\nok   update-stock unknown\nok   rotate-queue\nok   rotate-queue empty\nok   tree-insert new\nok   tree-insert existing\nok   tree-remove middle\nok   tree-remove missing\nok   parse-csv-line\nok   parse-csv-line empty\nok   merge-sorted\nok   sort-ints\nok   sort-ints duplicates\nok   set-city\nvfs: [\"/@virtual/examples/@main.kk\"]\nvfs: [\"/@virtual/examples/@main.kk\"]\n"
   }
 }

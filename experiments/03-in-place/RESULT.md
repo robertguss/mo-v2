@@ -2,8 +2,9 @@
 
 Tests D26 in Koka: pure code, invisible in-place updates, and provable in-place
 demands. Run on 23 Sep 2026 by the lead, from a clean build with `./run.sh`,
-after the builder finished. All numbers below come from that run, except where a
-line is marked as a diagnostic.
+after the builder finished. The numbers below come from the re-run after the
+D56 scoring fixes; the first run's numbers were within about 1.5% of these, with
+the same pass or fail. Lines marked as diagnostics are the exception.
 
 **Summary: claims A, C and D pass. Claim B is observational by design (no
 pass or fail); its observations are complete but limited.** The in-place trick
@@ -30,7 +31,8 @@ and stated some conclusions more broadly than the data supports.*
   build scripts use mimalloc's default 16-byte alignment at `-O3`. This was
   found by the verification; it isn't controlled for in these numbers.
 - 10 timed rounds after one warm-up run, with the versions in a fresh random
-  order each round (seed 251389865). Raw times are in `data/timings.csv`; the
+  order each round (seed 62851760). Each version's warm-up output was checked
+  too, and all were correct. Raw times are in `data/timings.csv`; the
   full summary is in `data/summary.json`.
 
 ## Lead's checks before the run
@@ -69,18 +71,18 @@ Median seconds. The ratio is pure Koka ÷ same-container Rust with mimalloc.
 
 | Benchmark            | Pure Koka | Rust, same container, mimalloc | **Ratio** | Rust, same container, standard allocator | Rust, best container, mimalloc | Rust, best container, standard allocator |
 | -------------------- | --------- | ------------------------------ | --------- | ---------------------------------------- | ------------------------------ | ---------------------------------------- |
-| 1. Update every item | 0.137     | 0.163                          | **0.84**  | 0.171                                    | 0.016                          | 0.016                                    |
-| 2. Sorted tree       | 0.217     | 0.262                          | **0.83**  | 0.281                                    | 0.084                          | 0.086                                    |
-| 3. Reverse           | 0.138     | 0.131                          | **1.06**  | 0.068                                    | 0.017                          | 0.017                                    |
-| 4. Running totals    | 0.555     | 0.304                          | **1.82**  | 0.314                                    | 0.293                          | 0.294                                    |
+| 1. Update every item | 0.138 | 0.164 | **0.84** | 0.173 | 0.016 | 0.017 |
+| 2. Sorted tree | 0.217 | 0.264 | **0.82** | 0.283 | 0.085 | 0.086 |
+| 3. Reverse | 0.139 | 0.131 | **1.06** | 0.069 | 0.017 | 0.017 |
+| 4. Running totals | 0.579 | 0.315 | **1.84** | 0.317 | 0.306 | 0.301 |
 
 What this shows:
 
-- **The trick works.** For the same linked structures, pure Koka ranged from 17%
+- **The trick works.** For the same linked structures, pure Koka ranged from 18%
   faster to 6% slower than Rust editing in place, on the three benchmarks that
   stress memory.
 - **Benchmark 4 is dominated by arithmetic.** Rust's plain array is barely
-  faster than its linked list there (0.293 against 0.304), so most of the time
+  faster than its linked list there (0.306 against 0.315), so most of the time
   goes to the `mod` arithmetic rather than memory. Koka's numbers are
   unlimited-size by default.
 
@@ -101,14 +103,14 @@ What this shows:
   run gave 1.11×.
 
 - **Idiomatic Rust was much faster than the linked versions on benchmarks 1–3:**
-  about 8.5× on benchmark 1 and 8.2× on benchmark 3 (Rust's `Vec`, a solid
+  about 8.5× on benchmark 1 and 8.1× on benchmark 3 (Rust's `Vec`, a solid
   array), and 2.6× on benchmark 2 (Rust's `BTreeSet`, which also builds its keys
   directly). This is extra data (D45) about these implementations and
   whole-program workloads, not a general law. It raises a separate question
   from the trick: what building on linked structures costs.
 - **Unexplained:** on benchmark 3, Rust with the standard allocator ran faster
-  than with mimalloc (0.068 against 0.131), and its runs varied widely (0.066 to
-  0.127). The pass rule doesn't use this number, but it isn't understood.
+  than with mimalloc (0.069 against 0.131), and its runs varied widely (0.066 to
+  0.134). The pass rule doesn't use this number, but it isn't understood.
 
 ## Claim B: fragility. Observational
 
@@ -117,15 +119,16 @@ warning, and every output was correct.
 
 | Change                | b1    | b2    | b3    | b4    |
 | --------------------- | ----- | ----- | ----- | ----- |
-| Keep an extra holder  | 1.035 | 0.974 | 1.041 | 1.014 |
-| Store and take back   | 1.005 | 0.982 | 0.997 | 1.015 |
-| Pass through a helper | 1.003 | 0.987 | 1.000 | 1.011 |
+| Keep an extra holder | 1.035 | 0.976 | 1.031 | 1.000 |
+| Store and take back | 1.000 | 1.008 | 0.994 | 0.999 |
+| Pass through a helper | 0.999 | 1.005 | 0.991 | 1.000 |
 
 What this shows, and its limits:
 
-- **Keeping an extra holder cost about 1–4% on the lists.** That fits: only the
+- **Keeping an extra holder cost up to about 4% on the lists (3.5% on b1, 3.1%
+  on b3, none measurable on b4).** That fits: only the
   first round has to copy, and the rest reuse cells (99 more rounds for b1 and
-  b4, 100 for b3). The tree result (0.974,
+  b4, 100 for b3). The tree result (0.976,
   slightly _faster_) is within noise, and isn't explained.
 - **The other two changes tested almost nothing.** The helper just hands back
   its value, and Koka's generated code has no call to it at all, because it was
@@ -163,8 +166,9 @@ The locked plan still says claim D tries the strict demand; D46 changed that to
 the relaxed demand, and the acceptance file follows D46. Correcting the plan is
 part of the separate locked-file step.
 
-**Correction by the lead:** the script reported invoice-total as passing the
-strict demand, because it checks only the named function. Its helper
+**Correction:** the first version of the script reported invoice-total as
+passing the strict demand, because it checked only the named function. The lead
+corrected this by hand, and after the D56 fix the script reports it itself. Its helper
 (`total-from`) fails the strict demand, so it is recorded here as ❌. The
 builder flagged this gap. With that corrected, **3 of 10** pass the strict
 demand. The relaxed results were checked the same way: every helper is itself

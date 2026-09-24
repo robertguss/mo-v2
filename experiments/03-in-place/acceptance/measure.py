@@ -89,10 +89,13 @@ def run_once(exe, expected):
 def time_interleaved(jobs, runs, seed):
     """D51: one untimed warm-up run of every version, then `runs` rounds. Each round runs every
     version once, in a fresh random order from a recorded seed, so no version gets its own block."""
-    for key, exe, expected in jobs:
-        run_once(exe, expected)
-    rng = random.Random(seed)
     rows, order = {key: [] for key, _, _ in jobs}, 0
+    for key, exe, expected in jobs:   # D56: the warm-up's output is checked too, and recorded as round 0
+        order += 1
+        dt, ok, out = run_once(exe, expected)
+        rows[key].append({"round": 0, "order": order, "seconds": round(dt, 6), "output_ok": ok,
+                          "output": out, "_exact": dt, "_warmup": True})
+    rng = random.Random(seed)
     for rnd in range(1, runs + 1):
         batch = list(jobs)
         rng.shuffle(batch)
@@ -105,9 +108,12 @@ def time_interleaved(jobs, runs, seed):
 
 
 def summarize(rows):
-    secs = [r["_exact"] for r in rows]
+    timed = [r for r in rows if not r.get("_warmup")]
+    secs = [r["_exact"] for r in timed]
+    warm_ok = all(r["output_ok"] for r in rows if r.get("_warmup"))
     return {"median": statistics.median(secs), "fastest": min(secs), "slowest": max(secs),
-            "all_outputs_ok": all(r["output_ok"] for r in rows)}
+            "warmup_output_ok": warm_ok,
+            "all_outputs_ok": warm_ok and all(r["output_ok"] for r in timed)}   # D56: a bad warm-up voids the version
 
 
 def build_all():
@@ -210,23 +216,48 @@ def claim_d():
     code, log = compile_run(text)
     strict_text = re.sub(r"\bfbip(\s+fun)", r"fip\1", text)
     strict_code, strict_log = compile_run(strict_text)
+    reach = local_reach(text)
     rows = []
     for fn in CLAIM_D_FUNCTIONS:
         marked = re.search(r"\bfbip\s+fun\s+" + re.escape(fn) + r"\b", text) is not None
-        warns = [l for l in log.splitlines() if re.search(r"warning: fbip fun " + re.escape(fn) + r"\b", l)]
-        strict_warns = [l for l in strict_log.splitlines() if re.search(r"warning: fip fun " + re.escape(fn) + r"\b", l)]
+        # D56: warnings on any local helper the function reaches count against it, under both demands.
+        group = reach.get(fn, {fn})
+        def on(line, kind):
+            m = re.search(r"warning: " + kind + r" fun ([a-z][a-z0-9-]*)\b", line)
+            return m is not None and m.group(1) in group
+        warns = [l for l in log.splitlines() if on(l, "fbip")]
+        strict_warns = [l for l in strict_log.splitlines() if on(l, "fip")]
         prefix = EXAMPLE_PREFIX[fn]
         ex = [l for l in log.splitlines() if re.match(r"(ok|FAIL)\s+" + re.escape(prefix) + r"\b", l)]
         examples_ok = bool(ex) and all(l.startswith("ok") for l in ex)
         success = code == 0 and marked and not warns and examples_ok and not unsafe
-        rows.append({"function": fn, "marked_fbip": marked, "fbip_warnings": warns, "examples": ex,
+        rows.append({"function": fn, "local_helpers": sorted(group - {fn}), "marked_fbip": marked, "fbip_warnings": warns, "examples": ex,
                      "examples_ok": examples_ok, "success": success,
                      "passes_strict_fip": (marked and not strict_warns) if strict_code == 0 else "unavailable: strict compile failed",
                      "strict_warnings": strict_warns})
     n = sum(r["success"] for r in rows)
     return {"compiled": code == 0, "strict_compiled": strict_code == 0,
-            "strict_log_tail": strict_log[-2000:] if strict_code != 0 else "", "uses_unsafe": unsafe, "functions": rows, "successes": n,
-            "passed": n >= 7, "log_tail": log[-3000:]}
+            "uses_unsafe": unsafe, "functions": rows, "successes": n,
+            "strict_successes": sum(r["passes_strict_fip"] is True for r in rows),
+            "passed": n >= 7, "log": log, "strict_log": strict_log}   # D56: full logs kept
+
+
+def local_reach(text):
+    """Each top-level function in functions.kk, mapped to itself plus every local function it can reach."""
+    code = re.sub(r"//[^\n]*", "", text)
+    heads = list(re.finditer(r"^(?:pub\s+)?(?:fbip\s+|fip\s+)?fun\s+([a-z][a-z0-9-]*)", code, re.M))
+    bodies = {m.group(1): code[m.end(): (heads[i + 1].start() if i + 1 < len(heads) else len(code))]
+              for i, m in enumerate(heads)}
+    calls = {f: {g for g in bodies if g != f and re.search(r"(?<![\w-])" + re.escape(g) + r"(?![\w-])", b)}
+             for f, b in bodies.items()}
+    reach = {}
+    for f in bodies:
+        seen, todo = {f}, [f]
+        while todo:
+            for g in calls[todo.pop()]:
+                if g not in seen: seen.add(g); todo.append(g)
+        reach[f] = seen
+    return reach
 
 
 def main():
@@ -261,7 +292,7 @@ def main():
         flat = []
         for key, rows in all_rows.items():
             timings[key] = summarize(rows)
-            flat += [{"version": key[0], "benchmark": key[1], **{k: v for k, v in r.items() if k != "_exact"}} for r in rows]
+            flat += [{"version": key[0], "benchmark": key[1], **{k: v for k, v in r.items() if not k.startswith("_")}} for r in rows]
         with open(DATA / "timings.csv", "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=["order", "round", "version", "benchmark", "seconds", "output_ok", "output"])
             w.writeheader()
@@ -317,7 +348,7 @@ def main():
         if "error" in d:
             print(f"Claim D: FAIL ({d['error']})")
         else:
-            print(f"Claim D (at least 7 of 10): {'PASS' if d['passed'] else 'FAIL'} ({d['successes']} of 10)")
+            print(f"Claim D (at least 7 of 10): {'PASS' if d['passed'] else 'FAIL'} ({d['successes']} of 10; strict demand {d['strict_successes']} of 10)")
             for r in d["functions"]:
                 print(f"  {r['function']}: success {r['success']}, strict fip {r['passes_strict_fip']}")
     print(f"Wrote {DATA / 'timings.csv'} and {DATA / 'summary.json'}")

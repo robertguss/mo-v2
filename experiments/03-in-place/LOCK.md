@@ -1,12 +1,18 @@
 # Experiment 3: lock
 
-Fingerprints (SHA-256) of the locked files. The first lock was recorded on 23 Sep 2026 after Robert approved the plan (D44) and the acceptance file (D50). This lock replaces it, after the Codex review and the fixes Robert approved (D51, D52, D53). The builder may not change any of these files, and the lead re-checks them before scoring.
+Fingerprints (SHA-256) of the locked files. This is the third lock:
+
+1. The first was recorded after Robert approved the plan (D44) and the acceptance file (D50).
+2. The second was recorded after the first Codex review and its fixes (D51, D52, D53).
+3. This one was recorded on 23 Sep 2026, after the Codex verification and the locked-file fixes Robert approved (D56).
+
+Earlier locks are in git history. The builder may not change any of these files, and the lead re-checks them before scoring.
 
 ```
-43b90ac67866cabf2eb5e73a0368002b65edb458a70f515f01cc785803c96f67  PLAN.md
-987fe79cb0f3c702831612bc1ccbecd68b9971924a3faa99affdf9b7c3d3df23  ACCEPTANCE.md
+403260c63bd3e4a60e5ec875659d3288901589a9400696c0370cfc197eed49ab  PLAN.md
+47631069619a41b42a177fccd623cca924095a76078537fa8d08cdfbd23b6037  ACCEPTANCE.md
 ec402d5f1268c10eeaf1f58390694e21162255fa5e26671a3ed4cb49fb99f5d6  run.sh
-d96d4d266aa744309676492d486b79842fb8adeb183c5938873554f956865a04  acceptance/measure.py
+4575c9a96353e2e3e21c88e3c3fe7499520ca0bebc585abdf0a50de42a43c309  acceptance/measure.py
 fa9a4736fe0b69ee6050929dfd488ae09dd4e3742f491fa1012535222f5c4c29  acceptance/claim-c/bad-build-from-nothing.kk
 c04f70132f071ef6352eae0fa0a8158f7fa7c42cc7a90d060cb30952e35f4cb5  acceptance/claim-c/bad-calls-normal.kk
 789cf8c5ccfbe3d8c1c1236bc0d50b8add901c924db9b7db7c6872f141a85c81  acceptance/claim-c/bad-duplicate.kk
