@@ -36,15 +36,11 @@ Experiment 3.
   language with a checker for in-place demands, only if 3b looks promising.
   Lean's role is proving the rules (D47).
 
-**Next step:** Codex reviewed the setup (`council/verdict-codex.md`). All seven
-findings were fixed with Robert's approval (D51–D53), and the lock was
-re-recorded. Next, the builder runs `briefs/builder.md`. Then the lead:
-
-1. re-checks the fingerprints in `LOCK.md`
-2. checks that Koka and same-container Rust use the same algorithms (D52)
-3. reviews the Rust code for fairness
-4. checks Koka's compiled program for the extra-holder change (D53)
-5. runs `./run.sh` and writes `RESULT.md`
+**Next step:** Experiment 3 is done. All four claims pass; see
+`experiments/03-in-place/RESULT.md`. Its "What the result means for D26"
+section lists the lead's readings. Robert hasn't decided anything from them
+yet: bring them to him one at a time. After that, the plan's next experiment is
+3b, the in-place helper in Rust (D42).
 
 ## How to work with Robert
 

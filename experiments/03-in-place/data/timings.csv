@@ -1,0 +1,321 @@
+order,round,version,benchmark,seconds,output_ok,output
+1,1,rust-same-std,b3,0.068372,True,first 1000000 | last 1 | weighted 166667166667000000
+2,1,koka-box,b3,0.140019,True,first 1000000 | last 1 | weighted 166667166667000000
+3,1,rust-same-std,b4,0.312899,True,first 37 | last 554962791 | sum-mod 491625299
+4,1,koka-keep,b2,0.2127,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+5,1,koka-helper,b3,0.138188,True,first 1000000 | last 1 | weighted 166667166667000000
+6,1,rust-same-mimalloc,b2,0.261773,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+7,1,rust-best-std,b3,0.016801,True,first 1000000 | last 1 | weighted 166667166667000000
+8,1,rust-best-mimalloc,b1,0.015725,True,sum 500100500000 | first 101 | last 1000100
+9,1,rust-same-mimalloc,b3,0.133743,True,first 1000000 | last 1 | weighted 166667166667000000
+10,1,koka-box,b1,0.136341,True,sum 500100500000 | first 101 | last 1000100
+11,1,koka,b2,0.218897,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+12,1,rust-best-mimalloc,b2,0.084294,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+13,1,rust-best-std,b1,0.015782,True,sum 500100500000 | first 101 | last 1000100
+14,1,rust-best-mimalloc,b3,0.016528,True,first 1000000 | last 1 | weighted 166667166667000000
+15,1,rust-same-mimalloc,b1,0.164067,True,sum 500100500000 | first 101 | last 1000100
+16,1,koka-box,b4,0.550079,True,first 37 | last 554962791 | sum-mod 491625299
+17,1,koka,b3,0.138329,True,first 1000000 | last 1 | weighted 166667166667000000
+18,1,rust-same-std,b2,0.284374,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+19,1,koka-helper,b2,0.218662,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+20,1,koka-box,b2,0.21283,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+21,1,rust-best-std,b4,0.294317,True,first 37 | last 554962791 | sum-mod 491625299
+22,1,koka-keep,b4,0.559215,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+23,1,koka-helper,b1,0.137127,True,sum 500100500000 | first 101 | last 1000100
+24,1,rust-best-mimalloc,b4,0.291103,True,first 37 | last 554962791 | sum-mod 491625299
+25,1,koka,b4,0.54578,True,first 37 | last 554962791 | sum-mod 491625299
+26,1,rust-same-std,b1,0.171341,True,sum 500100500000 | first 101 | last 1000100
+27,1,koka-keep,b3,0.143774,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+28,1,rust-same-mimalloc,b4,0.309821,True,first 37 | last 554962791 | sum-mod 491625299
+29,1,koka,b1,0.140175,True,sum 500100500000 | first 101 | last 1000100
+30,1,koka-keep,b1,0.145942,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+31,1,koka-helper,b4,0.571347,True,first 37 | last 554962791 | sum-mod 491625299
+32,1,rust-best-std,b2,0.086312,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+33,2,rust-same-mimalloc,b1,0.16249,True,sum 500100500000 | first 101 | last 1000100
+34,2,rust-best-mimalloc,b3,0.01684,True,first 1000000 | last 1 | weighted 166667166667000000
+35,2,koka,b2,0.218493,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+36,2,koka-helper,b1,0.13736,True,sum 500100500000 | first 101 | last 1000100
+37,2,koka,b1,0.137334,True,sum 500100500000 | first 101 | last 1000100
+38,2,rust-best-std,b1,0.016063,True,sum 500100500000 | first 101 | last 1000100
+39,2,koka-box,b3,0.137704,True,first 1000000 | last 1 | weighted 166667166667000000
+40,2,koka,b3,0.137756,True,first 1000000 | last 1 | weighted 166667166667000000
+41,2,rust-best-std,b2,0.086059,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+42,2,koka-box,b4,0.562611,True,first 37 | last 554962791 | sum-mod 491625299
+43,2,rust-best-mimalloc,b2,0.084333,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+44,2,rust-same-mimalloc,b3,0.130955,True,first 1000000 | last 1 | weighted 166667166667000000
+45,2,koka-keep,b2,0.210004,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+46,2,rust-best-std,b4,0.299599,True,first 37 | last 554962791 | sum-mod 491625299
+47,2,koka-helper,b3,0.137747,True,first 1000000 | last 1 | weighted 166667166667000000
+48,2,rust-same-mimalloc,b4,0.305173,True,first 37 | last 554962791 | sum-mod 491625299
+49,2,rust-best-std,b3,0.016704,True,first 1000000 | last 1 | weighted 166667166667000000
+50,2,rust-same-std,b1,0.171096,True,sum 500100500000 | first 101 | last 1000100
+51,2,koka-helper,b4,0.559065,True,first 37 | last 554962791 | sum-mod 491625299
+52,2,rust-best-mimalloc,b4,0.297964,True,first 37 | last 554962791 | sum-mod 491625299
+53,2,koka-keep,b1,0.1421,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+54,2,koka-helper,b2,0.211868,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+55,2,rust-best-mimalloc,b1,0.01638,True,sum 500100500000 | first 101 | last 1000100
+56,2,koka-keep,b4,0.580468,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+57,2,rust-same-std,b3,0.069761,True,first 1000000 | last 1 | weighted 166667166667000000
+58,2,koka-box,b1,0.139516,True,sum 500100500000 | first 101 | last 1000100
+59,2,rust-same-std,b4,0.314502,True,first 37 | last 554962791 | sum-mod 491625299
+60,2,koka,b4,0.559744,True,first 37 | last 554962791 | sum-mod 491625299
+61,2,koka-keep,b3,0.144024,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+62,2,koka-box,b2,0.215799,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+63,2,rust-same-mimalloc,b2,0.267873,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+64,2,rust-same-std,b2,0.279422,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+65,3,koka-helper,b4,0.546184,True,first 37 | last 554962791 | sum-mod 491625299
+66,3,koka,b1,0.137529,True,sum 500100500000 | first 101 | last 1000100
+67,3,koka,b3,0.138604,True,first 1000000 | last 1 | weighted 166667166667000000
+68,3,rust-best-mimalloc,b2,0.084469,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+69,3,rust-same-std,b3,0.127037,True,first 1000000 | last 1 | weighted 166667166667000000
+70,3,rust-same-std,b4,0.311743,True,first 37 | last 554962791 | sum-mod 491625299
+71,3,koka-keep,b3,0.143122,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+72,3,rust-same-std,b2,0.303033,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+73,3,rust-best-std,b1,0.016079,True,sum 500100500000 | first 101 | last 1000100
+74,3,koka,b2,0.227716,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+75,3,koka-keep,b1,0.141876,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+76,3,koka-box,b1,0.13767,True,sum 500100500000 | first 101 | last 1000100
+77,3,rust-best-mimalloc,b1,0.016803,True,sum 500100500000 | first 101 | last 1000100
+78,3,koka-box,b4,0.543537,True,first 37 | last 554962791 | sum-mod 491625299
+79,3,rust-best-std,b2,0.085728,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+80,3,rust-same-mimalloc,b3,0.134046,True,first 1000000 | last 1 | weighted 166667166667000000
+81,3,koka-box,b3,0.141679,True,first 1000000 | last 1 | weighted 166667166667000000
+82,3,rust-same-std,b1,0.175694,True,sum 500100500000 | first 101 | last 1000100
+83,3,rust-best-std,b3,0.017686,True,first 1000000 | last 1 | weighted 166667166667000000
+84,3,koka-helper,b1,0.141362,True,sum 500100500000 | first 101 | last 1000100
+85,3,rust-same-mimalloc,b2,0.274395,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+86,3,rust-best-std,b4,0.297988,True,first 37 | last 554962791 | sum-mod 491625299
+87,3,rust-best-mimalloc,b4,0.285729,True,first 37 | last 554962791 | sum-mod 491625299
+88,3,koka-keep,b2,0.213038,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+89,3,rust-same-mimalloc,b1,0.163253,True,sum 500100500000 | first 101 | last 1000100
+90,3,koka-box,b2,0.212109,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+91,3,koka,b4,0.554496,True,first 37 | last 554962791 | sum-mod 491625299
+92,3,koka-helper,b2,0.212792,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+93,3,koka-helper,b3,0.138488,True,first 1000000 | last 1 | weighted 166667166667000000
+94,3,koka-keep,b4,0.574068,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+95,3,rust-best-mimalloc,b3,0.016637,True,first 1000000 | last 1 | weighted 166667166667000000
+96,3,rust-same-mimalloc,b4,0.303191,True,first 37 | last 554962791 | sum-mod 491625299
+97,4,rust-same-std,b3,0.067586,True,first 1000000 | last 1 | weighted 166667166667000000
+98,4,koka-keep,b4,0.567425,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+99,4,koka-box,b3,0.137714,True,first 1000000 | last 1 | weighted 166667166667000000
+100,4,rust-best-mimalloc,b4,0.292932,True,first 37 | last 554962791 | sum-mod 491625299
+101,4,koka-helper,b4,0.555864,True,first 37 | last 554962791 | sum-mod 491625299
+102,4,koka-keep,b3,0.143683,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+103,4,koka,b1,0.137245,True,sum 500100500000 | first 101 | last 1000100
+104,4,rust-best-mimalloc,b3,0.016765,True,first 1000000 | last 1 | weighted 166667166667000000
+105,4,rust-best-std,b2,0.085322,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+106,4,koka,b4,0.550858,True,first 37 | last 554962791 | sum-mod 491625299
+107,4,rust-same-mimalloc,b1,0.163011,True,sum 500100500000 | first 101 | last 1000100
+108,4,koka,b3,0.138282,True,first 1000000 | last 1 | weighted 166667166667000000
+109,4,koka,b2,0.212622,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+110,4,koka-keep,b2,0.209545,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+111,4,rust-same-mimalloc,b3,0.131108,True,first 1000000 | last 1 | weighted 166667166667000000
+112,4,rust-same-std,b2,0.278394,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+113,4,koka-helper,b1,0.138072,True,sum 500100500000 | first 101 | last 1000100
+114,4,rust-best-std,b4,0.295812,True,first 37 | last 554962791 | sum-mod 491625299
+115,4,rust-same-std,b4,0.310894,True,first 37 | last 554962791 | sum-mod 491625299
+116,4,koka-helper,b2,0.214175,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+117,4,koka-box,b1,0.137609,True,sum 500100500000 | first 101 | last 1000100
+118,4,rust-same-mimalloc,b4,0.2997,True,first 37 | last 554962791 | sum-mod 491625299
+119,4,rust-best-mimalloc,b2,0.083956,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+120,4,rust-same-mimalloc,b2,0.260248,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+121,4,rust-same-std,b1,0.171729,True,sum 500100500000 | first 101 | last 1000100
+122,4,koka-box,b2,0.213324,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+123,4,rust-best-std,b3,0.016697,True,first 1000000 | last 1 | weighted 166667166667000000
+124,4,rust-best-mimalloc,b1,0.015796,True,sum 500100500000 | first 101 | last 1000100
+125,4,koka-helper,b3,0.138266,True,first 1000000 | last 1 | weighted 166667166667000000
+126,4,rust-best-std,b1,0.015983,True,sum 500100500000 | first 101 | last 1000100
+127,4,koka-box,b4,0.543961,True,first 37 | last 554962791 | sum-mod 491625299
+128,4,koka-keep,b1,0.142222,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+129,5,rust-same-mimalloc,b3,0.129825,True,first 1000000 | last 1 | weighted 166667166667000000
+130,5,koka-helper,b2,0.213163,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+131,5,koka-box,b4,0.583439,True,first 37 | last 554962791 | sum-mod 491625299
+132,5,rust-same-std,b3,0.067782,True,first 1000000 | last 1 | weighted 166667166667000000
+133,5,koka,b4,0.567741,True,first 37 | last 554962791 | sum-mod 491625299
+134,5,koka-helper,b4,0.544075,True,first 37 | last 554962791 | sum-mod 491625299
+135,5,rust-best-std,b4,0.281904,True,first 37 | last 554962791 | sum-mod 491625299
+136,5,rust-best-mimalloc,b3,0.016777,True,first 1000000 | last 1 | weighted 166667166667000000
+137,5,koka-keep,b4,0.547742,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+138,5,koka-helper,b1,0.138074,True,sum 500100500000 | first 101 | last 1000100
+139,5,rust-best-mimalloc,b2,0.084843,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+140,5,rust-same-std,b1,0.171317,True,sum 500100500000 | first 101 | last 1000100
+141,5,rust-best-std,b2,0.085439,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+142,5,rust-same-mimalloc,b2,0.262204,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+143,5,koka,b3,0.138661,True,first 1000000 | last 1 | weighted 166667166667000000
+144,5,rust-best-std,b1,0.016397,True,sum 500100500000 | first 101 | last 1000100
+145,5,koka-helper,b3,0.138207,True,first 1000000 | last 1 | weighted 166667166667000000
+146,5,rust-same-std,b4,0.31383,True,first 37 | last 554962791 | sum-mod 491625299
+147,5,rust-best-mimalloc,b1,0.016104,True,sum 500100500000 | first 101 | last 1000100
+148,5,rust-same-mimalloc,b4,0.304302,True,first 37 | last 554962791 | sum-mod 491625299
+149,5,koka-keep,b2,0.209654,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+150,5,rust-same-std,b2,0.282049,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+151,5,rust-best-mimalloc,b4,0.292498,True,first 37 | last 554962791 | sum-mod 491625299
+152,5,koka,b2,0.213724,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+153,5,rust-same-mimalloc,b1,0.16468,True,sum 500100500000 | first 101 | last 1000100
+154,5,rust-best-std,b3,0.016416,True,first 1000000 | last 1 | weighted 166667166667000000
+155,5,koka-box,b3,0.137332,True,first 1000000 | last 1 | weighted 166667166667000000
+156,5,koka-box,b1,0.138683,True,sum 500100500000 | first 101 | last 1000100
+157,5,koka-keep,b1,0.142636,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+158,5,koka-keep,b3,0.143888,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+159,5,koka,b1,0.137891,True,sum 500100500000 | first 101 | last 1000100
+160,5,koka-box,b2,0.209804,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+161,6,koka-helper,b4,0.573578,True,first 37 | last 554962791 | sum-mod 491625299
+162,6,koka-box,b4,0.563978,True,first 37 | last 554962791 | sum-mod 491625299
+163,6,koka-box,b2,0.213506,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+164,6,koka,b4,0.549218,True,first 37 | last 554962791 | sum-mod 491625299
+165,6,koka-box,b1,0.138237,True,sum 500100500000 | first 101 | last 1000100
+166,6,koka-helper,b3,0.138217,True,first 1000000 | last 1 | weighted 166667166667000000
+167,6,rust-same-std,b4,0.314012,True,first 37 | last 554962791 | sum-mod 491625299
+168,6,rust-best-mimalloc,b3,0.017808,True,first 1000000 | last 1 | weighted 166667166667000000
+169,6,rust-same-mimalloc,b1,0.165835,True,sum 500100500000 | first 101 | last 1000100
+170,6,rust-best-std,b4,0.287083,True,first 37 | last 554962791 | sum-mod 491625299
+171,6,koka-keep,b4,0.552542,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+172,6,rust-same-mimalloc,b4,0.301337,True,first 37 | last 554962791 | sum-mod 491625299
+173,6,koka-box,b3,0.136845,True,first 1000000 | last 1 | weighted 166667166667000000
+174,6,rust-same-std,b1,0.172017,True,sum 500100500000 | first 101 | last 1000100
+175,6,rust-same-std,b3,0.067247,True,first 1000000 | last 1 | weighted 166667166667000000
+176,6,koka-keep,b3,0.143668,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+177,6,rust-best-std,b1,0.016305,True,sum 500100500000 | first 101 | last 1000100
+178,6,rust-same-mimalloc,b3,0.129324,True,first 1000000 | last 1 | weighted 166667166667000000
+179,6,koka,b2,0.224447,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+180,6,koka,b1,0.14087,True,sum 500100500000 | first 101 | last 1000100
+181,6,rust-same-mimalloc,b2,0.27642,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+182,6,koka-keep,b2,0.217801,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+183,6,koka-helper,b2,0.223635,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+184,6,rust-best-mimalloc,b4,0.287716,True,first 37 | last 554962791 | sum-mod 491625299
+185,6,rust-same-std,b2,0.279696,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+186,6,koka,b3,0.137816,True,first 1000000 | last 1 | weighted 166667166667000000
+187,6,koka-helper,b1,0.137998,True,sum 500100500000 | first 101 | last 1000100
+188,6,koka-keep,b1,0.142392,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+189,6,rust-best-mimalloc,b1,0.01612,True,sum 500100500000 | first 101 | last 1000100
+190,6,rust-best-std,b3,0.016063,True,first 1000000 | last 1 | weighted 166667166667000000
+191,6,rust-best-std,b2,0.085521,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+192,6,rust-best-mimalloc,b2,0.08372,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+193,7,rust-same-std,b1,0.170269,True,sum 500100500000 | first 101 | last 1000100
+194,7,rust-best-std,b2,0.087315,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+195,7,koka-keep,b2,0.212681,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+196,7,koka-keep,b4,0.566699,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+197,7,rust-best-std,b3,0.017264,True,first 1000000 | last 1 | weighted 166667166667000000
+198,7,koka,b3,0.138368,True,first 1000000 | last 1 | weighted 166667166667000000
+199,7,rust-best-mimalloc,b4,0.298779,True,first 37 | last 554962791 | sum-mod 491625299
+200,7,koka-helper,b3,0.139777,True,first 1000000 | last 1 | weighted 166667166667000000
+201,7,rust-same-std,b4,0.317287,True,first 37 | last 554962791 | sum-mod 491625299
+202,7,rust-same-std,b3,0.067823,True,first 1000000 | last 1 | weighted 166667166667000000
+203,7,rust-same-std,b2,0.278174,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+204,7,rust-same-mimalloc,b4,0.304472,True,first 37 | last 554962791 | sum-mod 491625299
+205,7,koka-helper,b4,0.564608,True,first 37 | last 554962791 | sum-mod 491625299
+206,7,rust-best-mimalloc,b3,0.017048,True,first 1000000 | last 1 | weighted 166667166667000000
+207,7,koka-box,b2,0.214576,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+208,7,koka-helper,b1,0.13708,True,sum 500100500000 | first 101 | last 1000100
+209,7,koka,b1,0.137099,True,sum 500100500000 | first 101 | last 1000100
+210,7,koka-keep,b3,0.144391,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+211,7,rust-same-mimalloc,b3,0.130588,True,first 1000000 | last 1 | weighted 166667166667000000
+212,7,rust-best-std,b4,0.292029,True,first 37 | last 554962791 | sum-mod 491625299
+213,7,koka-box,b4,0.559985,True,first 37 | last 554962791 | sum-mod 491625299
+214,7,koka-box,b1,0.137872,True,sum 500100500000 | first 101 | last 1000100
+215,7,rust-best-mimalloc,b1,0.01608,True,sum 500100500000 | first 101 | last 1000100
+216,7,rust-best-mimalloc,b2,0.083357,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+217,7,rust-same-mimalloc,b1,0.163129,True,sum 500100500000 | first 101 | last 1000100
+218,7,koka-box,b3,0.138489,True,first 1000000 | last 1 | weighted 166667166667000000
+219,7,koka-keep,b1,0.14157,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+220,7,koka,b4,0.55969,True,first 37 | last 554962791 | sum-mod 491625299
+221,7,rust-best-std,b1,0.01595,True,sum 500100500000 | first 101 | last 1000100
+222,7,koka,b2,0.211426,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+223,7,koka-helper,b2,0.214304,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+224,7,rust-same-mimalloc,b2,0.262786,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+225,8,koka,b1,0.137935,True,sum 500100500000 | first 101 | last 1000100
+226,8,koka,b4,0.554548,True,first 37 | last 554962791 | sum-mod 491625299
+227,8,koka-box,b3,0.136555,True,first 1000000 | last 1 | weighted 166667166667000000
+228,8,rust-same-mimalloc,b4,0.302826,True,first 37 | last 554962791 | sum-mod 491625299
+229,8,rust-best-mimalloc,b3,0.016815,True,first 1000000 | last 1 | weighted 166667166667000000
+230,8,rust-same-std,b3,0.066886,True,first 1000000 | last 1 | weighted 166667166667000000
+231,8,rust-same-mimalloc,b2,0.284922,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+232,8,koka-keep,b2,0.251012,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+233,8,rust-same-std,b4,0.317942,True,first 37 | last 554962791 | sum-mod 491625299
+234,8,koka-box,b1,0.140407,True,sum 500100500000 | first 101 | last 1000100
+235,8,koka-helper,b2,0.229724,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+236,8,koka-keep,b3,0.149295,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+237,8,rust-same-std,b1,0.177079,True,sum 500100500000 | first 101 | last 1000100
+238,8,koka-box,b4,0.564388,True,first 37 | last 554962791 | sum-mod 491625299
+239,8,rust-best-mimalloc,b2,0.084255,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+240,8,rust-same-mimalloc,b1,0.163568,True,sum 500100500000 | first 101 | last 1000100
+241,8,koka-helper,b4,0.562587,True,first 37 | last 554962791 | sum-mod 491625299
+242,8,rust-best-mimalloc,b1,0.016822,True,sum 500100500000 | first 101 | last 1000100
+243,8,koka-helper,b3,0.139683,True,first 1000000 | last 1 | weighted 166667166667000000
+244,8,koka,b3,0.137154,True,first 1000000 | last 1 | weighted 166667166667000000
+245,8,rust-same-mimalloc,b3,0.130484,True,first 1000000 | last 1 | weighted 166667166667000000
+246,8,rust-best-std,b4,0.29757,True,first 37 | last 554962791 | sum-mod 491625299
+247,8,koka-keep,b4,0.565709,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+248,8,rust-best-std,b3,0.016741,True,first 1000000 | last 1 | weighted 166667166667000000
+249,8,koka-box,b2,0.212493,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+250,8,koka-keep,b1,0.143231,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+251,8,koka,b2,0.215589,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+252,8,rust-best-std,b2,0.086133,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+253,8,rust-best-mimalloc,b4,0.296879,True,first 37 | last 554962791 | sum-mod 491625299
+254,8,rust-same-std,b2,0.278907,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+255,8,koka-helper,b1,0.137874,True,sum 500100500000 | first 101 | last 1000100
+256,8,rust-best-std,b1,0.016037,True,sum 500100500000 | first 101 | last 1000100
+257,9,koka-helper,b4,0.570331,True,first 37 | last 554962791 | sum-mod 491625299
+258,9,rust-same-mimalloc,b1,0.163682,True,sum 500100500000 | first 101 | last 1000100
+259,9,koka,b1,0.136759,True,sum 500100500000 | first 101 | last 1000100
+260,9,rust-best-std,b1,0.01619,True,sum 500100500000 | first 101 | last 1000100
+261,9,koka-box,b4,0.562665,True,first 37 | last 554962791 | sum-mod 491625299
+262,9,rust-same-mimalloc,b4,0.305264,True,first 37 | last 554962791 | sum-mod 491625299
+263,9,rust-best-mimalloc,b4,0.293477,True,first 37 | last 554962791 | sum-mod 491625299
+264,9,koka-helper,b3,0.138,True,first 1000000 | last 1 | weighted 166667166667000000
+265,9,rust-best-std,b3,0.016496,True,first 1000000 | last 1 | weighted 166667166667000000
+266,9,rust-same-std,b3,0.066844,True,first 1000000 | last 1 | weighted 166667166667000000
+267,9,rust-best-std,b2,0.086245,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+268,9,koka-box,b3,0.137892,True,first 1000000 | last 1 | weighted 166667166667000000
+269,9,rust-best-std,b4,0.293982,True,first 37 | last 554962791 | sum-mod 491625299
+270,9,koka,b3,0.138115,True,first 1000000 | last 1 | weighted 166667166667000000
+271,9,koka-box,b1,0.138917,True,sum 500100500000 | first 101 | last 1000100
+272,9,rust-same-std,b1,0.170562,True,sum 500100500000 | first 101 | last 1000100
+273,9,koka-keep,b2,0.209622,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+274,9,koka-box,b2,0.211698,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+275,9,koka,b4,0.558162,True,first 37 | last 554962791 | sum-mod 491625299
+276,9,rust-best-mimalloc,b2,0.084354,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+277,9,rust-same-std,b4,0.313088,True,first 37 | last 554962791 | sum-mod 491625299
+278,9,koka-keep,b4,0.546811,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+279,9,koka-keep,b1,0.141806,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+280,9,koka-keep,b3,0.143183,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+281,9,rust-same-mimalloc,b2,0.259605,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+282,9,koka-helper,b1,0.137765,True,sum 500100500000 | first 101 | last 1000100
+283,9,rust-best-mimalloc,b1,0.016181,True,sum 500100500000 | first 101 | last 1000100
+284,9,koka-helper,b2,0.220417,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+285,9,rust-best-mimalloc,b3,0.017694,True,first 1000000 | last 1 | weighted 166667166667000000
+286,9,koka,b2,0.225387,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+287,9,rust-same-std,b2,0.296467,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+288,9,rust-same-mimalloc,b3,0.13488,True,first 1000000 | last 1 | weighted 166667166667000000
+289,10,rust-same-mimalloc,b4,0.307527,True,first 37 | last 554962791 | sum-mod 491625299
+290,10,koka-helper,b4,0.537189,True,first 37 | last 554962791 | sum-mod 491625299
+291,10,koka-helper,b2,0.212367,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+292,10,koka,b3,0.138056,True,first 1000000 | last 1 | weighted 166667166667000000
+293,10,koka-helper,b1,0.137871,True,sum 500100500000 | first 101 | last 1000100
+294,10,koka-keep,b4,0.559225,True,first 37 | last 554962791 | sum-mod 491625299 | original-sum 499500000
+295,10,koka-box,b3,0.13834,True,first 1000000 | last 1 | weighted 166667166667000000
+296,10,rust-same-std,b1,0.171297,True,sum 500100500000 | first 101 | last 1000100
+297,10,koka-keep,b2,0.207725,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002 | snapshot-count 500000 | snapshot-sum 249986389805
+298,10,rust-same-std,b3,0.06586,True,first 1000000 | last 1 | weighted 166667166667000000
+299,10,koka,b4,0.5404,True,first 37 | last 554962791 | sum-mod 491625299
+300,10,rust-best-std,b3,0.016659,True,first 1000000 | last 1 | weighted 166667166667000000
+301,10,rust-same-mimalloc,b1,0.162534,True,sum 500100500000 | first 101 | last 1000100
+302,10,koka-box,b1,0.137871,True,sum 500100500000 | first 101 | last 1000100
+303,10,koka-box,b2,0.214745,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+304,10,rust-best-mimalloc,b1,0.01632,True,sum 500100500000 | first 101 | last 1000100
+305,10,rust-same-mimalloc,b2,0.2594,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+306,10,rust-same-std,b4,0.31358,True,first 37 | last 554962791 | sum-mod 491625299
+307,10,koka-helper,b3,0.138042,True,first 1000000 | last 1 | weighted 166667166667000000
+308,10,rust-best-std,b2,0.088095,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+309,10,koka-keep,b1,0.142235,True,sum 500100500000 | first 101 | last 1000100 | original-sum 500000500000
+310,10,koka-box,b4,0.568884,True,first 37 | last 554962791 | sum-mod 491625299
+311,10,koka,b2,0.213961,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+312,10,rust-same-std,b2,0.281372,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+313,10,rust-best-mimalloc,b2,0.084103,True,count 1000000 | sum 499999547508 | smallest 0 | largest 1000002
+314,10,koka-keep,b3,0.143884,True,first 1000000 | last 1 | weighted 166667166667000000 | original-weighted 333333833333500000
+315,10,rust-best-mimalloc,b4,0.292213,True,first 37 | last 554962791 | sum-mod 491625299
+316,10,rust-best-std,b1,0.015891,True,sum 500100500000 | first 101 | last 1000100
+317,10,koka,b1,0.136557,True,sum 500100500000 | first 101 | last 1000100
+318,10,rust-best-std,b4,0.294111,True,first 37 | last 554962791 | sum-mod 491625299
+319,10,rust-best-mimalloc,b3,0.016499,True,first 1000000 | last 1 | weighted 166667166667000000
+320,10,rust-same-mimalloc,b3,0.129762,True,first 1000000 | last 1 | weighted 166667166667000000

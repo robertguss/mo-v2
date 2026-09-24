@@ -1,0 +1,646 @@
+{
+  "machine": {
+    "os": "macOS 26.6.2",
+    "cpu": "Apple M3 Max",
+    "koka": "Koka 3.2.9, 05:24:29 Sep 18 2026 (ghc release version)",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01) (Homebrew)",
+    "mimalloc": {
+      "koka_mimalloc": "30503",
+      "rust_mimalloc_source": {
+        "rust-same": "koka's bundled source",
+        "rust-best": "koka's bundled source"
+      },
+      "match": true
+    }
+  },
+  "runs_per_version": 10,
+  "build_problems": [],
+  "timing": {
+    "order": "interleaved, random per round",
+    "seed": 251389865,
+    "warm_up_runs": 1
+  },
+  "claim_a": {
+    "benchmarks": [
+      {
+        "benchmark": "b1",
+        "koka": {
+          "median": 0.13743150049776887,
+          "fastest": 0.13655683300021337,
+          "slowest": 0.14086991600197507,
+          "all_outputs_ok": true
+        },
+        "baseline": {
+          "median": 0.1634106250021432,
+          "fastest": 0.16249041699484223,
+          "slowest": 0.16583508299663663,
+          "all_outputs_ok": true
+        },
+        "rust-same-mimalloc": {
+          "median": 0.1634106250021432,
+          "fastest": 0.16249041699484223,
+          "slowest": 0.16583508299663663,
+          "all_outputs_ok": true
+        },
+        "rust-same-std": {
+          "median": 0.1713291880005272,
+          "fastest": 0.17026854200230446,
+          "slowest": 0.17707891700410983,
+          "all_outputs_ok": true
+        },
+        "rust-best-mimalloc": {
+          "median": 0.016150854498846456,
+          "fastest": 0.015724916993349325,
+          "slowest": 0.016821999997773673,
+          "all_outputs_ok": true
+        },
+        "rust-best-std": {
+          "median": 0.016049625002779067,
+          "fastest": 0.01578216699999757,
+          "slowest": 0.016396625003835652,
+          "all_outputs_ok": true
+        },
+        "ratio": 0.841,
+        "within_2x": true
+      },
+      {
+        "benchmark": "b2",
+        "koka": {
+          "median": 0.21704077050526394,
+          "fastest": 0.21142550000513438,
+          "slowest": 0.2277164580009412,
+          "all_outputs_ok": true
+        },
+        "baseline": {
+          "median": 0.2624949579985696,
+          "fastest": 0.25940020800044294,
+          "slowest": 0.2849224579986185,
+          "all_outputs_ok": true
+        },
+        "rust-same-mimalloc": {
+          "median": 0.2624949579985696,
+          "fastest": 0.25940020800044294,
+          "slowest": 0.2849224579986185,
+          "all_outputs_ok": true
+        },
+        "rust-same-std": {
+          "median": 0.28053383299993584,
+          "fastest": 0.27817445800610585,
+          "slowest": 0.3030333749993588,
+          "all_outputs_ok": true
+        },
+        "rust-best-mimalloc": {
+          "median": 0.08427450049930485,
+          "fastest": 0.08335704099590657,
+          "slowest": 0.08484275000228081,
+          "all_outputs_ok": true
+        },
+        "rust-best-std": {
+          "median": 0.08609614599845372,
+          "fastest": 0.08532170800026506,
+          "slowest": 0.0880949159982265,
+          "all_outputs_ok": true
+        },
+        "ratio": 0.827,
+        "within_2x": true
+      },
+      {
+        "benchmark": "b3",
+        "koka": {
+          "median": 0.13819847900231252,
+          "fastest": 0.13715441599924816,
+          "slowest": 0.1386608749962761,
+          "all_outputs_ok": true
+        },
+        "baseline": {
+          "median": 0.13077174999853014,
+          "fastest": 0.1293241669991403,
+          "slowest": 0.1348802499996964,
+          "all_outputs_ok": true
+        },
+        "rust-same-mimalloc": {
+          "median": 0.13077174999853014,
+          "fastest": 0.1293241669991403,
+          "slowest": 0.1348802499996964,
+          "all_outputs_ok": true
+        },
+        "rust-same-std": {
+          "median": 0.06768393749734969,
+          "fastest": 0.06586008400336141,
+          "slowest": 0.12703725000028498,
+          "all_outputs_ok": true
+        },
+        "rust-best-mimalloc": {
+          "median": 0.016796124997199513,
+          "fastest": 0.016498832999786828,
+          "slowest": 0.017807708005420864,
+          "all_outputs_ok": true
+        },
+        "rust-best-std": {
+          "median": 0.016700145497452468,
+          "fastest": 0.016062666996731423,
+          "slowest": 0.017685750004602596,
+          "all_outputs_ok": true
+        },
+        "ratio": 1.057,
+        "within_2x": true
+      },
+      {
+        "benchmark": "b4",
+        "koka": {
+          "median": 0.5545219169980555,
+          "fastest": 0.5403997089961194,
+          "slowest": 0.5677410000062082,
+          "all_outputs_ok": true
+        },
+        "baseline": {
+          "median": 0.30438733299888554,
+          "fastest": 0.2996999590031919,
+          "slowest": 0.30982120800035773,
+          "all_outputs_ok": true
+        },
+        "rust-same-mimalloc": {
+          "median": 0.30438733299888554,
+          "fastest": 0.2996999590031919,
+          "slowest": 0.30982120800035773,
+          "all_outputs_ok": true
+        },
+        "rust-same-std": {
+          "median": 0.3137052505007887,
+          "fastest": 0.310894250003912,
+          "slowest": 0.31794187499326654,
+          "all_outputs_ok": true
+        },
+        "rust-best-mimalloc": {
+          "median": 0.29271520800102735,
+          "fastest": 0.28572916600387543,
+          "slowest": 0.29877895900426665,
+          "all_outputs_ok": true
+        },
+        "rust-best-std": {
+          "median": 0.2942138545004127,
+          "fastest": 0.2819035420034197,
+          "slowest": 0.29959949999465607,
+          "all_outputs_ok": true
+        },
+        "ratio": 1.822,
+        "within_2x": true
+      }
+    ],
+    "passed": true
+  },
+  "claim_b": [
+    {
+      "benchmark": "b1",
+      "change": "keep",
+      "timing": {
+        "median": 0.14222814599634148,
+        "fastest": 0.14156987499882234,
+        "slowest": 0.14594204100285424,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.035,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b1",
+      "change": "box",
+      "timing": {
+        "median": 0.13805410450004274,
+        "fastest": 0.13634108300175285,
+        "slowest": 0.14040741699864157,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.005,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b1",
+      "change": "helper",
+      "timing": {
+        "median": 0.13787245850107865,
+        "fastest": 0.13707962499756832,
+        "slowest": 0.14136179199704202,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.003,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b2",
+      "change": "keep",
+      "timing": {
+        "median": 0.21134260399776394,
+        "fastest": 0.20772512500116136,
+        "slowest": 0.2510115000040969,
+        "all_outputs_ok": true
+      },
+      "slowdown": 0.974,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b2",
+      "change": "box",
+      "timing": {
+        "median": 0.21307666649954626,
+        "fastest": 0.20980370899633272,
+        "slowest": 0.2157988339968142,
+        "all_outputs_ok": true
+      },
+      "slowdown": 0.982,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b2",
+      "change": "helper",
+      "timing": {
+        "median": 0.21423981249972712,
+        "fastest": 0.21186795800167602,
+        "slowest": 0.22972429199580802,
+        "all_outputs_ok": true
+      },
+      "slowdown": 0.987,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b3",
+      "change": "keep",
+      "timing": {
+        "median": 0.14382902049692348,
+        "fastest": 0.1431218750003609,
+        "slowest": 0.14929491700604558,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.041,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b3",
+      "change": "box",
+      "timing": {
+        "median": 0.13780318749923026,
+        "fastest": 0.1365548750036396,
+        "slowest": 0.1416792500021984,
+        "all_outputs_ok": true
+      },
+      "slowdown": 0.997,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b3",
+      "change": "helper",
+      "timing": {
+        "median": 0.1382122499999241,
+        "fastest": 0.13774716699845158,
+        "slowest": 0.13977695899666287,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.0,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b4",
+      "change": "keep",
+      "timing": {
+        "median": 0.5624668124983145,
+        "fastest": 0.5468111250011134,
+        "slowest": 0.5804678749991581,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.014,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b4",
+      "change": "box",
+      "timing": {
+        "median": 0.5626381045003654,
+        "fastest": 0.5435367499958375,
+        "slowest": 0.5834392499964451,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.015,
+      "koka_warnings": [],
+      "output_ok": true
+    },
+    {
+      "benchmark": "b4",
+      "change": "helper",
+      "timing": {
+        "median": 0.5608261250017677,
+        "fastest": 0.5371885419954197,
+        "slowest": 0.5735781250041327,
+        "all_outputs_ok": true
+      },
+      "slowdown": 1.011,
+      "koka_warnings": [],
+      "output_ok": true
+    }
+  ],
+  "claim_c": {
+    "tests": [
+      {
+        "test": "bad-build-from-nothing",
+        "expected": "warned",
+        "got": "warned",
+        "as_expected": true,
+        "expected_warning": [
+          "count-down",
+          "allocates"
+        ],
+        "warnings": [
+          "acceptance/claim-c/bad-build-from-nothing.kk(3, 9): warning: fip fun count-down: function allocates unlimited but was declared as allocating nothing"
+        ]
+      },
+      {
+        "test": "bad-calls-normal",
+        "expected": "warned",
+        "got": "warned",
+        "as_expected": true,
+        "expected_warning": [
+          "join",
+          "calling a non-fip function"
+        ],
+        "warnings": [
+          "acceptance/claim-c/bad-calls-normal.kk(6, 9): warning: fip fun join: calling a non-fip function: plain-append"
+        ]
+      },
+      {
+        "test": "bad-duplicate",
+        "expected": "warned",
+        "got": "warned",
+        "as_expected": true,
+        "expected_warning": [
+          "duplicate",
+          "allocates"
+        ],
+        "warnings": [
+          "acceptance/claim-c/bad-duplicate.kk(2, 9): warning: fip fun duplicate: function allocates unlimited but was declared as allocating nothing"
+        ]
+      },
+      {
+        "test": "bad-grow-pair",
+        "expected": "warned",
+        "got": "warned",
+        "as_expected": true,
+        "expected_warning": [
+          "grow",
+          "allocates"
+        ],
+        "warnings": [
+          "acceptance/claim-c/bad-grow-pair.kk(8, 9): warning: fip fun grow: the matched constructor Two/16 is not reused",
+          "acceptance/claim-c/bad-grow-pair.kk(8, 9): warning: fip fun grow: function allocates at most 1 but was declared as allocating nothing"
+        ]
+      },
+      {
+        "test": "bad-keep-both",
+        "expected": "warned",
+        "got": "warned",
+        "as_expected": true,
+        "expected_warning": [
+          "with-copy",
+          "used multiple times"
+        ],
+        "warnings": [
+          "acceptance/claim-c/bad-keep-both.kk(2, 9): warning: fip fun with-copy: the variable xs is used multiple times (causing sharing and preventing reuse)"
+        ]
+      },
+      {
+        "test": "bad-throw-away",
+        "expected": "warned",
+        "got": "warned",
+        "as_expected": true,
+        "expected_warning": [
+          "first-only",
+          "deallocation"
+        ],
+        "warnings": [
+          "acceptance/claim-c/bad-throw-away.kk(2, 9): warning: fip fun first-only: binding a wildcard pattern of type list<int> causes deallocation"
+        ]
+      },
+      {
+        "test": "good-add-one",
+        "expected": "accepted",
+        "got": "accepted",
+        "as_expected": true,
+        "expected_warning": null,
+        "warnings": []
+      },
+      {
+        "test": "good-map-pairs",
+        "expected": "accepted",
+        "got": "accepted",
+        "as_expected": true,
+        "expected_warning": null,
+        "warnings": []
+      },
+      {
+        "test": "good-reverse",
+        "expected": "accepted",
+        "got": "accepted",
+        "as_expected": true,
+        "expected_warning": null,
+        "warnings": []
+      },
+      {
+        "test": "good-rotate",
+        "expected": "accepted",
+        "got": "accepted",
+        "as_expected": true,
+        "expected_warning": null,
+        "warnings": []
+      },
+      {
+        "test": "good-running-total",
+        "expected": "accepted",
+        "got": "accepted",
+        "as_expected": true,
+        "expected_warning": null,
+        "warnings": []
+      },
+      {
+        "test": "good-swap",
+        "expected": "accepted",
+        "got": "accepted",
+        "as_expected": true,
+        "expected_warning": null,
+        "warnings": []
+      }
+    ],
+    "passed": true
+  },
+  "claim_d": {
+    "compiled": true,
+    "strict_compiled": true,
+    "strict_log_tail": "",
+    "uses_unsafe": false,
+    "functions": [
+      {
+        "function": "invoice-total",
+        "marked_fbip": true,
+        "fbip_warnings": [],
+        "examples": [
+          "ok   invoice-total empty",
+          "ok   invoice-total two lines"
+        ],
+        "examples_ok": true,
+        "success": true,
+        "passes_strict_fip": true,
+        "strict_warnings": []
+      },
+      {
+        "function": "apply-price-change",
+        "marked_fbip": true,
+        "fbip_warnings": [],
+        "examples": [
+          "ok   price-change +10",
+          "ok   price-change -50 rounds down"
+        ],
+        "examples_ok": true,
+        "success": true,
+        "passes_strict_fip": true,
+        "strict_warnings": []
+      },
+      {
+        "function": "update-stock",
+        "marked_fbip": true,
+        "fbip_warnings": [
+          "functions.kk(24,14): warning: fbip fun update-stock: calling a non-fip function: string/(==)",
+          "functions.kk(24,14): warning: fbip fun update-stock: the variable s is used multiple times (causing sharing and preventing reuse)",
+          "functions.kk(24,14): warning: fbip fun update-stock: the variable sku is used multiple times (causing sharing and preventing reuse)"
+        ],
+        "examples": [
+          "ok   update-stock sale",
+          "ok   update-stock unknown"
+        ],
+        "examples_ok": true,
+        "success": false,
+        "passes_strict_fip": false,
+        "strict_warnings": [
+          "functions.kk(24,13): warning: fip fun update-stock: not all branches use the same variables:",
+          "functions.kk(24,13): warning: fip fun update-stock: calling a non-fip function: string/(==)",
+          "functions.kk(24,13): warning: fip fun update-stock: the variable s is used multiple times (causing sharing and preventing reuse)",
+          "functions.kk(24,13): warning: fip fun update-stock: not all branches use the same variables:",
+          "functions.kk(24,13): warning: fip fun update-stock: the variable sku is used multiple times (causing sharing and preventing reuse)"
+        ]
+      },
+      {
+        "function": "rotate-queue",
+        "marked_fbip": true,
+        "fbip_warnings": [],
+        "examples": [
+          "ok   rotate-queue",
+          "ok   rotate-queue empty"
+        ],
+        "examples_ok": true,
+        "success": true,
+        "passes_strict_fip": true,
+        "strict_warnings": []
+      },
+      {
+        "function": "tree-insert",
+        "marked_fbip": true,
+        "fbip_warnings": [
+          "functions.kk(44,14): warning: fbip fun tree-insert: function allocates at most 1 but was declared as allocating nothing"
+        ],
+        "examples": [
+          "ok   tree-insert new",
+          "ok   tree-insert existing"
+        ],
+        "examples_ok": true,
+        "success": false,
+        "passes_strict_fip": false,
+        "strict_warnings": [
+          "functions.kk(44,13): warning: fip fun tree-insert: function allocates at most 1 but was declared as allocating nothing"
+        ]
+      },
+      {
+        "function": "tree-remove",
+        "marked_fbip": true,
+        "fbip_warnings": [],
+        "examples": [
+          "ok   tree-remove middle",
+          "ok   tree-remove missing"
+        ],
+        "examples_ok": true,
+        "success": true,
+        "passes_strict_fip": false,
+        "strict_warnings": [
+          "functions.kk(53,13): warning: fip fun tree-remove: binding a wildcard pattern of type types/tree causes deallocation",
+          "functions.kk(53,13): warning: fip fun tree-remove: not all branches can reuse the space provided by types/Node/24"
+        ]
+      },
+      {
+        "function": "parse-csv-line",
+        "marked_fbip": true,
+        "fbip_warnings": [
+          "functions.kk(73,14): warning: fbip fun parse-csv-line: calling a non-fip function: string/sep/split"
+        ],
+        "examples": [
+          "ok   parse-csv-line",
+          "ok   parse-csv-line empty"
+        ],
+        "examples_ok": true,
+        "success": false,
+        "passes_strict_fip": false,
+        "strict_warnings": [
+          "functions.kk(73,13): warning: fip fun parse-csv-line: calling a non-fip function: string/sep/split"
+        ]
+      },
+      {
+        "function": "merge-sorted",
+        "marked_fbip": true,
+        "fbip_warnings": [],
+        "examples": [
+          "ok   merge-sorted"
+        ],
+        "examples_ok": true,
+        "success": true,
+        "passes_strict_fip": true,
+        "strict_warnings": []
+      },
+      {
+        "function": "sort-ints",
+        "marked_fbip": true,
+        "fbip_warnings": [],
+        "examples": [
+          "ok   sort-ints",
+          "ok   sort-ints duplicates"
+        ],
+        "examples_ok": true,
+        "success": true,
+        "passes_strict_fip": false,
+        "strict_warnings": [
+          "functions.kk(88,13): warning: fip fun sort-ints: non-tail call to a (mutually) recursive function: sort-ints"
+        ]
+      },
+      {
+        "function": "set-city",
+        "marked_fbip": true,
+        "fbip_warnings": [],
+        "examples": [
+          "ok   set-city"
+        ],
+        "examples_ok": true,
+        "success": true,
+        "passes_strict_fip": false,
+        "strict_warnings": [
+          "functions.kk(105,13): warning: fip fun set-city: binding a wildcard pattern of type string causes deallocation"
+        ]
+      }
+    ],
+    "successes": 7,
+    "passed": true,
+    "log_tail": "ug/std_core_int.kki\nload    : std/core/string from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_string.kki\nload    : std/core/sslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_sslice.kki\nload    : std/core/list from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_list.kki\nload    : std/core/bslice from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_bslice.kki\nload    : std/core/either from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_either.kki\nload    : std/core/result from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_result.kki\nload    : std/core/maybe2 from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe2.kki\nload    : std/core/tuple from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_tuple.kki\nload    : std/core/lazy from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_lazy.kki\nload    : std/core/show from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_show.kki\nload    : std/core/delayed from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_delayed.kki\nload    : std/core/debug from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_debug.kki\nload    : std/core/maybe from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_maybe.kki\nload    : std/core/console from: /opt/homebrew/Cellar/koka/3.2.9/lib/koka/v3.2.9/clang-debug/std_core_console.kki\nparse   : .../types.kk\nparse   : .../examples.kk\nparse   : .../functions.kk\ncheck   : types\ncheck   : functions\ncheck   : examples\nlinking : examples/@main\ncompile : kklib from: /opt/homebrew/Cellar/koka/3.2.9/share/koka/v3.2.9/kklib\ncreated : /var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/exp3-d-1wuy0qw1/.koka/v3.2.9/clang-debug-c1af0d/examples__main\nfunctions.kk(24,14): warning: fbip fun update-stock: calling a non-fip function: string/(==)\n\nfunctions.kk(24,14): warning: fbip fun update-stock: the variable s is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(24,14): warning: fbip fun update-stock: the variable sku is used multiple times (causing sharing and preventing reuse)\n\nfunctions.kk(44,14): warning: fbip fun tree-insert: function allocates at most 1 but was declared as allocating nothing\n\nfunctions.kk(73,14): warning: fbip fun parse-csv-line: calling a non-fip function: string/sep/split\n\nok   invoice-total empty\nok   invoice-total two lines\nok   price-change +10\nok   price-change -50 rounds down\nok   update-stock sale\nok   update-stock unknown\nok   rotate-queue\nok   rotate-queue empty\nok   tree-insert new\nok   tree-insert existing\nok   tree-remove middle\nok   tree-remove missing\nok   parse-csv-line\nok   parse-csv-line empty\nok   merge-sorted\nok   sort-ints\nok   sort-ints duplicates\nok   set-city\nvfs: [\"/@virtual/examples/@main.kk\"]\nvfs: [\"/@virtual/examples/@main.kk\"]\n"
+  }
+}

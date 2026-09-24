@@ -1,0 +1,16 @@
+[package]
+name = "rust_best"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[features]
+# Switch the global allocator to mimalloc, compiled from the exact source Koka 3.2.9 ships.
+mimalloc = []
+
+[build-dependencies]
+cc = "1"
+
+[profile.release]
+codegen-units = 1
+lto = true
