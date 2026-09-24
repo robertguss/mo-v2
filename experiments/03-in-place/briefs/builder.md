@@ -9,7 +9,7 @@ scored. Tools: Koka 3.2.9 (`koka`), Rust 1.98 (`cargo`), both installed.
 
 `PLAN.md`, `ACCEPTANCE.md`, `LOCK.md`, `run.sh`, and everything under
 `acceptance/`. Their fingerprints are recorded. Don't read anything under
-`briefs/` except this file.
+`briefs/` except this file, and don't read anything under `council/`.
 
 ## Write: only under `bench/`
 
@@ -26,7 +26,8 @@ scored. Tools: Koka 3.2.9 (`koka`), Rust 1.98 (`cargo`), both installed.
 2. **Claim B variants:** `bench/koka-b/b{1..4}-{keep,box,helper}.kk`, which is
    12 files, and any helper modules in the same folder. Each file is its
    benchmark from step 1 with exactly one of the three changes in ACCEPTANCE.md
-   applied, and it still prints the same expected lines. The "helper" change
+   applied, and it still prints the same expected lines. The one exception is the
+   "keep" change, which prints the extra last lines given in ACCEPTANCE.md. The "helper" change
    passes the value, each round, through a function in a separate module file in
    `bench/koka-b/` that is not marked in-place.
 3. **Rust, same container:** a Cargo project at `bench/rust-same/` with binaries
@@ -34,11 +35,21 @@ scored. Tools: Koka 3.2.9 (`koka`), Rust 1.98 (`cargo`), both installed.
    - Use the same structures as the Koka versions: singly linked lists, and a
      red-black tree, both edited in place.
    - Add an optional Cargo feature named `mimalloc` that switches the global
-     allocator to the `mimalloc` crate.
+     allocator to mimalloc compiled from the exact source Koka ships:
+     `/opt/homebrew/Cellar/koka/3.2.9/share/koka/v3.2.9/kklib/mimalloc`.
+   - Compile it in `build.rs`, and only when the feature is on. Use the `cc`
+     crate on `src/static.c`, with `include/` on the include path, release
+     optimization and `NDEBUG`. That exact folder path must appear in
+     `build.rs`, because the script checks for it.
+   - Don't use the `mimalloc` crate from crates.io, because it bundles a
+     different mimalloc version.
+   - Use exactly the algorithms in ACCEPTANCE.md's "The same algorithm on both
+     sides" table, in both Koka and this Rust project. The lead checks they
+     match step for step before timing.
    - The outputs must be the same expected lines.
 4. **Rust, best container:** a Cargo project at `bench/rust-best/` with binaries
    `b1` to `b4`, using `Vec` for benchmarks 1, 3 and 4 and `BTreeSet` for
-   benchmark 2, and the same `mimalloc` feature.
+   benchmark 2, and the same `mimalloc` feature and `build.rs`.
 5. **Claim D:** `bench/claim-d/functions.kk`, `module functions`, with
    `import types`. It holds the ten functions in ACCEPTANCE.md, using exactly
    the names and argument order that `acceptance/claim-d/examples.kk` calls, and

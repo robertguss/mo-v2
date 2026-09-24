@@ -30,24 +30,46 @@ was checked a second way, with a different method.
 | Version              | Rules                                                                                                                                                          |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Koka, pure           | Linked lists and trees only. No mutable variables (`var`), no references (`ref`), no vectors, and nothing marked unsafe. Built with full optimization (`-O2`). |
-| Rust, same container | The same linked lists and red-black tree as the pure versions, edited in place. Built with `--release`. Run twice: once with the mimalloc allocator (the one Koka uses), which is the version the pass rule uses (D49), and once with the standard allocator, as extra data. |
+| Rust, same container | The same linked lists and red-black tree as the pure versions, edited in place. Built with `--release`. Run twice: once with mimalloc compiled from the exact source Koka ships (version 3.5.3, D51), which is the version the pass rule uses (D49), and once with the standard allocator, as extra data. |
 | Rust, best container | What a Rust programmer would naturally use: a `Vec` for benchmarks 1, 3 and 4, and `BTreeSet` for benchmark 2. Built with `--release`, with both allocators. Extra data only (D45, D49). |
+
+### The same algorithm on both sides (D52)
+
+Pure Koka and same-container Rust must do the same work, step for step, so the
+ratio measures the in-place trick and not a choice of algorithm:
+
+| Benchmark | Algorithm, identical on both sides |
+|---|---|
+| Building the input | Build each list from the back, one cell at a time. |
+| 1. Update every item | One walk of the list per round, adding one to each value. Koka makes the new list by reusing each cell; Rust changes each value in place. |
+| 2. Sorted tree | Okasaki's red-black insertion: go down to the insertion point, add a red node, and fix the four standard imbalance cases on the way back up. The same comparisons and the same four cases on both sides. |
+| 3. Reverse | Move cells one at a time from the front of one list to the front of another. Koka reuses each cell; Rust re-points each cell. |
+| 4. Running totals | One walk of the list per round, carrying the running total. |
+| Cleanup | Everything is freed at the end. Rust frees long lists in a loop rather than by recursion. |
+
+Before any timing, the lead checks that the two sides match step for step.
+Best-container Rust is exempt, since it is extra data about idiomatic Rust.
 
 ### Measuring
 
 - Each version of each benchmark runs 10 times on this Mac, with nothing else
-  heavy running. The time is the whole program's run time, including building
+  heavy running. Every version gets one untimed warm-up run. Then, in each of
+  the 10 rounds, every version runs once, in a fresh random order drawn from a
+  recorded seed. That way no version gets its own block of time, which could
+  be skewed by heat or background load (D51). The time is the whole program's run time, including building
   the input.
 - The result reports the median, the fastest and the slowest of the 10 runs.
 - Raw times go in `data/timings.csv`, along with the machine, operating system,
-  Koka and Rust versions, and the mimalloc version.
+  Koka and Rust versions, and the mimalloc version on each side. The script checks
+  that the mimalloc builds really contain mimalloc and the standard builds don't.
 - `run.sh` rebuilds and re-runs everything from scratch.
 
 ### Passing
 
 Claim A passes if, on all four benchmarks, pure Koka's median is no more than 2×
 the median of same-container Rust using mimalloc (D37, D45, D48, D49). The
-result also reports the actual ratio for every benchmark.
+comparison uses the exact medians, not rounded ones (D51). The result also
+reports the actual ratio for every benchmark.
 
 The best-container Rust numbers are reported as extra data only. Lean is not
 part of this experiment's benchmarks (D47).
@@ -59,7 +81,7 @@ innocent-looking changes to each pure Koka benchmark:
 
 | Change                | What it does                                                                                            |
 | --------------------- | ------------------------------------------------------------------------------------------------------- |
-| Keep an extra holder  | Keep the starting value alive until the end, for example by printing its length after the work is done. |
+| Keep an extra holder | Lists (benchmarks 1, 3 and 4) keep the starting list alive until the end. The tree (benchmark 2) keeps a snapshot taken after the first 500,000 insertions. After the work, the program prints extra last lines computed from the kept contents: b1 `original-sum 500000500000`; b2 `snapshot-count 500000` then `snapshot-sum 249986389805`; b3 `original-weighted 333333833333500000`; b4 `original-sum 499500000`. These are this change's expected output (D53). |
 | Store and take back   | Each round, put the value into a record, then take it back out.                                         |
 | Pass through a helper | Each round, pass the value through a helper function in another file that is not marked in-place.       |
 
@@ -68,6 +90,10 @@ For every change, the result records:
 - the median time (10 runs) and the slowdown compared with the unchanged version
 - whether Koka printed any warning
 - whether the output was still correct
+
+For the extra-holder change, the lead also checks Koka's compiled program once,
+to confirm that the kept value really is held during the work rather than let
+go early, and records what it finds (D53).
 
 ## Claim D: in-place demands on realistic code
 
@@ -83,7 +109,9 @@ A function counts as a success when **both** of these hold:
 The builder may restructure a function so that it passes the demand, which is
 normal practice for in-place code, but it must not change what the function
 does. It may not use anything marked unsafe. For each function, the result also
-records whether it passes the strict demand (`fip`), and gives a one-line note
+records whether it passes the strict demand (`fip`); that only counts if the
+strict compile itself succeeded, and otherwise it is reported as unavailable
+(D51). It also gives a one-line note
 on how it was written (D46).
 
 Claim D passes if at least 7 of the 10 succeed (D39).
@@ -109,7 +137,8 @@ part of the experiment, and the builder never sees it.
 
 Each test is one small Koka function marked `fip` (the in-place demand), in
 `acceptance/claim-c/`. Correct ones must be accepted with no `fip` warning.
-Broken ones must get at least one `fip` warning, which counts as a refusal
+Broken ones must get the specific `fip` warning for their own violation, on
+their own function; any other warning doesn't count (D51). That warning counts as a refusal
 (D41). Claim C passes only if all 12 tests go the expected way.
 
 | Test file              | Expected | What it does, and why that's correct or broken                                            |
@@ -120,12 +149,12 @@ Broken ones must get at least one `fip` warning, which counts as a refusal
 | good-rotate            | Accepted | Rotates a small tree, reusing both of its nodes.                                          |
 | good-running-total     | Accepted | Turns amounts into running totals, reusing each cell.                                     |
 | good-map-pairs         | Accepted | Swaps every pair in a list, reusing each list cell.                                       |
-| bad-duplicate          | Warned   | Writes every item twice, so it must make new cells.                                       |
-| bad-keep-both          | Warned   | Returns the list with a changed copy of it, so the list is used twice and must be copied. |
-| bad-calls-normal       | Warned   | Claims to be in place but calls an ordinary function that makes new lists.                |
-| bad-build-from-nothing | Warned   | Builds a list from a number, so every cell is new.                                        |
-| bad-grow-pair          | Warned   | Turns a two-field record into a three-field one, which needs a bigger, new container.     |
-| bad-throw-away         | Warned   | Throws away the rest of the list, so memory is freed rather than reused.                  |
+| bad-duplicate | Warned: allocates | Writes every item twice, so it must make new cells.                                       |
+| bad-keep-both | Warned: used multiple times | Returns the list with a changed copy of it, so the list is used twice and must be copied. |
+| bad-calls-normal | Warned: calling a non-fip function | Claims to be in place but calls an ordinary function that makes new lists. Both lists come in as arguments, so the ordinary call is the only problem.                |
+| bad-build-from-nothing | Warned: allocates | Builds a list from a number, so every cell is new.                                        |
+| bad-grow-pair | Warned: allocates | Turns a two-field record into a three-field one, which needs a bigger, new container.     |
+| bad-throw-away | Warned: deallocation | Throws away the rest of the list, so memory is freed rather than reused.                  |
 
 History, recorded for honesty: while checking that the tests were valid, the
 lead ran a first draft through Koka before this file was approved. Three draft
@@ -142,3 +171,28 @@ tests were fixed with Robert's approval, and none changed its expected verdict:
 
 Fingerprints (SHA-256) of the test files at approval: to be recorded once Robert
 approves.
+
+## Review and changes after approval
+
+Robert asked for an independent review before the builder started. Codex
+reviewed the setup (`council/BRIEF.md`) and wrote its findings to
+`council/verdict-codex.md`: seven findings, all rated *misleading*. Robert
+approved fixing five of them (D51):
+
+1. **Claim A:** the 2× comparison now uses exact medians. It used to round
+   first, which let 2.0004× pass.
+2. **Claim D:** a strict-demand pass counts only if the strict compile
+   succeeded.
+3. **Claim A:** the Rust mimalloc builds compile the exact mimalloc source
+   Koka ships (3.5.3). The Rust add-on bundles 3.3.2, so it can't be used. The
+   script checks which allocator each build contains.
+4. **Claim C:** each broken test must trigger its own specific warning.
+   bad-calls-normal no longer creates a list of its own, which had given it a
+   second, unrelated reason to warn.
+5. **Claims A and B:** timing runs are interleaved in a recorded random order,
+   after a warm-up run of each version.
+
+Finding 4, the same algorithms on both sides, was fixed with Robert's approval
+(D52); see "The same algorithm on both sides" above. Finding 5 was fixed with
+Robert's approval (D53): the extra-holder change now keeps a stated value for a
+stated time, and has its own expected output.

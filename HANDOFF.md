@@ -1,25 +1,50 @@
 # Handoff
 
-Read this first, then `CLAUDE.md`, the Big Picture thought in TheBrain's Mo
-Research brain, and `docs/DECISIONS.md`. Last updated
-23 Sep 2026, at the end of the session that created this repo.
+Read this first, then `CLAUDE.md`, the Design choices thought in TheBrain's Mo
+Research brain (Documents > Design choices), and `docs/DECISIONS.md`. Last
+updated 23 Sep 2026, in the session that made the design choices and set up
+Experiment 3.
 
 ## Where we are
 
-Mo v2 is Robert's programming language for AI agents to write reliable, safe
-software that no human writes or reads (D1–D5). The repo is two days old. It has
-two finished experiments and an accepted big picture, and no language code yet.
+- **Design choices, D24–D33.** Robert worked through nine big design choices
+  from a blank slate:
+  - a static checker, with contracts and proof on top
+  - no guessing
+  - pure code, with in-place updates the checker can prove
+  - no null
+  - failures returned as values, bugs stop the part that hit them
+  - listed effects plus capabilities
+  - plain data, modules and limited shared abilities, with no OOP
+  - memory freed by counting holders, with pools to explore
+  - Ruby/Elixir syntax
 
-**The open question to Robert** (ask it first, as the only question in your
-first message): _We're about to work through the seven areas of the Big Picture at
-the concept level. The recommendation is to start with area 1, the spec layer.
-Both experiments showed it's the part everything depends on, it's the part only
-Robert writes, and it's what makes Mo different. Should we start there, or with
-a different area?_
+  Each choice is a thought in TheBrain, with its options as child nodes.
+- **What Mo is now, D34 and D35.** Mo is one Ruby/Elixir-like language that
+  does all of that through its compiler and runtime. The two-languages picture
+  in D20 is superseded. Syntax and how promises are written are deferred.
+  Robert's interest is the compiler and runtime ideas.
+- **How decisions are made, D38.** Every decision rests on real tests,
+  measurements and data. Each idea is tested, then the realistic alternatives
+  are tested the same way and compared.
+- **Experiment 3,** in `experiments/03-in-place`, tests D26 in Koka against
+  Rust. The plan (D44) and acceptance file (D50) are approved and locked; the
+  fingerprints are in `LOCK.md`. The lead's `acceptance/measure.py`, run with
+  `./run.sh`, does all building, timing and scoring. The builder brief is
+  `briefs/builder.md`.
+- **Follow-ons (D42).** 3b builds the in-place helper in Rust. 3c is a toy
+  language with a checker for in-place demands, only if 3b looks promising.
+  Lean's role is proving the rules (D47).
 
-Robert asked to stay at the conceptual level for now (D19): what Mo is, its
-features, and how they fit together. Go granular only after that. Experiments
-resume when a concept needs testing.
+**Next step:** Codex reviewed the setup (`council/verdict-codex.md`). All seven
+findings were fixed with Robert's approval (D51–D53), and the lock was
+re-recorded. Next, the builder runs `briefs/builder.md`. Then the lead:
+
+1. re-checks the fingerprints in `LOCK.md`
+2. checks that Koka and same-container Rust use the same algorithms (D52)
+3. reviews the Rust code for fairness
+4. checks Koka's compiled program for the extra-holder change (D53)
+5. runs `./run.sh` and writes `RESULT.md`
 
 ## How to work with Robert
 
@@ -100,6 +125,11 @@ the keep/drop table. It's a parking lot: nothing from it is decided.
   3. The builder writes only its own file.
   4. The lead verifies independently: hashes, a clean rebuild, `#print axioms`,
      and a deliberately broken copy that must fail.
-- **Commits:** local git only, no remote (D7). Commit named paths only, with the
-  attribution line.
+- **Koka:** 3.2.9 via Homebrew. Its `fip`/`fbip` in-place checks only *warn*;
+  they never refuse a program (D41). **Rust:** 1.98 via Homebrew.
+- **Commits:** the repo is public at https://github.com/robertguss/mo-v2.
+  Refer to repo docs by URL. Commit named paths only, with the attribution
+  line, and push only when Robert asks.
+- **This session ran in the Claude desktop app,** not inside Herdr, so it could
+  not open Herdr panes itself. Check `HERDR_ENV` before trying.
 - Never use `tr` in shell commands; use python3.

@@ -1,14 +1,14 @@
 # Experiment 3: lock
 
-Fingerprints (SHA-256) of the locked files, recorded 23 Sep 2026 after Robert approved the plan (D44) and the acceptance file (D50). The builder may not change any of these. The lead re-checks them before scoring.
+Fingerprints (SHA-256) of the locked files. The first lock was recorded on 23 Sep 2026 after Robert approved the plan (D44) and the acceptance file (D50). This lock replaces it, after the Codex review and the fixes Robert approved (D51, D52, D53). The builder may not change any of these files, and the lead re-checks them before scoring.
 
 ```
 43b90ac67866cabf2eb5e73a0368002b65edb458a70f515f01cc785803c96f67  PLAN.md
-fe67a21ef20be93eb42c1a418cd92e7b0709eb9e9832b5b2fcc43daa5d752ffc  ACCEPTANCE.md
+987fe79cb0f3c702831612bc1ccbecd68b9971924a3faa99affdf9b7c3d3df23  ACCEPTANCE.md
 ec402d5f1268c10eeaf1f58390694e21162255fa5e26671a3ed4cb49fb99f5d6  run.sh
-10811f073f78c2b18c87f92bd878a13fcaa2afed6aa946409d8ceba67f72dd8a  acceptance/measure.py
+d96d4d266aa744309676492d486b79842fb8adeb183c5938873554f956865a04  acceptance/measure.py
 fa9a4736fe0b69ee6050929dfd488ae09dd4e3742f491fa1012535222f5c4c29  acceptance/claim-c/bad-build-from-nothing.kk
-e2778fb908401b057354e5f9aa68ee38a3dca4edcffa2e668ac4d0549fc0c6cc  acceptance/claim-c/bad-calls-normal.kk
+c04f70132f071ef6352eae0fa0a8158f7fa7c42cc7a90d060cb30952e35f4cb5  acceptance/claim-c/bad-calls-normal.kk
 789cf8c5ccfbe3d8c1c1236bc0d50b8add901c924db9b7db7c6872f141a85c81  acceptance/claim-c/bad-duplicate.kk
 179ac3e9d74a00e2f321b62ddb07f18695793428b35be1cfa78a88bf28a39fb2  acceptance/claim-c/bad-grow-pair.kk
 a7bacf0761c66edb939a217d85e8c8761bda199178509cd8aa6142047b780770  acceptance/claim-c/bad-keep-both.kk
