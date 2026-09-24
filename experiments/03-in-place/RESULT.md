@@ -191,20 +191,27 @@ What this shows:
 These are the lead's proposals; nothing here is decided.
 
 1. **The invisible in-place trick is real and fast.** The evidence supports
-   keeping it.
+   keeping it. *Decided: D57 confirms D26 as tested.*
 2. **Number type matters.** On benchmark 4, Koka with unlimited-size numbers
    was 1.68× slower than the same program with fixed-size numbers. How Mo
-   represents numbers deserves its own decision and test.
-3. **Silent slowdowns are real.** When copying happened, nothing warned about
-   it. That supports making in-place demands, or compiler notes about where
-   copying happens, a first-class part of Mo.
-4. **Demands must refuse, not warn** (D41). The relaxed demand is the useful
-   one, and it still needs restructuring.
+   represents numbers deserves its own decision and test. *Decided: D58 makes
+   it design choice 10, to be tested.*
+3. **Silent copying is real.** When copying happened, nothing warned about
+   it. Claim B did not show it was costly on these cases (2% faster to 4%
+   slower). What Mo should say about copying outside explicit demands is a
+   question to test. *Decided: D59 makes it an experimental question.*
+4. **Demands must refuse, not warn.** That requirement is already D26; Koka
+   only warns (D41). The relaxed demand is the useful one, and it still needs
+   restructuring. *Decided: D62. Whether Mo's checker enforces the rule, and
+   whether useful programs can meet it, are separate checks left for 3c.*
 5. **Claim B should be retested with harder changes,** ones the compiler can't
-   remove. That could happen in 3b or in a follow-up.
+   remove. *Decided: D63 puts one bounded repeated-sharing case inside 3b.*
 6. **Linked structures were 2.6–8.5× slower** than idiomatic Rust collections
-   on these benchmarks. How Mo stores collections is a separate question the
-   data raises.
+   on these benchmarks. Those figures compare whole programs (runtime,
+   representation and, for the tree, input construction differ), so they
+   motivate a question without isolating a cause. *Decided: D65 opens design
+   choice 11, how sequences are stored and updated, with its first experiment
+   after 3b.*
 
 Next in the plan (D42) is 3b, the in-place helper built in Rust, on the same
 benchmarks.

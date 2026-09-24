@@ -1,6 +1,6 @@
 # Session Orientation
 
-> **Historical note (D54, D55):** this whole note is historical. It was TheBrain's orientation page, and TheBrain is no longer used. It is kept word for word as a record. Current sessions start from `HANDOFF.md` and `CLAUDE.md`; research lives in `docs/research/`.
+> **Historical note (D54, D55):** this whole note is historical. It was TheBrain's orientation page, and TheBrain is no longer used. It is kept word for word as a record. Current sessions start from the Status section of `docs/README.md` and from `CLAUDE.md`; research lives in `docs/research/`.
 
 Read this at the start of every Mo session.
 

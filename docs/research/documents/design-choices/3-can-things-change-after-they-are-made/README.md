@@ -2,7 +2,7 @@
 
 Two kinds of change: renaming (pointing a name at a new value) and changing a value in place, which anyone else holding it sees. The second causes who-changed-this bugs.
 
-Status: Decided for now: D26, to be tested by experiments. Related: D27 (speed is very important, but not the fastest possible).
+Status: Decided: D26, confirmed as tested by Experiment 3 (D57). Related: D27 (speed is very important, but not the fastest possible).
 
 ## Contents
 

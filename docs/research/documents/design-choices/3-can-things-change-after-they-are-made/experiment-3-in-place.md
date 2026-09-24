@@ -34,3 +34,14 @@ Full write-up, corrected after the Codex verification (D55): [RESULT.md](../../.
 * D (realistic code, pass): 7 of 10 with the relaxed demand; 3 of 10 with the strict one (invoice-total fails through its helper). Failures: tree-insert and parse-csv-line (inherent), update-stock (library gap).
 * Idiomatic Rust collections were about 2.6-8.5x faster than the linked versions on b1-b3.
 * The lead's readings are proposals for Robert to decide.
+
+## What the result means for D26: the six readings, all decided (23 Sep 2026)
+
+1. **D26 confirmed as tested** (D57): the invisible in-place trick is real and fast, and demands can be checked.
+2. **Numbers** (D58): how Mo represents numbers is design choice 10, open, to be tested. Koka's unlimited-size numbers were 1.68x slower than fixed-size int64 on benchmark 4.
+3. **Copying outside explicit demands** (D59): what Mo says about it is an experimental question, not a decision. Experiment 3 showed copying is silent, not that it is costly (claim B: 2% faster to 4% slower). The follow-up, possibly inside 3b, as shaped with Codex: success is better speed with correct behaviour, not fewer copies; "no change needed" on a harmless case is a pass; fresh agent sessions per feedback condition; separate the information question (static note against runtime profile) from the delivery question (always-on against on request); the lead writes the checks first, Robert approves them in plain English, the repairing agent cannot touch them.
+4. **Demands must refuse, not warn** (D62): already D26; nothing new to decide. Whether Mo's own checker enforces it (a proof) and whether useful programs can meet it (examples and experiments) are two separate checks for 3c. Experiment 3 showed feasibility on Koka's twelve cases only.
+5. **Claim B retest** (D63): one bounded repeated-sharing list case inside 3b, observational with validity gates.
+6. **Sequences** (D65): the 2.6-8.5x gap to idiomatic Rust collections motivates design choice 11, how sequences are stored and updated, without isolating a cause. Its first experiment comes after 3b.
+
+The 3b draft plan is at https://github.com/robertguss/mo-v2/blob/main/experiments/03b-helper/PLAN.md.

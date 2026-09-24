@@ -16,6 +16,8 @@ Working through the big design choices with Robert, one at a time, from a blank 
 * 7 Organisation: plain data, modules, limited shared abilities; no OOP (D31).
 * 8 Memory: counting holders; pools to explore (D32).
 * 9 Look: keywords and end, Ruby and Elixir spirit (D33).
+* 10 Numbers: open, to be tested (D58).
+* 11 Sequences: open, first experiment after 3b (D65).
 
 Open threads: experiment for D26 (and suggested for D30); pools and where long-lived state lives (running programs); how limited shared abilities are; the spec language's look. Close neighbour worth studying: Gleam (typed, BEAM).
 
@@ -32,4 +34,6 @@ Next (D34, D35): one Ruby/Elixir-like language doing all of the above through it
 * [7 How is a program organised?](7-how-is-a-program-organised/README.md)
 * [8 Who cleans up memory?](8-who-cleans-up-memory/README.md)
 * [9 What does it look like?](9-what-does-it-look-like/README.md)
+* [10 How are numbers represented?](10-how-are-numbers-represented/README.md)
+* [11 How are sequences stored and updated?](11-how-are-sequences-stored-and-updated/README.md)
 * [Neighbouring languages](neighbouring-languages/README.md)
