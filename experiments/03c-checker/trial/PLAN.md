@@ -44,7 +44,8 @@ meaning's answers, makes exactly the predicted numbers of allocations, reuses
 and frees, and leaves every list someone else keeps unchanged?
 
 - Supported: every example matches predictions that Codex wrote and Robert
-  approved before the rule was encoded.
+  approved before the rule was encoded, with the counts taken from what the
+  memory actually did, not from the log alone.
 - Rejected: a mismatch traced to the rule itself, where the approved English
   rule does something unsafe or something Robert did not intend.
 - Reported as what they are: a wrong prediction, or a wrong encoding (the Lean
@@ -165,7 +166,10 @@ rule:
   A new cell is new memory only when no set-aside cell is available to it (for
   example, one set aside by an enclosing `match` may still be); which set-aside
   cells a new cell may take is part of the fine details below.
-- Every allocation, reuse and free is logged.
+- Every allocation, reuse and free is logged, and the log must match what
+  actually happened to memory: a reuse keeps the same, already allocated cell,
+  and freeing a cell and then building a replacement counts as a free plus an
+  allocation, never as a reuse.
 
 The fine details are fixed in phase 1 and approved by Robert in plain English:
 the order in which the parts of a program run, which set-aside cell a new cell
@@ -233,12 +237,20 @@ locked with the rest.
    predictions; they are then frozen, with fingerprints.
 3. The lead writes the language and both meanings in Lean. Codex, in its own
    visible Herdr pane (a session separate from its read-only reviewing role),
-   writes the Lean file that checks the runs against the frozen predictions. The
-   lead never edits a prediction or that file.
+   writes the Lean file that checks the runs against the frozen predictions. It
+   takes the numbers of allocations, reuses and frees from a record of every
+   cell operation the memory performed (a free followed by an allocation shows
+   as both, even if the new cell gets the same address), or checks the log
+   against that record, rather than trusting the log. The lead never edits a
+   prediction or that file.
 4. The run. Each mismatch is classified against the approved English rule: a
    wrong prediction, a wrong encoding, or a counterexample to the rule. The
    failed run and the original prediction are kept, and nothing changes without
-   Robert's decision.
+   Robert's decision. One control runs before the lock: a deliberately broken
+   copy of the rule that frees a cell and builds a replacement but logs a reuse,
+   run on the one-cell example (add one to the first item of an unshared
+   one-item list). Its answer is right, and the checks must reject it on the
+   counts. This checks that the checks reject this known misreport.
 5. The lead writes the promises of Q2 as Lean statements, `ACCEPTANCE.md` (the
    same in plain English, with the examples as tables) and the builder's brief.
    Codex answers one bounded question: "can a builder pass these checks while
@@ -347,7 +359,9 @@ slice 1) requires.
 Robert's next decisions: whether the full 3c goes ahead as planned or changes;
 whether the trial's language and counted meaning become the start of 3c's shared
 parts; whether the full 3c has a time cap (Robert has challenged having one);
-and whether builders run on a cloud VM instead of his laptop.
+whether builders run on a cloud VM instead of his laptop; and what the trial
+teaches about tying the full 3c's allocation counts (D73, its promise of no new
+list cells) to its modelled cell operations.
 
 ## Open questions for Robert, in order
 
@@ -378,3 +392,6 @@ was written, then the draft itself. Taken into the text:
 - From the draft: a cell someone else holds cannot be reused, but a new cell may
   still reuse another set-aside cell; the builder's brief is approved and locked
   before phase 2; the two meanings are explained before Q1.
+- From the whole-plan review Robert asked for: the counts of allocations,
+  reuses and frees are checked against what memory actually did, and a copy of
+  the rule that reports a replacement as a reuse is among the controls.
