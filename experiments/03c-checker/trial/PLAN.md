@@ -1,9 +1,10 @@
 # Experiment 3c trial: the reuse rule on a tiny language
 
 **Status: draft proposal, 27 Sep 2026.** Written by the lead; its outline was
-reviewed by Codex before drafting (its findings are at the end). Nothing about
-the trial is decided. The first question for Robert is the trial's scope (see
-"Scope: the options").
+reviewed by Codex before drafting (its findings are at the end). Decided so
+far: the scope, T2 (D76: the rule on examples, then a builder's proof).
+Everything else here is a proposal for Robert to approve. The next question is
+the builder's stop condition (see "Open questions for Robert").
 
 What already binds it:
 
@@ -71,7 +72,10 @@ reached; that does not show the promise is false.
 this trial, where the spec needed changing and why, and whether the form of the
 counted meaning is a good base for 3c's shared parts.
 
-## Scope: the options (Robert's first question)
+## Scope: the options (decided: T2)
+
+Robert chose T2 on 27 Sep (D76: the rule on examples, then a builder's
+proof). The options are kept for the record.
 
 - **T0. No trial.** Go straight to the full 3c. Listed for completeness; Robert
   proposed the trial.
@@ -241,9 +245,9 @@ locked with the rest.
    and the brief.
 6. Robert sees the example results and decides whether phase 2 starts.
 
-**Phase 2: the proof** (T2 and up). A builder in a visible Herdr pane (D14,
-builders work where Robert can see them) writes only its own proof files, never
-the language, the meanings, the promises or the checks.
+**Phase 2: the proof.** A builder in a visible Herdr pane (D14, builders work
+where Robert can see them) writes only its own proof files, never the language,
+the meanings, the promises or the checks.
 
 **Checking the builder's work.** The lead and Codex each check it and write
 their findings before seeing the other's (the D70 pattern of independent reviews
@@ -333,7 +337,8 @@ and whether builders run on a cloud VM instead of his laptop.
 
 ## Open questions for Robert, in order
 
-1. The trial's scope: T0 to T4. Recommended: T2.
+1. ~~The trial's scope: T0 to T4.~~ Decided on 27 Sep: T2, the rule on
+   examples, then a builder's proof (D76).
 2. The builder's stop condition for phase 2: a number of hours, or another rule.
    This connects to Robert's challenge to a time cap for the full 3c.
 3. Approve the plan. Phase 1's rule, examples and predictions then each get his
