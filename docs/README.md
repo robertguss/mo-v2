@@ -27,7 +27,7 @@ without a decision in `DECISIONS.md`.
 Where things stand. Updated by the lead session whenever it changes; a new
 session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
 
-**24 Sep 2026.**
+**27 Sep 2026.**
 
 - **Design choices.** The nine big choices are made (D24–D33): a static checker
   with contracts and proof on top; no guessing; pure code with in-place updates
@@ -72,11 +72,18 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   meaning (D74); slice 1 runs in two stages, the rule's correctness proof checked
   and shown to Robert before the checker is built (D75). Robert then proposed a
   much smaller trial before any full 3c build, to learn quickly and then decide
-  next steps. Open now: the trial's scope (the lead and Codex propose the reuse
-  rule on a tiny language without function calls, run on examples and then
-  proven by a builder). Waiting until after the trial: whether the full 3c has
-  a time cap (Robert challenged having one; not decided), approving the plan,
-  and running builders on a cloud VM instead of Robert's laptop.
+  next steps (next bullet). Waiting until after the trial: whether the full 3c
+  has a time cap (Robert challenged having one; not decided), approving the
+  plan, and running builders on a cloud VM instead of Robert's laptop.
+- **The trial, 27 Sep.** Draft plan: `experiments/03c-checker/trial/PLAN.md`,
+  its outline reviewed by Codex in three rounds (findings at the end of the
+  plan). It proposes the reuse rule (D74, the one fixed rule that decides where
+  cells are reused and released) on the 3c language without function calls:
+  first run on examples whose predictions Codex writes and Robert approves
+  before the rule is encoded, then proven correct by a builder. Nothing about
+  the trial is decided. Open now, one at a time: its scope (options T0 to T4;
+  the lead and Codex recommend T2, examples then proof), then the builder's
+  stop condition, then approving the plan.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×

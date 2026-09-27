@@ -6,7 +6,9 @@ through with Codex. Decided so far: 3c is next (D71), it runs in two slices
 fixed in the locked counted meaning (D74), and that slice 1 runs in two stages
 (D75). Everything else here is a proposal
 for Robert to approve. The acceptance file (the exact promises and examples)
-comes after the plan, with its own review and approval before locking.
+comes after the plan, with its own review and approval before locking. On 24
+Sep Robert proposed a much smaller trial before any full 3c build; its draft
+plan is [`trial/PLAN.md`](trial/PLAN.md).
 
 ## Where it comes from
 
