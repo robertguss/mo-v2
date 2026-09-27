@@ -2,9 +2,10 @@
 
 **Status: draft proposal, 27 Sep 2026.** Written by the lead; its outline was
 reviewed by Codex before drafting (its findings are at the end). Decided so
-far: the scope, T2 (D76: the rule on examples, then a builder's proof).
-Everything else here is a proposal for Robert to approve. The next question is
-the builder's stop condition (see "Open questions for Robert").
+far: the scope, T2 (D76: the rule on examples, then a builder's proof), and
+the builder's stop rule (D77: 2-hour check-ins, resuming only on Robert's
+go-ahead). Everything else here is a proposal for Robert to approve. The next
+question is approving the plan (see "Open questions for Robert").
 
 What already binds it:
 
@@ -65,12 +66,14 @@ cover"):
 
 Supported: all four proven, and the proof checked (see "Checking the builder's
 work"). Rejected: a concrete well-formed program and valid memory that break one
-of them. Inconclusive: a proof unfinished when the builder's stop condition is
-reached; that does not show the promise is false.
+of them. Inconclusive: a proof still unfinished at any stop. A check-in waiting
+for Robert's answer is a pause, not an end, and unfinished work alone does not
+show a promise is false.
 
 **Q3. What it teaches for the full 3c** (observational): the effort observed for
-this trial, where the spec needed changing and why, and whether the form of the
-counted meaning is a good base for 3c's shared parts.
+this trial (the record of check-ins, with working and waiting time kept apart),
+where the spec needed changing and why, and whether the form of the counted
+meaning is a good base for 3c's shared parts.
 
 ## Scope: the options (decided: T2)
 
@@ -306,8 +309,19 @@ Phase 2 stops when any of these happens:
 
 - **Completed:** every promise is proven, the lead's and Codex's checks are
   done, and the result is written up.
-- **The builder's stop condition is reached** (Robert's question 2 below). The
-  builder stops and reports where the proof stands.
+- **A check-in** (D77, Robert's stop rule for the builder). Each work interval
+  is 2 hours of elapsed time: the first starts when the work is authorised and
+  the builder has the locked files and a working setup; each later one starts
+  when Robert explicitly says to continue. At the end of an interval the
+  builder stops, reports what Lean has verified, what is unfinished and any
+  concrete program that breaks a rule, and waits. No answer means it stays
+  stopped. Robert may change the interval at a check-in. The lead keeps the
+  clock, and restarting the builder does not reset an interval. In a report,
+  "proven" means Lean checked the exact promise with no unfinished proofs or
+  extra assumptions; progress is counted in promises proven, not in helper
+  lemmas; working time and waiting time are recorded separately. Robert can
+  read the builder's original reports; the lead marks which results it has
+  checked itself and which are only builder-reported.
 - **A rule is shown wrong:** a concrete program breaks a promise. This is
   reported separately from an unfinished proof.
 - **The spec is wrong:** a locked file turns out to be mistaken or unprovable as
@@ -339,8 +353,8 @@ and whether builders run on a cloud VM instead of his laptop.
 
 1. ~~The trial's scope: T0 to T4.~~ Decided on 27 Sep: T2, the rule on
    examples, then a builder's proof (D76).
-2. The builder's stop condition for phase 2: a number of hours, or another rule.
-   This connects to Robert's challenge to a time cap for the full 3c.
+2. ~~The builder's stop condition for phase 2.~~ Decided on 27 Sep: 2-hour
+   check-ins, resuming only on Robert's go-ahead (D77).
 3. Approve the plan. Phase 1's rule, examples and predictions then each get his
    approval before anything is locked.
 

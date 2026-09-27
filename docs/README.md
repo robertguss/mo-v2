@@ -81,8 +81,9 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   cells are reused and released) on the 3c language without function calls:
   first run on examples whose predictions Codex writes and Robert approves
   before the rule is encoded, then proven correct by a builder. Decided: its
-  scope, T2 (D76: the rule on examples, then a builder's proof). Open now, one
-  at a time: the builder's stop condition, then approving the plan.
+  scope, T2 (D76: the rule on examples, then a builder's proof), and the
+  builder's stop rule (D77: 2-hour check-ins, resuming only on Robert's
+  go-ahead). Open now: approving the plan.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
