@@ -75,15 +75,16 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   next steps (next bullet). Waiting until after the trial: whether the full 3c
   has a time cap (Robert challenged having one; not decided), approving the
   plan, and running builders on a cloud VM instead of Robert's laptop.
-- **The trial, 27 Sep.** Draft plan: `experiments/03c-checker/trial/PLAN.md`,
-  its outline reviewed by Codex in three rounds (findings at the end of the
-  plan). It proposes the reuse rule (D74, the one fixed rule that decides where
+- **The trial, 27 Sep.** Plan: `experiments/03c-checker/trial/PLAN.md`,
+  reviewed by Codex (findings at the end of the plan). It applies the reuse
+  rule (D74, the one fixed rule that decides where
   cells are reused and released) on the 3c language without function calls:
   first run on examples whose predictions Codex writes and Robert approves
   before the rule is encoded, then proven correct by a builder. Decided: its
   scope, T2 (D76: the rule on examples, then a builder's proof), and the
   builder's stop rule (D77: 2-hour check-ins, resuming only on Robert's
-  go-ahead). Open now: approving the plan.
+  go-ahead), and the plan itself (D78: approved; each later piece still needs
+  Robert's approval). Nothing built or run yet. Next: phase 1, step 1.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×

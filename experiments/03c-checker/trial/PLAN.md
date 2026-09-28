@@ -1,11 +1,14 @@
 # Experiment 3c trial: the reuse rule on a tiny language
 
-**Status: draft proposal, 27 Sep 2026.** Written by the lead; its outline was
-reviewed by Codex before drafting (its findings are at the end). Decided so
-far: the scope, T2 (D76: the rule on examples, then a builder's proof), and
-the builder's stop rule (D77: 2-hour check-ins, resuming only on Robert's
-go-ahead). Everything else here is a proposal for Robert to approve. The next
-question is approving the plan (see "Open questions for Robert").
+**Status: approved, 27 Sep 2026** (D78: the trial plan is approved; each later
+piece still needs Robert's approval). Written by the lead and reviewed by Codex
+(its findings are at the end). Decided: the scope, T2 (D76: the rule on
+examples, then a builder's proof); the builder's stop rule (D77: 2-hour
+check-ins, resuming only on Robert's go-ahead); and this plan (D78). Nothing
+has been built or run yet. Next: phase 1, step 1, in which the lead prepares
+the plain-English rule with its fine details, the example programs and
+starting memories, and the interface the checks will use, for Robert's
+approval.
 
 What already binds it:
 
@@ -369,8 +372,8 @@ list cells) to its modelled cell operations.
    examples, then a builder's proof (D76).
 2. ~~The builder's stop condition for phase 2.~~ Decided on 27 Sep: 2-hour
    check-ins, resuming only on Robert's go-ahead (D77).
-3. Approve the plan. Phase 1's rule, examples and predictions then each get his
-   approval before anything is locked.
+3. ~~Approve the plan.~~ Approved on 27 Sep (D78). Phase 1's rule, examples and
+   predictions then each get his approval before anything is locked.
 
 ## Codex's review (27 Sep 2026)
 
