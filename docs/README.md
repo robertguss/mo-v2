@@ -53,14 +53,12 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   plain in-place Rust, within the 2× budget (D67), with every correctness check
   passing. Outcome 2 under D66. Verified independently by the lead and Codex
   (D70), who agreed.
-- **Next: plan Experiment 3c** (D71). 3c is the toy pure language with a checker
-  that refuses broken in-place demands (D42), with 3b's helper as a candidate
-  runtime foundation. Lean's role is proving the rules correct (D47). Keep
-  correctness (a proof that accepted programs meet the demand) and usefulness
-  (examples showing useful programs are accepted) as two separate checks (D62).
-  Bring the plan to Robert as a proposed experiment (D60, D64), worked through
-  with Codex first (D61); the lead's first question to Robert is the first one
-  the 3c plan raises.
+- **Experiment 3c** (D71: the next experiment) is the toy pure language with a
+  checker that refuses broken in-place demands (D42), with 3b's helper as a
+  candidate runtime foundation. Lean's role is proving the rules correct (D47).
+  Correctness (a proof that accepted programs meet the demand) and usefulness
+  (examples showing useful programs are accepted) stay two separate checks
+  (D62).
 - **3c planning, 24 Sep.** Decided: two slices on the same small list programs
   (D72). Slice 1 proves Koka's conditional promise (in place if nobody else
   holds the input); slice 2 adds checks on callers so the promise is enforced
@@ -74,22 +72,40 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   much smaller trial before any full 3c build, to learn quickly and then decide
   next steps (next bullet). Waiting until after the trial: whether the full 3c
   has a time cap (Robert challenged having one; not decided), approving the
-  plan, and running builders on a cloud VM instead of Robert's laptop.
+  full 3c plan, and running builders on a cloud VM instead of Robert's laptop.
 - **The trial, 27 Sep.** Plan: `experiments/03c-checker/trial/PLAN.md`,
-  reviewed by Codex (findings at the end of the plan). It applies the reuse
-  rule (D74, the one fixed rule that decides where
-  cells are reused and released) on the 3c language without function calls:
-  first run on examples whose predictions Codex writes and Robert approves
-  before the rule is encoded, then proven correct by a builder. Decided: its
-  scope, T2 (D76: the rule on examples, then a builder's proof), and the
-  builder's stop rule (D77: 2-hour check-ins, resuming only on Robert's
-  go-ahead), and the plan itself (D78: approved; each later piece still needs
-  Robert's approval). Nothing built or run yet. Next: phase 1, step 1.
+  approved (D78: the trial plan is approved; each later piece still needs
+  Robert's approval). It applies the reuse rule (D74, the one fixed rule that
+  decides where cells are reused and released) to the 3c language without
+  function calls: first run on examples whose predictions Codex writes and
+  Robert approves before the rule is encoded, then proven correct by a builder
+  (D76: scope T2, the rule on examples, then a builder's proof), who works in
+  2-hour check-ins and resumes only on Robert's go-ahead (D77). The 27 Sep
+  session wrote and revised the plan in five steps, each reviewed and signed
+  off by Codex as oracle. Documents only: nothing has been built or run.
+- **Next: the trial's phase 1, step 1** (proposed; the next session opens it
+  with a bounded step plan for the oracle's review). The lead prepares, for
+  Robert's approval, the plain-English rule with its fine details (the order
+  in which the parts of a program run; which set-aside cell a new cell takes
+  when several are available; when an unused one is freed; how a name used in
+  only one branch is given up), the example programs and starting memories,
+  and the interface the checks will use. Then step 2, only after Robert
+  approves the rule and the examples: Codex writes the predictions in its own
+  visible Herdr pane, a session separate from the read-only oracle. The
+  remaining steps and gates are in the plan ("How the trial runs").
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
   in both the helper and Koka; a starting case for the D59 copy-feedback
   follow-up).
-- **Codex** runs in the Herdr pane to the right of the lead (`herdr agent list`
-  shows it). The 3b builder's pane can be closed.
+- **Working arrangement.** Codex runs in the Herdr pane to the right of the lead
+  (`herdr agent list` shows it). On 27 Sep the lead worked as driver and Codex
+  as a read-only oracle (the `driver` and `oracle` skills): each step's plan
+  and diff were reviewed and signed off before its commit. This Status section
+  is the handoff between sessions; there is no `HANDOFF.md` (see `CLAUDE.md`).
+  Robert authorised committing and pushing after each oracle sign-off for that
+  session only; a new session asks him again. This handoff was written against
+  `cbe26a3` (`main`, reviewed and pushed); a new session checks `git status`,
+  the latest commit and the remote before starting. Outside a pinned project,
+  `lean` now resolves to 4.34.1 (elan's default); the experiments pin 4.34.0.
 - **Parked:** see `research/parking-lot/README.md`.

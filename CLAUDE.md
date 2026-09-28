@@ -149,7 +149,13 @@ own work. The rules below exist to stop that happening again.
 - **Lean:** 4.34.0 via elan (installed with Homebrew). Each Lean experiment is a
   Lake project. Run `lake build` inside it; for Experiment 2, `lake exe score`
   prints the scoreboard. Lean's role is proving that rules are correct (D47).
+  Use the experiment's pinned toolchain (its `lean-toolchain` file); elan's
+  global default can differ.
 - **Koka:** 3.2.9 via Homebrew. Its `fip`/`fbip` in-place checks only _warn_;
   they never refuse a program (D41). **Rust:** 1.98 via Homebrew.
+- **Markdown formatting:** Robert's user-level Claude Code hook
+  (`~/.claude/hooks/md-format`, run after every Write or Edit) re-wraps whole
+  Markdown files. To keep a diff to an existing doc limited to the intended
+  lines, apply the edit with a python3 script and check `git diff`.
 - **Commits:** refer to repo docs by URL. Commit named paths only, with the
   attribution line, and commit and push only when Robert asks.
