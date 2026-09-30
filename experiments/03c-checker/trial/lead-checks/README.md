@@ -30,3 +30,7 @@ match-names check turned off; part 2, a cell set aside at the wrong count, the
 cascade skipped, the D90 free moved before its snapshot, the match's step 3
 dropped, and a missing intermediate holder. None of the twenty example programs
 (P1 to P20) is run here.
+
+`D98/` holds the lead's checks of the D98 change to the snapshots (the value a
+finishing `match` branch worked out, and a snapshot as each chosen branch starts);
+its README says what they show.

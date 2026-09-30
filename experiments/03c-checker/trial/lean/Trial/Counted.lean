@@ -79,6 +79,8 @@ inductive StepKind where
   | holderForgotten
   /-- The last snapshot of a run, after the answer is worked out; nothing happens after it. -/
   | end
+  /-- Immediately before the chosen branch's expression is evaluated (D98). -/
+  | branchStarts
   deriving DecidableEq, Repr
 
 /-- The state of the run at one moment (`INTERFACE.md` 6; `RULE.md` 3). -/
@@ -89,6 +91,10 @@ structure Snapshot where
   pending : List RawValue
   outside : List (Option Addr)
   setAside : List (Nat × Addr)
+  /-- The value of a finished branch, in the `branchValueWorkedOut` and
+  `branchValueHandedOn` snapshots only (D98). A record only: it creates no holder and
+  is never in `pending`. -/
+  branchValue : Option RawValue
   deriving Repr
 
 /-- `refused`: before running. `failedRunning`: while running, with the operation
@@ -171,13 +177,13 @@ structure RunState where
 /-- A failure while running keeps the state up to the failure (`INTERFACE.md` 5). -/
 abbrev M := ExceptT String (StateM RunState)
 
-def snapshot (k : StepKind) : M Unit := do
+def snapshot (k : StepKind) (bv : Option RawValue := none) : M Unit := do
   let st ← get
   -- Every binding in scope, and every binding that still holds a holder (none is hidden by scope).
   let inScope := st.bindings.filter (fun b => st.scope.contains b.id || b.status == .holding)
   let snap : Snapshot :=
     { kind := k, memory := st.mem.cells, bindings := inScope, pending := st.pending,
-      outside := st.outside, setAside := st.setAside }
+      outside := st.outside, setAside := st.setAside, branchValue := bv }
   set { st with snaps := st.snaps ++ [snap] }
 
 /-- The bindings in scope, oldest first, for the snapshots that follow. -/
@@ -382,10 +388,10 @@ cells are freed, newest first; then the value is handed on. A list value stays
 pending throughout: whatever surrounds the `match` takes it. -/
 def finishBranch (bid : Nat) (inner outer : Env) (w : RawValue) : M RawValue := do
   enter inner
-  snapshot .branchValueWorkedOut
+  snapshot .branchValueWorkedOut (some w)
   disposeSetAside bid (← get).setAside.length
   enter outer
-  snapshot .branchValueHandedOn
+  snapshot .branchValueHandedOn (some w)
   pure w
 
 def numOp (what : String) (f : Int → Int → RawValue) (x y : RawValue) : M RawValue :=
@@ -450,10 +456,14 @@ def evalC (v : Variant) : Expr → Env → List Frame → List Nat → M RawValu
     | .bool true =>
       snapshot .branchChosen
       giveUpDead v env ({ text := t, env := toFEnv env } :: fs)
+      enter env
+      snapshot .branchStarts
       evalC v t env fs enc
     | .bool false =>
       snapshot .branchChosen
       giveUpDead v env ({ text := e, env := toFEnv env } :: fs)
+      enter env
+      snapshot .branchStarts
       evalC v e env fs enc
     | _ => throw "stuck: an if condition is not true or false"
   -- Section 10, `match`; 6b steps 1 to 6; 6g.
@@ -468,6 +478,8 @@ def evalC (v : Variant) : Expr → Env → List Frame → List Nat → M RawValu
       let bid ← freshBranch
       snapshot .branchChosen
       giveUpDead v env ({ text := nb, env := toFEnv env } :: fs)
+      enter env
+      snapshot .branchStarts
       let w ← evalC v nb env fs (bid :: enc)
       finishBranch bid env env w
     | .list (some a) =>
@@ -516,6 +528,8 @@ def evalC (v : Variant) : Expr → Env → List Frame → List Nat → M RawValu
         enter env'
         snapshot .matchStep4Done
       -- Step 6: run the branch.
+      enter env'
+      snapshot .branchStarts
       let w ← evalC v cb env' fs (bid :: enc)
       finishBranch bid env' env w
     | _ => throw "stuck: match on a non-list"

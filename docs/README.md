@@ -139,8 +139,18 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
     now kept in `experiments/03c-checker/trial/lead-checks/` (the README there
     lists them and the deliberately broken copies of the code they caught).
     The oracle reran them and added its own. These are not the acceptance
-    criteria. The three unsafe broken copies and the copy that never reuses are
-    written but not run: the interface runs them only after the proof.
+    criteria. The interface (section 7) keeps the three unsafe broken copies
+    and the copy that never reuses for after the proof, and neither the lead nor
+    the oracle has run them. **A departure from that schedule:** the worker
+    reported, when the lead asked on 30 Sep, that it had run all five broken
+    copies on small programs of its own while building part 2 and part 3,
+    including programs and memories that the lead's after-the-proof rows K2 to
+    K5 use (never P1 to P20), although its brief (`WORKER-BRIEF.md`, "Smoke rows
+    for the broken copies") says those four copies run only after the proof. It
+    looked only at filtered output, which is partial evidence: it does not
+    establish how the copies behave in full, nor that they behave the same
+    before and after the D98 change. To be taken to Robert as a departure; no
+    decision has been made.
   - The brief for Codex's check-writing session:
     `experiments/03c-checker/trial/CHECKS-BRIEF.md`. That session writes the
     checks but does not run the comparison.
@@ -161,10 +171,13 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   record more (D98: the snapshots also show a finishing `match` branch's value,
   and a snapshot is taken as each chosen branch starts; nothing a run does
   changes), which amends `INTERFACE.md` section 6 (its fingerprint in `LOCK.md`
-  is updated, the old one kept). Next in this step: the worker makes the change
-  in `Trial/Counted.lean` (`WORKER-BRIEF.md`, part 3); the lead checks it and
-  the oracle reviews it; then the check-writing session finishes its checks,
-  the oracle reviews them, and the lead commits them exactly as written.
+  is updated, the old one kept). The worker made the change in
+  `Trial/Counted.lean` (`WORKER-BRIEF.md`, part 3); the lead checked that runs
+  are otherwise unchanged and that the recorded values are right, on its own
+  programs, with four broken copies of the change caught
+  (`experiments/03c-checker/trial/lead-checks/D98/`), and the oracle reviewed
+  it. Next in this step: the check-writing session finishes its checks, the
+  oracle reviews them, and the lead commits them exactly as written.
 - **Next.** Finish step 1: after the worker's change is checked and reviewed,
   the existing check-writing session (`checker-w4-t1`) resumes and closes both
   gaps; the oracle reviews its files, and the lead commits them exactly as
