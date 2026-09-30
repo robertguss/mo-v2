@@ -98,26 +98,44 @@ Robert's choice; 2d follows from a promise already in the plan.
     comparison a use of a list and so a memory event. Not proposed: it adds a
     kind of list use the trial does not need.
 - **2c. True and false.** They come only from comparisons, can be named with
-  `let`, and are used as `if` conditions. Proposal: **a program's answer is a
-  number or a list**, never true or false. Options:
-  - number or list (the proposal): adds one line to the plan's definition of a
+  `let`, and are used as `if` conditions. **Decided (D82, 30 Sep 2026, by the lead and Codex under
+  Robert's delegation, D81): a program's answer may be a number, a list, or true
+  or false.** Nothing else is added: no written true or false, no logical
+  operators, no true-or-false inputs and no lists of them. Working out a
+  true-or-false answer can still reuse or free cells, like any other part of a
+  program; section 7 says how the run ends. The lead first proposed number or
+  list only; Codex argued that the language already works out and names these
+  values, so forbidding them as an answer adds a special restriction without
+  removing anything, and the lead agreed. The options were:
+  - number or list (the lead's first proposal): adds one line to the plan's definition of a
     well-formed program. This restriction is specific to the trial, to keep it
     small; the lead knows of no real language that forbids a true-or-false
     result;
-  - any kind, true or false included, as in general-purpose languages (Ruby,
-    Python, Rust, Haskell): the language is slightly bigger, and nothing about
-    memory changes.
+  - any kind, true or false included (the one chosen), as in general-purpose
+    languages (Ruby, Python, Rust, Haskell): the language is slightly bigger,
+    and a true-or-false answer itself holds no cell.
 - **2d. Every `match` has exactly one empty-list branch and one cell branch.**
   This is not a new choice: the plan promises that a well-formed program never
   gets stuck, and a `match` with a missing branch would get stuck on the list it
   does not cover. (Real languages differ: Rust refuses a `match` that misses a
   case; OCaml and Haskell only warn and fail when the case happens.)
-- **2e. Names that reuse a spelling.** Proposal: allowed. A use of a name refers
+- **2e. Names that reuse a spelling.** **Decided (D83, 30 Sep 2026, by the lead
+  and Codex under Robert's delegation, D81):** allowed. A use of a name refers
   to its nearest enclosing binding, and an inner `let` or `match` may reuse a
   spelling, which then hides the outer one (Rust, OCaml, Elixir, Haskell allow
   this). The alternative is to refuse it, as Java does for local names inside
-  one method, which adds a rule to "well-formed". Either way, in this rule "a
-  name" always means one binding, never a spelling.
+  one method, which adds a rule to "well-formed". In this rule "a
+  name" always means one binding, never a spelling: two names spelled alike are
+  two different names. Two consequences (Codex's additions):
+  - A new name begins after its starting value is worked out. In
+    `let x = e1 in e2`, a use of `x` inside `e1` refers to the outer `x`; the
+    new `x` exists only in `e2`. Likewise the names a `match` branch introduces
+    exist only in that branch.
+  - Hiding a name neither gives up its holder nor keeps it. The outer name is
+    given up right after its own last use, as always: if it is used again after
+    the inner name's part of the program ends, it keeps its holder until then;
+    if it is not, it was already given up, and uses of the inner name do not
+    delay that.
 
 ## 3. What a counted run keeps track of
 
@@ -379,8 +397,8 @@ surrounding computation will still build inside the branch.
   set-aside cells freed). Nothing else is released after that.
 - **The answer:** if it is a cell, its one holder is handed to the caller and
   not given up; the cell and everything it links to stay allocated. If it is a
-  number or the empty list, the value is returned, and no cell holder is handed
-  on.
+  number, true or false, or the empty list, the value is returned, and no cell
+  holder is handed on.
 - **Outside holders** keep their holders throughout; the lists they keep stay
   allocated.
 - What the caller later does with the answer is outside the run.
@@ -483,8 +501,10 @@ In order, one at a time; each is a proposal with a recommendation:
 1. Whole numbers: unlimited, and may be negative (2a). **Decided: yes (D79).**
 2. Comparisons: `==`, `<` and `<=`, on numbers only (2b). **Decided: yes
    (D80).**
-3. A program's answer is a number or a list (2c).
-4. Names may reuse a spelling, and then hide the outer one (2e).
+3. A program's answer is a number or a list (2c). **Decided otherwise: true or
+   false is also allowed (D82, by the lead and Codex under D81).**
+4. Names may reuse a spelling, and then hide the outer one (2e). **Decided: yes
+   (D83, by the lead and Codex under D81).**
 5. The order in which parts run: left to right (6a).
 6. Inside a `match`: names no longer needed are given up before the cell is
    checked for sharing (6b).
