@@ -166,9 +166,9 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   under its brief's condition 2: the snapshots could not show the number a
   `match` branch works out as it finishes (runs 10 and 11), nor that run 11's
   unneeded list was given up before its branch ran. The oracle confirmed both
-  gaps and, in a bounded look at coverage, found no others; its full review of
-  the check files is still to come. The stop report quoted two predicted values, so the
-  lead has now seen those two, nothing else of the predictions. Robert chose to
+  gaps and, in a bounded look at coverage, found no others (its full review
+  came later, below). The stop report quoted two predicted values, so the lead
+  then saw those two, nothing else of the predictions. Robert chose to
   record more (D98: the snapshots also show a finishing `match` branch's value,
   and a snapshot is taken as each chosen branch starts; nothing a run does
   changes), which amends `INTERFACE.md` section 6 (its fingerprint in `LOCK.md`
@@ -180,26 +180,29 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   it. The check-writing session then finished its checks, closing both gaps
   (the values at every finishing moment on runs 10 and 11; run 11's list given
   up and its cells freed by the moment its branch starts):
-  `experiments/03c-checker/trial/lean/Checks.lean` and `lean/Checks/`. They
-  go in the repository exactly as written, once the oracle signs them off.
-  `main` has not been run. Its final report in its pane printed a table of predicted
-  answers and totals for most runs, so the lead has now seen those predictions
-  (the worker has not); the precaution of keeping them from the lead no longer
-  holds for the lead. The encoding was committed before, and nothing is tuned
-  to them.
-- **Next.** Finish step 1: the check files are committed exactly as written
-  once the oracle signs them off (any finding goes back to the check-writing
-  session, `checker-w4-t1`, to fix in its own files). Then plan step 4, the run, for the oracle's review, with Robert able
-  to watch: the lead runs `main` (`lake env lean --run Checks/Run.lean` in the
-  `lean/` folder), including the misreport control on run 2. Every mismatch is
-  kept, classified (a wrong prediction, a wrong encoding, or a fault in the
-  rule) and taken to Robert; nothing changes without his decision. This
-  session's chunk, agreed with the oracle, ends there: after the run's output is
-  kept, the mismatches are classified and Robert's questions about them are
-  put. Any repair, and step 5 (the promises as Lean statements, `ACCEPTANCE.md`
-  and the proof builder's brief, Codex's bounded question, Robert's approval
-  and the lock), start in a fresh session; then step 6, Robert decides whether
-  the proof phase starts. Nothing is waiting on Robert now.
+  `experiments/03c-checker/trial/lean/Checks.lean` and `lean/Checks/`. Its
+  final report in its pane printed a table of predicted answers and totals for
+  most runs, so from then on the lead had seen those predictions (the worker has
+  not). No encoding was changed after that. The oracle's full review found one
+  more gap (the final holder count ignored names still holding), which the
+  session fixed in its own file; after the oracle's sign-off the lead committed
+  the four files exactly as written (`774c58f`).
+- **Step 4, the run, done (30 Sep).** Planned and signed off by Codex as
+  oracle. The lead ran `main` in a visible shell pane at `774c58f`: all
+  twenty-eight runs matched the frozen predictions (438 report items, no
+  mismatch), answers, totals from memory's own record and every timing claim on
+  runs 9 to 11; both promise checks held on every run; the misreport control
+  was rejected on its counts with the right answer. A second run gave the same
+  output byte for byte. Record: `experiments/03c-checker/trial/RUN-1.md`;
+  output: `experiments/03c-checker/trial/results/run-1.txt`. Nothing to
+  classify, so no mismatch question for Robert. The two finished panes (the
+  check-writing session and the shell the run used) were closed at Robert's
+  request; nothing depends on them.
+- **Next (proposed; it opens with a plan for the oracle's review).** Step 5, in
+  a fresh session: the promises as Lean statements, `ACCEPTANCE.md` and the
+  proof builder's brief, Codex's bounded question, Robert's approval and the
+  lock; then step 6, Robert decides whether the proof phase starts. Nothing is
+  waiting on Robert now.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
