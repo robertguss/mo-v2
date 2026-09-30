@@ -177,12 +177,19 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   are otherwise unchanged and that the recorded values are right, on its own
   programs, with four broken copies of the change caught
   (`experiments/03c-checker/trial/lead-checks/D98/`), and the oracle reviewed
-  it. Next in this step: the check-writing session finishes its checks, the
-  oracle reviews them, and the lead commits them exactly as written.
-- **Next.** Finish step 1: after the worker's change is checked and reviewed,
-  the existing check-writing session (`checker-w4-t1`) resumes and closes both
-  gaps; the oracle reviews its files, and the lead commits them exactly as
-  written. Then plan step 4, the run, for the oracle's review, with Robert able
+  it. The check-writing session then finished its checks, closing both gaps
+  (the values at every finishing moment on runs 10 and 11; run 11's list given
+  up and its cells freed by the moment its branch starts):
+  `experiments/03c-checker/trial/lean/Checks.lean` and `lean/Checks/`. They
+  go in the repository exactly as written, once the oracle signs them off.
+  `main` has not been run. Its final report in its pane printed a table of predicted
+  answers and totals for most runs, so the lead has now seen those predictions
+  (the worker has not); the precaution of keeping them from the lead no longer
+  holds for the lead. The encoding was committed before, and nothing is tuned
+  to them.
+- **Next.** Finish step 1: the check files are committed exactly as written
+  once the oracle signs them off (any finding goes back to the check-writing
+  session, `checker-w4-t1`, to fix in its own files). Then plan step 4, the run, for the oracle's review, with Robert able
   to watch: the lead runs `main` (`lake env lean --run Checks/Run.lean` in the
   `lean/` folder), including the misreport control on run 2. Every mismatch is
   kept, classified (a wrong prediction, a wrong encoding, or a fault in the
