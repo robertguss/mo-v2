@@ -17,14 +17,14 @@ only the implementation. You write no checks: the frozen predictions are the
 acceptance criteria, a separate Codex session writes the Lean file that runs
 them, and the lead verifies your work on its own.
 
-The work comes in three parts. Start a part only when the lead prompts you to,
+The work comes in two parts (first planned as three; parts 2 and 3 were merged
+before part 2 started, see "Part 2 in detail"). Start a part only when the lead prompts you to,
 and stop at the end of each part.
 
 | Part | Files                                                       | Contains                                                                                                                                                        |
 | ---- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1    | the Lake project; `Trial/Language.lean`; `Trial/Plain.lean` | The shape of programs and the check that a program is well-formed; the plain meaning                                                                            |
-| 2    | `Trial/Memory.lean`; `Trial/Counted.lean`                   | Counted memory, its own record of what it did, starting memories and the check that one is valid, reading a list back; the counted meaning of the approved rule |
-| 3    | `Trial/Broken.lean`                                         | The five broken copies and the six named choices of rule                                                                                                        |
+| 2    | `Trial/Memory.lean`; `Trial/Counted.lean`; `Trial/Broken.lean` | Counted memory, its own record of what it did, starting memories and the check that one is valid, reading a list back; the counted meaning of the approved rule; the five broken copies and the six named choices of rule |
 
 ## Read these as the source of truth
 
@@ -117,9 +117,8 @@ what is proven being what ran. So:
   be readable on its own, and each broken copy must differ from it at one named
   place. There must be no import cycle, and at no time may a named choice of
   rule have made-up or placeholder behaviour. How this is arranged in the files
-  is fixed in part 2's plan, before part 2 starts; the lead will tell you.
-  Exactly where each broken copy departs from the rule is fixed the same way
-  before part 3.
+  is fixed in "Part 2 in detail" below, with exactly where each broken copy
+  departs from the rule.
 - Comments say what a definition means in the words of `RULE.md`, with the
   section number, so that a reader can set the two side by side.
 
@@ -313,7 +312,127 @@ Memory V1.
   13, and A is freed when the branch finishes. Answer `13`. Totals: 0
   allocations, 0 reuses, 2 frees, B before A. No cell is left.
 
-### Smoke table, part 3
+### Smoke rows for the broken copies
 
-Written by the lead and reviewed by the oracle before part 3 starts, once
-exactly where each broken copy departs from the rule is fixed.
+`INTERFACE.md` section 7 says when each copy is run. The misreport control runs
+in phase 1; the three unsafe copies and the copy that never reuses run only
+after the proof. So the lead runs K1 and K6 after part 2, and K2 to K5 are
+recorded here now and run only after the proof.
+
+| #   | Copy | Program and memory | Expected | When |
+| --- | ---- | ------------------ | -------- | ---- |
+| K1  | misreports reuse | S1's program, memory V1 | answer `[8, 9]`; the rule's log holds exactly one reuse and nothing else; memory's record holds one release, of A, and one creation, and no write in place | after part 2 |
+| K2  | reuses a shared cell | S2's program, memory V2 | the outside holder's list reads `[4, 9]` at the start and `[8, 9]` in a later snapshot: a list someone else can see has changed (promise (c)) | after the proof |
+| K3  | forgets the rest | program `12345` with the single input `xs`, memory V1 | `xs` is never used, so it is given up at the start and A is freed; B is then never given up, and at the end B is still allocated with count 1 and no actual holder (promise (d)) | after the proof |
+| K4  | frees a held cell | S2's program, memory V2 | A is freed while the outside holder still holds it, and in a later snapshot the outside holder's list cannot be read (promise (c)) | after the proof |
+| K5  | never reuses | S1's program, memory V1 | answer `[8, 9]`; memory's record holds one creation and one release, of A, and no write in place: 1 allocation, 0 reuses, 1 free | after the proof |
+| K6  | the approved rule | any program and memory | `runCounted` with the approved rule is the same function as the counted meaning with no departure switched on, shown by Lean for all programs and memories (`rfl`), and on S1 to S5 gives what those rows expect | after part 2 |
+
+## Part 2 in detail
+
+Fixed by the lead's plan for part 2, reviewed by Codex as oracle, before part 2
+started.
+
+### How the six rules are arranged
+
+- `Trial/Counted.lean` defines a `Variant`: five true-or-false switches, one per
+  departure below, and `Variant.approved`, with all five off. The counted
+  meaning is `runCountedWith : Variant → Expr → Start → Outcome`. Each switch is
+  read at exactly one place, written as "if the switch is on, the departure;
+  otherwise the rule's own step", with a comment naming the `RULE.md` section
+  of the rule's step.
+- `Trial/Broken.lean` imports `Counted` and defines the public `Rule` with the
+  six values of `INTERFACE.md` section 7; `Rule.variant`, which maps
+  `.approved` to `Variant.approved` and each broken copy to the variant with
+  exactly its own switch on; and
+  `runCounted : Rule → Expr → Start → Outcome`, which is `runCountedWith` of
+  that variant. The checks and the promises are stated about `Rule`, not about
+  arbitrary combinations of switches.
+- Imports: `Language` → `Plain`; `Language` → `Memory` → `Counted` → `Broken`;
+  `Trial.lean` imports all five.
+
+### The five departures, exactly
+
+1. **Misreports reuse** (`.misreportsReuse`, the phase-1 control). Where the
+   rule reuses a set-aside cell for a new cell (`RULE.md` 5, "Reusing"; 6e),
+   this copy instead releases the set-aside cell (a real release in memory's
+   record) and creates a fresh cell with the new item and link (a real
+   creation). The rule's log records one reuse, of the fresh cell's address,
+   and nothing else. The answer is unchanged.
+2. **Reuses a shared cell** (`.reusesShared`). In the match's step 4
+   (`RULE.md` 6b), the cell is set aside whenever the cell branch is taken, even
+   when the match's holder is not the only one: its status becomes set aside
+   with count 0, and its rest's holder moves to `t`, as in `RULE.md` 5. Other
+   holders still point at it.
+3. **Forgets the rest** (`.forgetsRest`). When a cell's count reaches zero and
+   it is freed (`RULE.md` 5, "Freeing"), its link's holder on the rest is not
+   given up.
+4. **Frees a held cell** (`.freesHeld`). When a holder is given up (`RULE.md`
+   4), the cell is freed (logged as a free, and its link given up in turn)
+   even if its count after the decrease is above zero.
+5. **Never reuses** (`.neverReuses`). In the match's step 4 the cell is never
+   set aside: it always takes the path for a cell someone else holds (a used
+   `t` gets a new holder on the rest, then the match's holder is given up,
+   which frees the cell if that was its last holder).
+
+### Shapes
+
+- **Addresses** are `Nat`. A list is `Option` of an address: none is the empty
+  list. Fresh addresses come from a counter that starts above every address in
+  the starting memory and only increases, so a freed address is never handed
+  out again.
+- **Memory** holds the cells, the counter and memory's own record. Only the
+  three memory operations (create, write in place, release) add to the record.
+  The rule's log is a separate part of the run's state, added to only by the
+  rule.
+- **`Start`**: the cells (address, item, link, count), the inputs in order (a
+  name with a number, the empty list or an address), and the outside holders
+  (the empty list or an address). **`validStart`** checks: the program is
+  well-formed for the kinds the inputs have (so an input of the wrong kind is
+  refused, with the reason); no two cells share an address; nothing dangles; no
+  cycles; every cell is reachable from an input or an outside holder; every
+  count equals the number of holders the cell actually has. The walks for
+  cycles and reachability are bounded by the number of cells, with the reason
+  in a comment.
+- **The counted meaning** is a big-step evaluator, by structural recursion on
+  `Expr`. It carries, as plain data, the program text still to run after the
+  current expression: a list of frames, each with the environment it will run
+  in. That is what "last use" is judged from (`RULE.md` 4: "anywhere in the
+  program text still to run, counting the rest of the surrounding
+  computation"). A binding is used again if some free use of its spelling in
+  the text still to run refers to that binding, not merely to a binding with
+  the same spelling. Two details:
+  - A frame waiting to run a `let` body must account for the name that body
+    will bind: while `e1` of `let x = e1 in e2` runs, a use of `x` in `e2`
+    refers to the new `x`, not to an outer one. In `let xs = xs in xs`, the
+    use of `xs` in `e1` is the outer binding's last use.
+  - Environments in frames refer to bindings by id; they hold nothing. Only the
+    binding itself holds its holder, until that holder moves or is given up.
+    Copying an environment into a frame never adds a holder.
+- **Bindings** each carry a unique id, so that two bindings of one spelling are
+  distinct in snapshots (D83), and a snapshot shows, for each binding, whether
+  it still holds its holder or has given it up or passed it on.
+- **Cascading frees** are bounded by the number of allocated cells (each round
+  frees one), with the reason in a comment. Hitting the bound is a failure while
+  running, never a default.
+- **Set-aside cells** are a stack, each labelled with the id of the `match`
+  branch it belongs to. A new cell takes the top one (the most recently set
+  aside, `RULE.md` 6e). Since branches nest, every cell on the stack belongs to
+  a running branch that encloses the build (6f); the code checks this, and a
+  cell of a finished branch on the stack is a failure while running.
+- **`Outcome`** as `INTERFACE.md` section 5: the result (an answer's raw value,
+  refused before running, or failed while running with the operation that
+  failed), the final memory, the log, memory's record and the snapshots.
+  **`readBack`** follows links from an address, bounded by the number of cells;
+  a missing cell, a set-aside cell or a cycle makes the list unreadable, with
+  the reason.
+- **Snapshots** (`INTERFACE.md` section 6) are taken after every event, each
+  tagged with its kind. The kinds include at least: the start (after unused
+  inputs are given up); a branch has just been chosen; the match's step 4 done;
+  a new cell built; a holder given up; a cell freed; and, for each `match`
+  branch, "the branch's value is worked out" (before its unused set-aside cells
+  are freed), a snapshot after each of those frees, and "the branch's value is
+  handed on" (after them). Each snapshot has the memory, the bindings in scope
+  with their ids, values and whether they still hold a holder, the intermediate
+  results with what they hold, the outside holders, the set-aside cells with
+  their branch ids, and the kind of step.
