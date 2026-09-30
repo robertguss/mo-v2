@@ -110,13 +110,20 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   trial plan): each example's answer and three totals, plus what is expected at
   named moments of chosen runs, starting with D90 (an unused set-aside cell is
   freed when its branch finishes) on runs 9 to 11.
-- **Next: the plan's step 2, in a new session.** Codex writes the predictions
-  from `RULE.md` and `EXAMPLES.md` in its own visible Herdr pane, a session
-  separate from the read-only oracle, before any Lean exists; it may add
-  examples. Robert approves the predictions and they are frozen, with
-  fingerprints, before anything is encoded. The phase-1 step 1 documents are
-  all approved, so nothing is waiting on Robert now. The remaining steps and
-  gates are in the plan ("How the trial runs").
+- **The predictions are written, 30 Sep**, and wait for Robert's approval:
+  `experiments/03c-checker/trial/PREDICTIONS.md`, by a fresh Codex session in
+  its own visible pane (not the oracle), following
+  `experiments/03c-checker/trial/PREDICTIONS-BRIEF.md`. It stopped as "done":
+  an answer and three totals for each of the twenty-eight runs, a plain-English
+  derivation for each, timing claims on runs 9 to 11, no added examples, and no
+  case the rule failed to decide. The lead committed it exactly as written and
+  has not edited it.
+- **Next: one question for Robert: does he approve the predictions?** If yes,
+  they are frozen with fingerprints. Then the plan's step 3: the lead writes
+  the language and both meanings in Lean, and Codex, in its own visible pane
+  again, writes the Lean file that checks the runs against the frozen
+  predictions. The remaining steps and gates are in the plan ("How the trial
+  runs").
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
@@ -132,7 +139,7 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   it reviewed every recorded choice, his and the delegated ones, before its
   commit. Robert's standing instruction
   (30 Sep): commit and push often without asking, after each oracle sign-off
-  (`CLAUDE.md`, Practical notes). This handoff was written against `3b8a796`
+  (`CLAUDE.md`, Practical notes). This handoff was written against `63a6456`
   (`main`, reviewed and pushed); a new session checks `git status`, the latest
   commit and the remote before starting. Outside a pinned project,
   `lean` now resolves to 4.34.1 (elan's default); the experiments pin 4.34.0.
