@@ -213,9 +213,10 @@ and Codex each run them and write their findings before seeing the other's
    changes how Lean reads later text (`notation`, `macro`, `macro_rules`,
    `syntax`, `elab`, `infix`, `prefix`, `postfix`); attributes added to a locked
    definition; `export` or `open ... renaming` into `Trial`; `set_option` except
-   inside a single proof, and `debug.skipKernelTC` anywhere. The lead and Codex
-   also read the builder's files for anything else that could change what the
-   locked statements mean, beyond this list.
+   for one declaration or one tactic, written with `in`, and
+   `debug.skipKernelTC` anywhere. The lead and Codex also read the builder's
+   files for anything else that could change what the locked statements mean,
+   beyond this list.
 4. **A clean rebuild.** In a fresh copy with no reused build files,
    `lake build Trial Checks Promises Proofs Acceptance` succeeds with no errors
    and no warnings.
