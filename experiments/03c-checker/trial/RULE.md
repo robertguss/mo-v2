@@ -1,12 +1,14 @@
 # The trial's reuse rule, with its fine details
 
-**Status: draft, 27 Sep 2026, for Robert's approval.** Written by the lead for
-the trial's phase 1, step 1 (`PLAN.md`, "How the trial runs"). The base rule in
-section 1 is already approved (D74: one fixed reuse-and-release rule decides
-where cells are reused and released; D78: the trial plan is approved). Every
-other section is a **proposed clarification; Robert's choice**, unless it is
-marked decided. Nothing here is decided until he decides it, one question at a
-time.
+**Status: approved, 30 Sep 2026 (D91: the rule is approved as a whole).** Written
+by the lead for the trial's phase 1, step 1 (`PLAN.md`, "How the trial runs").
+The base rule in section 1 was approved earlier (D74: one fixed
+reuse-and-release rule decides where cells are reused and released; D78: the
+trial plan is approved). Each fine detail was decided one question at a time and
+is marked with its decision: D79, D80, D84 to D88 and D90 by Robert; D82, D83
+and D89, about the trial language itself, by the lead and Codex under his
+delegation (D81). The options considered are kept for the record. Approval does
+not mean the rule is proven correct; that is the trial's phase 2.
 
 Why this document matters: in step 2, Codex writes the predictions (each
 example's answer and its numbers of allocations, reuses and frees) from this
@@ -230,8 +232,8 @@ cell is separated from its former contents before it is reused.
 
 ## 6. The order of events
 
-Each detail below is a separate choice for Robert, with the options and one
-recommendation.
+Each detail below was a separate choice for Robert, and is shown with the options
+he was given.
 
 ### 6a. The order in which parts of a program run
 
@@ -319,7 +321,7 @@ The options were:
   This is "right after its last use" read exactly, since the last use is behind
   the program once the other branch is chosen.
 - **At the end of that branch.** Keeps memory longer, and can stop a reuse
-  inside the branch that the proposal would allow.
+  inside the branch that the chosen option allows.
 - **After the whole `if`.** The same, for longer (in this small language,
   possibly the same moment as the previous option; Codex's note).
 - **At the end of the name's scope** (the end of the `let` or `match` branch
@@ -519,10 +521,10 @@ rule rather than to the program:
 
 ## 10. Check: one transition for every operation
 
-Every operation and boundary, with its one proposed transition. If any row could
-be read two ways, the rule is not ready.
+Every operation and boundary, with its one transition. If any row could be read
+two ways, the rule is not ready.
 
-| Operation or boundary                     | Transition (proposed)                                                                                                                                                                                                                                                                                                                                                                                                                           | Section |
+| Operation or boundary                     | Transition                                                                                                                                                                                                                                                                                                                                                                                                                                      | Section |
 | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Start                                     | Inputs hold their given holders; inputs never used are given up, in input order                                                                                                                                                                                                                                                                                                                                                                 | 7       |
 | Use of a list name, last use              | Holder moves to the user                                                                                                                                                                                                                                                                                                                                                                                                                        | 4       |
@@ -542,7 +544,8 @@ be read two ways, the rule is not ready.
 
 ## Questions for Robert
 
-In order, one at a time; each is a proposal with a recommendation:
+Asked in order, one at a time, each as a proposal with a recommendation. All are
+now answered:
 
 1. Whole numbers: unlimited, and may be negative (2a). **Decided: yes (D79).**
 2. Comparisons: `==`, `<` and `<=`, on numbers only (2b). **Decided: yes
@@ -564,4 +567,4 @@ In order, one at a time; each is a proposal with a recommendation:
     yes (D90).**
 11. Approve the rule as a whole: what a run keeps track of, who holds what and
     when a holder moves, setting aside, reusing and freeing (sections 3 to 5),
-    and where a run starts and ends (7).
+    and where a run starts and ends (7). **Decided: approved (D91).**

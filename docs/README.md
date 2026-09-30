@@ -27,7 +27,7 @@ without a decision in `DECISIONS.md`.
 Where things stand. Updated by the lead session whenever it changes; a new
 session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
 
-**27 Sep 2026.**
+**30 Sep 2026.**
 
 - **Design choices.** The nine big choices are made (D24–D33): a static checker
   with contracts and proof on top; no guessing; pure code with in-place updates
@@ -83,16 +83,31 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   2-hour check-ins and resumes only on Robert's go-ahead (D77). The 27 Sep
   session wrote and revised the plan in five steps, each reviewed and signed
   off by Codex as oracle. Documents only: nothing has been built or run.
-- **Next: the trial's phase 1, step 1** (proposed; the next session opens it
-  with a bounded step plan for the oracle's review). The lead prepares, for
-  Robert's approval, the plain-English rule with its fine details (the order
-  in which the parts of a program run; which set-aside cell a new cell takes
-  when several are available; when an unused one is freed; how a name used in
-  only one branch is given up), the example programs and starting memories,
-  and the interface the checks will use. Then step 2, only after Robert
-  approves the rule and the examples: Codex writes the predictions in its own
-  visible Herdr pane, a session separate from the read-only oracle. The
-  remaining steps and gates are in the plan ("How the trial runs").
+- **The trial's rule, 30 Sep.** `experiments/03c-checker/trial/RULE.md` is
+  approved as a whole (D91), after its eleven questions were settled one at a
+  time with Codex's view beside the lead's on each: nine by Robert, two by the
+  lead and Codex under his delegation. Robert's choices: unlimited
+  whole numbers (D79); three number comparisons (D80); parts run left to right
+  (D84); in a `match`, unneeded names are given up before the sharing check
+  (D85); a name unused from a chosen branch on is given up when the branch is
+  chosen (D86); a new cell picks its set-aside cell after its parts are worked
+  out (D87), taking the most recently set aside from enclosing branches still
+  running (D88); an unused set-aside cell is freed when its branch finishes
+  (D90). He delegated the questions about the trial language itself to the lead
+  and Codex jointly (D81); under that they allowed a true-or-false answer
+  (D82), names that reuse a spelling (D83), and closed two gaps Codex found
+  (D89: a `match`'s two names must be spelled differently, and both branches
+  must give the same kind of value). Approval fixes the English text the predictions must follow; nothing is
+  proven, built or run yet.
+- **Next: the rest of the trial's phase 1, step 1** (proposed; it opens with a
+  bounded step plan for the oracle's review). The lead writes, for Robert's
+  approval, the example programs with their starting memories
+  (`EXAMPLES.md`, which `RULE.md` already refers to and which does not exist
+  yet; no answers or counts in it, those are Codex's predictions) and the
+  interface the checks will use. Then step 2, only after Robert approves the
+  examples: Codex writes the predictions in its own visible Herdr pane, a
+  session separate from the read-only oracle. The remaining steps and gates are
+  in the plan ("How the trial runs").
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
@@ -103,9 +118,13 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   as a read-only oracle (the `driver` and `oracle` skills): each step's plan
   and diff were reviewed and signed off before its commit. This Status section
   is the handoff between sessions; there is no `HANDOFF.md` (see `CLAUDE.md`).
-  Robert authorised committing and pushing after each oracle sign-off for that
-  session only; a new session asks him again. This handoff was written against
-  `cbe26a3` (`main`, reviewed and pushed); a new session checks `git status`,
-  the latest commit and the remote before starting. Outside a pinned project,
+  On 30 Sep the same pair settled the rule's questions: for each one put to
+  Robert, Codex gave its own view in its pane before the lead asked him, and
+  it reviewed every recorded choice, his and the delegated ones, before its
+  commit. Robert's standing instruction
+  (30 Sep): commit and push often without asking, after each oracle sign-off
+  (`CLAUDE.md`, Practical notes). This handoff was written against `2d8c42d`
+  (`main`, reviewed and pushed); a new session checks `git status`, the latest
+  commit and the remote before starting. Outside a pinned project,
   `lean` now resolves to 4.34.1 (elan's default); the experiments pin 4.34.0.
 - **Parked:** see `research/parking-lot/README.md`.
