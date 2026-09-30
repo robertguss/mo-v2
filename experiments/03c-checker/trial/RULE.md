@@ -244,7 +244,7 @@ part builds first decides which cell it gets.
 
 ### 6b. The order inside a `match`
 
-**Proposal**, in this order:
+**Decided (D85, 30 Sep 2026)**, in this order:
 
 1. Work out the matched list. Like every list an expression produces (section
    4), it comes with one holder, **the match's holder**, which the `match`
@@ -279,12 +279,16 @@ branch not taken.
 
 | Order                        | At the check, the cell's count is | So the cell is                                   | The branch's first new cell is (no other set-aside cell available) |
 | ---------------------------- | --------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------ |
-| Proposed: give up `ys` first | 1                                 | set aside                                        | a reuse                                                            |
+| Chosen: give up `ys` first   | 1                                 | set aside                                        | a reuse                                                            |
 | Alternative: check first     | 2                                 | not set aside; `ys` is then given up, freeing it | a free plus a new allocation                                       |
 
-Both orders are safe. The proposal reuses more, and it follows the rule's own
-wording: `ys`'s last use is already behind the program, so it is given up before
-the cell is looked at.
+By the lead's reasoning both orders are safe; that is not yet proven, and the
+trial's proof must show that giving up those names cannot destroy anything still
+needed (Codex's caution). The chosen order reuses more, and it follows the
+rule's own wording: `ys`'s last use is already behind the program, so it is
+given up before the cell is looked at. A third option, checking, giving up and
+then checking again, gives the same result with an extra check (Codex's
+addition).
 
 ### 6c. A name used in only one branch of an `if` (flag: the plan's fourth fine detail)
 
@@ -513,7 +517,7 @@ In order, one at a time; each is a proposal with a recommendation:
    (D83, by the lead and Codex under D81).**
 5. The order in which parts run: left to right (6a). **Decided: yes (D84).**
 6. Inside a `match`: names no longer needed are given up before the cell is
-   checked for sharing (6b).
+   checked for sharing (6b). **Decided: yes (D85).**
 7. A name used in only one branch is given up as soon as the branch is chosen
    (6c).
 8. A new cell picks its set-aside cell after its parts are worked out (6d).
