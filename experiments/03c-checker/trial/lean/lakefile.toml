@@ -1,0 +1,8 @@
+name = "trial"
+defaultTargets = ["Trial"]
+
+[[lean_lib]]
+name = "Trial"
+
+[[lean_lib]]
+name = "Checks"
