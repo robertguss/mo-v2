@@ -28,11 +28,21 @@ before any run is compared with the predictions.
 | File | SHA-256 |
 | --- | --- |
 | `PREDICTIONS.md` | `f4ad4897030fc558b100ace0f65163fe36234833e4300925ebc97d66310c7658` |
-| `RULE.md` | `07e3c4adfcea2d57830c2f678f8135936f8bc36f038744b867e6fe3b2aacd75d` |
+| `RULE.md` | `ea918fb4899b7f540fc42743831b824b8fadad45b1d95b4a2b4faa9079926d40` (changed by D97; see below) |
 | `EXAMPLES.md` | `2052d414d621549691913badc90025085a5888bc1cd505b7d0bb26ac87d85f54` |
 | `INTERFACE.md` | `17d658fc1a18e7d547f4817add7e30ad25920eee7c7ad6f4428962263f2e88da` |
 | `PLAN.md` | `3f110af9f3798662921ecae44d8d9c934339cf51d53209cebd12096c892e76f3` |
 | `PREDICTIONS-BRIEF.md` | `1413d036c8b361b644cbd715f7c45dc17cf7b1dfb4e42c9047e5d54d9a4c656c` |
+
+## Changed on 30 Sep 2026: `RULE.md`, by D97
+
+Robert decided that a program's inputs must all be spelled differently (D97),
+closing a gap Codex found after the rule was approved. One paragraph was added to
+`RULE.md`, section 2e. The predictions were written from the earlier text, whose
+fingerprint was
+`07e3c4adfcea2d57830c2f678f8135936f8bc36f038744b867e6fe3b2aacd75d`. No approved
+example has two inputs with one spelling, so no prediction depends on the
+change.
 
 ## Still to come
 

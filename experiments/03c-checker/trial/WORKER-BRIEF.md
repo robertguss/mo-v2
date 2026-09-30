@@ -188,6 +188,9 @@ given with their kinds.
 | W11 | `[1 \| 2]`                                   | none             | refused                    | 2        |
 | W12 | `if n then 1 else 2 end`                     | `n` a number     | refused                    | 2        |
 | W13 | `match n do [] -> 0; [h \| t] -> h end`      | `n` a number     | refused                    | 2        |
+| W14 | `x + 1` | `x` a number, and a second `x` a list | refused (two inputs with one spelling) | 2e (D97) |
+| W15 | `let b = 1 < 2 in if b then 7 else 8 end` | none | well-formed, a number | 2c (D82) |
+| W16 | `1` | `b` true or false | refused (no true-or-false inputs) | 2c (D82) |
 
 A `match` with a missing branch (2d) cannot be written down at all if `Expr`
 gives every `match` both branches; if your `Expr` allows one, `wellFormed` must
@@ -203,7 +206,8 @@ Plain meaning (`INTERFACE.md` section 4).
 | B4  | `n <= m`; `n < m`; `n == m`                  | `n = 3`, `m = 3`         | true; false; true         | 2b (D80) |
 | B5  | `match xs do [] -> 0; [h \| t] -> h + h end` | `xs = []`; then `[7, 8]` | `0`; then `14`            | 2        |
 | B6  | `[n + n \| [n \| xs]]`                       | `n = 2`, `xs = [5]`      | `[4, 2, 5]`               | 2        |
-| B7  | W5 to W13                                    | any                      | no answer: a stated error | 4        |
+| B7  | W5 to W14, W16                                    | any                      | no answer: a stated error | 4        |
+| B8 | W15 | none | `7` | 2c (D82) |
 
 ### Smoke table, part 2
 

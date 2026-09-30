@@ -146,6 +146,11 @@ choices; 2c, 2e and 2f were made by the lead and Codex under his delegation
   the rest, must be spelled differently. `[x | x] -> ...` is not well-formed,
   because neither `x` would be the nearer one.
 
+  Likewise for inputs (D97, 30 Sep 2026, Robert's decision on a gap Codex found
+  after the rule was approved): a program's inputs must all be spelled
+  differently. A program given two inputs with one spelling is not well-formed.
+  Reusing a spelling inside the program stays allowed, as above.
+
 - **2f. Both branches give the same kind of value.** Decided (D89, as above;
   also a gap Codex found): the two branches of an `if`, and the two branches of
   a `match`, must both give a number, both give a list, or both give true or
