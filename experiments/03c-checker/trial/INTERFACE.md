@@ -195,11 +195,13 @@ only in when something happens. The case in point is D90 (an unused set-aside
 cell is freed when its branch finishes) against the one alternative `RULE.md` 6g
 compares it with, freeing as soon as the rest of the branch builds no cell. By
 the lead's reasoning, not yet checked, those two give the same totals; if so,
-totals alone cannot tell them apart (`EXAMPLES.md`, "One limit"). The approved
-plan's predictions are each example's "expected answer and expected numbers of
-allocations, reuses and frees": nothing about order. Making any prediction about
-order would widen the approved plan, so it is **not decided here**. It is the
-second question for Robert at the end.
+totals alone cannot tell them apart (`EXAMPLES.md`, "One limit"). As first
+approved, the plan's predictions were each example's "expected answer and
+expected numbers of allocations, reuses and frees", with nothing about order.
+Predicting order widens that plan, so it was put to Robert as the second
+question at the end. He chose a few timing claims on chosen runs (D94, which
+amends the plan), starting with D90 on runs 9 to 11; not the full order of
+events.
 
 ## 7. The broken copies
 
@@ -235,7 +237,9 @@ for each of the twenty-eight runs in `EXAMPLES.md`:
 4. count allocations, reuses and frees from the memory's own record and compare
    them with the predictions;
 5. confirm the rule's log agrees with the memory's own record;
-6. run the misreport copy on run 2 and confirm the checks reject it on the
+6. on the chosen runs, compare the frozen timing claims (D94: a few timing
+   claims on chosen runs) with the snapshots and the records;
+7. run the misreport copy on run 2 and confirm the checks reject it on the
    counts.
 
 What the checks do is Codex's to write and Robert's to approve later; this list
@@ -245,8 +249,8 @@ only shows that the interface gives them what they need.
 
 - How the lead builds anything behind these promises: how memory is stored, how
   addresses for fresh cells are chosen, how the run is organised inside.
-  Predictions are about answers and totals, so no check should depend on which
-  address a fresh cell gets.
+  Predictions are about answers, totals and, on chosen runs, timing (D94); none
+  is about which address a fresh cell gets, so no check should depend on that.
 - The exact Lean names and shapes, if Lean makes one of them impractical. Any
   change must keep the plain-English promise, is made before the predictions are
   compared with any run, and is shown to Robert and Codex.
@@ -269,4 +273,5 @@ One at a time:
    as soon as no build remains, which by the lead's reasoning, not yet checked,
    give the same totals. The cost is more for Codex to predict and more to
    approve. This would change the approved plan (D78: the trial plan is
-   approved).
+   approved). **Decided (D94): yes, a few timing claims on chosen runs, starting
+   with D90 on runs 9 to 11; not the full order of events.**

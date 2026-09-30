@@ -470,15 +470,18 @@ The decided details of `RULE.md`:
 | An outside holder on a later cell only, so part of the list is shared | 8 |
 | The two static limits on programs (D89: a `match`'s two names are spelled differently; both branches give the same kind of value) | checked across all twenty programs; not something a run shows |
 
-One limit to keep in mind: the predictions are an answer and three totals. Some
+One limit to keep in mind: the predictions were first planned as an answer and
+three totals. Some
 details decide only when something happens. The order conventions in `RULE.md`
 (which of several names is given up first, which of several cells is freed
 first) change no totals. For D90 (an unused set-aside cell is freed when its
 branch finishes), `RULE.md` 6g compares it with one alternative, freeing as soon
 as the rest of the branch builds no cell, and says that by the lead's reasoning,
 not yet checked, the two give the same totals. If so, totals alone cannot tell
-those two apart. Whether the checks can see the order of events is a question
-for the interface (the next document).
+those two apart. For that reason Robert added a few timing claims on chosen runs
+to the predictions (D94, amending the approved plan), starting with D90 on runs
+9 to 11; the interface (`INTERFACE.md`, section 6) lets the checks see the state
+at each step.
 
 ## Checks the lead made by hand
 

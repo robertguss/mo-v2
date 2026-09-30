@@ -210,6 +210,8 @@ moment.
 Categories only; the exact programs and starting memories come in phase 1. Each
 example has its exact program, its starting memory (who holds what), the
 expected answer, and the expected numbers of allocations, reuses and frees.
+Chosen runs also have a few timing claims (D94, the 30 Sep 2026 amendment adding
+them).
 
 - Reuse on an unshared list: add one to the first item.
 - Two cells reused: swap the first two items.
@@ -235,8 +237,11 @@ locked with the rest.
    names and shapes of what they run and read). Robert approves the rule and the
    examples.
 2. Codex writes the predictions (each example's expected answer and expected
-   numbers of allocations, reuses and frees) from the approved English rule,
-   before any Lean version of the counted meaning exists. Robert approves the
+   numbers of allocations, reuses and frees, and, by D94, the 30 Sep 2026
+   amendment adding a few timing claims, what is expected at named moments of
+   chosen runs, starting with when an unused set-aside cell is freed on
+   `EXAMPLES.md` runs 9 to 11) from the approved English rule, before any Lean
+   version of the counted meaning exists. Robert approves the
    predictions; they are then frozen, with fingerprints.
 3. The lead writes the language and both meanings in Lean. Codex, in its own
    visible Herdr pane (a session separate from its read-only reviewing role),

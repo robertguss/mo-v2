@@ -11,8 +11,9 @@ delegation (D81). The options considered are kept for the record. Approval does
 not mean the rule is proven correct; that is the trial's phase 2.
 
 Why this document matters: in step 2, Codex writes the predictions (each
-example's answer and its numbers of allocations, reuses and frees) from this
-English rule alone, before any Lean exists. So the rule has to be exact enough
+example's answer and its numbers of allocations, reuses and frees, and, since
+D94, the amendment adding a few timing claims on chosen runs, those too) from
+this English rule alone, before any Lean exists. So the rule has to be exact enough
 that two careful readers can never run a program differently. Section 10 is the
 check of that.
 
