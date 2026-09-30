@@ -1,6 +1,6 @@
 # The trial's interface: what the checks run and read
 
-**Status: draft, 30 Sep 2026, for Robert's approval.** Written by the lead for
+**Status: approved, 30 Sep 2026 (D93: the interface is approved).** Written by the lead for
 the trial's phase 1, step 1 (`PLAN.md`, "How the trial runs": "the interface the
 checks will use (the names and shapes of what they run and read)"). Codex, who
 will write the checks, reviewed the plan for this document and asked for several
@@ -260,7 +260,8 @@ only shows that the interface gives them what they need.
 
 One at a time:
 
-1. Do you approve this interface: the promises in sections 2 to 7?
+1. Do you approve this interface: the promises in sections 2 to 7? **Decided:
+   yes (D93).**
 2. Should any prediction be about the order of events, not only the answer and
    the three totals? The approved predictions cover each example's answer and
    its three totals. Order predictions could test a timing choice such as D90
