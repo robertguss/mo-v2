@@ -149,8 +149,9 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
     for the broken copies") says those four copies run only after the proof. It
     looked only at filtered output, which is partial evidence: it does not
     establish how the copies behave in full, nor that they behave the same
-    before and after the D98 change. To be taken to Robert as a departure; no
-    decision has been made.
+    before and after the D98 change. Taken to Robert as a departure: he chose to
+    record it and carry on, with the worker told plainly not to run those four
+    copies from now on, and the same worker kept (D99).
   - The brief for Codex's check-writing session:
     `experiments/03c-checker/trial/CHECKS-BRIEF.md`. That session writes the
     checks but does not run the comparison.

@@ -319,6 +319,11 @@ in phase 1; the three unsafe copies and the copy that never reuses run only
 after the proof. So the lead runs K1 and K6 after part 2, and K2 to K5 are
 recorded here now and run only after the proof.
 
+**You do not run them either (D99).** Do not run `.reusesShared`,
+`.forgetsRest`, `.freesHeld` or `.neverReuses` on any program, your own
+included, until the lead tells you the proof phase has reached them. The
+approved rule and `.misreportsReuse` you may run on programs of your own.
+
 | #   | Copy | Program and memory | Expected | When |
 | --- | ---- | ------------------ | -------- | ---- |
 | K1  | misreports reuse | S1's program, memory V1 | answer `[8, 9]`; the rule's log holds exactly one reuse and nothing else; memory's record holds one release, of A, and one creation, and no write in place | after part 2 |
