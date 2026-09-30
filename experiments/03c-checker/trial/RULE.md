@@ -409,20 +409,26 @@ read.
 
 ### 6g. When an unused set-aside cell is freed
 
-**Proposal: when the `match` branch it belongs to finishes,** after the branch's
-value is worked out and before that value is handed on. Several are freed newest
-first (an order convention).
+**Decided (D90, 30 Sep 2026): when the `match` branch it belongs to finishes,**
+after the branch's value is worked out and before that value is handed on.
+Several are freed newest first (an order convention).
 
-Options:
+The options were:
 
-- **When its branch finishes** (the proposal). Simple to state and to check.
+- **When its branch finishes** (the one chosen). Simple to state and to check.
 - **As soon as the rest of the branch's text builds no cell.** Frees memory
-  earlier.
+  earlier, and needs a look ahead through the program text still to run. Lean 4
+  releases its reuse storage on paths that cannot use it.
+- **Never set a cell aside when nothing can reuse it** (Codex's addition). This
+  is decided from the program text, as Koka and Lean 4 do, and belongs with the
+  compiler pairing of 6e.
+- **Keep it beyond its branch** (Codex's addition). This would reopen 6f.
 
-Under the proposal's other rules (a set-aside cell holds nothing, 5; only
-branches still running can use it, 6f), these two options free the same cells
-and differ only in when: the totals of allocations, reuses and frees are the
-same. This depends on "the rest of the branch's text" counting cells that the
+Under the rule's other parts (a set-aside cell holds nothing, 5; only branches
+still running can use it, 6f), by the lead's reasoning the first two options
+free the same cells and differ only in when: the totals of allocations, reuses
+and frees are the same, while the order of events and the most memory in use at
+once can differ. This is reasoning, not a checked result (Codex's caution). This depends on "the rest of the branch's text" counting cells that the
 surrounding computation will still build inside the branch.
 
 ## 7. Where a run starts and ends
@@ -554,7 +560,8 @@ In order, one at a time; each is a proposal with a recommendation:
    **Decided: yes (D87).**
 9. Which set-aside cell: the most recently set aside (6e), from branches still
    running that enclose it (6f). **Decided: yes (D88).**
-10. An unused set-aside cell is freed when its branch finishes (6g).
+10. An unused set-aside cell is freed when its branch finishes (6g). **Decided:
+    yes (D90).**
 11. Approve the rule as a whole: what a run keeps track of, who holds what and
     when a holder moves, setting aside, reusing and freeing (sections 3 to 5),
     and where a run starts and ends (7).
