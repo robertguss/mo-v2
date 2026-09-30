@@ -6,3 +6,12 @@ name = "Trial"
 
 [[lean_lib]]
 name = "Checks"
+
+[[lean_lib]]
+name = "Promises"
+
+[[lean_lib]]
+name = "Proofs"
+
+[[lean_lib]]
+name = "Acceptance"
