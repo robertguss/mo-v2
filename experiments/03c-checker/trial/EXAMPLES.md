@@ -1,6 +1,6 @@
 # The trial's examples
 
-**Status: draft, 30 Sep 2026, for Robert's approval.** Written by the lead for
+**Status: approved, 30 Sep 2026 (D92: the examples are approved).** Written by the lead for
 the trial's phase 1, step 1 (`PLAN.md`, "How the trial runs"). The rule these
 programs run under is `RULE.md`, approved on 30 Sep 2026 (D91: the reuse rule is
 approved as a whole).
@@ -499,3 +499,4 @@ examples").
 ## Question for Robert
 
 Do you approve these examples as the ones the predictions are written for?
+**Decided: yes (D92).**
