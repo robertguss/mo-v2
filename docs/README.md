@@ -130,6 +130,18 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   edits that file or a prediction. Then step 4, the run, with the misreport
   control on run 2. Nothing is waiting on Robert now. The remaining steps and
   gates are in the plan ("How the trial runs").
+- **Step 3 under way, 30 Sep.** The worker's brief is written and reviewed by
+  Codex as oracle: `experiments/03c-checker/trial/WORKER-BRIEF.md`. It has three
+  parts (the language and plain meaning; counted memory and the counted meaning;
+  the broken copies), each with a stop condition, and the quick checks the lead
+  runs itself after each part. The worker writes no checks. As a working
+  precaution, neither the worker nor the lead opens the predictions or runs the
+  twenty example programs through the counted meaning until Codex's check file
+  exists, so that a mismatch is seen and classified, not tuned away. This
+  session's chunk is the lead's side of step 3; it stops once the Lean is
+  reviewed and committed and the brief for Codex's check-writing session is
+  written, before that session starts and before any run is compared with a
+  prediction. No Lean has been written yet.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
@@ -139,8 +151,9 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   idle in a pane of the lead's tab (`herdr agent list` shows it as the `claude`
   agent that is neither the lead nor named). The lead uses it to write code and
   implement: a written brief with a stop condition first, then prompts through
-  `herdr agent prompt`. The lead does not write the Lean itself. The finished
-  prediction session (`predictor-w4-t1`) is in another pane; leave it alone.
+  `herdr agent prompt`. The lead does not write the Lean itself. The prediction
+  session (`predictor-w4-t1`) finished and its pane is closed; nothing depends
+  on it.
 - **Working arrangement.** Codex runs in the Herdr pane to the right of the lead
   (`herdr agent list` shows it). On 27 Sep the lead worked as driver and Codex
   as a read-only oracle (the `driver` and `oracle` skills): each step's plan
@@ -151,7 +164,7 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   it reviewed every recorded choice, his and the delegated ones, before its
   commit. Robert's standing instruction
   (30 Sep): commit and push often without asking, after each oracle sign-off
-  (`CLAUDE.md`, Practical notes). This handoff was written against `34ddbe9`
+  (`CLAUDE.md`, Practical notes). This Status was last updated against `95352e9`
   (`main`, reviewed and pushed); a new session checks `git status`, the latest
   commit and the remote before starting. Outside a pinned project,
   `lean` now resolves to 4.34.1 (elan's default); the experiments pin 4.34.0.
