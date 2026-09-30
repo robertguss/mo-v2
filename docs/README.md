@@ -121,11 +121,12 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   `experiments/03c-checker/trial/LOCK.md`. Nobody edits it. Nothing has been
   run, so the predictions are untested.
 - **Next: the plan's step 3** (proposed; it opens with a bounded step plan for
-  the oracle's review). The lead writes the trial language and both meanings
-  in Lean, to the approved interface (D93), in a Lake project at
+  the oracle's review). The trial language and both meanings are written in
+  Lean by the worker, to the lead's brief (D96: code is written by a Sonnet
+  worker the lead directs), following the approved interface (D93), in a Lake project at
   `experiments/03c-checker/trial/lean/` pinned to Lean 4.34.0. Codex, in its
   own visible pane again (a session separate from the oracle), writes the Lean
-  file that checks the runs against the frozen predictions; the lead never
+  file that checks the runs against the frozen predictions; neither the lead nor the worker
   edits that file or a prediction. Then step 4, the run, with the misreport
   control on run 2. Nothing is waiting on Robert now. The remaining steps and
   gates are in the plan ("How the trial runs").
@@ -134,6 +135,12 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
   in both the helper and Koka; a starting case for the D59 copy-feedback
   follow-up).
+- **The worker** (D96). A Claude session on Sonnet, started by Robert, sits
+  idle in a pane of the lead's tab (`herdr agent list` shows it as the `claude`
+  agent that is neither the lead nor named). The lead uses it to write code and
+  implement: a written brief with a stop condition first, then prompts through
+  `herdr agent prompt`. The lead does not write the Lean itself. The finished
+  prediction session (`predictor-w4-t1`) is in another pane; leave it alone.
 - **Working arrangement.** Codex runs in the Herdr pane to the right of the lead
   (`herdr agent list` shows it). On 27 Sep the lead worked as driver and Codex
   as a read-only oracle (the `driver` and `oracle` skills): each step's plan
@@ -144,7 +151,7 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   it reviewed every recorded choice, his and the delegated ones, before its
   commit. Robert's standing instruction
   (30 Sep): commit and push often without asking, after each oracle sign-off
-  (`CLAUDE.md`, Practical notes). This handoff was written against `471e99c`
+  (`CLAUDE.md`, Practical notes). This handoff was written against `34ddbe9`
   (`main`, reviewed and pushed); a new session checks `git status`, the latest
   commit and the remote before starting. Outside a pinned project,
   `lean` now resolves to 4.34.1 (elan's default); the experiments pin 4.34.0.
