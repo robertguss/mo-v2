@@ -222,16 +222,22 @@ recommendation.
 
 ### 6a. The order in which parts of a program run
 
-**Proposal: left to right.** In `a + b`, comparisons and `[h | t]`, the left
-part is worked out before the right. In `let x = e1 in e2`, `e1` before `e2`. In
-`match` and `if`, the matched list or the condition before the branch.
+**Decided (D84, 30 Sep 2026): left to right.** In `a + b`, comparisons and
+`[h | t]`, the left part is worked out before the right. In `let x = e1 in e2`,
+`e1` before `e2`. In `match` and `if`, the matched list or the condition before
+the branch. Each part finishes completely before the next starts, and only the
+chosen branch of an `if` or `match` runs; the other branch never runs (Codex's
+clarifications).
 
-Options:
+The options were:
 
 - **Left to right** (Java, C#, Rust, Python). Readers expect it.
 - **Right to left** (what OCaml's compiler does in practice).
 - **Unspecified** (C, Scheme, and OCaml's language definition). This would let
   two readers predict different orders, which the trial cannot allow.
+- **Only when needed** (Haskell): a part runs only if its value is used. A much
+  bigger change, since some parts would never run and the memory rules would
+  differ (Codex's addition).
 
 Order matters here because building a cell can use up a set-aside cell, so which
 part builds first decides which cell it gets.
@@ -505,7 +511,7 @@ In order, one at a time; each is a proposal with a recommendation:
    false is also allowed (D82, by the lead and Codex under D81).**
 4. Names may reuse a spelling, and then hide the outer one (2e). **Decided: yes
    (D83, by the lead and Codex under D81).**
-5. The order in which parts run: left to right (6a).
+5. The order in which parts run: left to right (6a). **Decided: yes (D84).**
 6. Inside a `match`: names no longer needed are given up before the cell is
    checked for sharing (6b).
 7. A name used in only one branch is given up as soon as the branch is chosen
