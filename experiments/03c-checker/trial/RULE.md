@@ -323,15 +323,18 @@ visible; the trial cannot settle that for Mo (Codex's caution).
 
 ### 6d. When a new cell picks a set-aside cell
 
-**Proposal: after both its parts are worked out.** For `[h | t]`: work out `h`,
-then `t`, then choose a set-aside cell (6e) or allocate.
+**Decided (D87, 30 Sep 2026): after both its parts are worked out.** For
+`[h | t]`: work out `h`, then `t`, then choose a set-aside cell (6e) or allocate.
 
-Options: after the parts (the proposal), or when the building starts, before its
-parts. The difference shows when a part builds cells itself: with the proposal,
-the inner cells are built first and pick first. Koka and Lean 4 also build a
+The options were: after the parts (the one chosen); when the building starts,
+before its parts, which would also need a rule reserving the cell so that an
+inner build could not take it in the meantime; or between the two parts (the
+last two points are Codex's). The difference shows when a part builds cells
+itself: with the chosen option, the inner cells are built first and pick first.
+Nothing shows that this gives the most reuse or the most speed. Koka and Lean 4 also build a
 cell only once its parts are values, but they choose which taken-apart cell it
 reuses in advance, from the program text (see 6e), so they are not a precedent
-for when a run-time choice is made; the proposal rests on its simplicity (a cell
+for when a run-time choice is made; the choice rests on its simplicity (a cell
 is chosen at the moment it is written).
 
 ### 6e. Which set-aside cell a new cell takes, when several are available (flag 3)
@@ -528,6 +531,7 @@ In order, one at a time; each is a proposal with a recommendation:
 7. A name used in only one branch is given up as soon as the branch is chosen
    (6c). **Decided: yes (D86).**
 8. A new cell picks its set-aside cell after its parts are worked out (6d).
+   **Decided: yes (D87).**
 9. Which set-aside cell: the most recently set aside (6e), from branches still
    running that enclose it (6f).
 10. An unused set-aside cell is freed when its branch finishes (6g).
