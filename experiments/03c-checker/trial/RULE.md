@@ -4,8 +4,9 @@
 the trial's phase 1, step 1 (`PLAN.md`, "How the trial runs"). The base rule in
 section 1 is already approved (D74: one fixed reuse-and-release rule decides
 where cells are reused and released; D78: the trial plan is approved). Every
-other section is a **proposed clarification; Robert's choice**. Nothing here is
-decided until he decides it, one question at a time.
+other section is a **proposed clarification; Robert's choice**, unless it is
+marked decided. Nothing here is decided until he decides it, one question at a
+time.
 
 Why this document matters: in step 2, Codex writes the predictions (each
 example's answer and its numbers of allocations, reuses and frees) from this
@@ -69,12 +70,13 @@ and Elixir.
 | `match e do [] -> e1; [h \| t] -> e2 end` | if the list `e` is empty, `e1`; otherwise `h` is its first item and `t` the rest, and then `e2` |
 | input names, e.g. `xs`, `n`               | the program's starting values, given by the example                                             |
 
-Proposed clarifications. 2a, 2b, 2c and 2e are each Robert's choice; 2d follows
-from a promise already in the plan.
+Proposed clarifications, except where marked decided. 2a, 2b, 2c and 2e are each
+Robert's choice; 2d follows from a promise already in the plan.
 
-- **2a. Whole numbers.** Proposal: unlimited in size and may be negative;
-  `a - b` is ordinary subtraction, so `2 - 5` is `-3`. Options:
-  - unlimited integers (the proposal; Python, Ruby, Elixir, Haskell's `Integer`,
+- **2a. Whole numbers.** **Decided (D79, 30 Sep 2026):** unlimited in size and
+  may be negative; `a - b` is ordinary subtraction, so `2 - 5` is `-3`. The
+  options were:
+  - unlimited integers (the one chosen; Python, Ruby, Elixir, Haskell's `Integer`,
     Lean's `Int`);
   - natural numbers that stop at zero (Lean's `Nat`), where `2 - 5` is `0`,
     which could steer an `if` differently from what a reader expects;
@@ -475,7 +477,7 @@ be read two ways, the rule is not ready.
 
 In order, one at a time; each is a proposal with a recommendation:
 
-1. Whole numbers: unlimited, and may be negative (2a).
+1. Whole numbers: unlimited, and may be negative (2a). **Decided: yes (D79).**
 2. Comparisons: `==`, `<` and `<=`, on numbers only (2b).
 3. A program's answer is a number or a list (2c).
 4. Names may reuse a spelling, and then hide the outer one (2e).

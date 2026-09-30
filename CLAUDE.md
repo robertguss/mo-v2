@@ -158,4 +158,6 @@ own work. The rules below exist to stop that happening again.
   Markdown files. To keep a diff to an existing doc limited to the intended
   lines, apply the edit with a python3 script and check `git diff`.
 - **Commits:** refer to repo docs by URL. Commit named paths only, with the
-  attribution line, and commit and push only when Robert asks.
+  attribution line. Commit and push often and regularly without asking Robert
+  (his standing instruction, 30 Sep 2026); under the driver and oracle skills,
+  after each oracle sign-off.
