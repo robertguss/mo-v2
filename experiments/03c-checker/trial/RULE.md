@@ -292,20 +292,23 @@ addition).
 
 ### 6c. A name used in only one branch of an `if` (flag: the plan's fourth fine detail)
 
-**Proposal: given up as soon as the branch is chosen,** before the branch runs:
-work out the condition, choose the branch, give up (oldest first) every name
-that will not be used from here on, then run the branch. The same step 3 appears
-inside `match` (6b).
+**Decided (D86, 30 Sep 2026): given up as soon as the branch is chosen,** before
+the branch runs: work out the condition, choose the branch, give up (oldest
+first) every name that will not be used from here on, then run the branch. "Not
+used from here on" means no use in the chosen branch and none anywhere after the
+`if`; being absent from the chosen branch alone is not enough. The same step 3
+appears inside `match` (6b).
 
-Options:
+The options were:
 
-- **At the start of the branch that does not use it** (the proposal; Perceus,
+- **At the start of the branch that does not use it** (the one chosen; Perceus,
   the counting behind Koka, places these releases at the start of branches).
   This is "right after its last use" read exactly, since the last use is behind
   the program once the other branch is chosen.
 - **At the end of that branch.** Keeps memory longer, and can stop a reuse
   inside the branch that the proposal would allow.
-- **After the whole `if`.** The same, for longer.
+- **After the whole `if`.** The same, for longer (in this small language,
+  possibly the same moment as the previous option; Codex's note).
 - **At the end of the name's scope** (the end of the `let` or `match` branch
   that bound it), which can be much later than the `if`. This is how Rust drops
   a local and how C++ destroys an automatic variable, including their
@@ -313,6 +316,10 @@ Options:
 
 The last three all delay the release past the last use, so each would reopen the
 approved rule's "a holder is given up right after its last use".
+
+This is a choice about plain list cells. If giving up a value did something the
+program could see (closing a file, releasing a lock), the timing would become
+visible; the trial cannot settle that for Mo (Codex's caution).
 
 ### 6d. When a new cell picks a set-aside cell
 
@@ -519,7 +526,7 @@ In order, one at a time; each is a proposal with a recommendation:
 6. Inside a `match`: names no longer needed are given up before the cell is
    checked for sharing (6b). **Decided: yes (D85).**
 7. A name used in only one branch is given up as soon as the branch is chosen
-   (6c).
+   (6c). **Decided: yes (D86).**
 8. A new cell picks its set-aside cell after its parts are worked out (6d).
 9. Which set-aside cell: the most recently set aside (6e), from branches still
    running that enclose it (6f).
