@@ -481,3 +481,160 @@ change on small programs of your own, outside the repository. Do not commit.
 with no errors and no warnings, and only `Trial/Counted.lean` has changed. Or
 stop earlier under conditions 3 to 5 above. Report in your pane: what you
 changed and where, and confirm you opened nothing under `lean/Checks/`.
+
+## Part 4 (step 5): the four promises as Lean statements
+
+Added on 30 Sep 2026 for the trial's phase 1, step 5 (`PLAN.md`, "How the trial
+runs": "The lead writes the promises of Q2 as Lean statements"). The lead
+designed the statements below; you type them (D96: code is written by a Sonnet
+worker the lead directs). Reviewed by Codex as oracle. Start it only when the
+lead prompts you to.
+
+You write statements, not proofs. A later builder, not yet chosen by Robert,
+proves them in phase 2, if he decides phase 2 starts. `Promises.lean`,
+`Acceptance.lean` and the project files will be locked with everything else, so
+the builder cannot change what it has to prove; `Proofs.lean` stays writable, as
+the stub whose bodies the builder replaces.
+
+### The four promises in plain English
+
+They are `PLAN.md` Q2 (a) to (d), for every well-formed program and every valid
+starting memory: that is, whenever `validStart e s` succeeds (it already checks
+`wellFormed` on the inputs' kinds). Each is about the run of the approved rule,
+`runCounted .approved e s`.
+
+- **(a) The run finishes.** It is not refused, it does not fail while running,
+  and its answer can be read back from the final memory.
+- **(b) Same answer as the plain meaning.** The answer, read back from the final
+  memory, is exactly the plain meaning's answer for the same inputs, where each
+  input's plain value is read back from the starting memory.
+- **(c) No list someone else can see changes, at any recorded moment.** In every
+  snapshot of the run: (c1) the outside holders are the starting ones, and each
+  reads back exactly as it did in the starting memory; (c2) every name that
+  still holds its holder (the snapshot's `holding` status, which is the run's
+  own account of "will still be used") reads back exactly as it did in the first
+  snapshot where that name held, and that first read-back succeeded.
+- **(d) Nothing leaks.** In the final memory: every cell is live (no set-aside
+  cell is left over); no two cells share an address; the allocated cells are
+  exactly those reachable from the answer and the outside holders; and every
+  cell's holder count equals the number of holders it actually has (the answer,
+  the outside holders, and links from other live cells).
+
+### What you write
+
+Only these, under `experiments/03c-checker/trial/lean/`:
+
+| File              | Contains                                                                |
+| ----------------- | ----------------------------------------------------------------------- |
+| `Promises.lean`   | The four promises: definitions only, no theorems. Imports `Trial` only. |
+| `Proofs.lean`     | A stub: the four theorems, each proved by `sorry`. Imports `Promises`.  |
+| `Acceptance.lean` | Restates the four theorems at the locked statements and prints axioms.  |
+| `lakefile.toml`   | Three more `[[lean_lib]]` entries: `Promises`, `Proofs`, `Acceptance`.  |
+
+Keep `defaultTargets = ["Trial"]` as it is. Change nothing else: not `Trial/`,
+not the root file `Trial.lean`, not `lean-toolchain` or `lake-manifest.json`.
+
+### Shapes of `Promises.lean`
+
+Everything is in `namespace Trial`. Names and shapes as below; if Lean makes one
+impractical, stop and report (condition 3 below) rather than choose another
+meaning.
+
+1. `startPlain (s : Start) : Except String (List (String × PlainValue))`: each
+   input, in order, with its value read back from `s.toMemory` by `readBack`.
+2. `plainAnswer (e : Expr) (s : Start) : Except String PlainValue`:
+   `startPlain s`, then `runPlain e` on it.
+3. `finalAnswer (o : Outcome) : Except String PlainValue`: for `.answer raw`,
+   `readBack o.memory raw`; for `.refused why` and `.failedRunning why`, an
+   error carrying the reason. Never a default value.
+4. `snapMemory (snap : Snapshot) : Memory`: a memory whose cells are the
+   snapshot's cells (the other fields at their defaults), for reading back.
+5. `Finishes (o : Outcome) : Prop`: `finalAnswer o` is `.ok`.
+6. `SameAnswer (e : Expr) (s : Start) (o : Outcome) : Prop`: `finalAnswer o` is
+   `.ok`, and `finalAnswer o = plainAnswer e s`.
+7. `OutsideUnchanged (s : Start) (o : Outcome) : Prop`: for every snapshot in
+   `o.states`, its `outside` equals `s.outside`, and for every root `r` in
+   `s.outside`, reading back `.list r` in the snapshot's memory gives the same
+   result as reading it back in `s.toMemory`, and that starting read-back is
+   `.ok`.
+8. `firstHolding (states : List Snapshot) (id : Nat) : Option Snapshot`: the
+   first snapshot in which some binding with this id has status `holding`.
+9. `NamesUnchanged (o : Outcome) : Prop`: for every snapshot in `o.states` and
+   every binding `b` in its `bindings` with status `holding`:
+   `firstHolding o.states b.id` is some snapshot `first`; reading back `b.value`
+   in `first`'s memory is `.ok`; and reading back `b.value` in this snapshot's
+   memory gives the same result. (A binding's value never changes, so reading
+   `b.value` in both is reading the same list at two moments.)
+10. `NoVisibleChange (s : Start) (o : Outcome) : Prop`: `OutsideUnchanged s o`
+    and `NamesUnchanged o`.
+11. `reachable (m : Memory) (roots : List (Option Addr)) : Except String (List Addr)`:
+    the addresses met walking from each root along links, bounded by the number
+    of cells as `readList` is; a missing cell, a set-aside cell, or running out
+    of steps is an error with a reason, never a shorter list.
+12. `holders (m : Memory) (roots : List (Option Addr)) (a : Addr) : Nat`: how
+    many of the roots are `some a`, plus how many live cells of `m` link to `a`.
+13. `NoLeak (s : Start) (o : Outcome) : Prop`: `o.result` is `.answer raw` for
+    some `raw`, and with `roots` the answer's cell (if it is a non-empty list)
+    followed by `s.outside`: every cell of `o.memory` is live; the cells'
+    addresses have no repeats; `reachable o.memory roots` is `.ok`, every
+    address it gives is an allocated cell's, and every allocated cell's address
+    is among them; every cell's count equals `holders o.memory roots` at its
+    address. It says nothing about bindings or intermediate results.
+14. The four universal statements, each over every program and starting memory,
+    assuming `validStart e s = .ok ()`, about `runCounted .approved e s`:
+    `PromiseA` (`Finishes`), `PromiseB` (`SameAnswer e s`), `PromiseC`
+    (`NoVisibleChange s`), `PromiseD` (`NoLeak s`).
+
+Make each of 5, 6, 7, 9, 10 and 13 **decidable** for a given outcome, so that
+the lead can evaluate it on concrete runs: write it with `∀ x ∈ list`,
+equalities and `Bool` tests where that is natural, and where Lean finds no
+instance, give one built only from existing instances (`inferInstanceAs`, or a
+`match`), or add a `deriving instance DecidableEq` line. No `sorry` and nothing
+forbidden in doing so. Say in your report how each is decidable.
+
+Comments in `Promises.lean` say what each definition means in the words above,
+naming the promise (a) to (d), so a reader can set the two side by side.
+
+### `Proofs.lean` and `Acceptance.lean`
+
+- `Proofs.lean`, in `namespace Trial`: `theorem promiseA : PromiseA := sorry`,
+  and the same for `promiseB`, `promiseC`, `promiseD`. Nothing else. A comment
+  at the top says it is the stub the phase-2 builder replaces the bodies of.
+- `Acceptance.lean` imports `Promises` and `Proofs`. It states, with every name
+  written in full from the root:
+  `theorem Trial.accepted_a : _root_.Trial.PromiseA := _root_.Trial.promiseA`,
+  and the same for `b`, `c`, `d`; then `#print axioms` for each of the four
+  accepted theorems. A comment at the top says (as Experiment 1's
+  `experiments/01-tiny-safe/Tiny/Accept.lean` does) that the file is locked,
+  that it compiles only if the builder's proofs have exactly the locked
+  statements, and that anything beyond `propext`, `Classical.choice` and
+  `Quot.sound` in the printed axioms (such as `sorryAx`) means the work is not
+  accepted. The names are written from the root so that nothing a builder file
+  declares can change which statement is meant.
+
+### Rules for this part
+
+The file table above replaces, for this part, the list in "What you may write"
+and the ban there on creating a check file: it permits exactly these four files,
+`Acceptance.lean` included. Everything else in "Rules for the Lean" and "What you
+may not do" above still holds, with one exception: exactly four `sorry`s, one per theorem in `Proofs.lean`, and
+their four "declaration uses 'sorry'" warnings, are allowed. No other `sorry`
+and no other warning.
+
+Still in force: do not open `PREDICTIONS.md`, anything under `lean/Checks/`, or
+`lean/Checks.lean`. Do not open `ACCEPTANCE.md` if it appears: it will hold the
+predicted answers. Do not run any of P1 to P20. Under D99 (the record of your
+early runs of the broken copies) run only `.approved` and `.misreportsReuse`,
+and only on small programs of your own, outside the repository. Do not commit.
+
+### Stop when
+
+`lake build Trial Promises Proofs Acceptance`, run in
+`experiments/03c-checker/trial/lean/`, succeeds with no errors and exactly the
+four allowed warnings; `#print axioms` in `Acceptance.lean` shows `sorryAx` for
+each of the four and nothing unexpected; and only the four files above have
+changed or been added. Or stop earlier under conditions 2 to 5 above (where the
+text is unclear, read "this part" for "`RULE.md`"). Report in your pane: each
+definition and the promise it states; how each is decidable; any name or shape
+that differs from the above, and why; the printed axioms; and confirm you opened
+nothing under `lean/Checks/`.
