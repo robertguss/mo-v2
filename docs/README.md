@@ -149,17 +149,35 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
     counted meaning, so that a mismatch at the run is seen and classified, not
     tuned away. The oracle has read the predictions; it reviews and does not
     encode.
-- **Next (proposed; it opens with a plan for the oracle's review).** Start the
-  check-writing session: a new Codex session in its own visible Herdr pane,
-  separate from the oracle, given `CHECKS-BRIEF.md`. The oracle reviews its
-  files, and the lead commits them exactly as written. Then plan step 4, the
-  run, with Robert able to watch: the lead runs `main`
-  (`lake env lean --run Checks/Run.lean` in the `lean/` folder), including the
-  misreport control on run 2. Every mismatch is kept, classified (a wrong
-  prediction, a wrong encoding, or a fault in the rule) and taken to Robert;
-  nothing changes without his decision. Then plan step 5: the promises as Lean
-  statements, `ACCEPTANCE.md` and the proof builder's brief, Codex's bounded
-  question, Robert's approval and the lock; then step 6, Robert decides whether
+- **Step 1 of the checks, 30 Sep (evening).** The check-writing session
+  (`checker-w4-t1`, a new Codex session in its own pane below the lead, started
+  after a plan the oracle signed off) wrote the four check files but stopped
+  under its brief's condition 2: the snapshots could not show the number a
+  `match` branch works out as it finishes (runs 10 and 11), nor that run 11's
+  unneeded list was given up before its branch ran. The oracle confirmed both
+  gaps and, in a bounded look at coverage, found no others; its full review of
+  the check files is still to come. The stop report quoted two predicted values, so the
+  lead has now seen those two, nothing else of the predictions. Robert chose to
+  record more (D98: the snapshots also show a finishing `match` branch's value,
+  and a snapshot is taken as each chosen branch starts; nothing a run does
+  changes), which amends `INTERFACE.md` section 6 (its fingerprint in `LOCK.md`
+  is updated, the old one kept). Next in this step: the worker makes the change
+  in `Trial/Counted.lean` (`WORKER-BRIEF.md`, part 3); the lead checks it and
+  the oracle reviews it; then the check-writing session finishes its checks,
+  the oracle reviews them, and the lead commits them exactly as written.
+- **Next.** Finish step 1: after the worker's change is checked and reviewed,
+  the existing check-writing session (`checker-w4-t1`) resumes and closes both
+  gaps; the oracle reviews its files, and the lead commits them exactly as
+  written. Then plan step 4, the run, for the oracle's review, with Robert able
+  to watch: the lead runs `main` (`lake env lean --run Checks/Run.lean` in the
+  `lean/` folder), including the misreport control on run 2. Every mismatch is
+  kept, classified (a wrong prediction, a wrong encoding, or a fault in the
+  rule) and taken to Robert; nothing changes without his decision. This
+  session's chunk, agreed with the oracle, ends there: after the run's output is
+  kept, the mismatches are classified and Robert's questions about them are
+  put. Any repair, and step 5 (the promises as Lean statements, `ACCEPTANCE.md`
+  and the proof builder's brief, Codex's bounded question, Robert's approval
+  and the lock), start in a fresh session; then step 6, Robert decides whether
   the proof phase starts. Nothing is waiting on Robert now.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not

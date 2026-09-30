@@ -30,7 +30,7 @@ before any run is compared with the predictions.
 | `PREDICTIONS.md` | `f4ad4897030fc558b100ace0f65163fe36234833e4300925ebc97d66310c7658` |
 | `RULE.md` | `ea918fb4899b7f540fc42743831b824b8fadad45b1d95b4a2b4faa9079926d40` (changed by D97; see below) |
 | `EXAMPLES.md` | `2052d414d621549691913badc90025085a5888bc1cd505b7d0bb26ac87d85f54` |
-| `INTERFACE.md` | `17d658fc1a18e7d547f4817add7e30ad25920eee7c7ad6f4428962263f2e88da` |
+| `INTERFACE.md` | `91297547225831666507036b41b1e3c2a0fc6723223584a0553cf5411c709320` (changed by D98; see below) |
 | `PLAN.md` | `3f110af9f3798662921ecae44d8d9c934339cf51d53209cebd12096c892e76f3` |
 | `PREDICTIONS-BRIEF.md` | `1413d036c8b361b644cbd715f7c45dc17cf7b1dfb4e42c9047e5d54d9a4c656c` |
 
@@ -43,6 +43,19 @@ fingerprint was
 `07e3c4adfcea2d57830c2f678f8135936f8bc36f038744b867e6fe3b2aacd75d`. No approved
 example has two inputs with one spelling, so no prediction depends on the
 change.
+
+## Changed on 30 Sep 2026: `INTERFACE.md`, by D98
+
+Robert decided that the snapshots record two more things (D98): the value a
+`match` branch has worked out, in the two snapshots taken as it finishes, and a
+snapshot each time a chosen branch is about to run. The check-writing session
+had stopped because the snapshots could not show these, so two timing claims in
+the predictions on runs 10 and 11 could not be checked as written. One paragraph
+was added to `INTERFACE.md` section 6, and its status line notes the extension.
+The predictions were written from the earlier text, whose fingerprint was
+`17d658fc1a18e7d547f4817add7e30ad25920eee7c7ad6f4428962263f2e88da`. The addition
+only lets the checks see more of a run; it changes nothing a run does, and no
+prediction changes.
 
 ## Still to come
 

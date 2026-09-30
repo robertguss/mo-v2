@@ -199,6 +199,14 @@ All of them are in namespace `Trial`, in the files named.
   `match`'s branch finished; branches finish innermost first, and the
   set-aside cells carry their branch ids. If that is not enough to check a
   timing claim as written, that is stop condition 2.
+- **Added by D98, after your stop** (Robert's decision; `INTERFACE.md` section 6):
+  `Snapshot.branchValue : Option RawValue` is `some w` in the
+  `branchValueWorkedOut` and `branchValueHandedOn` snapshots, where `w` is the
+  value the finishing `match` branch hands on, and `none` in every other
+  snapshot; it holds nothing and is not in `pending`. `StepKind.branchStarts`
+  is a snapshot taken each time a chosen branch of an `if` or `match` is about
+  to run, after the names it will not use have been given up (for a `match`'s
+  cell branch, after step 5), immediately before the branch's expression runs.
 - **Reading back:** `readBack : Memory → RawValue → Except String PlainValue`
   as proposed. To read a list in a snapshot, build a `Memory` from the
   snapshot's cells and use `readList` or `readBack`.

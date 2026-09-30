@@ -1,6 +1,6 @@
 # The trial's interface: what the checks run and read
 
-**Status: approved, 30 Sep 2026 (D93: the interface is approved).** Written by the lead for
+**Status: approved, 30 Sep 2026 (D93: the interface is approved); section 6 extended the same day by D98.** Written by the lead for
 the trial's phase 1, step 1 (`PLAN.md`, "How the trial runs": "the interface the
 checks will use (the names and shapes of what they run and read)"). Codex, who
 will write the checks, reviewed the plan for this document and asked for several
@@ -188,6 +188,8 @@ snapshot shows who holds what at that moment (Codex asked for each of these):
   value.
 
 Proposed names: `Outcome.states : List Snapshot`.
+
+**Added on 30 Sep 2026 by D98** (two more things in the snapshots, Robert's decision, after the check-writing session found the snapshots could not show them): each snapshot also shows the value a `match` branch has worked out, in the two snapshots taken as that branch finishes (before and after its unused set-aside cells are freed), and nothing in every other snapshot; and a snapshot is also taken each time a chosen branch of an `if` or `match` is about to run, after the names it will not use have been given up. Recording the value creates no holder and is not an intermediate result; neither addition changes anything a run does. Names as built: `Snapshot.branchValue : Option RawValue` and the step kind `branchStarts`.
 
 **What this makes possible, and what it does not decide.** With the order of
 events and the snapshots visible, checks could tell apart choices that differ

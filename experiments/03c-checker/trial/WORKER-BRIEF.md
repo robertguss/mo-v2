@@ -436,3 +436,43 @@ started.
   with their ids, values and whether they still hold a holder, the intermediate
   results with what they hold, the outside holders, the set-aside cells with
   their branch ids, and the kind of step.
+
+## Part 3 (D98): two more things in the snapshots
+
+Added on 30 Sep 2026, after parts 1 and 2 were committed. Start it only when the
+lead prompts you to. Robert decided (D98) that the snapshots record two more
+things, so that the checks can see them; nothing a run does may change.
+
+**The one file you change:** `Trial/Counted.lean`. Nothing else: not
+`Trial/Broken.lean`, `Trial/Memory.lean`, `Trial/Language.lean`,
+`Trial/Plain.lean`, the root file or the Lake files.
+
+**What to add:**
+
+1. `Snapshot` gains one field, `branchValue : Option RawValue`. It is `some w`
+   in the `branchValueWorkedOut` and `branchValueHandedOn` snapshots, where `w`
+   is the value `finishBranch` receives (the one it returns), and `none` in
+   every other snapshot. It is stored only in the snapshot, never in `pending`:
+   recording a value creates no holder and no intermediate result.
+2. `StepKind` gains `branchStarts`: one snapshot immediately before the chosen
+   branch's expression is evaluated, at all four places: the `if`'s true branch
+   and its false branch, after `giveUpDead`; the `match`'s empty-list branch,
+   after `giveUpDead`; the `match`'s cell branch, after step 5, just before step
+   6. Take it with the branch's own environment in scope (`enter`, as the
+   neighbouring snapshots do).
+
+**What must not change:** any memory operation, log event, binding, pending
+list, set-aside list, or the order of any of them; the result; the rule's
+switches. The broken copies run through the same code and get the new
+snapshots with no change of their own.
+
+**Still in force:** everything above ("Rules for the Lean", "What you may not
+do"). Do not open `PREDICTIONS.md`. Do not open anything under `lean/Checks/`,
+or `lean/Checks.lean`: they are the check-writing session's files, and one of
+them holds a copy of the predictions. Do not run any of P1 to P20. Try your
+change on small programs of your own, outside the repository. Do not commit.
+
+**Stop when:** `lake build` from `experiments/03c-checker/trial/lean/` succeeds
+with no errors and no warnings, and only `Trial/Counted.lean` has changed. Or
+stop earlier under conditions 3 to 5 above. Report in your pane: what you
+changed and where, and confirm you opened nothing under `lean/Checks/`.
