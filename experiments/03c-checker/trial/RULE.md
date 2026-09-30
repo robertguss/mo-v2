@@ -85,10 +85,13 @@ Robert's choice; 2d follows from a promise already in the plan.
   Unlimited integers keep the trial away from design choice 10 (how Mo
   represents numbers, D58) and from overflow.
 
-- **2b. Comparisons.** Proposal: `==`, `<` and `<=`, on numbers only; lists
-  cannot be compared. Options:
-  - these three (the proposal): enough to write every example, since `a > b` is
-    `b < a`;
+- **2b. Comparisons.** **Decided (D80, 30 Sep 2026):** `==`, `<` and `<=`, on
+  numbers only; lists cannot be compared. The options were:
+  - these three (the one chosen): enough to write every example, since `a > b`
+    gives the same true or false as `b < a`. Swapping the sides also swaps the
+    order in which they are worked out, so when working out a side touches
+    lists, the two spellings can differ in their memory events (Codex's
+    correction);
   - all six (`==`, `!=`, `<`, `<=`, `>`, `>=`, as in Ruby, Python, Elixir),
     friendlier to read but more cases for the proof to cover;
   - also comparing lists (as Elixir, Python and Haskell allow), which would make
@@ -478,7 +481,8 @@ be read two ways, the rule is not ready.
 In order, one at a time; each is a proposal with a recommendation:
 
 1. Whole numbers: unlimited, and may be negative (2a). **Decided: yes (D79).**
-2. Comparisons: `==`, `<` and `<=`, on numbers only (2b).
+2. Comparisons: `==`, `<` and `<=`, on numbers only (2b). **Decided: yes
+   (D80).**
 3. A program's answer is a number or a list (2c).
 4. Names may reuse a spelling, and then hide the outer one (2e).
 5. The order in which parts run: left to right (6a).
