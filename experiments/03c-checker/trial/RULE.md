@@ -70,8 +70,9 @@ and Elixir.
 | `match e do [] -> e1; [h \| t] -> e2 end` | if the list `e` is empty, `e1`; otherwise `h` is its first item and `t` the rest, and then `e2` |
 | input names, e.g. `xs`, `n`               | the program's starting values, given by the example                                             |
 
-Proposed clarifications, except where marked decided. 2a, 2b, 2c and 2e are each
-Robert's choice; 2d follows from a promise already in the plan.
+Clarifications, each marked with how it was decided. 2a and 2b are Robert's
+choices; 2c, 2e and 2f were made by the lead and Codex under his delegation
+(D81); 2d follows from a promise already in the plan.
 
 - **2a. Whole numbers.** **Decided (D79, 30 Sep 2026):** unlimited in size and
   may be negative; `a - b` is ordinary subtraction, so `2 - 5` is `-3`. The
@@ -136,6 +137,18 @@ Robert's choice; 2d follows from a promise already in the plan.
     the inner name's part of the program ends, it keeps its holder until then;
     if it is not, it was already given up, and uses of the inner name do not
     delay that.
+
+  One exception (D89, 30 Sep 2026, by the lead and Codex under D81; a gap Codex
+  found): the two names one `match` introduces for a cell, the first item and
+  the rest, must be spelled differently. `[x | x] -> ...` is not well-formed,
+  because neither `x` would be the nearer one.
+
+- **2f. Both branches give the same kind of value.** Decided (D89, as above;
+  also a gap Codex found): the two branches of an `if`, and the two branches of
+  a `match`, must both give a number, both give a list, or both give true or
+  false. A program where they differ is not well-formed. This spells out the
+  plan's "every use has the right kind": without it, one reader could refuse
+  such a program and another could run the chosen branch.
 
 ## 3. What a counted run keeps track of
 
@@ -339,9 +352,10 @@ is chosen at the moment it is written).
 
 ### 6e. Which set-aside cell a new cell takes, when several are available (flag 3)
 
-**Proposal: the most recently set aside** of those available to it (6f).
+**Decided (D88, 30 Sep 2026): the most recently set aside** of those available
+to it (6f).
 
-Options:
+The options were:
 
 - **Most recently set aside.** Simple; needs no look-ahead; usually the cell
   from the innermost `match`, which is usually the cell the program just took
@@ -350,6 +364,9 @@ Options:
 - **Only the nearest enclosing `match`'s cell.** A new cell can then never take
   an outer cell. This would reopen the approved rule, which says an enclosing
   `match`'s cell may still be available.
+- **A wider pool that outlives its branch.** Cells would stay available after
+  their branch ends, which changes when they are cleaned up (6g) (Codex's
+  addition).
 - **A pairing fixed from the program text.** This is what Koka (Perceus) and
   Lean 4 do: the compiler decides in advance which construction reuses which
   taken-apart cell, and at run time checks only whether that cell turned out to
@@ -359,7 +376,7 @@ Options:
   cases where they would allocate. It also means the trial's rule is not claimed
   to match Koka or Lean.
 
-The recommendation rests on its own merits: it is the simplest rule that runs
+The choice rests on its own merits: it is the simplest rule that runs
 with no look-ahead and uses up the cells closest to where they were taken apart.
 The first two options are both safe, but they can change the totals, not only
 which cell is reused. Suppose an outer `match` sets aside cell A, a `match`
@@ -372,20 +389,23 @@ program is left out):
 | Most recently set aside | B                 | nothing left to free       | takes A                 | 2 reuses                           |
 | Oldest first            | A                 | B is freed                 | nothing left: allocates | 1 reuse, 1 free, 1 allocation      |
 
-Most recently set aside keeps each branch's own cell for that branch, so an
-outer cell stays available for the outer branch.
+In this example, most recently set aside uses the inner branch's own cell first,
+so the outer cell is still there for the outer branch. That is a preference, not
+a protection: an inner branch that builds more cells than it set aside may take
+an available outer cell too (6f allows it). The example is an illustration; it does not
+show that this choice is best for every program (Codex's correction).
 
 ### 6f. Which set-aside cells a new cell may take at all (flag 4)
 
-**Proposal:** a cell set aside by a `match` belongs to the branch that `match`
-chose. A new cell may take any set-aside cell belonging to a branch that is
+**Decided (D88, 30 Sep 2026):** a cell set aside by a `match` belongs to the
+branch that `match` chose. A new cell may take any set-aside cell belonging to a branch that is
 still running and that encloses it: its own branch, or an outer `match`'s branch
 it sits inside. Never a cell whose branch has already finished (by then the cell
 has been freed, 6g). An `if`'s branches are not places cells belong to; a cell
 set aside in a `match` branch stays available inside any `if` within it.
 
-This is how the proposal reads the approved words "the next new cell built in
-that branch".
+This is how the approved words "the next new cell built in that branch" are
+read.
 
 ### 6g. When an unused set-aside cell is freed
 
@@ -533,7 +553,7 @@ In order, one at a time; each is a proposal with a recommendation:
 8. A new cell picks its set-aside cell after its parts are worked out (6d).
    **Decided: yes (D87).**
 9. Which set-aside cell: the most recently set aside (6e), from branches still
-   running that enclose it (6f).
+   running that enclose it (6f). **Decided: yes (D88).**
 10. An unused set-aside cell is freed when its branch finishes (6g).
 11. Approve the rule as a whole: what a run keeps track of, who holds what and
     when a holder moves, setting aside, reusing and freeing (sections 3 to 5),
