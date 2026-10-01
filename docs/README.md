@@ -33,11 +33,25 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
 promises and the two-hour check-ins (D101: approval to proceed with proof work).
 Builder selection and any replacement of the Herdr arrangement are pending. No
 proof work or timed interval has begun. This session is in an Amp orb:
-`HERDR_ENV` is unset, and `herdr`, `lean` and `lake` are absent from PATH. The
+`HERDR_ENV` is unset and `herdr` is unavailable. Orb setup now installs Lean
+and Lake from the experiment pins, Rust 1.98.1, Koka 3.2.9, C build tools,
+and locked Cargo dependencies. Run Lean commands inside an experiment's Lake
+directory, where its `lean-toolchain` selects the version. The
 pane and machine descriptions below are historical, from 30 Sep, not verified
 current sessions. Robert requested `driving-amp-development`; its Oracle reviews
 do not by themselves replace the locked requirement for separate acceptance
 runs. Settle the working arrangement before starting the builder.
+
+**Orb setup verification:** `.agents/setup` installed the tools in about 40
+seconds; repeated warm runs took about 0.3 seconds without downloads.
+`.agents/resume` requires no services or authentication and finishes immediately.
+A clean login shell built the trial's five Lake targets; the existing four
+unfinished proofs still report `sorryAx`, so this is toolchain verification,
+not proof acceptance. The Rust counting harness built offline with its lockfile,
+and Koka compiled benchmark 1 without running it (with a bundled mimalloc C
+compiler warning). The older benchmark runners still assume macOS/Homebrew
+paths and measurement tools; installing their compilers does not make those
+locked runners portable to Linux. No experiment sources, locks, or data changed.
 
 - **Design choices.** The nine big choices are made (D24–D33): a static checker
   with contracts and proof on top; no guessing; pure code with in-place updates

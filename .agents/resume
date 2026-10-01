@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# No services, credentials, or reconnect steps are required for these experiments.
+# Toolchains and dependency caches persist in the orb snapshot.
+printf 'Mo orb ready; no resume repairs required.\n'
