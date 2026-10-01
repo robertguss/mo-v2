@@ -227,19 +227,73 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   approved and locked), and the full lock is in
   `experiments/03c-checker/trial/LOCK.md`: twenty-five frozen files; only
   `lean/Proofs.lean` and `lean/Proofs/` are writable.
-- **Next: step 6, Robert's decision on the proof phase** (`PLAN.md`, "How the
-  trial runs", step 6). To put to him one per message, in order: (1) having
-  seen the run's result (`RUN-1.md`; he was told it on 30 Sep), does phase 2,
-  the proof, start? (2) if so, who builds it, laying out the real options (the
-  Sonnet worker under D96, a fresh Claude session, Codex, or another), each in
-  a visible pane (D14); (3) only if he chooses the existing worker, whether its
-  restrictions are lifted (it has not seen the predictions, which
-  `ACCEPTANCE.md` holds, nor `lean/Checks/`; `PROOF-BRIEF.md`, "Before this
-  brief is handed over"). Then the builder starts on `PROOF-BRIEF.md`, with the
-  D77 clock (two-hour check-ins, resuming only on Robert's go-ahead) kept by
-  the lead, working and waiting time recorded separately. None of these has
-  been asked yet. A fresh session's first action: a plan for that chunk sent to
-  the oracle.
+- **Step 6 started, then paused for the night (30 Sep, night).** A fresh
+  driver took over and sent the oracle a plan for the chunk; the oracle asked
+  for two changes, then signed it off with no P1 or P2 finding left. Robert was
+  asked question 1 and has **not answered**; he stopped for the night. Nothing
+  is recorded, built or started; no decision was made in this session.
+  - **The chunk, as signed off.** Step 6 (`PLAN.md`, "How the trial runs",
+    step 6), questions put to Robert one per message, in order, each recorded
+    (a row in `docs/DECISIONS.md` and this Status), reviewed by the oracle,
+    then committed and pushed: (1) does phase 2, the proof, start? (2) if so,
+    who builds it? (3) only if he picks the existing worker, are its
+    restrictions lifted (`PROOF-BRIEF.md`, "Before this brief is handed
+    over")? Then, if phase 2 starts, a short plan for starting the builder,
+    reviewed by the oracle first; then the builder's first two-hour interval
+    (D77: two-hour check-ins, resuming only on Robert's go-ahead). The chunk
+    ends at whichever comes first: Robert says phase 2 does not start or
+    pauses it (after recording it); the end of the first interval (the
+    builder's report checked, shown to Robert, and his answer recorded); or
+    an earlier phase-2 stop condition (ready for checking, a promise false,
+    the spec wrong, setup blocked). The full checks 1 to 10 of
+    `ACCEPTANCE.md`, with the oracle's independent review, are the next
+    chunk; so is any `RESULT.md` for phase 1 if Robert stops the trial there.
+  - **Question 1, as asked** (repeat it to him tomorrow): (1) start phase 2
+    as planned, all four promises, with the D77 check-ins; (2) start, but
+    prioritize (a) finishes and (b) same answer first, the target staying all
+    four (only the order changes; no locked file changes, whereas dropping a
+    promise would need a new lock); (3) stop the trial at phase 1 and write
+    up its result (the trial's main question stays unanswered); (4) pause and
+    do something else first, such as the 3b proposals below. Nearest
+    precedent: FP2's Theorem 6, a paper proof of nearly (b) to (d) for
+    another language. The check-ins limit each stretch of work; they do not
+    predict the total. The lead recommended option 1. Codex, in its plan
+    review, gave its own view: start phase 2, because "it addresses what the
+    examples cannot establish".
+  - **Question 2, prepared, not asked.** The options: the existing Sonnet
+    worker (D96); a fresh Claude Code session; a fresh Codex session; or
+    another (for example a dedicated Lean prover service; availability not
+    checked). Each in a visible pane (D14). Make no claim about which model
+    proves better. Before naming models, check what this machine's Claude
+    Code and Codex can actually start, and present only those; say what is
+    unverified. On a Codex builder: its family is context, but review
+    independence comes mainly from separate findings and runnable checks.
+    The lead and Codex both lean to a fresh Claude session, for clean context
+    and no restrictions to lift.
+  - **Agreed details for when the builder runs.** Records go in
+    `experiments/03c-checker/trial/phase-2/`: `CLOCK.md` (the lead's clock:
+    each interval's start and end, working and waiting time kept apart),
+    `checkin-1-builder-report.txt` (the builder's report as printed, never
+    edited) and `CHECKIN-1.md` (the lead's marks of which claims it checked).
+    Interval 1 starts when the builder, told phase 2 has started, confirms
+    `lake build Trial Checks Promises Proofs Acceptance` works in
+    `experiments/03c-checker/trial/lean/`; the stub's four "declaration uses
+    `sorry`" warnings are expected and are not a setup failure. At a
+    check-in, a promise counts as proven by `ACCEPTANCE.md`, "Partial work",
+    checked in a copy outside the repository: a fresh checkout of the lock
+    commit `8f1ab40` with only `lean/Proofs.lean` and `lean/Proofs/` copied
+    in from the live tree, so check 2 runs as written. Separately, the full
+    diff of the live repository from `8f1ab40`, untracked files included, is
+    compared path by path with the lead's reviewed changes; any other path is
+    a finding, and one outside both lists stops the check-in and goes to
+    Robert. If Robert says continue, interval 2 starts at his answer: record
+    its start and end in `CLOCK.md` at once and tell the builder to resume;
+    a handoff names the next driver as the clock's keeper and neither resets
+    nor extends the interval. If he wants a later start, that timing is his.
+  - **A fresh session's first action:** check the checkout and the panes,
+    then put question 1 to Robert again (the plan is already signed off; if
+    the oracle was restarted, show it this bullet first so it knows the
+    agreed plan).
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
@@ -276,8 +330,8 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   commit. Robert's standing instruction
   (30 Sep): commit and push often without asking, after each oracle sign-off
   (`CLAUDE.md`, Practical notes). This Status is the handoff written at the end
-  of the 30 Sep late-evening session (step 5), reviewed through and pushed
-  through `8f1ab40` (`main`); a new session checks `git status`, the latest commit and the remote
+  of the 30 Sep night session (step 6 planned, question 1 asked and
+  unanswered), reviewed through and pushed through `d715f76` (`main`); a new session checks `git status`, the latest commit and the remote
   before starting. The lead's tab holds three panes: the lead (left), the
   oracle (top right) and the worker (bottom right). Outside a pinned project, `lean` now resolves to
   4.34.1 (elan's default); the experiments pin 4.34.0, so run `lake` inside
