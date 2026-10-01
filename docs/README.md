@@ -205,20 +205,41 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   terminal, with what it does not show: not the rule for every program, and a
   misreading shared by the predictions and the encoding would look like
   agreement). No question from the run is waiting on him.
-- **Next (proposed; it opens with a plan for the oracle's review).** Step 5 of
-  `PLAN.md` ("How the trial runs"), in a fresh session: the lead writes the
-  promises of Q2 as Lean statements, `ACCEPTANCE.md` (the same in plain English,
-  with the examples as tables) and the proof builder's brief; Codex answers one
-  bounded question ("can a builder pass these checks while failing the intended
-  task?"); Robert approves them; and the full lock goes in `LOCK.md` (the
-  language, both meanings, the predictions and the file that checks them, the
-  promises, the acceptance file and the brief). The Lean statements are code,
-  so under D96 the worker types them to the lead's brief; the lead first reads
-  `PLAN.md` ("What the promises cover", Q2) and `INTERFACE.md`. First action:
-  a plan for that chunk (its scope and stopping point, likely the approved and
-  locked step 5 before step 6) sent to the oracle. Then step 6: Robert sees
-  `RUN-1.md` and decides whether the proof phase starts. Nothing is waiting on
-  Robert now.
+- **Step 5, the promises and the full lock, done (30 Sep, late evening).** Each
+  piece was planned, reviewed and signed off by Codex as oracle before its
+  commit. The four promises of Q2 as Lean statements, typed by the worker from
+  `experiments/03c-checker/trial/WORKER-BRIEF.md` part 4: `lean/Promises.lean`;
+  `lean/Proofs.lean`, the stub (four `sorry`s) a builder would replace; and
+  `lean/Acceptance.lean`, which restates them with every name written from the
+  root (the oracle showed that otherwise a builder's `notation` could swap in a
+  weaker statement). The lead's checks are in `lead-checks/step5/`: the promises
+  hold on all twenty-eight runs, fail on outcomes broken by hand, and three
+  broken copies of the statements were caught. `ACCEPTANCE.md` gives them in
+  plain English with their limits (promise (c) is about the moments the run
+  records; lists not yet handed on are not covered; the proof is about the
+  Lean, whose fidelity to the English rests on run 1), the examples as a table
+  with the predicted answers and totals, the ten checks a proof must pass, and
+  when a single promise counts as proven at a check-in. `PROOF-BRIEF.md` is the
+  builder's brief. Codex, restarted fresh, answered the plan's bounded question
+  ("can a builder pass these checks while failing the intended task?"): no way
+  found beyond the stated limits (a reading, not a proof). Robert approved the
+  three (D100: the promises, the acceptance file and the builder's brief are
+  approved and locked), and the full lock is in
+  `experiments/03c-checker/trial/LOCK.md`: twenty-five frozen files; only
+  `lean/Proofs.lean` and `lean/Proofs/` are writable.
+- **Next: step 6, Robert's decision on the proof phase** (`PLAN.md`, "How the
+  trial runs", step 6). To put to him one per message, in order: (1) having
+  seen the run's result (`RUN-1.md`; he was told it on 30 Sep), does phase 2,
+  the proof, start? (2) if so, who builds it, laying out the real options (the
+  Sonnet worker under D96, a fresh Claude session, Codex, or another), each in
+  a visible pane (D14); (3) only if he chooses the existing worker, whether its
+  restrictions are lifted (it has not seen the predictions, which
+  `ACCEPTANCE.md` holds, nor `lean/Checks/`; `PROOF-BRIEF.md`, "Before this
+  brief is handed over"). Then the builder starts on `PROOF-BRIEF.md`, with the
+  D77 clock (two-hour check-ins, resuming only on Robert's go-ahead) kept by
+  the lead, working and waiting time recorded separately. None of these has
+  been asked yet. A fresh session's first action: a plan for that chunk sent to
+  the oracle.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
@@ -229,10 +250,13 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   agent that is neither the lead nor named). The lead uses it to write code and
   implement: a written brief with a stop condition first, then prompts through
   `herdr agent prompt`. The lead does not write the Lean itself. It wrote both
-  parts of the trial's Lean and, in the 30 Sep evening session, part 3 (D98);
+  parts of the trial's Lean, part 3 (D98: snapshots also record a finishing branch's value and each
+  branch's start) in the 30 Sep evening session, and
+  part 4 (the promises' Lean statements, step 5) in the late-evening session;
   it is idle with most of its context free (about 80% left). It has not seen
-  the predictions and must not be shown them, nor anything under `lean/Checks/`
-  (which holds a copy). Under D99 it runs neither the three unsafe copies nor
+  the predictions and must not be shown them, nor `ACCEPTANCE.md` (which holds
+  them) nor anything under `lean/Checks/` (which holds a copy), unless Robert
+  lifts that (step 6, question 3). Under D99 it runs neither the three unsafe copies nor
   the copy that never reuses on any program until the lead says the proof
   phase has reached them; it confirmed this. Its
   prompt line may show a greyed suggestion such as "Wait for the oracle's
@@ -252,8 +276,8 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   commit. Robert's standing instruction
   (30 Sep): commit and push often without asking, after each oracle sign-off
   (`CLAUDE.md`, Practical notes). This Status is the handoff written at the end
-  of the 30 Sep evening session, reviewed through and pushed through `9f2a073`
-  (`main`); a new session checks `git status`, the latest commit and the remote
+  of the 30 Sep late-evening session (step 5), reviewed through and pushed
+  through `8f1ab40` (`main`); a new session checks `git status`, the latest commit and the remote
   before starting. The lead's tab holds three panes: the lead (left), the
   oracle (top right) and the worker (bottom right). Outside a pinned project, `lean` now resolves to
   4.34.1 (elan's default); the experiments pin 4.34.0, so run `lake` inside
@@ -269,5 +293,11 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
   pipe and saving the exit status at once; then verify the status file, check
   the captured file exists and is complete, and report that. Stop
   reports from Codex sessions can quote predicted values: read them knowing
-  that. Required skills: `driver` for the lead, `oracle` for Codex.
+  that. Lean's kernel re-checker ships with the pinned toolchain: inside
+  `experiments/03c-checker/trial/lean/`, `lake env leanchecker --fresh
+  Acceptance`. A new Markdown file written by a script is formatted with the
+  hook's own command, `bunx prettier --write --print-width 80 --prose-wrap
+  always <file>`. To restart the oracle fresh (as for the bounded question),
+  follow the driver skill's end-of-chunk notes: interrupt its pane, then
+  `herdr agent start oracle-<tab> --kind codex --pane <pane> -- --yolo`. Required skills: `driver` for the lead, `oracle` for Codex.
 - **Parked:** see `research/parking-lot/README.md`.
