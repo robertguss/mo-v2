@@ -1,9 +1,10 @@
 # The trial's acceptance: what the proof must show, and how it is checked
 
-**Status: draft for Robert's approval, 30 Sep 2026.** Written by the lead for
-the trial's phase 1, step 5 (`PLAN.md`, "How the trial runs"). Reviewed by Codex
-as oracle. Approving it does not start phase 2 or choose who builds the proof:
-Robert decides both separately (`PLAN.md` step 6).
+**Status: approved and locked, 30 Sep 2026 (D100: the promises, this file and
+the builder's brief are approved and locked; fingerprints in `LOCK.md`).**
+Written by the lead for the trial's phase 1, step 5 (`PLAN.md`, "How the trial
+runs"). Reviewed by Codex as oracle. Approving it does not start phase 2 or
+choose who builds the proof: Robert decides both separately (`PLAN.md` step 6).
 
 The four promises below are the plain-English form of the Lean statements in
 `lean/Promises.lean`. When this file is approved, it is locked with them

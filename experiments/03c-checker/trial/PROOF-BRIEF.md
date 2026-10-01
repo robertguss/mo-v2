@@ -1,10 +1,10 @@
 # Brief for the phase-2 builder: prove the four promises
 
-**Status: draft for Robert's approval, 30 Sep 2026.** Written by the lead for
-the trial's phase 1, step 5 (`PLAN.md`, "How the trial runs"). Reviewed by Codex
-as oracle. It is locked with the promises and the acceptance file once Robert
-approves it. Approving it does not start phase 2 and does not choose the
-builder: Robert decides both (`PLAN.md` step 6).
+**Status: approved and locked, 30 Sep 2026 (D100: the promises, the acceptance
+file and this brief are approved and locked; fingerprints in `LOCK.md`).**
+Written by the lead for the trial's phase 1, step 5 (`PLAN.md`, "How the trial
+runs"). Reviewed by Codex as oracle. Approving it does not start phase 2 and
+does not choose the builder: Robert decides both (`PLAN.md` step 6).
 
 **For:** the builder, a coding-agent session in its own visible Herdr pane (D14:
 builders work where Robert can see them), chosen by Robert, started by the lead
