@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Install tools and cache dependencies; never run experiments or alter their locks.
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+export PATH="$HOME/.elan/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+export DEBIAN_FRONTEND=noninteractive
+step() { printf '\n[%ss] %s\n' "$SECONDS" "$*"; }
+scratch=$(mktemp -d)
+trap 'rm -rf "$scratch"' EXIT
+
+step 'System build dependencies'
+missing=()
+for package in ca-certificates curl build-essential binutils pkg-config cmake ninja-build libgmp-dev libssl-dev zstd python3; do
+  if ! dpkg-query -W -f='${Status}' "$package" 2>/dev/null | grep -qx 'install ok installed'; then
+    missing+=("$package")
+  fi
+done
+if ((${#missing[@]})); then
+  sudo apt-get update -qq
+  sudo apt-get install -y "${missing[@]}"
+fi
+
+step 'Lean toolchains from the experiment pins'
+if ! command -v elan >/dev/null; then
+  curl -fsSL https://raw.githubusercontent.com/leanprover/elan/v4.1.2/elan-init.sh -o "$scratch/elan-init.sh"
+  bash "$scratch/elan-init.sh" -y --no-modify-path --default-toolchain none
+fi
+while IFS= read -r pin; do
+  elan toolchain install "$pin"
+done < <(find experiments -name lean-toolchain -not -path '*/.lake/*' -exec cat {} + | sort -u)
+
+step 'Rust 1.98.1 (the recorded experiment version)'
+if ! command -v rustup >/dev/null; then
+  curl -fsSL https://sh.rustup.rs -o "$scratch/rustup-init.sh"
+  bash "$scratch/rustup-init.sh" -y --no-modify-path --profile minimal --default-toolchain none
+fi
+if ! rustup toolchain list | grep -q '^1.98.1-'; then
+  rustup toolchain install 1.98.1 --profile minimal
+fi
+rustup override set 1.98.1
+
+step 'Koka 3.2.9'
+if ! command -v koka >/dev/null || ! koka --version | grep -q '3\.2\.9'; then
+  curl -fsSL https://github.com/koka-lang/koka/releases/download/v3.2.9/install.sh -o "$scratch/koka-install.sh"
+  bash "$scratch/koka-install.sh" --version=v3.2.9 --prefix="$HOME/.local" --minimal --force
+fi
+
+step 'Persist tool paths for non-interactive login shells'
+marker='# Mo orb toolchains'
+if ! grep -Fqx "$marker" "$HOME/.bash_profile" 2>/dev/null; then
+  cat >> "$HOME/.bash_profile" <<'PROFILE'
+
+# Mo orb toolchains
+export PATH="$HOME/.elan/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+PROFILE
+fi
+
+step 'Cache locked Cargo dependencies'
+while IFS= read -r lock; do
+  cargo fetch --locked --manifest-path "${lock%Cargo.lock}Cargo.toml"
+done < <(git ls-files '*Cargo.lock')
+
+step 'Ready (Lean projects have no external Lake dependencies)'
+koka --version
+rustc --version
