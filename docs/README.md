@@ -27,7 +27,17 @@ without a decision in `DECISIONS.md`.
 Where things stand. Updated by the lead session whenever it changes; a new
 session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
 
-**30 Sep 2026.**
+**1 Oct 2026.**
+
+**Current action:** Robert approved proceeding with phase 2, all four locked
+promises and the two-hour check-ins (D101: approval to proceed with proof work).
+Builder selection and any replacement of the Herdr arrangement are pending. No
+proof work or timed interval has begun. This session is in an Amp orb:
+`HERDR_ENV` is unset, and `herdr`, `lean` and `lake` are absent from PATH. The
+pane and machine descriptions below are historical, from 30 Sep, not verified
+current sessions. Robert requested `driving-amp-development`; its Oracle reviews
+do not by themselves replace the locked requirement for separate acceptance
+runs. Settle the working arrangement before starting the builder.
 
 - **Design choices.** The nine big choices are made (D24–D33): a static checker
   with contracts and proof on top; no guessing; pure code with in-place updates
@@ -230,8 +240,9 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
 - **Step 6 started, then paused for the night (30 Sep, night).** A fresh
   driver took over and sent the oracle a plan for the chunk; the oracle asked
   for two changes, then signed it off with no P1 or P2 finding left. Robert was
-  asked question 1 and has **not answered**; he stopped for the night. Nothing
-  is recorded, built or started; no decision was made in this session.
+  asked question 1 and stopped for the night without answering. He answered on 1 Oct
+  (D101: approval to proceed with proof work); builder selection is still
+  pending, and no proof work or timed interval has begun.
   - **The chunk, as signed off.** Step 6 (`PLAN.md`, "How the trial runs",
     step 6), questions put to Robert one per message, in order, each recorded
     (a row in `docs/DECISIONS.md` and this Status), reviewed by the oracle,
@@ -248,7 +259,7 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
     the spec wrong, setup blocked). The full checks 1 to 10 of
     `ACCEPTANCE.md`, with the oracle's independent review, are the next
     chunk; so is any `RESULT.md` for phase 1 if Robert stops the trial there.
-  - **Question 1, as asked** (repeat it to him tomorrow): (1) start phase 2
+  - **Question 1, as asked on 30 Sep** (answered on 1 Oct): (1) start phase 2
     as planned, all four promises, with the D77 check-ins; (2) start, but
     prioritize (a) finishes and (b) same answer first, the target staying all
     four (only the order changes; no locked file changes, whereas dropping a
@@ -290,10 +301,10 @@ session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
     its start and end in `CLOCK.md` at once and tell the builder to resume;
     a handoff names the next driver as the clock's keeper and neither resets
     nor extends the interval. If he wants a later start, that timing is his.
-  - **A fresh session's first action:** check the checkout and the panes,
-    then put question 1 to Robert again (the plan is already signed off; if
-    the oracle was restarted, show it this bullet first so it knows the
-    agreed plan).
+  - **A fresh session's first action:** check the checkout and the current
+    environment, then resolve the pending builder/workflow choice above.
+    Question 1 is answered (D101: approval to proceed with proof work); do not
+    ask it again or start the clock before builder selection and setup.
 - **Still open from 3b's result,** to take with Robert one at a time: proposal 2
   (Rust's `Rc` header spends half its space on a weak-holder count Mo may not
   need; a question for design choice 8) and proposal 3 (sharing cost about 3.8×
