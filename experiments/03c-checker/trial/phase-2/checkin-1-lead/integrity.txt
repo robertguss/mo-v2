@@ -1,0 +1,4 @@
+25/25 effective hashes match
+30 allowed paths only
+?? experiments/03c-checker/trial/phase-2/CLOCK.md
+

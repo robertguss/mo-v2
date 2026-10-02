@@ -1,0 +1,40 @@
+**Stopped at the fixed 04:35 UTC deadline and pushed an explicitly unfinished checkpoint.**
+
+Branch: `rob-1136-trial-proofs-high`  
+Local HEAD and verified remote tip: [`8c57ccbd4f41dea91f2cda903d9377362f37270a`](https://github.com/robertguss/mo-v2/commit/8c57ccbd4f41dea91f2cda903d9377362f37270a). Working tree is clean.
+
+### Proven
+- **None of the four promises.** Helper lemmas do not count as completed promises.
+
+### Unfinished
+All four original `sorry` bodies remain in [Proofs.lean](file:///home/user/workspace/repo/experiments/03c-checker/trial/lean/Proofs.lean#L11-L17):
+- **A — finishes:** line 11.
+- **B — same answer:** line 13.
+- **C — no visible changes:** line 15.
+- **D — nothing leaks:** line 17.
+
+The missing work is the whole-evaluator induction: connecting local operation proofs while maintaining typing, binding meanings, future-use information, pending-holder order, and reserved-stack tracking through every expression and `runMain`.
+
+### Counterexamples
+- **None found.** No evidenced spec defect or setup/integrity blocker found.
+
+### Verification and delivery
+- Pinned **Lean 4.34.0**.
+- From an empty `.lake`, in `/home/user/workspace/repo/experiments/03c-checker/trial/lean`:
+  ```text
+  lake build Trial Checks Promises Proofs Acceptance
+  Build completed successfully (48 jobs).
+  ```
+  No errors; **four original `sorry` warnings**.
+- `Trial.promiseA`, `Trial.promiseB`, `Trial.promiseC`, and `Trial.promiseD` each depend on **`[propext, sorryAx]`**. The four acceptance declarations report the same dependencies.
+- All **200 helper theorems** passed development `#print axioms` checks without `sorryAx`.
+- **25/25 effective lock hashes match**, last occurrence wins. Original theorem statements and bodies are unchanged; only an own-module import was added.
+- Fetched and required the agreed remote tip before committing and again before pushing. The push was fast-forward only. No non-proof paths changed.
+
+The checked helper results establish finite readable chains; exact holder accounting and safe local ownership transfers; preservation of protected values through release/disposal snapshots; fresh input bindings; and final no-leak consequences **conditional on final-state invariants**. They do not yet establish those invariants for every complete run.
+
+The locked wording that guided the snapshot work was **“Every moment means every moment the run records”**, together with the first-holding requirement for names.
+
+Files written: `Proofs.lean` and `Proofs/{Bindings, Build, Cleanup, CleanupViews, Closed, Construction, Disposal, DisposalViews, Final, Healthy, Heap, Initial, Inputs, LiveBindings, Liveness, Match, Meanings, Memory, NewBinding, Operations, Ownership, Plain, Reachability, Release, Reserve, Snapshots, Start, Variables, Views}.lean`.
+
+**This is a checkpoint, not acceptance. Awaiting the Lead’s continuation; no new interval started.**

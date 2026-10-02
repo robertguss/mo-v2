@@ -1,0 +1,20 @@
+Trial.accepted_a : Trial.PromiseA
+Trial.accepted_b : Trial.PromiseB
+Trial.accepted_c : Trial.PromiseC
+Trial.accepted_d : Trial.PromiseD
+def Trial.PromiseA : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.Finishes (Trial.runCounted Trial.Rule.approved e s)
+def Trial.PromiseB : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.SameAnswer e s (Trial.runCounted Trial.Rule.approved e s)
+def Trial.PromiseC : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.NoVisibleChange s (Trial.runCounted Trial.Rule.approved e s)
+def Trial.PromiseD : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.NoLeak s (Trial.runCounted Trial.Rule.approved e s)
+'Trial.accepted_a' depends on axioms: [propext, sorryAx]
+'Trial.accepted_b' depends on axioms: [propext, sorryAx]
+'Trial.accepted_c' depends on axioms: [propext, sorryAx]
+'Trial.accepted_d' depends on axioms: [propext, sorryAx]

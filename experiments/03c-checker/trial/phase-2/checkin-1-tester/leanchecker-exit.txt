@@ -1,0 +1,1 @@
+leanchecker exit=0
