@@ -1,0 +1,8 @@
+$ lake env leanchecker --fresh Acceptance
+kernel_exit=0
+$ lake env lean --run Checks/Run.lean > examples.txt
+examples_exit=0
+$ cmp examples.txt ../results/run-1.txt
+cmp_exit=0
+4b85ff0c0561722d584e8c60b730a25d6f5cdca7d0222dde33fcc2d024ca8847  /tmp/rob1137-verification/evidence/examples.txt
+4b85ff0c0561722d584e8c60b730a25d6f5cdca7d0222dde33fcc2d024ca8847  ../results/run-1.txt
