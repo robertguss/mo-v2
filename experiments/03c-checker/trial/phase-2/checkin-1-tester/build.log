@@ -1,0 +1,51 @@
+✔ [2/48] Built Trial.Language (8.2s)
+✔ [3/48] Built Trial.Plain (313ms)
+✔ [4/48] Built Trial.Memory (610ms)
+✔ [5/48] Built Trial.Counted (1.2s)
+✔ [6/48] Built Trial.Broken (208ms)
+✔ [7/48] Built Trial (182ms)
+✔ [9/48] Built Checks.Examples (315ms)
+✔ [10/48] Built Checks.Predictions (343ms)
+✔ [11/48] Built Promises (300ms)
+✔ [13/48] Built Checks.Run (769ms)
+✔ [14/48] Built Checks (189ms)
+✔ [16/48] Built Proofs.Plain (2.1s)
+✔ [17/48] Built Proofs.Memory (438ms)
+✔ [18/48] Built Proofs.Ownership (380ms)
+✔ [19/48] Built Proofs.Start (867ms)
+✔ [20/48] Built Proofs.Heap (306ms)
+✔ [21/48] Built Proofs.Release (997ms)
+✔ [22/48] Built Proofs.Build (587ms)
+✔ [23/48] Built Proofs.Closed (253ms)
+✔ [24/48] Built Proofs.Reserve (335ms)
+✔ [25/48] Built Proofs.Reachability (305ms)
+✔ [26/48] Built Proofs.Initial (584ms)
+✔ [27/48] Built Proofs.Healthy (338ms)
+✔ [28/48] Built Proofs.Operations (315ms)
+✔ [29/48] Built Proofs.Liveness (567ms)
+✔ [30/48] Built Proofs.Bindings (342ms)
+✔ [31/48] Built Proofs.Variables (1.3s)
+✔ [32/48] Built Proofs.Construction (996ms)
+✔ [33/48] Built Proofs.Disposal (495ms)
+✔ [34/48] Built Proofs.Snapshots (233ms)
+✔ [35/48] Built Proofs.Cleanup (483ms)
+✔ [36/48] Built Proofs.Meanings (204ms)
+✔ [37/48] Built Proofs.NewBinding (392ms)
+✔ [38/48] Built Proofs.Views (737ms)
+✔ [39/48] Built Proofs.CleanupViews (476ms)
+✔ [40/48] Built Proofs.DisposalViews (446ms)
+✔ [41/48] Built Proofs.Match (430ms)
+✔ [42/48] Built Proofs.LiveBindings (575ms)
+✔ [43/48] Built Proofs.Final (273ms)
+✔ [44/48] Built Proofs.Inputs (409ms)
+⚠ [45/48] Built Proofs (217ms)
+warning: Proofs.lean:11:8: declaration uses `sorry`
+warning: Proofs.lean:13:8: declaration uses `sorry`
+warning: Proofs.lean:15:8: declaration uses `sorry`
+warning: Proofs.lean:17:8: declaration uses `sorry`
+ℹ [47/48] Built Acceptance (178ms)
+info: Acceptance.lean:18:0: 'Trial.accepted_a' depends on axioms: [propext, sorryAx]
+info: Acceptance.lean:19:0: 'Trial.accepted_b' depends on axioms: [propext, sorryAx]
+info: Acceptance.lean:20:0: 'Trial.accepted_c' depends on axioms: [propext, sorryAx]
+info: Acceptance.lean:21:0: 'Trial.accepted_d' depends on axioms: [propext, sorryAx]
+Build completed successfully (48 jobs).
