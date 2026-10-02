@@ -42,7 +42,20 @@ accepted theorem depends on `sorryAx`. No promise is proven at this point.
 - Expected starting tip: the interval-1 checkpoint above.
 - Gap between authorized intervals: 14 minutes for reporting, independent
   verification and Oracle review, not proof work.
-- Actual stop and result: pending the next original Builder report.
+- Builder reports stopping at 06:49 UTC; final report available by 06:49:47.
+  Two elapsed authorized hours; 0/4 proven, no demonstrated blocker.
+- Checkpoint: [38c4b7a](https://github.com/robertguss/mo-v2/commit/38c4b7accc32cea8a3714eeb93c5917b4431ab8c).
+- Independent Lead/Tester partial checks agreed; Oracle found no P1/P2.
+
+## Interval 3
+
+- Authorized start: 2026-10-02T07:06:00Z.
+- Deadline: 2026-10-02T09:06:00Z.
+- Same Builder, branch, amended baseline and safeguards.
+- Expected starting tip: the interval-2 checkpoint above.
+- Gap between authorized intervals: 17 minutes for reporting and review.
+- Priority: complete nonempty-match composition, then structural induction.
+  Actual stop and results pending original report.
 
 An interval measures elapsed authorized work, not measured active CPU or model
 time. Reports must distinguish waiting between intervals from that duration.

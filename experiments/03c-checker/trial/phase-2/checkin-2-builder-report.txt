@@ -1,0 +1,42 @@
+**Interval 2 stopped at 06:49 UTC. Unfinished checkpoint committed and pushed** to `rob-1136-trial-proofs-high`:
+
+[38c4b7accc32cea8a3714eeb93c5917b4431ab8c](https://github.com/robertguss/mo-v2/commit/38c4b7accc32cea8a3714eeb93c5917b4431ab8c)
+
+Fetched and verified the agreed previous tip before the fast-forward push. Remote HEAD matches; worktree is clean.
+
+### Proven
+- **None: 0/4 exact promises.** Helper progress does not count as a proven promise.
+
+### Unfinished
+- **Finishes:** original `sorry`, `Proofs.lean:11`.
+- **Same answer:** original `sorry`, `Proofs.lean:13`.
+- **No visible change:** original `sorry`, `Proofs.lean:15`.
+- **No leaks:** original `sorry`, `Proofs.lean:17`.
+
+The strengthened evaluator contract now has compiled initialization and constructor proofs for numbers, nil, variables, arithmetic/comparisons, `cons`, `let`, and `if`. Empty-list match composition also compiles. Exclusive/shared nonempty-match setup contracts compile and are connected to the actual evaluator.
+
+**Remaining:** compose the complete nonempty-match case—scrutinee, cleanup, setup, body, finish—with semantic correspondence, historical meanings, saved pending values, and reserved-stack suffix; then close structural induction. `promises_of_contract` derives all four per-run predicates **conditionally on that unfinished evaluator contract**.
+
+### Counterexamples
+- **None found.** No evidenced specification defect, setup blocker, or integrity discrepancy.
+
+### Development verification
+All Lean commands used the pinned trial `lean/` directory.
+
+- `lean --version` → **4.34.0**.
+- Removed `.lake`; `lake build Trial Checks Promises Proofs Acceptance` → **75 jobs, exit 0**, four original `sorry` warnings.
+- Each of `accepted_a`, `accepted_b`, `accepted_c`, `accepted_d` reports **`[propext, sorryAx]`**.
+- Axiom inspection of 289 helper theorems: no `sorryAx` or nonstandard dependencies.
+- `lake env leanchecker --fresh Proofs.MatchSetup` and `--fresh Acceptance` → exit 0.
+- `lake env lean --run Checks/Run.lean` → exit 0; frozen-output diff → exit 0.
+- **25/25 effective lock hashes match.** Stub excluding the own import retains its original fingerprint.
+
+These are development checks, **not independent acceptance**.
+
+The invariants preserve historical binding meanings without requiring dead lists to remain readable; relate environments by lookup despite reversed input order; make holding equivalent to future use; track exactly one nonempty result holder; and allow reservations to be consumed while requiring the output stack to be a suffix. Memory health applies at completed-operation boundaries; snapshot visibility is tracked separately.
+
+Relevant locked wording: **“Every moment” means every moment the run records** and **“progress is counted in promises proven, not helper lemmas.”**
+
+Files written: `Proofs.lean` and 27 new `Proofs/*.lean` modules: Arithmetic, BindContract, BranchContract, BuildContract, CleanupContract, ConsContract, Environment, ExclusiveSetup, IfContract, Induction, Initialization, InputCleanup, LetContract, LetSetup, MatchBindings, MatchLiveness, MatchNil, MatchSetup, PendingRelease, ReleaseContract, ReleaseFrame, ReserveContract, RunContract, SharedContract, SharedSetup, StateSteps, VariableContract.
+
+**Stopped awaiting Lead continuation.**
