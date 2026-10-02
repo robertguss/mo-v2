@@ -1,0 +1,8 @@
+experiments/03c-checker/trial/lean/Proofs.lean:6:stay exactly as they are; only each `sorry` is to be replaced by a proof.
+experiments/03c-checker/trial/lean/Proofs.lean:11:theorem promiseA : PromiseA := sorry
+experiments/03c-checker/trial/lean/Proofs.lean:13:theorem promiseB : PromiseB := sorry
+experiments/03c-checker/trial/lean/Proofs.lean:15:theorem promiseC : PromiseC := sorry
+experiments/03c-checker/trial/lean/Proofs.lean:17:theorem promiseD : PromiseD := sorry
+experiments/03c-checker/trial/lean/Proofs/DisposalViews.lean:67:reserved prefix, and preserves every owned value throughout its observations. -/
+experiments/03c-checker/trial/lean/Proofs/Disposal.lean:26:stack and every owned list unchanged. The prefix condition is the branch-stack
+experiments/03c-checker/trial/lean/Proofs/CleanupContract.lean:6:as proof notation for induction over that loop. -/

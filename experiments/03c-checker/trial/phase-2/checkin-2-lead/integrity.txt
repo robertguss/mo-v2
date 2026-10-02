@@ -1,0 +1,4 @@
+25/25 effective hashes match
+57 allowed paths only
+git status: ''
+lock diff: ''
