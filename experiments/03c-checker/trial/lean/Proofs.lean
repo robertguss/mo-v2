@@ -1,4 +1,5 @@
 import Promises
+import Proofs.Inputs
 
 /-!
 This file is the stub the phase-2 builder replaces the bodies of. The statements
