@@ -1,5 +1,11 @@
 # Decisions
 
+> Historical register through D101, preserved unchanged below. The full text
+> is imported into the [Mo v2 Linear project](https://linear.app/robert-guss/project/mo-v2-42cd07d1b0d1).
+> New decisions and approvals belong only in the [live register](https://linear.app/robert-guss/document/decisions-and-approvals-live-register-360d6e9c3d64),
+> starting with D102, Robert's request to migrate coordination to Linear.
+> Do not append new decisions here or rewrite historical rows.
+
 One line per decision. Robert makes every decision; an AI may propose, never
 decide. A row states the decision, not the argument; the argument lives in
 `DECISION-MAP.md` or the conversation it came from.

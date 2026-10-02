@@ -1,5 +1,10 @@
 # Decision map
 
+> Historical research map, not a live backlog. Current proposals and their
+> classification are in Linear's [Design parking lot](https://linear.app/robert-guss/document/design-parking-lot-questions-not-an-execution-queue-86faf283b14a).
+> Later recorded decisions take precedence over recommendations below; new
+> approvals belong in Linear, not the repository's historical decision log.
+
 > **Parking lot, not a queue (D10).** These questions get answered one at a
 > time, when an experiment makes one of them concrete. Don't try to settle them
 > in advance.
