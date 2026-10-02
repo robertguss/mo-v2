@@ -1,0 +1,68 @@
+experiments/03c-checker/trial/lean/Proofs.lean:1:import Promises
+experiments/03c-checker/trial/lean/Proofs.lean:2:import Proofs.Inputs
+experiments/03c-checker/trial/lean/Proofs.lean:6:stay exactly as they are; only each `sorry` is to be replaced by a proof.
+experiments/03c-checker/trial/lean/Proofs.lean:9:namespace Trial
+experiments/03c-checker/trial/lean/Proofs.lean:11:theorem promiseA : PromiseA := sorry
+experiments/03c-checker/trial/lean/Proofs.lean:13:theorem promiseB : PromiseB := sorry
+experiments/03c-checker/trial/lean/Proofs.lean:15:theorem promiseC : PromiseC := sorry
+experiments/03c-checker/trial/lean/Proofs.lean:17:theorem promiseD : PromiseD := sorry
+experiments/03c-checker/trial/lean/Proofs/Build.lean:1:import Proofs.Release
+experiments/03c-checker/trial/lean/Proofs/Build.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/CleanupViews.lean:1:import Proofs.Views
+experiments/03c-checker/trial/lean/Proofs/CleanupViews.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Heap.lean:1:import Proofs.Start
+experiments/03c-checker/trial/lean/Proofs/Heap.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Ownership.lean:1:import Proofs.Memory
+experiments/03c-checker/trial/lean/Proofs/Ownership.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Liveness.lean:1:import Proofs.Operations
+experiments/03c-checker/trial/lean/Proofs/Liveness.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Variables.lean:1:import Proofs.Bindings
+experiments/03c-checker/trial/lean/Proofs/Variables.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Construction.lean:1:import Proofs.Variables
+experiments/03c-checker/trial/lean/Proofs/Construction.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/LiveBindings.lean:1:import Proofs.Match
+experiments/03c-checker/trial/lean/Proofs/LiveBindings.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Final.lean:1:import Proofs.LiveBindings
+experiments/03c-checker/trial/lean/Proofs/Final.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Disposal.lean:1:import Proofs.Construction
+experiments/03c-checker/trial/lean/Proofs/Disposal.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Disposal.lean:26:stack and every owned list unchanged. The prefix condition is the branch-stack
+experiments/03c-checker/trial/lean/Proofs/Initial.lean:1:import Proofs.Reachability
+experiments/03c-checker/trial/lean/Proofs/Initial.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Views.lean:1:import Proofs.NewBinding
+experiments/03c-checker/trial/lean/Proofs/Views.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Bindings.lean:1:import Proofs.Liveness
+experiments/03c-checker/trial/lean/Proofs/Bindings.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Plain.lean:1:import Promises
+experiments/03c-checker/trial/lean/Proofs/Plain.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/NewBinding.lean:1:import Proofs.Meanings
+experiments/03c-checker/trial/lean/Proofs/NewBinding.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Inputs.lean:1:import Proofs.Final
+experiments/03c-checker/trial/lean/Proofs/Inputs.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/DisposalViews.lean:1:import Proofs.CleanupViews
+experiments/03c-checker/trial/lean/Proofs/DisposalViews.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/DisposalViews.lean:67:reserved prefix, and preserves every owned value throughout its observations. -/
+experiments/03c-checker/trial/lean/Proofs/Snapshots.lean:1:import Proofs.Disposal
+experiments/03c-checker/trial/lean/Proofs/Snapshots.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Operations.lean:1:import Proofs.Healthy
+experiments/03c-checker/trial/lean/Proofs/Operations.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Cleanup.lean:1:import Proofs.Snapshots
+experiments/03c-checker/trial/lean/Proofs/Cleanup.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Release.lean:1:import Proofs.Heap
+experiments/03c-checker/trial/lean/Proofs/Release.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Reserve.lean:1:import Proofs.Closed
+experiments/03c-checker/trial/lean/Proofs/Reserve.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Closed.lean:1:import Proofs.Build
+experiments/03c-checker/trial/lean/Proofs/Closed.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Match.lean:1:import Proofs.DisposalViews
+experiments/03c-checker/trial/lean/Proofs/Match.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Reachability.lean:1:import Proofs.Reserve
+experiments/03c-checker/trial/lean/Proofs/Reachability.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Start.lean:1:import Proofs.Ownership
+experiments/03c-checker/trial/lean/Proofs/Start.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Healthy.lean:1:import Proofs.Initial
+experiments/03c-checker/trial/lean/Proofs/Healthy.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Memory.lean:1:import Proofs.Plain
+experiments/03c-checker/trial/lean/Proofs/Memory.lean:3:namespace Trial.Proofs
+experiments/03c-checker/trial/lean/Proofs/Meanings.lean:1:import Proofs.Cleanup
+experiments/03c-checker/trial/lean/Proofs/Meanings.lean:3:namespace Trial.Proofs
