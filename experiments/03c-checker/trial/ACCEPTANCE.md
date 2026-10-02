@@ -1,5 +1,26 @@
 # The trial's acceptance: what the proof must show, and how it is checked
 
+**Operational amendment (D103, Robert's approved trial-only Amp workflow):**
+the Lead and a fresh-orb Tester now perform the two independent acceptance runs
+on the same candidate commit. Each records findings before seeing the other's;
+neither writes the proofs. In the phase-2 checking instructions below, "Codex"
+means this Tester, not the Oracle reviewer. Historical observations attributed
+to Codex remain historical observations. All four promises, their limits,
+example predictions and ten substantive checks remain unchanged.
+
+The comparison baseline for check 2 is the amended lock commit pinned in the
+Builder's plan and Linear before dispatch. Check a fresh copy of that baseline
+with only the candidate's allowed proof files copied in; separately inspect the
+whole candidate diff and untracked files against the baseline. Only separately
+reviewed Lead-owned reports may accompany proof work; they are not Builder
+write permission and cannot modify locked files. Preserve both reviews.
+
+Two-hour check-ins now resume automatically through the Lead after the report,
+within the unchanged scope, rather than waiting for Robert. The existing
+partial-proof requirements below still apply. Counterexamples, evidenced spec
+defects, integrity problems and setup blockers stop the affected work. See the
+current `PROOF-BRIEF.md` and amended fingerprints in `LOCK.md`.
+
 **Status: approved and locked, 30 Sep 2026 (D100: the promises, this file and
 the builder's brief are approved and locked; fingerprints in `LOCK.md`).**
 Written by the lead for the trial's phase 1, step 5 (`PLAN.md`, "How the trial
