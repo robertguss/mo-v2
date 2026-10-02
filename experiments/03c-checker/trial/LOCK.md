@@ -111,3 +111,24 @@ The rows in the earlier sections record the approved documents as they stood
 when the predictions were frozen. Where a file appears in both, this table is
 the one in force; `PREDICTIONS.md`, `RULE.md`, `EXAMPLES.md`, `INTERFACE.md`,
 `PLAN.md` and `PREDICTIONS-BRIEF.md` are unchanged since.
+
+## Amended on 2 Oct 2026 UTC: phase-2 Amp operations
+
+Robert approved D103 (the trial-only Amp workflow amendment) in the
+[Lead thread](https://ampcode.com/threads/T-01a0f9e2-cd4f-7408-a467-ecdb636cdeb7),
+recorded in Linear's live decision register. Only the operational documents
+below change: visible Amp Builder, proof-path-only commits/pushes, separate
+Lead/Tester acceptance runs, and automatic continuation after two-hour reports.
+The four promises, all ten substantive checks, language, semantics, examples,
+predictions and executable acceptance files do not change.
+
+These three rows supersede only their corresponding rows above. All other
+full-lock rows remain in force; prior fingerprints are deliberately preserved.
+The Lead pins the commit containing this amendment as the acceptance baseline
+before any proof work. It is not the later Builder plan or candidate commit.
+
+| File | SHA-256 |
+| ---- | ------- |
+| `PLAN.md` | `246aab8585be561ac4262a7e3380736f8cfd92540de1c6b488edd83215d4370e` |
+| `ACCEPTANCE.md` | `bff59be8a2f6867ea60cad2a984d02b45fc4f76523156c01f6505f055166de50` |
+| `PROOF-BRIEF.md` | `602b5bc04a463e508e16da2eb008548857b99c8a8b2329da4dac5f98db4c7230` |

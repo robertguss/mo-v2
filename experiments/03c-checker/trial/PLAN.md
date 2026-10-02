@@ -1,5 +1,40 @@
 # Experiment 3c trial: the reuse rule on a tiny language
 
+## Operational amendment: Amp execution
+
+D103 (Robert's approved trial-only Amp workflow amendment, recorded in Linear)
+replaces only the phase-2 execution arrangements below. Phase 1 and its
+historical status remain unchanged. Phase 2's four promises and ten substantive
+acceptance checks are unchanged.
+
+- A visible Grok47 Amp Builder thread in a fresh orb replaces the Herdr builder.
+  It may commit and push only the permitted proof files to its dedicated branch;
+  commits are submissions or checkpoints, not acceptance or permission to merge.
+- The Lead and a fresh-orb Tester replace the Lead/Codex acceptance pair. Each
+  runs the required checks on the same candidate commit and records findings
+  before seeing the other's. Neither writes the submitted proofs. Oracle review
+  is not a substitute for either run. Historical references to Codex below
+  retain their historical meaning; phase-2 acceptance references mean Tester.
+- Two-hour elapsed intervals remain. At each deadline the Builder records its
+  original report, with proven, unfinished and counterexample outcomes separate.
+  The Lead records the clock, checked versus reported claims, and working versus
+  waiting time. Restarting never resets an interval. After reporting, the Lead
+  authorizes the next interval automatically within this unchanged trial scope;
+  Robert need not restart it. The Builder waits for that Lead message, not a
+  new human decision, so deadlines and candidate reviews remain coordinated.
+- Counterexamples, evidenced specification defects, integrity problems and
+  setup blockers stop the affected work immediately. Ordinary unfinished proof
+  work is inconclusive, not a reason to alter promises. A complete candidate
+  stops implementation for independent acceptance before further work.
+- The amended lock commit is pinned before dispatch. Acceptance uses a fresh
+  copy of that baseline with only permitted proof files from the candidate,
+  plus a separate review of the entire candidate diff and untracked files.
+  Lead-owned clock/review records do not widen Builder write permissions.
+
+This amendment supersedes the phase-2 Herdr requirement, named acceptance pair,
+and human restart requirement in the historical text. `PROOF-BRIEF.md` gives
+the current executable instructions; `LOCK.md` preserves prior fingerprints.
+
 **Status: approved, 27 Sep 2026** (D78: the trial plan is approved; each later
 piece still needs Robert's approval). Written by the lead and reviewed by Codex
 (its findings are at the end). Decided: the scope, T2 (D76: the rule on

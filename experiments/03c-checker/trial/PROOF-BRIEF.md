@@ -1,14 +1,19 @@
 # Brief for the phase-2 builder: prove the four promises
 
+**Operational amendment:** D103, Robert's approved trial-only Amp workflow,
+changes the execution instructions below, not any promise or substantive check.
+The original fingerprints remain in `LOCK.md` alongside the amended ones.
+
 **Status: approved and locked, 30 Sep 2026 (D100: the promises, the acceptance
 file and this brief are approved and locked; fingerprints in `LOCK.md`).**
 Written by the lead for the trial's phase 1, step 5 (`PLAN.md`, "How the trial
 runs"). Reviewed by Codex as oracle. Approving it does not start phase 2 and
 does not choose the builder: Robert decides both (`PLAN.md` step 6).
 
-**For:** the builder, a coding-agent session in its own visible Herdr pane (D14:
-builders work where Robert can see them), chosen by Robert, started by the lead
-only after Robert says phase 2 starts.
+**For:** the Grok47 Builder in a fresh Amp orb thread visible to Robert. The
+Lead dispatches it with the exact branch, amended lock baseline and plan commit.
+Phase 2 and this arrangement are approved; begin only on the Lead's instruction
+after confirming that the remote branch tip equals the supplied plan commit.
 
 **Before this brief is handed over.** Choosing a builder does not lift any
 restriction that session is already under. The worker that wrote the trial's
@@ -83,7 +88,7 @@ anything else, in the trial or anywhere in the repository.
   `experiments/03c-checker/trial/lean/`, from an empty `.lake`, with no errors
   and no warnings.
 - Run programs only under the approved rule. The broken copies of the rule are
-  for the lead's and Codex's checks after the proof (`ACCEPTANCE.md`, checks 9
+  for the Lead's and Tester's checks after the proof (`ACCEPTANCE.md`, checks 9
   and 10).
 
 To see what a promise means on a concrete run, you may evaluate it: each per-run
@@ -95,26 +100,30 @@ in it.
 ## How your work is checked
 
 Exactly as `ACCEPTANCE.md` says, "How a proof is checked", checks 1 to 10, by
-the lead and by Codex, each writing their findings before seeing the other's.
+the Lead and a fresh-orb Tester, each writing findings before seeing the other's,
+on the same candidate commit. Neither acceptance worker writes the proofs.
 You build your work and read Lean's messages as often as you like while you work
 (including `lake build Trial Checks Promises Proofs Acceptance` and the axioms
 it prints); that is development, not acceptance. You do not write or change any
 of the checks, and you do not run the broken copies of the rule. Whether the
-work is accepted is decided only by the lead's and Codex's independent run of
-checks 1 to 10; a build that passes while a check fails is not accepted.
+work is accepted is decided only by the Lead's and Tester's independent runs of
+checks 1 to 10; a build that passes while a check fails is not accepted. Oracle
+review does not substitute for either acceptance run.
 
-## The clock and check-ins (D77)
+## The clock and check-ins
 
-Robert's stop rule for this work (D77: two-hour check-ins, resuming only on his
-go-ahead):
+Two-hour check-ins remain; D103 (the approved Amp workflow amendment) replaces
+the human restart requirement of D77 (the original two-hour stop rule):
 
 - Each work interval is 2 hours of elapsed time. The first starts when the lead
   tells you phase 2 has started and you have the locked files and a working
-  setup; each later one starts when Robert explicitly says to continue.
+  setup. Report setup readiness before proof edits; the Lead supplies the UTC
+  start and deadline. Each later interval starts on the Lead's continuation
+  message after a report, automatically unless a hard stop applies.
 - The lead keeps the clock, and records working time and waiting time
-  separately, and tells you when an interval ends. Stop then, write your report
-  (below), and wait. No answer means you stay stopped. Restarting your session
-  does not reset an interval.
+  separately. Check the UTC deadline yourself too. Stop then, preserve your
+  checkpoint and original report (below), and await the Lead's continuation,
+  not a new human approval. Restarting your session does not reset an interval.
 - Robert may change the interval at a check-in.
 
 ## Stop conditions
@@ -123,7 +132,7 @@ Stop and report as soon as one of these holds:
 
 1. **Ready for checking:** all four theorems are proven, with nothing left from
    the list in "Rules for the Lean", and the build is clean. This submits the
-   work for the lead's and Codex's checks; phase 2 is complete only when those
+   work for the Lead's and Tester's checks; phase 2 is complete only when those
    checks are done and the result is written up.
 2. **Check-in:** the interval has ended.
 3. **A promise is false:** you find a concrete well-formed program and valid
@@ -140,12 +149,21 @@ Stop and report as soon as one of these holds:
    condition: it is unfinished work, reported at the check-in. Only Robert can
    approve a change to a locked file, followed by a new lock.
 5. **Setup blocked:** Lean or Lake cannot run as needed.
+6. **Integrity problem:** a lock, branch tip, allowed-path boundary or acceptance
+   safeguard is violated. Preserve the evidence and stop; do not repair a
+   locked artifact or conceal the discrepancy.
 
-Do not commit or push. The lead commits after the checks.
+You may commit and push only the permitted proof paths to the assigned branch,
+including an explicitly labelled unfinished checkpoint at a check-in. Before
+each push fetch and require the remote tip still equals the last agreed tip;
+push fast-forward only. Stop on unexpected movement. Report the full commit,
+build output and remaining unfinished proofs. A checkpoint is not acceptance.
+Do not write Linear, call Oracle, create child agents/threads, merge, open a PR,
+deploy or release. The Lead owns coordination and all non-proof records.
 
 ## Your report
 
-At every stop, in your pane, three separate lists (D75: proven, unfinished and
+At every stop, in your Amp thread, three separate lists (D75: proven, unfinished and
 counterexamples are always kept apart):
 
 1. **Proven:** each of the four promises Lean has checked in full, with nothing

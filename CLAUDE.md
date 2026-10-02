@@ -15,8 +15,9 @@ There is no separate handoff file or parallel repository backlog.
 Git retains exact versioned code, approved specifications, locks, research and
 raw evidence, indexed by commit-pinned links in Linear. A Linear summary or
 issue state cannot amend a locked requirement: Robert must approve the change
-and a new lock must preserve the old record. The migration does not authorize
-the pending Builder/workflow replacement (ROB-1132) or start a proof interval.
+and a new lock must preserve the old record. D103, Robert's trial-only Amp
+workflow amendment, authorizes the arrangement below after its operational
+documents are reviewed, committed and relocked (ROB-1132).
 Standing rules below remain binding. TheBrain is no longer used. The repo is
 public at https://github.com/robertguss/mo-v2.
 
@@ -24,13 +25,26 @@ public at https://github.com/robertguss/mo-v2.
 
 Linear: team ROB, project Mo v2 (8c0bbed4-77f7-49e2-a8be-92fee998e530)
 Delivery: push-branch
-Builder: grok47 (proposed for the trial; blocked on ROB-1132)
-Tester: inherit (does not replace locked separate acceptance runs)
+Builder: grok47
+Tester: inherit
 Done: merged
 
 Status mapping: Ready, Planning, Building, In Review, Needs Input (blocked),
-Backlog (deferred/unapproved), Done. Do not start trial work before ROB-1132
-is resolved and any required locked-brief amendment is approved and relocked.
+Backlog (deferred/unapproved), Done. The Lead consults Oracle to prioritize
+eligible work and coordinates the Builder and Tester continuously. Scientific
+changes and merges still require Robert's approval.
+
+For the trial under D103 (the approved Amp workflow amendment), a visible
+Grok47 Builder thread in a fresh orb may commit and push only its permitted
+proof files to the dedicated branch. The Lead and a fresh-orb Tester each run
+the locked acceptance checks on the same commit and record findings before
+seeing the other's; neither writes the proofs. Oracle review is additional
+review, not a substitute for either acceptance run. Keep two-hour reports and
+automatic continuation within the unchanged approved trial scope, stopping for
+counterexamples, specification defects, integrity problems or setup blockers.
+The trial documents and their amended lock define the exact procedure. This
+trial-only exception supersedes the Herdr and named-reviewer rules below for
+this work, without changing historical decisions or other experimental scopes.
 
 ## Why v2 exists
 
