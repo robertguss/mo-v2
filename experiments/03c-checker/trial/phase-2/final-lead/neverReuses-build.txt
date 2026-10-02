@@ -1,0 +1,11 @@
+✔ [2/13] Built Trial.Language (384ms)
+✔ [3/13] Built Trial.Plain (361ms)
+✔ [4/13] Built Trial.Memory (751ms)
+✔ [5/13] Built Trial.Counted (1.4s)
+✔ [6/13] Built Trial.Broken (247ms)
+✔ [7/13] Built Trial (199ms)
+✔ [9/13] Built Checks.Examples (363ms)
+✔ [10/13] Built Checks.Predictions (386ms)
+✔ [11/13] Built Checks.Run (1.1s)
+✔ [12/13] Built Checks (199ms)
+Build completed successfully (13 jobs).

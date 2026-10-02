@@ -1,0 +1,20 @@
+{
+  "Allocations (memory's record)": 18,
+  "Reuses (memory's record)": 18,
+  "Frees (memory's record)": 18,
+  "Timing: Branch value worked out: [2, 3]; intermediate result holds c2; c1": 1,
+  "Timing: Branch value worked out: [2, 3]; intermediate result holds c2; releases already recorded": 1,
+  "Timing: Inner branch value worked out: number 9 holds no cell; c1": 1,
+  "Timing: Inner branch value worked out: number 9 holds no cell; c2": 1,
+  "Timing: Inner branch value worked out: number 9 holds no cell; releases already recorded": 1,
+  "Timing: Inner branch value handed on: only its c2 is freed; c1": 1,
+  "Timing: Inner branch value handed on: only its c2 is freed; releases already recorded": 1,
+  "Timing: Outer branch value worked out: number 9 holds no cell; c1": 1,
+  "Timing: Outer branch value worked out: number 9 holds no cell; releases already recorded": 1,
+  "Timing: inner and outer set-aside cells belong to different branches": 1,
+  "Timing: Before the branch runs: unused rest given up; detached tail already freed; c1": 1,
+  "Timing: Before the branch runs: unused rest given up; detached tail already freed; releases already recorded": 1,
+  "Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; c1": 1,
+  "Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; releases already recorded": 1,
+  "Timing: t has given up its holder before the branch runs": 1
+}

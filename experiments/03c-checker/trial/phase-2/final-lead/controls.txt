@@ -1,0 +1,36 @@
+Except.ok ()
+Except.ok ()
+Except.ok ()
+("approved C", true)
+("approved D", true)
+("K2 C", false)
+("K3 D", false)
+("K4 C", false)
+[(Trial.StepKind.start, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.holderMoved, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.branchChosen, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.matchStep4Done, Except.error "unreadable: cell 1 is set aside"),
+ (Trial.StepKind.branchStarts, Except.error "unreadable: cell 1 is set aside"),
+ (Trial.StepKind.holderMoved, Except.error "unreadable: cell 1 is set aside"),
+ (Trial.StepKind.newCellBuilt, Except.ok (Trial.PlainValue.list [8, 9])),
+ (Trial.StepKind.branchValueWorkedOut, Except.ok (Trial.PlainValue.list [8, 9])),
+ (Trial.StepKind.branchValueHandedOn, Except.ok (Trial.PlainValue.list [8, 9])),
+ (Trial.StepKind.end, Except.ok (Trial.PlainValue.list [8, 9]))]
+[{ addr := 2, item := 9, link := none, count := 1, status := Trial.Status.live }]
+[(Trial.StepKind.start, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.holderMoved, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.branchChosen, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.newHolder, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.holderGivenUp, Except.ok (Trial.PlainValue.list [4, 9])),
+ (Trial.StepKind.cellFreed, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.holderGivenUp, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.cellFreed, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.matchStep4Done, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.branchStarts, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.holderMoved, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.newCellBuilt, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.branchValueWorkedOut, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.branchValueHandedOn, Except.error "unreadable: cell 1 is not allocated"),
+ (Trial.StepKind.end, Except.error "unreadable: cell 1 is not allocated")]
+Except.ok (Trial.PlainValue.list [8, 9])
+[Trial.MemEvent.released 1, Trial.MemEvent.created 3]

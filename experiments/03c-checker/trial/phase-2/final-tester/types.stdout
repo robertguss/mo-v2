@@ -1,0 +1,32 @@
+theorem Trial.promiseA : Trial.PromiseA :=
+fun e s h => (Trial.Proofs.promises_of_contract e (Trial.Proofs.eval_contract e) s h).left
+theorem Trial.promiseB : Trial.PromiseB :=
+fun e s h => (Trial.Proofs.promises_of_contract e (Trial.Proofs.eval_contract e) s h).right.left
+theorem Trial.promiseC : Trial.PromiseC :=
+fun e s h => (Trial.Proofs.promises_of_contract e (Trial.Proofs.eval_contract e) s h).right.right.left
+theorem Trial.promiseD : Trial.PromiseD :=
+fun e s h => (Trial.Proofs.promises_of_contract e (Trial.Proofs.eval_contract e) s h).right.right.right
+theorem Trial.accepted_a : Trial.PromiseA :=
+Trial.promiseA
+theorem Trial.accepted_b : Trial.PromiseB :=
+Trial.promiseB
+theorem Trial.accepted_c : Trial.PromiseC :=
+Trial.promiseC
+theorem Trial.accepted_d : Trial.PromiseD :=
+Trial.promiseD
+def Trial.PromiseA : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.Finishes (Trial.runCounted Trial.Rule.approved e s)
+def Trial.PromiseB : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.SameAnswer e s (Trial.runCounted Trial.Rule.approved e s)
+def Trial.PromiseC : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.NoVisibleChange s (Trial.runCounted Trial.Rule.approved e s)
+def Trial.PromiseD : Prop :=
+∀ (e : Trial.Expr) (s : Trial.Start),
+  Trial.validStart e s = Except.ok () → Trial.NoLeak s (Trial.runCounted Trial.Rule.approved e s)
+'Trial.accepted_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Trial.accepted_b' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Trial.accepted_c' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Trial.accepted_d' depends on axioms: [propext, Classical.choice, Quot.sound]

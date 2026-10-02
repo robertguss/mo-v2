@@ -1,0 +1,71 @@
+✔ [2/69] Built Trial.Language (476ms)
+✔ [3/69] Built Trial.Plain (369ms)
+✔ [4/69] Built Trial.Memory (800ms)
+✔ [5/69] Built Trial.Counted (1.4s)
+✔ [6/69] Built Trial.Broken (280ms)
+✔ [7/69] Built Trial (216ms)
+✔ [8/69] Built Promises (518ms)
+✔ [9/69] Built Proofs.Plain (2.7s)
+✔ [10/69] Built Proofs.Memory (502ms)
+✔ [11/69] Built Proofs.Ownership (608ms)
+✔ [12/69] Built Proofs.Start (1.0s)
+✔ [13/69] Built Proofs.Heap (324ms)
+✔ [14/69] Built Proofs.Release (1.2s)
+✔ [15/69] Built Proofs.Build (679ms)
+✔ [16/69] Built Proofs.Closed (310ms)
+✔ [17/69] Built Proofs.Reserve (375ms)
+✔ [18/69] Built Proofs.Reachability (361ms)
+✔ [19/69] Built Proofs.Initial (705ms)
+✔ [20/69] Built Proofs.Healthy (374ms)
+✔ [21/69] Built Proofs.Operations (334ms)
+✔ [22/69] Built Proofs.Liveness (548ms)
+✔ [23/69] Built Proofs.Bindings (493ms)
+✔ [24/69] Built Proofs.Variables (1.6s)
+✔ [25/69] Built Proofs.Construction (1.0s)
+✔ [26/69] Built Proofs.Disposal (585ms)
+✔ [27/69] Built Proofs.Snapshots (321ms)
+✔ [28/69] Built Proofs.Cleanup (633ms)
+✔ [29/69] Built Proofs.Meanings (280ms)
+✔ [30/69] Built Proofs.NewBinding (508ms)
+✔ [31/69] Built Proofs.Views (891ms)
+✔ [32/69] Built Proofs.CleanupViews (654ms)
+✔ [33/69] Built Proofs.DisposalViews (496ms)
+✔ [34/69] Built Proofs.Match (455ms)
+✔ [35/69] Built Proofs.LiveBindings (667ms)
+✖ [36/69] Building Proofs.Final (295ms)
+trace: .> LEAN_PATH=/tmp/rob1137-test/control-forgetsRest/.lake/build/lib/lean /home/user/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean /tmp/rob1137-test/control-forgetsRest/Proofs/Final.lean -o /tmp/rob1137-test/control-forgetsRest/.lake/build/lib/lean/Proofs/Final.olean -i /tmp/rob1137-test/control-forgetsRest/.lake/build/lib/lean/Proofs/Final.ilean -c /tmp/rob1137-test/control-forgetsRest/.lake/build/ir/Proofs/Final.c --setup /tmp/rob1137-test/control-forgetsRest/.lake/build/ir/Proofs/Final.setup.json --json
+error: Proofs/Final.lean:45:55: unsolved goals
+e : Expr
+s : Start
+raw : RawValue
+t : RunState
+hv : validStart e s = Except.ok ()
+hr :
+  runMain Variant.approved e s.inputs
+      { mem := s.toMemory, log := [], bindings := [], scope := [], pending := [], outside := s.outside, setAside := [],
+        nextBranch := 0, nextBinding := 0, snaps := [] } =
+    (Except.ok raw, t)
+⊢ (match
+      runMain
+        { misreportsReuse := Variant.approved.misreportsReuse, reusesShared := Variant.approved.reusesShared,
+          forgetsRest := true, freesHeld := Variant.approved.freesHeld, neverReuses := Variant.approved.neverReuses }
+        e s.inputs
+        { mem := s.toMemory, log := [], bindings := [], scope := [], pending := [], outside := s.outside,
+          setAside := [], nextBranch := 0, nextBinding := 0, snaps := [] } with
+    | (r, st) =>
+      {
+        result :=
+          match r with
+          | Except.ok raw => Result.answer raw
+          | Except.error why => Result.failedRunning why,
+        memory := st.mem, log := st.log, record := st.mem.record, states := st.snaps }) =
+    { result := Result.answer raw, memory := t.mem, log := t.log, record := t.mem.record, states := t.snaps }
+warning: Proofs/Final.lean:46:79: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [runCounted, Rule.variant, runCountedWith, hv, StateT.run, ExceptT.run]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- Proofs.Final

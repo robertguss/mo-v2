@@ -1,0 +1,38 @@
+**All-four proof candidate committed and pushed.** Stopped early at **07:14:34 UTC**, before the 09:06 deadline.
+
+Branch: `rob-1136-trial-proofs-high`  
+Commit: [baf1d52649bc7a50ff7df19d0368d182efdb3fbd](https://github.com/robertguss/mo-v2/commit/baf1d52649bc7a50ff7df19d0368d182efdb3fbd)
+
+Fetched and verified the agreed previous tip before the fast-forward push. Local and remote HEAD match; worktree is clean.
+
+### Proven
+Lean checks all four exact universal promises:
+1. **Finishes:** every valid run reaches a readable answer.
+2. **Same answer:** counted execution agrees with the plain meaning.
+3. **No visible change:** outside lists and still-held named lists retain their meanings at recorded snapshots.
+4. **No leaks:** final memory contains exactly the reachable cells, with correct counts and no remaining reservations.
+
+Each root promise and accepted theorem reports exactly:
+```text
+[propext, Classical.choice, Quot.sound]
+```
+**No `sorryAx`.**
+
+### Unfinished
+- **No remaining proof bodies or induction cases.**
+- **Independent Lead/Tester acceptance remains required.** This is a candidate, not final acceptance. Builder did not run broken-copy checks 9–10.
+
+### Counterexamples
+- **None found.** No evidenced specification defect or integrity blocker.
+
+### Verification
+Using the trial `lean/` directory and pinned Lean **4.34.0**:
+- Removed `.lake`; `lake build Trial Checks Promises Proofs Acceptance` → **77 jobs, exit 0, no errors or warnings**.
+- `lake env leanchecker --fresh Acceptance` → **exit 0**.
+- `lake env lean --run Checks/Run.lean` → **exit 0**; diff against frozen `results/run-1.txt` → **exit 0**.
+- **25/25 effective lock hashes match.**
+- All **59 changed paths against the lock baseline**, including new files, are permitted proof paths.
+
+This interval changed `Proofs.lean` and added `Proofs/MatchCell.lean` and `Proofs/MatchContract.lean`. The nonempty-match proof reads the cell **after selected-branch cleanup**, carries fresh meanings and exact liveness through the body, preserves the body result through finishing, and composes reservation **suffixes**, not equality. One structural induction then supplies the existing runner-to-promises theorem.
+
+The locked limits remain unchanged: **“Every moment” means every moment the run records**, and the proof is **about the Lean, not about the English rule**.

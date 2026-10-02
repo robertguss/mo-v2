@@ -1,0 +1,152 @@
+[
+  {
+    "file": "PREDICTIONS.md",
+    "expected": "f4ad4897030fc558b100ace0f65163fe36234833e4300925ebc97d66310c7658",
+    "actual": "f4ad4897030fc558b100ace0f65163fe36234833e4300925ebc97d66310c7658",
+    "passed": true
+  },
+  {
+    "file": "RULE.md",
+    "expected": "ea918fb4899b7f540fc42743831b824b8fadad45b1d95b4a2b4faa9079926d40",
+    "actual": "ea918fb4899b7f540fc42743831b824b8fadad45b1d95b4a2b4faa9079926d40",
+    "passed": true
+  },
+  {
+    "file": "EXAMPLES.md",
+    "expected": "2052d414d621549691913badc90025085a5888bc1cd505b7d0bb26ac87d85f54",
+    "actual": "2052d414d621549691913badc90025085a5888bc1cd505b7d0bb26ac87d85f54",
+    "passed": true
+  },
+  {
+    "file": "INTERFACE.md",
+    "expected": "91297547225831666507036b41b1e3c2a0fc6723223584a0553cf5411c709320",
+    "actual": "91297547225831666507036b41b1e3c2a0fc6723223584a0553cf5411c709320",
+    "passed": true
+  },
+  {
+    "file": "PLAN.md",
+    "expected": "f840181ecebf9c55e4ec556292cfd93bd9fa9c1687249caf67de355289601fde",
+    "actual": "f840181ecebf9c55e4ec556292cfd93bd9fa9c1687249caf67de355289601fde",
+    "passed": true
+  },
+  {
+    "file": "PREDICTIONS-BRIEF.md",
+    "expected": "1413d036c8b361b644cbd715f7c45dc17cf7b1dfb4e42c9047e5d54d9a4c656c",
+    "actual": "1413d036c8b361b644cbd715f7c45dc17cf7b1dfb4e42c9047e5d54d9a4c656c",
+    "passed": true
+  },
+  {
+    "file": "ACCEPTANCE.md",
+    "expected": "bff59be8a2f6867ea60cad2a984d02b45fc4f76523156c01f6505f055166de50",
+    "actual": "bff59be8a2f6867ea60cad2a984d02b45fc4f76523156c01f6505f055166de50",
+    "passed": true
+  },
+  {
+    "file": "PROOF-BRIEF.md",
+    "expected": "0613e45b093ea2b2a7c76996536f693bfbc22ea7ea2bc6defed81cd6867d47c4",
+    "actual": "0613e45b093ea2b2a7c76996536f693bfbc22ea7ea2bc6defed81cd6867d47c4",
+    "passed": true
+  },
+  {
+    "file": "results/run-1.txt",
+    "expected": "4b85ff0c0561722d584e8c60b730a25d6f5cdca7d0222dde33fcc2d024ca8847",
+    "actual": "4b85ff0c0561722d584e8c60b730a25d6f5cdca7d0222dde33fcc2d024ca8847",
+    "passed": true
+  },
+  {
+    "file": "lean/lakefile.toml",
+    "expected": "beb8daf50e57df87858b003e5d02107efd0299c7d6c6b581f7b9c1a24faaeced",
+    "actual": "beb8daf50e57df87858b003e5d02107efd0299c7d6c6b581f7b9c1a24faaeced",
+    "passed": true
+  },
+  {
+    "file": "lean/lean-toolchain",
+    "expected": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+    "actual": "8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632",
+    "passed": true
+  },
+  {
+    "file": "lean/lake-manifest.json",
+    "expected": "03a59facc53776ea216ba5477dd41aec889472eab38f6673006e1a0023faebe0",
+    "actual": "03a59facc53776ea216ba5477dd41aec889472eab38f6673006e1a0023faebe0",
+    "passed": true
+  },
+  {
+    "file": "lean/.gitignore",
+    "expected": "d4e3917adcfaaa8d53ccc3eb2c9c3423307b0de18d8efbb32e3a92aa53ffb0f9",
+    "actual": "d4e3917adcfaaa8d53ccc3eb2c9c3423307b0de18d8efbb32e3a92aa53ffb0f9",
+    "passed": true
+  },
+  {
+    "file": "lean/Trial.lean",
+    "expected": "9bc52e4245a1bdf8fd8f7be8d8bb5e23248b033fc95aa82734b0d612014fdbe8",
+    "actual": "9bc52e4245a1bdf8fd8f7be8d8bb5e23248b033fc95aa82734b0d612014fdbe8",
+    "passed": true
+  },
+  {
+    "file": "lean/Trial/Language.lean",
+    "expected": "2aef4053975808559849881c376cc88b7dd290269a73c571d0c605ed42492913",
+    "actual": "2aef4053975808559849881c376cc88b7dd290269a73c571d0c605ed42492913",
+    "passed": true
+  },
+  {
+    "file": "lean/Trial/Plain.lean",
+    "expected": "bac8b5df8920396ddccd351548a4fad7a880d3c6d89336015dccaa56f7d2b0c2",
+    "actual": "bac8b5df8920396ddccd351548a4fad7a880d3c6d89336015dccaa56f7d2b0c2",
+    "passed": true
+  },
+  {
+    "file": "lean/Trial/Memory.lean",
+    "expected": "fefb1d40ba9e5d08eb986d5c3174889e1f2f0b7127c94e12dce54230df729355",
+    "actual": "fefb1d40ba9e5d08eb986d5c3174889e1f2f0b7127c94e12dce54230df729355",
+    "passed": true
+  },
+  {
+    "file": "lean/Trial/Counted.lean",
+    "expected": "fe299d069daf6be3cdce68633e891cd5133a35404ca5378ffbe93690594d26f2",
+    "actual": "fe299d069daf6be3cdce68633e891cd5133a35404ca5378ffbe93690594d26f2",
+    "passed": true
+  },
+  {
+    "file": "lean/Trial/Broken.lean",
+    "expected": "fb4f1f26a4584e217eea0be9c4c49f33eca946480c9ff23c79c6ee45fd046a5b",
+    "actual": "fb4f1f26a4584e217eea0be9c4c49f33eca946480c9ff23c79c6ee45fd046a5b",
+    "passed": true
+  },
+  {
+    "file": "lean/Checks.lean",
+    "expected": "6ffad427c10183edc8dc632786d57374b5a260488232290c6a7c69474d79a3ce",
+    "actual": "6ffad427c10183edc8dc632786d57374b5a260488232290c6a7c69474d79a3ce",
+    "passed": true
+  },
+  {
+    "file": "lean/Checks/Examples.lean",
+    "expected": "02d0cbc814d9533211a0fc0010a8b2dffee16a44dc74f2206406ebb3fcd4e846",
+    "actual": "02d0cbc814d9533211a0fc0010a8b2dffee16a44dc74f2206406ebb3fcd4e846",
+    "passed": true
+  },
+  {
+    "file": "lean/Checks/Predictions.lean",
+    "expected": "c2c0f0b81c92bef06fa4ff3c803b602c01f44b2ba25c14fb9ef270a770d57408",
+    "actual": "c2c0f0b81c92bef06fa4ff3c803b602c01f44b2ba25c14fb9ef270a770d57408",
+    "passed": true
+  },
+  {
+    "file": "lean/Checks/Run.lean",
+    "expected": "92ec0acfbffc150a354aa7e74ef9ea91c5805c7b9678b7ac9ddeea0e8f48c24b",
+    "actual": "92ec0acfbffc150a354aa7e74ef9ea91c5805c7b9678b7ac9ddeea0e8f48c24b",
+    "passed": true
+  },
+  {
+    "file": "lean/Promises.lean",
+    "expected": "d098140316a6aea6204c6c36eebedbdb28b44ebe8d55a122ceeee7f6ea3a6f0c",
+    "actual": "d098140316a6aea6204c6c36eebedbdb28b44ebe8d55a122ceeee7f6ea3a6f0c",
+    "passed": true
+  },
+  {
+    "file": "lean/Acceptance.lean",
+    "expected": "28e7cd0738c2913b21e7b2c2de1173b3e3ea3d7ec74418828b453376166b2457",
+    "actual": "28e7cd0738c2913b21e7b2c2de1173b3e3ea3d7ec74418828b453376166b2457",
+    "passed": true
+  }
+]
