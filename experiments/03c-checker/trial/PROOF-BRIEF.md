@@ -1,5 +1,11 @@
 # Brief for the phase-2 builder: prove the four promises
 
+**Current Builder fallback:** Lead and Oracle selected built-in high mode under
+D104 (Robert's AFK delegation), after the Grok47 readiness thread repeatedly
+errored without starting proof work. The new Builder is a fresh visible orb
+thread. This changes only the model, not the permitted files or checks; prior
+fingerprints and the original Grok47 approval remain recorded.
+
 **Operational amendment:** D103, Robert's approved trial-only Amp workflow,
 changes the execution instructions below, not any promise or substantive check.
 The original fingerprints remain in `LOCK.md` alongside the amended ones.
@@ -10,7 +16,7 @@ Written by the lead for the trial's phase 1, step 5 (`PLAN.md`, "How the trial
 runs"). Reviewed by Codex as oracle. Approving it does not start phase 2 and
 does not choose the builder: Robert decides both (`PLAN.md` step 6).
 
-**For:** the Grok47 Builder in a fresh Amp orb thread visible to Robert. The
+**For:** the high-mode Builder in a fresh Amp orb thread visible to Robert. The
 Lead dispatches it with the exact branch, amended lock baseline and plan commit.
 Phase 2 and this arrangement are approved; begin only on the Lead's instruction
 after confirming that the remote branch tip equals the supplied plan commit.

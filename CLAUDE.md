@@ -25,9 +25,16 @@ public at https://github.com/robertguss/mo-v2.
 
 Linear: team ROB, project Mo v2 (8c0bbed4-77f7-49e2-a8be-92fee998e530)
 Delivery: push-branch
-Builder: grok47
+Builder: high
 Tester: inherit
 Done: merged
+
+The trial's current Builder is built-in high mode as an operational fallback
+chosen by Lead/Oracle under D104 (Robert's AFK delegation), after the Grok47
+thread repeatedly errored before proof work. This is not a claim of better
+proof capability. The original Grok47 arrangement below records D103's approval;
+only its model selection is superseded. All proof and acceptance boundaries
+remain unchanged; the new baseline is recorded in the trial lock and Linear.
 
 Status mapping: Ready, Planning, Building, In Review, Needs Input (blocked),
 Backlog (deferred/unapproved), Done. The Lead consults Oracle to prioritize

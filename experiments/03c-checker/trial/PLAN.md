@@ -1,5 +1,11 @@
 # Experiment 3c trial: the reuse rule on a tiny language
 
+**Current Builder fallback:** Lead and Oracle, under D104 (Robert's AFK
+delegation), selected built-in high mode in a fresh visible Amp orb after the
+Grok47 thread repeatedly errored before proof work. No proof interval began.
+This supersedes only the model name in the operational amendment below, not
+the four promises, acceptance, permitted files or original approval history.
+
 ## Operational amendment: Amp execution
 
 D103 (Robert's approved trial-only Amp workflow amendment, recorded in Linear)

@@ -132,3 +132,21 @@ before any proof work. It is not the later Builder plan or candidate commit.
 | `PLAN.md` | `246aab8585be561ac4262a7e3380736f8cfd92540de1c6b488edd83215d4370e` |
 | `ACCEPTANCE.md` | `bff59be8a2f6867ea60cad2a984d02b45fc4f76523156c01f6505f055166de50` |
 | `PROOF-BRIEF.md` | `602b5bc04a463e508e16da2eb008548857b99c8a8b2329da4dac5f98db4c7230` |
+
+## Amended on 2 Oct 2026 UTC: Builder-mode fallback
+
+Lead and Oracle selected a fresh visible built-in high-mode Builder under D104
+(Robert's AFK delegation) after the Grok47 readiness thread repeatedly errored.
+This was before any proof interval, edits or pushes. The previous Builder's
+ownership was revoked; the replacement uses a separate dedicated branch.
+This records a delegated operational choice, not Robert personally choosing
+high mode or a claim that it proves better. Only the current model selection
+and its attribution change. The acceptance file and all scientific files remain
+unchanged. These two rows supersede their corresponding active rows above;
+every other active fingerprint remains in force. Pin this amendment's commit
+as the replacement acceptance baseline before dispatch.
+
+| File | SHA-256 |
+| ---- | ------- |
+| `PLAN.md` | `f840181ecebf9c55e4ec556292cfd93bd9fa9c1687249caf67de355289601fde` |
+| `PROOF-BRIEF.md` | `0613e45b093ea2b2a7c76996536f693bfbc22ea7ea2bc6defed81cd6867d47c4` |
