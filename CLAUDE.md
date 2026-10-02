@@ -1,17 +1,36 @@
 # Working rules for AI agents in Mo v2
 
-Lead sessions start by reading the Status section of `docs/README.md` (where
-things stand and the open question), then this file, then `docs/DECISIONS.md`
-and whatever the status points at. Builders follow their brief.
+Lead sessions start with the [Mo v2 Linear project](https://linear.app/robert-guss/project/mo-v2-42cd07d1b0d1)
+and its [Start here document](https://linear.app/robert-guss/document/start-here-current-state-and-working-rules-29033acb30ab),
+then this file and the selected issue's description and comments. Builders
+follow their approved brief. If Linear is unavailable, stop rather than infer
+current authorization from historical repository status.
 
-Decisions (D1, D2, ...) are recorded in `docs/DECISIONS.md`. The lead keeps
-the Status section of `docs/README.md` current whenever the state changes.
-There is no separate handoff file. Standing rules, preferences and practical
-notes live here.
+Linear is the authoritative live record of status, work, proposals, decisions
+and approvals (D102, Robert's request to migrate project coordination to Linear).
+Record new decisions in the [live register](https://linear.app/robert-guss/document/decisions-and-approvals-live-register-360d6e9c3d64),
+not `docs/DECISIONS.md`; update Linear issues, not the historical README status.
+There is no separate handoff file or parallel repository backlog.
 
-All of Mo's research documents and data live in this repo, under version control
-(D54): research in `docs/research/`, experiments in `experiments/`. TheBrain is
-no longer used. The repo is public at https://github.com/robertguss/mo-v2.
+Git retains exact versioned code, approved specifications, locks, research and
+raw evidence, indexed by commit-pinned links in Linear. A Linear summary or
+issue state cannot amend a locked requirement: Robert must approve the change
+and a new lock must preserve the old record. The migration does not authorize
+the pending Builder/workflow replacement (ROB-1132) or start a proof interval.
+Standing rules below remain binding. TheBrain is no longer used. The repo is
+public at https://github.com/robertguss/mo-v2.
+
+## Amp reviewed development
+
+Linear: team ROB, project Mo v2 (8c0bbed4-77f7-49e2-a8be-92fee998e530)
+Delivery: push-branch
+Builder: grok47 (proposed for the trial; blocked on ROB-1132)
+Tester: inherit (does not replace locked separate acceptance runs)
+Done: merged
+
+Status mapping: Ready, Planning, Building, In Review, Needs Input (blocked),
+Backlog (deferred/unapproved), Done. Do not start trial work before ROB-1132
+is resolved and any required locked-brief amendment is approved and relocked.
 
 ## Why v2 exists
 
@@ -39,7 +58,7 @@ own work. The rules below exist to stop that happening again.
 - **Robert decides; you propose** (D6). Never record a decision Robert did not
   make. If a choice is needed, stop and ask. A question waits for his answer; it
   is never turned into a provisional decision. Record only decisions he actually
-  made, as one line in `docs/DECISIONS.md`.
+  made, in Linear's live decision register with the approval and exact scope.
 - **Ask one question per message.** Wait for the answer.
 - **Say what a decision number means every time you use it.** Robert does not
   have `DECISIONS.md` open. "D42" alone means nothing to him; write "D42, the

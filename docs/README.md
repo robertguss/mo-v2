@@ -5,13 +5,30 @@ human writes or reads. Robert designs it; AI agents build it.
 
 This is a fresh start. Mo v1 lives in `../mo-lang`, frozen at commit `d58f67cd`
 (22 Sep 2026). v1 is reference material, not a base: nothing is copied from it
-without a decision in `DECISIONS.md`.
+without Robert's recorded decision.
+
+## Start in Linear
+
+The [Mo v2 project](https://linear.app/robert-guss/project/mo-v2-42cd07d1b0d1)
+is the authoritative live record of status, work, proposals, decisions and
+approvals. Read [Start here](https://linear.app/robert-guss/document/start-here-current-state-and-working-rules-29033acb30ab)
+and the selected issue before working. This migration is D102, Robert's request
+to make Linear the live source of truth; it does not start proof work.
+
+- [Live decisions and approvals](https://linear.app/robert-guss/document/decisions-and-approvals-live-register-360d6e9c3d64)
+- [Source and evidence catalog](https://linear.app/robert-guss/document/source-and-evidence-catalog-complete-migration-snapshot-da667181f973)
+- [Design parking lot](https://linear.app/robert-guss/document/design-parking-lot-questions-not-an-execution-queue-86faf283b14a)
+
+Git retains exact versioned artifacts and locked acceptance criteria. Linear
+links to them; a summary or issue status cannot change a lock. Do not maintain
+a second live backlog or status here. The historical material below remains
+for provenance, not as current authorization.
 
 ## Files
 
-- `DECISIONS.md`: every decision, one line each. Only Robert makes them.
-- `DECISION-MAP.md`: the open questions v2 must answer, in the order to answer
-  them, each with options and a recommendation.
+- `DECISIONS.md`: historical decisions through D101, imported into Linear.
+- `DECISION-MAP.md`: historical questions, options and recommendations;
+  not the current work queue.
 - `research/`: all research documents, moved from TheBrain on 23 Sep 2026 (D54).
   Key parts:
   - `research/documents/design-choices/`: the nine big design choices (D24–D33),
@@ -22,10 +39,10 @@ without a decision in `DECISIONS.md`.
     primer.
 - `CLAUDE.md` (at the repo root): working rules for any AI agent in this repo.
 
-## Status
+## Historical status — frozen at the Linear migration
 
-Where things stand. Updated by the lead session whenever it changes; a new
-session starts here, then reads `CLAUDE.md` and `DECISIONS.md`.
+The following is the pre-migration status record. Live status and the active
+proof handoff now belong to Linear. Do not update this historical account.
 
 **1 Oct 2026.**
 
