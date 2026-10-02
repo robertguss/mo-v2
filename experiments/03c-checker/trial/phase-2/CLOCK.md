@@ -55,7 +55,25 @@ accepted theorem depends on `sorryAx`. No promise is proven at this point.
 - Expected starting tip: the interval-2 checkpoint above.
 - Gap between authorized intervals: 17 minutes for reporting and review.
 - Priority: complete nonempty-match composition, then structural induction.
-  Actual stop and results pending original report.
+- Builder stopped early at 07:14:34 UTC with all four proofs: 8m34s elapsed.
+  Final report available by 07:15:10 UTC.
+- Candidate: [baf1d52](https://github.com/robertguss/mo-v2/commit/baf1d52649bc7a50ff7df19d0368d182efdb3fbd).
+- Lead recorded ten-check findings around 07:23 UTC; fresh Tester completed
+  its separately recorded ten-check report by 07:30:27 UTC. Both passed.
+  Oracle then reviewed the final proof connections and found no P1/P2.
+- No fourth proof interval. Branch ownership returns to Lead after acceptance.
+
+## Totals and limits
+
+- Authorized elapsed proof work through early stop: 4h08m34s.
+- Reporting/review gaps between intervals: 31 minutes.
+- First proof start to submitted-candidate stop: 4h39m34s.
+- Final independent acceptance, Oracle review and reporting followed the stop;
+  they are not counted as Builder proof work.
+- Earlier setup, rate-limit and model-recovery waiting remain separate above.
+- These are observed elapsed intervals, not CPU/model-active time, a benchmark
+  of proof difficulty, or a comparison of model capability. No general estimate
+  for full 3c follows from this trial's timing.
 
 An interval measures elapsed authorized work, not measured active CPU or model
 time. Reports must distinguish waiting between intervals from that duration.

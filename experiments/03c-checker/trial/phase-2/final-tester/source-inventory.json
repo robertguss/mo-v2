@@ -1,0 +1,2594 @@
+[
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs.lean",
+    "sha256": "121abf1c8788fa69a35e4c7434d390f17bdc99c4f75d39eb2e86b192e2e29bd9",
+    "lines": 27,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Promises"
+      ],
+      [
+        2,
+        "import Proofs.MatchContract"
+      ],
+      [
+        9,
+        "namespace Trial"
+      ],
+      [
+        11,
+        "theorem promiseA : PromiseA := by"
+      ],
+      [
+        15,
+        "theorem promiseB : PromiseB := by"
+      ],
+      [
+        19,
+        "theorem promiseC : PromiseC := by"
+      ],
+      [
+        23,
+        "theorem promiseD : PromiseD := by"
+      ],
+      [
+        27,
+        "end Trial"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Arithmetic.lean",
+    "sha256": "129b36054162a8a84933219226d6e0285a6da521c3825c6c3d7b22f3c595d319",
+    "lines": 69,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Induction"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem numeric_contracts (a b : Expr) (ha : EvalContract a) (hb : EvalContract b) :"
+      ],
+      [
+        69,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/BindContract.lean",
+    "sha256": "23ae78a95307984201c21a71f6c48842411af0c2c0a0a4988de68499f0cc459c",
+    "lines": 135,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.IfContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "def resultStatus (r : RawValue) : BStatus :="
+      ],
+      [
+        8,
+        "def boundState (s : RunState) (name : String) (r : RawValue) (rest : List RawValue) : RunState :="
+      ],
+      [
+        14,
+        "def boundMeanings (g : Meanings) (id : Nat) (r : RawValue) (v : PlainValue) : Meanings :="
+      ],
+      [
+        17,
+        "theorem bound_meanings_extend (g : Meanings) (id : Nat) (r : RawValue) (v : PlainValue) :"
+      ],
+      [
+        22,
+        "theorem read_back_kind (m : Memory) (r : RawValue) (v : PlainValue)"
+      ],
+      [
+        34,
+        "theorem bind_result_run (s : RunState) (name : String) (r : RawValue) (rest : List RawValue)"
+      ],
+      [
+        46,
+        "theorem bind_result_state {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        113,
+        "theorem EnvMeaning.bind {env : Env} {plain : List (String \u00d7 PlainValue)} {g : Meanings}"
+      ],
+      [
+        125,
+        "theorem bound_old_live (s : RunState) (env : Env) (body : Expr) (fs : List Frame) (name : String)"
+      ],
+      [
+        135,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Bindings.lean",
+    "sha256": "030d837f0b8572011eb91af208eb2fb4c8289520c2b192a2aa8902b28d3d5a8f",
+    "lines": 137,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Liveness"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "def valueRoot : RawValue \u2192 Option Addr"
+      ],
+      [
+        11,
+        "def bindingRoots (bs : List Binding) : List (Option Addr) :="
+      ],
+      [
+        15,
+        "def ownedRoots (s : RunState) : List (Option Addr) :="
+      ],
+      [
+        18,
+        "def Owned (s : RunState) : Prop := Healthy s.mem (ownedRoots s)"
+      ],
+      [
+        21,
+        "theorem status_update_absent (bs : List Binding) (id : Nat) (st : BStatus)"
+      ],
+      [
+        33,
+        "theorem status_update_ids (bs : List Binding) (id : Nat) (st : BStatus) :"
+      ],
+      [
+        44,
+        "theorem binding_roots_remove (bs : List Binding) (id : Nat) (b : Binding)"
+      ],
+      [
+        73,
+        "theorem holding_root_mem (s : RunState) (b : Binding) (hb : b \u2208 s.bindings)"
+      ],
+      [
+        81,
+        "theorem give_up_binding_owned (s : RunState) (id : Nat) (b : Binding) (r : Option Addr)"
+      ],
+      [
+        107,
+        "theorem Owned.same_fields {s t : RunState} (h : Owned s)"
+      ],
+      [
+        113,
+        "theorem owned_push (s : RunState) (a : Addr)"
+      ],
+      [
+        122,
+        "theorem owned_move (s : RunState) (id : Nat) (b : Binding) (a : Addr)"
+      ],
+      [
+        137,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/BranchContract.lean",
+    "sha256": "052c4b53eb864dbe07bc322dbd3b1af20e3313097217e3b88ac6bce4e56c54ca",
+    "lines": 171,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.RunContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem StateInvariant.fresh_branch {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        21,
+        "theorem dispose_head_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        88,
+        "theorem dispose_branch_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        131,
+        "theorem finish_branch_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        165,
+        "theorem suffix_without_new_head (bid : Nat) (a : Addr) (old new : List (Nat \u00d7 Addr))"
+      ],
+      [
+        171,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Build.lean",
+    "sha256": "887b2f480d5e34d0b5a820b2dea4a5dfd9e84d4dc5c77f87effddfe1013a7c23",
+    "lines": 165,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Release"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem create_holders (m : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        16,
+        "theorem missing_addr (m : Memory) (a : Addr) (hf : m.find? a = none) :"
+      ],
+      [
+        22,
+        "theorem HeapSafe.create {m : Memory} {roots : List (Option Addr)}"
+      ],
+      [
+        58,
+        "theorem update_one (m : Memory) (a : Addr) (c : Cell)"
+      ],
+      [
+        87,
+        "theorem write_holders (m m' : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        111,
+        "theorem update_addresses (m : Memory) (a : Addr) (f : Cell \u2192 Cell)"
+      ],
+      [
+        125,
+        "theorem HeapSafe.write {m m' : Memory} {roots : List (Option Addr)}"
+      ],
+      [
+        165,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/BuildContract.lean",
+    "sha256": "907bae70d3de4e1aad9f82bf8bc2127bc9334de4402704dc5463b2c290ad1775",
+    "lines": 184,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.LetContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem StateInvariant.build_reserved {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        16,
+        "theorem build_metadata {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        97,
+        "theorem build_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        184,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Cleanup.lean",
+    "sha256": "17c85d770d5401c6bb2d360a8219dc491539d627765c233dbd4672e6c5404368",
+    "lines": 84,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Snapshots"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem for_in_invariant (xs : List \u03b1) (act : \u03b1 \u2192 M (ForInStep PUnit))"
+      ],
+      [
+        20,
+        "theorem find_binding_id (bs : List Binding) (id : Nat) (h : id \u2208 bs.map Binding.id) :"
+      ],
+      [
+        32,
+        "theorem give_up_dead_safe (s : RunState) (env : Env) (chosen : List Frame)"
+      ],
+      [
+        84,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/CleanupContract.lean",
+    "sha256": "8a129fbc3f939b545c18132667ea243eb9df5d8aed8c74d0835ee35c781ad396",
+    "lines": 135,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.ReleaseContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "def cleanupStep (chosen : List Frame) (p : String \u00d7 Nat) : M (ForInStep PUnit) := do"
+      ],
+      [
+        17,
+        "theorem cleanup_step_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        61,
+        "theorem cleanup_loop_contract (xs : Env) (chosen : List Frame)"
+      ],
+      [
+        95,
+        "theorem cleanup_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        135,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/CleanupViews.lean",
+    "sha256": "70dd12ff406d4d9b41f4f337093548ef66569ec590be18a4e1fb04cf99d9503f",
+    "lines": 67,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Views"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem give_up_dead_meanings (s : RunState) (env : Env) (chosen : List Frame)"
+      ],
+      [
+        67,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Closed.lean",
+    "sha256": "4ae475904ceb6b8be3eeed671a0ab950b65cec6b983ab7b8d3d8cd34dfbff5a7",
+    "lines": 134,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Build"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "def LivePaths (m : Memory) : Prop :="
+      ],
+      [
+        10,
+        "theorem valid_start_live_paths (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        18,
+        "theorem ListPath.head {m : Memory} {a : Addr} {cs : List Cell}"
+      ],
+      [
+        26,
+        "theorem find_of_mem (m : Memory) (hu : (m.cells.map Cell.addr).Nodup)"
+      ],
+      [
+        40,
+        "theorem no_holders_unreadable (m : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        56,
+        "theorem no_holders_missing (m : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        65,
+        "theorem no_holders_reserved (m : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        79,
+        "theorem LivePaths.set_count {m m' : Memory} (hc : LivePaths m) (a : Addr) (n : Nat)"
+      ],
+      [
+        98,
+        "theorem LivePaths.create {m : Memory} (hc : LivePaths m) (item : Int)"
+      ],
+      [
+        111,
+        "theorem LivePaths.write {m m' : Memory} (hc : LivePaths m)"
+      ],
+      [
+        134,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/ConsContract.lean",
+    "sha256": "c8d01b7beee90c16e3e23883f3afb8d8166ba79dc269813eeb05aed54f0dbee2",
+    "lines": 78,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.BuildContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem read_back_list {m : Memory} {raw : RawValue} {items : List Int}"
+      ],
+      [
+        13,
+        "theorem cons_contract (head tail : Expr) (hh : EvalContract head) (ht : EvalContract tail) :"
+      ],
+      [
+        78,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Construction.lean",
+    "sha256": "42f7e63236a8234050da74cd214ffe5f23ac4880935ce71415b16fba94356abc",
+    "lines": 91,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Variables"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem pending_tail_heap (s : RunState) (link : Option Addr) (rest : List RawValue)"
+      ],
+      [
+        20,
+        "theorem build_cell_safe (s : RunState) (enc : List Nat) (item : Int) (link : Option Addr)"
+      ],
+      [
+        91,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Disposal.lean",
+    "sha256": "4398692d06978856e0d7e64274f4df76715b97e38c0c99c4db824e28b521892e",
+    "lines": 89,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Construction"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "def ReservedAllocated (s : RunState) : Prop :="
+      ],
+      [
+        10,
+        "theorem dispose_none (s : RunState) (bid fuel : Nat)"
+      ],
+      [
+        28,
+        "theorem dispose_prefix (front : List Addr) (rest : List (Nat \u00d7 Addr)) (bid fuel : Nat)"
+      ],
+      [
+        89,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/DisposalViews.lean",
+    "sha256": "304a06ad7ed50b3b4383ec7d180283702ea70c6948e01b27a2f0eb2869edfd71",
+    "lines": 105,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.CleanupViews"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        8,
+        "theorem dispose_prefix_views (front : List Addr) (rest : List (Nat \u00d7 Addr)) (bid fuel : Nat)"
+      ],
+      [
+        68,
+        "theorem finish_branch_safe (front : List Addr) (rest : List (Nat \u00d7 Addr)) (bid : Nat)"
+      ],
+      [
+        105,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Environment.lean",
+    "sha256": "241642d1b6dae41337c718a486f28ae76cc87e2bd28aab7f873fa63dc8cf39fe",
+    "lines": 101,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.StateSteps"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem dup_input_none (xs : List (String \u00d7 Kind)) :"
+      ],
+      [
+        22,
+        "theorem valid_input_names (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        30,
+        "theorem find_reverse_names (env : Env) (hu : (env.map Prod.fst).Nodup) (x : String) :"
+      ],
+      [
+        48,
+        "theorem lookup_meaning_env (env : Env) (g : Meanings) (x : String) :"
+      ],
+      [
+        56,
+        "theorem binding_find_self (bs : List Binding) (hu : (bs.map Binding.id).Nodup)"
+      ],
+      [
+        70,
+        "theorem input_binding_source (inputs : List (String \u00d7 RawValue)) (next : Nat)"
+      ],
+      [
+        80,
+        "theorem input_binding_names (inputs : List (String \u00d7 RawValue)) (next : Nat) :"
+      ],
+      [
+        87,
+        "theorem read_inputs_meanings (inputs : List (String \u00d7 RawValue)) (next : Nat)"
+      ],
+      [
+        101,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/ExclusiveSetup.lean",
+    "sha256": "b4c8247872bc203287427d902ae8c3a1caa0c5042bb3c1821a859f914f625099",
+    "lines": 134,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.MatchLiveness"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "def exclusiveSetup (bid a : Nat) (c : Cell) (headName tailName : String) (cb : Expr) (env : Env) : M Env := do"
+      ],
+      [
+        21,
+        "theorem exclusive_setup_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        134,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Final.lean",
+    "sha256": "3deee5dbffb1b8c209301226dfe6949d97a515029ed5a84537b099b119ab348e",
+    "lines": 48,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.LiveBindings"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        8,
+        "theorem final_no_leak (s : Start) (t : RunState) (raw : RawValue)"
+      ],
+      [
+        37,
+        "theorem counted_of_main (e : Expr) (s : Start) (raw : RawValue) (t : RunState)"
+      ],
+      [
+        48,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Healthy.lean",
+    "sha256": "46b9417994a1ed3d557a8e903f7b719b8998376badf2f9d170c50a21a2dc186f",
+    "lines": 262,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Initial"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "structure Healthy (m : Memory) (roots : List (Option Addr)) : Prop extends HeapSafe m roots where"
+      ],
+      [
+        12,
+        "theorem valid_start_healthy (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        17,
+        "theorem Healthy.no_leak {m : Memory} {roots : List (Option Addr)} (h : Healthy m roots)"
+      ],
+      [
+        21,
+        "theorem FreshBound.update {m : Memory} (h : FreshBound m) (a : Addr) (f : Cell \u2192 Cell)"
+      ],
+      [
+        33,
+        "theorem Healthy.create {m : Memory} {roots : List (Option Addr)} {link : Option Addr}"
+      ],
+      [
+        54,
+        "theorem Healthy.write {m m' : Memory} {roots : List (Option Addr)} {link : Option Addr}"
+      ],
+      [
+        88,
+        "theorem Healthy.reserve {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        114,
+        "theorem positive_count_update (m m' : Memory) (a : Addr) (n : Nat)"
+      ],
+      [
+        133,
+        "theorem Healthy.remove_shared {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        140,
+        "theorem Healthy.add_count {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        157,
+        "theorem Healthy.drop_none {m : Memory} {roots : List (Option Addr)}"
+      ],
+      [
+        161,
+        "theorem Healthy.add_none {m : Memory} {roots : List (Option Addr)}"
+      ],
+      [
+        171,
+        "theorem Healthy.perm {m : Memory} {roots roots' : List (Option Addr)}"
+      ],
+      [
+        184,
+        "theorem Healthy.release_one {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        216,
+        "theorem release_reserved_holders (m m' : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        229,
+        "theorem Healthy.release_reserved {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        262,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Heap.lean",
+    "sha256": "f66a5dbdd0ef594f4e9425e73239bcedb8c03dfa90075c11cd5f5e2f29d29d41",
+    "lines": 89,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Start"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "structure HeapSafe (m : Memory) (roots : List (Option Addr)) : Prop where"
+      ],
+      [
+        12,
+        "theorem valid_start_heap (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        18,
+        "theorem HeapSafe.drop_none {m : Memory} {roots : List (Option Addr)}"
+      ],
+      [
+        26,
+        "theorem HeapSafe.remove_count {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        37,
+        "theorem HeapSafe.release_one {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        89,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/IfContract.lean",
+    "sha256": "8c6e8fdf3d050c7cc236f2ac77a9e48a9260166f2ee91ad40d55af77e80a697c",
+    "lines": 180,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.CleanupContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem used_env_id (e : Expr) (env : Env) (id : Nat)"
+      ],
+      [
+        14,
+        "theorem cleanup_selected {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        40,
+        "theorem if_contract (c yes no : Expr) (hc : EvalContract c)"
+      ],
+      [
+        180,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Induction.lean",
+    "sha256": "9a7c2f989193b002e25edc5ac542daf5c09a603492879c2baee52cbd27d3cbe9",
+    "lines": 204,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Inputs"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "abbrev Meanings := Nat \u2192 RawValue \u00d7 PlainValue"
+      ],
+      [
+        9,
+        "def ExtendsMeanings (before after : Meanings) (bound : Nat) : Prop :="
+      ],
+      [
+        14,
+        "def EnvMeaning (env : Env) (plain : List (String \u00d7 PlainValue)) (g : Meanings) : Prop :="
+      ],
+      [
+        19,
+        "def FramesBound (s : RunState) (fs : List Frame) : Prop :="
+      ],
+      [
+        24,
+        "def LiveFor (bs : List Binding) (fs : List Frame) : Prop :="
+      ],
+      [
+        30,
+        "structure StateInvariant (start : Start) (g : Meanings) (enc : List Nat) (s : RunState) : Prop where"
+      ],
+      [
+        58,
+        "def pendingResult (raw : RawValue) (saved : List RawValue) : List RawValue :="
+      ],
+      [
+        63,
+        "structure EvalPost (e : Expr) (start : Start) (env : Env) (plain : List (String \u00d7 PlainValue))"
+      ],
+      [
+        83,
+        "def EvalContract (e : Expr) : Prop :="
+      ],
+      [
+        93,
+        "theorem StateInvariant.final_no_leak {start : Start} {g : Meanings} {s : RunState}"
+      ],
+      [
+        107,
+        "theorem StateInvariant.visible {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        117,
+        "theorem StateInvariant.unique {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        122,
+        "theorem StateInvariant.bound {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        128,
+        "theorem FramesBound.tail {s : RunState} {f : Frame} {fs : List Frame}"
+      ],
+      [
+        132,
+        "theorem LiveFor.congr {bs : List Binding} {fs gs : List Frame} (h : LiveFor bs fs)"
+      ],
+      [
+        137,
+        "theorem number_contract (n : Int) : EvalContract (.num n) := by"
+      ],
+      [
+        147,
+        "theorem nil_contract : EvalContract .nil := by"
+      ],
+      [
+        158,
+        "theorem FramesBound.head {s : RunState} {f : Frame} {fs : List Frame}"
+      ],
+      [
+        162,
+        "theorem FramesBound.prepend {s : RunState} {fs : List Frame} (h : FramesBound s fs)"
+      ],
+      [
+        170,
+        "theorem FramesBound.env {s : RunState} {e : Expr} {env : Env} {fs : List Frame}"
+      ],
+      [
+        176,
+        "theorem EnvMeaning.extend {env : Env} {plain : List (String \u00d7 PlainValue)} {g g' : Meanings}"
+      ],
+      [
+        185,
+        "theorem ExtendsMeanings.trans {g g' g'' : Meanings} {n n' : Nat}"
+      ],
+      [
+        190,
+        "theorem read_back_number {m : Memory} {raw : RawValue} {n : Int}"
+      ],
+      [
+        197,
+        "theorem read_back_bool {m : Memory} {raw : RawValue} {b : Bool}"
+      ],
+      [
+        204,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Initial.lean",
+    "sha256": "3165119f7d868cb0ca55bb5d80864e4a54b7fab269ecd180d69303322ec1d063",
+    "lines": 131,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Reachability"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem walk_chain_ends (s : Start) (n : Nat) (r : Option Addr)"
+      ],
+      [
+        28,
+        "theorem valid_start_root_ends (e : Expr) (s : Start) (h : validStart e s = .ok ())"
+      ],
+      [
+        37,
+        "theorem valid_start_reached (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        60,
+        "theorem valid_start_root_reaches (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        75,
+        "theorem reached_has_holder (m : Memory) (roots : List (Option Addr)) (a : Addr)"
+      ],
+      [
+        84,
+        "theorem valid_start_positive (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        91,
+        "theorem valid_start_no_leak (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        101,
+        "def FreshBound (m : Memory) : Prop := \u2200 c \u2208 m.cells, c.addr < m.next"
+      ],
+      [
+        103,
+        "theorem initial_bound (s : Start) : FreshBound s.toMemory := by"
+      ],
+      [
+        125,
+        "theorem FreshBound.missing {m : Memory} (hb : FreshBound m) : m.find? m.next = none := by"
+      ],
+      [
+        131,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Initialization.lean",
+    "sha256": "26c53947f25b746ae16397b7b69cedcbb48599152e933060fe9a21beda8ac9e6",
+    "lines": 140,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Environment"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "def inputState (s : Start) : RunState :="
+      ],
+      [
+        11,
+        "def inputEnv (s : Start) : Env :="
+      ],
+      [
+        16,
+        "def inputMeanings (s : Start) : Meanings := fun id =>"
+      ],
+      [
+        21,
+        "theorem input_ids_range (s : Start) :"
+      ],
+      [
+        25,
+        "theorem input_meanings_spec (e : Expr) (s : Start) (h : validStart e s = .ok ())"
+      ],
+      [
+        36,
+        "theorem input_binding_status (inputs : List (String \u00d7 RawValue)) (next : Nat)"
+      ],
+      [
+        47,
+        "theorem initialized_state (e : Expr) (s : Start) (hv : validStart e s = .ok ()) :"
+      ],
+      [
+        90,
+        "theorem input_loop_initial (s : Start) :"
+      ],
+      [
+        111,
+        "theorem initialized_environment (e : Expr) (s : Start) (hv : validStart e s = .ok ())"
+      ],
+      [
+        126,
+        "theorem initialized_frame (e : Expr) (s : Start) (hv : validStart e s = .ok ()) :"
+      ],
+      [
+        140,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/InputCleanup.lean",
+    "sha256": "941207ff1524372526f8ca5ae5761262bdc2ba7650d04d7c65b9b4511e148d91",
+    "lines": 121,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.ConsContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "def inputCleanupStep (e : Expr) (env : Env) (p : String \u00d7 Nat) : M (ForInStep PUnit) := do"
+      ],
+      [
+        17,
+        "theorem input_cleanup_eq (xs : Env) (e : Expr) (env : Env)"
+      ],
+      [
+        75,
+        "theorem initial_cleanup_contract (e : Expr) (start : Start) (hv : validStart e start = .ok ()) :"
+      ],
+      [
+        121,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Inputs.lean",
+    "sha256": "920871c178923c076f784e60793a9c92536773325e5ffd368aa65a5ef10e7e17",
+    "lines": 96,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Final"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "def inputBindings : Nat \u2192 List (String \u00d7 RawValue) \u2192 List Binding"
+      ],
+      [
+        17,
+        "theorem input_binding_loop (inputs : List (String \u00d7 RawValue)) (s : RunState) (env : Env) :"
+      ],
+      [
+        43,
+        "theorem input_binding_ids (inputs : List (String \u00d7 RawValue)) (next : Nat) :"
+      ],
+      [
+        53,
+        "theorem input_binding_roots (inputs : List (String \u00d7 RawValue)) (next : Nat) :"
+      ],
+      [
+        66,
+        "theorem valid_input_bindings_healthy (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        96,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/LetContract.lean",
+    "sha256": "2bd7e117abf4058799d13e943df589c50afaac1ae84c9858521e921e43497bef",
+    "lines": 77,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.LetSetup"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem let_contract (name : String) (bound body : Expr)"
+      ],
+      [
+        77,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/LetSetup.lean",
+    "sha256": "e0381ed46a7317db9ef773c7c5feee65bda46665c1b7967f0191b132c34e7101",
+    "lines": 144,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.BindContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "def letSetup (name : String) (r : RawValue) (body : Expr) (env : Env) : M Env := do"
+      ],
+      [
+        19,
+        "theorem eval_let_setup (name : String) (bound body : Expr) (env : Env) (fs : List Frame) (enc : List Nat) :"
+      ],
+      [
+        42,
+        "theorem let_setup_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        144,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/LiveBindings.lean",
+    "sha256": "d5830dc79a9c4b4608b7dab377750269f76d32ce54ef9b157be1d450e7ff93ee",
+    "lines": 84,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Match"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem find_other_status (bs : List Binding) (id other : Nat) (st : BStatus)"
+      ],
+      [
+        26,
+        "theorem give_up_dead_keeps_used (s : RunState) (env : Env) (chosen : List Frame)"
+      ],
+      [
+        84,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Liveness.lean",
+    "sha256": "b9cf351ec54abdee528dc20e5ce1bad5eb266c22c6e9c2dac6f97a8b41848411",
+    "lines": 129,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Operations"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem lookup_frame_env (env : Env) (x : String) :"
+      ],
+      [
+        15,
+        "theorem uses_var_iff (env : FEnv) (x : String) (id : Nat) :"
+      ],
+      [
+        23,
+        "theorem lookup_cons_same (env env' : FEnv) (id : Nat)"
+      ],
+      [
+        33,
+        "theorem uses_binding_congr (e : Expr) (env env' : FEnv) (id : Nat)"
+      ],
+      [
+        57,
+        "theorem uses_fresh_shadow (e : Expr) (env : FEnv) (name : String) (fresh id : Nat)"
+      ],
+      [
+        64,
+        "theorem lookup_frame_mem (env : FEnv) (x : String) (id : Nat)"
+      ],
+      [
+        79,
+        "theorem uses_binding_mem (e : Expr) (env : FEnv) (id : Nat)"
+      ],
+      [
+        114,
+        "theorem uses_binding_below (e : Expr) (env : FEnv) (next id : Nat)"
+      ],
+      [
+        120,
+        "theorem used_later_cons (f : Frame) (fs : List Frame) (id : Nat) :"
+      ],
+      [
+        123,
+        "theorem used_later_below (fs : List Frame) (next id : Nat)"
+      ],
+      [
+        129,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Match.lean",
+    "sha256": "7dd5a5069ae2db404b0be3f2073aabd4af2abbe2783b7ded0e2e9cee2f9b4e9b",
+    "lines": 138,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.DisposalViews"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem binding_roots_activate (bs : List Binding) (id : Nat) (b : Binding)"
+      ],
+      [
+        35,
+        "theorem match_reserve_owned (s : RunState) (a : Addr) (c : Cell) (bid tid : Nat)"
+      ],
+      [
+        88,
+        "theorem activate_tail_owned (s : RunState) (tid : Nat) (b : Binding) (a : Addr)"
+      ],
+      [
+        112,
+        "theorem give_up_pending_owned (s : RunState) (r : Option Addr) (rest : List RawValue)"
+      ],
+      [
+        138,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/MatchBindings.lean",
+    "sha256": "527dc99bab057f7d6b5392e942cb80ca90b4d6f6d624e6db2ae42c2949d28c8c",
+    "lines": 121,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.MatchNil"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem new_nonholder_state {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        63,
+        "def matchBindings (s : RunState) (headName tailName : String) (item : Int) (link : Option Addr) : RunState :="
+      ],
+      [
+        70,
+        "def matchMeanings (g : Meanings) (id : Nat) (item : Int) (link : Option Addr) (items : List Int) : Meanings :="
+      ],
+      [
+        73,
+        "theorem match_bindings_run (s : RunState) (headName tailName : String) (item : Int) (link : Option Addr) :"
+      ],
+      [
+        81,
+        "theorem match_bindings_state {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        92,
+        "theorem match_meanings_extend (g : Meanings) (id : Nat) (item : Int) (link : Option Addr) (items : List Int) :"
+      ],
+      [
+        97,
+        "theorem EnvMeaning.match_bindings {env : Env} {plain : List (String \u00d7 PlainValue)} {g : Meanings}"
+      ],
+      [
+        110,
+        "theorem match_old_uses (e : Expr) (env : Env) (headName tailName : String) (fresh id : Nat)"
+      ],
+      [
+        121,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/MatchCell.lean",
+    "sha256": "9e2d9c8cdf710d3d55ad763a82b29bb5be109e6a0f5aff13e95b34e9479bbf06",
+    "lines": 137,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.MatchSetup"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        8,
+        "theorem match_cell_post (scrut nb cb : Expr) (headName tailName : String)"
+      ],
+      [
+        137,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/MatchContract.lean",
+    "sha256": "2296b9ca211292e641c2f0a2c881f038aa1aec81b02f5fee6e97e96dc8af4a6b",
+    "lines": 77,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.MatchCell"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem match_contract (scrut nb cb : Expr) (headName tailName : String)"
+      ],
+      [
+        61,
+        "theorem eval_contract (e : Expr) : EvalContract e := by"
+      ],
+      [
+        77,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/MatchLiveness.lean",
+    "sha256": "de7ed47ed7a6063628fbf2ec7f8cd15870d299cec55f14561c18bb0e37a6c452",
+    "lines": 84,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.PendingRelease"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem cleanup_match_cell {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        34,
+        "theorem match_bindings_live (s : RunState) (env : Env) (cb : Expr) (fs : List Frame)"
+      ],
+      [
+        66,
+        "theorem match_frames_bound (s : RunState) (env : Env) (cb : Expr) (fs : List Frame)"
+      ],
+      [
+        84,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/MatchNil.lean",
+    "sha256": "e0d878abb449b02134aef4012fa605974f0b7b186f921504540d6c99e98ba54d",
+    "lines": 120,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.BranchContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem owned_pending_root (s : RunState) (v : RawValue) (hv : v \u2208 s.pending) :"
+      ],
+      [
+        9,
+        "theorem result_owned (s : RunState) (raw : RawValue) (rest : List RawValue)"
+      ],
+      [
+        20,
+        "theorem match_nil_post (scrut nb cb : Expr) (headName tailName : String)"
+      ],
+      [
+        120,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/MatchSetup.lean",
+    "sha256": "b26e56215eba81197256cedd9d2f317ecb24040d8898e0a8c69cadf59548c82a",
+    "lines": 109,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.SharedSetup"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        8,
+        "def matchCellSetup (bid a : Nat) (c : Cell) (headName tailName : String)"
+      ],
+      [
+        14,
+        "theorem eval_match_setup (scrut nb cb : Expr) (headName tailName : String)"
+      ],
+      [
+        83,
+        "theorem match_cell_setup_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        109,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Meanings.lean",
+    "sha256": "605acd0e8ecefda02714606038d1235409718f9fc9dc0ed807e54e6fbde3959f",
+    "lines": 89,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Cleanup"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem read_back_root (m m' : Memory) (v : RawValue)"
+      ],
+      [
+        17,
+        "theorem HoldingMeanings.roots {m m' : Memory} {bs : List Binding}"
+      ],
+      [
+        31,
+        "theorem HoldingMeanings.drop {m : Memory} {bs : List Binding}"
+      ],
+      [
+        46,
+        "theorem HoldingMeanings.fresh {m : Memory} {bs : List Binding}"
+      ],
+      [
+        57,
+        "theorem HoldingMeanings.append {m : Memory} {bs : List Binding}"
+      ],
+      [
+        72,
+        "theorem give_up_binding_meanings (s : RunState) (id : Nat) (b : Binding) (r : Option Addr)"
+      ],
+      [
+        89,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Memory.lean",
+    "sha256": "50446c0188853c93b157e25c9bd3c74985ac3f702ab28abd745e779e29426819",
+    "lines": 407,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Plain"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "inductive ListPath (m : Memory) : Option Addr \u2192 List Cell \u2192 Prop where"
+      ],
+      [
+        13,
+        "theorem ListPath.unique {m : Memory} {r : Option Addr} {xs ys : List Cell}"
+      ],
+      [
+        29,
+        "theorem ListPath.mem_cells {m : Memory} {r : Option Addr} {xs : List Cell}"
+      ],
+      [
+        41,
+        "theorem ListPath.suffix {m : Memory} {r : Option Addr} {xs : List Cell}"
+      ],
+      [
+        55,
+        "theorem ListPath.nodup {m : Memory} {r : Option Addr} {xs : List Cell}"
+      ],
+      [
+        70,
+        "theorem ListPath.length_le {m : Memory} {r : Option Addr} {xs : List Cell}"
+      ],
+      [
+        80,
+        "theorem ListPath.read {m : Memory} {r : Option Addr} {xs : List Cell}"
+      ],
+      [
+        93,
+        "theorem ListPath.read_back {m : Memory} {r : Option Addr} {xs : List Cell}"
+      ],
+      [
+        99,
+        "theorem path_of_read {m : Memory} {n : Nat} {r : Option Addr} {items : List Int}"
+      ],
+      [
+        137,
+        "theorem read_list_contents (m m' : Memory)"
+      ],
+      [
+        162,
+        "theorem read_back_counts (m : Memory) (counts : Cell \u2192 Nat) (v : RawValue) :"
+      ],
+      [
+        180,
+        "theorem ListPath.preserve {m m' : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        189,
+        "theorem find_update (m : Memory) (a b : Addr) (f : Cell \u2192 Cell)"
+      ],
+      [
+        206,
+        "theorem find_update_other (m : Memory) (a b : Addr) (f : Cell \u2192 Cell)"
+      ],
+      [
+        217,
+        "theorem find_filter_other (m : Memory) (a b : Addr) (hab : b \u2260 a) :"
+      ],
+      [
+        226,
+        "theorem ListPath.release {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        242,
+        "theorem update_count_eq_map (m : Memory) (a : Addr) (n : Nat) :"
+      ],
+      [
+        253,
+        "theorem set_count_read_back (m m' : Memory) (a : Addr) (n : Nat)"
+      ],
+      [
+        264,
+        "theorem ListPath.lookup {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        275,
+        "theorem ListPath.update_other {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        287,
+        "theorem ListPath.avoids_set_aside {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        301,
+        "theorem ListPath.create {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        311,
+        "theorem create_read_back (m : Memory) (item : Int) (r : Option Addr) (cs : List Cell)"
+      ],
+      [
+        322,
+        "theorem write_in_place_preserves (m m' : Memory) (a : Addr) (item : Int) (link : Option Addr)"
+      ],
+      [
+        343,
+        "theorem write_in_place_read_back (m m' : Memory) (a : Addr) (item : Int) (link : Option Addr)"
+      ],
+      [
+        367,
+        "theorem filter_count_update (cells : List Cell) (a : Addr) (n : Nat) :"
+      ],
+      [
+        376,
+        "theorem path_of_read_back (m : Memory) (r : Option Addr) (items : List Int)"
+      ],
+      [
+        387,
+        "theorem set_count_path (m m' : Memory) (a : Addr) (n : Nat)"
+      ],
+      [
+        396,
+        "theorem set_count_unique (m m' : Memory) (a : Addr) (n : Nat)"
+      ],
+      [
+        407,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/NewBinding.lean",
+    "sha256": "d0d7400efd1e5760e6ca309f458dbde9da5cf49c02d74fa53863094f209b6c15",
+    "lines": 55,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Meanings"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem bind_result_owned (s : RunState) (name : String) (v : RawValue) (rest : List RawValue)"
+      ],
+      [
+        55,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Operations.lean",
+    "sha256": "f363ae5b876e082c912c73fbff4b0a48cf4c3c418fbe4e663fe5603ee496a1c0",
+    "lines": 73,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Healthy"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem give_up_healthy (fuel : Nat) (s : RunState) (a : Addr)"
+      ],
+      [
+        45,
+        "theorem give_up_link_safe (s : RunState) (r : Option Addr) (roots : List (Option Addr))"
+      ],
+      [
+        61,
+        "theorem add_holder_safe (s : RunState) (a : Addr) (roots : List (Option Addr))"
+      ],
+      [
+        73,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Ownership.lean",
+    "sha256": "909ea1ea1044ed428202528caf88bcb151cec61f1f02ab1604effec5b435a6c3",
+    "lines": 170,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Memory"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem holders_zero (m : Memory) (roots : List (Option Addr)) (a : Addr) :"
+      ],
+      [
+        18,
+        "theorem holders_cons_self (m : Memory) (roots : List (Option Addr)) (a : Addr) :"
+      ],
+      [
+        23,
+        "theorem sole_holder (m : Memory) (roots : List (Option Addr)) (a : Addr)"
+      ],
+      [
+        31,
+        "theorem ListPath.avoids {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        45,
+        "theorem sole_holder_avoids (m : Memory) (roots : List (Option Addr)) (a : Addr)"
+      ],
+      [
+        53,
+        "theorem sole_holder_release (m : Memory) (roots : List (Option Addr)) (a : Addr)"
+      ],
+      [
+        62,
+        "theorem holders_cons (m : Memory) (roots : List (Option Addr)) (r : Option Addr) (a : Addr) :"
+      ],
+      [
+        68,
+        "theorem holders_counts (m : Memory) (counts : Cell \u2192 Nat) (roots : List (Option Addr)) (a : Addr) :"
+      ],
+      [
+        74,
+        "theorem holders_detach (before after : List Cell) (c : Cell) (hc : c.status = .live)"
+      ],
+      [
+        83,
+        "theorem filter_remove_one (cells : List Cell) (hu : (cells.map Cell.addr).Nodup)"
+      ],
+      [
+        105,
+        "theorem release_holders (m m' : Memory) (a : Addr) (c : Cell)"
+      ],
+      [
+        121,
+        "def CountsCorrect (m : Memory) (roots : List (Option Addr)) : Prop :="
+      ],
+      [
+        124,
+        "theorem counts_correct_map (m : Memory) (roots : List (Option Addr)) (counts : Cell \u2192 Nat)"
+      ],
+      [
+        134,
+        "theorem counts_add_root (m m' : Memory) (roots : List (Option Addr)) (a : Addr) (c : Cell)"
+      ],
+      [
+        152,
+        "theorem counts_remove_root (m m' : Memory) (roots : List (Option Addr)) (a : Addr) (c : Cell)"
+      ],
+      [
+        170,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/PendingRelease.lean",
+    "sha256": "051e03986798b776ec52ba2f8630d7c4a8c68a76c7dde8a64d8184cf0120d312",
+    "lines": 84,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.SharedContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem release_pending_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        84,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Plain.lean",
+    "sha256": "d9fb0b224003e954376a5da7f12720e418e9280751ac33eab33d9e62167d417c",
+    "lines": 146,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Promises"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "@[simp] theorem except_pure (a : \u03b1) : (pure a : Except \u03b5 \u03b1) = .ok a := rfl"
+      ],
+      [
+        7,
+        "@[simp] theorem except_throw (e : \u03b5) : (throw e : Except \u03b5 \u03b1) = .error e := rfl"
+      ],
+      [
+        9,
+        "@[simp] theorem except_bind_ok (a : \u03b1) (f : \u03b1 \u2192 Except \u03b5 \u03b2) :"
+      ],
+      [
+        12,
+        "@[simp] theorem except_bind_error (e : \u03b5) (f : \u03b1 \u2192 Except \u03b5 \u03b2) :"
+      ],
+      [
+        15,
+        "@[simp] theorem except_map_ok (a : \u03b1) (f : \u03b1 \u2192 \u03b2) :"
+      ],
+      [
+        18,
+        "@[simp] theorem except_map_error (e : \u03b5) (f : \u03b1 \u2192 \u03b2) :"
+      ],
+      [
+        22,
+        "theorem lookup_kind (env : List (String \u00d7 PlainValue)) (x : String) :"
+      ],
+      [
+        33,
+        "theorem expect_kind_ok (what : String) (want got : Kind) :"
+      ],
+      [
+        39,
+        "theorem eval_typed (e : Expr) (env : List (String \u00d7 PlainValue)) (k : Kind)"
+      ],
+      [
+        133,
+        "theorem run_plain_typed (e : Expr) (env : List (String \u00d7 PlainValue)) (k : Kind)"
+      ],
+      [
+        146,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Reachability.lean",
+    "sha256": "c03ead77632d6b8f97e3c5776cbb14871ba1ca5889fbb75d80a9897c9d8e64f0",
+    "lines": 139,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Reserve"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "def RootReaches (m : Memory) (roots : List (Option Addr)) (a : Addr) : Prop :="
+      ],
+      [
+        10,
+        "theorem ListPath.walk {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        22,
+        "theorem reachable_cons (m : Memory) (r : Option Addr) (roots : List (Option Addr)) :"
+      ],
+      [
+        33,
+        "theorem reachable_spec (m : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        59,
+        "theorem ListPath.root_mem {m : Memory} {a : Addr} {cs : List Cell}"
+      ],
+      [
+        65,
+        "theorem ListPath.follow {m : Memory} {r : Option Addr} {cs : List Cell}"
+      ],
+      [
+        84,
+        "theorem positive_reachable (m : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        123,
+        "theorem no_leak_of_heap (m : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        139,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Release.lean",
+    "sha256": "084cb5d146cb2b0940c10113909a9f0a17b13d6d7b4fb464e34471d07936463f",
+    "lines": 134,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Heap"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "@[simp] theorem m_pure_apply (x : \u03b1) (s : RunState) :"
+      ],
+      [
+        8,
+        "@[simp] theorem m_throw_apply (why : String) (s : RunState) :"
+      ],
+      [
+        11,
+        "@[simp] theorem m_bind_apply (act : M \u03b1) (f : \u03b1 \u2192 M \u03b2) (s : RunState) :"
+      ],
+      [
+        20,
+        "@[simp] theorem m_map_apply (f : \u03b1 \u2192 \u03b2) (act : M \u03b1) (s : RunState) :"
+      ],
+      [
+        29,
+        "@[simp] theorem m_get_apply (s : RunState) : (get : M RunState) s = (.ok s, s) := rfl"
+      ],
+      [
+        31,
+        "@[simp] theorem m_set_apply (s' s : RunState) : (set s' : M Unit) s = (.ok (), s') := rfl"
+      ],
+      [
+        33,
+        "@[simp] theorem m_modify_apply (f : RunState \u2192 RunState) (s : RunState) :"
+      ],
+      [
+        37,
+        "theorem give_up_shared (s : RunState) (a : Addr) (c : Cell) (fuel : Nat)"
+      ],
+      [
+        53,
+        "theorem give_up_exclusive (s : RunState) (a : Addr) (c : Cell)"
+      ],
+      [
+        81,
+        "theorem give_up_safe (fuel : Nat) (s : RunState) (a : Addr)"
+      ],
+      [
+        134,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/ReleaseContract.lean",
+    "sha256": "73c3210e16ebd0e0d30266d28e533bdb8ef30b8057c146dd6c3524110dcaf1c8",
+    "lines": 133,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.ReleaseFrame"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem read_back_no_root (m m' : Memory) (v : RawValue) (hn : valueRoot v = none) :"
+      ],
+      [
+        13,
+        "theorem release_binding_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        133,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/ReleaseFrame.lean",
+    "sha256": "78c6d5876e4a12a86ed607ce0cc2542312676ed6788499037315c017049a8d0e",
+    "lines": 139,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.VariableContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "structure ReleaseFrame (s t : RunState) : Prop where"
+      ],
+      [
+        14,
+        "theorem ReleaseFrame.refl (s : RunState) : ReleaseFrame s s :="
+      ],
+      [
+        17,
+        "theorem ReleaseFrame.trans {s t u : RunState} (h : ReleaseFrame s t) (h' : ReleaseFrame t u) :"
+      ],
+      [
+        23,
+        "theorem reserved_other_live (m : Memory) (a : Addr) (c : Cell)"
+      ],
+      [
+        33,
+        "theorem reserved_count_update (m : Memory) (a : Addr) (n : Nat)"
+      ],
+      [
+        49,
+        "theorem reserved_filter_live (m : Memory) (a : Addr)"
+      ],
+      [
+        59,
+        "theorem give_up_shared_frame (s : RunState) (a : Addr) (c : Cell) (fuel : Nat)"
+      ],
+      [
+        73,
+        "theorem give_up_exclusive_frame (s : RunState) (a : Addr) (c : Cell)"
+      ],
+      [
+        100,
+        "theorem give_up_frame (fuel : Nat) (s : RunState) (a : Addr)"
+      ],
+      [
+        130,
+        "theorem give_up_link_frame (s : RunState) (r : Option Addr) (roots : List (Option Addr))"
+      ],
+      [
+        139,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Reserve.lean",
+    "sha256": "7b2079ff6026ddd5c69087aeaf4741384bd3dc521ae6b698d3e4c661b8e9f7c5",
+    "lines": 94,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Closed"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem reserve_holders (m m' : Memory) (roots : List (Option Addr))"
+      ],
+      [
+        22,
+        "theorem HeapSafe.reserve {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        71,
+        "theorem LivePaths.reserve {m m' : Memory} {roots : List (Option Addr)} {a : Addr} {c : Cell}"
+      ],
+      [
+        94,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/ReserveContract.lean",
+    "sha256": "195aa37c3a1f113794b7a146b56b3b9015e780c3bf60a3f9c33de39b4c373f04",
+    "lines": 194,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.MatchBindings"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "def reservedState (s : RunState) (a : Addr) (c : Cell) (bid tid : Nat) (rest : List RawValue) : RunState :="
+      ],
+      [
+        14,
+        "def reserveAction (a : Addr) (c : Cell) (bid tid : Nat) : M Unit := do"
+      ],
+      [
+        22,
+        "theorem reserve_action_run (s : RunState) (a : Addr) (c : Cell) (bid tid : Nat) (rest : List RawValue)"
+      ],
+      [
+        29,
+        "theorem reserve_action_saved (s : RunState) (a : Addr) (c : Cell) (bid tid : Nat)"
+      ],
+      [
+        48,
+        "theorem reserve_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        194,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/RunContract.lean",
+    "sha256": "e929ee0b39ebaab99bd74b5852c9ead1a7d93a95d8a2db9158dfeecbb3dffc6e",
+    "lines": 101,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.InputCleanup"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem input_loop_pattern (start : Start) :"
+      ],
+      [
+        31,
+        "theorem cleanup_match_eq (\u03b1 : Type) (v : RawValue) (f : Addr \u2192 \u03b1) (g : RawValue \u2192 \u03b1) :"
+      ],
+      [
+        39,
+        "theorem promises_of_contract (e : Expr) (hc : EvalContract e) (start : Start)"
+      ],
+      [
+        101,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/SharedContract.lean",
+    "sha256": "87c81dfdf40fc243ce229a9332c9bb6e049772ecc147ac4f9b5817016e358d22",
+    "lines": 84,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.ReserveContract"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem StateInvariant.activate_pending {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        60,
+        "theorem activate_tail_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        84,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/SharedSetup.lean",
+    "sha256": "d273ce302b75c83b4d24bbda91bd3f1e8a682cfdf73cf5dda50244501ca90fcc",
+    "lines": 138,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.ExclusiveSetup"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "def sharedSetup (a : Addr) (c : Cell) (headName tailName : String) (cb : Expr) (env : Env) : M Env := do"
+      ],
+      [
+        26,
+        "theorem shared_setup_contract {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        138,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Snapshots.lean",
+    "sha256": "8216e7e43c0f2ed8404100449e8802e96d8fbe75adf79b9e4ae3766b4b5bca44",
+    "lines": 85,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Disposal"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        6,
+        "theorem read_back_cells (m m' : Memory) (hc : m.cells = m'.cells) (v : RawValue) :"
+      ],
+      [
+        18,
+        "def HoldingMeanings (m : Memory) (bs : List Binding)"
+      ],
+      [
+        25,
+        "theorem names_of_meanings (o : Outcome) (raw : Nat \u2192 RawValue) (meaning : Nat \u2192 PlainValue)"
+      ],
+      [
+        54,
+        "theorem snapshot_names (s : RunState) (kind : StepKind) (bv : Option RawValue)"
+      ],
+      [
+        73,
+        "theorem visible_of_meanings (s : Start) (o : Outcome)"
+      ],
+      [
+        85,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Start.lean",
+    "sha256": "c00f0aa71f86f34b8a9e978bb0fe1cb71cf5223a044666a311ba93815c56f6c4",
+    "lines": 234,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Ownership"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem except_bind_eq_ok (x : Except \u03b5 \u03b1) (f : \u03b1 \u2192 Except \u03b5 \u03b2) (b : \u03b2) :"
+      ],
+      [
+        9,
+        "theorem checked_loop (xs : List \u03b1) (p : \u03b1 \u2192 Bool) (why : \u03b1 \u2192 String) :"
+      ],
+      [
+        21,
+        "theorem loop_yields (xs : List \u03b1) (f : \u03b1 \u2192 Except \u03b5 (ForInStep PUnit))"
+      ],
+      [
+        44,
+        "def startRoots (s : Start) : List (Option Addr) :="
+      ],
+      [
+        48,
+        "theorem valid_start_well_formed (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        55,
+        "theorem valid_start_chain_ends (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        68,
+        "theorem valid_start_roots (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        90,
+        "theorem path_of_chain_ends (s : Start) (n : Nat) (r : Option Addr)"
+      ],
+      [
+        116,
+        "theorem valid_start_paths (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        127,
+        "theorem valid_start_input (e : Expr) (s : Start) (h : validStart e s = .ok ())"
+      ],
+      [
+        142,
+        "theorem read_inputs (m : Memory) (ins : List (String \u00d7 RawValue))"
+      ],
+      [
+        159,
+        "theorem valid_start_plain (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        165,
+        "theorem plain_answer_exists (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        173,
+        "theorem dup_addr_none (cells : List StartCell) :"
+      ],
+      [
+        189,
+        "theorem valid_start_unique (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        197,
+        "theorem link_names_eq (r : Option Addr) (a : Addr) : linkNames r a = (r == some a) := by"
+      ],
+      [
+        201,
+        "theorem start_holder_totals (s : Start) (a : Addr) :"
+      ],
+      [
+        211,
+        "theorem valid_start_counts (e : Expr) (s : Start) (h : validStart e s = .ok ()) :"
+      ],
+      [
+        234,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/StateSteps.lean",
+    "sha256": "f3d64bb0f0436d5dcc665efcfc2be5640e0e13d26a0a3809fde9664c77fedd49",
+    "lines": 45,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Arithmetic"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem StateInvariant.holding_meanings {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        12,
+        "theorem StateInvariant.scope {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        19,
+        "theorem StateInvariant.snapshot {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        41,
+        "theorem snapshot_prefix (s : RunState) (kind : StepKind) (bv : Option RawValue) :"
+      ],
+      [
+        45,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/VariableContract.lean",
+    "sha256": "c0f37a9a92b99d18f9847250a25b103b3226454f049dccc21a4e27dd6e2c2877",
+    "lines": 248,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Initialization"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        5,
+        "theorem cell_find_self (cs : List Cell) (hu : (cs.map Cell.addr).Nodup)"
+      ],
+      [
+        20,
+        "theorem StateInvariant.copy_holder {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        71,
+        "theorem StateInvariant.move_holder {start : Start} {g : Meanings} {enc : List Nat} {s : RunState}"
+      ],
+      [
+        110,
+        "theorem variable_contract (x : String) : EvalContract (.var x) := by"
+      ],
+      [
+        248,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Variables.lean",
+    "sha256": "53a97018dde4cbeff022dddf85e0956fdc7987932567048f4471546a594e461c",
+    "lines": 65,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.Bindings"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "theorem variable_list_safe (s : RunState) (env : Env) (fs : List Frame) (enc : List Nat)"
+      ],
+      [
+        51,
+        "theorem variable_no_holder (s : RunState) (env : Env) (fs : List Frame) (enc : List Nat)"
+      ],
+      [
+        65,
+        "end Trial.Proofs"
+      ]
+    ]
+  },
+  {
+    "file": "experiments/03c-checker/trial/lean/Proofs/Views.lean",
+    "sha256": "a6084b189a512f644cb8cb9c5d029d0718cf9b19ec676caef0ac989f92f7258b",
+    "lines": 226,
+    "banned_executable_hits": [],
+    "commands": [
+      [
+        1,
+        "import Proofs.NewBinding"
+      ],
+      [
+        3,
+        "namespace Trial.Proofs"
+      ],
+      [
+        7,
+        "def StableView (s : RunState) (roots : List (Option Addr)) (sn : Snapshot) : Prop :="
+      ],
+      [
+        13,
+        "structure PreservesViews (roots : List (Option Addr)) (s t : RunState) : Prop where"
+      ],
+      [
+        19,
+        "theorem PreservesViews.refl (roots : List (Option Addr)) (s : RunState) :"
+      ],
+      [
+        23,
+        "theorem PreservesViews.trans {roots : List (Option Addr)} {s t u : RunState}"
+      ],
+      [
+        36,
+        "theorem PreservesViews.of_fields (roots : List (Option Addr)) (s t : RunState)"
+      ],
+      [
+        42,
+        "theorem snapshot_views (s : RunState) (roots : List (Option Addr))"
+      ],
+      [
+        56,
+        "theorem give_up_shared_views (s : RunState) (a : Addr) (c : Cell) (fuel : Nat)"
+      ],
+      [
+        77,
+        "theorem give_up_exclusive_views (s : RunState) (a : Addr) (c : Cell)"
+      ],
+      [
+        121,
+        "theorem give_up_views (fuel : Nat) (s : RunState) (a : Addr)"
+      ],
+      [
+        151,
+        "theorem give_up_link_views (s : RunState) (r : Option Addr) (roots : List (Option Addr))"
+      ],
+      [
+        161,
+        "theorem PreservesViews.names {s t : RunState} {roots : List (Option Addr)}"
+      ],
+      [
+        182,
+        "theorem give_up_binding_snapshots (s : RunState) (id : Nat) (b : Binding) (r : Option Addr)"
+      ],
+      [
+        207,
+        "theorem build_cell_views (s : RunState) (enc : List Nat) (item : Int) (link : Option Addr)"
+      ],
+      [
+        226,
+        "end Trial.Proofs"
+      ]
+    ]
+  }
+]

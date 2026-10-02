@@ -1,0 +1,64 @@
+59 changed proof files; all executable banned-token scans empty; all tracked reconstructed bytes match candidate; 25 candidate hashes match.
+Line-head tokens: Counter({'have': 673, '·': 602, '|': 475, 'obtain': 301, 'theorem': 296, 'exact': 289, 'simp': 258, 'rw': 224, 'intro': 202, 'cases': 200, 'let': 185, 'simpa': 140, 'subst': 118, 'refine': 116, 'rcases': 98, '(h': 93, 'apply': 77, 'by_cases': 70, 'import': 60, 'namespace': 59, 'end': 59, '∃': 57, 'induction': 54, '{': 39, 'pending': 38, 'change': 37, 'split': 37, '(hf': 37, '(∀': 36, 'def': 35, '(hp': 35, '∀': 35, 'dsimp': 34, 'StateInvariant': 31, '(hh': 30, 'unfold': 28, '(fun': 25, '({': 20, 'pure': 20, 'readBack': 20, '(hs': 19, 'bindings': 18, 'fun': 18, '(hu': 16, 'outside': 15, '(hl': 15, 'holders': 15, '(hr': 14, 't.pending': 14, 'rename_i': 13, 'snapshots': 13, 'match': 13, 'readable': 13, '(hb': 13, '@[simp]': 13, 'owned': 12, 'ordered': 12, 'rfl': 12, '(by': 12, 'run': 11, 'meaning': 11, 'kind': 11, 'read': 11, 'state': 11, 'live': 11, 'frames': 11, 'bindingsGrow': 11, 'branchesGrow': 11, 'meanings': 11, 'saved': 11, 'reservations': 11, 'reserved': 11, 'branches': 11, 'branchBound': 11, 'LiveFor': 11, 't.nextBinding': 11, 'HoldingMeanings': 11, 'PreservesViews': 11, 'ids': 10, 'raw': 10, 'kinds': 10, 'holding': 10, 'tracked': 10, 'detached': 10, 'outsideValues': 10, 't.bindings': 10, 'enter': 10, 'snapshot': 10, '(.ok': 10, 'addresses': 9, 'labels': 9, 'history': 9, 'historyBound': 9, 'outsideHistory': 9, 'else': 9, 'ReleaseFrame': 9, 'all_goals': 8, 'nextBinding': 8, '_': 8, 'mem': 8, 'constructor': 8, '(roots': 8, 'popPending': 7, '(rest': 7, 'Owned': 7, 's.snaps.IsPrefix': 7, '(a': 7, 'if': 7, '(raw': 7, 'Healthy': 7, '.of_fields': 7, '(hc': 7, 'omega': 7, '[{': 7, 'record': 6, 'HeapSafe': 6, 't.bindings.map': 6, 'giveUpBinding': 6, '(hpend': 6, 't.setAside': 6, 'structure': 6, 'ListPath': 6, '(forIn': 6, 'usesBinding': 6, 'hl.congr': 5, '(do': 5, '(hi': 5, 'cells': 5, '(bid': 5, '(hn': 5, '(b': 5, '(headName': 5, '(giveUp': 5, 'EvalContract': 4, 'EnvMeaning': 4, '(bs.map': 4, '(hm': 4, '(hw': 4, 'log': 4, 'pushPending,': 4, '(hv': 4, '(he': 4, '(hnow': 4, '(hpast': 4, '(c': 4, '(hstack': 4, 'ih': 4, '(match': 4, 'enc': 4, '(fs': 4, 'FramesBound': 4, '(r': 4, 'funext': 4, 'evalC': 4, '(hne': 4, '(henv': 4, '{raw': 4, 'a': 4, 'some': 4, 'Memory.release,': 4, 'scope': 4, 'ExtendsMeanings': 3, '(snapshot_prefix': 3, '(m.updateCell': 3, 'enc.contains': 3, 'setAside': 3, '(s': 3, 'give_up_binding_owned': 3, 'usedLater': 3, '(hrest': 3, '(inputBindings': 3, '.ok': 3, '(ho': 3, 'NoLeakAt': 3, '(hpos': 3, '(∃': 3, 'memOp': 3, 'modify': 3, 'addHolder': 3, 'setBindingStatus': 3, '(x': 3, 'bindingRoots': 2, 'bs.map': 2, '(bindingRoots': 2, '(valueRoot': 2, '(hp.cons': 2, '?_,': 2, '{link': 2, '(f': 2, 'calc': 2, 'with': 2, 'build_cell_safe': 2, '(h.readable': 2, 'b': 2, '(start': 2, '(link': 2, '(henv.extend': 2, '(hreserved': 2, 'reserveAction': 2, '(hout': 2, '(ht': 2, '(hs2.scope': 2, '(hr2.snapshots.trans': 2, '(t': 2, 'walkAddrs': 2, 'b.value': 2, 'status': 2, 's.inputs.filterMap': 2, '(hbound': 2, 'hsw': 2, '(if': 2, 't.bindings.find?': 2, 'lookupF': 2, 'contradiction': 2, '(bound_meanings_extend': 2, '(hcheck': 2, 'plain.map': 2, 'start': 2, '((hs.state.scope': 2, 'finish_branch_contract': 2, '(hfr.snapshots.trans': 2, '((hv.saved': 2, 'valueRoot': 2, 'giveUpDead': 2, 'finishBranch': 2, 'congr': 2, '⟨hframe.bindingCounter,': 2, 'f': 2, '(throw': 2, 'pure,': 2, 'hf,': 2, '(List.mem_append_left': 2, '⟨rfl,': 2, '(d': 2, '(snapshot': 2, 'setBindingStatus,': 2, 'match_reserve_owned': 2, 'NoVisibleChange': 2, 'vals.map': 2, 'hx.state': 1, '(usesBinding': 1, 'bs.filterMap': 1, '(st': 1, '(List.perm_middle': 1, '(l₂': 1, 'snapshot_prefix': 1, '⟨[],': 1, 'dispose_head_contract': 1, '(h.scope': 1, '(hsn.trans': 1, '(item': 1, 'List.nodup_append]': 1, '((m.updateCell': 1, '(hz': 1, 'ReservedAllocated': 1, 't.setAside.IsSuffix': 1, '(List.mem_append_right': 1, '(P': 1, '(hstep': 1, '(hused': 1, '(hcover': 1, 'b.id': 1, 'cleanup_loop_contract': 1, 'LivePaths': 1, 'c.status': 1, 'build_contract': 1, 't.snaps': 1, 'hpend,': 1, 'disposeSetAside': 1, '(inner': 1, 'dispose_prefix': 1, 'dupInput': 1, '(s.inputs.map': 1, 'env.reverse.find?': 1, 'lookupVal': 1, '(env.find?': 1, '(m': 1, 'inputs.mapM': 1, 'status_update_absent': 1, 'w.nextBinding': 1, 'w.pending': 1, 'release_binding_contract': 1, 'hfw.stack,': 1, 'hnb,': 1, '(hbindings': 1, '(htracked': 1, '(hpending': 1, 'runCounted': 1, 'closed': 1, 'positive': 1, 'fresh': 1, '⟨valid_start_heap': 1, 'no_leak_of_heap': 1, '(ha': 1, '(no_holders_missing': 1, 'h.closed.create': 1, 'h.closed.reserve': 1, 'counts_add_root': 1, '⟨h.toHeapSafe.drop_none,': 1, 'h.closed,': 1, 'unique': 1, 'counts': 1, 'c.link': 1, 'r': 1, '(hy': 1, '(toFEnv': 1, '(hcond.state.scope': 1, 'hcond.live.congr': 1, 'abbrev': 1, '(b.status': 1, '(o': 1, 'h': 1, '(e': 1, '{n': 1, 'n': 1, '((inputBindings': 1, 'b.value.kind': 1, 'b.status': 1, 'input_binding_status.match_1': 1, 'inputBindings.match_1': 1, 'input_binding_loop': 1, '(plain': 1, 'Except.ok.inj': 1, 'usedLater]': 1, 'usedLater,': 1, '(initialized_state': 1, 'List.nodup_range': 1, '[]': 1, '>>=': 1, 'inputBindings': 1, 'id': 1, 'name': 1, 'value': 1, 'List.append_assoc,': 1, '(inputs.filterMap': 1, 'rs.filter': 1, 'let_setup_contract': 1, 'hb.meanings.trans': 1, '(body': 1, '(hfs': 1, 'u2.setAside': 1, 'binding_find_self': 1, 'hft.stack.trans': 1, '(name': 1, 'ic': 1, 'icb': 1, '(tailBinding': 1, 'pending_tail_heap': 1, '(cs': 1, 'giveUpLink': 1, 'boundMeanings': 1, '(items': 1, '(matchBindings': 1, '((tailName,': 1, '(matchMeanings': 1, 'cleanup_match_cell': 1, '(hsave3': 1, 'match_cell_setup_contract': 1, '(ds.map': 1, 'henv.match_bindings': 1, 'match_frames_bound': 1, 'hs.meanings.trans': 1, '(hsc': 1, '(x,': 1, 'List.mem_append_left': 1, 'hs5': 1, '(cb': 1, 'exclusiveSetup': 1, '(env': 1, 'exclusive_setup_contract': 1, 'shared_setup_contract': 1, 'List.mem_filterMap.mpr': 1, '(hmean': 1, '(giveUpBinding': 1, 'inductive': 1, '(found': 1, '(tail': 1, '(hx': 1, 'generalize': 1, 'readList': 1, '(List.find?_some': 1, "(m'.find?": 1, '(n': 1, 'm.cells.length': 1, '(m.find?': 1, 'm.find?': 1, 'm.updateCell': 1, '(cells.map': 1, "(m'.cells.map": 1, 'give_up_safe': 1, 'cells.filter': 1, 'CountsCorrect': 1, '(Except.ok': 1, '(Except.error': 1, 'lookupKind': 1, '(lookupVal': 1, 'expectKind': 1, 'reachable': 1, 'right': 1, 'RootReaches': 1, '.cons': 1, '(hlive': 1, '(pure': 1, '(act': 1, '(modify': 1, 's.mem.updateCell': 1, 't.mem': 1, 'give_up_link_safe': 1, '(h.holding_meanings.drop': 1, 'bindingCounter': 1, 'branchCounter': 1, 'stack': 1, "⟨h'.bindingCounter.trans": 1, "h'.stack.trans": 1, 'reserved_count_update': 1, '(sole_holder_avoids': 1, '(ht.avoids': 1, 'congrArg': 1, '(tid': 1, "htail'.trans": 1, 'pushPending.match_1': 1, 'Finishes': 1, 'SameAnswer': 1, 'NoLeak': 1, 'hsv': 1, '⟨by': 1, "hst'.visible": 1, "((hp'.append_right": 1, 't.nextBranch': 1, 'v.nextBinding': 1, 'v.pending': 1, 'activate_tail_contract': 1, '((do': 1, 'hfw.bindingCounter.trans': 1, 'hsnv.trans': 1, 'NamesUnchanged': 1, 'List.any_eq_true.mpr': 1, '¬(sn.bindings.any': 1, 'List.find?_eq_none.mp': 1, 'List.find?_some': 1, 'sn.bindings.any': 1, '(hread': 1, '(hnames': 1, '(p': 1, 'dupAddr': 1, '(s.toMemory.cells.map': 1, '(s.inputs.filterMap': 1, '|>.filter': 1, '(s.cells.filter': 1, '(s.outside.filter': 1, 'Function.comp_def,': 1, 'symm': 1, '(read_back_cells': 1, '((h.copy_holder': 1, '((h.move_holder': 1, 'owned_push': 1, 'sn.bindings.Sublist': 1, 'values': 1, '⟨hb,': 1, '(kind': 1, 'snapshot,': 1, 'popPending,': 1, 'hr': 1, 'hnow.drop': 1})
+Proofs.lean : 8 top-level lines; 27 total lines
+Proofs/Arithmetic.lean : 4 top-level lines; 69 total lines
+Proofs/BindContract.lean : 12 top-level lines; 135 total lines
+Proofs/Bindings.lean : 15 top-level lines; 137 total lines
+Proofs/BranchContract.lean : 8 top-level lines; 171 total lines
+Proofs/Build.lean : 10 top-level lines; 165 total lines
+Proofs/BuildContract.lean : 6 top-level lines; 184 total lines
+Proofs/Cleanup.lean : 6 top-level lines; 84 total lines
+Proofs/CleanupContract.lean : 7 top-level lines; 135 total lines
+Proofs/CleanupViews.lean : 4 top-level lines; 67 total lines
+Proofs/Closed.lean : 13 top-level lines; 134 total lines
+Proofs/ConsContract.lean : 5 top-level lines; 78 total lines
+Proofs/Construction.lean : 5 top-level lines; 91 total lines
+Proofs/Disposal.lean : 6 top-level lines; 89 total lines
+Proofs/DisposalViews.lean : 5 top-level lines; 105 total lines
+Proofs/Environment.lean : 11 top-level lines; 101 total lines
+Proofs/ExclusiveSetup.lean : 5 top-level lines; 134 total lines
+Proofs/Final.lean : 5 top-level lines; 48 total lines
+Proofs/Healthy.lean : 19 top-level lines; 262 total lines
+Proofs/Heap.lean : 8 top-level lines; 89 total lines
+Proofs/IfContract.lean : 6 top-level lines; 180 total lines
+Proofs/Induction.lean : 27 top-level lines; 204 total lines
+Proofs/Initial.lean : 13 top-level lines; 131 total lines
+Proofs/Initialization.lean : 13 top-level lines; 140 total lines
+Proofs/InputCleanup.lean : 6 top-level lines; 121 total lines
+Proofs/Inputs.lean : 8 top-level lines; 96 total lines
+Proofs/LetContract.lean : 4 top-level lines; 77 total lines
+Proofs/LetSetup.lean : 6 top-level lines; 144 total lines
+Proofs/LiveBindings.lean : 5 top-level lines; 84 total lines
+Proofs/Liveness.lean : 13 top-level lines; 129 total lines
+Proofs/Match.lean : 7 top-level lines; 138 total lines
+Proofs/MatchBindings.lean : 11 top-level lines; 121 total lines
+Proofs/MatchCell.lean : 4 top-level lines; 137 total lines
+Proofs/MatchContract.lean : 5 top-level lines; 77 total lines
+Proofs/MatchLiveness.lean : 6 top-level lines; 84 total lines
+Proofs/MatchNil.lean : 6 top-level lines; 120 total lines
+Proofs/MatchSetup.lean : 6 top-level lines; 109 total lines
+Proofs/Meanings.lean : 9 top-level lines; 89 total lines
+Proofs/Memory.lean : 32 top-level lines; 407 total lines
+Proofs/NewBinding.lean : 4 top-level lines; 55 total lines
+Proofs/Operations.lean : 6 top-level lines; 73 total lines
+Proofs/Ownership.lean : 18 top-level lines; 170 total lines
+Proofs/PendingRelease.lean : 4 top-level lines; 84 total lines
+Proofs/Plain.lean : 13 top-level lines; 146 total lines
+Proofs/Reachability.lean : 11 top-level lines; 139 total lines
+Proofs/Release.lean : 13 top-level lines; 134 total lines
+Proofs/ReleaseContract.lean : 5 top-level lines; 133 total lines
+Proofs/ReleaseFrame.lean : 13 top-level lines; 139 total lines
+Proofs/Reserve.lean : 6 top-level lines; 94 total lines
+Proofs/ReserveContract.lean : 8 top-level lines; 194 total lines
+Proofs/RunContract.lean : 6 top-level lines; 101 total lines
+Proofs/SharedContract.lean : 5 top-level lines; 84 total lines
+Proofs/SharedSetup.lean : 5 top-level lines; 138 total lines
+Proofs/Snapshots.lean : 8 top-level lines; 85 total lines
+Proofs/Start.lean : 21 top-level lines; 234 total lines
+Proofs/StateSteps.lean : 7 top-level lines; 45 total lines
+Proofs/VariableContract.lean : 7 top-level lines; 248 total lines
+Proofs/Variables.lean : 5 top-level lines; 65 total lines
+Proofs/Views.lean : 16 top-level lines; 226 total lines
+{"label": "final-head", "command": ["git", "rev-parse", "HEAD"], "cwd": "/home/user/workspace/repo", "started": "2026-10-02T07:23:28.008621+00:00", "finished": "2026-10-02T07:23:28.010954+00:00", "exit": 0}
+{"label": "final-status", "command": ["git", "status", "--porcelain=v1", "--untracked-files=all"], "cwd": "/home/user/workspace/repo", "started": "2026-10-02T07:23:28.011108+00:00", "finished": "2026-10-02T07:23:28.015151+00:00", "exit": 0}
+{"label": "final-ignored", "command": ["git", "ls-files", "--others", "--ignored", "--exclude-standard"], "cwd": "/home/user/workspace/repo", "started": "2026-10-02T07:23:28.015295+00:00", "finished": "2026-10-02T07:23:28.018215+00:00", "exit": 0}

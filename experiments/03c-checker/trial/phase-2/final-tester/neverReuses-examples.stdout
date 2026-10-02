@@ -1,0 +1,940 @@
+Trial predictions: all 28 runs. Counts below come from memory's own record.
+Promise checks are separate from prediction comparisons. A mismatch is one failed report item.
+
+Run 1
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2, 3]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2, 3]; actual: [2, 2, 3]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2, 3]; actual: [2, 2, 3]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c4]; actual: [freed c1, allocated c4]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 2
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2]; actual: [2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2]; actual: [2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c2]; actual: [freed c1, allocated c2]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 3
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: []
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: []; actual: []
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: []; actual: []
+  MATCH — Allocations (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: []; actual: []
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 4
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [9223372036854775808]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [9223372036854775808]; actual: [9223372036854775808]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [9223372036854775808]; actual: [9223372036854775808]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c2]; actual: [freed c1, allocated c2]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 5
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2, 3]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2, 3]; actual: [2, 2, 3]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2, 3]; actual: [2, 2, 3]
+  MATCH — Allocations (memory's record)
+    Expected: 1; actual: 1
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [allocated c4]; actual: [allocated c4]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 6
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 1, 3]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 1, 3]; actual: [2, 1, 3]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 1, 3]; actual: [2, 1, 3]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 2
+  MISMATCH — Reuses (memory's record)
+    Expected: 2; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 2
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, freed c2, allocated c4, allocated c5]; actual: [freed c1, freed c2, allocated c4, allocated c5]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 7
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [1]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [1]; actual: [1]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [1]; actual: [1]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c2]; actual: [freed c1, allocated c2]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 8
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 1, 3]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 1, 3]; actual: [2, 1, 3]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 1, 3]; actual: [2, 1, 3]
+  MISMATCH — Allocations (memory's record)
+    Expected: 1; actual: 2
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c4, allocated c5]; actual: [freed c1, allocated c4, allocated c5]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 9
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 3]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 3]; actual: [2, 3]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 3]; actual: [2, 3]
+  MATCH — Allocations (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 1; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1]; actual: [freed c1]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+  MATCH — Timing boundary count: branch value worked out
+    Expected: 1; actual: 1
+  MATCH — Timing boundary count: branch value handed on
+    Expected: 1; actual: 1
+  MATCH — Timing: named moments occur in the frozen order
+    Expected: yes; actual: yes
+  MATCH — Timing snapshots agree with memory's record
+    Expected: [freed c1]; actual: [freed c1]
+  MISMATCH — Timing: Branch value worked out: [2, 3]; intermediate result holds c2; c1
+    Expected: set aside, zero holders, detached, owned by the match on c1; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value worked out: [2, 3]; intermediate result holds c2; c2
+    Expected: live and allocated, not set aside; actual: live; stored holders 1; actual holders 1; link list starting at c3; set-aside entries []
+  MATCH — Timing: Branch value worked out: [2, 3]; intermediate result holds c2; c3
+    Expected: live and allocated, not set aside; actual: live; stored holders 1; actual holders 1; link empty list; set-aside entries []
+  MATCH — Timing: Branch value worked out: [2, 3]; intermediate result holds c2; result holder
+    Expected: list starting at c2; actual: list starting at c2
+  MATCH — Timing: Branch value worked out: [2, 3]; intermediate result holds c2; recorded branch value
+    Expected: [2, 3]; actual: [2, 3]
+  MISMATCH — Timing: Branch value worked out: [2, 3]; intermediate result holds c2; releases already recorded
+    Expected: []; actual: [1]
+  MATCH — Timing: Branch value handed on: answer holder goes to caller; tail stays live; c1
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value handed on: answer holder goes to caller; tail stays live; c2
+    Expected: live and allocated, not set aside; actual: live; stored holders 1; actual holders 1; link list starting at c3; set-aside entries []
+  MATCH — Timing: Branch value handed on: answer holder goes to caller; tail stays live; c3
+    Expected: live and allocated, not set aside; actual: live; stored holders 1; actual holders 1; link empty list; set-aside entries []
+  MATCH — Timing: Branch value handed on: answer holder goes to caller; tail stays live; result holder
+    Expected: list starting at c2; actual: list starting at c2
+  MATCH — Timing: Branch value handed on: answer holder goes to caller; tail stays live; recorded branch value
+    Expected: [2, 3]; actual: [2, 3]
+  MATCH — Timing: Branch value handed on: answer holder goes to caller; tail stays live; releases already recorded
+    Expected: [1]; actual: [1]
+  MATCH — Timing: caller receives the branch result's holder on c2
+    Expected: yes; actual: yes
+
+Run 10
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: 9
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: 9; actual: 9
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: 9; actual: 9
+  MATCH — Allocations (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 2; actual: 2
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, freed c2]; actual: [freed c1, freed c2]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+  MATCH — Timing boundary count: branch value worked out
+    Expected: 2; actual: 2
+  MATCH — Timing boundary count: branch value handed on
+    Expected: 2; actual: 2
+  MATCH — Timing: named moments occur in the frozen order
+    Expected: yes; actual: yes
+  MATCH — Timing snapshots agree with memory's record
+    Expected: [freed c1, freed c2]; actual: [freed c1, freed c2]
+  MISMATCH — Timing: Inner branch value worked out: number 9 holds no cell; c1
+    Expected: set aside, zero holders, detached, owned by the match on c1; actual: absent; set-aside entries []
+  MISMATCH — Timing: Inner branch value worked out: number 9 holds no cell; c2
+    Expected: set aside, zero holders, detached, owned by the match on c2; actual: absent; set-aside entries []
+  MATCH — Timing: Inner branch value worked out: number 9 holds no cell; result holder
+    Expected: no intermediate holders; actual: no intermediate holders
+  MATCH — Timing: Inner branch value worked out: number 9 holds no cell; recorded branch value
+    Expected: 9; actual: 9
+  MISMATCH — Timing: Inner branch value worked out: number 9 holds no cell; releases already recorded
+    Expected: []; actual: [1, 2]
+  MISMATCH — Timing: Inner branch value handed on: only its c2 is freed; c1
+    Expected: set aside, zero holders, detached, owned by the match on c1; actual: absent; set-aside entries []
+  MATCH — Timing: Inner branch value handed on: only its c2 is freed; c2
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Inner branch value handed on: only its c2 is freed; result holder
+    Expected: no intermediate holders; actual: no intermediate holders
+  MATCH — Timing: Inner branch value handed on: only its c2 is freed; recorded branch value
+    Expected: 9; actual: 9
+  MISMATCH — Timing: Inner branch value handed on: only its c2 is freed; releases already recorded
+    Expected: [2]; actual: [1, 2]
+  MISMATCH — Timing: Outer branch value worked out: number 9 holds no cell; c1
+    Expected: set aside, zero holders, detached, owned by the match on c1; actual: absent; set-aside entries []
+  MATCH — Timing: Outer branch value worked out: number 9 holds no cell; c2
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Outer branch value worked out: number 9 holds no cell; result holder
+    Expected: no intermediate holders; actual: no intermediate holders
+  MATCH — Timing: Outer branch value worked out: number 9 holds no cell; recorded branch value
+    Expected: 9; actual: 9
+  MISMATCH — Timing: Outer branch value worked out: number 9 holds no cell; releases already recorded
+    Expected: [2]; actual: [1, 2]
+  MATCH — Timing: Outer branch value handed on: c1 is now freed; c1
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Outer branch value handed on: c1 is now freed; c2
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Outer branch value handed on: c1 is now freed; result holder
+    Expected: no intermediate holders; actual: no intermediate holders
+  MATCH — Timing: Outer branch value handed on: c1 is now freed; recorded branch value
+    Expected: 9; actual: 9
+  MATCH — Timing: Outer branch value handed on: c1 is now freed; releases already recorded
+    Expected: [2, 1]; actual: [1, 2]
+  MISMATCH — Timing: inner and outer set-aside cells belong to different branches
+    Expected: yes; actual: No match step 4 identifies the branch owning c1
+
+Run 11
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: 7
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: 7; actual: 7
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: 7; actual: 7
+  MATCH — Allocations (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 3; actual: 3
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, freed c2, freed c3]; actual: [freed c1, freed c2, freed c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+  MATCH — Timing boundary count: branch value worked out
+    Expected: 1; actual: 1
+  MATCH — Timing boundary count: branch value handed on
+    Expected: 1; actual: 1
+  MATCH — Timing boundary count: branch about to run
+    Expected: 1; actual: 1
+  MATCH — Timing: named moments occur in the frozen order
+    Expected: yes; actual: yes
+  MATCH — Timing snapshots agree with memory's record
+    Expected: [freed c1, freed c2, freed c3]; actual: [freed c1, freed c2, freed c3]
+  MISMATCH — Timing: Before the branch runs: unused rest given up; detached tail already freed; c1
+    Expected: set aside, zero holders, detached, owned by the match on c1; actual: absent; set-aside entries []
+  MATCH — Timing: Before the branch runs: unused rest given up; detached tail already freed; c2
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Before the branch runs: unused rest given up; detached tail already freed; c3
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Before the branch runs: unused rest given up; detached tail already freed; result holder
+    Expected: no intermediate holders; actual: no intermediate holders
+  MATCH — Timing: Before the branch runs: unused rest given up; detached tail already freed; recorded branch value
+    Expected: no finishing branch value; actual: no finishing branch value
+  MISMATCH — Timing: Before the branch runs: unused rest given up; detached tail already freed; releases already recorded
+    Expected: [2, 3]; actual: [1, 2, 3]
+  MISMATCH — Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; c1
+    Expected: set aside, zero holders, detached, owned by the match on c1; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; c2
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; c3
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; result holder
+    Expected: no intermediate holders; actual: no intermediate holders
+  MATCH — Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; recorded branch value
+    Expected: 7; actual: 7
+  MISMATCH — Timing: Branch value worked out: number 7 holds no cell; unused tail already freed; releases already recorded
+    Expected: [2, 3]; actual: [1, 2, 3]
+  MATCH — Timing: Branch value handed on: front freed after detached tail; c1
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value handed on: front freed after detached tail; c2
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value handed on: front freed after detached tail; c3
+    Expected: absent from memory and the set-aside list; actual: absent; set-aside entries []
+  MATCH — Timing: Branch value handed on: front freed after detached tail; result holder
+    Expected: no intermediate holders; actual: no intermediate holders
+  MATCH — Timing: Branch value handed on: front freed after detached tail; recorded branch value
+    Expected: 7; actual: 7
+  MATCH — Timing: Branch value handed on: front freed after detached tail; releases already recorded
+    Expected: [2, 3, 1]; actual: [1, 2, 3]
+  MISMATCH — Timing: t has given up its holder before the branch runs
+    Expected: yes; actual: Match step 4 does not identify t holding the detached tail c2
+  MATCH — Timing: c2 and c3 were never set aside
+    Expected: yes; actual: true
+
+Run 12
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [0, 1, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [0, 1, 2]; actual: [0, 1, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [0, 1, 2]; actual: [0, 1, 2]
+  MATCH — Allocations (memory's record)
+    Expected: 1; actual: 1
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [allocated c3]; actual: [allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 13
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [1, 1, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [1, 1, 2]; actual: [1, 1, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [1, 1, 2]; actual: [1, 1, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 1; actual: 2
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3, allocated c4]; actual: [freed c1, allocated c3, allocated c4]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 14
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [1, 2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [1, 2, 2]; actual: [1, 2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [1, 2, 2]; actual: [1, 2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 1; actual: 2
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [allocated c3, freed c1, allocated c4]; actual: [allocated c3, freed c1, allocated c4]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 15
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [3, 3, 4]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [3, 3, 4]; actual: [3, 3, 4]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [3, 3, 4]; actual: [3, 3, 4]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 1; actual: 2
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, freed c2, allocated c5]; actual: [freed c1, freed c2, allocated c5]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 16
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2]; actual: [2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2]; actual: [2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3]; actual: [freed c1, allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 17
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2]; actual: [2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2]; actual: [2]
+  MATCH — Allocations (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 1; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1]; actual: [freed c1]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 18
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2]; actual: [2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2]; actual: [2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3]; actual: [freed c1, allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 19
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2]; actual: [2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2]; actual: [2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3]; actual: [freed c1, allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 20
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2]; actual: [2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2]; actual: [2]
+  MATCH — Allocations (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 1; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1]; actual: [freed c1]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 21
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2]; actual: [2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2]; actual: [2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3]; actual: [freed c1, allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 22
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2]; actual: [2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2]; actual: [2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3]; actual: [freed c1, allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 23
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [1, 3, 3]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [1, 3, 3]; actual: [1, 3, 3]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [1, 3, 3]; actual: [1, 3, 3]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 2
+  MISMATCH — Reuses (memory's record)
+    Expected: 2; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 2
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, freed c2, allocated c4, allocated c5]; actual: [freed c1, freed c2, allocated c4, allocated c5]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 24
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [2, 2]; actual: [2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [2, 2]; actual: [2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3]; actual: [freed c1, allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 25
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: true
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: true; actual: true
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: true; actual: true
+  MATCH — Allocations (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 2; actual: 2
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, freed c2]; actual: [freed c1, freed c2]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 26
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [1, 2, 2]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [1, 2, 2]; actual: [1, 2, 2]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [1, 2, 2]; actual: [1, 2, 2]
+  MISMATCH — Allocations (memory's record)
+    Expected: 1; actual: 2
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c3, allocated c4]; actual: [freed c1, allocated c3, allocated c4]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 27
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [5]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [5]; actual: [5]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [5]; actual: [5]
+  MATCH — Allocations (memory's record)
+    Expected: 1; actual: 1
+  MATCH — Reuses (memory's record)
+    Expected: 0; actual: 0
+  MATCH — Frees (memory's record)
+    Expected: 2; actual: 2
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, freed c2, allocated c3]; actual: [freed c1, freed c2, allocated c3]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Run 28
+  MATCH — Program well-formed
+    Expected: yes; actual: yes
+  MATCH — Starting memory valid
+    Expected: yes; actual: yes
+  MATCH — Counted run finishes with a readable answer
+    Expected: yes; actual: [-3]
+  MATCH — Plain meaning finishes with an answer
+    Expected: yes; actual: yes
+  MATCH — Predicted and actual answer
+    Expected: [-3]; actual: [-3]
+  MATCH — Plain meaning's answer equals counted answer
+    Expected: [-3]; actual: [-3]
+  MISMATCH — Allocations (memory's record)
+    Expected: 0; actual: 1
+  MISMATCH — Reuses (memory's record)
+    Expected: 1; actual: 0
+  MISMATCH — Frees (memory's record)
+    Expected: 0; actual: 1
+  MATCH — Rule's log agrees with memory's record, including order and addresses
+    Expected: [freed c1, allocated c2]; actual: [freed c1, allocated c2]
+  MATCH — Promise (d): allocated cells exactly reachable from answer and outside holders
+    Expected: yes; actual: yes
+  MATCH — Promise (d): every final holder count is correct
+    Expected: yes; actual: yes
+  MATCH — Promise (c): outside lists unchanged in every snapshot
+    Expected: yes; actual: yes
+
+Misreport control — run 2 (separate from the 28 approved-rule runs)
+  MATCH — Control finishes with an answer (not refused or failed while running)
+    Expected: yes; actual: [2]
+  MATCH — Control answer reads back
+    Expected: yes; actual: [2]
+  MATCH — Control answer equals prediction
+    Expected: [2]; actual: [2]
+  MATCH — Control answer equals plain meaning
+    Expected: [2]; actual: [2]
+  MATCH — Control totals differ from prediction
+    Expected: different from allocations 0, reuses 1, frees 0; actual: allocations 1, reuses 0, frees 1
+  MATCH — Control log versus memory record (known misreport expected)
+    Expected: [freed c1, allocated c2]; actual: [reused c2]
+  MATCH — Control rejected on counts with correct readable answer
+    Expected: yes; actual: true
+
+Approved-rule mismatch count: 69
+Control mismatch count: 0
+Total mismatch count: 69

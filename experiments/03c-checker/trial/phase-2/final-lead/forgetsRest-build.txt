@@ -1,0 +1,72 @@
+✔ [2/69] Built Trial.Language (464ms)
+✔ [3/69] Built Trial.Plain (397ms)
+✔ [4/69] Built Trial.Memory (735ms)
+✔ [5/69] Built Trial.Counted (1.5s)
+✔ [6/69] Built Trial.Broken (265ms)
+✔ [7/69] Built Trial (202ms)
+✔ [8/69] Built Promises (388ms)
+✔ [9/69] Built Proofs.Plain (2.7s)
+✔ [10/69] Built Proofs.Memory (565ms)
+✔ [11/69] Built Proofs.Ownership (478ms)
+✔ [12/69] Built Proofs.Start (1.4s)
+✔ [13/69] Built Proofs.Heap (369ms)
+✔ [14/69] Built Proofs.Release (1.3s)
+✔ [15/69] Built Proofs.Build (745ms)
+✔ [16/69] Built Proofs.Closed (300ms)
+✔ [17/69] Built Proofs.Reserve (402ms)
+✔ [18/69] Built Proofs.Reachability (421ms)
+✔ [19/69] Built Proofs.Initial (757ms)
+✔ [20/69] Built Proofs.Healthy (429ms)
+✔ [21/69] Built Proofs.Operations (329ms)
+✔ [22/69] Built Proofs.Liveness (580ms)
+✔ [23/69] Built Proofs.Bindings (421ms)
+✔ [24/69] Built Proofs.Variables (1.7s)
+✔ [25/69] Built Proofs.Construction (1.2s)
+✔ [26/69] Built Proofs.Disposal (667ms)
+✔ [27/69] Built Proofs.Snapshots (299ms)
+✔ [28/69] Built Proofs.Cleanup (717ms)
+✔ [29/69] Built Proofs.Meanings (278ms)
+✔ [30/69] Built Proofs.NewBinding (504ms)
+✔ [31/69] Built Proofs.Views (918ms)
+✔ [32/69] Built Proofs.CleanupViews (655ms)
+✔ [33/69] Built Proofs.DisposalViews (536ms)
+✔ [34/69] Built Proofs.Match (440ms)
+✔ [35/69] Built Proofs.LiveBindings (670ms)
+✖ [36/69] Building Proofs.Final (289ms)
+trace: .> LEAN_PATH=/tmp/mo-final-forgetsRest/experiments/03c-checker/trial/lean/.lake/build/lib/lean /home/user/.elan/toolchains/leanprover--lean4---v4.34.0/bin/lean /tmp/mo-final-forgetsRest/experiments/03c-checker/trial/lean/Proofs/Final.lean -o /tmp/mo-final-forgetsRest/experiments/03c-checker/trial/lean/.lake/build/lib/lean/Proofs/Final.olean -i /tmp/mo-final-forgetsRest/experiments/03c-checker/trial/lean/.lake/build/lib/lean/Proofs/Final.ilean -c /tmp/mo-final-forgetsRest/experiments/03c-checker/trial/lean/.lake/build/ir/Proofs/Final.c --setup /tmp/mo-final-forgetsRest/experiments/03c-checker/trial/lean/.lake/build/ir/Proofs/Final.setup.json --json
+error: Proofs/Final.lean:45:55: unsolved goals
+e : Expr
+s : Start
+raw : RawValue
+t : RunState
+hv : validStart e s = Except.ok ()
+hr :
+  runMain Variant.approved e s.inputs
+      { mem := s.toMemory, log := [], bindings := [], scope := [], pending := [], outside := s.outside, setAside := [],
+        nextBranch := 0, nextBinding := 0, snaps := [] } =
+    (Except.ok raw, t)
+⊢ (match
+      runMain
+        { misreportsReuse := Variant.approved.misreportsReuse, reusesShared := Variant.approved.reusesShared,
+          forgetsRest := true, freesHeld := Variant.approved.freesHeld, neverReuses := Variant.approved.neverReuses }
+        e s.inputs
+        { mem := s.toMemory, log := [], bindings := [], scope := [], pending := [], outside := s.outside,
+          setAside := [], nextBranch := 0, nextBinding := 0, snaps := [] } with
+    | (r, st) =>
+      {
+        result :=
+          match r with
+          | Except.ok raw => Result.answer raw
+          | Except.error why => Result.failedRunning why,
+        memory := st.mem, log := st.log, record := st.mem.record, states := st.snaps }) =
+    { result := Result.answer raw, memory := t.mem, log := t.log, record := t.mem.record, states := t.snaps }
+warning: Proofs/Final.lean:46:79: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [runCounted, Rule.variant, runCountedWith, hv, StateT.run, ExceptT.run]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Some required targets logged failures:
+- Proofs.Final
+error: build failed

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/tmp/rob1137-test/audit.py", line 56, in <module>
+    assert '_root_' not in code
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError

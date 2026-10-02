@@ -1,0 +1,19 @@
+{
+  "original_findings_recorded_utc": "2026-10-02T07:28:51.677017+00:00",
+  "independent": true,
+  "lead_findings_read": false,
+  "candidate": "baf1d52649bc7a50ff7df19d0368d182efdb3fbd",
+  "baseline": "787e0427244837fd0f44b76c4a648d07938c3bcc",
+  "plan": "ad9302cd4aacaf08ca0d82a01c3aaadca92c9201",
+  "full_candidate_diff_sha256": "7f9409d750363d8231c6ac6923224f5afbc07e6eb7eff8a0e872cdc62ab8aec4",
+  "export_excludes": [
+    "candidate source tree",
+    "full candidate proof diff",
+    "build trees"
+  ],
+  "audit_first_attempt_exit": 1,
+  "audit_corrected_exit": 0,
+  "build_driver_exit": 0,
+  "control_driver_exit": 0,
+  "exported_utc": "2026-10-02T07:29:51.310919+00:00"
+}

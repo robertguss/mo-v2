@@ -1,0 +1,11 @@
+--- Trial/Broken.lean original
++++ Trial/Broken.lean freesHeld
+@@ -25,7 +25,7 @@
+   deriving DecidableEq, Repr
+ 
+ def Rule.variant : Rule → Variant
+-  | .approved => Variant.approved
++  | .approved => { Variant.approved with freesHeld := true }
+   | .misreportsReuse => { Variant.approved with misreportsReuse := true }
+   | .reusesShared => { Variant.approved with reusesShared := true }
+   | .forgetsRest => { Variant.approved with forgetsRest := true }
