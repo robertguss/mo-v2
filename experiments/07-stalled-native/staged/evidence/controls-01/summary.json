@@ -1,0 +1,8 @@
+[
+  {
+    "name": "early-clock",
+    "caught": true,
+    "expected": "clock armed during staging",
+    "source_sha256": "4210d41e0b940f10f9900441ad1fd6b37bada5346e52ac5ce9c745007dc43465"
+  }
+]

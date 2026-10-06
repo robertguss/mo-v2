@@ -1,0 +1,38 @@
+[
+  {
+    "name": "early-clock",
+    "caught": true,
+    "expected": "clock armed during staging",
+    "source_sha256": "4210d41e0b940f10f9900441ad1fd6b37bada5346e52ac5ce9c745007dc43465"
+  },
+  {
+    "name": "no-watchdog",
+    "caught": true,
+    "expected": "watchdog did not expire held preparation",
+    "source_sha256": "95b468626d7942a3a1f69f5041a3768e83c65c0e071c5c82cfde67bef6b04674"
+  },
+  {
+    "name": "stale-publication",
+    "caught": true,
+    "expected": "stale candidate overwrote newer activation",
+    "source_sha256": "afb2f46e3b5a8d6ee538a61a23063f0319afeb683168c9707205d1eaa34cbc97"
+  },
+  {
+    "name": "premature-unload",
+    "caught": true,
+    "expected": "candidate unloaded while preparing",
+    "source_sha256": "e993cf4445aed75048f97f89e30cf3af3c782c240e856d59b9e507f672f476d5"
+  },
+  {
+    "name": "bad-readiness",
+    "caught": true,
+    "expected": "bad readiness accepted",
+    "source_sha256": "3c8bc27c02eb1c63a8b35b553ee32d8b2bd346aa9874cb292b650fce04432e76"
+  },
+  {
+    "name": "lock-during-native",
+    "caught": true,
+    "expected": "TimeoutError",
+    "source_sha256": "86b1107cfc90a5a4009a7283703f30ad9542fe1406bb1e587af45b9c9d7952d3"
+  }
+]

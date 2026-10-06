@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/staged/check.py\", line 152, in trial\n    require(a['status']=='timeout','watchdog did not expire held preparation')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/staged/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: watchdog did not expire held preparation\n"
+}

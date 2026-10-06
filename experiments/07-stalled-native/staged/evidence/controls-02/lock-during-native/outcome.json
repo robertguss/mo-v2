@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/staged/check.py\", line 141, in trial\n    s = wait(control,lambda s: attempt(s,held)['entered'],'held native entry')\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/staged/check.py\", line 59, in wait\n    s = cmd(f, 'state' if state else 'snapshot')\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/staged/check.py\", line 52, in cmd\n    response = json.loads(f.readline())\n                          ~~~~~~~~~~^^\n  File \"/Users/robertguss/.local/share/uv/python/cpython-3.13.7-macos-aarch64-none/lib/python3.13/socket.py\", line 719, in readinto\n    return self._sock.recv_into(b)\n           ~~~~~~~~~~~~~~~~~~~~^^^\nTimeoutError: timed out\n"
+}
