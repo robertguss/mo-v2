@@ -1,0 +1,5 @@
+
+thread 'main' (1283117) panicked at /Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/evidence/controls-02/early-free.rs:121:78:
+cell not allocated
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+failed input index 4

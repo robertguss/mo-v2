@@ -1,0 +1,1485 @@
+{
+  "case": {
+    "depth": 3,
+    "expected": {
+      "answer": [
+        "l",
+        1
+      ],
+      "log": [
+        [
+          "write",
+          1
+        ]
+      ],
+      "memory": [
+        [
+          1,
+          "2",
+          2,
+          1,
+          "live"
+        ],
+        [
+          2,
+          "2",
+          3,
+          1,
+          "live"
+        ],
+        [
+          3,
+          "3",
+          null,
+          1,
+          "live"
+        ]
+      ],
+      "record": [
+        [
+          "write",
+          1
+        ]
+      ],
+      "states": [
+        {
+          "aside": [],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "holding"
+            ]
+          ],
+          "branch": null,
+          "kind": "start",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": []
+        },
+        {
+          "aside": [],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "branch": null,
+          "kind": "holderMoved",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ]
+        },
+        {
+          "aside": [],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "branch": null,
+          "kind": "branchChosen",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ]
+        },
+        {
+          "aside": [
+            [
+              0,
+              1
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "branch": null,
+          "kind": "matchStep4Done",
+          "memory": [
+            [
+              1,
+              "1",
+              null,
+              0,
+              "aside"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": []
+        },
+        {
+          "aside": [
+            [
+              0,
+              1
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "branch": null,
+          "kind": "branchStarts",
+          "memory": [
+            [
+              1,
+              "1",
+              null,
+              0,
+              "aside"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": []
+        },
+        {
+          "aside": [
+            [
+              0,
+              1
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "movedOn"
+            ]
+          ],
+          "branch": null,
+          "kind": "holderMoved",
+          "memory": [
+            [
+              1,
+              "1",
+              null,
+              0,
+              "aside"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": [
+            [
+              "l",
+              2
+            ]
+          ]
+        },
+        {
+          "aside": [],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "movedOn"
+            ]
+          ],
+          "branch": null,
+          "kind": "newCellBuilt",
+          "memory": [
+            [
+              1,
+              "2",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ]
+        },
+        {
+          "aside": [],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "movedOn"
+            ]
+          ],
+          "branch": [
+            "l",
+            1
+          ],
+          "kind": "branchValueWorkedOut",
+          "memory": [
+            [
+              1,
+              "2",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ]
+        },
+        {
+          "aside": [],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "branch": [
+            "l",
+            1
+          ],
+          "kind": "branchValueHandedOn",
+          "memory": [
+            [
+              1,
+              "2",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ]
+        },
+        {
+          "aside": [],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "branch": null,
+          "kind": "end",
+          "memory": [
+            [
+              1,
+              "2",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "outside": [],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        "l",
+        [
+          "2",
+          "2",
+          "3"
+        ]
+      ]
+    },
+    "id": "original-1",
+    "initial": [
+      [
+        1,
+        "1",
+        2,
+        1,
+        "live"
+      ],
+      [
+        2,
+        "2",
+        3,
+        1,
+        "live"
+      ],
+      [
+        3,
+        "3",
+        null,
+        1,
+        "live"
+      ]
+    ],
+    "input": "3 1 1 2 1 2 2 3 1 3 3 0 1 1 xs l 1 0 match h t var xs nil cons add var h num 1 var t",
+    "outside": []
+  },
+  "actual": {
+    "outcome": {
+      "answer": [
+        "l",
+        4
+      ],
+      "value": [
+        "l",
+        [
+          "2",
+          "2",
+          "3"
+        ]
+      ],
+      "memory": [
+        [
+          2,
+          "2",
+          3,
+          1,
+          "live"
+        ],
+        [
+          3,
+          "3",
+          null,
+          1,
+          "live"
+        ],
+        [
+          4,
+          "2",
+          2,
+          1,
+          "live"
+        ]
+      ],
+      "record": [
+        [
+          "free",
+          1
+        ],
+        [
+          "create",
+          4
+        ]
+      ],
+      "log": [
+        [
+          "free",
+          1
+        ],
+        [
+          "create",
+          4
+        ]
+      ],
+      "states": [
+        {
+          "kind": "start",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "holding"
+            ]
+          ],
+          "pending": [],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "holderMoved",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "branchChosen",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "newHolder",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              1,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              2,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              1
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "holderGivenUp",
+          "memory": [
+            [
+              1,
+              "1",
+              2,
+              0,
+              "live"
+            ],
+            [
+              2,
+              "2",
+              3,
+              2,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "pending": [],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "cellFreed",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              2,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              2
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "holderGivenUp",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "pending": [],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "matchStep4Done",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "pending": [],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "branchStarts",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "holding"
+            ]
+          ],
+          "pending": [],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "holderMoved",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "movedOn"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              2
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "newCellBuilt",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ],
+            [
+              4,
+              "2",
+              2,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "movedOn"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              4
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        },
+        {
+          "kind": "branchValueWorkedOut",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ],
+            [
+              4,
+              "2",
+              2,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ],
+            [
+              1,
+              "h",
+              [
+                "n",
+                "1"
+              ],
+              "noHolder"
+            ],
+            [
+              2,
+              "t",
+              [
+                "l",
+                2
+              ],
+              "movedOn"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              4
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": [
+            "l",
+            4
+          ]
+        },
+        {
+          "kind": "branchValueHandedOn",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ],
+            [
+              4,
+              "2",
+              2,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              4
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": [
+            "l",
+            4
+          ]
+        },
+        {
+          "kind": "end",
+          "memory": [
+            [
+              2,
+              "2",
+              3,
+              1,
+              "live"
+            ],
+            [
+              3,
+              "3",
+              null,
+              1,
+              "live"
+            ],
+            [
+              4,
+              "2",
+              2,
+              1,
+              "live"
+            ]
+          ],
+          "bindings": [
+            [
+              0,
+              "xs",
+              [
+                "l",
+                1
+              ],
+              "movedOn"
+            ]
+          ],
+          "pending": [
+            [
+              "l",
+              4
+            ]
+          ],
+          "outside": [],
+          "aside": [],
+          "branch": null
+        }
+      ]
+    },
+    "physical": [
+      [
+        "fixture",
+        1,
+        4372883264
+      ],
+      [
+        "fixture",
+        2,
+        4372893664
+      ],
+      [
+        "fixture",
+        3,
+        4372893712
+      ],
+      [
+        "free",
+        1,
+        4372883264
+      ],
+      [
+        "create",
+        4,
+        4372898112
+      ]
+    ],
+    "alloc": {
+      "fixture_cells": 3,
+      "cell_allocs": 1,
+      "cell_frees": 1,
+      "system_allocs": 724,
+      "system_bytes": 25045
+    }
+  }
+}
