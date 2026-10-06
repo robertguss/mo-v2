@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "error": "mutation anchor count",
+  "cause": "watchdog source was reformatted by rustfmt; early-clock control completed before runner stopped"
+}
