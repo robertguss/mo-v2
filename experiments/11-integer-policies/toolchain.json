@@ -1,0 +1,6 @@
+{
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)\nbinary: rustc\ncommit-hash: b940084d7eb6a299eb4bfeb8e34901bc051e7ac4\ncommit-date: 2026-09-28\nhost: aarch64-apple-darwin\nrelease: 1.99.0\nLLVM version: 23.1.2\n",
+  "python": "Python 3.13.7\n",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "release": "Cargo release opt-level=3; overflow-checks=true; instrumented feature measure separately"
+}

@@ -1,0 +1,8 @@
+{
+  "SPEC.md": "bd0bb0dc5106bf2a1e050dd27266cc1c002fe72a42e2b2c450f6624c9a74d52a",
+  "check.py": "b08f9f07754a8a0c95e9ec58fb34912b8d11f7ee9dab6b90f8c6b7b8314ba00e",
+  "expected.json": "09ae1d60f63e80cbedfb17d93d95d9d37c813287be01d64a821d05f1c9505632",
+  "Cargo.toml": "df017523f38b66890b3c3cb722c6d916f08a2073864299990f7e830e7f45f3c0",
+  "Cargo.lock": "e9bd7daba5d7146b29f4f97dfd12516d1bbafc29a106b6fec9351db5efd63cf0",
+  "toolchain.json": "d01cc47fbd8d7d4dd4ced33da36f11f70d275afbeb74906f0210c31e44f42a0a"
+}
