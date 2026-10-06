@@ -1,0 +1,2 @@
+   Compiling integer-policies v0.1.0 (/private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo-integer-control-h167sb3x)
+    Finished `release` profile [optimized] target(s) in 0.36s

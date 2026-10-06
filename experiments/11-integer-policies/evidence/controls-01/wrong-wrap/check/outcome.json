@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "checked": 2604,
+  "total": 12563,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/11-integer-policies/check.py\", line 91, in correctness\n    raise AssertionError(f\"policy mismatch: {c['input']}: expected {c['expected']}, got {a}\")\nAssertionError: policy mismatch: wrapping add -9223372036854775808 -9223372036854775808: expected ok 0, got ok -9223372036854775808\n"
+}
