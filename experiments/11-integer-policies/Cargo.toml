@@ -1,0 +1,18 @@
+[package]
+name = "integer-policies"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+num-bigint = "=0.4.6"
+num-traits = "=0.2.19"
+
+[features]
+measure = []
+
+[profile.release]
+overflow-checks = true
+
+[[bin]]
+name = "integer-policies"
+path = "src/main.rs"
