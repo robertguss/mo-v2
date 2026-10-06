@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+from urllib.request import urlopen
+print(urlopen('http://127.0.0.1:64194/feedback/a48ca73941837c3ff2111c6a51fb08bd',timeout=5).read().decode())

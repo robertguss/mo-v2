@@ -1,0 +1,15 @@
+{
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)\nbinary: rustc\ncommit-hash: b940084d7eb6a299eb4bfeb8e34901bc051e7ac4\ncommit-date: 2026-09-28\nhost: aarch64-apple-darwin\nrelease: 1.99.0\nLLVM version: 23.1.2\n",
+  "python": "3.13.7",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "codex_cli": "codex-cli 0.160.1",
+  "model": "gpt-6.1-sol",
+  "reasoning": "medium",
+  "auth_route": "existing ChatGPT subscription; no trial made",
+  "compile_flags": [
+    "--edition=2021",
+    "-C opt-level=3",
+    "-C overflow-checks=yes"
+  ],
+  "helper_sha256": "6a700842e502c576037ace183c7376f6ce86252dce8258329739b3902b618d05"
+}

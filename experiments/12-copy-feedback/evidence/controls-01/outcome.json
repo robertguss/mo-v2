@@ -1,0 +1,29 @@
+[
+  {
+    "control": "discard-old",
+    "caught": true,
+    "reason": "full_values_or_original",
+    "compiled": true
+  },
+  {
+    "control": "outside-inner-interval",
+    "caught": true,
+    "reason": "allocation_budget",
+    "compiled": true
+  },
+  {
+    "control": "shared-mutation",
+    "caught": true,
+    "reason": "full_values_or_original",
+    "compiled": true,
+    "helper_sha256": "52ec7f92a1f302558e2300ca4d43f2afe7920ac1ce01287f4dd0b7c088b6b44f",
+    "allocation_calibration": "excluded: mutant representation differs"
+  },
+  {
+    "control": "weakened-check",
+    "caught": true,
+    "reason": "integrity mismatch: experiments/12-copy-feedback/acceptance/check.py",
+    "compiled": false,
+    "boundary": "integrity rejection before build"
+  }
+]
