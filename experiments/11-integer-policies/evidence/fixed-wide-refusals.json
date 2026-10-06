@@ -1,0 +1,146 @@
+[
+  {
+    "policy": "checked",
+    "work": "wide128",
+    "n": 1000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "checked",
+    "work": "wide128",
+    "n": 100000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "checked",
+    "work": "wide128",
+    "n": 1000000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "checked",
+    "work": "wide1024",
+    "n": 1000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "checked",
+    "work": "wide1024",
+    "n": 100000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "checked",
+    "work": "wide1024",
+    "n": 1000000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "wrapping",
+    "work": "wide128",
+    "n": 1000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "wrapping",
+    "work": "wide128",
+    "n": 100000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "wrapping",
+    "work": "wide128",
+    "n": 1000000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "wrapping",
+    "work": "wide1024",
+    "n": 1000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "wrapping",
+    "work": "wide1024",
+    "n": 100000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "wrapping",
+    "work": "wide1024",
+    "n": 1000000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "explicit-fixed",
+    "work": "wide128",
+    "n": 1000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "explicit-fixed",
+    "work": "wide128",
+    "n": 100000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "explicit-fixed",
+    "work": "wide128",
+    "n": 1000000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "explicit-fixed",
+    "work": "wide1024",
+    "n": 1000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "explicit-fixed",
+    "work": "wide1024",
+    "n": 100000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  },
+  {
+    "policy": "explicit-fixed",
+    "work": "wide1024",
+    "n": 1000000,
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "err range\n"
+  }
+]

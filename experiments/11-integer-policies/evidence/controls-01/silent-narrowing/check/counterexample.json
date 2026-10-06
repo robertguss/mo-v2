@@ -1,0 +1,5 @@
+{
+  "input": "explicit asfixed b:-9223372036854775809",
+  "expected": "err narrowing",
+  "actual": "ok f:0"
+}

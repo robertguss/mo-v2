@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "checked": 12362,
+  "total": 12563,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/11-integer-policies/check.py\", line 91, in correctness\n    raise AssertionError(f\"policy mismatch: {c['input']}: expected {c['expected']}, got {a}\")\nAssertionError: policy mismatch: explicit asfixed b:-9223372036854775809: expected err narrowing, got ok f:0\n"
+}

@@ -1,0 +1,5 @@
+{
+  "input": "checked add -9223372036854775808 -9223372036854775808",
+  "expected": "err overflow",
+  "actual": "ok 0"
+}
