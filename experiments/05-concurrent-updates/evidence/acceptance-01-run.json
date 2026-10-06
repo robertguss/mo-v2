@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/robertguss/.browser-use-env/bin/python3",
+    "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py",
+    "--binary",
+    "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-root-build-u4toi4nd/release/mo-concurrent-updates",
+    "--dot",
+    "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/graph-01.dot",
+    "--output",
+    "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/acceptance-01"
+  ],
+  "exit": 1,
+  "elapsed_seconds": 2.3097291250014678
+}

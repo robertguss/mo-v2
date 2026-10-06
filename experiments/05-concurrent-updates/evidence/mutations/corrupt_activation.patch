@@ -1,0 +1,11 @@
+--- accepted-source
++++ corrupt_activation
+@@ -206,7 +206,7 @@
+         s.attempts[id - 1].late_discarded = true;
+         return;
+     }
+-    if s.flight.is_some() || candidate.jobs() != source || s.queue.jobs() != source {
++    if s.flight.is_some() || s.queue.jobs() != source {
+         sh.terminal(&mut s, "invalid", sh.now());
+         return;
+     }

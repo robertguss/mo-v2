@@ -1,0 +1,112 @@
+{
+  "runs": [
+    {
+      "scenario": "stale",
+      "result": {
+        "timeout_attempt": 1,
+        "newer_activation": 2,
+        "late_result_rejected": true
+      }
+    },
+    {
+      "scenario": "drain",
+      "result": {
+        "drain_timeout": 1,
+        "recovery_activation": 2
+      }
+    },
+    {
+      "scenario": "conservation",
+      "result": {
+        "activations": 4,
+        "jobs": 6
+      }
+    },
+    {
+      "scenario": "corrupt",
+      "result": {
+        "nonempty_and_empty_corruption_refused": true
+      }
+    },
+    {
+      "scenario": "load",
+      "result": {
+        "jobs": 160,
+        "activations": 8,
+        "producer_connections": 4,
+        "busy_replies": 1412,
+        "request_ms": {
+          "median": 0.2625624983920716,
+          "p95": 1.1059169919462875,
+          "max": 21.922250001807697
+        },
+        "sampled_copying_windows_ms": [
+          20.79254199634306,
+          18.872208005632274,
+          16.3369160000002,
+          12.413917007506825,
+          17.342749997624196,
+          13.241041000583209,
+          7.384041993645951,
+          15.384917001938447
+        ],
+        "max_observed_completion_gap_ms": 769.8753750009928
+      }
+    },
+    {
+      "scenario": "load",
+      "result": {
+        "jobs": 160,
+        "activations": 8,
+        "producer_connections": 4,
+        "busy_replies": 1387,
+        "request_ms": {
+          "median": 0.2588124989415519,
+          "p95": 0.9781250118976459,
+          "max": 20.90341699658893
+        },
+        "sampled_copying_windows_ms": [
+          18.00220800214447,
+          27.439208992291242,
+          16.912999999476597,
+          20.301625001593493,
+          12.791249988367781,
+          20.858083007624373,
+          14.678708990686573,
+          16.92004199139774
+        ],
+        "max_observed_completion_gap_ms": 769.1837079910329
+      }
+    },
+    {
+      "scenario": "load",
+      "result": {
+        "jobs": 160,
+        "activations": 8,
+        "producer_connections": 4,
+        "busy_replies": 1408,
+        "request_ms": {
+          "median": 0.24018750264076516,
+          "p95": 1.1093749926658347,
+          "max": 15.933583999867551
+        },
+        "sampled_copying_windows_ms": [
+          18.23183298984077,
+          18.143875000532717,
+          21.50870900368318,
+          13.29745800467208,
+          13.101417003781535,
+          15.423958000610583,
+          15.962791003403254,
+          22.10200000263285
+        ],
+        "max_observed_completion_gap_ms": 799.4606249994831
+      }
+    }
+  ],
+  "model": {
+    "states": 17,
+    "edges": 20
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,11 @@
+--- accepted-source
++++ lost_work
+@@ -215,7 +215,7 @@
+         sh.terminal(&mut s, "timeout", sh.now());
+         return;
+     }
+-    s.queue = candidate;
++    s.queue = Queue::from_jobs(s.epoch + 1, Vec::new());
+     s.epoch += 1;
+     sh.terminal(&mut s, "activated", finished);
+ }

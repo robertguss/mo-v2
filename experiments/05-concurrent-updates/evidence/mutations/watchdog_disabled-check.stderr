@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 361, in <module>
+    main()
+    ~~~~^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 347, in main
+    result["runs"].append(dict(scenario=name,result=SCENARIOS[name](server)))
+                                                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 200, in stale
+    s = server.terminal(a,"timeout")
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 138, in terminal
+    s = self.wait(lambda s:s["attempts"][attempt-1]["status"]!="pending", "update terminal", .95)
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 129, in wait
+    require(time.monotonic()<end, "timed out waiting for " + label)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 21, in require
+    raise AssertionError(message)
+AssertionError: timed out waiting for update terminal

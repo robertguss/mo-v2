@@ -1,0 +1,190 @@
+{
+  "watchdog_disabled": {
+    "build": {
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked",
+        "--offline",
+        "--manifest-path",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-3_511e2a/Cargo.toml"
+      ],
+      "exit": 0
+    },
+    "check": {
+      "command": [
+        "/Users/robertguss/.browser-use-env/bin/python3",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py",
+        "--binary",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-3_511e2a/target/release/mo-concurrent-updates",
+        "--scenario",
+        "stale",
+        "--output",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/mutations/watchdog_disabled-run"
+      ],
+      "exit": 1
+    },
+    "detected": true,
+    "teardown": {
+      "forced": false,
+      "exit": 0,
+      "stderr": "",
+      "reaped": true
+    }
+  },
+  "stale_publish": {
+    "build": {
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked",
+        "--offline",
+        "--manifest-path",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-ajux8b35/Cargo.toml"
+      ],
+      "exit": 0
+    },
+    "check": {
+      "command": [
+        "/Users/robertguss/.browser-use-env/bin/python3",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py",
+        "--binary",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-ajux8b35/target/release/mo-concurrent-updates",
+        "--scenario",
+        "stale",
+        "--output",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/mutations/stale_publish-run"
+      ],
+      "exit": 1
+    },
+    "detected": true,
+    "teardown": {
+      "forced": false,
+      "exit": 0,
+      "stderr": "",
+      "reaped": true
+    }
+  },
+  "duplicate_completion": {
+    "build": {
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked",
+        "--offline",
+        "--manifest-path",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-qchlblmo/Cargo.toml"
+      ],
+      "exit": 0
+    },
+    "check": {
+      "command": [
+        "/Users/robertguss/.browser-use-env/bin/python3",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py",
+        "--binary",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-qchlblmo/target/release/mo-concurrent-updates",
+        "--scenario",
+        "conservation",
+        "--output",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/mutations/duplicate_completion-run"
+      ],
+      "exit": 1
+    },
+    "detected": true,
+    "teardown": {
+      "forced": false,
+      "exit": 0,
+      "stderr": "",
+      "reaped": true
+    }
+  },
+  "lost_work": {
+    "build": {
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked",
+        "--offline",
+        "--manifest-path",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-awc2dq9k/Cargo.toml"
+      ],
+      "exit": 0
+    },
+    "check": {
+      "command": [
+        "/Users/robertguss/.browser-use-env/bin/python3",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py",
+        "--binary",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-awc2dq9k/target/release/mo-concurrent-updates",
+        "--scenario",
+        "conservation",
+        "--output",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/mutations/lost_work-run"
+      ],
+      "exit": 1
+    },
+    "detected": true,
+    "teardown": {
+      "forced": false,
+      "exit": 0,
+      "stderr": "",
+      "reaped": true
+    }
+  },
+  "corrupt_activation": {
+    "build": {
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--locked",
+        "--offline",
+        "--manifest-path",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-iw9ajgm9/Cargo.toml"
+      ],
+      "exit": 0
+    },
+    "check": {
+      "command": [
+        "/Users/robertguss/.browser-use-env/bin/python3",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py",
+        "--binary",
+        "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-control-iw9ajgm9/target/release/mo-concurrent-updates",
+        "--scenario",
+        "corrupt",
+        "--output",
+        "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/mutations/corrupt_activation-run"
+      ],
+      "exit": 1
+    },
+    "detected": true,
+    "teardown": {
+      "forced": false,
+      "exit": 0,
+      "stderr": "",
+      "reaped": true
+    }
+  },
+  "model-stale_publish": {
+    "check": {
+      "command": [
+        "java",
+        "-Xmx1g",
+        "-cp",
+        "/tmp/mo-live-update-tools/tla2tools-1.7.4.jar",
+        "tlc2.TLC",
+        "-workers",
+        "1",
+        "-config",
+        "RepeatedUpdate.cfg",
+        "RepeatedUpdate.tla"
+      ],
+      "exit": 12
+    },
+    "detected": true
+  }
+}
