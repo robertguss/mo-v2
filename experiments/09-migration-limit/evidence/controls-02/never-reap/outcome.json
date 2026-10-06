@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/check.py\", line 186, in trial\n    ident=start(control,paths[version],'normal')\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/check.py\", line 70, in start\n    require(r['status'] == 'started', 'update refused')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: update refused\n"
+}
