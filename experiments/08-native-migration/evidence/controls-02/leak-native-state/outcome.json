@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 165, in trial\n    retire(1)\n    ~~~~~~^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 151, in retire\n    require(count_unload(version)==1,'old module lifetime/count wrong')\n            ~~~~~~~~~~~~^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 134, in count_unload\n    require(all(row.endswith(':0') for row in rows), 'native queue state leaked at unload')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: native queue state leaked at unload\n"
+}

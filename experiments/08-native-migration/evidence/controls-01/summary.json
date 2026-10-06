@@ -1,0 +1,14 @@
+[
+  {
+    "name": "corrupt-accepted",
+    "caught": true,
+    "expected": "corrupt migration accepted",
+    "source_sha256": "e8e1541d8b053971f849f16c3c3d4e5a6ea4196ad5e09604c927d9009beaa979"
+  },
+  {
+    "name": "stale-publication",
+    "caught": false,
+    "expected": "stale migration changed newer authority",
+    "source_sha256": "e4e36509d03d90971511887c5d67a7d9879308a747af6d2b3f6d572d5ee38084"
+  }
+]

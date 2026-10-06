@@ -1,0 +1,38 @@
+[
+  {
+    "name": "corrupt-accepted",
+    "caught": true,
+    "expected": "corrupt migration accepted",
+    "source_sha256": "e8e1541d8b053971f849f16c3c3d4e5a6ea4196ad5e09604c927d9009beaa979"
+  },
+  {
+    "name": "stale-publication",
+    "caught": true,
+    "expected": "stale migration changed newer authority",
+    "source_sha256": "4afc593a7386a6e49af8a69f399d2a71ac49a5056e01a342a8a2a4fe3346baf4"
+  },
+  {
+    "name": "timeout-no-resume",
+    "caught": true,
+    "expected": "old queue not resumed after timeout",
+    "source_sha256": "a4c48e9ad6b447da3cc495b4000f24f88da33401ba549a54a1b5e11e68d739dc"
+  },
+  {
+    "name": "premature-unload",
+    "caught": true,
+    "expected": "old executing module unloaded",
+    "source_sha256": "67ac8c7db427b56ccd86a5a321e0bcc94b0d0f4b19e81a64ab730bc822c88a5f"
+  },
+  {
+    "name": "rebind-old-jobs",
+    "caught": true,
+    "expected": "mixed native job",
+    "source_sha256": "23a5bf5433cad6ac120962627cba436372987d539366ab7d50d1a21c0e7c0a9f"
+  },
+  {
+    "name": "leak-native-state",
+    "caught": true,
+    "expected": "native queue state leaked at unload",
+    "source_sha256": "2adaa742fe4fbb208568b1dea5e081489230e0f643d93a7f4cbf6e60c0acfedd"
+  }
+]

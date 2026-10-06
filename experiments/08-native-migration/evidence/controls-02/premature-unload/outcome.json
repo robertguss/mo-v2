@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 162, in trial\n    require(str(paths[1]) in s['images'] and count_unload(1)==0,'old executing module unloaded')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: old executing module unloaded\n"
+}
