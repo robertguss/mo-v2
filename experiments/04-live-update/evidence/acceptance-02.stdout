@@ -1,0 +1,40 @@
+{
+  "examples": [
+    "successful non-ID FIFO order",
+    "drain timeout keeps active job",
+    "partial copy is refused"
+  ],
+  "rejected_public_response_mutants": [
+    "lost_work",
+    "duplicate_completion",
+    "premature_activation",
+    "corrupt_activation",
+    "expired_activation"
+  ],
+  "model_correspondence": {
+    "states": 1170,
+    "edges": 3955
+  },
+  "runtime": {
+    "reachable_states": 1170,
+    "commands_per_state": 19,
+    "checked_transitions": 22230,
+    "responses": 230510
+  },
+  "tcp": {
+    "connections": 1,
+    "repetitions": 25,
+    "commands": 1800,
+    "command_ms": {
+      "median": 0.28575,
+      "p95": 0.308584,
+      "max": 0.416333
+    },
+    "observed_begin_to_activate_ms": {
+      "median": 1.8215,
+      "max": 1.881875
+    },
+    "meaning": "Local single-client harness timings, including Python and socket overhead; no SLA"
+  },
+  "result": "PASS"
+}

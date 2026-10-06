@@ -1,0 +1,11 @@
+--- accepted-source
++++ model-duplicate_completion
+@@ -39,7 +39,7 @@
+          /\ UNCHANGED <<version, phase, accepted, completed, completed_values,
+                          candidate, corrupt, remaining, attempted, outcome>>
+ Finish == /\ flight # 0
+-          /\ completed' = Append(completed, flight)
++          /\ completed' = Append(Append(completed, flight), flight)
+           /\ completed_values' = Append(completed_values, flight * 10)
+           /\ flight' = 0 /\ flight_version' = 0
+           /\ UNCHANGED <<version, phase, queue, accepted, candidate, corrupt,

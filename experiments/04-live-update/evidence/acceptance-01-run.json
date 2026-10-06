@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/robertguss/.browser-use-env/bin/python3",
+    "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py",
+    "--binary",
+    "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo-rust-root-djvx3_ce/release/mo-live-update",
+    "--dot",
+    "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/evidence/graph.dot"
+  ],
+  "exit": 1,
+  "elapsed_seconds": 0.20973854200565256
+}

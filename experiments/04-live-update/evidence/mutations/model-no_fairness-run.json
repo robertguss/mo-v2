@@ -1,0 +1,15 @@
+{
+  "command": [
+    "java",
+    "-Xmx1g",
+    "-cp",
+    "/tmp/mo-live-update-tools/tla2tools-1.7.4.jar",
+    "tlc2.TLC",
+    "-workers",
+    "1",
+    "-config",
+    "LiveUpdate.cfg",
+    "LiveUpdate.tla"
+  ],
+  "exit": 13
+}

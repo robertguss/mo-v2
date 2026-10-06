@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py", line 220, in <module>
+    main()
+    ~~~~^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py", line 212, in main
+    result["model_correspondence"] = check_graph(args.dot, states, edges)
+                                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py", line 63, in check_graph
+    observed.add((nodes[source], ACTIONS[action], nodes[target]))
+                                 ~~~~~~~^^^^^^^^
+KeyError: 'Enqueue'

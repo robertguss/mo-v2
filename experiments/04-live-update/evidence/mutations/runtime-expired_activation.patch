@@ -1,0 +1,11 @@
+--- accepted-source
++++ runtime-expired_activation
+@@ -177,7 +177,7 @@
+                 }
+             }
+             "activate" => {
+-                if self.phase != "ready" {
++                if self.phase != "ready" && self.outcome != "refused" {
+                     return "blocked";
+                 }
+                 if self.valid_candidate() && self.flight.is_none() {

@@ -1,0 +1,11 @@
+--- accepted-source
++++ model-no_fairness
+@@ -89,7 +89,7 @@
+               ELSE Refuse
+ Next == Enqueue1 \/ Enqueue2 \/ Enqueue3 \/ Start \/ Finish \/ Begin \/ Prepare
+         \/ Copy \/ Corrupt \/ Validate \/ Activate \/ Fail \/ Tick
+-Spec == Init /\ [][Next]_vars /\ WF_vars(Tick)
++Spec == Init /\ [][Next]_vars
+ Termination == (outcome = "pending") ~> (outcome # "pending")
+ TypeOK == /\ version \in {1, 2} /\ phase \in {"running", "draining", "copying", "ready"}
+           /\ queue \in Seq(Ids) /\ flight \in Ids \cup {0}
