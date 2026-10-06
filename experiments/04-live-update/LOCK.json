@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-06T02:04:21.451856+00:00",
+  "author": "lead /root; frozen before builder implementation",
+  "authorization": "Robert: Yes\u2014one local builder, separate checks",
+  "base_commit": "e6a895c8ce2887d9bee6986819a779f8f74b5541",
+  "files": {
+    "SPEC.md": "d0bde5f72874ceb8f6e6a6fe57a58aaab8514b50f7723bf07f0996b039517495",
+    "ACCEPTANCE.md": "203be7c1c2dd9eadbc784d95475998983606977e6896c1aad4972193306da997",
+    "acceptance/oracle.py": "800f7d51be95fefb3611b4cd67fb95c4db930cf67de9c9500f484c8d35cb7bf5",
+    "acceptance/run.py": "045f623eb7e1670a88540905f4ef9c171d57b2803e04349de351fd5417021269",
+    "model/LiveUpdate.cfg": "44f32449b225043930f9fb1fa2a51862cc313a52a0e8afe0624f457083dc7ff3"
+  }
+}
