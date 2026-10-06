@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 170, in trial\n    require(attempt(s,corrupt)['status']=='invalid','corrupt migration accepted')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: corrupt migration accepted\n"
+}

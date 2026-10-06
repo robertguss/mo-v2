@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 205, in trial\n    require(s['active']==5 and s['queue']==before['queue'] and s['frozen']==0,'stale migration changed newer authority')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: stale migration changed newer authority\n"
+}

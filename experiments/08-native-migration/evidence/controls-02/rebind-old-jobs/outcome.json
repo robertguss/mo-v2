@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 164, in trial\n    drained(4)\n    ~~~~~~~^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 139, in drained\n    ledger(s)\n    ~~~~~~^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 94, in ledger\n    require(row[4:] == [first, result], 'mixed native job')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/08-native-migration/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: mixed native job\n"
+}
