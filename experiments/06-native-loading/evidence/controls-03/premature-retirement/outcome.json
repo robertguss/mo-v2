@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/06-native-loading/check.py\", line 131, in run_trial\n    require(command(client, f'retire {version}')['status'] == 'blocked', 'premature retirement allowed')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/06-native-loading/check.py\", line 22, in require\n    raise AssertionError(message)\nAssertionError: premature retirement allowed\n"
+}
