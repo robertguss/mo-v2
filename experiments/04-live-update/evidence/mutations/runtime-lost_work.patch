@@ -1,0 +1,10 @@
+--- accepted-source
++++ runtime-lost_work
+@@ -182,6 +182,7 @@
+                 }
+                 if self.valid_candidate() && self.flight.is_none() {
+                     self.queue = Queue::V2(std::mem::take(&mut self.candidate));
++                    if let Queue::V2(q) = &mut self.queue { q.clear(); }
+                     self.phase = "running";
+                     self.outcome = "activated";
+                     self.remaining = 0;

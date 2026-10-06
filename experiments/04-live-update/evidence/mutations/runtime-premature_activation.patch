@@ -1,0 +1,17 @@
+--- accepted-source
++++ runtime-premature_activation
+@@ -177,10 +177,10 @@
+                 }
+             }
+             "activate" => {
+-                if self.phase != "ready" {
+-                    return "blocked";
+-                }
+-                if self.valid_candidate() && self.flight.is_none() {
++                if !matches!(self.phase, "ready" | "draining") {
++                    return "blocked";
++                }
++                if self.valid_candidate() {
+                     self.queue = Queue::V2(std::mem::take(&mut self.candidate));
+                     self.phase = "running";
+                     self.outcome = "activated";

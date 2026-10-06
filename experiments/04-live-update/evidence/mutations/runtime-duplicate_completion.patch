@@ -1,0 +1,10 @@
+--- accepted-source
++++ runtime-duplicate_completion
+@@ -124,6 +124,7 @@
+                 let Some(job) = self.flight.take() else {
+                     return "blocked";
+                 };
++                self.completed.push(job.id);
+                 self.completed.push(job.id);
+                 self.completed_values.push(job.payload);
+                 self.flight_version = 0;

@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-10-06T02:06:06.148704+00:00",
+  "system": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "checks": {
+    "SPEC.md": true,
+    "ACCEPTANCE.md": true,
+    "acceptance/oracle.py": true,
+    "acceptance/run.py": true,
+    "model/LiveUpdate.cfg": true
+  },
+  "contract_commit": "3d65740b2c67bab109afe9b017ebf7a44dd94741",
+  "rustc": {
+    "exit": 0,
+    "stdout": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)\n",
+    "stderr": ""
+  },
+  "cargo": {
+    "exit": 0,
+    "stdout": "cargo 1.99.0 (5f94df478 2026-08-27) (Homebrew)\n",
+    "stderr": ""
+  },
+  "java": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": "openjdk version \"21.0.4\" 2024-07-16 LTS\nOpenJDK Runtime Environment Temurin-21.0.4+7 (build 21.0.4+7-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.4+7 (build 21.0.4+7-LTS, mixed mode)\n"
+  },
+  "tlc": {
+    "release": "1.7.4",
+    "url": "https://github.com/tlaplus/tlaplus/releases/download/v1.7.4/tla2tools.jar",
+    "sha256": "936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "SPEC.md": true,
+  "ACCEPTANCE.md": true,
+  "acceptance/oracle.py": true,
+  "acceptance/run.py": true,
+  "model/LiveUpdate.cfg": true
+}

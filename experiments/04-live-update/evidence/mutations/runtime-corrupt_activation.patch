@@ -1,0 +1,11 @@
+--- accepted-source
++++ runtime-corrupt_activation
+@@ -180,7 +180,7 @@
+                 if self.phase != "ready" {
+                     return "blocked";
+                 }
+-                if self.valid_candidate() && self.flight.is_none() {
++                if self.flight.is_none() {
+                     self.queue = Queue::V2(std::mem::take(&mut self.candidate));
+                     self.phase = "running";
+                     self.outcome = "activated";

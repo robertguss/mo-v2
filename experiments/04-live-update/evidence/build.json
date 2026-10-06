@@ -1,0 +1,18 @@
+{
+  "command": [
+    "cargo",
+    "build",
+    "--locked",
+    "--offline",
+    "--release",
+    "--manifest-path",
+    "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/runtime/Cargo.toml",
+    "--target-dir",
+    "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo-rust-root-djvx3_ce"
+  ],
+  "exit": 0,
+  "elapsed_seconds": 0.6779469579996658,
+  "stdout": "",
+  "stderr": "   Compiling mo-live-update v0.1.0 (/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/runtime)\n    Finished `release` profile [optimized] target(s) in 0.65s\n",
+  "binary": "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo-rust-root-djvx3_ce/release/mo-live-update"
+}

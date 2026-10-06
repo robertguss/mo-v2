@@ -1,0 +1,127 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 102 and seed -1410833679294518723 with 1 worker on 14 cores with 1024MB heap and 64MB offheap memory [pid: 31662] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 21.0.4 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo-model-control-l18_w0dt/LiveUpdate.tla
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/Naturals.tla
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/Sequences.tla
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module LiveUpdate
+Starting... (2026-10-05 22:08:33)
+Implied-temporal checking--satisfiability problem has 1 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-10-05 22:08:33.
+Error: Invariant Safety is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ completed = <<>>
+/\ completed_values = <<>>
+/\ corrupt = FALSE
+/\ remaining = 0
+/\ flight = 0
+/\ attempted = FALSE
+/\ outcome = "none"
+/\ flight_version = 0
+/\ phase = "running"
+/\ accepted = {}
+/\ version = 1
+/\ queue = <<>>
+/\ candidate = <<>>
+
+State 2: <Enqueue1 line 16, col 5 to line 21, col 89 of module LiveUpdate>
+/\ completed = <<>>
+/\ completed_values = <<>>
+/\ corrupt = FALSE
+/\ remaining = 0
+/\ flight = 0
+/\ attempted = FALSE
+/\ outcome = "none"
+/\ flight_version = 0
+/\ phase = "running"
+/\ accepted = {1}
+/\ version = 1
+/\ queue = <<1>>
+/\ candidate = <<>>
+
+State 3: <Begin line 47, col 10 to line 51, col 74 of module LiveUpdate>
+/\ completed = <<>>
+/\ completed_values = <<>>
+/\ corrupt = FALSE
+/\ remaining = 3
+/\ flight = 0
+/\ attempted = TRUE
+/\ outcome = "pending"
+/\ flight_version = 0
+/\ phase = "draining"
+/\ accepted = {1}
+/\ version = 1
+/\ queue = <<1>>
+/\ candidate = <<>>
+
+State 4: <Prepare line 52, col 12 to line 55, col 96 of module LiveUpdate>
+/\ completed = <<>>
+/\ completed_values = <<>>
+/\ corrupt = FALSE
+/\ remaining = 3
+/\ flight = 0
+/\ attempted = TRUE
+/\ outcome = "pending"
+/\ flight_version = 0
+/\ phase = "copying"
+/\ accepted = {1}
+/\ version = 1
+/\ queue = <<1>>
+/\ candidate = <<>>
+
+State 5: <Copy line 56, col 9 to line 59, col 93 of module LiveUpdate>
+/\ completed = <<>>
+/\ completed_values = <<>>
+/\ corrupt = FALSE
+/\ remaining = 3
+/\ flight = 0
+/\ attempted = TRUE
+/\ outcome = "pending"
+/\ flight_version = 0
+/\ phase = "copying"
+/\ accepted = {1}
+/\ version = 1
+/\ queue = <<1>>
+/\ candidate = <<1>>
+
+State 6: <Validate line 68, col 13 to line 74, col 29 of module LiveUpdate>
+/\ completed = <<>>
+/\ completed_values = <<>>
+/\ corrupt = FALSE
+/\ remaining = 3
+/\ flight = 0
+/\ attempted = TRUE
+/\ outcome = "pending"
+/\ flight_version = 0
+/\ phase = "ready"
+/\ accepted = {1}
+/\ version = 1
+/\ queue = <<1>>
+/\ candidate = <<1>>
+
+State 7: <Activate line 75, col 13 to line 83, col 29 of module LiveUpdate>
+/\ completed = <<>>
+/\ completed_values = <<>>
+/\ corrupt = FALSE
+/\ remaining = 0
+/\ flight = 0
+/\ attempted = TRUE
+/\ outcome = "activated"
+/\ flight_version = 0
+/\ phase = "running"
+/\ accepted = {1}
+/\ version = 2
+/\ queue = <<>>
+/\ candidate = <<>>
+
+466 states generated, 227 distinct states found, 95 states left on queue.
+The depth of the complete state graph search is 7.
+The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 4 and the 95th percentile is 3).
+Finished in 00s at (2026-10-05 22:08:33)

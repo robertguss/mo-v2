@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py", line 220, in <module>
+    main()
+    ~~~~^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py", line 203, in main
+    run_trace(client, CONTROL_TRACES[args.control], args.control)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py", line 112, in run_trace
+    expect(client.call(command), expected, context + ": " + command)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/04-live-update/acceptance/run.py", line 18, in expect
+    raise AssertionError(json.dumps(dict(context=context, expected=expected,
+                                        actual=actual), sort_keys=True))
+AssertionError: {"actual": {"state": {"accepted": [1], "attempted": true, "candidate": [], "completed": [], "completed_values": [], "corrupt": false, "flight": 1, "flight_version": 1, "outcome": "activated", "phase": "running", "queue": [], "remaining": 0, "version": 2}, "status": "ok"}, "context": "premature_activation: activate", "expected": {"state": {"accepted": [1], "attempted": true, "candidate": [], "completed": [], "completed_values": [], "corrupt": false, "flight": 1, "flight_version": 1, "outcome": "pending", "phase": "draining", "queue": [], "remaining": 3, "version": 1}, "status": "blocked"}}
