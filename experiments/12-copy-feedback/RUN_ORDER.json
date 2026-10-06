@@ -1,0 +1,125 @@
+{
+  "seed": 1141,
+  "trials": [
+    {
+      "task": "H2",
+      "arm": "actual-auto"
+    },
+    {
+      "task": "U2",
+      "arm": "none"
+    },
+    {
+      "task": "H1",
+      "arm": "actual-request"
+    },
+    {
+      "task": "U1",
+      "arm": "none"
+    },
+    {
+      "task": "H1",
+      "arm": "none"
+    },
+    {
+      "task": "H1",
+      "arm": "static-auto"
+    },
+    {
+      "task": "H2",
+      "arm": "none"
+    },
+    {
+      "task": "H1",
+      "arm": "actual-auto"
+    },
+    {
+      "task": "R1",
+      "arm": "static-auto"
+    },
+    {
+      "task": "U2",
+      "arm": "static-auto"
+    },
+    {
+      "task": "H2",
+      "arm": "actual-request"
+    },
+    {
+      "task": "U2",
+      "arm": "static-request"
+    },
+    {
+      "task": "R1",
+      "arm": "none"
+    },
+    {
+      "task": "R2",
+      "arm": "static-request"
+    },
+    {
+      "task": "U2",
+      "arm": "actual-auto"
+    },
+    {
+      "task": "R2",
+      "arm": "static-auto"
+    },
+    {
+      "task": "U2",
+      "arm": "actual-request"
+    },
+    {
+      "task": "R1",
+      "arm": "actual-auto"
+    },
+    {
+      "task": "H1",
+      "arm": "static-request"
+    },
+    {
+      "task": "H2",
+      "arm": "static-request"
+    },
+    {
+      "task": "R2",
+      "arm": "actual-request"
+    },
+    {
+      "task": "R2",
+      "arm": "none"
+    },
+    {
+      "task": "R2",
+      "arm": "actual-auto"
+    },
+    {
+      "task": "U1",
+      "arm": "static-auto"
+    },
+    {
+      "task": "H2",
+      "arm": "static-auto"
+    },
+    {
+      "task": "U1",
+      "arm": "static-request"
+    },
+    {
+      "task": "R1",
+      "arm": "actual-request"
+    },
+    {
+      "task": "U1",
+      "arm": "actual-auto"
+    },
+    {
+      "task": "U1",
+      "arm": "actual-request"
+    },
+    {
+      "task": "R1",
+      "arm": "static-request"
+    }
+  ]
+}
