@@ -1,0 +1,32 @@
+[
+  {
+    "name": "no-watchdog",
+    "caught": true,
+    "expected": "watchdog did not expire held preparation",
+    "source_sha256": "7436ed205e69f973c230a1e451451857a32ebfe66ed102d8bb29fe53042c5463"
+  },
+  {
+    "name": "stale-publication",
+    "caught": true,
+    "expected": "stale candidate overwrote newer activation",
+    "source_sha256": "0b09f1d078005298de8509defc9dc9ce0691f0a7208a807a22b15828a02ef080"
+  },
+  {
+    "name": "premature-unload",
+    "caught": true,
+    "expected": "candidate unloaded while preparing",
+    "source_sha256": "afe19ae206bf178c2404ed0b3442aa8e50a6bcf7ec8c47864d1668d3540dbacc"
+  },
+  {
+    "name": "bad-readiness",
+    "caught": true,
+    "expected": "bad readiness accepted",
+    "source_sha256": "8bdfcc24520610bba3299e2d75305502da456782f9062e533140d23d1e5d4230"
+  },
+  {
+    "name": "lock-during-native",
+    "caught": true,
+    "expected": "TimeoutError",
+    "source_sha256": "6333cd5ccbbac4e9833b8dab6e2661773d0340b4e0dd39e547d7f85d6eb7b90c"
+  }
+]

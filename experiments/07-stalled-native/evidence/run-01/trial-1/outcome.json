@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/check.py\", line 174, in trial\n    s=activation(control,newest,5)\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/check.py\", line 76, in activation\n    require(a['status'] == 'activated' and s['active'] == version, 'new activation failed')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: new activation failed\n"
+}

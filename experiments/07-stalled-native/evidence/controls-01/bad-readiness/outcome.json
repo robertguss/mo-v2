@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/probe.py\", line 195, in trial\n    require(attempt(s,wrong)['status']=='invalid' and s['active']==5,'bad readiness accepted')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/07-stalled-native/probe.py\", line 25, in require\n    raise AssertionError(message)\nAssertionError: bad readiness accepted\n"
+}

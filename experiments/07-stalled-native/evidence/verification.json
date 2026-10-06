@@ -1,0 +1,12 @@
+{
+  "original_acceptance": "failed; unchanged checks",
+  "final_diagnostic": "probe-02",
+  "diagnostic_jobs": 288,
+  "diagnostic_controls": "controls-02",
+  "tools": {
+    "rustc": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)",
+    "clang": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+    "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83"
+  },
+  "original_checks_unchanged": true
+}
