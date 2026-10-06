@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 361, in <module>
+    main()
+    ~~~~^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 347, in main
+    result["runs"].append(dict(scenario=name,result=SCENARIOS[name](server)))
+                                                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 209, in stale
+    s = server.wait(lambda s:s["attempts"][a-1]["worker_returned"], "late worker return")
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 126, in wait
+    s = self.snapshot()
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 84, in snapshot
+    require(outstanding == accepted[len(done):], "accepted work lost or duplicated")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 21, in require
+    raise AssertionError(message)
+AssertionError: accepted work lost or duplicated

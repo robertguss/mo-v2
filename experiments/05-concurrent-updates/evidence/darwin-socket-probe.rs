@@ -1,0 +1,2 @@
+use std::{net::{TcpListener,TcpStream},io::{Read,ErrorKind},thread,time::Duration};
+fn main(){let l=TcpListener::bind("127.0.0.1:0").unwrap();l.set_nonblocking(true).unwrap();let _c=TcpStream::connect(l.local_addr().unwrap()).unwrap();let mut s=loop {match l.accept(){Ok((s,_))=>break s,Err(e) if e.kind()==ErrorKind::WouldBlock=>thread::sleep(Duration::from_millis(1)),Err(e)=>panic!("{e}")}};s.set_read_timeout(Some(Duration::from_secs(1))).unwrap();let now=std::time::Instant::now();let r=s.read(&mut[0u8]);println!("read={r:?}, elapsed_ms={}",now.elapsed().as_millis());}

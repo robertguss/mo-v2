@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 361, in <module>
+    main()
+    ~~~~^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 347, in main
+    result["runs"].append(dict(scenario=name,result=SCENARIOS[name](server)))
+                                                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 240, in conservation
+    server.terminal(a,"activated")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 138, in terminal
+    s = self.wait(lambda s:s["attempts"][attempt-1]["status"]!="pending", "update terminal", .95)
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 126, in wait
+    s = self.snapshot()
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 78, in snapshot
+    require([r[0] for r in done] == list(range(1,len(done)+1)), "completion duplicated or out of order")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 21, in require
+    raise AssertionError(message)
+AssertionError: completion duplicated or out of order

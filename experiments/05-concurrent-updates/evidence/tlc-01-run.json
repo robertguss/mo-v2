@@ -1,0 +1,21 @@
+{
+  "command": [
+    "java",
+    "-Xmx1g",
+    "-cp",
+    "/tmp/mo-live-update-tools/tla2tools-1.7.4.jar",
+    "tlc2.TLC",
+    "-workers",
+    "1",
+    "-dump",
+    "dot,actionlabels",
+    "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/evidence/graph-01.dot",
+    "-metadir",
+    "/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-tlc-_2z5rwsz",
+    "-config",
+    "RepeatedUpdate.cfg",
+    "RepeatedUpdate.tla"
+  ],
+  "exit": 0,
+  "elapsed_seconds": 0.886127874997328
+}

@@ -1,0 +1,10 @@
+--- accepted-source
++++ duplicate_completion
+@@ -130,6 +130,7 @@
+             return;
+         }
+         let (job, epoch) = s.flight.take().unwrap();
++        s.completed.push([job.seq, job.id, job.payload, epoch]);
+         s.completed.push([job.seq, job.id, job.payload, epoch]);
+         sh.changed.notify_all();
+     }

@@ -1,0 +1,11 @@
+--- accepted-source
++++ model-stale_publish
+@@ -16,7 +16,7 @@
+            /\ pending' = 0
+            /\ UNCHANGED <<issued, running, committed, ignored, epoch>>
+ Return1 == /\ 1 \in running /\ running' = running \ {1}
+-           /\ IF pending = 1
++           /\ IF TRUE
+                  THEN /\ committed' = Append(committed,1) /\ epoch' = epoch+1
+                       /\ pending' = 0 /\ UNCHANGED <<issued, expired, ignored>>
+                  ELSE /\ ignored' = ignored \cup {1}

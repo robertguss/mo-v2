@@ -1,0 +1,14 @@
+--- accepted-source
++++ stale_publish
+@@ -198,7 +198,10 @@
+     s.attempts[id - 1].worker_returned = true;
+     // Token and epoch fencing must precede every authoritative write.
+     if s.pending != id || s.epoch != base {
+-        s.attempts[id - 1].late_discarded = true;
++        s.queue = candidate;
++        s.epoch = base + 1;
++        s.pending = id;
++        sh.terminal(&mut s, "activated", sh.now());
+         return;
+     }
+     if Instant::now() >= s.attempts[id - 1].deadline {

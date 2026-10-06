@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 361, in <module>
+    main()
+    ~~~~^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 347, in main
+    result["runs"].append(dict(scenario=name,result=SCENARIOS[name](server)))
+                                                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 193, in stale
+    rows = seed(server)
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 178, in seed
+    rows = [submit(c,10,101)]
+            ~~~~~~^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 170, in submit
+    reply = client.call(f"submit {job} {payload}")
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 37, in call
+    require(bool(data), "connection closed: " + command)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 21, in require
+    raise AssertionError(message)
+AssertionError: connection closed: submit 10 101
