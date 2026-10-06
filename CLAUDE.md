@@ -15,43 +15,23 @@ There is no separate handoff file or parallel repository backlog.
 Git retains exact versioned code, approved specifications, locks, research and
 raw evidence, indexed by commit-pinned links in Linear. A Linear summary or
 issue state cannot amend a locked requirement: Robert must approve the change
-and a new lock must preserve the old record. D103, Robert's trial-only Amp
-workflow amendment, authorizes the arrangement below after its operational
-documents are reviewed, committed and relocked (ROB-1132).
-Standing rules below remain binding. TheBrain is no longer used. The repo is
+and a new lock must preserve the old record. D108 retired Amp/Herdr operations;
+Robert retired Crew across projects on 2026-10-06. Historical attribution and
+scientific criteria stay intact; those operational arrangements do not govern
+new work. Current owner instructions and each experiment's approved scope bind. TheBrain is no longer used. The repo is
 public at https://github.com/robertguss/mo-v2.
 
-## Amp reviewed development
+## Current work and delivery
 
-Linear: team ROB, project Mo v2 (8c0bbed4-77f7-49e2-a8be-92fee998e530)
-Delivery: push-branch
-Builder: high
-Tester: inherit
-Done: merged
-
-The trial's current Builder is built-in high mode as an operational fallback
-chosen by Lead/Oracle under D104 (Robert's AFK delegation), after the Grok47
-thread repeatedly errored before proof work. This is not a claim of better
-proof capability. The original Grok47 arrangement below records D103's approval;
-only its model selection is superseded. All proof and acceptance boundaries
-remain unchanged; the new baseline is recorded in the trial lock and Linear.
+Linear: team ROB, project Mo v2 (8c0bbed4-77f7-49e2-a8be-92fee998e530).
+Work happens in the current Codex session; no Crew/Amp role, model, orb or Herdr
+environment is required. Use dedicated branches; Done means confirmed merge.
+Scientific scope, separately authored frozen acceptance checks and experiment
+merge approvals remain required. Historical trial locks are unchanged.
 
 Status mapping: Ready, Planning, Building, In Review, Needs Input (blocked),
-Backlog (deferred/unapproved), Done. The Lead consults Oracle to prioritize
-eligible work and coordinates the Builder and Tester continuously. Scientific
-changes and merges still require Robert's approval.
-
-For the trial under D103 (the approved Amp workflow amendment), a visible
-Grok47 Builder thread in a fresh orb may commit and push only its permitted
-proof files to the dedicated branch. The Lead and a fresh-orb Tester each run
-the locked acceptance checks on the same commit and record findings before
-seeing the other's; neither writes the proofs. Oracle review is additional
-review, not a substitute for either acceptance run. Keep two-hour reports and
-automatic continuation within the unchanged approved trial scope, stopping for
-counterexamples, specification defects, integrity problems or setup blockers.
-The trial documents and their amended lock define the exact procedure. This
-trial-only exception supersedes the Herdr and named-reviewer rules below for
-this work, without changing historical decisions or other experimental scopes.
+Backlog (deferred/unapproved), Done. Linear owns current authorization and
+acceptance; do not infer permission from an old dispatch arrangement.
 
 ## Why v2 exists
 
@@ -105,11 +85,9 @@ own work. The rules below exist to stop that happening again.
   the work starts. Changing an expected output to match a program's actual
   output is forbidden.
 - **Every piece of work has a written stop condition** before it starts.
-- **Builders work where Robert can see them** (D14): start each builder as a new
-  Claude Code session in a Herdr pane, never as a hidden subagent:
-  `herdr agent start <name> --kind claude --pane <id> -- --dangerously-skip-permissions`.
-  A new folder triggers a trust prompt, and Robert must approve each one. Check
-  `HERDR_ENV` is set before trying; a session outside Herdr cannot open panes.
+- **Implementation and acceptance stay separate.** Follow the current owner
+  authorization and the approved experiment's authorship boundaries. Retired
+  Herdr pane, model and trust-prompt requirements do not apply.
 - **Nothing from v1 comes over without a decision.** `../mo-lang` is reference
   only.
 - **No process machinery** (auditors, handoff protocols, extra review layers)
@@ -139,19 +117,15 @@ own work. The rules below exist to stop that happening again.
 - **The lock pattern that worked:**
   1. The lead writes the plan and acceptance files, and Robert approves them.
   2. Record their hashes (fingerprints) in a `LOCK.md`.
-  3. The builder, in a visible Herdr pane, writes only its own files. It may not
+  3. The implementation author writes only its own files. It may not
      touch the plan, the acceptance files or the thresholds.
   4. The lead verifies independently: hashes, a clean rebuild, `#print axioms`
      for Lean, and a deliberately broken copy that must fail.
 
 ## AI council: Codex as thinking partner (D21, D61)
 
-- Codex (`herdr agent start <name> --kind codex`) is the lead's thinking partner
-  on design questions and experiment plans, not on bookkeeping. Don't use
-  Gemini.
-- Talk to it with `herdr agent prompt <name-or-pane> "..." --wait` and read it
-  with `herdr agent read <name-or-pane> --source recent-unwrapped --lines N`.
-  Robert also reads and prompts its pane directly.
+- Codex is a thinking partner on design questions and experiment plans. Use
+  the current session's available review tools; no Herdr pane is required.
 - The lead coordinates and asks Robert the questions, but does not filter Codex:
   Robert sees Codex's view directly, Codex answers him directly, and Codex
   corrects the lead openly if a summary misses a material disagreement.
@@ -199,5 +173,5 @@ own work. The rules below exist to stop that happening again.
   lines, apply the edit with a python3 script and check `git diff`.
 - **Commits:** refer to repo docs by URL. Commit named paths only, with the
   attribution line. Commit and push often and regularly without asking Robert
-  (his standing instruction, 30 Sep 2026); under the driver and oracle skills,
-  after each oracle sign-off.
+  (his standing instruction, 30 Sep 2026), after required independent review.
+  Scientific scope and merge gates remain separate.
