@@ -1,0 +1,4 @@
+{
+  "case": "original-5",
+  "defect": "holder points to reserved cell"
+}

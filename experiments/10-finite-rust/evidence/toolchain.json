@@ -1,0 +1,6 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)",
+  "python": "Python 3.13.7",
+  "lean_toolchain": "leanprover/lean4:v4.34.0"
+}

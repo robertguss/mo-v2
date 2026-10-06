@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "checked": 0,
+  "total": 4276,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 112, in run\n    safety(case,o);physical(case,result)\n                   ~~~~~~~~^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 89, in physical\n    require(stats['cell_allocs']==sum(k=='create' for k,a in logical),'physical allocation hidden from logical interval')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: physical allocation hidden from logical interval\n",
+  "source_sha256": "7e11c1432edd1b3a0caf1d17e10f5c7c83aaba6d2a8299a0d45704d70bc16642",
+  "allocator_samples": []
+}

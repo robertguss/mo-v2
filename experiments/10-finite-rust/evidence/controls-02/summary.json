@@ -1,0 +1,37 @@
+[
+  {
+    "name": "shared-mutation",
+    "caught": true,
+    "checked_before_rejection": 0,
+    "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 107, in run\n    require(p.returncode==0,'runtime process failed')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: runtime process failed\n",
+    "source_sha256": "04f9cf2f2d195350019e7b6e6420e2efc5a46ffa6405ba65cc0e67d5ff6b57f3"
+  },
+  {
+    "name": "early-free",
+    "caught": true,
+    "checked_before_rejection": 0,
+    "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 107, in run\n    require(p.returncode==0,'runtime process failed')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: runtime process failed\n",
+    "source_sha256": "a267cf514f3c3bd86b026c8eebf16a1a6b6db8b16676e223d804ed1c6bea7552"
+  },
+  {
+    "name": "leak-tail",
+    "caught": true,
+    "checked_before_rejection": 10,
+    "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 112, in run\n    safety(case,o);physical(case,result)\n    ~~~~~~^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 43, in safety\n    require(reached=={c[0] for c in o['memory']},'unreachable live memory or missing result')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: unreachable live memory or missing result\n",
+    "source_sha256": "1083569b4a0617dba88dbe3a9799ddb414652ec472dd97b4849c0b75008a999e"
+  },
+  {
+    "name": "always-allocate",
+    "caught": true,
+    "checked_before_rejection": 0,
+    "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 114, in run\n    for field in b: require(a[field]==b[field],f'Lean/Rust mismatch: {field}')\n                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lean/Rust mismatch: answer\n",
+    "source_sha256": "546f50f9f6fc3b70ac219ae4520a1a64ace960d372412cfe3a7ed3f168e195f9"
+  },
+  {
+    "name": "hidden-precopy",
+    "caught": true,
+    "checked_before_rejection": 0,
+    "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 112, in run\n    safety(case,o);physical(case,result)\n                   ~~~~~~~~^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 89, in physical\n    require(stats['cell_allocs']==sum(k=='create' for k,a in logical),'physical allocation hidden from logical interval')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: physical allocation hidden from logical interval\n",
+    "source_sha256": "7e11c1432edd1b3a0caf1d17e10f5c7c83aaba6d2a8299a0d45704d70bc16642"
+  }
+]

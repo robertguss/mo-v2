@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "checked": 0,
+  "total": 4276,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 103, in run\n    require(build.returncode==0,'build failed')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: build failed\n",
+  "source_sha256": "32aae0384a149c3e44e8a500b03b19b54eafee62d5381cabf74e47e5d5115f3f",
+  "allocator_samples": []
+}

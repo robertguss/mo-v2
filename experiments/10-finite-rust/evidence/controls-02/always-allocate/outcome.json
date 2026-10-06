@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "checked": 0,
+  "total": 4276,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 114, in run\n    for field in b: require(a[field]==b[field],f'Lean/Rust mismatch: {field}')\n                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lean/Rust mismatch: answer\n",
+  "source_sha256": "546f50f9f6fc3b70ac219ae4520a1a64ace960d372412cfe3a7ed3f168e195f9",
+  "allocator_samples": []
+}

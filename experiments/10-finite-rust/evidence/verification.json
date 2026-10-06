@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checked": 4276,
+  "total": 4276,
+  "error": null,
+  "source_sha256": "4580eb8a1d6a50ff4d1b8519efe4c438555b112b3e643f0b28d9c3684d006105",
+  "original_cases": 28,
+  "generated_cases": 4248,
+  "templates": 177,
+  "snapshots": 27721,
+  "logical_operations": {
+    "create": 304,
+    "write": 89,
+    "free": 5269
+  },
+  "fixture_cells": 9617,
+  "system_alloc_calls": 1481440,
+  "system_requested_bytes": 53429971,
+  "unchanged_reference_files": 270
+}

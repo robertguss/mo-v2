@@ -1,0 +1,9 @@
+[
+  {
+    "name": "shared-mutation",
+    "caught": false,
+    "checked_before_rejection": 0,
+    "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 107, in run\n    require(p.returncode==0,'runtime process failed')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/10-finite-rust/check.py\", line 13, in require\n    if not ok: raise AssertionError(why)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: runtime process failed\n",
+    "source_sha256": "04f9cf2f2d195350019e7b6e6420e2efc5a46ffa6405ba65cc0e67d5ff6b57f3"
+  }
+]
