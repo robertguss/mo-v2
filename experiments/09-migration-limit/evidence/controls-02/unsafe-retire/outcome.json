@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/check.py\", line 225, in trial\n    require(cmd(control,f'retire {version}')['status']=='blocked','permanent native retired')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: permanent native retired\n"
+}
