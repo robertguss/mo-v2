@@ -1,0 +1,16 @@
+{
+  "baseline": "515d63e90e1bf5a87bbf7489f99dc511b443b274",
+  "final_trials": 3,
+  "final_jobs": 249,
+  "controls_caught": 6,
+  "prior_experiments_unchanged": true,
+  "verification_authorship": "same agent as implementation",
+  "trace_format": "lossless gzip-compressed original JSON",
+  "source_hashes": {
+    "host.rs": "8bcf7911a00b9f64b69bc5c6dbe8206e299926da254fc1730561051b9d2ed5e5",
+    "module.c": "4652eaa6262d7050b1bfa02c4183aff0e3ce54fcc195a5f3a373fb33e9360ddb",
+    "check.py": "c0b249e1520270ba3f748368d9d8dfd4495abd991ccf8c97cab20f18a989c4b8",
+    "mutate.py": "3d2a1f75f85ea0aa500dd4f483faa8728d78a6dea0128fde4410c738efc88826",
+    "SPEC.md": "884b71b55d6b297ec280e56ad406a8ee0af71cdff8e8dde4f64ddec4605c049a"
+  }
+}

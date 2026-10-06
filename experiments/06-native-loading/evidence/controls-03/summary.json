@@ -1,0 +1,38 @@
+[
+  {
+    "name": "premature-retirement",
+    "caught": true,
+    "expected": "premature retirement allowed",
+    "source_sha256": "11d1e650a685288a312420eddcc1e4fd85019f974d1a96b1eff0dbe9566c12d1"
+  },
+  {
+    "name": "force-unload-inflight",
+    "caught": true,
+    "expected": "old image unloaded while executing",
+    "source_sha256": "ce58daa00e4f7b74c3f9c953ac7993bc190e474f4ab1dbb9e76f27c78ca407a6"
+  },
+  {
+    "name": "never-unload",
+    "caught": true,
+    "expected": "old image not unloaded",
+    "source_sha256": "85a6911bd1960a4de3e478cb84406426a8fd499efe72f68b7a352b59743d025b"
+  },
+  {
+    "name": "mixed-version",
+    "caught": true,
+    "expected": "mixed or wrong code behavior",
+    "source_sha256": "7515016192c14f173d90e636feed390471f4cdbf2930a51652cd143f65f4dba4"
+  },
+  {
+    "name": "drop-queue",
+    "caught": true,
+    "expected": "timeout: queued old job still pinned",
+    "source_sha256": "147a7b007dc3ac6a8193850fd31f184bc580238f9d97f00c1fbb72930bdf1cb5"
+  },
+  {
+    "name": "wrong-abi",
+    "caught": true,
+    "expected": "incompatible artifact accepted",
+    "source_sha256": "746e22a70253ea8b28a74c33056272e5569040f36a0ab6a388d6d5f768b5a525"
+  }
+]

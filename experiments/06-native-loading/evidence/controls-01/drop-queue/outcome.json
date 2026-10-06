@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/06-native-loading/check.py\", line 138, in run_trial\n    s = wait(client, lambda s: s['inside'] and s['flight'][1] == 2, 'queued old job still pinned')\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/06-native-loading/check.py\", line 61, in wait\n    raise AssertionError('timeout: ' + label)\nAssertionError: timeout: queued old job still pinned\n"
+}

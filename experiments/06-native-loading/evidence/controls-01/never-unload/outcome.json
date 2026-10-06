@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/06-native-loading/check.py\", line 149, in run_trial\n    require(str(v1) not in s['images'], 'old image not unloaded')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/06-native-loading/check.py\", line 22, in require\n    raise AssertionError(message)\nAssertionError: old image not unloaded\n"
+}
