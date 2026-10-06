@@ -1,0 +1,11 @@
+{
+  "before_rust_implementation": true,
+  "frozen": {
+    "SPEC.md": "5d7cbdb9b0cdab65448d7ce0993d281b4de9e20a37a7e00137c2d5956f6e04c4",
+    "Export.lean": "3b44642c7affe9d296ab6c46486e84d124ef5b89737222c7c23ef51c39f4d289",
+    "check.py": "0283d1eef1959b7f9ac7ca658fe67e9fef298ad7c061d7a8bdd56a5a45ff90b9",
+    "evidence/expected.jsonl.gz": "d8d33f795b94e8173b6685462e83a277bfeefad5cc2bfee6bee38a8f63554a8b"
+  },
+  "reference_sha256": "ccb605be2146f023694c0ef77ae3db07b12c0582b073efe19477699f594b7e3f",
+  "cases": 4276
+}
