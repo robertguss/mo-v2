@@ -1,0 +1,11 @@
+--- accepted-source
++++ watchdog_disabled
+@@ -140,7 +140,7 @@
+         if s.shutdown {
+             return;
+         }
+-        if s.pending != 0 && Instant::now() >= s.attempts[s.pending - 1].deadline {
++        if false && s.pending != 0 && Instant::now() >= s.attempts[s.pending - 1].deadline {
+             sh.terminal(&mut s, "timeout", sh.now());
+         }
+         let (_s, _) = sh

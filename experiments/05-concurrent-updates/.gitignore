@@ -1,0 +1,4 @@
+runtime/target/
+acceptance/__pycache__/
+model/states/
+model/*_TTrace_*

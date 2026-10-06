@@ -1,0 +1,15 @@
+{
+  "lock": {
+    "SPEC.md": true,
+    "ACCEPTANCE.md": true,
+    "acceptance/run.py": true,
+    "acceptance/model_oracle.py": true,
+    "model/RepeatedUpdate.cfg": true
+  },
+  "prior_manifest_unchanged": true,
+  "format_exit": 0,
+  "format_stdout": "",
+  "format_stderr": "",
+  "reviewed_runtime_sha256": "2dcf489a721d539f9c328bcdefde8c8813214ad08a8341263e3bab2240498a31",
+  "unrelated_worktree_change": "CLAUDE.md edited outside this experiment; not staged by this task"
+}

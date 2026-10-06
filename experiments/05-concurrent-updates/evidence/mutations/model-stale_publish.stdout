@@ -1,0 +1,58 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 14 and seed -2760047667892751976 with 1 worker on 14 cores with 1024MB heap and 64MB offheap memory [pid: 36633] (Mac OS X 26.6.2 aarch64, Eclipse Adoptium 21.0.4 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/mo5-model-control-zyufgzyw/RepeatedUpdate.tla
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/Naturals.tla
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/Sequences.tla
+Parsing file /private/var/folders/f8/ft7ygqg92pj8qh0rwplbw2x80000gn/T/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module RepeatedUpdate
+Starting... (2026-10-06 06:19:02)
+Implied-temporal checking--satisfiability problem has 1 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-10-06 06:19:02.
+Error: Invariant Safety is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ pending = 0
+/\ expired = {}
+/\ epoch = 0
+/\ committed = <<>>
+/\ running = {}
+/\ issued = 0
+/\ ignored = {}
+
+State 2: <Begin1 line 9, col 11 to line 11, col 61 of module RepeatedUpdate>
+/\ pending = 1
+/\ expired = {}
+/\ epoch = 0
+/\ committed = <<>>
+/\ running = {1}
+/\ issued = 1
+/\ ignored = {}
+
+State 3: <Timeout line 15, col 12 to line 17, col 70 of module RepeatedUpdate>
+/\ pending = 0
+/\ expired = {1}
+/\ epoch = 0
+/\ committed = <<>>
+/\ running = {1}
+/\ issued = 1
+/\ ignored = {}
+
+State 4: <Return1 line 18, col 12 to line 23, col 81 of module RepeatedUpdate>
+/\ pending = 0
+/\ expired = {1}
+/\ epoch = 1
+/\ committed = <<1>>
+/\ running = {}
+/\ issued = 1
+/\ ignored = {}
+
+6 states generated, 6 distinct states found, 2 states left on queue.
+The depth of the complete state graph search is 4.
+The average outdegree of the complete state graph is 2 (minimum is 1, the maximum 2 and the 95th percentile is 2).
+Finished in 00s at (2026-10-06 06:19:02)

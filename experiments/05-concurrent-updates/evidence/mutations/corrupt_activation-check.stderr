@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 361, in <module>
+    main()
+    ~~~~^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 347, in main
+    result["runs"].append(dict(scenario=name,result=SCENARIOS[name](server)))
+                                                    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 256, in corrupt
+    server.terminal(a,"invalid")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 138, in terminal
+    s = self.wait(lambda s:s["attempts"][attempt-1]["status"]!="pending", "update terminal", .95)
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 126, in wait
+    s = self.snapshot()
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 84, in snapshot
+    require(outstanding == accepted[len(done):], "accepted work lost or duplicated")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/robertguss/Projects/startups/mo-v2/experiments/05-concurrent-updates/acceptance/run.py", line 21, in require
+    raise AssertionError(message)
+AssertionError: accepted work lost or duplicated

@@ -1,0 +1,30 @@
+{
+  "jobs": 160,
+  "activations": 8,
+  "producer_connections": 4,
+  "busy_replies": 1459,
+  "request_ms": {
+    "median": 0.22408350196201354,
+    "p95": 5.5823330039856955,
+    "max": 28.959249990293756
+  },
+  "sampled_copying_windows_ms": [
+    22.35883299726993,
+    19.47745800134726,
+    18.705540991504677,
+    24.599834010587074,
+    14.514832990244031,
+    13.033292008913122,
+    1.90320800174959,
+    1.2347079900791869
+  ],
+  "max_observed_completion_gap_ms": 43.02533299778588,
+  "continuous_observer": {
+    "snapshots": 147,
+    "max_snapshot_interval_ms": 31.992,
+    "max_observed_progress_interval_ms": 43.052,
+    "first_completed_count": 0,
+    "last_completed_count": 160,
+    "meaning": "Additional observer adds contention; sampled progress intervals are not exact per-job gaps or an SLA"
+  }
+}
