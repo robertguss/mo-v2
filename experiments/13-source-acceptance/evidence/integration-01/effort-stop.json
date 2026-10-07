@@ -1,0 +1,12 @@
+{
+  "phase": "acceptance integration and blocker publication",
+  "started_at": "2026-10-07T19:52:44+00:00",
+  "stopped_at": "2026-10-07T20:08:19+00:00",
+  "contributors": 1,
+  "contributor_elapsed_seconds": 935,
+  "excluded_intervals": [],
+  "earlier_preparation": "unknown",
+  "initial_authorization_reading_before_first_clock": "unmeasured",
+  "stop_reason": "substantive v12 outside-root snapshot information discrepancy; awaiting parent review",
+  "archive_note": "Final stop timestamp follows immutable integration-blocked-01 checkpoint publication."
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "source_accept": 16,
+  "source_refuse": 12,
+  "public_cases": 21,
+  "controls": {
+    "replaced-object": "physical continuity",
+    "recycled-lifetime": "physical identity recycled/aliased",
+    "replay": "resume replay/wrong suffix",
+    "resume-object": "resume replaced live object",
+    "wrong-return": "return identity/order",
+    "lost-return": "missing return",
+    "unreachable-cell": "final reachability"
+  },
+  "missing": [
+    "all fine-grained expected transition traces",
+    "real candidate/physical/allocator instrumentation",
+    "all resume/destroy boundaries",
+    "private heldouts/generated corpus",
+    "complete exact refusal set",
+    "scientific lock"
+  ]
+}

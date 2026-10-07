@@ -1,0 +1,20 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests lib.rs (/tmp/rob1333closeout-cells/debug/deps/acceptance_cells-4f3713f968d9dbe3)
+
+running 7 tests
+test tests::actual_rebuild_preserves_live_object_and_records_real_contents ... ok
+test tests::actual_detachment_is_visible_without_counting_a_rebuild ... ok
+test tests::denied_creation_leaves_graph_and_primitive_prefix_unchanged ... ok
+test tests::freeing_run_owned_cell_does_not_free_outside_cell ... ok
+test tests::numeric_frame_gates_are_independent_and_deny_before_allocation ... ok
+test tests::retired_lifetime_never_reused_even_if_allocator_recycles_address ... ok
+test tests::compiled_replacement_control_fails_pointer_continuity - should panic ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests acceptance_cells
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

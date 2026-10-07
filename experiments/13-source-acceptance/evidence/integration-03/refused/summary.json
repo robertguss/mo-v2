@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 15920300032,
+  "stack_bytes": 8388608,
+  "exit_code": 0,
+  "peak_rss_kib": 297656,
+  "committed_steps": 0,
+  "advances": 0,
+  "destroy_calls": 0,
+  "events_by_phase": {
+    "pre-run": 0
+  },
+  "resource_attempts": {},
+  "elapsed_ns": 14225328,
+  "start_ns": 17560495546480,
+  "stop_ns": 17560509771808,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 17560495546480,
+      "end_ns": 17560509510415
+    },
+    {
+      "phase": "pre-run",
+      "start_ns": 17560509510415,
+      "end_ns": 17560509771808
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "passed": true,
+  "rule": "D142 earliest lexical/syntax source error",
+  "refusals": 14,
+  "accepts": 2,
+  "observed": [
+    {
+      "source": "main = (1 2)",
+      "expected": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ]
+    },
+    {
+      "source": "main = (1 2) @",
+      "expected": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ]
+    },
+    {
+      "source": "main = (1 2) 01",
+      "expected": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ]
+    },
+    {
+      "source": "main = (01 2) @",
+      "expected": [
+        "numeral",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "actual": [
+        "numeral",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          11
+        ]
+      ]
+    },
+    {
+      "source": "main = (@ 2) @",
+      "expected": [
+        "lexical",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "actual": [
+        "lexical",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ]
+      ]
+    },
+    {
+      "source": "main = (1 @ 2) @",
+      "expected": [
+        "lexical",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "actual": [
+        "lexical",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ]
+    },
+    {
+      "source": "main = (1 2) # @ 01",
+      "expected": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ]
+    },
+    {
+      "source": "main = (1\n 2) @",
+      "expected": [
+        "syntax",
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "source": "main = (1\r\n\t2) @",
+      "expected": [
+        "syntax",
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 2 @",
+      "expected": [
+        "syntax",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 @ 2",
+      "expected": [
+        "lexical",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "actual": [
+        "lexical",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ]
+      ]
+    },
+    {
+      "source": "main = let x 1 in x @",
+      "expected": [
+        "syntax",
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main =",
+      "expected": [
+        "syntax",
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          7
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 EOF",
+      "expected": [
+        "syntax",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "actual": [
+        "syntax",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          13
+        ]
+      ]
+    }
+  ]
+}

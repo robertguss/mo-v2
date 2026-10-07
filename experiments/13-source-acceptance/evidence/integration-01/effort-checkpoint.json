@@ -1,0 +1,11 @@
+{
+  "phase": "acceptance integration",
+  "contributors": 1,
+  "started_at": "2026-10-07T19:52:44+00:00",
+  "recorded_through": "2026-10-07T20:06:53+00:00",
+  "contributor_elapsed_seconds": 849,
+  "excluded_intervals": [],
+  "earlier_preparation": "unknown",
+  "initial_authorization_reading_before_first_clock": "unmeasured",
+  "status": "blocker checkpoint; publication/reporting continues until separate stop timestamp"
+}

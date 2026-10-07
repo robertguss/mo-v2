@@ -1,0 +1,13 @@
+{
+  "passed": false,
+  "native_stub": 1,
+  "controls": {
+    "Boolean-step": "committed state/action/event prefix",
+    "shadow": "reported/actual physical graph",
+    "intermediate-replacement": "physical graph/event continuity",
+    "rebirth": "identity rebirth",
+    "alias": "aliased normalization"
+  },
+  "candidate_executed": false,
+  "error": "Traceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/bridgecheck.py\", line 185, in run\n    checked = canonical(parse(source)); check_checked(source, checked)\n              ^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'int' object is not callable\n"
+}

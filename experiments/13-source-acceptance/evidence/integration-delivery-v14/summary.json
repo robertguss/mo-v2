@@ -1,0 +1,37 @@
+{
+  "documentation_only": true,
+  "acceptance_sources_unchanged": true,
+  "changed_v13_files": [
+    "BUILDER_HANDOFF.md"
+  ],
+  "public_examples": 21,
+  "checked_objects": 2156,
+  "seen": {
+    "Program": 21,
+    "declaration": 337,
+    "function-declaration": 273,
+    "Var": 484,
+    "Cons": 65,
+    "Nil": 66,
+    "Match": 66,
+    "Int": 178,
+    "match-binder": 132,
+    "Add": 65,
+    "Call": 257,
+    "Let": 44,
+    "If": 42,
+    "Le": 42,
+    "Bool": 42,
+    "Sub": 42
+  },
+  "not_exercised_nodes": [
+    "Eq",
+    "Lt"
+  ],
+  "table_covers_all_declared_node_kinds": true,
+  "clean_build": true,
+  "archive": "/home/user/workspace/repo/.amp/in/artifacts/rob-1333-stage-a-public-v14.tar.gz",
+  "size": 19610,
+  "sha256": "3327ee87f52316bec571f91c81b20f556f030614d41a681699a6cdc8f49c94de",
+  "manifest": "2c5083decf663c4377890007e0e3cbe4a5186701488ec67d168176a0dbc100d4  BUILDER_HANDOFF.md\nabf61e6bea97f63eeca1680b26b8727fa88eaabac45b68ab524d327f8c998bb9  BUILDER_BRIEF.md\nf16da7973f501af3db33e979c7b218fbf9cf84c924c4070e5c904d2568d39d27  BUILDER_AMENDMENT_D154.md\ne5c3aa641014e0bf34feb4a7f6caa9cb48bea13d33646bf3e0916415a24ff5df  BUILDER_EXECUTION.md\n066fe3dc768304c7ebb0cdd2c43a1b507792c33dcec54a71703e3ddc34083768  BUILDER_CHECKED_DUMP_V14.md\n69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86  runtime/Cargo.toml\n1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee  runtime/Cargo.lock\n0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020  runtime/lib.rs\n985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec  runtime/abi.rs\n"
+}

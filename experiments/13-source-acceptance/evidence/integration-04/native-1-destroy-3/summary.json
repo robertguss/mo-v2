@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 15928963072,
+  "stack_bytes": 8388608,
+  "exit_code": 0,
+  "peak_rss_kib": 297868,
+  "committed_steps": 3,
+  "advances": 1,
+  "destroy_calls": 2,
+  "events_by_phase": {
+    "frontend": 0,
+    "fixture": 2,
+    "begin": 0,
+    "commit": 0,
+    "advance": 0,
+    "destroy": 0,
+    "destroy-again": 0,
+    "drop": 0,
+    "teardown": 2
+  },
+  "resource_attempts": {
+    "number": 4,
+    "frame": 1
+  },
+  "elapsed_ns": 26352651,
+  "start_ns": 17820505803756,
+  "stop_ns": 17820532156407,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 17820505803756,
+      "end_ns": 17820527210955
+    },
+    {
+      "phase": "check",
+      "start_ns": 17820527210955,
+      "end_ns": 17820528111698
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 17820528111698,
+      "end_ns": 17820528240856
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 17820528240856,
+      "end_ns": 17820528396173
+    },
+    {
+      "phase": "begin",
+      "start_ns": 17820528396173,
+      "end_ns": 17820529047324
+    },
+    {
+      "phase": "commit",
+      "start_ns": 17820529047324,
+      "end_ns": 17820529444009
+    },
+    {
+      "phase": "commit",
+      "start_ns": 17820529444009,
+      "end_ns": 17820530251073
+    },
+    {
+      "phase": "commit",
+      "start_ns": 17820530251073,
+      "end_ns": 17820530726538
+    },
+    {
+      "phase": "advance",
+      "start_ns": 17820530726538,
+      "end_ns": 17820531213891
+    },
+    {
+      "phase": "destroy",
+      "start_ns": 17820531213891,
+      "end_ns": 17820531506878
+    },
+    {
+      "phase": "destroy-again",
+      "start_ns": 17820531506878,
+      "end_ns": 17820531824618
+    },
+    {
+      "phase": "drop",
+      "start_ns": 17820531824618,
+      "end_ns": 17820531918665
+    },
+    {
+      "phase": "teardown",
+      "start_ns": 17820531918665,
+      "end_ns": 17820532156407
+    }
+  ]
+}

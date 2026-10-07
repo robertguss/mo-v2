@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "boundaries": 1603,
+  "controls": {
+    "leak": "destroy outside graph/counts",
+    "double-free": "destroy free set/duplicate",
+    "outside-replaced": "destroy outside identity",
+    "lost-outside": "destroy outside graph/counts"
+  },
+  "real_destroy_executed": false
+}

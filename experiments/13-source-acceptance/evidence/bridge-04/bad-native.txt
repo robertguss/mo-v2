@@ -1,0 +1,6 @@
+{"phase":0,"graph":[[41,"9",null,1,"live",94749475990880]],"physical":[["fixture",41,94749475990880]]}
+{"phase":1,"graph":[[41,"9",null,1,"live",94749475990880]],"physical":[["fixture",41,94749475990880]]}
+{"phase":2,"graph":[[41,"9",null,1,"live",94749475990880]],"physical":[["fixture",41,94749475990880]]}
+{"phase":3,"graph":[[41,"9",null,1,"live",94749475990880]],"physical":[["fixture",41,94749475990880]]}
+{"phase":4,"graph":[],"physical":[["fixture",41,94749475990880],["free",41,94749475990880]]}
+{"phase":5,"graph":[],"physical":[["fixture",41,94749475990880],["free",41,94749475990880]]}

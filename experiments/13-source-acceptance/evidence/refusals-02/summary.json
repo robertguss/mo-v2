@@ -1,0 +1,294 @@
+{
+  "passed": false,
+  "proposed": true,
+  "cases": 10,
+  "observed": [
+    {
+      "source": "main = match [] do [] -> 0; [x | x] -> @ end",
+      "stage": "B",
+      "expected": [
+        "lexical",
+        [
+          1,
+          40
+        ],
+        [
+          1,
+          41
+        ]
+      ],
+      "actual": [
+        "lexical",
+        [
+          1,
+          40
+        ],
+        [
+          1,
+          41
+        ]
+      ]
+    },
+    {
+      "source": "main = missing(7)",
+      "stage": "B",
+      "expected": [
+        "unknown-function",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "unknown-function",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "def f(): Int = 7 end main = f()",
+      "stage": "A",
+      "expected": [
+        "stage-unsupported",
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          21
+        ]
+      ],
+      "actual": [
+        "stage-unsupported",
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          21
+        ]
+      ]
+    },
+    {
+      "source": "main = missing(7)",
+      "stage": "A",
+      "expected": [
+        "stage-unsupported",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "actual": [
+        "stage-unsupported",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          18
+        ]
+      ]
+    },
+    {
+      "source": "input xs: ListInt; input xs: Int; main = 1",
+      "stage": "B",
+      "expected": [
+        "duplicate-input",
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          28
+        ]
+      ],
+      "actual": [
+        "duplicate-input",
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          28
+        ]
+      ]
+    },
+    {
+      "source": "input xs: Bool; main = 1",
+      "stage": "B",
+      "expected": [
+        "input-type",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "input-type",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main = match [] do [] -> 0; [h | h] -> 1 end",
+      "stage": "B",
+      "expected": [
+        "match-binders",
+        [
+          1,
+          34
+        ],
+        [
+          1,
+          35
+        ]
+      ],
+      "actual": [
+        "match-binders",
+        [
+          1,
+          34
+        ],
+        [
+          1,
+          35
+        ]
+      ]
+    },
+    {
+      "source": "main = match 3 do [] -> 0; [h | t] -> 1 end",
+      "stage": "B",
+      "expected": [
+        "scrutinee-kind",
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "scrutinee-kind",
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main = [false]",
+      "stage": "B",
+      "expected": [
+        "head-kind",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "actual": [
+        "head-kind",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          14
+        ]
+      ]
+    },
+    {
+      "source": "main = [3 | 9]",
+      "stage": "B",
+      "expected": [
+        "tail-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "actual": [
+        "tail-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ]
+      ]
+    },
+    {
+      "source": "main = [] == 1",
+      "stage": "B",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ]
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/refusalcheck.py\", line 59, in run\n    try: check(parse(source), stage)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 257, in check\n    return infer(program[\"main\"], inputs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 214, in infer\n    if infer(child, env) != \"Int\": refuse(\"operand-kind\", child)\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 194, in refuse\n    raise Refusal(kind, *spans[id(node)])\nsyntax.Refusal: operand-kind@7:9\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/refusalcheck.py\", line 63, in run\n    assert actual == (kind, start, end), (source, actual, (kind, start, end))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('main = [] == 1', ('operand-kind', [1, 8], [1, 10]), ('operand-kind', [1, 14], [1, 15]))\n"
+}

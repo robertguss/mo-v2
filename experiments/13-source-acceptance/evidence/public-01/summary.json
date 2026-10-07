@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "source_accept": 13,
+  "source_refuse": 0,
+  "public_cases": 0,
+  "controls": {},
+  "missing": [
+    "all fine-grained expected transition traces",
+    "real candidate/physical/allocator instrumentation",
+    "all resume/destroy boundaries",
+    "private heldouts/generated corpus",
+    "complete exact refusal set",
+    "scientific lock"
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/selfcheck.py\", line 73, in validate\n    program = parse(source); check(program)\n              ^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 173, in parse\n    return Parser(source).program()\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 95, in program\n    body = self.expr(); end = self.take(\"end\").end\n                              ^^^^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 58, in take\n    raise Refusal(\"syntax\", tok.start, tok.end)\nsyntax.Refusal: syntax@55:59\n"
+}

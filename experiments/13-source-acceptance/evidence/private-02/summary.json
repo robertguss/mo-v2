@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "cases": 500,
+  "frozen": false,
+  "kind": "same-private-cases-control-supplement",
+  "cases_sha256": "d8084068c880a3a2764c42ecf0e15b7f493faad963adba9ff32fd2f7fb2dc41b",
+  "control_sha256": "9ad28da556d0f038b07ec0659b71a807d35797a1b74dfa01cdaebeffc34aa54c"
+}

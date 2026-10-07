@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 15915655168,
+  "stack_bytes": 8388608,
+  "error": "TimeoutError: inclusive watchdog",
+  "elapsed_ns": 50174972,
+  "phases": []
+}

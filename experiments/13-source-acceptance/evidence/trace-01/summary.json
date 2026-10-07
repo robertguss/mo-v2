@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "worked": 7,
+  "public": 21,
+  "transitions": 1603,
+  "missing": [
+    "candidate control/operand-slot dumps",
+    "real physical/resume/destroy execution",
+    "independently predicted protected acquisitions",
+    "full-corpus fine-trace projection"
+  ]
+}

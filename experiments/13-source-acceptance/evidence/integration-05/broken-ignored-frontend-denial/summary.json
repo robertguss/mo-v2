@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 15920865280,
+  "stack_bytes": 8388608,
+  "error": "AssertionError: frontend denial must return typed failed outcome",
+  "elapsed_ns": 18960504,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 18132519013908,
+      "end_ns": 18132537232608
+    },
+    {
+      "phase": "check",
+      "start_ns": 18132537232608,
+      "end_ns": 18132537844598
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "runtime-methods": {
+    "exit": 0,
+    "expected_compile": true,
+    "stderr": ""
+  },
+  "observer-import": {
+    "exit": 1,
+    "expected_compile": false,
+    "stderr": "error[E0432]: unresolved import `mo_acceptance_runtime::Observer`\n --> <anon>:1:5\n  |\n1 | use mo_acceptance_runtime::Observer;\n  |     ^^^^^^^^^^^^^^^^^^^^^^^--------\n  |                            |\n  |                            no `Observer` in the root\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0432`.\n"
+  },
+  "fixture-import": {
+    "exit": 1,
+    "expected_compile": false,
+    "stderr": "error[E0432]: unresolved import `mo_acceptance_runtime::fixture`\n --> <anon>:1:5\n  |\n1 | use mo_acceptance_runtime::fixture;\n  |     ^^^^^^^^^^^^^^^^^^^^^^^-------\n  |                            |\n  |                            no `fixture` in the root\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0432`.\n"
+  },
+  "private-constructor": {
+    "exit": 1,
+    "expected_compile": false,
+    "stderr": "error[E0423]: cannot initialize a tuple struct which contains private fields\n --> <anon>:1:63\n  |\n1 | use mo_acceptance_runtime::RuntimeCells; pub fn probe(){let _=RuntimeCells(());}\n  |                                                               ^^^^^^^^^^^^\n  |\nnote: constructor is not visible here due to private fields\n --> lib.rs:26:24\n  |\n  = note: private field\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0423`.\n"
+  },
+  "private-handle": {
+    "exit": 1,
+    "expected_compile": false,
+    "stderr": "error[E0603]: module `abi` is private\n --> <anon>:1:28\n  |\n1 | use mo_acceptance_runtime::abi::Handle;\n  |                            ^^^ private module\n  |\nnote: the module `abi` is defined here\n --> lib.rs:2:0\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0603`.\n"
+  },
+  "event-reader": {
+    "exit": 1,
+    "expected_compile": false,
+    "stderr": "error[E0599]: no method named `events` found for reference `&RuntimeCells` in the current scope\n --> <anon>:1:78\n  |\n1 | use mo_acceptance_runtime::RuntimeCells; pub fn probe(api:&RuntimeCells){api.events();}\n  |                                                                              ^^^^^^ method not found in `&RuntimeCells`\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0599`.\n"
+  },
+  "deny-control": {
+    "exit": 1,
+    "expected_compile": false,
+    "stderr": "error[E0599]: no method named `fail_create` found for reference `&RuntimeCells` in the current scope\n --> <anon>:1:78\n  |\n1 | use mo_acceptance_runtime::RuntimeCells; pub fn probe(api:&RuntimeCells){api.fail_create(1);}\n  |                                                                              ^^^^^^^^^^^\n  |\nhelp: there is a method `create` with a similar name\n  |\n1 - use mo_acceptance_runtime::RuntimeCells; pub fn probe(api:&RuntimeCells){api.fail_create(1);}\n1 + use mo_acceptance_runtime::RuntimeCells; pub fn probe(api:&RuntimeCells){api.create(1);}\n  |\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0599`.\n"
+  }
+}

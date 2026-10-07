@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "corpus": 4276,
+  "refusals": {
+    "duplicate": "cell identities",
+    "bad-count": "holder counts",
+    "dangling": "root dangling",
+    "tail-dangling": "tail dangling",
+    "unreachable": "holder counts",
+    "cycle": "dangling/cycle",
+    "wrong-kind": "input kind",
+    "bad-item": "cell integer"
+  }
+}

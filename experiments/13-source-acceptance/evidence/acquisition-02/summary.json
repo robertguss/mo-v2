@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "worked": 4,
+  "public": 18,
+  "generated": 500,
+  "controls": 4,
+  "missing": [
+    "independent pending-value predictions",
+    "nonterminating acquisition prefixes",
+    "physical candidate execution"
+  ]
+}

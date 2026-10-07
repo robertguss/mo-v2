@@ -1,0 +1,27 @@
+{
+  "births": [
+    {
+      "domain": "binding",
+      "id": 901,
+      "invocation": 0,
+      "origin": "input/0"
+    }
+  ],
+  "cleanup_events": [],
+  "control": {},
+  "event_end": 0,
+  "events": [],
+  "failure": null,
+  "ready": null,
+  "release": {},
+  "state": {
+    "aside": {},
+    "bindings": {},
+    "branch": null,
+    "frames": {},
+    "kind": null,
+    "pending": {}
+  },
+  "status": "suspended",
+  "step": 0
+}

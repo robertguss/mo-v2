@@ -1,0 +1,363 @@
+{
+  "passed": true,
+  "rule": "D144 versioned operand prediction correction",
+  "refusals": 12,
+  "accepts": 11,
+  "observed": [
+    {
+      "source": "main = [] == 1",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ]
+    },
+    {
+      "source": "main = [] < 1",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ]
+    },
+    {
+      "source": "main = [] <= 1",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 == []",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 < []",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          14
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 <= []",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main = false == 1",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          13
+        ]
+      ]
+    },
+    {
+      "source": "main = false < 1",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          13
+        ]
+      ]
+    },
+    {
+      "source": "main = false <= 1",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          13
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 == true",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          17
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 < true",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          16
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 <= true",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          17
+        ]
+      ]
+    },
+    {
+      "source": "main = -7 == 3",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "source": "main = 3 == -7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "source": "main = -7 == -7",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "source": "main = -7 < 3",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "source": "main = 3 < -7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "source": "main = -7 < -7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "source": "main = -7 <= 3",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "source": "main = 3 <= -7",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "source": "main = -7 <= -7",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "source": "main = 340282366920938463463374607431768211463 == 340282366920938463463374607431768211456",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "source": "main = -340282366920938463463374607431768211463 < -340282366920938463463374607431768211456",
+      "expected": true,
+      "actual": true
+    }
+  ]
+}

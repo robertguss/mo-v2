@@ -1,0 +1,11 @@
+{
+  "status": "preparation-reference-defect",
+  "rule": "v5 section 3: first lexical/syntax error in source order",
+  "source": "main = (1 2) @",
+  "independent_expected": {"class": "syntax", "start": [1, 11], "end": [1, 12]},
+  "actual": {"class": "lexical", "start": [1, 14], "end": [1, 15]},
+  "isolated_prefix": "main = (1 2)",
+  "isolated_prefix_actual": {"class": "syntax", "start": [1, 11], "end": [1, 12]},
+  "explanation": "Column 11 is the unexpected second numeral in a parenthesized expression. Appending an invalid character at column 14 makes the eager lexer report the later error instead. No candidate exists; no expected corpus output was changed.",
+  "disposition": "Stop before repairing this semantic reference defect, per the preparation authorization. Confirm proposed error-priority rule; retain this failed preparation evidence."
+}

@@ -1,0 +1,16 @@
+{
+  "start": "2026-10-07T20:57:55+00:00",
+  "measured_through": "2026-10-07T21:36:48+00:00",
+  "resumed_contributor_seconds": 2333,
+  "prior_contributor_seconds": 935,
+  "total_recorded_seconds": 3268,
+  "contributors": 1,
+  "earlier_preparation": "unknown",
+  "excluded_stopped_interval": [
+    "2026-10-07T20:08:19Z",
+    "2026-10-07T20:57:55Z"
+  ],
+  "includes": "work, builds, validation, packaging, publication and tool waits through timestamp",
+  "remaining": "final notification tool latency after timestamp unmeasured; then stopped for parent review",
+  "archive_unchanged": true
+}

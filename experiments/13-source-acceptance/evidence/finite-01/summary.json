@@ -1,0 +1,45 @@
+{
+  "status": "preparation-only",
+  "passed": false,
+  "cases": 15,
+  "snapshots": 189,
+  "corpus_sha256": "d8d33f795b94e8173b6685462e83a277bfeefad5cc2bfee6bee38a8f63554a8b",
+  "missing_coverage": [
+    "Stage B reference/predictions/checks",
+    "physical implementation and every resume/destroy join",
+    "held-out/generated layer",
+    "million-depth execution",
+    "owner-approved detailed rules and scientific lock"
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/validate.py\", line 42, in run\n    assert actual[field] == expected[field], f\"historical mismatch: {field}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: historical mismatch: states\n",
+  "snapshot_kinds": {
+    "start": 15,
+    "holderMoved": 27,
+    "branchChosen": 20,
+    "matchStep4Done": 18,
+    "branchStarts": 20,
+    "newCellBuilt": 15,
+    "branchValueWorkedOut": 20,
+    "branchValueHandedOn": 20,
+    "end": 15,
+    "newHolder": 4,
+    "holderGivenUp": 7,
+    "cellFreed": 7,
+    "nameBound": 1
+  },
+  "reference_landmark_transitions": {
+    "Start": 15,
+    "Leaf": 28,
+    "Choose branch": 20,
+    "Match decompose": 18,
+    "Branch start": 20,
+    "Primitive result": 15,
+    "Branch result/cleanup": 20,
+    "Handoff": 20,
+    "Finish": 15,
+    "Give up holder": 7,
+    "Match complete": 3,
+    "Free cell": 7,
+    "Bind": 1
+  }
+}

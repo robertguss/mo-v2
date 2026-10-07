@@ -1,0 +1,631 @@
+{
+  "passed": true,
+  "proposed": true,
+  "cases": 24,
+  "observed": [
+    {
+      "source": "main = match [] do [] -> 0; [x | x] -> @ end",
+      "stage": "B",
+      "expected": [
+        "lexical",
+        [
+          1,
+          40
+        ],
+        [
+          1,
+          41
+        ]
+      ],
+      "actual": [
+        "lexical",
+        [
+          1,
+          40
+        ],
+        [
+          1,
+          41
+        ]
+      ]
+    },
+    {
+      "source": "main = missing(7)",
+      "stage": "B",
+      "expected": [
+        "unknown-function",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "unknown-function",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "def f(): Int = 7 end main = f()",
+      "stage": "A",
+      "expected": [
+        "stage-unsupported",
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          21
+        ]
+      ],
+      "actual": [
+        "stage-unsupported",
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          21
+        ]
+      ]
+    },
+    {
+      "source": "main = missing(7)",
+      "stage": "A",
+      "expected": [
+        "stage-unsupported",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "actual": [
+        "stage-unsupported",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          18
+        ]
+      ]
+    },
+    {
+      "source": "input xs: ListInt; input xs: Int; main = 1",
+      "stage": "B",
+      "expected": [
+        "duplicate-input",
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          28
+        ]
+      ],
+      "actual": [
+        "duplicate-input",
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          28
+        ]
+      ]
+    },
+    {
+      "source": "input xs: Bool; main = 1",
+      "stage": "B",
+      "expected": [
+        "input-type",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "input-type",
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main = match [] do [] -> 0; [h | h] -> 1 end",
+      "stage": "B",
+      "expected": [
+        "match-binders",
+        [
+          1,
+          34
+        ],
+        [
+          1,
+          35
+        ]
+      ],
+      "actual": [
+        "match-binders",
+        [
+          1,
+          34
+        ],
+        [
+          1,
+          35
+        ]
+      ]
+    },
+    {
+      "source": "main = match 3 do [] -> 0; [h | t] -> 1 end",
+      "stage": "B",
+      "expected": [
+        "scrutinee-kind",
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "scrutinee-kind",
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main = [false]",
+      "stage": "B",
+      "expected": [
+        "head-kind",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "actual": [
+        "head-kind",
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          14
+        ]
+      ]
+    },
+    {
+      "source": "main = [3 | 9]",
+      "stage": "B",
+      "expected": [
+        "tail-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "actual": [
+        "tail-kind",
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ]
+      ]
+    },
+    {
+      "source": "main = [] == 1",
+      "stage": "B",
+      "expected": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "actual": [
+        "operand-kind",
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ]
+      ]
+    },
+    {
+      "source": "main = if true then [] else 7 end",
+      "stage": "B",
+      "expected": [
+        "branch-kind",
+        [
+          1,
+          29
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "actual": [
+        "branch-kind",
+        [
+          1,
+          29
+        ],
+        [
+          1,
+          30
+        ]
+      ]
+    },
+    {
+      "source": "main = let x = x in x",
+      "stage": "B",
+      "expected": [
+        "unbound-variable",
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ]
+      ],
+      "actual": [
+        "unbound-variable",
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ]
+      ]
+    },
+    {
+      "source": "main = if true then 7 else ghost end",
+      "stage": "B",
+      "expected": [
+        "unbound-variable",
+        [
+          1,
+          28
+        ],
+        [
+          1,
+          33
+        ]
+      ],
+      "actual": [
+        "unbound-variable",
+        [
+          1,
+          28
+        ],
+        [
+          1,
+          33
+        ]
+      ]
+    },
+    {
+      "source": "def f(): Int = 7 end def f(): Int = 9 end main = f()",
+      "stage": "B",
+      "expected": [
+        "duplicate-function",
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          27
+        ]
+      ],
+      "actual": [
+        "duplicate-function",
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          27
+        ]
+      ]
+    },
+    {
+      "source": "def f(x: Int, x: Int): Int = x end main = 7",
+      "stage": "B",
+      "expected": [
+        "duplicate-parameter",
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "actual": [
+        "duplicate-parameter",
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ]
+      ]
+    },
+    {
+      "source": "def f(x: Int): Int = x end main = f()",
+      "stage": "B",
+      "expected": [
+        "arity",
+        [
+          1,
+          35
+        ],
+        [
+          1,
+          38
+        ]
+      ],
+      "actual": [
+        "arity",
+        [
+          1,
+          35
+        ],
+        [
+          1,
+          38
+        ]
+      ]
+    },
+    {
+      "source": "def f(x: Int): Int = x end main = f(false)",
+      "stage": "B",
+      "expected": [
+        "argument-kind",
+        [
+          1,
+          37
+        ],
+        [
+          1,
+          42
+        ]
+      ],
+      "actual": [
+        "argument-kind",
+        [
+          1,
+          37
+        ],
+        [
+          1,
+          42
+        ]
+      ]
+    },
+    {
+      "source": "def f(): Int = false end main = 7",
+      "stage": "B",
+      "expected": [
+        "result-kind",
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          21
+        ]
+      ],
+      "actual": [
+        "result-kind",
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          21
+        ]
+      ]
+    },
+    {
+      "source": "input n: Int; def f(): Int = n end main = 7",
+      "stage": "B",
+      "expected": [
+        "unbound-variable",
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "actual": [
+        "unbound-variable",
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          31
+        ]
+      ]
+    },
+    {
+      "source": "def f(): Int = 7 end main = f",
+      "stage": "B",
+      "expected": [
+        "unbound-variable",
+        [
+          1,
+          29
+        ],
+        [
+          1,
+          30
+        ]
+      ],
+      "actual": [
+        "unbound-variable",
+        [
+          1,
+          29
+        ],
+        [
+          1,
+          30
+        ]
+      ]
+    },
+    {
+      "source": "def f(x: Other): Int = 7 end main = 7",
+      "stage": "B",
+      "expected": [
+        "type",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "type",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "def f(): Other = 7 end main = 7",
+      "stage": "B",
+      "expected": [
+        "type",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "actual": [
+        "type",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "source": "main = 1 * 2",
+      "stage": "B",
+      "expected": [
+        "lexical",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "actual": [
+        "lexical",
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ]
+      ]
+    }
+  ]
+}

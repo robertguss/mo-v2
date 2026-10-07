@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "kind": "exploratory-reference-validation-not-heldout",
+  "cases": 500,
+  "seed": 1333,
+  "requested": 500,
+  "snapshots": 22090,
+  "missing": [
+    "fine-grained transitions",
+    "independent pending-value acquisition predictions",
+    "candidate physical/resume/destroy checks"
+  ]
+}

@@ -1,0 +1,2 @@
+    Checking mo-acceptance-runtime v0.0.0 (/tmp/rob1333-public-v13/runtime)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s
