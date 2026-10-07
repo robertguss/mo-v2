@@ -1,0 +1,27 @@
+{
+  "version": 15,
+  "kind": "public documentation-only disclosure correction; parent review required before delivery/resume",
+  "previous_archive": "rob-1333-stage-a-public-v14.tar.gz",
+  "previous_archive_sha256": "3327ee87f52316bec571f91c81b20f556f030614d41a681699a6cdc8f49c94de",
+  "added_file": "BUILDER_STAGE_A_DIAGNOSTICS_V15.md",
+  "added_file_sha256": "c0d44cf9869ad1a1b93dd5b5d74f21ca7ecde5e2a051d8ea585d794d3e8528fa",
+  "existing_content_files_unchanged": 9,
+  "replacement_generated_inventory": "DELIVERY.sha256",
+  "content_files": {
+    "BUILDER_HANDOFF.md": "2c5083decf663c4377890007e0e3cbe4a5186701488ec67d168176a0dbc100d4",
+    "BUILDER_BRIEF.md": "abf61e6bea97f63eeca1680b26b8727fa88eaabac45b68ab524d327f8c998bb9",
+    "BUILDER_AMENDMENT_D154.md": "f16da7973f501af3db33e979c7b218fbf9cf84c924c4070e5c904d2568d39d27",
+    "BUILDER_EXECUTION.md": "e5c3aa641014e0bf34feb4a7f6caa9cb48bea13d33646bf3e0916415a24ff5df",
+    "BUILDER_CHECKED_DUMP_V14.md": "066fe3dc768304c7ebb0cdd2c43a1b507792c33dcec54a71703e3ddc34083768",
+    "runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+    "runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+    "runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020",
+    "runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+    "BUILDER_STAGE_A_DIAGNOSTICS_V15.md": "c0d44cf9869ad1a1b93dd5b5d74f21ca7ecde5e2a051d8ea585d794d3e8528fa"
+  },
+  "archive": "rob-1333-stage-a-public-v15.tar.gz",
+  "archive_sha256": "fa7969d102fb1607b81059522307982e5aa180ed509bbb4fc9ad3d588070a898",
+  "archive_bytes": 21271,
+  "member_count": 11,
+  "builder_material": "ten public documents/runtime files plus generated manifest only; no acceptance implementation or case predictions"
+}
