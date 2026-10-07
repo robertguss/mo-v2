@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 15924396032,
+  "stack_bytes": 8388608,
+  "exit_code": 0,
+  "peak_rss_kib": 298068,
+  "committed_steps": 0,
+  "advances": 0,
+  "destroy_calls": 0,
+  "events_by_phase": {
+    "frontend": 0,
+    "invalid-fixture": 0
+  },
+  "resource_attempts": {
+    "number": 1
+  },
+  "elapsed_ns": 13504849,
+  "start_ns": 18132491554451,
+  "stop_ns": 18132505059300,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 18132491554451,
+      "end_ns": 18132504313712
+    },
+    {
+      "phase": "check",
+      "start_ns": 18132504313712,
+      "end_ns": 18132504815414
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 18132504815414,
+      "end_ns": 18132504889923
+    },
+    {
+      "phase": "invalid-fixture",
+      "start_ns": 18132504889923,
+      "end_ns": 18132505059300
+    }
+  ]
+}

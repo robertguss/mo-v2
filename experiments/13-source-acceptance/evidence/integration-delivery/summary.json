@@ -1,0 +1,20 @@
+{
+  "archive": "/home/user/workspace/repo/.amp/in/artifacts/rob-1333-stage-a-public-v13.tar.gz",
+  "size": 18017,
+  "sha256": "80343fc7be0171f1ed133de786ea10f1b25e5dca70ebff24fe5defa54712ea2d",
+  "paths": [
+    "BUILDER_HANDOFF.md",
+    "BUILDER_BRIEF.md",
+    "BUILDER_AMENDMENT_D154.md",
+    "BUILDER_EXECUTION.md",
+    "runtime/Cargo.toml",
+    "runtime/Cargo.lock",
+    "runtime/lib.rs",
+    "runtime/abi.rs"
+  ],
+  "manifest": "172a7501b18a1f1bec791c7878c7b4194bbf5a98dea4b53ce76ac94cf61fa2e9  BUILDER_HANDOFF.md\nabf61e6bea97f63eeca1680b26b8727fa88eaabac45b68ab524d327f8c998bb9  BUILDER_BRIEF.md\nf16da7973f501af3db33e979c7b218fbf9cf84c924c4070e5c904d2568d39d27  BUILDER_AMENDMENT_D154.md\ne5c3aa641014e0bf34feb4a7f6caa9cb48bea13d33646bf3e0916415a24ff5df  BUILDER_EXECUTION.md\n69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86  runtime/Cargo.toml\n1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee  runtime/Cargo.lock\n0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020  runtime/lib.rs\n985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec  runtime/abi.rs\n",
+  "clean_compile": true,
+  "api_probes_passed": 7,
+  "technical_tool_isolation": false,
+  "dispatched": false
+}

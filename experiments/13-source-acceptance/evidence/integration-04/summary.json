@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "linked_stub_runs": 22,
+  "controls": {
+    "call-site": "call metadata differs",
+    "return-value": "call metadata differs",
+    "abort-order": "failure abort stack",
+    "birth-origin": "birth origin/domain/order",
+    "identity-rebirth": "identity rebirth",
+    "duplicate-JSON": "duplicate JSON key",
+    "compiled-stub/counter": "linked process abnormal termination",
+    "compiled-stub/shadow-state": "full committed execution/physical state",
+    "compiled-stub/leak": "destroy outside graph/counts",
+    "physical-content": "full committed execution/physical state",
+    "physical-pointer": "physical graph/event continuity",
+    "candidate-external-field": "schema fields",
+    "Boolean-step": "unsigned integer kind/range",
+    "event-omission": "native cursor length",
+    "clock-reset": "phase clock went backwards",
+    "missing-binding": "full committed execution/physical state",
+    "missing-control": "full committed execution/physical state",
+    "missing-pending": "full committed execution/physical state",
+    "outside-order": "host external roots",
+    "cleanup-clock-cap": "inclusive watchdog",
+    "clock-gap": "phase clock gap/reset",
+    "actual-watchdog": "inclusive watchdog killed only its owned stub process"
+  },
+  "reference_regressions": 545,
+  "candidate_executed": false,
+  "large_schedule_stub": true
+}

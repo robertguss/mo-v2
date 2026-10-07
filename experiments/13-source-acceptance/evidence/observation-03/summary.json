@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "valid": 1,
+  "controls": {
+    "pending": "pending value mutation",
+    "action": "committed state/action/event prefix",
+    "physical": "physical continuity",
+    "resume": "resume replaced live identity"
+  }
+}

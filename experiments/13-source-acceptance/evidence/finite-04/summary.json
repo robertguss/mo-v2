@@ -1,0 +1,44 @@
+{
+  "status": "preparation-only",
+  "passed": true,
+  "cases": 4276,
+  "snapshots": 27721,
+  "corpus_sha256": "d8d33f795b94e8173b6685462e83a277bfeefad5cc2bfee6bee38a8f63554a8b",
+  "missing_coverage": [
+    "Stage B reference/predictions/checks",
+    "physical implementation and every resume/destroy join",
+    "held-out/generated layer",
+    "million-depth execution",
+    "owner-approved detailed rules and scientific lock"
+  ],
+  "snapshot_kinds": {
+    "start": 4276,
+    "holderMoved": 1213,
+    "branchChosen": 1795,
+    "matchStep4Done": 272,
+    "branchStarts": 1795,
+    "newCellBuilt": 393,
+    "branchValueWorkedOut": 637,
+    "branchValueHandedOn": 637,
+    "end": 4276,
+    "newHolder": 23,
+    "holderGivenUp": 7078,
+    "cellFreed": 5269,
+    "nameBound": 57
+  },
+  "reference_landmark_transitions": {
+    "Start": 4276,
+    "Leaf": 1215,
+    "Choose branch": 1795,
+    "Match decompose": 259,
+    "Branch start": 1795,
+    "Primitive result": 393,
+    "Branch result/cleanup": 637,
+    "Handoff": 637,
+    "Finish": 4276,
+    "Give up holder": 7078,
+    "Match complete": 34,
+    "Free cell": 5269,
+    "Bind": 57
+  }
+}

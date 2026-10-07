@@ -1,0 +1,17 @@
+   Compiling acceptance-cells v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/cells)
+   Compiling mo-acceptance-driver v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/driver)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.84s
+     Running unittests lib.rs (/tmp/rob1333integration/debug/deps/mo_acceptance_driver-7dd5f874b5b1dc09)
+
+running 2 tests
+test tests::large_schedule_and_execution_cap_have_exact_boundaries ... ok
+test tests::pre_run_outputs_are_distinct_and_exact_without_a_run ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests mo_acceptance_driver
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

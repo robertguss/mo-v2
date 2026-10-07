@@ -1,0 +1,13 @@
+{
+  "resumed_start": "2026-10-07T20:57:55+00:00",
+  "packaging_checkpoint": "2026-10-07T21:33:44+00:00",
+  "resumed_seconds": 2149,
+  "prior_recorded_seconds": 935,
+  "earlier_preparation": "unknown",
+  "contributors": 1,
+  "publication_still_active": true,
+  "excluded_stopped_interval": [
+    "2026-10-07T20:08:19Z",
+    "2026-10-07T20:57:55Z"
+  ]
+}

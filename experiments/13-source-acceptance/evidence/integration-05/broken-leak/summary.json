@@ -1,0 +1,56 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 15916220416,
+  "stack_bytes": 8388608,
+  "error": "AssertionError: destroy outside graph/counts",
+  "elapsed_ns": 19379799,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 18132598976489,
+      "end_ns": 18132615793258
+    },
+    {
+      "phase": "check",
+      "start_ns": 18132615793258,
+      "end_ns": 18132616383955
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 18132616383955,
+      "end_ns": 18132616465004
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 18132616465004,
+      "end_ns": 18132616736936
+    },
+    {
+      "phase": "begin",
+      "start_ns": 18132616736936,
+      "end_ns": 18132617101239
+    },
+    {
+      "phase": "commit",
+      "start_ns": 18132617101239,
+      "end_ns": 18132617344725
+    },
+    {
+      "phase": "commit",
+      "start_ns": 18132617344725,
+      "end_ns": 18132617681776
+    },
+    {
+      "phase": "commit",
+      "start_ns": 18132617681776,
+      "end_ns": 18132617929961
+    },
+    {
+      "phase": "advance",
+      "start_ns": 18132617929961,
+      "end_ns": 18132618192965
+    }
+  ]
+}

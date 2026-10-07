@@ -1,0 +1,26 @@
+   Compiling mo-acceptance-runtime v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/runtime)
+   Compiling acceptance-cells v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/cells)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.97s
+     Running unittests lib.rs (/tmp/rob1333integration/debug/deps/acceptance_cells-b7fd4208dcd76708)
+
+running 11 tests
+test host::tests::dangling_cycles_counts_and_unreachable_are_rejected_before_commit ... ok
+test host::tests::same_store_gate_install_read_and_drop_order ... ok
+test tests::actual_detachment_is_visible_without_counting_a_rebuild ... ok
+test host::tests::rejected_fixture_rolls_back_allocations_ids_events_and_resource_prefix ... ok
+test tests::freeing_run_owned_cell_does_not_free_outside_cell ... ok
+test tests::numeric_frame_gates_are_independent_and_deny_before_allocation ... ok
+test tests::actual_rebuild_preserves_live_object_and_records_real_contents ... ok
+test tests::denied_creation_leaves_graph_and_primitive_prefix_unchanged ... ok
+test tests::compiled_replacement_control_fails_pointer_continuity - should panic ... ok
+test tests::retired_lifetime_never_reused_even_if_allocator_recycles_address ... ok
+test host::tests::runtime_survives_observer_drop_and_frontend_reads_are_detected ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests acceptance_cells
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "valid": 1,
+  "controls": {
+    "pending": "pending value mutation",
+    "action": "committed state/action/event prefix",
+    "physical": "ordered events/call identities",
+    "resume": "ordered events/call identities"
+  },
+  "error": "Traceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/observationcheck.py\", line 72, in run\n    assert report[\"controls\"] == dict(pending=\"pending value mutation\", action=\"committed state/action/event prefix\",\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

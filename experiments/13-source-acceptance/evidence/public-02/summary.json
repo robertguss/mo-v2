@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "source_accept": 16,
+  "source_refuse": 10,
+  "public_cases": 0,
+  "controls": {},
+  "missing": [
+    "all fine-grained expected transition traces",
+    "real candidate/physical/allocator instrumentation",
+    "all resume/destroy boundaries",
+    "private heldouts/generated corpus",
+    "complete exact refusal set",
+    "scientific lock"
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/selfcheck.py\", line 78, in validate\n    try: check(parse(source))\n               ^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 173, in parse\n    return Parser(source).program()\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 98, in program\n    self.take(\"main\"); self.take(\"=\"); main = self.expr(); self.take(\"EOF\")\n                                              ^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 110, in expr\n    self.take(\"else\"); no = self.expr(); self.take(\"end\")\n                                         ^^^^^^^^^^^^^^^^\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/syntax.py\", line 58, in take\n    raise Refusal(\"syntax\", tok.start, tok.end)\nsyntax.Refusal: syntax@28:28\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/user/workspace/repo/experiments/13-source-acceptance/selfcheck.py\", line 80, in validate\n    assert (error.kind, position(source, error.start), position(source, error.end)) == (kind, start, end)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

@@ -1,0 +1,224 @@
+[
+  {
+    "node": "Program",
+    "inputs": [],
+    "functions": [],
+    "main": {
+      "node": "Bool",
+      "path": "main",
+      "type": "Bool",
+      "value": true
+    }
+  },
+  {
+    "node": "Program",
+    "inputs": [],
+    "functions": [],
+    "main": {
+      "node": "Bool",
+      "path": "main",
+      "type": "Bool",
+      "value": false
+    }
+  },
+  {
+    "node": "Program",
+    "inputs": [],
+    "functions": [],
+    "main": {
+      "node": "Let",
+      "path": "main",
+      "name": "n",
+      "binding": "main/binding",
+      "children": [
+        {
+          "node": "Int",
+          "path": "main/0",
+          "type": "Int",
+          "value": "5"
+        },
+        {
+          "node": "Let",
+          "path": "main/1",
+          "name": "n",
+          "binding": "main/1/binding",
+          "children": [
+            {
+              "node": "Sub",
+              "path": "main/1/0",
+              "children": [
+                {
+                  "node": "Var",
+                  "path": "main/1/0/0",
+                  "name": "n",
+                  "binding": "main/binding",
+                  "type": "Int"
+                },
+                {
+                  "node": "Int",
+                  "path": "main/1/0/1",
+                  "type": "Int",
+                  "value": "2"
+                }
+              ],
+              "type": "Int"
+            },
+            {
+              "node": "Var",
+              "path": "main/1/1",
+              "name": "n",
+              "binding": "main/1/binding",
+              "type": "Int"
+            }
+          ],
+          "type": "Int"
+        }
+      ],
+      "type": "Int"
+    }
+  },
+  {
+    "node": "Program",
+    "inputs": [],
+    "functions": [
+      {
+        "name": "f",
+        "function": "function/0",
+        "parameters": [
+          {
+            "name": "f",
+            "type": "Int",
+            "binding": "function/0/parameter/0"
+          }
+        ],
+        "result": "Int",
+        "body": {
+          "node": "Add",
+          "path": "function/0/body",
+          "children": [
+            {
+              "node": "Var",
+              "path": "function/0/body/0",
+              "name": "f",
+              "binding": "function/0/parameter/0",
+              "type": "Int"
+            },
+            {
+              "node": "Int",
+              "path": "function/0/body/1",
+              "type": "Int",
+              "value": "2"
+            }
+          ],
+          "type": "Int"
+        }
+      }
+    ],
+    "main": {
+      "node": "Call",
+      "path": "main",
+      "name": "f",
+      "function": "function/0",
+      "type": "Int",
+      "children": [
+        {
+          "node": "Int",
+          "path": "main/0",
+          "type": "Int",
+          "value": "9"
+        }
+      ]
+    }
+  },
+  {
+    "node": "Program",
+    "inputs": [],
+    "functions": [
+      {
+        "name": "f",
+        "function": "function/0",
+        "parameters": [],
+        "result": "Bool",
+        "body": {
+          "node": "Call",
+          "path": "function/0/body",
+          "name": "g",
+          "function": "function/1",
+          "type": "Bool",
+          "children": []
+        }
+      },
+      {
+        "name": "g",
+        "function": "function/1",
+        "parameters": [],
+        "result": "Bool",
+        "body": {
+          "node": "Bool",
+          "path": "function/1/body",
+          "type": "Bool",
+          "value": true
+        }
+      }
+    ],
+    "main": {
+      "node": "Call",
+      "path": "main",
+      "name": "f",
+      "function": "function/0",
+      "type": "Bool",
+      "children": []
+    }
+  },
+  {
+    "node": "Program",
+    "inputs": [],
+    "functions": [],
+    "main": {
+      "node": "Match",
+      "path": "main",
+      "head": {
+        "name": "h",
+        "binding": "main/head"
+      },
+      "tail": {
+        "name": "t",
+        "binding": "main/tail"
+      },
+      "children": [
+        {
+          "node": "Cons",
+          "path": "main/0",
+          "children": [
+            {
+              "node": "Int",
+              "path": "main/0/0",
+              "type": "Int",
+              "value": "7"
+            },
+            {
+              "node": "Nil",
+              "path": "main/0/1",
+              "type": "ListInt"
+            }
+          ],
+          "type": "ListInt"
+        },
+        {
+          "node": "Int",
+          "path": "main/1",
+          "type": "Int",
+          "value": "0"
+        },
+        {
+          "node": "Var",
+          "path": "main/2",
+          "name": "h",
+          "binding": "main/head",
+          "type": "Int"
+        }
+      ],
+      "type": "Int"
+    }
+  }
+]

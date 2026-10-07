@@ -1,0 +1,23 @@
+{
+  "kind": "unresolved-proposed-diagnostic-boundary-not-accepted-expectation",
+  "source_hex": "6d61696e203d20283120322920ff",
+  "valid_prefix": "main = (1 2) ",
+  "independent_alternatives": {
+    "encoding_is_in_earliest_source_error_order": {
+      "class": "syntax",
+      "start_line_column": [1, 11],
+      "end_line_column": [1, 12],
+      "reason": "Second numeral is not an operator or closing parenthesis; it precedes the invalid byte."
+    },
+    "whole_file_encoding_is_a_prerequisite": {
+      "class": "encoding",
+      "zero_based_half_open_bytes": [13, 14],
+      "reason": "0xff cannot occur in valid UTF-8; decoding the complete source fails before parsing."
+    }
+  },
+  "inspection": {
+    "strict_python_utf8_decode_error_bytes": [13, 14],
+    "reference_parsing_valid_prefix_error_character_offsets": [10, 11]
+  },
+  "limitation": "Prefix parsing and strict decoding were inspected separately. No combined source-check policy, candidate, acceptance expectation or lock was implemented."
+}

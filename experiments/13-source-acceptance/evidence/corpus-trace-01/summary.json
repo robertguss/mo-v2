@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cases": 4276,
+  "snapshots": 27721,
+  "transitions": 53796,
+  "corpus_sha256": "d8d33f795b94e8173b6685462e83a277bfeefad5cc2bfee6bee38a8f63554a8b",
+  "missing": [
+    "candidate/physical instrumentation",
+    "full control/operand-slot state",
+    "independent acquisition-value predictions"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 15919267840,
+  "stack_bytes": 8388608,
+  "exit_code": 1,
+  "peak_rss_kib": 297656,
+  "error": "AssertionError: linked process abnormal termination",
+  "elapsed_ns": 12263281,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 17560510788580,
+      "end_ns": 17560521709037
+    },
+    {
+      "phase": "check",
+      "start_ns": 17560521709037,
+      "end_ns": 17560522239110
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 17560522239110,
+      "end_ns": 17560522346682
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 17560522346682,
+      "end_ns": 17560522498688
+    }
+  ]
+}

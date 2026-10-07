@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "domains": 2,
+  "controls": {
+    "number/partial-effect": "fault changed last committed state/events",
+    "number/suspended": "fault classification/step",
+    "number/skipped-hook": "fault denied attempt",
+    "number/wrong-ordinal": "fault ordinal sequence",
+    "number/late-failure": "fault classification/step",
+    "frame/partial-effect": "fault changed last committed state/events",
+    "frame/suspended": "fault classification/step",
+    "frame/skipped-hook": "fault denied attempt",
+    "frame/wrong-ordinal": "fault ordinal sequence",
+    "frame/late-failure": "fault classification/step"
+  },
+  "candidate_executed": false
+}

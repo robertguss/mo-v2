@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "kind": "freeze inventory/publication verification; no new scientific campaign",
+  "lock": "STAGE_A_LOCK.json",
+  "lock_sha256": "09c64493ba65f94451dc17c5bde7c4b54554d6990b23b8c877f2f9741f120c9e",
+  "frozen_file_hashes_checked": 496,
+  "historical_dependency_hashes_checked": 5,
+  "v13_manifest_hashes_checked_in_preserved_archive": 489,
+  "current_v13_difference": "only reviewed v14 BUILDER_HANDOFF.md replacement; v14 table added",
+  "executable_changes_since_review": false,
+  "preserved_archive_hashes_checked": 4,
+  "public_archive_regular_members": 10,
+  "public_content_hashes_checked": 9,
+  "public_archive_sha256": "3327ee87f52316bec571f91c81b20f556f030614d41a681699a6cdc8f49c94de",
+  "private_corpus_fingerprint_checked": true,
+  "private_corpus_contents_published": false,
+  "publication_audit": {
+    "frozen_files_checked": 496,
+    "compressed_evidence_decompressed_for_inspection": true,
+    "private_seed_matches": 0,
+    "fixed_private_source_matches": 0,
+    "private_case_or_seed_files": 0,
+    "credential_pattern_matches": 0,
+    "symlinks": 0,
+    "build_cache_paths": 0,
+    "unrelated_paths": 0,
+    "scope": "allowlisted bytes; seed and fixed private sources compared without disclosure; common private-key/token patterns checked, not a general secrecy proof"
+  },
+  "index": {
+    "exact_named_paths_checked_before_this_report": 497,
+    "every_indexed_blob_equals_frozen_local_bytes": true,
+    "this_report_added_separately": true
+  },
+  "effort": {
+    "start": "2026-10-07T21:45:30+00:00",
+    "measured_through": "2026-10-07T21:51:06+00:00",
+    "contributors": 1,
+    "elapsed_seconds": 336,
+    "prior_recorded_seconds": 3432,
+    "total_recorded_seconds": 3768,
+    "includes": "work/tool waits through timestamp; no stopped interval in this freeze turn",
+    "earlier_preparation": "unknown",
+    "remaining": "commit/push/reporting after this timestamp to be reported separately"
+  },
+  "candidate_acceptance_executed": false,
+  "builder_context_verified": false,
+  "remaining": "parent dispatch/context and recorded-access checks; candidate-dependent acceptance; separate Stage B/large-adapter preparation and authorization"
+}

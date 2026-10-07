@@ -1,0 +1,46 @@
+{
+  "source": "input xs: ListInt; main = xs",
+  "cells": [
+    [
+      9,
+      "37",
+      2,
+      2,
+      "live"
+    ],
+    [
+      2,
+      "-4",
+      null,
+      2,
+      "live"
+    ]
+  ],
+  "inputs": [
+    [
+      "xs",
+      [
+        "l",
+        9
+      ]
+    ]
+  ],
+  "outside_variants": [
+    [
+      9,
+      2
+    ],
+    [
+      2,
+      9
+    ]
+  ],
+  "fixtures_valid": 2,
+  "reference_outside_preserved": 2,
+  "historical_corpus": {
+    "cases": 4276,
+    "outside_only_cells_cases": 0,
+    "multiple_outside_roots_cases": 0
+  },
+  "conclusion": "Both valid fixtures pass identical inputs and runtime-readable contents to begin, but require different ordered state.outside. No API repair applied."
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "native_stub": 1,
+  "controls": {
+    "shadow": "reported/actual physical graph",
+    "intermediate-replacement": "physical graph/event continuity",
+    "rebirth": "identity rebirth",
+    "alias": "aliased normalization"
+  },
+  "candidate_executed": false
+}

@@ -1,0 +1,10 @@
+{
+  "start": "2026-10-07T21:40:01+00:00",
+  "measured_through": "2026-10-07T21:42:45+00:00",
+  "contributor_seconds": 164,
+  "prior_recorded_seconds": 3268,
+  "total_recorded_seconds": 3432,
+  "earlier_preparation": "unknown",
+  "stopped_interval_excluded": true,
+  "remaining": "final notification latency unmeasured; then stopped for parent review"
+}

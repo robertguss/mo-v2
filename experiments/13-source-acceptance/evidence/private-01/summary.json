@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cases": 500,
+  "private": true,
+  "frozen": false,
+  "missing": [
+    "candidate physical equality",
+    "actual resumed/destroyed executions",
+    "owner approval"
+  ],
+  "cases_sha256": "d8084068c880a3a2764c42ecf0e15b7f493faad963adba9ff32fd2f7fb2dc41b"
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "heldouts": 24,
+  "generated": 500,
+  "families": {
+    "nested": 3,
+    "arguments": 3,
+    "shadow": 3,
+    "shared-head": 3,
+    "shared-tail": 3,
+    "returned-temporary": 3,
+    "reservation": 3,
+    "mutual": 3
+  },
+  "max_depth": 5,
+  "max_functions": 3,
+  "max_arity": 2,
+  "candidate_executed": false,
+  "frozen": false,
+  "cases_sha256": "0f176c60d30d30fffd4d7fb25d982cd3517d1a847840027ad3e99f9c572f41f0"
+}

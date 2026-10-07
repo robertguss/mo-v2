@@ -1,0 +1,2 @@
+   Compiling mo-acceptance-runtime v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/runtime)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.09s

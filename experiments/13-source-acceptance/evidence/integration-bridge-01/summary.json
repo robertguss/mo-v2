@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "native_stub": 1,
+  "controls": {
+    "Boolean-step": "committed state/action/event prefix",
+    "shadow": "reported/actual physical graph",
+    "intermediate-replacement": "physical graph/event continuity",
+    "rebirth": "identity rebirth",
+    "alias": "aliased normalization",
+    "wrong-checked-scope": "checked structure/resolution"
+  },
+  "candidate_executed": false
+}
