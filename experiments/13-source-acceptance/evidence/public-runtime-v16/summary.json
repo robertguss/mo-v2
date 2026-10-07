@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "review_only": true,
+  "status": "normative method supplement ready for parent review; builder remains paused",
+  "addendum": "BUILDER_RUNTIME_METHODS_V16.md",
+  "addendum_sha256": "e0e866953b4fbf3af4f5af6f238c7663902b70a4ca4f7976d1d39ad9c0221938",
+  "validation_method": "direct inspection of frozen native methods/linkage and public ownership/execution/failure contracts; fingerprint and archive-member verification only; no new test/case campaign or candidate inspection",
+  "new_policy_or_contradiction_found": false,
+  "scientific_lock_unchanged_sha256": "09c64493ba65f94451dc17c5bde7c4b54554d6990b23b8c877f2f9741f120c9e",
+  "frozen_file_hashes_match": 496,
+  "historical_dependency_hashes_match": 5,
+  "previous_archives_unchanged": 5,
+  "previous_public_content_files_unchanged": 10,
+  "method_contracts_inspected": [
+    "allocate",
+    "read",
+    "create",
+    "write",
+    "detach",
+    "metadata",
+    "free"
+  ],
+  "review_source_map": {
+    "operation effects/errors": [
+      "cells/lib.rs:83-174",
+      "cells/linkage.rs",
+      "runtime/lib.rs:35-65"
+    ],
+    "event versus bookkeeping journal": [
+      "cells/lib.rs:43-55"
+    ],
+    "same-allocation updates/identity and attempts": [
+      "cells/lib.rs:108-174"
+    ],
+    "closure denial/reentrancy/nested Result": [
+      "runtime/lib.rs:36-46",
+      "cells/linkage.rs",
+      "cells/lib.rs:83-106"
+    ],
+    "required Number routing and multi-operation atomicity": [
+      "BUILDER_BRIEF.md:280-301",
+      "BUILDER_HANDOFF.md"
+    ],
+    "ownership/reservations/separate cleanup and committed failure": [
+      "BUILDER_EXECUTION.md",
+      "BUILDER_AMENDMENT_D154.md"
+    ],
+    "failure preservation cross-check": [
+      "faultcheck.py:13-25"
+    ]
+  },
+  "limits": "Native methods are not an ownership validator or multi-operation transaction. Public explanation does not supply a candidate algorithm, relax evaluator invariants or promise arbitrary host OOM recovery. No tests rerun; this is documentation validation, not new runtime or candidate evidence.",
+  "public_update_sha256": "d9c2323a5203bbaa6e0b0bb6c2ede3dbfe6e164536911a12f8811f8731b1bbda",
+  "private_files_opened_or_transferred": false,
+  "candidate_inspected": false,
+  "effort": {
+    "start": "2026-10-07T22:17:23+00:00",
+    "measured_through": "2026-10-07T22:20:42+00:00",
+    "contributors": 1,
+    "elapsed_seconds": 199,
+    "prior_recorded_seconds": 4043,
+    "total_recorded_seconds": 4242,
+    "earlier_preparation": "unknown",
+    "stopped_period_excluded": true,
+    "remaining": "final notification latency unmeasured; stop for parent review"
+  }
+}
