@@ -1,0 +1,427 @@
+{
+  "rule": "Only nine explicit non-private candidate-run roots; no symlinks followed.",
+  "private": {
+    "regular_files": 2098,
+    "regular_file_bytes": 2202741,
+    "manifest_sha256": "5baa77cee600f7bceebbce265ca1e414a5800b8135e1cd4d64e620e75a728a63",
+    "private_contents_or_seeds_read": false,
+    "archive_members_from_private_tree": 0,
+    "shared_inodes_with_included_files": 0
+  },
+  "private_scope": "524 refusals, not private execution coverage",
+  "symlinks": [
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-01/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-01/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-01/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-02/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-02/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-02/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-03/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-03/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-03/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-04/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-04/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-04/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-05/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-05/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-05/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-06/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-06/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-06/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-07/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-07/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-07/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08/cells",
+      "kind": "symlink",
+      "original_target": "../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08/controls/cells",
+      "kind": "symlink",
+      "original_target": "../../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08/controls/driver",
+      "kind": "symlink",
+      "original_target": "../../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08/controls/runtime",
+      "kind": "symlink",
+      "original_target": "../../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08/driver",
+      "kind": "symlink",
+      "original_target": "../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08/runtime",
+      "kind": "symlink",
+      "original_target": "../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/controls/cells",
+      "kind": "symlink",
+      "original_target": "../../../cells",
+      "frozen_target": "experiments/13-source-acceptance/cells",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+        "experiments/13-source-acceptance/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+        "experiments/13-source-acceptance/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+        "experiments/13-source-acceptance/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+        "experiments/13-source-acceptance/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+        "experiments/13-source-acceptance/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/controls/driver",
+      "kind": "symlink",
+      "original_target": "../../../driver",
+      "frozen_target": "experiments/13-source-acceptance/driver",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+        "experiments/13-source-acceptance/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+        "experiments/13-source-acceptance/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+        "experiments/13-source-acceptance/driver/lib.rs": "8f44b4e1f297ce0fe092c45c6e971a682eb0ab3e6edac31cdc8b12695550bb7d"
+      },
+      "unneeded_target_build_cache_directories": []
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/controls/runtime",
+      "kind": "symlink",
+      "original_target": "../../../runtime",
+      "frozen_target": "experiments/13-source-acceptance/runtime",
+      "frozen_target_files": {
+        "experiments/13-source-acceptance/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+        "experiments/13-source-acceptance/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+        "experiments/13-source-acceptance/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+        "experiments/13-source-acceptance/runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+      },
+      "unneeded_target_build_cache_directories": []
+    }
+  ],
+  "omitted_build_cache_directories": [],
+  "all_regular_files_in_source_roots_included": true,
+  "aggregate_private_counts_in_existing_reports_retained": true
+}
