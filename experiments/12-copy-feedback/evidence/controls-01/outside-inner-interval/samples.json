@@ -1,0 +1,54 @@
+[
+  {
+    "case": 0,
+    "input": [],
+    "sample": {
+      "instrumented": true,
+      "calibration": {
+        "one_calls": 1,
+        "one_bytes": 32,
+        "two_calls": 2,
+        "two_bytes": 64,
+        "restored": true
+      },
+      "ns": 125,
+      "calls": 0,
+      "requested": 0,
+      "live_start": 8868,
+      "live_end": 8868,
+      "peak_live": 8868,
+      "cleanup_ok": true,
+      "result": [],
+      "original": null
+    },
+    "failure": null
+  },
+  {
+    "case": 1,
+    "input": [
+      -1000004
+    ],
+    "sample": {
+      "instrumented": true,
+      "calibration": {
+        "one_calls": 1,
+        "one_bytes": 32,
+        "two_calls": 2,
+        "two_bytes": 64,
+        "restored": true
+      },
+      "ns": 417,
+      "calls": 1,
+      "requested": 32,
+      "live_start": 8972,
+      "live_end": 8972,
+      "peak_live": 9004,
+      "cleanup_ok": true,
+      "result": [
+        -1000003
+      ],
+      "original": null
+    },
+    "failure": "allocation_budget"
+  }
+]

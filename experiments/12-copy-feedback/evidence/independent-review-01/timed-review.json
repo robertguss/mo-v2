@@ -1,0 +1,56 @@
+[
+  {
+    "task": "U1",
+    "allocation_cases": 20,
+    "timing_samples": 10,
+    "feedback_matches": true,
+    "median_ns": 2713312.5,
+    "min_ns": 2567833,
+    "max_ns": 5329417
+  },
+  {
+    "task": "U2",
+    "allocation_cases": 20,
+    "timing_samples": 10,
+    "feedback_matches": true,
+    "median_ns": 2811000.0,
+    "min_ns": 2614750,
+    "max_ns": 3010791
+  },
+  {
+    "task": "R1",
+    "allocation_cases": 20,
+    "timing_samples": 10,
+    "feedback_matches": true,
+    "median_ns": 1547562.5,
+    "min_ns": 1435084,
+    "max_ns": 2328833
+  },
+  {
+    "task": "R2",
+    "allocation_cases": 20,
+    "timing_samples": 10,
+    "feedback_matches": true,
+    "median_ns": 1534833.0,
+    "min_ns": 1439375,
+    "max_ns": 2539417
+  },
+  {
+    "task": "H1",
+    "allocation_cases": 20,
+    "timing_samples": 10,
+    "feedback_matches": true,
+    "median_ns": 812.5,
+    "min_ns": 125,
+    "max_ns": 1959
+  },
+  {
+    "task": "H2",
+    "allocation_cases": 20,
+    "timing_samples": 10,
+    "feedback_matches": true,
+    "median_ns": 479.0,
+    "min_ns": 292,
+    "max_ns": 1833
+  }
+]

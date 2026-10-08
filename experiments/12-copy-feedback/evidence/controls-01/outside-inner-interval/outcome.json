@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "task": "U1",
+  "baseline": false,
+  "controlled_helper": false,
+  "source_sha256": "c880b7e831f2a8efd645a1067f8a69f590a83703a507ef47b6c86128ae8f0741",
+  "helper_sha256": "6a700842e502c576037ace183c7376f6ce86252dce8258329739b3902b618d05",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)\nbinary: rustc\ncommit-hash: b940084d7eb6a299eb4bfeb8e34901bc051e7ac4\ncommit-date: 2026-09-28\nhost: aarch64-apple-darwin\nrelease: 1.99.0\nLLVM version: 23.1.2\n",
+  "error": "allocation_budget at case 1"
+}
