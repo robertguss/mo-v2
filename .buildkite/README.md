@@ -5,10 +5,17 @@ and none should be added.
 
 | File | What it is |
 | --- | --- |
-| `bootstrap.yml` | A record of the YAML to paste into Pipeline Settings → Steps in the Buildkite UI. Buildkite does not read it from the repository. |
-| `pipeline.yml` | The pipeline the bootstrap step uploads: two parallel steps. |
+| `pipeline.yml` | The pipeline the UI step uploads: two parallel steps. |
 | `checks.sh` | Runs one group of checks, `rust` or `lean`. |
 | `toolchains.sh` | Installs the pinned Rust and Lean toolchains. Sourced by `checks.sh`. |
+| `coverage.txt` | Every experiment, named `checked` or `excluded`, with a reason. Enforced. |
+
+The whole of the Buildkite UI's Steps setting is:
+
+```yaml
+steps:
+  - command: buildkite-agent pipeline upload
+```
 
 ## What CI is for here
 
@@ -59,9 +66,9 @@ theorems depends on (`ACCEPTANCE.md` check 6 asks a reader to judge those).
 `checks.sh` refuses only `sorryAx`, which that check names as meaning not
 accepted; it does not try to score the axiom list itself.
 
-A branch is checked against the experiments it actually carries. A branch that
-forked before an experiment landed skips it, loudly, with a line in the wall
-clock summary; it does not fail and it does not pass over the gap quietly.
+A branch is checked against the experiments it actually carries. A branch cut
+before an experiment landed skips it, loudly, with a line in the wall clock
+summary; it does not fail and it does not pass over the gap quietly.
 
 Both steps were shown to go red on deliberately broken copies, as `CLAUDE.md`'s
 lock pattern asks: experiment 11's "saturate instead of wrap" control, a
@@ -70,8 +77,37 @@ lock pattern asks: experiment 11's "saturate instead of wrap" control, a
 `results/run-1.txt`. Each was planted in a disposable copy outside the
 repository.
 
-## What is deliberately left out
+## Every experiment is decided about
 
+`coverage.txt` names every directory under `experiments/` as `checked` or
+`excluded`, with a reason. `checks.sh` reads it during preflight and **fails**
+when `experiments/` holds a directory the file does not mention. A new
+experiment therefore turns CI red until someone records which it is, rather
+than being quietly ignored.
+
+`excluded` means "not run on a Linux CI agent". It is not a claim that an
+experiment is unverified: the excluded ones were verified on Robert's macOS
+machine and their evidence is committed. A `coverage.txt` entry for an
+experiment a branch does not carry is fine; that branch skips it.
+
+## What is deliberately left out, and why
+
+- **Experiments 6, 7, 8 and 9** (`check.py` in each). Three independent
+  reasons, each sufficient:
+  1. They build shared libraries with `clang -dynamiclib` into `.dylib` files.
+     On Linux, `clang -dynamiclib` is rejected outright: `argument unused
+     during compilation: '-dynamiclib' [-Werror,-Wunused-command-line-argument]`.
+  2. Their `host.rs` does not even link on Linux. It calls `_dyld_image_count`
+     and `_dyld_get_image_name`, so
+     `rustc --edition 2024 -D warnings host.rs` fails at
+     `rust-lld: error: undefined symbol: _dyld_image_count`. A
+     type-check-only variant would pass, but that is a weaker check than the
+     documented command and would not be the repository's own.
+  3. They turn on deadlines, stalls and `time.sleep` windows, which would be
+     timing-flaky on a shared runner even if they could run. Experiment 9 also
+     reads thread counts from `ps -M`, which on Linux prints SELinux labels
+     rather than Mach threads — so it would report something meaningless
+     instead of failing.
 - **Every timing, allocation and load measurement.** Experiment 11's
   `check.py measure` (627 timed executions), experiment 3's and 3b's
   `./run.sh`, and experiment 10's allocator totals. They are observational and
@@ -79,11 +115,6 @@ repository.
   shared CI runner would produce different numbers without that meaning
   anything. Experiment 11's measurement also calls `/usr/bin/time -l`, which is
   BSD/macOS-only.
-- **Experiments 6, 7 and 8** (`check.py` in each). They build shared libraries
-  with `clang -dynamiclib` into `.dylib` files, which is macOS-only, and they
-  turn on deadlines, stalls and `time.sleep` windows. Both reasons rule them
-  out: they cannot run on a Linux agent, and they would be timing-flaky if they
-  could.
 - **Experiment 4's and 5's acceptance runs.** They need Java 21 and the TLA+
   TLC jar, which is downloaded by SHA-256 and not committed, and they drive a
   socket server against activation deadlines. Their release builds run; their
@@ -93,9 +124,10 @@ repository.
   already records that these runners "still assume macOS/Homebrew paths and
   measurement tools".
 - **The mutation and control runners** (`mutate.py`, `controls.py` in
-  experiments 4, 5, 6, 7, 8, 10, 11). They rewrite experiment sources to build
-  deliberately broken variants and write into fixed evidence destinations. They
-  belong to an experiment's one-time control record, not to a per-push check.
+  experiments 4, 5, 6, 7, 8, 9, 10, 11). They rewrite experiment sources to
+  build deliberately broken variants and write into fixed evidence
+  destinations. They belong to an experiment's one-time control record, not to
+  a per-push check.
 - **A formatting or lint check.** The repository is not clean under
   `cargo fmt --check`: experiments 4 and 5 pass, but
   `11-integer-policies/src/main.rs` is written in a dense hand style that
@@ -107,6 +139,11 @@ repository.
   `experiments/*/LOCK.*`). They compare a working tree against a named lock
   commit for one experiment's authorship boundary. That is a merge gate for a
   specific experiment, decided per experiment, not a property of every push.
+
+If the native experiments should be checked rather than excluded, that needs a
+macOS agent. Buildkite hosted macOS agents exist; a queue of them plus a third
+step would do it, and `coverage.txt` is where that decision would be recorded.
+It is a cost and scope question for Robert, not something CI should assume.
 
 ## Toolchain pins
 
@@ -143,20 +180,16 @@ hosted queue under another name, set `MO_CI_QUEUE` in Pipeline Settings →
 Environment Variables; no file needs editing. If a build sits waiting for an
 agent, this is the first thing to check.
 
-`bootstrap.yml` names no queue, so the upload step goes to the cluster's own
-default queue. That keeps the step that reads `MO_CI_QUEUE` from also depending
-on it being right.
-
 ## Branches without this directory
 
-`bootstrap.yml` uploads `.buildkite/pipeline.yml` from the branch being built
-when it is there, and otherwise takes main's copy. Each step in `pipeline.yml`
-repeats the same restore, because a step can land on a different agent with its
-own fresh checkout. The restore is written inline in both files on purpose: on
-a branch with no `.buildkite/` directory there is no helper script to call.
+There is no fallback, on purpose. Every branch cut from main carries
+`.buildkite/`, and a branch old enough to lack it fails with
+`buildkite-agent pipeline upload` reporting the missing file — which says what
+to do (merge or rebase main) more plainly than a fallback would.
 
-This is what lets `codex/native-migration-resource-limit` (draft PR #2) build
-without being rebased. The restore uses `git fetch origin main`, so it needs
-main to be reachable from the build's remote; a pull request from a fork would
-need the fork to carry main, or the fallback would have to point at an
-upstream remote instead.
+A fallback would also run *main's* CI definition against a branch's code, which
+hides the case where a branch needs different CI, and it would need the same
+restore repeated in every step, since a step can land on a different agent with
+its own checkout. The stale remote branches that predate this directory are
+only affected if someone pushes to them, and merging main is the right answer
+then anyway.
