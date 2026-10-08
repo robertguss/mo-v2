@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "kind": "freeze inventory/publication verification; no new scientific campaign",
+  "lock": "STAGE_B_LOCK.json",
+  "lock_sha256": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+  "status": "frozen",
+  "provisional": false,
+  "frozen_file_hashes_checked": 496,
+  "historical_dependency_hashes_checked": 5,
+  "stage_a_preserved_archives_checked": 4,
+  "stage_a_mismatches": [],
+  "executable_changes_to_stage_a_freeze": false,
+  "inventory_files_checked": 967,
+  "v18_archive_sha256": "0e30809545c3114012c69cceaf024e22f69c08a9b9721eb0a199e35a5d76b997",
+  "v19_archive_sha256": "ac82bf2cbdec81823550f6af4a64744f1a0689bb923d850f96f00cc4936c4bba",
+  "v19_archive_bytes": 31048,
+  "v19_regular_members": 15,
+  "v19_content_hashes_checked": 14,
+  "v19_leak_findings": [],
+  "private_corpus_fingerprint_checked": false,
+  "private_corpus_contents_published": false,
+  "publication_audit": {
+    "v19_members_checked": 15,
+    "forbidden_pattern_matches_in_v19": 0,
+    "stale_v18_addendum_in_v19": false,
+    "scope": "v19 allowlist bytes only. The acceptance orb still scans the freeze commit and checks the private corpus without publishing it."
+  },
+  "orb_checks_remaining": [
+    "SHA256 /home/user/rob-1333-private-v11/cases.jsonl.gz equals 0f176c60d30d30fffd4d7fb25d982cd3517d1a847840027ad3e99f9c572f41f0 and the file is 1003653 bytes; do not print contents. seed.json beside it is 50 bytes; do not print the seed.",
+    "Read-only counts, with no source or expected output exported: 24 heldouts, 8 families, 500 generated rows, 404 distinct generated cases, 96 repeats.",
+    "No-leak scan of the freeze commit: v19 members are only the public allowlist plus DELIVERY.sha256; those members contain no private fingerprint, private path, seed filename, held-out case, acceptance checker source or lock filename; the commit adds no private file."
+  ],
+  "effort": {
+    "start": "2026-10-08T14:31:47.723856+00:00",
+    "stopped": "2026-10-08T14:31:48.441831+00:00",
+    "contributors": 1,
+    "check_run_seconds": 0.718
+  },
+  "candidate_acceptance_executed": false,
+  "builder_dispatched": false,
+  "controls_executed": 0,
+  "million_element_runs": 0,
+  "private_corpus_used": false
+}
