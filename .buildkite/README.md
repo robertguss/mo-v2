@@ -175,7 +175,22 @@ glibc and ships its own `clang` and `ld.lld`.
 `pipeline.yml` targets `queue: "${MO_CI_QUEUE:-linux-small}"`. To move the work
 to another queue in the Default cluster — `linux-medium`, `linux-large` — set
 `MO_CI_QUEUE` in Pipeline Settings → Environment Variables; no file needs
-editing.
+editing. The queue a step ran on is printed in its preflight output.
+
+**The queue must exist.** Builds 1 and 2 of this pipeline failed because the
+default here was `linux-small`'s predecessor, `default`, which is not a queue in
+the Default cluster:
+
+```
+Queue 'default' does not exist in the 'Default cluster' cluster
+```
+
+Two things that error settles, so nobody has to re-litigate them. Buildkite
+does interpolate `${VAR:-fallback}` when it uploads this file — the error named
+`default`, not the literal `${MO_CI_QUEUE:-default}`. And Buildkite validates
+queue names at upload and rejects an unknown one outright, rather than queuing
+a job that waits forever for an agent; an earlier revision of this README
+guessed the opposite.
 
 `linux-small` fits, measured rather than assumed:
 
@@ -192,6 +207,11 @@ runs at exactly 1.00× CPU — strictly single-threaded. A larger queue would co
 more per minute without shortening the critical path, so the queue is not the
 lever here; if a two-minute build ever becomes the constraint, the Lean step's
 shape is what to look at.
+
+The Rust step is a light step on these numbers, not a heavy build: 14.9s, four
+small crates plus `num-bigint`, 625 MB resident, and 1.23× CPU. So it takes
+`linux-small` too. If it ever grows a real workspace build, `linux-medium` is
+one line here or one environment variable in the UI.
 
 ## Branches without this directory
 

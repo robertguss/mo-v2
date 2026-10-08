@@ -45,6 +45,9 @@ preflight() {
   python3 --version
   git --version
   uname -srm
+  # Name the queue in the log. Builds 1 and 2 died on a queue that did not
+  # exist, and nothing in the step output would have said which one ran.
+  printf 'queue: %s\n' "${BUILDKITE_AGENT_META_DATA_QUEUE:-(not a Buildkite agent)}"
   coverage
 }
 
