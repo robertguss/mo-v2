@@ -1,0 +1,35 @@
+{
+  "input": [
+    -4,
+    0,
+    9
+  ],
+  "sample": {
+    "instrumented": true,
+    "calibration": {
+      "one_calls": 2,
+      "one_bytes": 80,
+      "two_calls": 2,
+      "two_bytes": 80,
+      "restored": true
+    },
+    "ns": 208,
+    "calls": 0,
+    "requested": 0,
+    "live_start": 9018,
+    "live_end": 9018,
+    "peak_live": 9018,
+    "cleanup_ok": true,
+    "result": [
+      -3,
+      1,
+      10
+    ],
+    "original": [
+      -3,
+      1,
+      10
+    ]
+  },
+  "failure": "full_values_or_original"
+}

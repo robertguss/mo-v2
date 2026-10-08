@@ -23,4 +23,5 @@
 09-migration-limit      excluded   macOS-only dylib/dyld/`ps -M`; deadlines and stalled threads
 10-finite-rust          checked    frozen corpus, and the Lean reference rebuild
 11-integer-policies     checked    frozen corpus; its measurement runs are excluded
+12-copy-feedback        excluded   its runners are macOS-only and have not been made Linux-portable
 13-source-acceptance    checked    pinned Stage A native link build and development tests; not the acceptance campaign

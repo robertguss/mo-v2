@@ -1,0 +1,14 @@
+[
+  {
+    "event": "automatic_delivery",
+    "ordinal": 1
+  },
+  {
+    "event": "request",
+    "ordinal": 2
+  },
+  {
+    "event": "request",
+    "ordinal": 3
+  }
+]

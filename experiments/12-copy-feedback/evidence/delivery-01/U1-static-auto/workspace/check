@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+import os
+from pathlib import Path
+import subprocess
+import tempfile
+r=Path(__file__).resolve().parent
+with tempfile.TemporaryDirectory(prefix='mo-copy-examples-') as temp:
+ t=Path(temp)
+ base=['rustc','--edition=2021','-C','opt-level=3','-C','overflow-checks=yes']
+ subprocess.run(base+['--crate-name','helper','--crate-type=rlib',str(r/'helper.rs'),'-o',str(t/'libhelper.rlib')],check=True)
+ subprocess.run(base+[str(r/'check.rs'),'--extern','helper='+str(t/'libhelper.rlib'),'-o',str(t/'run')],env={**os.environ,'TASK_SOURCE':str(r/'task.rs')},check=True)
+ subprocess.run([str(t/'run')],check=True)
