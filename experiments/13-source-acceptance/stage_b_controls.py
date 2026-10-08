@@ -12,8 +12,11 @@ named predicate must be the thing that rejects it. What this module prepares is
 everything else:
 
 * the registry, read from the locked inventory rather than retyped;
-* for each deferred control, the public example whose predicted trace actually
-  reaches the intended path, derived from the frozen reference;
+* for each active deferred control, the public example whose predicted trace
+  actually reaches the intended path, derived from the frozen reference;
+* `omitted-entry-create` recorded as not applicable under the frozen rules
+  (D164): the frozen predictor never allocates on Enter, so nine of the ten
+  controls stay active and the gap is stated in the evidence;
 * the sixteen deferred refusal expectations, re-derived and re-run under Stage
   B so they are known to be executable the moment a candidate exists;
 * proof that the frozen acceptance of control evidence still refuses a record
@@ -145,18 +148,36 @@ def triggers(control, obligation, features):
     raise AssertionError("unmapped control: " + control)
 
 
+# D164: the frozen predictor never allocates on Enter, so this control cannot
+# be reached under the frozen rules. It stays in the registry. A record that
+# claims it ran is still rejected by the same shape checks as the other nine.
+NOT_APPLICABLE = {
+    "omitted-entry-create":
+        "Not applicable under the frozen rules. The frozen predictor never allocates "
+        "on Enter: entering a call only binds arguments that are already finished. "
+        "No public, reserved or generated example can reach this control without "
+        "editing a frozen file. D164 records that gap and supersedes the D161 "
+        "fallback of adding a public example. Nine of the ten deferred controls "
+        "stay active.",
+}
+
+
 def registry():
     rows = []
     features = case_features()
     for row in deferred_controls():
         control = row["control"]
         assert PREDICATES[control] == row["obligation"], "locked obligation drifted"
+        reason = NOT_APPLICABLE.get(control)
         rows.append(dict(row,
                          required_capability=REQUIRED_CAPABILITY[control],
                          trigger_examples=triggers(control, row["obligation"], features),
-                         baseline_required=True,
+                         status="not-applicable" if reason else "active",
+                         applicable=reason is None,
+                         not_applicable_reason=reason,
+                         baseline_required=reason is None,
                          executed=False,
-                         evidence_still_needed=[
+                         evidence_still_needed=[] if reason else [
                              "source patch applied to the Stage B candidate",
                              "passing baseline with the mutation disabled",
                              "recorded marker that the mutated path ran",
@@ -197,25 +218,25 @@ def run(destination):
     try:
         rows, features = registry()
         assert len(rows) == 10, "deferred control count"
+        active = [row for row in rows if row["applicable"]]
+        inactive = [row for row in rows if not row["applicable"]]
+        assert len(active) == 9, "active control count"
+        assert [row["control"] for row in inactive] == ["omitted-entry-create"], "not-applicable control"
+        assert inactive[0]["status"] == "not-applicable", "not-applicable status"
+        assert inactive[0]["not_applicable_reason"], "gap not stated"
+        assert all(row["trigger_examples"] for row in active), "active control without a public trigger"
+        assert not inactive[0]["trigger_examples"], "not-applicable control grew a trigger"
         report["deferred_controls"] = len(rows)
-        # D161 approved one new public example if nothing in the reserved corpus
-        # allocates at invocation entry. Nothing does. Under the frozen
-        # reference no source program does either: Enter records the call and
-        # binds parameters, and a create is always its own earlier or later
-        # action. Registering an example that does not allocate there would not
-        # give omitted-entry-create a trigger, and making one that does would
-        # mean editing the frozen reference. The control stays without a public
-        # trigger, and that stop is explained in STAGE_B_PREPARATION.md.
-        report["controls_without_public_trigger"] = [
-            row["control"] for row in rows if not row["trigger_examples"]]
-        report["controls_with_public_trigger"] = len(rows) - len(report["controls_without_public_trigger"])
+        report["controls_active"] = len(active)
+        report["controls_not_applicable"] = [row["control"] for row in inactive]
+        report["gap"] = inactive[0]["not_applicable_reason"]
         expectations = rerun_deferred_expectations()
         assert len(expectations) == 16, "deferred expectation count"
         report["deferred_expectations_rerun_under_stage_b"] = len(expectations)
 
-        # The frozen acceptance of control evidence must still refuse a record
-        # that describes a control as satisfied when it was not. This is the
-        # guard that stops a prepared plan being mistaken for a passing control.
+        # D164 does not relax this gate. A record claiming any of the ten
+        # controls ran, including the one that is not applicable, is still
+        # rejected when it is not the shape the frozen check requires.
         for row in rows:
             valid = dict(control=row["control"], capability=row["capability"],
                          obligation=row["obligation"], compiled=True, executed_intended_path=True,
@@ -232,15 +253,19 @@ def run(destination):
                     report["record_controls"] += 1
                 else:
                     raise AssertionError("invalid control evidence accepted")
+        assert report["record_controls"] == 50, "record-shape rejections"
         assert set(CONTROLS) == {"frontend", "physical", "calls", "resume", "destroy"}, "control groups"
         (destination / "registry.json").write_text(json.dumps(
             dict(deferred_controls=rows, case_features=features,
                  deferred_expectations=expectations), indent=2) + "\n")
         report["qualification"] = (
-            "Zero of the ten deferred Stage B control paths executed. Each needs a compiled Stage B "
-            "evaluator, a passing baseline with the mutation disabled, evidence the mutated path ran, "
-            "and rejection by its named predicate. This file prepares the targets and reruns the "
-            "sixteen deferred refusal expectations; it is not control evidence.")
+            "Nine of the ten deferred Stage B controls are active, and none of them has executed. "
+            "omitted-entry-create is not applicable under the frozen rules: the frozen predictor "
+            "never allocates on Enter, so no example can reach it. D164 records that gap and "
+            "supersedes the D161 fallback of adding a public example. A record claiming any of "
+            "the ten ran is still rejected unless it has the shape the frozen check requires, and "
+            "this file does not supply that evidence. The sixteen deferred refusal expectations "
+            "were rerun; this file is not control evidence.")
         report["passed"] = True
     except Exception:
         report["error"] = traceback.format_exc()

@@ -1,0 +1,276 @@
+{
+  "lock_sha256": "09c64493ba65f94451dc17c5bde7c4b54554d6990b23b8c877f2f9741f120c9e",
+  "baseline": "03705f1dac1de8cbc9efedaf99ad4feeb62c17a3",
+  "frozen": {
+    "files": 496,
+    "historical_dependencies": 5,
+    "preserved_archives": 4
+  },
+  "frozen_intact": true,
+  "deferred_refusal_expectations": [
+    {
+      "module": "refusalcheck",
+      "source": "main = missing(7)",
+      "expected": "unknown-function"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Int = 7 end def f(): Int = 9 end main = f()",
+      "expected": "duplicate-function"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Int, x: Int): Int = x end main = 7",
+      "expected": "duplicate-parameter"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Int): Int = x end main = f()",
+      "expected": "arity"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Int): Int = x end main = f(false)",
+      "expected": "argument-kind"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Int = false end main = 7",
+      "expected": "result-kind"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "input n: Int; def f(): Int = n end main = 7",
+      "expected": "unbound-variable"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Int = 7 end main = f",
+      "expected": "unbound-variable"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Other): Int = 7 end main = 7",
+      "expected": "type"
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Other = 7 end main = 7",
+      "expected": "type"
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(x: Int, x: Int): Int = x end main = 7",
+      "expected": "duplicate-parameter"
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(): Int = 7 end def f(): Int = 9 end main = 1",
+      "expected": "duplicate-function"
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(x: Other): Int = 7 end main = 7",
+      "expected": "type"
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(): Other = 7 end main = 7",
+      "expected": "type"
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(): Int = false end main = 7",
+      "expected": "result-kind"
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(x: Int): Int = x end main = f(false)",
+      "expected": "argument-kind"
+    }
+  ],
+  "deferred_accept_expectations": [
+    {
+      "module": "selfcheck",
+      "source": "def pick(flag: Bool): Int = if flag then 7 else 11 end end main = pick(false)",
+      "expected": "accept"
+    },
+    {
+      "module": "selfcheck",
+      "source": "def f(f: Int): Int = f + 2 end main = f(9)",
+      "expected": "accept"
+    },
+    {
+      "module": "selfcheck",
+      "source": "def f(n: Int): Int = F(n) end def F(n: Int): Int = n - 3 end main = f(8)",
+      "expected": "accept"
+    }
+  ],
+  "deferred_public_call_cases": [
+    {
+      "module": "cases",
+      "name": "C1",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C2",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C3",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C4",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C5",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C6",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C7",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C8",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C9",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C10-unique",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C10-retained",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C10-sum",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C10-empty",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C10-single",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C11-0",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C11-1",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C11-2",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C11-7",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C12",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C13",
+      "expected": "execute"
+    },
+    {
+      "module": "cases",
+      "name": "C14",
+      "expected": "execute"
+    }
+  ],
+  "deferred_control_paths": [
+    {
+      "control": "always-copy",
+      "capability": "physical",
+      "obligation": "unique C10 zero creates"
+    },
+    {
+      "control": "hidden-entry-copy",
+      "capability": "physical",
+      "obligation": "invocation entry creates"
+    },
+    {
+      "control": "fixture-provenance",
+      "capability": "physical",
+      "obligation": "fixture/literal route consistency"
+    },
+    {
+      "control": "caller-reservation-theft",
+      "capability": "physical",
+      "obligation": "C1 reservation origin"
+    },
+    {
+      "control": "early-cleanup",
+      "capability": "physical",
+      "obligation": "C14 reservation lifetime"
+    },
+    {
+      "control": "omitted-entry-create",
+      "capability": "calls",
+      "obligation": "entry creates"
+    },
+    {
+      "control": "omitted-nested-create",
+      "capability": "calls",
+      "obligation": "C9 descendant creates"
+    },
+    {
+      "control": "omitted-transient-create",
+      "capability": "calls",
+      "obligation": "C7 transient creates"
+    },
+    {
+      "control": "early-enter",
+      "capability": "calls",
+      "obligation": "arguments before enter"
+    },
+    {
+      "control": "skipped-return-cleanup",
+      "capability": "calls",
+      "obligation": "return cleanup state"
+    }
+  ],
+  "known_gaps": {
+    "large-streaming-adapter": "linked.run_linked sends large=false and the small verifier holds a full trace",
+    "stage-b-candidate-linking": "no Stage B candidate has ever been linked or run",
+    "stage-b-private-execution": "the 524 private rows are Stage A capability refusals only",
+    "stage-b-builder-delivery": "no sanitized Stage B public package has been assembled",
+    "stage-b-compiled-controls": "nine of the ten deferred controls are active and have no compiled evaluator run; omitted-entry-create is not applicable under the frozen rules (D164)",
+    "d151-resource-workloads": "neither million-cell workload has ever run; D162 sets the recursive sum's limit at 900 seconds and leaves the discard at 600"
+  }
+}

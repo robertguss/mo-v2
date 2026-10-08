@@ -19,8 +19,14 @@ predicates (`predicates`, `cleanupcheck`, `closeoutcheck`).
 
 Authorization: D157 permits preparing this adapter. D151 fixes the two approved
 workloads and their observation schedule and explicitly does not authorize
-running them. `run_large_linked` refuses any depth at or above the approved
-million-cell depth, so no adapter test can become an unauthorized resource run.
+running them. D162 amends the clock only: 900 seconds for the recursive sum,
+600 seconds for the discard, with the per-step record kept.
+`check_amended_envelope` is that check. The frozen `check_resource` still
+requires 600 seconds for both workloads, and that file is not edited.
+`run_large_linked` refuses any depth at or above the approved million-cell
+depth, so no adapter test can become an unauthorized resource run. The
+watchdog inside that function caps the smaller validation runs; it is not the
+approved envelope.
 """
 from collections import deque
 import gzip
@@ -518,12 +524,20 @@ class LargeVerifier:
                     retained_rows_at_end=self.retained(), resource_attempts=self.attempts)
 
 
+# D162 amends D151's clock for the recursive sum only. The discard stays at
+# 600 seconds. The per-step record is unchanged. The frozen predicate in
+# closeoutcheck.check_resource still requires 600 seconds for both workloads;
+# that file is not edited. This map is the package's envelope.
+ENVELOPE_SECONDS = {"discarded-list": 600, "non-tail-sum": 900}
+
+
 def projected_record(workload, *, elapsed_seconds, available_bytes, stack_bytes=8 * 1024 ** 2):
     """The record the adapter would emit, built from the closed form alone.
 
-    At the approved depth this can be handed to the frozen D151 predicate
-    without running anything, which is how the adapter's record shape is
-    checked against `closeoutcheck.check_resource` before authorization.
+    At the approved depth this can be handed to `check_amended_envelope`
+    without running anything. The frozen `closeoutcheck.check_resource` still
+    encodes D151's 600-second clock for both workloads and is not this
+    envelope.
     """
     return workload.resource_record(
         status="finished", answer=workload.expected_answer(),
@@ -573,7 +587,9 @@ def run_large_linked(command, workload, budgets, destination, *, env=None, timeo
     verifier = LargeVerifier(workload, budgets, period=period)
     destination = Path(destination)
     destination.mkdir(parents=True, exist_ok=False)
-    assert 0 < timeout <= 600, "watchdog range"
+    # Validation runs only. The approved recursive sum's envelope is 900 seconds
+    # and the discard's is 600 (D162); this function refuses both approved depths.
+    assert 0 < timeout <= 600, "validation watchdog range"
     case = workload.case()
     source = case["source"].encode() if isinstance(case["source"], str) else case["source"]
     memory = available_bytes()
@@ -669,9 +685,29 @@ def run_large_linked(command, workload, budgets, destination, *, env=None, timeo
     return report
 
 
+def check_amended_envelope(row):
+    """Accept a finished approved-depth record under D162's clock.
+
+    A recursive-sum record may take up to 900 seconds. A discard record may
+    take up to 600. Every other field is still the frozen D151 predicate.
+    That frozen predicate rejects a clock over 600, so a sum record inside the
+    new limit and over 600 is shown to it with the clock set to the older
+    limit, and only after the new limit has already been enforced here.
+    """
+    assert row["case"] in ENVELOPE_SECONDS, "resource case"
+    limit = ENVELOPE_SECONDS[row["case"]]
+    elapsed = row["elapsed_seconds"]
+    assert type(elapsed) in (int, float) and 0 <= elapsed <= limit, "resource envelope"
+    frozen = dict(row)
+    if elapsed > 600:
+        frozen["elapsed_seconds"] = 600
+    check_resource(frozen)
+    return row
+
+
 def check_projected_record(workload):
-    """The frozen D151 predicate must accept the projected approved-depth record."""
+    """The amended envelope must accept the projected approved-depth record."""
     assert workload.depth == APPROVED_DEPTH, "projection is for the approved depth"
     record = projected_record(workload, elapsed_seconds=0, available_bytes=4 * 1024 ** 3)
-    check_resource(record)
+    check_amended_envelope(record)
     return record
