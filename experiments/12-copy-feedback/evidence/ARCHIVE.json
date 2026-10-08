@@ -1,0 +1,62 @@
+{
+  "evidence/baseline-01/R1/samples.json": {
+    "compressed": "evidence/baseline-01/R1/samples.json.gz",
+    "original_sha256": "de69b721c76653f236196524e435d43cbbd0e8cbc1986330cba2ba6c933cfa79",
+    "original_bytes": 3269832,
+    "compressed_bytes": 17759
+  },
+  "evidence/baseline-01/R2/samples.json": {
+    "compressed": "evidence/baseline-01/R2/samples.json.gz",
+    "original_sha256": "666aa091cd5de6a51631f974f5079e74544884a362181527c7ef04334ab352f3",
+    "original_bytes": 3405531,
+    "compressed_bytes": 19314
+  },
+  "evidence/baseline-01/U1/samples.json": {
+    "compressed": "evidence/baseline-01/U1/samples.json.gz",
+    "original_sha256": "fd840fd980a06d77764f6f43613c9c7a71f15b71410dce38ba83d711a9c7bbe8",
+    "original_bytes": 2114028,
+    "compressed_bytes": 12386
+  },
+  "evidence/baseline-01/U2/samples.json": {
+    "compressed": "evidence/baseline-01/U2/samples.json.gz",
+    "original_sha256": "7905f9390954a33522632a0ce1ff294b41aab5ff9f0e1fb2f06c8bf31f6fc806",
+    "original_bytes": 2119913,
+    "compressed_bytes": 11923
+  },
+  "evidence/baseline-timed-01/R1/samples.json": {
+    "compressed": "evidence/baseline-timed-01/R1/samples.json.gz",
+    "original_sha256": "d6f4420776b4af50eb9f44cd0dbf1c5e532d07b8794ccc77a59da7c5d8eb1ed4",
+    "original_bytes": 26156893,
+    "compressed_bytes": 108808
+  },
+  "evidence/baseline-timed-01/R2/samples.json": {
+    "compressed": "evidence/baseline-timed-01/R2/samples.json.gz",
+    "original_sha256": "52df7bdcfa42cc6bdf4e3bd704d664ed5bb03164a73aa250439f4abe9cdd6c76",
+    "original_bytes": 27645502,
+    "compressed_bytes": 116211
+  },
+  "evidence/baseline-timed-01/U1/samples.json": {
+    "compressed": "evidence/baseline-timed-01/U1/samples.json.gz",
+    "original_sha256": "677cf768504df04ff4c0bb0491d29d4f33e1ae336d57ed997d36e1bdb4d40a9d",
+    "original_bytes": 13530429,
+    "compressed_bytes": 58665
+  },
+  "evidence/baseline-timed-01/U2/samples.json": {
+    "compressed": "evidence/baseline-timed-01/U2/samples.json.gz",
+    "original_sha256": "448b54f61e36059729d309713f931790425132d0354964f95eb419bf709545d9",
+    "original_bytes": 13595129,
+    "compressed_bytes": 58422
+  },
+  "evidence/repair-01/U1/samples.json": {
+    "compressed": "evidence/repair-01/U1/samples.json.gz",
+    "original_sha256": "3a1ed8555bffd16586944639d6cdbcd25a4bc6105b2cd8fec30ab8ef578e1f95",
+    "original_bytes": 2113964,
+    "compressed_bytes": 12273
+  },
+  "evidence/repair-01/U2/samples.json": {
+    "compressed": "evidence/repair-01/U2/samples.json.gz",
+    "original_sha256": "3f60bbd1f592c0d2431747b99ffa2210c000a85194fc5843a534cd69ef014fac",
+    "original_bytes": 2119857,
+    "compressed_bytes": 11830
+  }
+}

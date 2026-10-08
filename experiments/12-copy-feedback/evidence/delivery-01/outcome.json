@@ -1,0 +1,219 @@
+{
+  "passed": true,
+  "setups": [
+    {
+      "task": "H1",
+      "arm": "actual-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "H1",
+      "arm": "actual-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "H1",
+      "arm": "none",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "H1",
+      "arm": "static-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "H1",
+      "arm": "static-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "H2",
+      "arm": "actual-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "H2",
+      "arm": "actual-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "H2",
+      "arm": "none",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "H2",
+      "arm": "static-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "H2",
+      "arm": "static-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "R1",
+      "arm": "actual-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "R1",
+      "arm": "actual-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "R1",
+      "arm": "none",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "R1",
+      "arm": "static-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "R1",
+      "arm": "static-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "R2",
+      "arm": "actual-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "R2",
+      "arm": "actual-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "R2",
+      "arm": "none",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "R2",
+      "arm": "static-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "R2",
+      "arm": "static-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "U1",
+      "arm": "actual-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "U1",
+      "arm": "actual-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "U1",
+      "arm": "none",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "U1",
+      "arm": "static-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "U1",
+      "arm": "static-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "U2",
+      "arm": "actual-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "U2",
+      "arm": "actual-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "U2",
+      "arm": "none",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    },
+    {
+      "task": "U2",
+      "arm": "static-auto",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": true
+    },
+    {
+      "task": "U2",
+      "arm": "static-request",
+      "passed": true,
+      "requests": 2,
+      "automatic_delivery": false
+    }
+  ],
+  "public_checks": 6,
+  "forced_cleanup": true,
+  "constructor_cleanup": true,
+  "model_calls": 0
+}

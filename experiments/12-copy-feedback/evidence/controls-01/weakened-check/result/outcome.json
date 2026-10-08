@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "task": "R1",
+  "baseline": false,
+  "controlled_helper": false,
+  "error": "integrity mismatch: experiments/12-copy-feedback/acceptance/check.py"
+}
