@@ -1,0 +1,34 @@
+# Mo v2 CI. Uploaded by the pipeline steps in the Buildkite UI; see
+# .buildkite/bootstrap.yml for the exact YAML those settings should hold, and
+# .buildkite/README.md for what runs, what does not, and why.
+#
+# Agent queue: set MO_CI_QUEUE in Pipeline Settings -> Environment Variables to
+# target a hosted queue by another name. The default, `default`, is the queue
+# name Buildkite creates with a new cluster.
+#
+# Each step restores .buildkite/ from main when the branch being built does not
+# carry it, so branches that predate this pipeline still build. The restore is
+# written inline rather than in a helper script, because on such a branch no
+# helper script exists to call.
+
+agents:
+  queue: "${MO_CI_QUEUE:-default}"
+
+steps:
+  - label: ":rust: Rust builds and frozen corpora"
+    key: rust
+    command:
+      - test -f .buildkite/checks.sh || { git fetch --no-tags origin main && git archive FETCH_HEAD .buildkite | tar -x; }
+      - .buildkite/checks.sh rust
+    artifact_paths:
+      - "ci-evidence/**/*"
+    timeout_in_minutes: 20
+
+  - label: ":lean: Lean proofs and kernel re-check"
+    key: lean
+    command:
+      - test -f .buildkite/checks.sh || { git fetch --no-tags origin main && git archive FETCH_HEAD .buildkite | tar -x; }
+      - .buildkite/checks.sh lean
+    artifact_paths:
+      - "ci-evidence/**/*"
+    timeout_in_minutes: 30

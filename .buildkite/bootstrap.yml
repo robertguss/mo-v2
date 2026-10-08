@@ -1,0 +1,28 @@
+# Paste the `steps:` block below into the Buildkite UI, under
+# Pipeline Settings -> Steps. This file is a record of what is pasted there;
+# Buildkite does not read it from the repository.
+#
+# It does one thing: upload .buildkite/pipeline.yml. When the branch being
+# built does not carry that file -- for example codex/native-migration-resource-limit,
+# the branch of draft PR #2, which predates this pipeline and should not be
+# rebased for CI -- it takes the copy from main instead, so the branch still
+# gets a build.
+#
+# No step here needs a file from the repository, which is what lets it work on
+# a branch that has no .buildkite/ directory at all.
+
+agents:
+  queue: "${MO_CI_QUEUE:-default}"
+
+steps:
+  - label: ":pipeline: upload"
+    command: |
+      set -euo pipefail
+      if [ -f .buildkite/pipeline.yml ]; then
+        echo "--- Using .buildkite/pipeline.yml from this branch"
+      else
+        echo "--- This branch has no .buildkite/pipeline.yml; taking main's copy"
+        git fetch --no-tags origin main
+        git archive FETCH_HEAD .buildkite | tar -x
+      fi
+      buildkite-agent pipeline upload .buildkite/pipeline.yml
