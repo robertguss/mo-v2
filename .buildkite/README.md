@@ -59,6 +59,17 @@ theorems depends on (`ACCEPTANCE.md` check 6 asks a reader to judge those).
 `checks.sh` refuses only `sorryAx`, which that check names as meaning not
 accepted; it does not try to score the axiom list itself.
 
+A branch is checked against the experiments it actually carries. A branch that
+forked before an experiment landed skips it, loudly, with a line in the wall
+clock summary; it does not fail and it does not pass over the gap quietly.
+
+Both steps were shown to go red on deliberately broken copies, as `CLAUDE.md`'s
+lock pattern asks: experiment 11's "saturate instead of wrap" control, a
+`sorry` put back into experiment 3c's `promiseA`, `ACCEPTANCE.md`'s documented
+"Running a broken copy" change in `Trial/Broken.lean`, and a tampered
+`results/run-1.txt`. Each was planted in a disposable copy outside the
+repository.
+
 ## What is deliberately left out
 
 - **Every timing, allocation and load measurement.** Experiment 11's
@@ -120,7 +131,7 @@ glibc and ships its own `clang` and `ld.lld`.
 
 ## Changing the agent queue
 
-`pipeline.yml` and `bootstrap.yml` both target:
+`pipeline.yml` targets:
 
 ```yaml
 agents:
@@ -131,6 +142,10 @@ agents:
 hosted queue under another name, set `MO_CI_QUEUE` in Pipeline Settings →
 Environment Variables; no file needs editing. If a build sits waiting for an
 agent, this is the first thing to check.
+
+`bootstrap.yml` names no queue, so the upload step goes to the cluster's own
+default queue. That keeps the step that reads `MO_CI_QUEUE` from also depending
+on it being right.
 
 ## Branches without this directory
 
