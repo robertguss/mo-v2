@@ -1,0 +1,230 @@
+{
+  "purpose": "Read-only inventory for eventual durable preservation; no bulk evidence archive created or uploaded",
+  "units": "Exact bytes; archive sizes are compressed; directory totals are regular-file logical bytes, not compressed estimates or allocated filesystem blocks",
+  "exclusions": "Directory scans do not follow symlinks and omit target, __pycache__, .git. Private files were counted/stat-ed only; private source/seed contents were not read.",
+  "candidate_submission_archives": [
+    {
+      "path": "rob1333-stage-a-candidate-final-01.tar.gz",
+      "compressed_bytes": 24780,
+      "sha256": "22ab6d216977176e34859d5101f1783fa8523058baf46cdf1bf4175a1f4ec002",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 104057,
+      "symlinks": 0
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-02.tar.gz",
+      "compressed_bytes": 26454,
+      "sha256": "7332eaad9ade0984b68a97a97e638dd339e69660340b8b9fd99e61b3067644a4",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 111345,
+      "symlinks": 0
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-03.tar.gz",
+      "compressed_bytes": 28515,
+      "sha256": "df35cb0a094d84f494d43c0f192c1aab0f7f158526bc708fb8bd44f7f8048718",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 120040,
+      "symlinks": 0
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-04.tar.gz",
+      "compressed_bytes": 30073,
+      "sha256": "1069848d4cf78d66b6ff33646a5a8cab08558b7e52fee366b73ab06222d46a30",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 126699,
+      "symlinks": 0
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-05.tar.gz",
+      "compressed_bytes": 31827,
+      "sha256": "c6b8ac01150bdca10815e631e3af9d9be0f7d053eba50eee92a3ab65027ba9eb",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 134560,
+      "symlinks": 0
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-06.tar.gz",
+      "compressed_bytes": 33246,
+      "sha256": "4e560790cde6482296b671f2f5fa87e4052e79187e740bf4234434a7dae62783",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 142394,
+      "symlinks": 0
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-07.tar.gz",
+      "compressed_bytes": 35180,
+      "sha256": "9fe792c138a6900a7c32f76ee36f051c08410163d693b0d7601b85f0918158cd",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 150616,
+      "symlinks": 0
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-08.tar.gz",
+      "compressed_bytes": 36392,
+      "sha256": "f79ea749d7a0ed2b7b1d94bd9daf1ebc6997845a1d2d3dcd4726128eb64f2eb8",
+      "members": 9,
+      "regular_members": 8,
+      "uncompressed_regular_content_bytes": 154613,
+      "symlinks": 0
+    }
+  ],
+  "sanitized_builder_public_archives": [
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v13.tar.gz",
+      "compressed_bytes": 18017,
+      "sha256": "80343fc7be0171f1ed133de786ea10f1b25e5dca70ebff24fe5defa54712ea2d",
+      "members": 9,
+      "regular_members": 9,
+      "uncompressed_regular_content_bytes": 46652,
+      "symlinks": 0
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v14.tar.gz",
+      "compressed_bytes": 19610,
+      "sha256": "3327ee87f52316bec571f91c81b20f556f030614d41a681699a6cdc8f49c94de",
+      "members": 10,
+      "regular_members": 10,
+      "uncompressed_regular_content_bytes": 51362,
+      "symlinks": 0
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v15.tar.gz",
+      "compressed_bytes": 21271,
+      "sha256": "fa7969d102fb1607b81059522307982e5aa180ed509bbb4fc9ad3d588070a898",
+      "members": 11,
+      "regular_members": 11,
+      "uncompressed_regular_content_bytes": 57208,
+      "symlinks": 0
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v16.tar.gz",
+      "compressed_bytes": 24605,
+      "sha256": "52ee52f3304f80c23c7f7b60c323491e97cb9961d7a2eb44e2700832d18ddc1c",
+      "members": 12,
+      "regular_members": 12,
+      "uncompressed_regular_content_bytes": 66939,
+      "symlinks": 0
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v17.tar.gz",
+      "compressed_bytes": 26074,
+      "sha256": "95570ef6a4003c1322005afd5492365de997c5e5742b5a0ea9c355b04b84ec08",
+      "members": 13,
+      "regular_members": 13,
+      "uncompressed_regular_content_bytes": 71260,
+      "symlinks": 0
+    }
+  ],
+  "non_private_acceptance_directories": [
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-01",
+      "regular_files": 25,
+      "regular_file_bytes": 136923,
+      "directories": 4,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-02",
+      "regular_files": 23,
+      "regular_file_bytes": 144026,
+      "directories": 4,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-03",
+      "regular_files": 24,
+      "regular_file_bytes": 158968,
+      "directories": 4,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-04",
+      "regular_files": 40,
+      "regular_file_bytes": 301456,
+      "directories": 8,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-05",
+      "regular_files": 76,
+      "regular_file_bytes": 746763,
+      "directories": 17,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-06",
+      "regular_files": 124,
+      "regular_file_bytes": 1397390,
+      "directories": 29,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-07",
+      "regular_files": 17236,
+      "regular_file_bytes": 117366339,
+      "directories": 4306,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08",
+      "regular_files": 260030,
+      "regular_file_bytes": 1393231824,
+      "directories": 65001,
+      "excluded_symlinks": 6,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation",
+      "regular_files": 554058,
+      "regular_file_bytes": 3432971398,
+      "directories": 138804,
+      "excluded_symlinks": 3,
+      "excluded_build_or_cache_directories": 0,
+      "other_entries": 0
+    }
+  ],
+  "non_private_classification": "Raw non-private acceptance evidence remains builder-excluded, unlike sanitized builder-public archives.",
+  "private_refusal_directory": {
+    "path": "/home/user/rob-1333-candidate-runs/stage-a-08",
+    "regular_files": 2098,
+    "regular_file_bytes": 2202741,
+    "directories": 525,
+    "excluded_symlinks": 0,
+    "excluded_build_or_cache_directories": 0,
+    "other_entries": 0
+  },
+  "private_scope": "524 Stage A capability refusals; no private execution coverage. Counts include supporting metadata/manifest, not 524 successful cases.",
+  "totals": {
+    "candidate_archives": 8,
+    "candidate_compressed_bytes": 246467,
+    "candidate_members": 72,
+    "public_archives": 5,
+    "public_compressed_bytes": 109577,
+    "public_members": 55,
+    "non_private_regular_files": 831636,
+    "non_private_regular_file_bytes": 4946455087
+  }
+}
