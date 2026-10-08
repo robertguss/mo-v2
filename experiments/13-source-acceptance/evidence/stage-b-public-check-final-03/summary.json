@@ -1,0 +1,309 @@
+{
+  "passed": true,
+  "candidate_executed": true,
+  "private_cases": 0,
+  "controls_executed": 0,
+  "million_element_runs": 0,
+  "integrity": {
+    "archive": "/tmp/rob1333-stage-b-candidate-final-03.tar.gz",
+    "archive_bytes": 40384,
+    "archive_sha256": "23d2a613023c5be28a18ba79ea8e2a7a00b49ec4974ef0e8ceb2ba7dc1dd84ad",
+    "archive_sha_matches": true,
+    "manifest_sha256": "f7492cd77c4a8e500840effede99d1e0573794877fa9838512fecb9303fb4b9d",
+    "manifest_matches": true,
+    "member_count": 8,
+    "content_files": 7,
+    "members": [
+      {
+        "name": "Cargo.toml",
+        "sha256": "df6d809297cf025d66dc22ab3433a8da7e33a9b4316d7999b1e7f6cb509a3709",
+        "matches": true,
+        "bytes": 285
+      },
+      {
+        "name": "Cargo.lock",
+        "sha256": "40f2087ad4249831f9da973f7080ce7f4a13a9bbedb7cf7bc50558b693e0f574",
+        "matches": true,
+        "bytes": 4951
+      },
+      {
+        "name": "lib.rs",
+        "sha256": "59f5897312bd6194a60cc9fc0aa799ea2c3498315a1dc876c8990be64a04496b",
+        "matches": true,
+        "bytes": 1956
+      },
+      {
+        "name": "frontend.rs",
+        "sha256": "3df2eeebf2ca8163873f18be0e07caa45d62dd36f1c060047b64d4d8de4cad83",
+        "matches": true,
+        "bytes": 48117
+      },
+      {
+        "name": "number.rs",
+        "sha256": "cd89f942c600698114262b44dd035c13ddfa74c06d4d187368f39a97e7594a29",
+        "matches": true,
+        "bytes": 3647
+      },
+      {
+        "name": "execution.rs",
+        "sha256": "742c827eabba825b6ae9e46e7e8e0fdb98484d547b60f961ff57a19a9dfe0a72",
+        "matches": true,
+        "bytes": 112185
+      },
+      {
+        "name": "HANDOFF.md",
+        "sha256": "b07554e71f60f9f6bbd0a9e24d0b4458b85be35a80a79b7c740021850589f452",
+        "matches": true,
+        "bytes": 11721
+      }
+    ],
+    "inventory": [
+      "CANDIDATE.sha256",
+      "Cargo.lock",
+      "Cargo.toml",
+      "HANDOFF.md",
+      "execution.rs",
+      "frontend.rs",
+      "lib.rs",
+      "number.rs"
+    ],
+    "crate": "mo-stage-b",
+    "export": "mo_stage_b::StageB"
+  },
+  "audit": {
+    "findings": [
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 270,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 281,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 304,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 1337,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 1350,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 1436,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 1633,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 1775,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 2124,
+        "match": "NoCells"
+      },
+      {
+        "file": "execution.rs",
+        "region": "cfg(test)",
+        "pattern": "native mock",
+        "line": 2532,
+        "match": "NoCells"
+      },
+      {
+        "file": "HANDOFF.md",
+        "region": "prose",
+        "pattern": "native mock",
+        "line": 94,
+        "match": "mock"
+      },
+      {
+        "file": "HANDOFF.md",
+        "region": "prose",
+        "pattern": "native mock",
+        "line": 115,
+        "match": "NoCells"
+      },
+      {
+        "file": "HANDOFF.md",
+        "region": "prose",
+        "pattern": "old im path",
+        "line": 49,
+        "match": "im::"
+      }
+    ],
+    "blocking": [],
+    "structure": {
+      "production_lex": 1,
+      "production_check": 1,
+      "production_parse_in_execution": 0,
+      "production_machines": 1
+    }
+  },
+  "build": {
+    "commands": [
+      {
+        "command": [
+          "cargo",
+          "+1.98.1",
+          "fetch",
+          "--locked",
+          "--manifest-path",
+          "candidate-stage-b/Cargo.toml"
+        ],
+        "exit_code": 0,
+        "log": "build-fetch-candidate-stage-b.log"
+      },
+      {
+        "command": [
+          "cargo",
+          "+1.98.1",
+          "build",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "candidate-stage-b/Cargo.toml"
+        ],
+        "exit_code": 0,
+        "log": "build-build-candidate-stage-b.log"
+      },
+      {
+        "command": [
+          "cargo",
+          "+1.98.1",
+          "fetch",
+          "--locked",
+          "--manifest-path",
+          "stage-b-link/Cargo.toml"
+        ],
+        "exit_code": 0,
+        "log": "build-fetch-stage-b-link.log"
+      },
+      {
+        "command": [
+          "cargo",
+          "+1.98.1",
+          "build",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "stage-b-link/Cargo.toml"
+        ],
+        "exit_code": 0,
+        "log": "build-build-stage-b-link.log"
+      },
+      {
+        "command": [
+          "cargo",
+          "+1.98.1",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "candidate-stage-b/Cargo.toml"
+        ],
+        "exit_code": 0,
+        "log": "build-test-candidate-stage-b.log"
+      },
+      {
+        "command": [
+          "cargo",
+          "+1.98.1",
+          "tree",
+          "--locked",
+          "--prefix",
+          "none",
+          "--manifest-path",
+          "candidate-stage-b/Cargo.toml"
+        ],
+        "exit_code": 0,
+        "log": "build-tree-candidate-stage-b.log"
+      }
+    ],
+    "candidate_lock_unchanged": true,
+    "linker_lock_sha256": "41df729167291f4bd74071be956a8f9f555b371973d2431f3e03f70db27e00c0",
+    "packages": [
+      "archery",
+      "bytemuck",
+      "equivalent",
+      "imbl",
+      "imbl-sized-chunks",
+      "itoa",
+      "memchr",
+      "mo-acceptance-runtime",
+      "mo-stage-b",
+      "proc-macro2",
+      "quote",
+      "rand_core",
+      "rand_xoshiro",
+      "safe_arch",
+      "serde",
+      "serde_core",
+      "serde_derive",
+      "serde_json",
+      "syn",
+      "unicode-ident",
+      "version_check",
+      "wide",
+      "zmij"
+    ],
+    "contains_im": false,
+    "contains_sized_chunks": false,
+    "contains_imbl": true,
+    "binary": "/tmp/mo-stage-b-public-target/debug/rob1333-stage-b-link",
+    "binary_sha256": "544d4eea2dd2e41df73c1643c14df8fdfbaa82169e1524c71dda618338855d4b",
+    "test_results": [
+      "test result: ok. 53 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.58s",
+      "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+    ]
+  },
+  "examples": {
+    "examples": 21,
+    "matched": 21,
+    "failed": 0,
+    "runs": 3269,
+    "passed_runs": 3269,
+    "full": 21,
+    "resume": 1624,
+    "destroy": 1624,
+    "committed_steps_on_matched_full_runs": 1603
+  },
+  "unchanged": {
+    "frozen_files": 496,
+    "frozen_changed": [],
+    "supplied_files": 8
+  },
+  "elapsed_seconds": 357.388
+}

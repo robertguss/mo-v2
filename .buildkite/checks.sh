@@ -173,6 +173,21 @@ rust_checks() {
       env CARGO_TARGET_DIR="$stage_a_target" \
       cargo +1.98.1 test --locked --offline --manifest-path candidate/Cargo.toml
     rm -rf "$stage_a_target"
+    # Stage B candidate: same pinned toolchain, locked fetch, and offline
+    # build. Development tests only; the public examples stay outside CI.
+    if [[ -f candidate-stage-b/Cargo.toml ]]; then
+      local stage_b_target
+      stage_b_target=$(mktemp -d)
+      run "13-source-acceptance: Stage B locked dependencies" \
+        cargo +1.98.1 fetch --locked --manifest-path candidate-stage-b/Cargo.toml
+      run "13-source-acceptance: Stage B candidate build" \
+        env CARGO_TARGET_DIR="$stage_b_target" \
+        cargo +1.98.1 build --locked --offline --manifest-path candidate-stage-b/Cargo.toml
+      run "13-source-acceptance: Stage B development tests (not independent acceptance)" \
+        env CARGO_TARGET_DIR="$stage_b_target" \
+        cargo +1.98.1 test --locked --offline --manifest-path candidate-stage-b/Cargo.toml
+      rm -rf "$stage_b_target"
+    fi
   fi
 
   summary
