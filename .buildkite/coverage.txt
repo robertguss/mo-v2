@@ -1,0 +1,26 @@
+# Every directory under experiments/ must appear here, as `checked` or
+# `excluded`. `checks.sh` fails when one does not, so a new experiment forces a
+# decision about CI instead of being quietly ignored. An entry naming an
+# experiment a branch does not carry is fine: that branch skips it.
+#
+# This records which experiments CI runs on a Linux agent. It is not a judgement
+# about any experiment's result, and `excluded` does not mean unverified: the
+# excluded ones were verified on Robert's macOS machine, and their evidence is
+# committed. See README.md for the full reasoning.
+#
+# name                  decision   why
+
+01-tiny-safe            checked    Lean proof build
+02-withdraw             checked    Lean proof build, plus the scoreboard as a smoke run
+03-in-place             excluded   Koka/macOS measurement runner; `/usr/bin/time -l`
+03b-helper              excluded   build.rs compiles mimalloc from a /opt/homebrew path
+03c-checker             checked    Lean proof build, the run-1 report, the kernel re-check
+04-live-update          checked    release build; its acceptance run needs Java and the TLA+ jar
+05-concurrent-updates   checked    release build; same
+06-native-loading       excluded   macOS-only dylib/dyld; deadline and sleep windows
+07-stalled-native       excluded   macOS-only dylib/dyld; deadline and sleep windows
+08-native-migration     excluded   macOS-only dylib/dyld; deadline and sleep windows
+09-migration-limit      excluded   macOS-only dylib/dyld/`ps -M`; deadlines and stalled threads
+10-finite-rust          checked    frozen corpus, and the Lean reference rebuild
+11-integer-policies     checked    frozen corpus; its measurement runs are excluded
+13-source-acceptance    checked    pinned Stage A native link build and development tests; not the acceptance campaign
