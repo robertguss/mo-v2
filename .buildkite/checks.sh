@@ -45,6 +45,29 @@ preflight() {
   python3 --version
   git --version
   uname -srm
+  coverage
+}
+
+# Refuse an experiment that coverage.txt does not decide about, so a new one
+# cannot land and be quietly ignored by CI. An entry for an experiment this
+# branch does not carry is not an error; `have` skips those.
+coverage() {
+  local declared undeclared
+  declared=$(sed 's/#.*//' "$REPO_ROOT/.buildkite/coverage.txt" | awk 'NF {print $1}')
+  undeclared=$(
+    comm -23 \
+      <(cd "$REPO_ROOT/experiments" && find . -maxdepth 1 -mindepth 1 -type d -printf '%f\n' | sort) \
+      <(printf '%s\n' "$declared" | sort)
+  )
+  if [ -n "$undeclared" ]; then
+    echo "These experiments are not decided about in .buildkite/coverage.txt:" >&2
+    printf '  %s\n' "$undeclared" >&2
+    echo "Add each as 'checked' or 'excluded' with a reason, and wire up the checked ones." >&2
+    return 1
+  fi
+  printf 'coverage: %s experiments decided, %s checked on this agent\n' \
+    "$(printf '%s\n' "$declared" | grep -c .)" \
+    "$(sed 's/#.*//' "$REPO_ROOT/.buildkite/coverage.txt" | awk '$2 == "checked"' | grep -c .)"
 }
 
 # run <label> <command...>: announce the command, run it, record wall clock.
@@ -66,10 +89,8 @@ summary() {
 }
 
 # have <experiment-dir>: true when the branch being built carries that
-# experiment. Branches that predate an experiment -- for example
-# codex/native-migration-resource-limit, which forked before experiments 10 and
-# 11 landed -- are checked against what they actually contain, and the skip is
-# printed rather than passed over quietly.
+# experiment. A branch cut before an experiment landed is checked against what
+# it actually contains, and the skip is printed rather than passed over quietly.
 have() {
   if [ -d "$REPO_ROOT/experiments/$1" ]; then
     return 0
