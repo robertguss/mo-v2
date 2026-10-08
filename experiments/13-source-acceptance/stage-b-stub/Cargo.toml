@@ -1,0 +1,23 @@
+[package]
+name = "rob1333-stage-b-stub"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+# Acceptance-owned CANNED interface fixtures for Stage B preparation. Neither
+# binary parses Mo or evaluates anything: each replays one hand-written schedule
+# so the acceptance link, the streaming adapter and the control harness can be
+# exercised before a Stage B candidate exists. Never builder input.
+
+[[bin]]
+name = "stage_b_call_stub"
+path = "call_stub.rs"
+
+[[bin]]
+name = "stage_b_large_stub"
+path = "large_stub.rs"
+
+[dependencies]
+mo-acceptance-driver = { path = "../driver" }
+mo-acceptance-runtime = { path = "../runtime" }
+serde_json = "1"

@@ -1,0 +1,12 @@
+{
+  "row": "ROB-1333 Stage B acceptance preparation",
+  "convention": "elapsed contributor seconds from explicit start to stop, including tool, build and test waits, excluding timestamped owner-wait and stopped periods",
+  "contributors": 1,
+  "concurrent": false,
+  "started": null,
+  "stopped": "2026-10-08T13:52:55.438038+00:00",
+  "elapsed_seconds": null,
+  "check_run_seconds": 51.705,
+  "owner_wait_seconds": 0,
+  "note": "Earlier preparation and Stage A effort are recorded in their own files and are not reconstructed here."
+}

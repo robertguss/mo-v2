@@ -1,0 +1,331 @@
+{
+  "runs": [
+    {
+      "depth": 12,
+      "committed_steps": 27,
+      "full_observations": 2,
+      "streamed_commits": 27,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        12
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 12,
+      "peak_cleanup_chain": 0,
+      "peak_retained_rows": 39,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 22408,
+      "verifier_peak_kib": 29424,
+      "elapsed_seconds": 0.004531462,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 12,
+        "answer": "0",
+        "available_bytes": 5184032768,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 0.004531462,
+        "transitions": 27,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          12
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 2000,
+      "committed_steps": 4003,
+      "full_observations": 2,
+      "streamed_commits": 4003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        2000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 2000,
+      "peak_cleanup_chain": 0,
+      "peak_retained_rows": 6003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 23064,
+      "verifier_peak_kib": 35824,
+      "elapsed_seconds": 0.164984506,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 2000,
+        "answer": "0",
+        "available_bytes": 5183029248,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 0.164984506,
+        "transitions": 4003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          2000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 5000,
+      "committed_steps": 10003,
+      "full_observations": 3,
+      "streamed_commits": 10003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        5000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 5000,
+      "peak_cleanup_chain": 5000,
+      "peak_retained_rows": 15003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 28808,
+      "verifier_peak_kib": 41328,
+      "elapsed_seconds": 0.443253671,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 5000,
+        "answer": "0",
+        "available_bytes": 5176520704,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 0.443253671,
+        "transitions": 10003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          5000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 20000,
+      "committed_steps": 40003,
+      "full_observations": 6,
+      "streamed_commits": 40003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        20000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 20000,
+      "peak_cleanup_chain": 20000,
+      "peak_retained_rows": 60003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 43532,
+      "verifier_peak_kib": 56084,
+      "elapsed_seconds": 1.928395051,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 20000,
+        "answer": "0",
+        "available_bytes": 5162336256,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 1.928395051,
+        "transitions": 40003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          20000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 50000,
+      "committed_steps": 100003,
+      "full_observations": 12,
+      "streamed_commits": 100003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        50000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 50000,
+      "peak_cleanup_chain": 50000,
+      "peak_retained_rows": 150003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 104100,
+      "verifier_peak_kib": 106420,
+      "elapsed_seconds": 5.818912024,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 50000,
+        "answer": "0",
+        "available_bytes": 5116309504,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 5.818912024,
+        "transitions": 100003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          50000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 100000,
+      "committed_steps": 200003,
+      "full_observations": 22,
+      "streamed_commits": 200003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        100000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 100000,
+      "peak_cleanup_chain": 100000,
+      "peak_retained_rows": 300003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 204088,
+      "verifier_peak_kib": 193380,
+      "elapsed_seconds": 15.533070268,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 100000,
+        "answer": "0",
+        "available_bytes": 5043265536,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 15.533070268,
+        "transitions": 200003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          100000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 200000,
+      "committed_steps": 400003,
+      "full_observations": 42,
+      "streamed_commits": 400003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        200000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 200000,
+      "peak_cleanup_chain": 200000,
+      "peak_retained_rows": 600003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 407944,
+      "verifier_peak_kib": 354116,
+      "elapsed_seconds": 46.277393846,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 200000,
+        "answer": "0",
+        "available_bytes": 5022597120,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 46.277393846,
+        "transitions": 400003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          200000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    }
+  ],
+  "controls": {
+    "compiled-stub/physical-leak": "reported a cell event the storage never performed",
+    "wrong-observation-period": "large full-observation schedule",
+    "approved-depth-refused": "D151 fixes the million-cell workloads and does not authorize running them"
+  },
+  "candidate_executed": false,
+  "resource_workload_executed": false,
+  "resume_run": {
+    "committed_steps": 10003,
+    "full_observations": 5,
+    "peak_cleanup_chain": 5000,
+    "elapsed_seconds": 0.464428325
+  },
+  "destroy_cut": {
+    "committed_steps": 4000,
+    "cleanup_frees": 3000,
+    "teardown_frees": 0,
+    "peak_cleanup_chain": 2000
+  },
+  "scaling": {
+    "measured": [
+      {
+        "depth": 20000,
+        "steps": 40003,
+        "chain": 50000,
+        "seconds": 1.928395051
+      },
+      {
+        "depth": 50000,
+        "steps": 100003,
+        "chain": 275000,
+        "seconds": 5.818912024
+      },
+      {
+        "depth": 100000,
+        "steps": 200003,
+        "chain": 1050000,
+        "seconds": 15.533070268
+      },
+      {
+        "depth": 200000,
+        "steps": 400003,
+        "chain": 4100000,
+        "seconds": 46.277393846
+      }
+    ],
+    "seconds_per_transition": 3.7326166089756946e-05,
+    "seconds_per_serialized_row": 7.632488642638888e-06,
+    "projection": {
+      "discarded-list": {
+        "transitions": 2000003,
+        "serialized_observation_rows": 100500000,
+        "seconds_from_transitions": 74.65244415801216,
+        "seconds_from_observation_rows": 767.0651085852082,
+        "seconds_total": 841.7175527432204,
+        "watchdog_seconds": 600
+      },
+      "non-tail-sum": {
+        "transitions": 18000014,
+        "serialized_observation_rows": 5099507800,
+        "seconds_from_transitions": 671.8715121819503,
+        "seconds_from_observation_rows": 38921.93536654842,
+        "seconds_total": 39593.80687873037,
+        "watchdog_seconds": 600
+      }
+    },
+    "note": "A measurement of this acceptance harness on this machine, not of a candidate."
+  }
+}

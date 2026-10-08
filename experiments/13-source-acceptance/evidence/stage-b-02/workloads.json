@@ -1,0 +1,312 @@
+{
+  "reference_depths": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "schedule_comparisons": 873,
+  "state_comparisons": 873,
+  "state_growth": {
+    "discarded-list": [
+      {
+        "depth": 0,
+        "memory": 0,
+        "bindings": 1,
+        "frames": 0,
+        "pending": 0,
+        "control": 1,
+        "release": 0,
+        "transitions": 3,
+        "landmarks": 2
+      },
+      {
+        "depth": 1,
+        "memory": 1,
+        "bindings": 1,
+        "frames": 0,
+        "pending": 0,
+        "control": 1,
+        "release": 1,
+        "transitions": 5,
+        "landmarks": 4
+      },
+      {
+        "depth": 2,
+        "memory": 2,
+        "bindings": 1,
+        "frames": 0,
+        "pending": 1,
+        "control": 1,
+        "release": 2,
+        "transitions": 7,
+        "landmarks": 6
+      },
+      {
+        "depth": 3,
+        "memory": 3,
+        "bindings": 1,
+        "frames": 0,
+        "pending": 1,
+        "control": 1,
+        "release": 3,
+        "transitions": 9,
+        "landmarks": 8
+      },
+      {
+        "depth": 4,
+        "memory": 4,
+        "bindings": 1,
+        "frames": 0,
+        "pending": 1,
+        "control": 1,
+        "release": 4,
+        "transitions": 11,
+        "landmarks": 10
+      },
+      {
+        "depth": 5,
+        "memory": 5,
+        "bindings": 1,
+        "frames": 0,
+        "pending": 1,
+        "control": 1,
+        "release": 5,
+        "transitions": 13,
+        "landmarks": 12
+      },
+      {
+        "depth": 6,
+        "memory": 6,
+        "bindings": 1,
+        "frames": 0,
+        "pending": 1,
+        "control": 1,
+        "release": 6,
+        "transitions": 15,
+        "landmarks": 14
+      }
+    ],
+    "non-tail-sum": [
+      {
+        "depth": 0,
+        "memory": 0,
+        "bindings": 1,
+        "frames": 1,
+        "pending": 0,
+        "control": 3,
+        "release": 0,
+        "transitions": 14,
+        "landmarks": 8
+      },
+      {
+        "depth": 1,
+        "memory": 1,
+        "bindings": 3,
+        "frames": 2,
+        "pending": 1,
+        "control": 6,
+        "release": 0,
+        "transitions": 32,
+        "landmarks": 18
+      },
+      {
+        "depth": 2,
+        "memory": 2,
+        "bindings": 3,
+        "frames": 3,
+        "pending": 1,
+        "control": 9,
+        "release": 0,
+        "transitions": 50,
+        "landmarks": 28
+      },
+      {
+        "depth": 3,
+        "memory": 3,
+        "bindings": 3,
+        "frames": 4,
+        "pending": 1,
+        "control": 12,
+        "release": 0,
+        "transitions": 68,
+        "landmarks": 38
+      },
+      {
+        "depth": 4,
+        "memory": 4,
+        "bindings": 3,
+        "frames": 5,
+        "pending": 1,
+        "control": 15,
+        "release": 0,
+        "transitions": 86,
+        "landmarks": 48
+      },
+      {
+        "depth": 5,
+        "memory": 5,
+        "bindings": 3,
+        "frames": 6,
+        "pending": 1,
+        "control": 18,
+        "release": 0,
+        "transitions": 104,
+        "landmarks": 58
+      },
+      {
+        "depth": 6,
+        "memory": 6,
+        "bindings": 3,
+        "frames": 7,
+        "pending": 1,
+        "control": 21,
+        "release": 0,
+        "transitions": 122,
+        "landmarks": 68
+      }
+    ]
+  },
+  "state_growth_per_cell": {
+    "discarded-list": {
+      "memory": {
+        "per_cell": 1,
+        "constant": 0
+      },
+      "bindings": {
+        "per_cell": 0,
+        "constant": 1
+      },
+      "frames": {
+        "per_cell": 0,
+        "constant": 0
+      },
+      "pending": null,
+      "control": {
+        "per_cell": 0,
+        "constant": 1
+      },
+      "release": {
+        "per_cell": 1,
+        "constant": 0
+      },
+      "transitions": {
+        "per_cell": 2,
+        "constant": 3
+      },
+      "landmarks": {
+        "per_cell": 2,
+        "constant": 2
+      }
+    },
+    "non-tail-sum": {
+      "memory": {
+        "per_cell": 1,
+        "constant": 0
+      },
+      "bindings": null,
+      "frames": {
+        "per_cell": 1,
+        "constant": 1
+      },
+      "pending": null,
+      "control": {
+        "per_cell": 3,
+        "constant": 3
+      },
+      "release": {
+        "per_cell": 0,
+        "constant": 0
+      },
+      "transitions": {
+        "per_cell": 18,
+        "constant": 14
+      },
+      "landmarks": {
+        "per_cell": 10,
+        "constant": 8
+      }
+    }
+  },
+  "approved_depth_projection": {
+    "discarded-list": {
+      "transitions": 2000003,
+      "answer": "0",
+      "evaluation_cell_counts": [
+        0,
+        0,
+        1000000
+      ],
+      "peak_explicit_frames": 0,
+      "observations": {
+        "summaries": 200,
+        "begin": 1,
+        "deepest": 1,
+        "finish": 1,
+        "cleanup_boundaries": 4,
+        "serialized_rows": 3001204,
+        "deepest_step": 1999999
+      },
+      "schedule": {
+        "summary_observations": 200,
+        "summary_changed_cells": 1000000,
+        "summary_header_rows": 1200,
+        "start_rows": 1000001,
+        "deepest_rows": 1000002,
+        "finish_rows": 1,
+        "cleanup_rows": 0,
+        "deepest_step": 1999999,
+        "serialized_rows": 3001204
+      },
+      "peak_full_observation_rows": {
+        "memory": 1000000,
+        "frames": 0,
+        "control": 1,
+        "release": 1000000
+      },
+      "serialized_observation_rows": 3001204
+    },
+    "non-tail-sum": {
+      "transitions": 18000014,
+      "answer": "1000000",
+      "evaluation_cell_counts": [
+        0,
+        0,
+        1000000
+      ],
+      "peak_explicit_frames": 1000001,
+      "observations": {
+        "summaries": 1800,
+        "begin": 1,
+        "deepest": 1,
+        "finish": 1,
+        "cleanup_boundaries": 4,
+        "serialized_rows": 7010803,
+        "deepest_step": 12000005
+      },
+      "schedule": {
+        "summary_observations": 1800,
+        "summary_changed_cells": 999998,
+        "summary_header_rows": 10800,
+        "start_rows": 1000001,
+        "deepest_rows": 5000003,
+        "finish_rows": 1,
+        "cleanup_rows": 0,
+        "deepest_step": 12000005,
+        "serialized_rows": 7010803
+      },
+      "peak_full_observation_rows": {
+        "memory": 1000000,
+        "frames": 1000001,
+        "control": 3000003,
+        "release": 0
+      },
+      "serialized_observation_rows": 7010803
+    }
+  }
+}

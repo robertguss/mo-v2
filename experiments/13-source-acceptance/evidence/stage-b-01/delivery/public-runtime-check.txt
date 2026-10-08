@@ -1,0 +1,3 @@
+cargo +1.98.1 check --locked --offline --manifest-path /tmp/rob1333-stage-b-public-riqms0ln/runtime/Cargo.toml
+    Checking mo-acceptance-runtime v0.0.0 (/tmp/rob1333-stage-b-public-riqms0ln/runtime)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s

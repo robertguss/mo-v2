@@ -1,0 +1,51 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 5069410304,
+  "stack_bytes": 8388608,
+  "error": "AssertionError: full committed execution/physical state",
+  "elapsed_ns": 4685743,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 3025169050980,
+      "end_ns": 3025172020502
+    },
+    {
+      "phase": "check",
+      "start_ns": 3025172020502,
+      "end_ns": 3025172855691
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 3025172855691,
+      "end_ns": 3025172911473
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 3025172911473,
+      "end_ns": 3025172957718
+    },
+    {
+      "phase": "begin",
+      "start_ns": 3025172957718,
+      "end_ns": 3025173136429
+    },
+    {
+      "phase": "commit",
+      "start_ns": 3025173136429,
+      "end_ns": 3025173274574
+    },
+    {
+      "phase": "commit",
+      "start_ns": 3025173274574,
+      "end_ns": 3025173425516
+    },
+    {
+      "phase": "commit",
+      "start_ns": 3025173425516,
+      "end_ns": 3025173582189
+    }
+  ]
+}

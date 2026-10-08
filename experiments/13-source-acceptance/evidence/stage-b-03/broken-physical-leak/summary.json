@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "large": true,
+  "workload": "discarded-list",
+  "depth": 12,
+  "available_bytes": 4857151488,
+  "stack_bytes": 8388608,
+  "observation_period": 10000,
+  "error": "AssertionError: reported a cell event the storage never performed",
+  "elapsed_ns": 4327935,
+  "phase_count": 6
+}
