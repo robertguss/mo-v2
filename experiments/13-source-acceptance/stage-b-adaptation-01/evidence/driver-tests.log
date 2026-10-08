@@ -1,0 +1,19 @@
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.151
+   Compiling mo-acceptance-driver v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/driver)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.69s
+     Running unittests lib.rs (/home/user/rob1333-stage-b-adaptation-checks/target/debug/deps/mo_acceptance_driver-a52650cec68dd55e)
+
+running 3 tests
+test tests::pre_run_outputs_are_distinct_and_exact_without_a_run ... ok
+test tests::large_schedule_and_execution_cap_have_exact_boundaries ... ok
+test tests::same_step_gets_explicit_mode_and_boundaries_reset_only_the_observation_cursor ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests mo_acceptance_driver
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
