@@ -6,6 +6,3 @@
 
 # Python bytecode from the acceptance preparation scripts.
 __pycache__/
-
-# Extracted Stage B candidate. Hashes are recorded; the source is not imported.
-experiments/13-source-acceptance/candidate-stage-b/
