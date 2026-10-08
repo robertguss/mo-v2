@@ -1,0 +1,13 @@
+[package]
+name = "rob1333-stage-b-link"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[[bin]]
+name = "rob1333-stage-b-link"
+path = "main.rs"
+
+[dependencies]
+mo-stage-b = { path = "../candidate-stage-b" }
+mo-acceptance-driver = { path = "../driver" }

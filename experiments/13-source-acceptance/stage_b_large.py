@@ -9,8 +9,8 @@ This module keeps the same wire protocol and the same inclusive watchdog, but
 turns the verifier inside out: expectations come from a closed-form rule
 (`stage_b_workloads`) evaluated at the step in hand, and nothing proportional to
 the number of committed actions is retained. What is retained is proportional to
-the live cell set and the cleanup chain, which is what the approved contract
-itself makes a committed state contain.
+the live cell set. D160 keeps the cleanup chain's body out of that retention
+except while a boundary photograph is being checked.
 
 Three frozen components are reused unchanged: the watchdog clock
 (`linked.check_clock`), the snapshot schema and frontend comparison
@@ -42,10 +42,14 @@ from stage_b_workloads import APPROVED_DEPTH, VALIDATION_DEPTH_CAP
 from wirecheck import check_public, public_bytes
 
 
-# D151: a full observation at the start, every 10,000 committed transitions, at
-# suspension/failure/finish, and at every cleanup boundary. The frozen Rust
-# collector already implements the periodic part; this is the same rule, stated
-# here so the adapter rejects a stream that does not follow it.
+# D159: a full-state photograph at the start, the deepest point, every pause,
+# failure or finish, and around cleanup. Every 10,000 committed steps between
+# those boundaries is a summary (counts, depth, live cells, changed cells),
+# not a photograph. D160: the cleanup chain is part of a photograph and only
+# its length is part of a summary. The frozen collector still attaches its
+# snapshot on the 10,000 grid; the stub puts a summary in that slot, and an
+# off-grid deepest photograph arrives as a pause boundary because the collector
+# cannot be changed.
 OBSERVATION_PERIOD = 10_000
 TRANSITION_CAP = 100_000_000
 
@@ -128,6 +132,9 @@ class LargeVerifier:
         self.peak_live = 0
         self.peak_release = 0
         self.full_observations = 0
+        self.summary_observations = 0
+        self.deepest_photographed = False
+        self.last_observation_step = 0
         self.streamed_commits = 0
         self.peak_retained = 0
         self.births_registered = 0
@@ -156,9 +163,19 @@ class LargeVerifier:
         assert self.peak_retained <= limit, "verifier retention grew beyond the live set"
 
     # --- schedule ----------------------------------------------------------
-    def must_observe(self, step):
-        """D151's periodic rule, with the start of the run always observed."""
-        return step % self.period == 0
+    def commit_observation(self, step):
+        """What a committed step must carry.
+
+        `full` is the deepest point when it lands on the periodic grid.
+        `summary` is every other periodic step. `none` carries cell events only.
+        Start, pause, failure, finish and cleanup are phase boundaries and are
+        full photographs whether or not the step is on the grid.
+        """
+        if step == self.workload.deepest_step() and step % self.period == 0:
+            return "full"
+        if step % self.period == 0:
+            return "summary"
+        return "none"
 
     # --- physical accounting ----------------------------------------------
     def apply_native(self, rows, phase):
@@ -246,10 +263,38 @@ class LargeVerifier:
         self.peak_frames = max(self.peak_frames, len(state["frames"]))
         self.peak_release = max(self.peak_release, len(snapshot["release"]))
         self.full_observations += 1
+        if self.step == self.workload.deepest_step():
+            self.deepest_photographed = True
         if terminal_expected is not None:
             assert snapshot["status"] == terminal_expected, "large terminal classification"
         self.last_state = state
+        self.last_observation_step = self.step
         return state
+
+    def check_summary(self, snapshot, row):
+        """D159/D160 between-boundary record. The chain body is not kept."""
+        summary_schema(snapshot)
+        assert snapshot["step"] == self.step, "summary committed step"
+        assert snapshot["depth"] == self.workload.frames(self.step), "summary depth"
+        assert snapshot["live_cells"] == self.workload.live_cells(self.step) == len(self.live), \
+            "summary live cells"
+        counts = [snapshot["counts"]["create"], snapshot["counts"]["write"], snapshot["counts"]["free"]]
+        assert counts == self.workload.cell_counts_at(self.step), "summary cell counts"
+        assert counts == [self.cell_counts["create"], self.cell_counts["write"], self.cell_counts["free"]], \
+            "summary counts disagree with the cell operations"
+        exact(snapshot["changed_cells"], self.workload.changed_cells(self.last_observation_step, self.step),
+              "summary changed cells")
+        assert snapshot["cleanup_chain_length"] == self.workload.chain_length(self.step), "summary chain length"
+        if row["graph"] is not None:
+            # The frozen collector still attaches the cell graph on this grid.
+            # D159 does not require it. Checked, then dropped.
+            memory = self.check_graph(row["graph"])
+            assert len(memory) == snapshot["live_cells"], "summary graph size"
+            del memory
+        self.summary_observations += 1
+        self.peak_release = max(self.peak_release, snapshot["cleanup_chain_length"])
+        self.peak_frames = max(self.peak_frames, snapshot["depth"])
+        self.last_observation_step = self.step
 
     def initial_row(self):
         case = self.case
@@ -353,12 +398,18 @@ class LargeVerifier:
         assert not self.pending_logical, "reported a cell event the storage never performed"
         self.register_births(meta["births_added"])
         self.streamed_commits += 1
-        full = row["graph"] is not None
-        assert full == self.must_observe(self.step), "large full-observation schedule"
-        if not full:
-            assert row["raw"]["snapshot"] is None, "snapshot outside the observation schedule"
+        kind = self.commit_observation(self.step)
+        snapshot_raw = row["raw"]["snapshot"]
+        if kind == "none":
+            assert row["graph"] is None and snapshot_raw is None, "large full-observation schedule"
             return
-        snapshot = load(row["raw"]["snapshot"])
+        assert snapshot_raw is not None, "large full-observation schedule"
+        snapshot = load(snapshot_raw)
+        if kind == "summary":
+            assert snapshot.get("observation") == "summary", "large full-observation schedule"
+            self.check_summary(snapshot, row)
+            return
+        assert row["graph"] is not None, "large full-observation schedule"
         snapshot_schema(snapshot)
         assert snapshot["step"] == self.step, "snapshot committed step"
         memory = self.check_graph(row["graph"])
@@ -455,6 +506,8 @@ class LargeVerifier:
         assert not self.pending_native and not self.pending_logical, "unmatched cell events"
         return dict(committed_steps=self.step, advances=self.advance_index,
                     destroy_calls=self.destroyed, full_observations=self.full_observations,
+                    summary_observations=self.summary_observations,
+                    deepest_photographed=self.deepest_photographed,
                     streamed_commits=self.streamed_commits,
                     evaluation_cell_counts=[self.cell_counts["create"], self.cell_counts["write"],
                                             self.cell_counts["free"]],
@@ -481,10 +534,26 @@ def projected_record(workload, *, elapsed_seconds, available_bytes, stack_bytes=
 
 
 def observation_count(workload, period=OBSERVATION_PERIOD):
-    """How many full observations D151's schedule asks for, and how big they get."""
-    periodic = workload.transitions() // period
-    return dict(periodic=periodic, begin=1, advances=1, cleanup_boundaries=4,
-                total=periodic + 6)
+    """D159/D160 observations for one completing run, and the rows they contain."""
+    cost = workload.schedule_cost(period)
+    return dict(summaries=cost["summary_observations"], begin=1, deepest=1, finish=1,
+                cleanup_boundaries=4, serialized_rows=cost["serialized_rows"],
+                deepest_step=cost["deepest_step"])
+
+
+def summary_schema(snapshot):
+    """The between-boundary record. It has no state, no chain and no event prefix."""
+    fields(snapshot, "observation step depth live_cells counts changed_cells cleanup_chain_length")
+    assert snapshot["observation"] == "summary", "summary observation kind"
+    natural(snapshot["step"])
+    natural(snapshot["depth"])
+    natural(snapshot["live_cells"])
+    natural(snapshot["cleanup_chain_length"])
+    fields(snapshot["counts"], "create write free")
+    for key in ("create", "write", "free"):
+        natural(snapshot["counts"][key])
+    for ident in snapshot["changed_cells"]:
+        natural(ident)
 
 
 def run_large_linked(command, workload, budgets, destination, *, env=None, timeout=600,

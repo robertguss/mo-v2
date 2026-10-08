@@ -1,0 +1,46 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 4588634112,
+  "stack_bytes": 8388608,
+  "error": "AssertionError: birth origin/domain/order",
+  "elapsed_ns": 4172366,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 6441599287399,
+      "end_ns": 6441602292206
+    },
+    {
+      "phase": "check",
+      "start_ns": 6441602292206,
+      "end_ns": 6441602612191
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 6441602612191,
+      "end_ns": 6441602672970
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 6441602672970,
+      "end_ns": 6441602731225
+    },
+    {
+      "phase": "begin",
+      "start_ns": 6441602731225,
+      "end_ns": 6441602961500
+    },
+    {
+      "phase": "commit",
+      "start_ns": 6441602961500,
+      "end_ns": 6441603128441
+    },
+    {
+      "phase": "commit",
+      "start_ns": 6441603128441,
+      "end_ns": 6441603335975
+    }
+  ]
+}

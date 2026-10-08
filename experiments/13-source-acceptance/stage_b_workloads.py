@@ -11,9 +11,12 @@ The rules are validated by exact equality against the frozen reference at small
 depths. That is the only thing that makes them trustworthy: they are not a
 second opinion about Mo, they are a compression of the existing prediction.
 
-D151 approves the two workloads and their observation schedule. It does not
-authorize running them. `stage_b_large` refuses any depth above
-`VALIDATION_DEPTH_CAP` so an adapter test cannot become an unauthorized run.
+D151 approves the two workloads and does not authorize running them.
+D159 (summaries between boundaries, full photographs at boundaries) and D160
+(the cleanup chain in full only at those photographs, its length in between)
+are the observation schedule this module implements. `stage_b_large` refuses
+any depth at or above the approved million, so an adapter test cannot become
+an unauthorized run.
 """
 from copy import deepcopy
 
@@ -27,6 +30,11 @@ from syntax import check, parse
 # the targets; it explicitly does not authorize execution).
 VALIDATION_DEPTH_CAP = 200_000
 APPROVED_DEPTH = 1_000_000
+
+# A between-boundary summary carries six numbers plus the identities of the
+# cells that changed: how deep, how many cells are alive, how many creates,
+# writes and frees so far, and how long the cleanup chain is.
+SUMMARY_HEADER_FIELDS = 6
 
 NON_TAIL_SUM_SOURCE = (
     "input xs: ListInt; "
@@ -120,6 +128,57 @@ class Workload:
     def expected_peak_frames(self):
         raise NotImplementedError
 
+    def deepest_step(self):
+        raise NotImplementedError
+
+    def chain_length(self, step):
+        raise NotImplementedError
+
+    def changed_count(self, previous, step):
+        raise NotImplementedError
+
+    def photograph_rows(self, step):
+        raise NotImplementedError
+
+    def summary_steps(self, period):
+        """Committed steps whose required observation is a D159 summary.
+
+        The deepest step is a full photograph even when it also lands on the
+        periodic grid, so it is not counted here.
+        """
+        steps = []
+        step = period
+        last = self.transitions()
+        deepest = self.deepest_step()
+        while step <= last:
+            if step != deepest:
+                steps.append(step)
+            step += period
+        return steps
+
+    def schedule_cost(self, period):
+        """Serialized rows D159/D160 require for one completing run.
+
+        Full photographs: the start, the deepest committed step, the finish,
+        and the cleanup boundaries. After a clean finish the cleanup
+        photographs are empty, so they add no rows. Summaries contribute their
+        header and the changed-cell identities, never the cleanup chain.
+        """
+        changed = 0
+        previous = 0
+        steps = self.summary_steps(period)
+        for step in steps:
+            changed += self.changed_count(previous, step)
+            previous = step
+        start = self.depth + 1
+        deepest = self.photograph_rows(self.deepest_step())
+        finish = self.photograph_rows(self.transitions())
+        header = SUMMARY_HEADER_FIELDS * len(steps)
+        return dict(summary_observations=len(steps), summary_changed_cells=changed,
+                    summary_header_rows=header, start_rows=start, deepest_rows=deepest,
+                    finish_rows=finish, cleanup_rows=0, deepest_step=self.deepest_step(),
+                    serialized_rows=changed + header + start + deepest + finish)
+
     def row(self, step):
         """Everything the frozen reference records for one committed action."""
         return dict(step=step, transition=self.transition(step), site=self.site(step),
@@ -201,14 +260,53 @@ class DiscardedList(Workload):
     def release(self, step):
         """The cleanup chain still being released, oldest first.
 
-        This grows with the number of cells released so far, so a committed
-        state near the end of the approved workload carries a chain of up to
-        one million identities. That is a property of the approved contract,
-        not of this rule; see STAGE_B_PREPARATION.md, open choice 1.
+        D160 records this list in full only in a full-state photograph. Between
+        photographs the schedule records `chain_length` and nothing else, so a
+        projection must not call this at the approved depth.
         """
-        if step == 0 or step > 2 * self.depth:
+        if self.chain_length(step) == 0:
             return []
-        return list(range(1, (step + 1) // 2 + 1))
+        return list(range(1, self.chain_length(step) + 1))
+
+    def chain_length(self, step):
+        if step == 0 or step > 2 * self.depth:
+            return 0
+        return (step + 1) // 2
+
+    def frames(self, step):
+        return 0
+
+    def live_cells(self, step):
+        if step == 0 or step > 2 * self.depth:
+            return self.depth if step == 0 else 0
+        return self.depth - step // 2
+
+    def deepest_step(self):
+        """First committed step at which the cleanup chain is longest.
+
+        With nothing to release the chain is empty throughout, and the first
+        step is the boundary the schedule photographs.
+        """
+        return 1 if self.depth == 0 else 2 * self.depth - 1
+
+    def cell_counts_at(self, step):
+        return [0, 0, min(step // 2, self.depth)]
+
+    def changed_cells(self, previous, step):
+        """Cell identities created, written or freed in (previous, step]."""
+        first = previous // 2 + 1
+        last = min(step // 2, self.depth)
+        if first > last:
+            return []
+        return list(range(first, last + 1))
+
+    def changed_count(self, previous, step):
+        return max(0, min(step // 2, self.depth) - min(previous // 2, self.depth))
+
+    def photograph_rows(self, step):
+        """Rows in one full-state photograph. Constant time, no chain built."""
+        control = 1 if step == 2 * self.depth + 2 else 0
+        return self.live_cells(step) + self.frames(step) + control + 1 + self.chain_length(step)
 
     def births(self):
         """One input binding, whatever the depth. No frame or cell is born."""
@@ -236,7 +334,7 @@ class NonTailSum(Workload):
 
     name = "non-tail-sum"
     source = NON_TAIL_SUM_SOURCE
-    states_implemented = False
+    states_implemented = True
 
     PROLOGUE = [("Start", "root"), ("Dispatch compound", "main"), ("Leaf", "main/0"),
                 ("Operand capture", "main")]
@@ -357,16 +455,6 @@ class NonTailSum(Workload):
             return level - (1 if offset >= 5 else 0)
         return 0
 
-    def observation_rows(self, period):
-        """Total control, frame and memory rows D151's schedule asks for."""
-        total = dict(control=0, frames=0, memory=0, observations=0)
-        for step in range(period, self.transitions() + 1, period):
-            total["control"] += self.control_rows(step)
-            total["frames"] += self.frames(step)
-            total["memory"] += self.live_cells(step)
-            total["observations"] += 1
-        return total
-
     def _prologue_landmarks(self, before_offset):
         offsets = [1] + ([3] if self.depth else [])
         return sum(1 for o in offsets if o < before_offset)
@@ -400,6 +488,323 @@ class NonTailSum(Workload):
             before += len(self.ASCENT_LANDMARKS) * (self.depth - level)
             return before + sum(1 for o in self.ASCENT_LANDMARKS if o < offset)
         return before + len(self.ASCENT_LANDMARKS) * self.depth + offset - 1
+
+    def _ids(self, level):
+        """Binding identities of nonempty frame `level`: xs, then h, then t."""
+        xs = 1 + 3 * (level - 1)
+        return xs, xs + 1, xs + 2
+
+    def _scope_xs(self, level):
+        return [["xs", self._ids(level)[0]]]
+
+    def _scope3(self, level):
+        xs, head, tail = self._ids(level)
+        return [["xs", xs], ["h", head], ["t", tail]]
+
+    def _control_row(self, site, invocation, operands, scope):
+        return dict(site=site, scope=scope, invocation=invocation, operands=operands)
+
+    def _main_row(self, operands):
+        return self._control_row("main", 0, operands, [["xs", 0]])
+
+    def _suspended(self, level):
+        """The three rows a nonempty frame keeps while its recursive call runs."""
+        scope = self._scope3(level)
+        return [self._control_row("function/0/body", level, [], self._scope_xs(level)),
+                self._control_row("function/0/body/2", level, [["n", "1"]], scope),
+                self._control_row("function/0/body/2/1", level, [], scope)]
+
+    def _callers(self, level):
+        """Main plus every nonempty frame shallower than `level`, call in progress."""
+        rows = [self._main_row([])]
+        for caller in range(1, level):
+            rows.extend(self._suspended(caller))
+        return rows
+
+    def _tail_value(self, level):
+        return ["l", level + 1 if level < self.depth else None]
+
+    def _sum_text(self, cells):
+        return str(cells)
+
+    def control(self, step):
+        block, level, offset = self.locate(step)
+        if block == "prologue":
+            if offset == 1:
+                return []
+            if offset == 2:
+                return [self._main_row([])]
+            if offset == 3:
+                return [self._main_row([]),
+                        self._control_row("main/0", 0, [], [["xs", 0]])]
+            return [self._main_row([["l", 1 if self.depth else None]])]
+        if block == "epilogue":
+            return [] if offset == 2 else [self._main_row([])]
+        if block == "descent":
+            callers = self._callers(level)
+            scope = self._scope_xs(level)
+            full = self._scope3(level)
+            body = "function/0/body"
+            if offset == 1:
+                return callers
+            if offset == 2:
+                return callers + [self._control_row(body, level, [], scope)]
+            if offset == 3:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(body + "/0", level, [], scope)]
+            if offset == 4:
+                return callers + [self._control_row(body, level, [["l", level]], scope)]
+            if offset in (5, 6):
+                return callers + [self._control_row(body, level, [], scope)]
+            add = body + "/2"
+            if offset == 7:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(add, level, [], full)]
+            if offset == 8:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(add, level, [], full),
+                                   self._control_row(add + "/0", level, [], full)]
+            if offset == 9:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(add, level, [["n", "1"]], full)]
+            call = add + "/1"
+            if offset == 10:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(add, level, [["n", "1"]], full),
+                                   self._control_row(call, level, [], full)]
+            if offset == 11:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(add, level, [["n", "1"]], full),
+                                   self._control_row(call, level, [], full),
+                                   self._control_row(call + "/0", level, [], full)]
+            return callers + [self._control_row(body, level, [], scope),
+                               self._control_row(add, level, [["n", "1"]], full),
+                               self._control_row(call, level, [self._tail_value(level)], full)]
+        if block == "base":
+            callers = self._callers(level)
+            scope = self._scope_xs(level)
+            body = "function/0/body"
+            if offset == 1:
+                return callers
+            if offset == 2:
+                return callers + [self._control_row(body, level, [], scope)]
+            if offset == 3:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(body + "/0", level, [], scope)]
+            if offset == 4:
+                return callers + [self._control_row(body, level, [["l", None]], scope)]
+            if offset == 5:
+                return callers + [self._control_row(body, level, [], scope)]
+            if offset == 6:
+                return callers + [self._control_row(body, level, [], scope),
+                                   self._control_row(body + "/1", level, [], scope)]
+            if offset == 7:
+                return callers + [self._control_row(body, level, [["n", "0"]], scope)]
+            return callers + [self._control_row(body, level, [], scope)]
+        callers = self._callers(level)
+        scope = self._scope_xs(level)
+        full = self._scope3(level)
+        body = "function/0/body"
+        result = self._sum_text(self.depth - level + 1)
+        tail_result = self._sum_text(self.depth - level)
+        if offset == 1:
+            return callers + self._suspended(level)
+        if offset == 2:
+            return callers + [self._control_row(body, level, [], scope),
+                               self._control_row(body + "/2", level, [["n", "1"], ["n", tail_result]], full)]
+        if offset == 3:
+            return callers + [self._control_row(body, level, [], scope),
+                               self._control_row(body + "/2", level, [], full)]
+        if offset in (4, 5):
+            return callers + [self._control_row(body, level, [["n", result]], scope)]
+        return callers + [self._control_row(body, level, [], scope)]
+
+    def _bindings(self, step):
+        block, level, offset = self.locate(step)
+        if block == "prologue":
+            status = "holding" if self.depth and offset <= 2 else ("movedOn" if self.depth else "noHolder")
+            if self.depth == 0:
+                status = "noHolder"
+            elif offset <= 2:
+                status = "holding"
+            else:
+                status = "movedOn"
+            value = ["l", None] if self.depth == 0 else ["l", 1]
+            return [[0, "xs", value, status]]
+        if block == "epilogue":
+            value = ["l", None] if self.depth == 0 else ["l", 1]
+            status = "noHolder" if self.depth == 0 else "movedOn"
+            return [[0, "xs", value, status]]
+        if block == "base":
+            return [[1 + 3 * self.depth, "xs", ["l", None], "noHolder"]]
+        xs, head, tail = self._ids(level)
+        tail_cell = level + 1 if level < self.depth else None
+        if block == "descent" and offset <= 2:
+            return [[xs, "xs", ["l", level], "holding"]]
+        if block == "descent" and offset <= 4:
+            return [[xs, "xs", ["l", level], "movedOn"]]
+        t_status = "noHolder" if tail_cell is None else "holding"
+        if block == "descent" and offset >= 11 and tail_cell is not None:
+            t_status = "movedOn"
+        if block == "ascent" and tail_cell is not None:
+            t_status = "movedOn"
+        if block == "ascent" and offset == 6:
+            return [[xs, "xs", ["l", level], "movedOn"]]
+        return [[xs, "xs", ["l", level], "movedOn"],
+                [head, "h", ["n", "1"], "noHolder"],
+                [tail, "t", ["l", tail_cell], t_status]]
+
+    def _pending(self, step):
+        block, level, offset = self.locate(step)
+        if block == "prologue" and offset >= 3 and self.depth:
+            return [["l", 1]]
+        if block == "descent" and offset in (3, 4):
+            return [["l", level]]
+        if block == "descent" and offset in (11, 12) and level < self.depth:
+            return [["l", level + 1]]
+        return []
+
+    def _allocated_span(self, step):
+        """Cells still allocated, and how far the aside prefix reaches.
+
+        Cells are freed from the inside of the recursion outward, so during the
+        ascent the surviving cells are the low identities, not the high ones.
+        """
+        block, level, offset = self.locate(step)
+        if block == "prologue":
+            return 0, self.depth
+        if block == "descent":
+            return level - 1 + (1 if offset >= 5 else 0), self.depth
+        if block == "base":
+            return self.depth, self.depth
+        if block == "ascent":
+            allocated = level - (1 if offset >= 5 else 0)
+            return allocated, allocated
+        return 0, 0
+
+    def memory(self, step):
+        aside_last, allocated = self._allocated_span(step)
+        rows = []
+        for ident in range(1, allocated + 1):
+            if ident <= aside_last:
+                rows.append([ident, "1", None, 0, "aside"])
+            else:
+                tail = ident + 1 if ident < self.depth else None
+                rows.append([ident, "1", tail, 1, "live"])
+        return rows
+
+    def _aside(self, step):
+        aside_last, _ = self._allocated_span(step)
+        return [[ident - 1, ident] for ident in range(1, aside_last + 1)]
+
+    def _kind(self, step):
+        name = self.transition(step)
+        if name == "Leaf":
+            block, level, offset = self.locate(step)
+            if block == "prologue" and offset == 3 and self.depth:
+                return "holderMoved"
+            if block == "descent" and offset == 3:
+                return "holderMoved"
+            if block == "descent" and offset == 11 and level < self.depth:
+                return "holderMoved"
+            return None
+        return {"Start": "start", "Finish": "end", "Enter": "callEntered", "Return": "callReturned",
+                "Choose branch": "branchChosen", "Match decompose": "matchStep4Done",
+                "Branch start": "branchStarts", "Branch result/cleanup": "branchValueWorkedOut",
+                "Handoff": "branchValueHandedOn", "Free cell": "cellFreed"}.get(name)
+
+    def _branch(self, step):
+        block, level, offset = self.locate(step)
+        if block == "base" and offset in (7, 8):
+            return ["n", "0"]
+        if block == "ascent" and offset in (4, 6):
+            return ["n", self._sum_text(self.depth - level + 1)]
+        return None
+
+    def ready(self, step):
+        block, level, offset = self.locate(step)
+        if block == "prologue":
+            return ["l", 1 if self.depth else None] if offset == 3 else None
+        if block == "descent":
+            if offset == 3:
+                return ["l", level]
+            if offset == 8:
+                return ["n", "1"]
+            if offset == 11:
+                return self._tail_value(level)
+            return None
+        if block == "base":
+            if offset == 3:
+                return ["l", None]
+            if offset in (6, 8):
+                return ["n", "0"]
+            return None
+        if block == "ascent":
+            if offset == 1:
+                return ["n", self._sum_text(self.depth - level)]
+            if offset in (3, 6):
+                return ["n", self._sum_text(self.depth - level + 1)]
+            return None
+        return ["n", self._sum_text(self.depth)]
+
+    def release(self, step):
+        return []
+
+    def chain_length(self, step):
+        return 0
+
+    def state(self, step):
+        return dict(kind=self._kind(step), memory=self.memory(step), bindings=self._bindings(step),
+                    pending=self._pending(step), outside=[], aside=self._aside(step),
+                    branch=self._branch(step), frames=list(range(1, self.frames(step) + 1)))
+
+    def deepest_step(self):
+        """First step at which the frame count attains its maximum.
+
+        That is the Enter of the base case: every frame of the recursion is
+        alive, and the eight steps of the base case stay at that depth.
+        """
+        return 5 + 12 * self.depth
+
+    def free_step(self, level):
+        """The committed step that frees the cell decomposed by frame `level`."""
+        return 17 + 18 * self.depth - 6 * level
+
+    def cell_counts_at(self, step):
+        return [0, 0, self._frees_by(step)]
+
+    def _frees_by(self, step):
+        if self.depth == 0 or step < self.free_step(self.depth):
+            return 0
+        need = 17 + 18 * self.depth - step
+        first = 1 if need <= 0 else (need + 5) // 6
+        if first > self.depth:
+            return 0
+        return self.depth - first + 1
+
+    def changed_cells(self, previous, step):
+        """Freed cell identities in (previous, step], inner frame first."""
+        found = []
+        for level in range(self.depth, 0, -1):
+            when = self.free_step(level)
+            if previous < when <= step:
+                found.append(level)
+        return found
+
+    def changed_count(self, previous, step):
+        return self._frees_by(step) - self._frees_by(previous)
+
+    def bindings_count(self, step):
+        block, _, offset = self.locate(step)
+        if block in ("prologue", "epilogue", "base"):
+            return 1
+        if block == "descent":
+            return 1 if offset <= 4 else 3
+        return 1 if offset == 6 else 3
+
+    def photograph_rows(self, step):
+        return (self.live_cells(step) + self.frames(step) + self.control_rows(step)
+                + self.bindings_count(step) + self.chain_length(step))
 
     def expected_answer(self):
         return str(self.depth)
@@ -505,7 +910,20 @@ def validate_states(workload):
         for key in ("transition", "site", "event_end", "landmark", "state", "control", "ready", "release"):
             assert actual[key] == predicted[key], ("closed-form " + key, workload.name, workload.depth, step,
                                                    actual[key], predicted[key])
+        assert workload.chain_length(step) == len(predicted["release"]), "closed-form chain length"
+        assert workload.photograph_rows(step) == (
+            len(predicted["state"]["memory"]) + len(predicted["state"]["frames"])
+            + len(predicted["control"]) + len(predicted["state"]["bindings"])
+            + len(predicted["release"])), "closed-form photograph size"
         compared += 1
+    cell_events = [event[1] for event in reference.events if event[0] in ("create", "write", "free")]
+    assert workload.changed_cells(0, workload.transitions()) == cell_events, "closed-form changed cells"
+    assert workload.changed_count(0, workload.transitions()) == len(cell_events), "closed-form changed count"
+    if len(reference.trace) >= 2:
+        mid = len(reference.trace) // 2
+        window = [event[1] for event in reference.events[reference.trace[mid - 1]["event_end"]:]
+                  if event[0] in ("create", "write", "free")]
+        assert workload.changed_cells(mid, workload.transitions()) == window, "closed-form changed window"
     return compared
 
 

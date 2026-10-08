@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "controls_executed": 0,
+  "record_controls": 50,
+  "deferred_controls": 10,
+  "controls_without_public_trigger": [
+    "omitted-entry-create"
+  ],
+  "controls_with_public_trigger": 9,
+  "deferred_expectations_rerun_under_stage_b": 16,
+  "qualification": "Zero of the ten deferred Stage B control paths executed. Each needs a compiled Stage B evaluator, a passing baseline with the mutation disabled, evidence the mutated path ran, and rejection by its named predicate. This file prepares the targets and reruns the sixteen deferred refusal expectations; it is not control evidence."
+}

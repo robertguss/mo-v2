@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "builder_dispatched": false,
+  "leak_findings": [],
+  "control_names_judged_prose": [
+    {
+      "file": "BUILDER_BRIEF.md",
+      "pattern": "control identifier",
+      "match": "early-cleanup",
+      "line": 33,
+      "context": "first tail-call/early-cleanup alternatives are deferred."
+    },
+    {
+      "file": "BUILDER_AMENDMENT_D154.md",
+      "pattern": "control identifier",
+      "match": "fixture-provenance",
+      "line": 16,
+      "context": "root or fixture-provenance information is added to Candidate.begin or RuntimeCells."
+    }
+  ],
+  "archive": "rob-1333-stage-b-public-v18.tar.gz",
+  "archive_sha256": "0e30809545c3114012c69cceaf024e22f69c08a9b9721eb0a199e35a5d76b997",
+  "archive_bytes": 28229,
+  "delivery_sha256": "2c463c5e68865fbfb7983e11a5cf9ceae465c86f7afa9c19bea86300cc94e5b2",
+  "files": {
+    "BUILDER_AMENDMENT_D154.md": "f16da7973f501af3db33e979c7b218fbf9cf84c924c4070e5c904d2568d39d27",
+    "BUILDER_BRIEF.md": "abf61e6bea97f63eeca1680b26b8727fa88eaabac45b68ab524d327f8c998bb9",
+    "BUILDER_CHECKED_DUMP_V14.md": "066fe3dc768304c7ebb0cdd2c43a1b507792c33dcec54a71703e3ddc34083768",
+    "BUILDER_EXECUTION.md": "e5c3aa641014e0bf34feb4a7f6caa9cb48bea13d33646bf3e0916415a24ff5df",
+    "BUILDER_HANDOFF.md": "2c5083decf663c4377890007e0e3cbe4a5186701488ec67d168176a0dbc100d4",
+    "BUILDER_MATCH_BIRTH_V17.md": "41b286ba9654c1833ffcacc8aad8fb4ddf1aea8e7deef6cdae8966898bab78cf",
+    "BUILDER_RUNTIME_METHODS_V16.md": "e0e866953b4fbf3af4f5af6f238c7663902b70a4ca4f7976d1d39ad9c0221938",
+    "BUILDER_STAGE_A_DIAGNOSTICS_V15.md": "c0d44cf9869ad1a1b93dd5b5d74f21ca7ecde5e2a051d8ea585d794d3e8528fa",
+    "BUILDER_STAGE_B_V18.md": "5be9136fb83e632aee8f4dbe451dde3fa62cd405b251d9162fd6934d188f15b4",
+    "runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+    "runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+    "runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+    "runtime/lib.rs": "0a4418ea6b513c9fa563f4fdce8dfd9bd12f6255ca4679befa8c6660be07b020"
+  },
+  "file_count": 13,
+  "unchanged_from_stage_a": [
+    "BUILDER_AMENDMENT_D154.md",
+    "BUILDER_BRIEF.md",
+    "BUILDER_CHECKED_DUMP_V14.md",
+    "BUILDER_EXECUTION.md",
+    "BUILDER_HANDOFF.md",
+    "BUILDER_MATCH_BIRTH_V17.md",
+    "BUILDER_RUNTIME_METHODS_V16.md",
+    "BUILDER_STAGE_A_DIAGNOSTICS_V15.md",
+    "runtime/Cargo.lock",
+    "runtime/Cargo.toml",
+    "runtime/abi.rs",
+    "runtime/lib.rs"
+  ],
+  "new_in_stage_b": [
+    "BUILDER_STAGE_B_V18.md"
+  ],
+  "public_runtime_check": "cargo +1.98.1 check --locked --offline --manifest-path /tmp/rob1333-stage-b-public-x3ce_ruy/runtime/Cargo.toml",
+  "qualification": "A proposed package for owner review. Assembling it does not dispatch a builder, verify a future builder's starting context, or make the separation technically enforced; same-account retrieval of excluded material remains possible."
+}

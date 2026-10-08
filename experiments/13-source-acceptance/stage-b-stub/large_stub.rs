@@ -29,6 +29,13 @@ struct Run {
     released: Vec<u64>,
     cleanup: Vec<Json>,
     destroyed: bool,
+    /// Set only for the snapshot the frozen collector takes on a 10,000-step
+    /// commit. Pause, finish and cleanup call `snapshot` with this false, so
+    /// those stay full photographs (D159, D160).
+    emit_summary: bool,
+    /// Cells already reported in an earlier observation. A summary lists only
+    /// the cells freed since then.
+    observed_freed: u64,
 }
 
 fn control() -> String {
@@ -138,10 +145,15 @@ impl Candidate for Stub {
             released: vec![],
             cleanup: vec![],
             destroyed: false,
+            emit_summary: false,
+            observed_freed: 0,
         }
     }
 
     fn advance(run: &mut Run, budget: u64, committed: &mut dyn FnMut(&Run, &[u8])) -> Outcome {
+        // The boundary that just finished (start, or the previous pause) is an
+        // observation, so the next summary starts from the cells freed so far.
+        run.observed_freed = run.freed();
         for _ in 0..budget {
             if run.step == run.last() {
                 break;
@@ -171,7 +183,14 @@ impl Candidate for Stub {
             let metadata = json!({"step":step,"transition":name,"site":site,
                 "event_end":run.freed(),"landmark":landmark,
                 "events_added":added,"births_added":[]});
+            // The frozen collector asks for a snapshot exactly on this grid.
+            // Between boundaries that snapshot is a summary, not a photograph.
+            run.emit_summary = step % 10_000 == 0;
             committed(run, metadata.to_string().as_bytes());
+            if run.emit_summary {
+                run.observed_freed = run.freed();
+            }
+            run.emit_summary = false;
         }
         Outcome {
             status: status(run),
@@ -180,6 +199,27 @@ impl Candidate for Stub {
     }
 
     fn snapshot(run: &Run) -> Vec<u8> {
+        if run.emit_summary {
+            let start = run.observed_freed as usize;
+            let end = run.freed() as usize;
+            let changed: Vec<u64> = run.chain[start..end].to_vec();
+            let chain = if run.step > 0 && run.step <= 2 * run.depth() {
+                run.released.len() as u64
+            } else {
+                0
+            };
+            return json!({
+                "observation": "summary",
+                "step": run.step,
+                "depth": 0,
+                "live_cells": run.depth() - run.freed(),
+                "counts": {"create": 0, "write": 0, "free": run.freed()},
+                "changed_cells": changed,
+                "cleanup_chain_length": chain,
+            })
+            .to_string()
+            .into_bytes();
+        }
         let alive = !run.destroyed;
         let step = run.step;
         let cleanup = 2 * run.depth();
