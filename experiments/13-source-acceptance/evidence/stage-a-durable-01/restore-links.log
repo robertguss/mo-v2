@@ -1,0 +1,3 @@
+git archive 5ded95ff12c737a1c6d85409ed99534f05100b70 | tar -x -C /tmp/rob1333-stage-a-durable-01-restore
+python3 -B experiments/13-source-acceptance/evidence/stage-a-durable-01/package.py restore-links --root /tmp/rob1333-stage-a-durable-01-restore
+RESTORED FROZEN LINKS 30
