@@ -1,0 +1,155 @@
+{
+  "message": "full committed execution/physical state",
+  "actual": {
+    "step": 6,
+    "event_end": 1,
+    "state": {
+      "kind": "callEntered",
+      "memory": [
+        [
+          1,
+          "1",
+          2,
+          2,
+          "live"
+        ],
+        [
+          2,
+          "2",
+          null,
+          1,
+          "live"
+        ]
+      ],
+      "outside": [],
+      "bindings": [
+        [
+          1,
+          "xs",
+          [
+            "l",
+            1
+          ],
+          "holding"
+        ],
+        [
+          0,
+          "xs",
+          [
+            "l",
+            1
+          ],
+          "holding"
+        ]
+      ],
+      "pending": [],
+      "aside": [],
+      "branch": null,
+      "frames": [
+        1
+      ]
+    },
+    "control": [
+      {
+        "site": "main",
+        "scope": [
+          [
+            "xs",
+            0
+          ]
+        ],
+        "invocation": 0,
+        "operands": []
+      },
+      {
+        "site": "main/0",
+        "scope": [
+          [
+            "xs",
+            0
+          ]
+        ],
+        "invocation": 0,
+        "operands": []
+      }
+    ],
+    "ready": null,
+    "release": []
+  },
+  "expected": {
+    "step": 6,
+    "event_end": 1,
+    "state": {
+      "kind": "callEntered",
+      "memory": [
+        [
+          1,
+          "1",
+          2,
+          2,
+          "live"
+        ],
+        [
+          2,
+          "2",
+          null,
+          1,
+          "live"
+        ]
+      ],
+      "bindings": [
+        [
+          0,
+          "xs",
+          [
+            "l",
+            1
+          ],
+          "holding"
+        ],
+        [
+          1,
+          "xs",
+          [
+            "l",
+            1
+          ],
+          "holding"
+        ]
+      ],
+      "pending": [],
+      "outside": [],
+      "aside": [],
+      "branch": null,
+      "frames": [
+        1
+      ]
+    },
+    "control": [
+      {
+        "site": "main",
+        "scope": [
+          [
+            "xs",
+            0
+          ]
+        ],
+        "invocation": 0,
+        "operands": []
+      },
+      {
+        "site": "main/0",
+        "scope": [
+          [
+            "xs",
+            0
+          ]
+        ],
+        "invocation": 0,
+        "operands": []
+      }
+    ],
+    "ready": null,
+    "release": []
+  }
+}
