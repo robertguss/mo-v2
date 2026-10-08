@@ -1,1 +1,5 @@
 .amp/portals/*
+
+# Buildkite check evidence; written by .buildkite/checks.sh, uploaded as build
+# artifacts, never committed.
+/ci-evidence/
