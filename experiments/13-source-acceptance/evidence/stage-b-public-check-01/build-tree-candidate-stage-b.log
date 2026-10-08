@@ -1,0 +1,31 @@
+mo-stage-b v0.1.0 (/workspace/experiments/13-source-acceptance/candidate-stage-b)
+imbl v7.0.2
+archery v1.2.3
+equivalent v1.0.2
+imbl-sized-chunks v0.2.0
+rand_core v0.9.5
+rand_xoshiro v0.7.0
+rand_core v0.9.5
+serde_core v1.0.229
+wide v0.7.33
+bytemuck v1.25.2
+safe_arch v0.7.4
+bytemuck v1.25.2
+version_check v0.9.5
+mo-acceptance-runtime v0.0.0 (/workspace/experiments/13-source-acceptance/runtime)
+serde v1.0.229
+serde_core v1.0.229
+serde_derive v1.0.229 (proc-macro)
+proc-macro2 v1.0.107
+unicode-ident v1.0.26
+quote v1.0.47
+proc-macro2 v1.0.107 (*)
+syn v3.0.6
+proc-macro2 v1.0.107 (*)
+quote v1.0.47 (*)
+unicode-ident v1.0.26
+serde_json v1.0.151
+itoa v1.0.18
+memchr v2.8.3
+serde_core v1.0.229
+zmij v1.0.23
