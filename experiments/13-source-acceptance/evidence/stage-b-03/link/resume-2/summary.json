@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 4859498496,
+  "stack_bytes": 8388608,
+  "exit_code": 0,
+  "peak_rss_kib": 81696,
+  "committed_steps": 6,
+  "advances": 5,
+  "destroy_calls": 2,
+  "events_by_phase": {
+    "frontend": 0,
+    "fixture": 0,
+    "begin": 0,
+    "commit": 0,
+    "advance": 0,
+    "destroy": 0,
+    "destroy-again": 0,
+    "drop": 0,
+    "teardown": 0
+  },
+  "resource_attempts": {
+    "number": 1
+  },
+  "elapsed_ns": 5712379,
+  "start_ns": 8034684376103,
+  "stop_ns": 8034690088482,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 8034684376103,
+      "end_ns": 8034687614607
+    },
+    {
+      "phase": "check",
+      "start_ns": 8034687614607,
+      "end_ns": 8034687922739
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 8034687922739,
+      "end_ns": 8034687966963
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 8034687966963,
+      "end_ns": 8034688025405
+    },
+    {
+      "phase": "begin",
+      "start_ns": 8034688025405,
+      "end_ns": 8034688198402
+    },
+    {
+      "phase": "commit",
+      "start_ns": 8034688198402,
+      "end_ns": 8034688322731
+    },
+    {
+      "phase": "commit",
+      "start_ns": 8034688322731,
+      "end_ns": 8034688447092
+    },
+    {
+      "phase": "advance",
+      "start_ns": 8034688447092,
+      "end_ns": 8034688596515
+    },
+    {
+      "phase": "advance",
+      "start_ns": 8034688596515,
+      "end_ns": 8034688741784
+    },
+    {
+      "phase": "commit",
+      "start_ns": 8034688741784,
+      "end_ns": 8034688896217
+    },
+    {
+      "phase": "commit",
+      "start_ns": 8034688896217,
+      "end_ns": 8034689048140
+    },
+    {
+      "phase": "commit",
+      "start_ns": 8034689048140,
+      "end_ns": 8034689199672
+    },
+    {
+      "phase": "commit",
+      "start_ns": 8034689199672,
+      "end_ns": 8034689347172
+    },
+    {
+      "phase": "advance",
+      "start_ns": 8034689347172,
+      "end_ns": 8034689499969
+    },
+    {
+      "phase": "advance",
+      "start_ns": 8034689499969,
+      "end_ns": 8034689660959
+    },
+    {
+      "phase": "advance",
+      "start_ns": 8034689660959,
+      "end_ns": 8034689802118
+    },
+    {
+      "phase": "destroy",
+      "start_ns": 8034689802118,
+      "end_ns": 8034689907278
+    },
+    {
+      "phase": "destroy-again",
+      "start_ns": 8034689907278,
+      "end_ns": 8034690005521
+    },
+    {
+      "phase": "drop",
+      "start_ns": 8034690005521,
+      "end_ns": 8034690035583
+    },
+    {
+      "phase": "teardown",
+      "start_ns": 8034690035583,
+      "end_ns": 8034690088482
+    }
+  ]
+}

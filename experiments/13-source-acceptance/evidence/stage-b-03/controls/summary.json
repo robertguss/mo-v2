@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "controls_executed": 0,
+  "record_controls": 50,
+  "deferred_controls": 10,
+  "controls_active": 9,
+  "controls_not_applicable": [
+    "omitted-entry-create"
+  ],
+  "gap": "Not applicable under the frozen rules. The frozen predictor never allocates on Enter: entering a call only binds arguments that are already finished. No public, reserved or generated example can reach this control without editing a frozen file. D164 records that gap and supersedes the D161 fallback of adding a public example. Nine of the ten deferred controls stay active.",
+  "deferred_expectations_rerun_under_stage_b": 16,
+  "qualification": "Nine of the ten deferred Stage B controls are active, and none of them has executed. omitted-entry-create is not applicable under the frozen rules: the frozen predictor never allocates on Enter, so no example can reach it. D164 records that gap and supersedes the D161 fallback of adding a public example. A record claiming any of the ten ran is still rejected unless it has the shape the frozen check requires, and this file does not supply that evidence. The sixteen deferred refusal expectations were rerun; this file is not control evidence."
+}

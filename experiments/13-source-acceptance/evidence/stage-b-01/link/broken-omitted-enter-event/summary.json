@@ -1,0 +1,46 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 5070815232,
+  "stack_bytes": 8388608,
+  "error": "AssertionError: commit metadata",
+  "elapsed_ns": 3921321,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 3025154628887,
+      "end_ns": 3025157265090
+    },
+    {
+      "phase": "check",
+      "start_ns": 3025157265090,
+      "end_ns": 3025157936955
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 3025157936955,
+      "end_ns": 3025157990207
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 3025157990207,
+      "end_ns": 3025158042014
+    },
+    {
+      "phase": "begin",
+      "start_ns": 3025158042014,
+      "end_ns": 3025158224063
+    },
+    {
+      "phase": "commit",
+      "start_ns": 3025158224063,
+      "end_ns": 3025158348163
+    },
+    {
+      "phase": "commit",
+      "start_ns": 3025158348163,
+      "end_ns": 3025158497715
+    }
+  ]
+}

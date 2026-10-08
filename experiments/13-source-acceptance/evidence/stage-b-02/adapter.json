@@ -1,0 +1,379 @@
+{
+  "runs": [
+    {
+      "depth": 12,
+      "committed_steps": 27,
+      "full_observations": 2,
+      "summary_observations": 0,
+      "deepest_photographed": false,
+      "streamed_commits": 27,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        12
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 12,
+      "peak_cleanup_chain": 0,
+      "peak_retained_rows": 39,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 27164,
+      "verifier_peak_kib": 34156,
+      "elapsed_seconds": 0.005032794,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 12,
+        "answer": "0",
+        "available_bytes": 4730044416,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 0.005032794,
+        "transitions": 27,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          12
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 2000,
+      "committed_steps": 4003,
+      "full_observations": 2,
+      "summary_observations": 0,
+      "deepest_photographed": false,
+      "streamed_commits": 4003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        2000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 2000,
+      "peak_cleanup_chain": 0,
+      "peak_retained_rows": 6003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 27172,
+      "verifier_peak_kib": 37868,
+      "elapsed_seconds": 0.17070294,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 2000,
+        "answer": "0",
+        "available_bytes": 4728983552,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 0.17070294,
+        "transitions": 4003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          2000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 5000,
+      "committed_steps": 10003,
+      "full_observations": 2,
+      "summary_observations": 1,
+      "deepest_photographed": false,
+      "streamed_commits": 10003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        5000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 5000,
+      "peak_cleanup_chain": 5000,
+      "peak_retained_rows": 15003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 30916,
+      "verifier_peak_kib": 40192,
+      "elapsed_seconds": 0.429246972,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 5000,
+        "answer": "0",
+        "available_bytes": 4719411200,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 0.429246972,
+        "transitions": 10003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          5000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 20000,
+      "committed_steps": 40003,
+      "full_observations": 2,
+      "summary_observations": 4,
+      "deepest_photographed": false,
+      "streamed_commits": 40003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        20000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 20000,
+      "peak_cleanup_chain": 20000,
+      "peak_retained_rows": 60003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 43516,
+      "verifier_peak_kib": 55268,
+      "elapsed_seconds": 1.772486985,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 20000,
+        "answer": "0",
+        "available_bytes": 4708184064,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 1.772486985,
+        "transitions": 40003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          20000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 50000,
+      "committed_steps": 100003,
+      "full_observations": 2,
+      "summary_observations": 10,
+      "deepest_photographed": false,
+      "streamed_commits": 100003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        50000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 50000,
+      "peak_cleanup_chain": 50000,
+      "peak_retained_rows": 150003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 104028,
+      "verifier_peak_kib": 110868,
+      "elapsed_seconds": 5.080866778,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 50000,
+        "answer": "0",
+        "available_bytes": 4654518272,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 5.080866778,
+        "transitions": 100003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          50000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 100000,
+      "committed_steps": 200003,
+      "full_observations": 2,
+      "summary_observations": 20,
+      "deepest_photographed": false,
+      "streamed_commits": 200003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        100000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 100000,
+      "peak_cleanup_chain": 100000,
+      "peak_retained_rows": 300003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 204068,
+      "verifier_peak_kib": 199728,
+      "elapsed_seconds": 11.720452306,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 100000,
+        "answer": "0",
+        "available_bytes": 4566577152,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 11.720452306,
+        "transitions": 200003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          100000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    },
+    {
+      "depth": 200000,
+      "committed_steps": 400003,
+      "full_observations": 2,
+      "summary_observations": 40,
+      "deepest_photographed": false,
+      "streamed_commits": 400003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        200000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 200000,
+      "peak_cleanup_chain": 200000,
+      "peak_retained_rows": 600003,
+      "retained_rows_at_end": 2,
+      "peak_rss_kib": 408068,
+      "verifier_peak_kib": 378812,
+      "elapsed_seconds": 31.056018874,
+      "scaled_resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 200000,
+        "answer": "0",
+        "available_bytes": 4561043456,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 31.056018874,
+        "transitions": 400003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          200000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      }
+    }
+  ],
+  "controls": {
+    "compiled-stub/physical-leak": "reported a cell event the storage never performed",
+    "wrong-observation-period": "large full-observation schedule",
+    "approved-depth-refused": "D151 fixes the million-cell workloads and does not authorize running them"
+  },
+  "candidate_executed": false,
+  "resource_workload_executed": false,
+  "resume_run": {
+    "committed_steps": 10003,
+    "full_observations": 4,
+    "summary_observations": 1,
+    "peak_cleanup_chain": 5000,
+    "elapsed_seconds": 0.4363627
+  },
+  "deepest_photograph": {
+    "committed_steps": 9999,
+    "full_observations": 2,
+    "summary_observations": 0,
+    "deepest_photographed": true,
+    "peak_cleanup_chain": 5000,
+    "cleanup_frees": 1
+  },
+  "destroy_cut": {
+    "committed_steps": 4000,
+    "cleanup_frees": 3000,
+    "teardown_frees": 0,
+    "peak_cleanup_chain": 2000
+  },
+  "scaling": {
+    "measured": [
+      {
+        "depth": 20000,
+        "steps": 40003,
+        "summaries": 4,
+        "seconds": 1.772486985
+      },
+      {
+        "depth": 50000,
+        "steps": 100003,
+        "summaries": 10,
+        "seconds": 5.080866778
+      },
+      {
+        "depth": 100000,
+        "steps": 200003,
+        "summaries": 20,
+        "seconds": 11.720452306
+      },
+      {
+        "depth": 200000,
+        "steps": 400003,
+        "summaries": 40,
+        "seconds": 31.056018874
+      }
+    ],
+    "seconds_per_transition": 3.7326166089756946e-05,
+    "seconds_per_serialized_row": 7.632488642638888e-06,
+    "rate_source": "evidence/stage-b-01/adapter.json",
+    "projection": {
+      "discarded-list": {
+        "transitions": 2000003,
+        "schedule": {
+          "summary_observations": 200,
+          "summary_changed_cells": 1000000,
+          "summary_header_rows": 1200,
+          "start_rows": 1000001,
+          "deepest_rows": 1000002,
+          "finish_rows": 1,
+          "cleanup_rows": 0,
+          "deepest_step": 1999999,
+          "serialized_rows": 3001204
+        },
+        "serialized_observation_rows": 3001204,
+        "seconds_from_transitions": 74.65244415801216,
+        "seconds_from_observation_rows": 22.906655444242404,
+        "seconds_total": 97.55909960225456,
+        "fits_in_600_seconds": true,
+        "watchdog_seconds": 600
+      },
+      "non-tail-sum": {
+        "transitions": 18000014,
+        "schedule": {
+          "summary_observations": 1800,
+          "summary_changed_cells": 999998,
+          "summary_header_rows": 10800,
+          "start_rows": 1000001,
+          "deepest_rows": 5000003,
+          "finish_rows": 1,
+          "cleanup_rows": 0,
+          "deepest_step": 12000005,
+          "serialized_rows": 7010803
+        },
+        "serialized_observation_rows": 7010803,
+        "seconds_from_transitions": 671.8715121819503,
+        "seconds_from_observation_rows": 53.50987427327865,
+        "seconds_total": 725.381386455229,
+        "fits_in_600_seconds": false,
+        "watchdog_seconds": 600
+      }
+    },
+    "note": "Rates from the previous full-photograph runs of this harness. Row counts are the D159/D160 schedule. Not a measurement of a candidate."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "large": true,
+  "workload": "discarded-list",
+  "depth": 5000,
+  "available_bytes": 5057888256,
+  "stack_bytes": 8388608,
+  "observation_period": 5000,
+  "error": "AssertionError: large full-observation schedule",
+  "elapsed_ns": 242526280,
+  "phase_count": 5004
+}
