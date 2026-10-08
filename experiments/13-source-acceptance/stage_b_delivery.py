@@ -33,7 +33,7 @@ import traceback
 
 HERE = Path(__file__).resolve().parent
 TOOLCHAIN = "1.98.1"
-ARCHIVE = "rob-1333-stage-b-public-v18.tar.gz"
+ARCHIVE = "rob-1333-stage-b-public-v19.tar.gz"
 
 # Exactly what a Stage B builder would receive. Everything except the Stage B
 # addendum is byte-identical to the frozen Stage A public package, because the
@@ -47,7 +47,8 @@ ALLOWLIST = [
     "BUILDER_STAGE_A_DIAGNOSTICS_V15.md",
     "BUILDER_RUNTIME_METHODS_V16.md",
     "BUILDER_MATCH_BIRTH_V17.md",
-    "BUILDER_STAGE_B_V18.md",
+    "BUILDER_STAGE_B_V19.md",
+    "BUILDER_STAGE_B_PREFLIGHT.md",
     "runtime/Cargo.toml",
     "runtime/Cargo.lock",
     "runtime/lib.rs",
@@ -208,13 +209,17 @@ def run(destination):
         report["files"] = {name: digest_bytes(data) for name, data in sorted(rows.items())}
         report["file_count"] = len(rows)
         report["unchanged_from_stage_a"] = sorted(
-            name for name in rows if name != "BUILDER_STAGE_B_V18.md")
-        report["new_in_stage_b"] = ["BUILDER_STAGE_B_V18.md"]
+            name for name in rows
+            if name not in ("BUILDER_STAGE_B_V19.md", "BUILDER_STAGE_B_PREFLIGHT.md"))
+        report["new_in_stage_b"] = ["BUILDER_STAGE_B_V19.md", "BUILDER_STAGE_B_PREFLIGHT.md"]
+        report["replaces"] = "BUILDER_STAGE_B_V18.md"
         report["public_runtime_check"] = check_public_runtime(archive, destination)
         report["qualification"] = (
-            "A proposed package for owner review. Assembling it does not dispatch a builder, "
-            "verify a future builder's starting context, or make the separation technically "
-            "enforced; same-account retrieval of excluded material remains possible.")
+            "Public package v19. D162 sets the recursive sum's limit at 900 seconds and leaves "
+            "the discard at 600. The preflight clarification states frozen Stage B rules and "
+            "does not add a rule. Assembling this package does not dispatch a builder, verify a "
+            "future builder's starting context, or make the separation technically enforced; "
+            "same-account retrieval of excluded material remains possible.")
         report["passed"] = True
     except Exception:
         report["error"] = traceback.format_exc()
