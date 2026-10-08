@@ -1,0 +1,18 @@
+    Checking bytemuck v1.25.2
+    Checking rand_core v0.9.5
+    Checking archery v1.2.3
+    Checking serde_core v1.0.229
+    Checking zmij v1.0.23
+    Checking imbl-sized-chunks v0.2.0
+    Checking memchr v2.8.3
+    Checking equivalent v1.0.2
+    Checking itoa v1.0.18
+    Checking rand_xoshiro v0.7.0
+    Checking mo-acceptance-runtime v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/runtime)
+    Checking safe_arch v0.7.4
+    Checking wide v0.7.33
+    Checking serde v1.0.229
+    Checking imbl v7.0.2
+    Checking serde_json v1.0.151
+    Checking mo-stage-b v0.1.0 (/home/user/workspace/repo/experiments/13-source-acceptance/stage-b-adaptation-01/candidate)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.51s

@@ -1,0 +1,89 @@
+{
+  "files": [
+    {
+      "path": "small-validation.json",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/small-01/validation.json",
+      "bytes": 1250,
+      "sha256": "c2a46ef44c5b04c94272447286dc01a220f9bb6824ffdaef4bd18e6521db5c00"
+    },
+    {
+      "path": "public-validation.json",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/public-01/report.json",
+      "bytes": 1101,
+      "sha256": "6daa00f6b2f08a64932686b71d73c2a70d3c975a062e8ce28dfd21a563cd2de3"
+    },
+    {
+      "path": "build-01.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/build-01.log",
+      "bytes": 578,
+      "sha256": "c45114e97dca9965465e956dc23406755f43c57f30e91970b64c627fae0729dd"
+    },
+    {
+      "path": "build-final.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/build-final.log",
+      "bytes": 325,
+      "sha256": "ef9b12ec2cd771186f4632f338a8abc8980296f7510a0f373b32a483aab36157"
+    },
+    {
+      "path": "clippy-final.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/clippy-final.log",
+      "bytes": 196,
+      "sha256": "4d0055ff2c899e1af78b43921e64a5028738f2efe155c5955dc06ef00e542468"
+    },
+    {
+      "path": "clippy.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/clippy.log",
+      "bytes": 771,
+      "sha256": "172d46fd64d02e4845455c91f49c723ba51858c1af4de4d6187a6e4c15234854"
+    },
+    {
+      "path": "driver-tests.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/driver-tests.log",
+      "bytes": 904,
+      "sha256": "e20df6aa7dd42dec75fc0c0d47a2a03bb4c87db6c6c48daec3f568f01c8a6fc2"
+    },
+    {
+      "path": "fmt.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "public-01.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/public-01.log",
+      "bytes": 1927,
+      "sha256": "92888aa0bd30aaa9090140e883cfaedab69b77fea94d618cb11316f8e3d6ca98"
+    },
+    {
+      "path": "small-01.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/small-01.log",
+      "bytes": 1250,
+      "sha256": "c2a46ef44c5b04c94272447286dc01a220f9bb6824ffdaef4bd18e6521db5c00"
+    },
+    {
+      "path": "tests-01.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/tests-01.log",
+      "bytes": 5651,
+      "sha256": "617a657b596d80a8162ed608edc3b19a57a64cd3dbceece1de13f8727224cf14"
+    },
+    {
+      "path": "tests-02.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/tests-02.log",
+      "bytes": 4921,
+      "sha256": "67c1c298b3184c4d7b50a16c477283cee3c6b934cd18e8c7f563880c3d1f4acc"
+    },
+    {
+      "path": "tests-03.log",
+      "source": "/home/user/rob1333-stage-b-adaptation-checks/tests-03.log",
+      "bytes": 5024,
+      "sha256": "ae6f8888980a279a7237c9dc5481aa6306b5014a39ac1dc744272776b5cb652f"
+    }
+  ],
+  "raw_evidence_root": "/home/user/rob1333-stage-b-adaptation-checks",
+  "raw_retained": true,
+  "raw_archived": false,
+  "private_inputs_accessed": false,
+  "candidate_manifest_sha256": "cc1e09dac565f67341bffee062fa0abbd080f9c60ebeac2fed522f56ff14317e",
+  "final_binary_sha256": "7b38989835db8ef6fd274477f625caf5c35e6438256d405f4b5242703427491a",
+  "final_binary_matches_campaign": true
+}

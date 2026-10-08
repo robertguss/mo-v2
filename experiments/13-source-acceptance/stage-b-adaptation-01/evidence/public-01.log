@@ -1,0 +1,64 @@
+summary runs passed: 1
+summary runs passed: 2
+summary runs passed: 3
+summary runs passed: 4
+public cases passed: 1
+public cases passed: 2
+public cases passed: 3
+public cases passed: 4
+public cases passed: 5
+public cases passed: 6
+public cases passed: 7
+public cases passed: 8
+public cases passed: 9
+public cases passed: 10
+public cases passed: 11
+public cases passed: 12
+public cases passed: 13
+public cases passed: 14
+public cases passed: 15
+public cases passed: 16
+public cases passed: 17
+public cases passed: 18
+public cases passed: 19
+public cases passed: 20
+public cases passed: 21
+historical cases passed: 500
+historical cases passed: 1000
+historical cases passed: 1500
+historical cases passed: 2000
+historical cases passed: 2500
+historical cases passed: 3000
+historical cases passed: 3500
+historical cases passed: 4000
+{
+  "passed": true,
+  "public_cases": 21,
+  "full": 21,
+  "resume": 1624,
+  "destroy": 1624,
+  "denials": 42,
+  "historical": 4276,
+  "real_summary_runs": 4,
+  "private_cases": 0,
+  "million_element_runs": 0,
+  "runner_sha256": "4a6aa55bf812fb9a7a97cd8e1d108b73e7f0348f432ad2564dc0d0dffac2e281",
+  "binary_sha256": "7b38989835db8ef6fd274477f625caf5c35e6438256d405f4b5242703427491a",
+  "preservation_before": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "preservation_after": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "elapsed_seconds": 650.8123195989974
+}
