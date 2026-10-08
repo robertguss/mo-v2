@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "review_only": true,
+  "status": "D169 clarification ready for parent review; builder failure report is public and outside the package",
+  "decision": "D169 creation order is the binding-view rule",
+  "addendum": "BUILDER_STAGE_B_BINDING_ORDER.md",
+  "addendum_sha256": "f4ecff12026ea71cb1e711e6c4555023c9784a9f8958ae7edd60c45d9b57a5f4",
+  "failure_report": "BUILDER_PUBLIC_FAILURE_FINAL02.md",
+  "failure_report_sha256": "f778f6fcfe19c7ce29593036b09ef1ff47c3420ac06ea7e2f79c3d9034d672c8",
+  "failure_report_in_package": false,
+  "stage_a_pattern": "Stage A public packages contained requirements only. Public-safe failure diagnoses were separate from the package. v21 follows that pattern.",
+  "archive": "stage-b-delivery/rob-1333-stage-b-public-v21.tar.gz",
+  "archive_sha256": "e592d2e97ee8ffbf51c030a63e5de8c979d4827d8992f895ae63dc429b1db482",
+  "archive_bytes": 32962,
+  "scientific_lock_unchanged_sha256": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+  "all_frozen_file_hashes_match": 496,
+  "previous_archive_unchanged_sha256": "29c9478b9f382b2bed86850fb59c281d057082e6e6d54a35f8bbc0e56b5f0e1b",
+  "scan_findings": 0,
+  "preflight_file_edited": false,
+  "public_update_sha256": "0987f0acef86bc3fc3abae3a491d1b69303b72bc224ca7f9f4aaa38bbd3a510b"
+}
