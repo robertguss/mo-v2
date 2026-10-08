@@ -1,0 +1,19 @@
+{
+  "public_files_restored": 33277,
+  "public_archive_members": 33296,
+  "volumes": 162,
+  "compressed_bytes": 318499490,
+  "dependency_links_restored": 7,
+  "control_review_reproduced": true,
+  "public_package_private_roots_excluded": true,
+  "private_data_committed": "aggregate totals only",
+  "preservation": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "candidate_manifest_verified": true
+}

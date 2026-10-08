@@ -1,0 +1,42 @@
+{
+  "runs": [
+    {
+      "passed": false,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "non-tail-sum",
+      "depth": 1000000,
+      "budgets": [
+        12000005,
+        6000009
+      ],
+      "limit_seconds": 900,
+      "available_bytes": 15172587520,
+      "stack_bytes": 8388608,
+      "error": "TimeoutError: inclusive watchdog",
+      "elapsed_seconds": 900.000636025,
+      "phase_count": 6650004,
+      "checked_steps": 6650000,
+      "streamed_rows_sha256": "9e7d97d39659aaaffdc35d9b7f90493491d3a65ab9dddfa59de6dc7eb254fc0e",
+      "verifier_peak_kib": 1393936
+    }
+  ],
+  "preservation_before": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "preservation_after": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "binary_sha256": "7b38989835db8ef6fd274477f625caf5c35e6438256d405f4b5242703427491a",
+  "runner_sha256": "c74d1474814751af81d33694c9a48c2218e7e8427349ccf2ef73c03863188866"
+}
