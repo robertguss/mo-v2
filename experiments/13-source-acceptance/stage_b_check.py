@@ -59,17 +59,18 @@ def run_workloads(destination):
     report["approved_depth_projection"] = {}
     for name, workload_class in sorted(WORKLOADS.items()):
         workload = workload_class(APPROVED_DEPTH)
+        cost = workload.schedule_cost(OBSERVATION_PERIOD)
         row = dict(transitions=workload.transitions(),
                    answer=workload.expected_answer(),
                    evaluation_cell_counts=workload.expected_cell_counts(),
                    peak_explicit_frames=workload.expected_peak_frames(),
-                   observations=observation_count(workload))
+                   observations=observation_count(workload),
+                   schedule=cost)
         fits = report["state_growth_per_cell"][name]
         row["peak_full_observation_rows"] = {
             key: None if fits[key] is None else fits[key]["per_cell"] * APPROVED_DEPTH + fits[key]["constant"]
             for key in ("memory", "frames", "control", "release")}
-        if hasattr(workload, "observation_rows"):
-            row["serialized_observation_rows"] = workload.observation_rows(OBSERVATION_PERIOD)
+        row["serialized_observation_rows"] = cost["serialized_rows"]
         report["approved_depth_projection"][name] = row
     (destination / "workloads.json").write_text(json.dumps(report, indent=2) + "\n")
     return report
@@ -108,7 +109,8 @@ def run_adapter(destination, binaries):
         result = run_large_linked(command, workload, [workload.transitions()],
                                   destination / f"discarded-{depth}")
         report["runs"].append({k: result[k] for k in (
-            "depth", "committed_steps", "full_observations", "streamed_commits",
+            "depth", "committed_steps", "full_observations", "summary_observations",
+            "deepest_photographed", "streamed_commits",
             "evaluation_cell_counts", "cleanup_frees", "teardown_frees", "peak_live_cells",
             "peak_cleanup_chain", "peak_retained_rows", "retained_rows_at_end",
             "peak_rss_kib", "verifier_peak_kib", "elapsed_seconds", "scaled_resource_record")})
@@ -119,7 +121,20 @@ def run_adapter(destination, binaries):
                                destination / "discarded-resume")
     assert resumed["committed_steps"] == total, "resume reached terminal"
     report["resume_run"] = {k: resumed[k] for k in ("committed_steps", "full_observations",
-                                                    "peak_cleanup_chain", "elapsed_seconds")}
+                                                    "summary_observations", "peak_cleanup_chain",
+                                                    "elapsed_seconds")}
+    # D159's deepest photograph, taken by pausing there. The frozen collector
+    # cannot attach a commit snapshot off the 10,000 grid, and this chain is
+    # longest one step before that grid.
+    deepest = DiscardedList(5_000)
+    photographed = run_large_linked(command, deepest, [deepest.deepest_step()],
+                                    destination / "discarded-deepest")
+    assert photographed["deepest_photographed"] is True, "deepest photograph missing"
+    assert photographed["peak_cleanup_chain"] == deepest.depth, "deepest chain"
+    assert photographed["cleanup_frees"] == 1, "the last cell was still allocated at the deepest point"
+    report["deepest_photograph"] = {k: photographed[k] for k in (
+        "committed_steps", "full_observations", "summary_observations",
+        "deepest_photographed", "peak_cleanup_chain", "cleanup_frees")}
     # Destroy part-way through cleanup, with cells still owned by the run.
     cut = run_large_linked(command, workload, [4_000], destination / "discarded-cut")
     assert cut["destroy_calls"] == 2 and cut["cleanup_frees"] > 0, "destroy freed the remainder"
@@ -157,54 +172,47 @@ def run_adapter(destination, binaries):
     return report
 
 
-def scaling_model(runs):
-    """Fit elapsed time to transitions and to total serialized cleanup chain.
+# Rates measured on the previous full-photograph schedule, recorded in
+# evidence/stage-b-01/adapter.json. D159 changes how many rows are written, not
+# these two rates, so the projection multiplies them by the new row counts
+# instead of refitting them against summaries that no longer vary the chain.
+MEASURED_SECONDS_PER_TRANSITION = 3.7326166089756946e-05
+MEASURED_SECONDS_PER_SERIALIZED_ROW = 7.632488642638888e-06
 
-    The cleanup chain in a committed state grows with the number of cells
-    already released, and D151 asks for a full observation every ten thousand
-    transitions, so the work the verifier does grows faster than the run does.
-    This fit is what the report's projection to the approved depth rests on.
+
+def scaling_model(runs):
+    """Project both approved workloads with the measured rates and the D159 rows.
+
+    The new runs are recorded so the summary schedule can be seen to execute.
+    They are not refit: a summary no longer carries the cleanup chain, so a
+    chain-versus-time fit would have nothing to identify.
     """
-    usable = [row for row in runs if row["depth"] >= 20_000]
-    if len(usable) < 2:
-        return None
-    def chain_total(depth):
-        blocks = (2 * depth) // OBSERVATION_PERIOD
-        return OBSERVATION_PERIOD // 2 * blocks * (blocks + 1) // 2
-    first, last = usable[0], usable[-1]
-    d_steps = last["committed_steps"] - first["committed_steps"]
-    d_chain = chain_total(last["depth"]) - chain_total(first["depth"])
-    d_time = last["elapsed_seconds"] - first["elapsed_seconds"]
-    middle = usable[len(usable) // 2]
-    m_steps = middle["committed_steps"] - first["committed_steps"]
-    m_chain = chain_total(middle["depth"]) - chain_total(first["depth"])
-    m_time = middle["elapsed_seconds"] - first["elapsed_seconds"]
-    determinant = d_steps * m_chain - m_steps * d_chain
-    if determinant == 0:
-        return None
-    per_chain = (d_steps * m_time - m_steps * d_time) / determinant
-    per_step = (d_time - per_chain * d_chain) / d_steps if d_steps else None
     projected = {}
     for name, workload_class in sorted(WORKLOADS.items()):
         workload = workload_class(APPROVED_DEPTH)
-        if name == "discarded-list":
-            rows = chain_total(APPROVED_DEPTH)
-        else:
-            counted = workload.observation_rows(OBSERVATION_PERIOD)
-            rows = counted["control"] + counted["frames"] + counted["memory"]
+        cost = workload.schedule_cost(OBSERVATION_PERIOD)
+        rows = cost["serialized_rows"]
+        from_steps = MEASURED_SECONDS_PER_TRANSITION * workload.transitions()
+        from_rows = MEASURED_SECONDS_PER_SERIALIZED_ROW * rows
         projected[name] = dict(
             transitions=workload.transitions(),
+            schedule=cost,
             serialized_observation_rows=rows,
-            seconds_from_transitions=per_step * workload.transitions(),
-            seconds_from_observation_rows=per_chain * rows,
-            seconds_total=per_step * workload.transitions() + per_chain * rows,
+            seconds_from_transitions=from_steps,
+            seconds_from_observation_rows=from_rows,
+            seconds_total=from_steps + from_rows,
+            fits_in_600_seconds=from_steps + from_rows <= 600,
             watchdog_seconds=600)
     return dict(measured=[dict(depth=r["depth"], steps=r["committed_steps"],
-                               chain=chain_total(r["depth"]), seconds=r["elapsed_seconds"])
-                          for r in usable],
-                seconds_per_transition=per_step, seconds_per_serialized_row=per_chain,
+                               summaries=r["summary_observations"],
+                               seconds=r["elapsed_seconds"])
+                          for r in runs if r["depth"] >= 20_000],
+                seconds_per_transition=MEASURED_SECONDS_PER_TRANSITION,
+                seconds_per_serialized_row=MEASURED_SECONDS_PER_SERIALIZED_ROW,
+                rate_source="evidence/stage-b-01/adapter.json",
                 projection=projected,
-                note="A measurement of this acceptance harness on this machine, not of a candidate.")
+                note="Rates from the previous full-photograph runs of this harness. "
+                     "Row counts are the D159/D160 schedule. Not a measurement of a candidate.")
 
 
 def write_effort(destination, started, check_seconds):

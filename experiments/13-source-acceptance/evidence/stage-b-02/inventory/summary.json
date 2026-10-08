@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "resource_executed": false,
+  "frozen": {
+    "files": 496,
+    "historical_dependencies": 5,
+    "preserved_archives": 4
+  },
+  "frozen_mismatches": [],
+  "stage_b_deferred": {
+    "refusal_expectations": 16,
+    "accept_expectations": 3,
+    "public_call_cases": 21,
+    "control_paths": 10
+  },
+  "stage_a_record_agreement": {
+    "control_paths": {
+      "recorded": 10,
+      "derived": 10,
+      "agrees": true
+    },
+    "semantic_expectations": {
+      "recorded": 16,
+      "derived": 16,
+      "agrees": true
+    }
+  },
+  "known_gaps": {
+    "large-streaming-adapter": "linked.run_linked sends large=false and the small verifier holds a full trace",
+    "stage-b-candidate-linking": "no Stage B candidate has ever been linked or run",
+    "stage-b-private-execution": "the 524 private rows are Stage A capability refusals only",
+    "stage-b-builder-delivery": "no sanitized Stage B public package has been assembled",
+    "stage-b-compiled-controls": "ten deferred control paths have no compiled evaluator run",
+    "d151-resource-workloads": "neither million-cell workload has ever run"
+  },
+  "proposed_new_files": {
+    "STAGE_B_PREPARATION.md": "42cdcf0fccba07e01a7b4caf80a06a16d94240ab35a9e8708d68ae467f331342",
+    "stage_b_inventory.py": "f98483f7f109461164a34b8ecd2fe47286244dac14e50c03568fdaf4c36d4f59",
+    "stage_b_workloads.py": "38486c00a262a070ead2edc71b7feb9c19d9aa3fdd3784be969ce41ae5f8e31f",
+    "stage_b_large.py": "7a2221c1ccbe9a9de66c52d99e402c28552f58d9a5e54bd77c473eac213155a6",
+    "stage_b_link.py": "d12c7064433690ad603151c12c11cb73abcf2937af72f67007d95361c156adb4",
+    "stage_b_controls.py": "b01a6a0ecd231c1a998e5fdd562df70f9cad90915ea39697c4aaaf3265c2fc25",
+    "stage_b_delivery.py": "8779e99645ed66dcf6b33fdefdd8a1d731e92b280a2bfe3c325333ea24ada984",
+    "stage_b_check.py": "4dd603186420512ca1111a6ddd674735a3e8a8795b18ce54dab9620e4d856fc4",
+    "stage-b-stub/Cargo.toml": "58761dee9c8acb728bf12c36e6f0506418480e8f05208899cec87f3e55dfa623",
+    "stage-b-stub/Cargo.lock": "ea010bb20deb61ec3b859d28e17c682ebc55a1559bcbe50d8375ba40e3c6cdf5",
+    "stage-b-stub/call_stub.rs": "4e36b774ac4895fb95b8e731003b798bd477245626ee2f5d23798112d3cfde7a",
+    "stage-b-stub/large_stub.rs": "e9f9882ad4383a02d0ae92b4c42379da6e21e3c222495730e7d5073714ebe301"
+  },
+  "private_corpus": {
+    "sha256": "0f176c60d30d30fffd4d7fb25d982cd3517d1a847840027ad3e99f9c572f41f0",
+    "compressed_bytes": 1003653,
+    "heldouts": 24,
+    "families": 8,
+    "generated": 500,
+    "distinct_generated": 404,
+    "generated_repeats": 96,
+    "contents_and_seed_published": false,
+    "custody": "acceptance-local only; no new generation or expectation edits",
+    "custody_note": "acceptance-private; this repository holds only the fingerprint, and nothing here regenerates it"
+  }
+}

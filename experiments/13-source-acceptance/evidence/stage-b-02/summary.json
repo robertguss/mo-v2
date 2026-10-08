@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "resource_workload_executed": false,
+  "private_corpus_used": false,
+  "builder_dispatched": false,
+  "stage_b_controls_executed": 0,
+  "inventory": true,
+  "link": true,
+  "controls": true,
+  "delivery": true,
+  "effort": {
+    "row": "ROB-1333 Stage B acceptance preparation",
+    "convention": "elapsed contributor seconds from explicit start to stop, including tool, build and test waits, excluding timestamped owner-wait and stopped periods",
+    "contributors": 1,
+    "concurrent": false,
+    "started": null,
+    "stopped": "2026-10-08T13:26:22.290570+00:00",
+    "elapsed_seconds": null,
+    "check_run_seconds": 52.933,
+    "owner_wait_seconds": 0,
+    "note": "Earlier preparation and Stage A effort are recorded in their own files and are not reconstructed here."
+  },
+  "workload_schedule_comparisons": 873,
+  "workload_state_comparisons": 873,
+  "adapter_runs": 7
+}

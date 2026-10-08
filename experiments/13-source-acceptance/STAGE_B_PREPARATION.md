@@ -8,11 +8,12 @@ checked before there is anything to measure.
 You authorized this on 8 October 2026 (D157: "Yes, prepare the Stage B
 acceptance package for my review. No build yet.").
 
-**Three things need your decision before Stage B can start. They are in
-"Decisions I need from you", and the first one is serious: as the observation
-schedule stands today, one of the two approved million-element tests cannot
-finish inside the time limit you approved, and it is the measuring equipment,
-not the language, that runs out of time.**
+You have since decided the three open items (D159, D160 and D161, recorded in
+the decisions register on 8 October 2026). This revision carries those decisions
+out. One of them could not be finished without changing a frozen file, and that
+stop is explained below. One thing is still open: after the photographs were
+made cheap, the recursive sum still does not fit in the ten minutes you
+approved, because of the number of steps rather than the photographs.
 
 ## What Stage B will demonstrate
 
@@ -81,7 +82,7 @@ evidence, not proof.
 All 496 frozen files, the five historical dependencies and the four preserved
 archives still match their recorded fingerprints exactly. I changed none of
 them. Everything in this package is a new file. The full list and every
-fingerprint are in `evidence/stage-b-01/inventory/inventory.json`.
+fingerprint are in `evidence/stage-b-02/inventory/inventory.json`.
 
 I also checked two numbers the Stage A report states in words. It says ten
 control paths and sixteen expectations about Stage B were deferred. Rather than
@@ -100,7 +101,7 @@ leaves each one:
 | No sanitized Stage B builder package | Assembled, scanned and fingerprinted |
 | Ten sabotage tests deferred | Prepared; none run, and none can run yet |
 | No Stage B private execution | Still blocked on the separate acceptance machine |
-| Neither million-element workload run | Still not run; see decision 1 |
+| Neither million-element workload run | Still not run. The discard one now fits the time limit; the recursive sum still does not |
 
 ### What is proposed new
 
@@ -109,16 +110,16 @@ leaves each one:
 | `STAGE_B_PREPARATION.md` | this file |
 | `BUILDER_STAGE_B_V18.md` | `5be9136fb83e632aee8f4dbe451dde3fa62cd405b251d9162fd6934d188f15b4` |
 | `stage_b_inventory.py` | `f98483f7f109461164a34b8ecd2fe47286244dac14e50c03568fdaf4c36d4f59` |
-| `stage_b_workloads.py` | `7230d08b51e21a76b00c080525ec2755a0db8474170262497c3a4f6629a26b7f` |
-| `stage_b_large.py` | `06a4bde6ed6b26448ee6814c4f6fd64a22313c2a07a93cf33ae2a28a2e6056cf` |
+| `stage_b_workloads.py` | `38486c00a262a070ead2edc71b7feb9c19d9aa3fdd3784be969ce41ae5f8e31f` |
+| `stage_b_large.py` | `7a2221c1ccbe9a9de66c52d99e402c28552f58d9a5e54bd77c473eac213155a6` |
 | `stage_b_link.py` | `d12c7064433690ad603151c12c11cb73abcf2937af72f67007d95361c156adb4` |
-| `stage_b_controls.py` | `5a3df0ba2775a4fddae096f3bd6a66b4b01da8f5def5d5532499d41b36237856` |
+| `stage_b_controls.py` | `b01a6a0ecd231c1a998e5fdd562df70f9cad90915ea39697c4aaaf3265c2fc25` |
 | `stage_b_delivery.py` | `8779e99645ed66dcf6b33fdefdd8a1d731e92b280a2bfe3c325333ea24ada984` |
-| `stage_b_check.py` | `61a1ef4ca27fb40abad110fe73196b6916b5f5f285b311903d1d1bd3c97b4d19` |
+| `stage_b_check.py` | `4dd603186420512ca1111a6ddd674735a3e8a8795b18ce54dab9620e4d856fc4` |
 | `stage-b-stub/Cargo.toml` | `58761dee9c8acb728bf12c36e6f0506418480e8f05208899cec87f3e55dfa623` |
 | `stage-b-stub/Cargo.lock` | `ea010bb20deb61ec3b859d28e17c682ebc55a1559bcbe50d8375ba40e3c6cdf5` |
 | `stage-b-stub/call_stub.rs` | `4e36b774ac4895fb95b8e731003b798bd477245626ee2f5d23798112d3cfde7a` |
-| `stage-b-stub/large_stub.rs` | `e81bd4fedabfbec6f860d672d18e69e23573250998c184769d97dd96b94bc02c` |
+| `stage-b-stub/large_stub.rs` | `e9f9882ad4383a02d0ae92b4c42379da6e21e3c222495730e7d5073714ebe301` |
 
 These are review fingerprints, not a scientific lock. A lock comes after you
 approve the package.
@@ -168,9 +169,10 @@ without functions cannot reach the behaviour they target. I prepared all ten:
 which frozen check decides each one, what the interpreter must be able to do
 before the test means anything, and which public example actually exercises the
 path. Nine of the ten have a public example that reaches them. One,
-`omitted-entry-create`, has none — no public example makes an invocation
-allocate memory at the moment it starts — so that one currently has no way to
-be run on public evidence. That is the third decision below.
+`omitted-entry-create`, still has none. D161 (ask the acceptance machine, and
+add one public example if nothing reserved allocates at the start of a call)
+was carried as far as it can be without editing a frozen file. The stop is
+explained under "The example that allocates at the start of a call".
 
 **Zero of the ten ran, and none can run until Stage B is built.** To stop a
 prepared plan ever being mistaken for a passed test, I ran fifty checks that
@@ -191,7 +193,7 @@ it compiles on its own with the pinned Rust 1.98.1.
 
 Archive `rob-1333-stage-b-public-v18.tar.gz`, 28,229 bytes, SHA256
 `0e30809545c3114012c69cceaf024e22f69c08a9b9721eb0a199e35a5d76b997`. The file
-list and every fingerprint are in `evidence/stage-b-01/delivery/summary.json`.
+list and every fingerprint are in `evidence/stage-b-02/delivery/summary.json`.
 
 The scan reported two places where a sabotage test's name appears as ordinary
 English inside already-approved public documents ("tail-call/early-cleanup
@@ -201,7 +203,7 @@ it. I did not edit the frozen documents.
 
 ### Everything that was checked
 
-Produced by one command, `python3 stage_b_check.py evidence/stage-b-01
+Produced by one command, `python3 stage_b_check.py evidence/stage-b-02
 /tmp/rob1333-stage-b/debug`, which passed.
 
 | What | Result |
@@ -209,9 +211,10 @@ Produced by one command, `python3 stage_b_check.py evidence/stage-b-01
 | Frozen files, dependencies and archives rehashed | 496 + 5 + 4, all unchanged |
 | Deferred control paths and expectations re-derived | 10 and 16, both agree with the Stage A record |
 | Closed-form schedule against the frozen predictor | 873 actions compared, exact, depths 0–8, both workloads |
-| Closed-form full states against the frozen predictor | 99 states compared, exact, discard workload |
+| Closed-form full states against the frozen predictor | 873 states compared, exact, depths 0–8, both workloads |
 | Large runs through the adapter | 7 sizes, 12 to 200,000 elements, up to 400,003 steps |
 | Pause and resume during a large run | 1 run, stopped at step 10,000, resumed with no work, then finished |
+| Full photograph at the deepest point of a discard run | 1 run, stopped at step 9,999, chain of 5,000, the last cell still to be freed |
 | Destroy part-way through a large run | 1 run, 3,000 cells released by destruction, nothing left after teardown |
 | Deliberate faults the adapter caught | 3: a claimed-but-not-performed release, too few photographs, and an attempt to run at the approved size |
 | Stage B linked runs through the frozen checker | 15, all passing, including all 7 pause points and all 7 destroy points |
@@ -225,111 +228,134 @@ Produced by one command, `python3 stage_b_check.py evidence/stage-b-01
 | Million-element workloads run | 0 |
 | Private reserved or generated cases used | 0 |
 
-## Decisions I need from you
+## What your three decisions changed
 
-### 1. The observation schedule does not fit the time limit
+You decided these on 8 October 2026. Each name is the decisions-register entry.
 
-This is the important one.
+**D159, summaries between boundaries.** Keep a look every 10,000 steps, but make
+that look a summary: how deep the program is, how many cells are alive, how
+many cells have been created, written and freed, and which cells changed since
+the last look. Take a full photograph only at the boundaries: the start, the
+deepest moment, a pause or a failure or the finish, and around cleanup. Every
+individual cell operation is still recorded, all the way through. This also
+settles the protocol's open item about how a large photograph is written out.
 
-You approved (D151) that a large run records its full state at the start, after
-every 10,000 steps, at every pause or failure or finish, and around cleanup.
-Separately you approved a 600-second limit per workload, covering everything.
+**D160, the cleanup chain.** At those same photographs, record the whole list of
+cells part-way through being released. Between photographs, record only how
+long that list is.
 
-Working out what that schedule actually asks for, I get:
+**D161, the missing sabotage example.** Ask the acceptance machine whether any
+reserved example allocates memory at the moment a call starts. It checked, and
+answered no for all 24 reserved examples and all 500 generated ones. The
+fallback you approved was to add one public example that does allocate at that
+moment. I stopped before adding it. The reason is in the section below.
+
+The recursive sum now has a complete rule for the full content of its state,
+which D159 made writable: the only enormous photograph is the one at the
+bottom of the recursion, and the rule for that photograph was checked, step by
+step, against the existing trusted predictor at every depth from 0 through 8.
+It matches exactly. The discard workload's rule was already complete and still
+matches.
+
+## The new projections
+
+Same measured rates as last time, from `evidence/stage-b-01/adapter.json`:
+about 37 microseconds to check one step, and about 7.6 microseconds per row
+written out. Those rates were measured on this checking equipment, not on a Mo
+interpreter. What changed is the number of rows. Under D159 and D160 the rows
+are exact consequences of the rules, checked at small depths, not a guess at
+how the cost grows.
 
 | | Adding a million ones | Discarding a million-element list |
 | --- | ---: | ---: |
 | Steps in the run | 18,000,014 | 2,000,003 |
-| Full photographs required | 1,806 | 206 |
-| Largest single photograph | about 5 million rows | about 2 million rows |
-| Total rows across all photographs | about 5.1 billion | about 100 million |
-| Projected time on this machine | about 11 hours | about 14 minutes |
-| Time limit you approved | 10 minutes | 10 minutes |
+| Summary looks, every 10,000 steps | 1,800 | 200 |
+| Rows in the deepest photograph | 5,000,003 | 1,000,002 |
+| Rows in all the photographs and summaries | 7,010,803 | 3,001,204 |
+| Projected time, the steps | about 11 minutes | about 75 seconds |
+| Projected time, the rows | about 54 seconds | about 23 seconds |
+| Projected time, together | about 12 minutes | about 98 seconds |
+| Time limit you approved (D151) | 10 minutes | 10 minutes |
+| Fits | no | yes |
 
-The reason is not slowness. It is that a photograph of a recursion a million
-levels deep genuinely contains a million levels: a million frames and about
-three million rows describing where each one is. Taking 1,800 such photographs
-means writing out, sending and checking billions of rows. No reasonable speed-up
-rescues that; even at twenty bytes a row it is hundreds of gigabytes.
+The deepest photograph of the recursive sum is the moment the millionth call
+begins. It holds a million frames, about three million rows describing where
+each call is, and a million cells. One such photograph is cheap. The previous
+schedule took about 1,800 of them, which was the eleven hours.
 
-The measured basis for the projection: seven runs at sizes from twelve to
-200,000, giving about 38 microseconds per step plus about 7.6 microseconds per
-row of state written out. Both numbers and the raw runs are in
-`evidence/stage-b-01/adapter.json`. This measures my equipment on this machine,
-not a Mo interpreter; the row counts, though, are a property of the schedule you
-approved and do not depend on the machine.
+The discard's deepest moment is the step where the cleanup chain is longest,
+one million cells. That chain is written out once. Between photographs only
+its length is written, which is what D160 is for. The cells that actually get
+freed are still listed, once each, in the summaries.
 
-Your options:
+**The discard workload now fits. The recursive sum still does not.** Almost all
+of the sum's projected twelve minutes is the cost of checking its eighteen
+million steps. The photographs add under a minute.
 
-- **(a) Keep the schedule and drop the time limit for large runs.** Honest, but
-  it turns a bounded test into an open-ended one, and "it eventually finished"
-  is weak evidence. I do not recommend it.
-- **(b) Keep full photographs, but take far fewer of them.** For example, every
-  millionth step instead of every ten-thousandth, plus start, pause, finish and
-  cleanup. For the recursive sum that is 18 photographs instead of 1,800, which
-  fits comfortably. You see less of the middle of the run.
-- **(c) Keep the frequency, but make most photographs a summary.** Every 10,000
-  steps record the counts and the boundaries — how deep, how many cells alive,
-  which cells changed — and take the full photograph only at the start, the
-  deepest point, the finish and around cleanup. Every individual cell operation
-  is still recorded throughout, so nothing about memory goes unwatched.
-- **(d) Shrink the workload.** Test 100,000 elements instead of a million. This
-  keeps everything else intact but weakens the claim you wanted to make.
+I did not run either workload at a million elements.
 
-**My recommendation is (c), with (b) as the fallback.** What the large tests are
-for is showing that a deep recursion does not overflow the stack and does not
-leak, and both of those are visible in the cell-by-cell record and the boundary
-photographs. The thousand intermediate photographs cost enormously and tell you
-very little that the counts do not. Choosing (c) also settles "large snapshot
-serialization", which the protocol already lists as still awaiting your
-approval, so this is filling in a gap rather than reopening a decision.
+One detail of the equipment, so you know what was actually exercised. The
+collector that receives a run is frozen, and it can attach a mid-run snapshot
+only every 10,000 steps. The discard's deepest step is 1,999,999, one step off
+that grid. Pausing there is already something the collector does, and a pause
+is one of the photographs D159 requires, so that is how the deepest photograph
+is taken. I paused a 5,000-element discard at step 9,999. The photograph
+matched the rule, including a cleanup chain of 5,000, and the one cell still
+allocated was released by cleanup. I did not edit the frozen collector.
 
-### 2. The cleanup chain in a photograph grows without limit
+## The example that allocates at the start of a call
 
-A smaller version of the same problem, and it needs its own answer because it
-affects the simpler of the two workloads.
+D161's fallback was to add one public example that allocates memory at the
+moment a call starts, so the sabotage test `omitted-entry-create` has something
+public to run on. You approved adding it to the public example set.
 
-When a million-element list is discarded, the rules say releasing the first cell
-releases the second, and so on. The state of the program therefore contains a
-list of everything currently part-way through being released, and near the end
-that list has close to a million entries. Over the whole run, recording it adds
-up to about 100 million rows — the 14 minutes in the table above is mostly this.
+I stopped, because doing it would change a frozen file.
 
-Your options:
+The frozen predictor is `experiments/13-source-acceptance/call_reference.py`.
+The step called Enter binds arguments the caller has already finished, and
+records that the call began. It does not allocate a cell. Every allocation the
+language makes is its own step: either while an argument is being prepared,
+which is before the call begins, or inside the function, which is after the
+call has begun. I checked the 21 public examples and a handful of further
+programs, including a function whose whole job is to build a one-element list.
+The predictor records zero allocations on Enter for all of them. The acceptance
+machine's answer for the private corpus was the same kind of zero.
 
-- **(a) Record the chain in full every time.** Faithful, and the reason the
-  discard test does not fit.
-- **(b) Record the chain's length and its two ends.** Cheap, and still catches a
-  chain that is the wrong length or is being worked in the wrong order.
-- **(c) Record the chain in full only at the start, the finish and around
-  cleanup, and its length in between.**
+The public examples live in `experiments/13-source-acceptance/cases.py`, which
+is frozen. Adding a program there changes that file's bytes. Adding the program
+in a new file would still be predicted by `call_reference.py`, which would
+count zero allocations on Enter, so the sabotage test would still have nothing
+to catch. Making the predictor allocate on Enter would mean editing
+`call_reference.py`, which is also frozen. I changed neither file.
 
-**My recommendation is (c).** It keeps the exact evidence where the cleanup
-rules are most likely to be violated and makes the middle of the run cheap. This
-is a reporting-detail choice; it changes nothing about what Mo must do.
+`omitted-entry-create` therefore still has no public example that reaches it.
+Nine of the ten sabotage tests do. None of the ten has been run.
 
-### 3. One sabotage test has no example that reaches it
+## The decision still open
 
-`omitted-entry-create` is meant to catch an interpreter that fails to allocate
-memory the start of a call genuinely needs. No public example reaches that
-situation: in every one of the 21 public examples, no invocation allocates
-anything at the moment it starts. So as things stand the test cannot be run on
-public evidence.
+The recursive sum of a million ones does not fit in the 10 minutes you approved
+with D151 (the resource envelope: 600 seconds, 8 MiB of stack, at least 4 GiB
+available, at most 100 million steps). The photographs are no longer why. The
+steps are. Recording every one of 18 million steps costs about 11 minutes on
+this checking equipment, and the new photographs add about one more minute.
 
 Your options:
 
-- **(a) Add one public example that allocates at entry**, and keep the test. I
-  would add it to the frozen public set, which needs your approval because the
-  frozen set is frozen.
-- **(b) Check whether one of the 24 reserved examples reaches it.** They live
-  outside this repository and I have not looked at them; the acceptance machine
-  can check and report yes or no without revealing them.
-- **(c) Retire the test** and record honestly that this particular mistake is
-  not covered.
+- **(a) Give the recursive sum 15 minutes instead of 10.** 900 seconds covers
+  the projected 12 minutes and leaves a margin. The discard stays at 10
+  minutes, which it now meets. This changes a limit you already set, for one
+  workload, because the cost is the record of every step, which you also
+  required.
+- **(b) Leave both workloads at 10 minutes.** The discard can then be an
+  acceptance run. The recursive sum cannot, with this checking equipment.
+- **(c) Stop recording every step**, and keep only the summaries and the
+  photographs. That would make the sum fit, and it would drop the step-by-step
+  record you required.
 
-**My recommendation is (b) first, then (a) if the answer is no.** Using a
-reserved example is better, because an example the builder has never seen is
-stronger evidence than one it has. Option (c) loses real coverage.
+**My recommendation is (a).** The thing you asked for, a full photograph only
+at the boundaries, is done, and it is cheap. What is left is the cost of
+writing down 18 million steps. Fifteen minutes is enough for that on this
+machine. It changes the test's clock, not what Mo has to do.
 
 ## Limitations
 
@@ -338,23 +364,27 @@ stronger evidence than one it has. Option (c) loses real coverage.
   equipment works; they prove nothing about Mo.
 - Neither million-element workload ran. The adapter refuses to run at the
   approved size, by design, so a test cannot quietly become the real thing.
-- Of the two workloads, only the discard one has a complete state rule and has
-  actually been driven through the adapter. The recursive sum has a validated
-  rule for its actions, its sites, its depth and its sizes, but not yet for the
-  full content of its states, because how a state that large should be written
-  out is decision 1 above.
+- Both workloads now have a complete state rule, checked exactly against the
+  frozen predictor at depths 0 through 8. The million-element figures are that
+  rule applied at the approved size, not a run at that size.
+- The projections use the rates measured on the previous, heavier schedule
+  (`evidence/stage-b-01/adapter.json`) multiplied by the new row counts. They
+  are not a fresh fit, and they are not a measurement of a Mo interpreter.
+- The frozen collector still attaches the list of live cells every 10,000
+  steps. D159 does not require that list between boundaries. The projection
+  counts the record D159 requires. The extra list is a property of the frozen
+  collector.
 - The private 24 reserved examples and 500 generated ones live on the separate
   acceptance machine, not in this repository. I did not use them, recreate
-  them, regenerate them or substitute anything for them. Everything that needs
-  them is marked as waiting for that machine.
-- Zero of the ten deferred sabotage tests ran.
-- The projections to a million elements are projections. They rest on seven
-  measured runs and on row counts derived from the rules, not on a run at that
-  size.
-- The large-run watcher checks that a cell identity is never reused by requiring
-  each new one to be larger than any seen before, rather than by remembering
-  every retired identity as the small-run watcher does. That is a slightly
-  weaker check, adopted so memory stays bounded.
+  them, regenerate them or substitute anything for them. The machine's yes/no
+  answer on entry allocation is what D161 asked for, and no example content
+  came back with it.
+- Zero of the ten sabotage tests ran. `omitted-entry-create` still has no
+  public trigger, for the reason above.
+- The large-run watcher checks that a cell identity is never reused by
+  requiring each new one to be larger than any seen before, rather than by
+  remembering every retired identity as the small-run watcher does. That is a
+  slightly weaker check, adopted so memory stays bounded.
 - Separating the builder from acceptance stays a procedure, not a technical
   barrier. Assembling the package does not verify any future builder's context.
 
@@ -362,28 +392,22 @@ stronger evidence than one it has. Option (c) loses real coverage.
 
 | Blocked on | What it is |
 | --- | --- |
-| The acceptance machine | Running the 24 reserved and 500 generated cases against a Stage B candidate; answering decision 3(b) |
+| Your decision above | Whether the recursive sum gets 15 minutes, stays at 10 and cannot run, or loses its step-by-step record |
+| The acceptance machine | Running the 24 reserved and 500 generated cases against a Stage B candidate |
 | A Stage B interpreter | All ten sabotage tests; the real resume, destroy and failure cuts; the Stage A regression under Stage B |
-| Your decision 1 | The full state rule for the recursive sum, and both million-element runs |
 | Your approval | Freezing this package, delivering it to a builder, starting Stage B |
 
 ## Effort ledger (D152)
 
-Elapsed contributor time, counted from the explicit start of this session to its
+Elapsed contributor time, counted from the explicit start of a session to its
 stop, including tool, build and test waits, excluding owner-wait and stopped
 periods. One contributor, no concurrency.
 
-| Row | Seconds |
-| --- | ---: |
-| Stage B acceptance preparation (this session) | 3,059 |
-| of which, the final evidence run | 73 |
-| Recorded owner-wait | 0 |
+The earlier preparation row is unchanged and is not added again. It is in
+`evidence/stage-b-01/effort.json`: 3,059 seconds, of which the check run was
+73 seconds, from 10:56 to 11:47 UTC on 8 October 2026.
 
-That is 51 minutes, from 10:56 to 11:47 UTC on 8 October 2026. The machine
-figures are in `evidence/stage-b-01/effort.json`. Earlier preparation and Stage
-A effort are recorded in their own files and are not restated or reconstructed
-here. Host wall time, processor time and memory use are different measurements
-and are reported separately in the run summaries.
+This revision's check run is in `evidence/stage-b-02/effort.json`.
 
 ## How to reproduce
 
@@ -398,8 +422,7 @@ python3 stage_b_check.py evidence/stage-b-02 /tmp/rob1333-stage-b/debug
 ```
 
 Use a new evidence directory; the existing one is refused rather than
-overwritten. The run takes about seventy-five seconds and starts no Mo
-interpreter.
+overwritten. The run takes a couple of minutes and starts no Mo interpreter.
 
 ## Boundaries
 

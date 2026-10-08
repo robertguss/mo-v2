@@ -198,9 +198,14 @@ def run(destination):
         rows, features = registry()
         assert len(rows) == 10, "deferred control count"
         report["deferred_controls"] = len(rows)
-        # A control with no public trigger cannot be run on public evidence at
-        # all. That is reported, not papered over by inventing a new example:
-        # adding one changes the frozen public case set and needs approval.
+        # D161 approved one new public example if nothing in the reserved corpus
+        # allocates at invocation entry. Nothing does. Under the frozen
+        # reference no source program does either: Enter records the call and
+        # binds parameters, and a create is always its own earlier or later
+        # action. Registering an example that does not allocate there would not
+        # give omitted-entry-create a trigger, and making one that does would
+        # mean editing the frozen reference. The control stays without a public
+        # trigger, and that stop is explained in STAGE_B_PREPARATION.md.
         report["controls_without_public_trigger"] = [
             row["control"] for row in rows if not row["trigger_examples"]]
         report["controls_with_public_trigger"] = len(rows) - len(report["controls_without_public_trigger"])
