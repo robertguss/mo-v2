@@ -2,45 +2,45 @@
   "passed": false,
   "candidate_executed": false,
   "fixture_stub": true,
-  "available_bytes": 5047115776,
+  "available_bytes": 5070012416,
   "stack_bytes": 8388608,
   "error": "AssertionError: birth origin/domain/order",
-  "elapsed_ns": 4751307,
+  "elapsed_ns": 4006366,
   "phases": [
     {
       "phase": "launch",
-      "start_ns": 2846577674898,
-      "end_ns": 2846581284889
+      "start_ns": 3025164036978,
+      "end_ns": 3025166925094
     },
     {
       "phase": "check",
-      "start_ns": 2846581284889,
-      "end_ns": 2846581667425
+      "start_ns": 3025166925094,
+      "end_ns": 3025167260767
     },
     {
       "phase": "frontend",
-      "start_ns": 2846581667425,
-      "end_ns": 2846581717851
+      "start_ns": 3025167260767,
+      "end_ns": 3025167320522
     },
     {
       "phase": "fixture",
-      "start_ns": 2846581717851,
-      "end_ns": 2846581778111
+      "start_ns": 3025167320522,
+      "end_ns": 3025167379467
     },
     {
       "phase": "begin",
-      "start_ns": 2846581778111,
-      "end_ns": 2846581991783
+      "start_ns": 3025167379467,
+      "end_ns": 3025167570612
     },
     {
       "phase": "commit",
-      "start_ns": 2846581991783,
-      "end_ns": 2846582140291
+      "start_ns": 3025167570612,
+      "end_ns": 3025167724382
     },
     {
       "phase": "commit",
-      "start_ns": 2846582140291,
-      "end_ns": 2846582321191
+      "start_ns": 3025167724382,
+      "end_ns": 3025167916719
     }
   ]
 }

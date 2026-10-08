@@ -2,10 +2,10 @@
   "passed": true,
   "candidate_executed": false,
   "fixture_stub": true,
-  "available_bytes": 5049733120,
+  "available_bytes": 5069639680,
   "stack_bytes": 8388608,
   "exit_code": 0,
-  "peak_rss_kib": 121376,
+  "peak_rss_kib": 96352,
   "committed_steps": 1,
   "advances": 1,
   "destroy_calls": 2,
@@ -23,64 +23,64 @@
   "resource_attempts": {
     "number": 1
   },
-  "elapsed_ns": 4984076,
-  "start_ns": 2846493505698,
-  "stop_ns": 2846498489774,
+  "elapsed_ns": 7252002,
+  "start_ns": 3025089289799,
+  "stop_ns": 3025096541801,
   "phases": [
     {
       "phase": "launch",
-      "start_ns": 2846493505698,
-      "end_ns": 2846496972021
+      "start_ns": 3025089289799,
+      "end_ns": 3025092460181
     },
     {
       "phase": "check",
-      "start_ns": 2846496972021,
-      "end_ns": 2846497546719
+      "start_ns": 3025092460181,
+      "end_ns": 3025095720777
     },
     {
       "phase": "frontend",
-      "start_ns": 2846497546719,
-      "end_ns": 2846497606165
+      "start_ns": 3025095720777,
+      "end_ns": 3025095777319
     },
     {
       "phase": "fixture",
-      "start_ns": 2846497606165,
-      "end_ns": 2846497666291
+      "start_ns": 3025095777319,
+      "end_ns": 3025095825887
     },
     {
       "phase": "begin",
-      "start_ns": 2846497666291,
-      "end_ns": 2846497889644
+      "start_ns": 3025095825887,
+      "end_ns": 3025096014364
     },
     {
       "phase": "commit",
-      "start_ns": 2846497889644,
-      "end_ns": 2846498046274
+      "start_ns": 3025096014364,
+      "end_ns": 3025096152781
     },
     {
       "phase": "advance",
-      "start_ns": 2846498046274,
-      "end_ns": 2846498177809
+      "start_ns": 3025096152781,
+      "end_ns": 3025096273055
     },
     {
       "phase": "destroy",
-      "start_ns": 2846498177809,
-      "end_ns": 2846498298610
+      "start_ns": 3025096273055,
+      "end_ns": 3025096381848
     },
     {
       "phase": "destroy-again",
-      "start_ns": 2846498298610,
-      "end_ns": 2846498391764
+      "start_ns": 3025096381848,
+      "end_ns": 3025096463132
     },
     {
       "phase": "drop",
-      "start_ns": 2846498391764,
-      "end_ns": 2846498421672
+      "start_ns": 3025096463132,
+      "end_ns": 3025096489592
     },
     {
       "phase": "teardown",
-      "start_ns": 2846498421672,
-      "end_ns": 2846498489774
+      "start_ns": 3025096489592,
+      "end_ns": 3025096541801
     }
   ]
 }

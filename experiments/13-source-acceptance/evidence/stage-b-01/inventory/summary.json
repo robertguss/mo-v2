@@ -35,7 +35,7 @@
     "d151-resource-workloads": "neither million-cell workload has ever run"
   },
   "proposed_new_files": {
-    "STAGE_B_PREPARATION.md": "f1bade56cc3af8dae287585356cc6ab433ffb952f80ed43dbdb3739d52c7a347",
+    "STAGE_B_PREPARATION.md": "bb3d5d1fd47f8e46ff1e3b0107508a57a01ba8c7aa342a752cd43396fcc1d806",
     "stage_b_inventory.py": "f98483f7f109461164a34b8ecd2fe47286244dac14e50c03568fdaf4c36d4f59",
     "stage_b_workloads.py": "7230d08b51e21a76b00c080525ec2755a0db8474170262497c3a4f6629a26b7f",
     "stage_b_large.py": "06a4bde6ed6b26448ee6814c4f6fd64a22313c2a07a93cf33ae2a28a2e6056cf",
@@ -45,8 +45,8 @@
     "stage_b_check.py": "61a1ef4ca27fb40abad110fe73196b6916b5f5f285b311903d1d1bd3c97b4d19",
     "stage-b-stub/Cargo.toml": "58761dee9c8acb728bf12c36e6f0506418480e8f05208899cec87f3e55dfa623",
     "stage-b-stub/Cargo.lock": "ea010bb20deb61ec3b859d28e17c682ebc55a1559bcbe50d8375ba40e3c6cdf5",
-    "stage-b-stub/call_stub.rs": "41d96e94a462153334356e529dfa43ca3e8e5f5ad7ab777baca4f5551718ff46",
-    "stage-b-stub/large_stub.rs": "840d4a1bf6c8a538b630e2ac04b3bec5ad0a5b459a00acc32b29b557b5174333"
+    "stage-b-stub/call_stub.rs": "4e36b774ac4895fb95b8e731003b798bd477245626ee2f5d23798112d3cfde7a",
+    "stage-b-stub/large_stub.rs": "e81bd4fedabfbec6f860d672d18e69e23573250998c184769d97dd96b94bc02c"
   },
   "private_corpus": {
     "sha256": "0f176c60d30d30fffd4d7fb25d982cd3517d1a847840027ad3e99f9c572f41f0",
