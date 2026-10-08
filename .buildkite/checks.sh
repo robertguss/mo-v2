@@ -48,6 +48,20 @@ summary() {
   cat "$TIMINGS"
 }
 
+# have <experiment-dir>: true when the branch being built carries that
+# experiment. Branches that predate an experiment -- for example
+# codex/native-migration-resource-limit, which forked before experiments 10 and
+# 11 landed -- are checked against what they actually contain, and the skip is
+# printed rather than passed over quietly.
+have() {
+  if [ -d "$REPO_ROOT/experiments/$1" ]; then
+    return 0
+  fi
+  printf '\n--- :fast_forward: skipping %s: not on this branch\n' "$1"
+  printf '%8s  %s (not on this branch)\n' "skip" "$1" >>"$TIMINGS"
+  return 1
+}
+
 # --------------------------------------------------------------------------
 # Rust: release builds of the experiment crates, plus the two frozen Rust
 # correctness corpora. No timing, allocation or load measurement runs here.
@@ -59,38 +73,46 @@ rust_checks() {
   # Experiment 4, RESULT.md "Reproduction and retained files" (build only; its
   # acceptance run needs Java and the TLA+ TLC jar). RESULT.md's check table
   # requires no compiler warnings, so warnings are denied.
-  cd "$REPO_ROOT/experiments/04-live-update"
-  run "04-live-update: release build" env RUSTFLAGS='-D warnings' \
-    cargo build --release --locked --offline --manifest-path runtime/Cargo.toml
+  if have 04-live-update; then
+    cd "$REPO_ROOT/experiments/04-live-update"
+    run "04-live-update: release build" env RUSTFLAGS='-D warnings' \
+      cargo build --release --locked --offline --manifest-path runtime/Cargo.toml
+  fi
 
   # Experiment 5, same shape as experiment 4.
-  cd "$REPO_ROOT/experiments/05-concurrent-updates"
-  run "05-concurrent-updates: release build" env RUSTFLAGS='-D warnings' \
-    cargo build --release --locked --offline --manifest-path runtime/Cargo.toml
+  if have 05-concurrent-updates; then
+    cd "$REPO_ROOT/experiments/05-concurrent-updates"
+    run "05-concurrent-updates: release build" env RUSTFLAGS='-D warnings' \
+      cargo build --release --locked --offline --manifest-path runtime/Cargo.toml
+  fi
 
   # Experiment 11, RESULT.md "Reproduction": both release builds, both frozen
   # case runs (12,563 cases each) and the allocator calibration. The `measure`
   # subcommand is deliberately left out; see .buildkite/README.md.
-  cd "$REPO_ROOT/experiments/11-integer-policies"
-  run "11-integer-policies: timing build" \
-    env RUSTFLAGS='-D warnings' CARGO_TARGET_DIR=target/timing \
-    cargo build --release --locked
-  run "11-integer-policies: allocator build" \
-    env RUSTFLAGS='-D warnings' CARGO_TARGET_DIR=target/allocator \
-    cargo build --release --locked --features measure
-  run "11-integer-policies: 12,563 frozen cases (timing build)" \
-    python3 check.py cases target/timing/release/integer-policies "$EVIDENCE/11-cases-timing"
-  run "11-integer-policies: 12,563 frozen cases (allocator build)" \
-    python3 check.py cases target/allocator/release/integer-policies "$EVIDENCE/11-cases-allocator"
-  run "11-integer-policies: allocator calibration" \
-    target/allocator/release/integer-policies calibrate
+  if have 11-integer-policies; then
+    cd "$REPO_ROOT/experiments/11-integer-policies"
+    run "11-integer-policies: timing build" \
+      env RUSTFLAGS='-D warnings' CARGO_TARGET_DIR=target/timing \
+      cargo build --release --locked
+    run "11-integer-policies: allocator build" \
+      env RUSTFLAGS='-D warnings' CARGO_TARGET_DIR=target/allocator \
+      cargo build --release --locked --features measure
+    run "11-integer-policies: 12,563 frozen cases (timing build)" \
+      python3 check.py cases target/timing/release/integer-policies "$EVIDENCE/11-cases-timing"
+    run "11-integer-policies: 12,563 frozen cases (allocator build)" \
+      python3 check.py cases target/allocator/release/integer-policies "$EVIDENCE/11-cases-allocator"
+    run "11-integer-policies: allocator calibration" \
+      target/allocator/release/integer-policies calibrate
+  fi
 
   # Experiment 10, RESULT.md "Reproduction and evidence": compiles backend.rs
   # with `rustc --edition 2024 -D warnings` and compares 4,276 cases and 27,721
   # snapshots against the Lean model's frozen export.
-  cd "$REPO_ROOT"
-  run "10-finite-rust: 4,276 cases against the Lean model" \
-    python3 experiments/10-finite-rust/check.py "$EVIDENCE/10-correspondence"
+  if have 10-finite-rust; then
+    cd "$REPO_ROOT"
+    run "10-finite-rust: 4,276 cases against the Lean model" \
+      python3 experiments/10-finite-rust/check.py "$EVIDENCE/10-correspondence"
+  fi
 
   summary
 }
@@ -105,32 +127,40 @@ lean_checks() {
 
   # Experiment 1, RESULT.md: the Lake build kernel-checks the safety and
   # usefulness theorems and prints the axioms each depends on.
-  cd "$REPO_ROOT/experiments/01-tiny-safe"
-  run "01-tiny-safe: lake build" lake build
+  if have 01-tiny-safe; then
+    cd "$REPO_ROOT/experiments/01-tiny-safe"
+    run "01-tiny-safe: lake build" lake build
+  fi
 
   # Experiment 2, RESULT.md and CLAUDE.md "Practical notes": the build checks
   # the two proofs; `lake exe score` prints the seven-method scoreboard.
-  cd "$REPO_ROOT/experiments/02-withdraw"
-  run "02-withdraw: lake build" lake build
-  # Smoke run only: `main : IO Unit`, so this reports and always exits 0. It
-  # catches a crash or a build that produced no runnable scoreboard, nothing
-  # more. Read the printed table; do not treat exit 0 as a scored result.
-  run "02-withdraw: lake exe score (smoke run, prints the scoreboard)" lake exe score
+  if have 02-withdraw; then
+    cd "$REPO_ROOT/experiments/02-withdraw"
+    run "02-withdraw: lake build" lake build
+    # Smoke run only: `main : IO Unit`, so this reports and always exits 0. It
+    # catches a crash or a build that produced no runnable scoreboard, nothing
+    # more. Read the printed table; do not treat exit 0 as a scored result.
+    run "02-withdraw: lake exe score (smoke run, prints the scoreboard)" lake exe score
+  fi
 
-  cd "$REPO_ROOT/experiments/03c-checker/trial/lean"
-  rm -rf .lake
-  run "03c trial: clean lake build Trial Checks Promises Proofs Acceptance" build_03c
-  run "03c trial: Checks/Run.lean reproduces results/run-1.txt" run1_03c
-  run "03c trial: lake env leanchecker --fresh Acceptance" \
-    lake env leanchecker --fresh Acceptance
+  if have 03c-checker; then
+    cd "$REPO_ROOT/experiments/03c-checker/trial/lean"
+    rm -rf .lake
+    run "03c trial: clean lake build Trial Checks Promises Proofs Acceptance" build_03c
+    run "03c trial: Checks/Run.lean reproduces results/run-1.txt" run1_03c
+    run "03c trial: lake env leanchecker --fresh Acceptance" \
+      lake env leanchecker --fresh Acceptance
+  fi
 
   # Experiment 10, RESULT.md "Reproduction and evidence": verifies the 270
   # tracked-file fingerprints in evidence/reference-sha256.json, rebuilds the
   # accepted Lean model in a disposable copy, and requires the fresh export to
   # equal the frozen expectations byte for byte.
-  cd "$REPO_ROOT"
-  run "10-finite-rust: rebuild the Lean reference and reproduce the export" \
-    python3 experiments/10-finite-rust/reproduce_reference.py "$EVIDENCE/10-reference"
+  if have 10-finite-rust; then
+    cd "$REPO_ROOT"
+    run "10-finite-rust: rebuild the Lean reference and reproduce the export" \
+      python3 experiments/10-finite-rust/reproduce_reference.py "$EVIDENCE/10-reference"
+  fi
 
   summary
 }
