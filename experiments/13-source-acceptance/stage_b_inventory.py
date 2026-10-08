@@ -53,8 +53,12 @@ KNOWN_GAPS = {
     "stage-b-candidate-linking": "no Stage B candidate has ever been linked or run",
     "stage-b-private-execution": "the 524 private rows are Stage A capability refusals only",
     "stage-b-builder-delivery": "no sanitized Stage B public package has been assembled",
-    "stage-b-compiled-controls": "ten deferred control paths have no compiled evaluator run",
-    "d151-resource-workloads": "neither million-cell workload has ever run",
+    "stage-b-compiled-controls":
+        "nine of the ten deferred controls are active and have no compiled evaluator run; "
+        "omitted-entry-create is not applicable under the frozen rules (D164)",
+    "d151-resource-workloads":
+        "neither million-cell workload has ever run; D162 sets the recursive sum's "
+        "limit at 900 seconds and leaves the discard at 600",
 }
 
 

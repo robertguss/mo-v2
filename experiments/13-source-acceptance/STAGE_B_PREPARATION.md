@@ -8,12 +8,34 @@ checked before there is anything to measure.
 You authorized this on 8 October 2026 (D157: "Yes, prepare the Stage B
 acceptance package for my review. No build yet.").
 
-You have since decided the three open items (D159, D160 and D161, recorded in
-the decisions register on 8 October 2026). This revision carries those decisions
-out. One of them could not be finished without changing a frozen file, and that
-stop is explained below. One thing is still open: after the photographs were
-made cheap, the recursive sum still does not fit in the ten minutes you
-approved, because of the number of steps rather than the photographs.
+You have since decided the open items. This revision carries them out. Each
+name is the entry in the decisions register.
+
+- **D159, summaries between boundaries.** Keep a look every 10,000 steps, but
+  make that look a summary: how deep the program is, how many cells are alive,
+  how many have been created, written and freed, and which cells changed. Take
+  a full photograph only at the start, the deepest moment, a pause or a failure
+  or the finish, and around cleanup. Every individual cell operation is still
+  recorded.
+- **D160, the cleanup chain.** At those same photographs, record the whole list
+  of cells part-way through being released. Between photographs, record only
+  how long that list is.
+- **D162, the recursive sum's clock.** The million-element recursive sum gets
+  900 seconds (15 minutes). The million-element discard stays at 600 seconds
+  (10 minutes). The record of every step stays. This amends D151's envelope for
+  the sum only. D151 is the resource envelope: those clocks, 8 MiB of stack, at
+  least 4 GiB available, and at most 100 million steps.
+- **D164, one sabotage test does not apply.** `omitted-entry-create` is recorded
+  as not applicable under the frozen rules, because the frozen predictor never
+  allocates memory at the moment a call begins. Nine of the ten sabotage tests
+  stay active. This supersedes the D161 fallback, which was to add a public
+  example that allocates at that moment. Adding one would not create that
+  allocation without editing a frozen file, and no frozen file was edited.
+
+Both workloads now fit their limits on the projection below. What is still
+gated, and has not been done: freezing this package, sending it to a builder,
+running the private cases, executing the nine active sabotage tests, and
+running either workload at a million elements.
 
 ## What Stage B will demonstrate
 
@@ -82,12 +104,14 @@ evidence, not proof.
 All 496 frozen files, the five historical dependencies and the four preserved
 archives still match their recorded fingerprints exactly. I changed none of
 them. Everything in this package is a new file. The full list and every
-fingerprint are in `evidence/stage-b-02/inventory/inventory.json`.
+fingerprint are in `evidence/stage-b-03/inventory/inventory.json`.
 
 I also checked two numbers the Stage A report states in words. It says ten
 control paths and sixteen expectations about Stage B were deferred. Rather than
 copy those numbers, I had a program work them out again from the frozen check
-files: it found exactly ten and exactly sixteen, and they agree.
+files: it found exactly ten and exactly sixteen, and they agree. Of those ten,
+nine are active tests. One is not applicable, for the reason under "Why one
+sabotage test does not apply".
 
 ### What was missing
 
@@ -99,9 +123,9 @@ leaves each one:
 | Large streaming equipment not implemented | Implemented and exercised at seven sizes |
 | No Stage B candidate had ever been linked or run | Linked and run, fifteen times, against a stand-in |
 | No sanitized Stage B builder package | Assembled, scanned and fingerprinted |
-| Ten sabotage tests deferred | Prepared; none run, and none can run yet |
+| Ten sabotage tests deferred | Nine prepared and still not run; one not applicable under the frozen rules |
 | No Stage B private execution | Still blocked on the separate acceptance machine |
-| Neither million-element workload run | Still not run. The discard one now fits the time limit; the recursive sum still does not |
+| Neither million-element workload run | Still not run. Both now fit their time limits on the projection |
 
 ### What is proposed new
 
@@ -109,13 +133,13 @@ leaves each one:
 | --- | --- |
 | `STAGE_B_PREPARATION.md` | this file |
 | `BUILDER_STAGE_B_V18.md` | `5be9136fb83e632aee8f4dbe451dde3fa62cd405b251d9162fd6934d188f15b4` |
-| `stage_b_inventory.py` | `f98483f7f109461164a34b8ecd2fe47286244dac14e50c03568fdaf4c36d4f59` |
-| `stage_b_workloads.py` | `38486c00a262a070ead2edc71b7feb9c19d9aa3fdd3784be969ce41ae5f8e31f` |
-| `stage_b_large.py` | `7a2221c1ccbe9a9de66c52d99e402c28552f58d9a5e54bd77c473eac213155a6` |
+| `stage_b_inventory.py` | `a5e8af032a51eb8981ed97451848d0520b9bc348a10994727c1dc33bd787104e` |
+| `stage_b_workloads.py` | `88a1d17a92d27c634d42ea9642916b44a591d066be059f3e0cd2a57773b8462b` |
+| `stage_b_large.py` | `8da36b2f8a64e0e4687f536008806ed498b42649d7c69d529ca269fe88694640` |
 | `stage_b_link.py` | `d12c7064433690ad603151c12c11cb73abcf2937af72f67007d95361c156adb4` |
-| `stage_b_controls.py` | `b01a6a0ecd231c1a998e5fdd562df70f9cad90915ea39697c4aaaf3265c2fc25` |
+| `stage_b_controls.py` | `2834ac725982eba0024fc1c0b30469a640b2c96cf9ff37c1f9ed31a005b663e7` |
 | `stage_b_delivery.py` | `8779e99645ed66dcf6b33fdefdd8a1d731e92b280a2bfe3c325333ea24ada984` |
-| `stage_b_check.py` | `4dd603186420512ca1111a6ddd674735a3e8a8795b18ce54dab9620e4d856fc4` |
+| `stage_b_check.py` | `9dcaa6614d607a4802c373cdd4a17c593d47f4a752cc6c74fef0388c980c3ed1` |
 | `stage-b-stub/Cargo.toml` | `58761dee9c8acb728bf12c36e6f0506418480e8f05208899cec87f3e55dfa623` |
 | `stage-b-stub/Cargo.lock` | `ea010bb20deb61ec3b859d28e17c682ebc55a1559bcbe50d8375ba40e3c6cdf5` |
 | `stage-b-stub/call_stub.rs` | `4e36b774ac4895fb95b8e731003b798bd477245626ee2f5d23798112d3cfde7a` |
@@ -168,16 +192,17 @@ Ten deliberate-sabotage tests were deferred from Stage A because a language
 without functions cannot reach the behaviour they target. I prepared all ten:
 which frozen check decides each one, what the interpreter must be able to do
 before the test means anything, and which public example actually exercises the
-path. Nine of the ten have a public example that reaches them. One,
-`omitted-entry-create`, still has none. D161 (ask the acceptance machine, and
-add one public example if nothing reserved allocates at the start of a call)
-was carried as far as it can be without editing a frozen file. The stop is
-explained under "The example that allocates at the start of a call".
+path.
 
-**Zero of the ten ran, and none can run until Stage B is built.** To stop a
-prepared plan ever being mistaken for a passed test, I ran fifty checks that
+Nine of the ten are active. Each of those nine has a public example that
+reaches it. The tenth, `omitted-entry-create`, is not applicable under the
+frozen rules. The reason is under "Why one sabotage test does not apply".
+
+**None of the nine has run, and none can run until Stage B is built.** To stop
+a prepared plan ever being mistaken for a passed test, I ran fifty checks that
 confirm the frozen acceptance of sabotage evidence still rejects a record that
-claims a test was run when it was not.
+claims a test was run when it was not. Those fifty include the test that is
+not applicable: a record claiming it ran is still rejected.
 
 I also re-ran the sixteen deferred expectations in Stage B mode. All sixteen
 pass, so they are ready to use the moment a candidate exists.
@@ -193,7 +218,7 @@ it compiles on its own with the pinned Rust 1.98.1.
 
 Archive `rob-1333-stage-b-public-v18.tar.gz`, 28,229 bytes, SHA256
 `0e30809545c3114012c69cceaf024e22f69c08a9b9721eb0a199e35a5d76b997`. The file
-list and every fingerprint are in `evidence/stage-b-02/delivery/summary.json`.
+list and every fingerprint are in `evidence/stage-b-03/delivery/summary.json`.
 
 The scan reported two places where a sabotage test's name appears as ordinary
 English inside already-approved public documents ("tail-call/early-cleanup
@@ -203,13 +228,14 @@ it. I did not edit the frozen documents.
 
 ### Everything that was checked
 
-Produced by one command, `python3 stage_b_check.py evidence/stage-b-02
+Produced by one command, `python3 stage_b_check.py evidence/stage-b-03
 /tmp/rob1333-stage-b/debug`, which passed.
 
 | What | Result |
 | --- | --- |
 | Frozen files, dependencies and archives rehashed | 496 + 5 + 4, all unchanged |
 | Deferred control paths and expectations re-derived | 10 and 16, both agree with the Stage A record |
+| Active sabotage tests, and tests that do not apply | 9 active; `omitted-entry-create` not applicable |
 | Closed-form schedule against the frozen predictor | 873 actions compared, exact, depths 0–8, both workloads |
 | Closed-form full states against the frozen predictor | 873 states compared, exact, depths 0–8, both workloads |
 | Large runs through the adapter | 7 sizes, 12 to 200,000 elements, up to 400,003 steps |
@@ -220,7 +246,8 @@ Produced by one command, `python3 stage_b_check.py evidence/stage-b-02
 | Stage B linked runs through the frozen checker | 15, all passing, including all 7 pause points and all 7 destroy points |
 | Deliberate faults the frozen Stage B checks caught | 4, each by a different check |
 | Deferred expectations re-run in Stage B mode | 16, all passing |
-| Checks that reject a sabotage record claiming a test ran | 50 |
+| Checks that reject a sabotage record claiming a test ran | 50, including the test that is not applicable |
+| Amended clock: sum at 900 seconds, discard at 600 | accepted; one second over each limit rejected |
 | Builder package assembled, scanned and rebuilt identically | 13 files, 28,229 bytes |
 | Public runtime compiled on its own | `cargo +1.98.1 check --locked --offline` |
 | Sabotage tests executed | 0 |
@@ -228,9 +255,7 @@ Produced by one command, `python3 stage_b_check.py evidence/stage-b-02
 | Million-element workloads run | 0 |
 | Private reserved or generated cases used | 0 |
 
-## What your three decisions changed
-
-You decided these on 8 October 2026. Each name is the decisions-register entry.
+## What your decisions changed
 
 **D159, summaries between boundaries.** Keep a look every 10,000 steps, but make
 that look a summary: how deep the program is, how many cells are alive, how
@@ -244,12 +269,6 @@ settles the protocol's open item about how a large photograph is written out.
 cells part-way through being released. Between photographs, record only how
 long that list is.
 
-**D161, the missing sabotage example.** Ask the acceptance machine whether any
-reserved example allocates memory at the moment a call starts. It checked, and
-answered no for all 24 reserved examples and all 500 generated ones. The
-fallback you approved was to add one public example that does allocate at that
-moment. I stopped before adding it. The reason is in the section below.
-
 The recursive sum now has a complete rule for the full content of its state,
 which D159 made writable: the only enormous photograph is the one at the
 bottom of the recursion, and the rule for that photograph was checked, step by
@@ -257,14 +276,30 @@ step, against the existing trusted predictor at every depth from 0 through 8.
 It matches exactly. The discard workload's rule was already complete and still
 matches.
 
+**D162, fifteen minutes for the recursive sum.** D151 gave both workloads 600
+seconds. After the photographs were made cheap, the sum's projected time was
+still about 12 minutes, almost all of it the cost of writing down its 18
+million steps. You gave that workload 900 seconds and left the discard at 600.
+The step-by-step record stays. The frozen file that still says 600 seconds for
+both workloads was not edited. The package's own check is the one that applies
+900 seconds to the sum and 600 to the discard, and it rejects a record one
+second over either limit.
+
+**D164, the tenth test does not apply.** Explained in the next section but one.
+It supersedes the D161 fallback. D161 had said: ask the acceptance machine, and
+if nothing reserved allocates at the start of a call, add one public example
+that does. The machine answered no. Adding the example turned out to be
+impossible without editing a frozen file, so you recorded the test as not
+applicable instead.
+
 ## The new projections
 
 Same measured rates as last time, from `evidence/stage-b-01/adapter.json`:
 about 37 microseconds to check one step, and about 7.6 microseconds per row
 written out. Those rates were measured on this checking equipment, not on a Mo
-interpreter. What changed is the number of rows. Under D159 and D160 the rows
-are exact consequences of the rules, checked at small depths, not a guess at
-how the cost grows.
+interpreter. The row counts are exact consequences of the D159 and D160 rules,
+checked at small depths. The cost of checking each step is still in the total.
+That is the per-step record D162 keeps.
 
 | | Adding a million ones | Discarding a million-element list |
 | --- | ---: | ---: |
@@ -275,8 +310,8 @@ how the cost grows.
 | Projected time, the steps | about 11 minutes | about 75 seconds |
 | Projected time, the rows | about 54 seconds | about 23 seconds |
 | Projected time, together | about 12 minutes | about 98 seconds |
-| Time limit you approved (D151) | 10 minutes | 10 minutes |
-| Fits | no | yes |
+| Time limit (D162 amends D151 for the sum only) | 15 minutes | 10 minutes |
+| Fits | yes | yes |
 
 The deepest photograph of the recursive sum is the moment the millionth call
 begins. It holds a million frames, about three million rows describing where
@@ -288,9 +323,10 @@ one million cells. That chain is written out once. Between photographs only
 its length is written, which is what D160 is for. The cells that actually get
 freed are still listed, once each, in the summaries.
 
-**The discard workload now fits. The recursive sum still does not.** Almost all
-of the sum's projected twelve minutes is the cost of checking its eighteen
-million steps. The photographs add under a minute.
+**Both workloads now fit their limits.** The sum's projected twelve minutes is
+inside the fifteen you approved. The discard's projected 98 seconds is inside
+its ten minutes. Almost all of the sum's time is still the cost of checking
+its eighteen million steps. The photographs add under a minute.
 
 I did not run either workload at a million elements.
 
@@ -303,59 +339,34 @@ is taken. I paused a 5,000-element discard at step 9,999. The photograph
 matched the rule, including a cleanup chain of 5,000, and the one cell still
 allocated was released by cleanup. I did not edit the frozen collector.
 
-## The example that allocates at the start of a call
+## Why one sabotage test does not apply
 
-D161's fallback was to add one public example that allocates memory at the
-moment a call starts, so the sabotage test `omitted-entry-create` has something
-public to run on. You approved adding it to the public example set.
+`omitted-entry-create` was meant to catch an interpreter that skips a piece of
+memory a call should allocate at the moment the call begins. Under the frozen
+rules, a call never allocates at that moment.
 
-I stopped, because doing it would change a frozen file.
+The frozen predictor records the call and binds arguments the caller has
+already finished. It does not allocate a cell. Every allocation the language
+makes is its own step: either while an argument is being prepared, which is
+before the call begins, or inside the function, which is after the call has
+begun. I checked the 21 public examples, including a function whose whole job
+is to build a one-element list. The predictor records zero allocations at the
+start of a call for all of them. The acceptance machine's answer for the
+private corpus was the same kind of zero: no reserved example and no generated
+example allocates there either.
 
-The frozen predictor is `experiments/13-source-acceptance/call_reference.py`.
-The step called Enter binds arguments the caller has already finished, and
-records that the call began. It does not allocate a cell. Every allocation the
-language makes is its own step: either while an argument is being prepared,
-which is before the call begins, or inside the function, which is after the
-call has begun. I checked the 21 public examples and a handful of further
-programs, including a function whose whole job is to build a one-element list.
-The predictor records zero allocations on Enter for all of them. The acceptance
-machine's answer for the private corpus was the same kind of zero.
+D161's fallback was to add one public example that does allocate at that
+moment. Adding the program would change a frozen file, and the frozen predictor
+would still count zero allocations at the start of the call, so the test would
+still have nothing to catch. Making the predictor allocate there would also
+mean editing a frozen file. I changed neither file.
 
-The public examples live in `experiments/13-source-acceptance/cases.py`, which
-is frozen. Adding a program there changes that file's bytes. Adding the program
-in a new file would still be predicted by `call_reference.py`, which would
-count zero allocations on Enter, so the sabotage test would still have nothing
-to catch. Making the predictor allocate on Enter would mean editing
-`call_reference.py`, which is also frozen. I changed neither file.
-
-`omitted-entry-create` therefore still has no public example that reaches it.
-Nine of the ten sabotage tests do. None of the ten has been run.
-
-## The decision still open
-
-The recursive sum of a million ones does not fit in the 10 minutes you approved
-with D151 (the resource envelope: 600 seconds, 8 MiB of stack, at least 4 GiB
-available, at most 100 million steps). The photographs are no longer why. The
-steps are. Recording every one of 18 million steps costs about 11 minutes on
-this checking equipment, and the new photographs add about one more minute.
-
-Your options:
-
-- **(a) Give the recursive sum 15 minutes instead of 10.** 900 seconds covers
-  the projected 12 minutes and leaves a margin. The discard stays at 10
-  minutes, which it now meets. This changes a limit you already set, for one
-  workload, because the cost is the record of every step, which you also
-  required.
-- **(b) Leave both workloads at 10 minutes.** The discard can then be an
-  acceptance run. The recursive sum cannot, with this checking equipment.
-- **(c) Stop recording every step**, and keep only the summaries and the
-  photographs. That would make the sum fit, and it would drop the step-by-step
-  record you required.
-
-**My recommendation is (a).** The thing you asked for, a full photograph only
-at the boundaries, is done, and it is cheap. What is left is the cost of
-writing down 18 million steps. Fifteen minutes is enough for that on this
-machine. It changes the test's clock, not what Mo has to do.
+D164 records the test as not applicable for that reason, and supersedes the
+fallback. Nine of the ten sabotage tests stay active. The gap is this: Stage B
+will not be sabotaged for a skipped allocation at the exact moment a call
+begins, because the frozen rules say that moment never allocates. The other
+nine tests, including the ones about allocations inside a call and about
+copies at entry, remain. None of the nine has been run.
 
 ## Limitations
 
@@ -368,8 +379,12 @@ machine. It changes the test's clock, not what Mo has to do.
   frozen predictor at depths 0 through 8. The million-element figures are that
   rule applied at the approved size, not a run at that size.
 - The projections use the rates measured on the previous, heavier schedule
-  (`evidence/stage-b-01/adapter.json`) multiplied by the new row counts. They
-  are not a fresh fit, and they are not a measurement of a Mo interpreter.
+  (`evidence/stage-b-01/adapter.json`) multiplied by the new row counts, and
+  they still include the cost of checking every step. They are not a fresh
+  fit, and they are not a measurement of a Mo interpreter.
+- The frozen file that checks a finished resource record still requires 600
+  seconds for both workloads. D162's 900-second limit for the sum is checked
+  by this package. That frozen file was not edited.
 - The frozen collector still attaches the list of live cells every 10,000
   steps. D159 does not require that list between boundaries. The projection
   counts the record D159 requires. The extra list is a property of the frozen
@@ -378,9 +393,9 @@ machine. It changes the test's clock, not what Mo has to do.
   acceptance machine, not in this repository. I did not use them, recreate
   them, regenerate them or substitute anything for them. The machine's yes/no
   answer on entry allocation is what D161 asked for, and no example content
-  came back with it.
-- Zero of the ten sabotage tests ran. `omitted-entry-create` still has no
-  public trigger, for the reason above.
+  came back with it. D164 is what was done with that answer.
+- Nine of the ten sabotage tests are active and none of them ran.
+  `omitted-entry-create` is not applicable, for the reason above.
 - The large-run watcher checks that a cell identity is never reused by
   requiring each new one to be larger than any seen before, rather than by
   remembering every retired identity as the small-run watcher does. That is a
@@ -388,14 +403,15 @@ machine. It changes the test's clock, not what Mo has to do.
 - Separating the builder from acceptance stays a procedure, not a technical
   barrier. Assembling the package does not verify any future builder's context.
 
-## What is still blocked
+## What is still gated
 
-| Blocked on | What it is |
+| Gated on | What it is |
 | --- | --- |
-| Your decision above | Whether the recursive sum gets 15 minutes, stays at 10 and cannot run, or loses its step-by-step record |
-| The acceptance machine | Running the 24 reserved and 500 generated cases against a Stage B candidate |
-| A Stage B interpreter | All ten sabotage tests; the real resume, destroy and failure cuts; the Stage A regression under Stage B |
-| Your approval | Freezing this package, delivering it to a builder, starting Stage B |
+| A scientific freeze | This package is prepared. It is not frozen |
+| A Stage B builder | Delivering the package and starting the build |
+| The acceptance machine | Private execution of the 24 reserved and 500 generated cases |
+| A Stage B interpreter | The nine active sabotage tests; the real resume, destroy and failure cuts; the Stage A regression under Stage B |
+| Separate authorization | Either million-element run. Both fit their limits on the projection; neither has been run |
 
 ## Effort ledger (D152)
 
@@ -403,11 +419,13 @@ Elapsed contributor time, counted from the explicit start of a session to its
 stop, including tool, build and test waits, excluding owner-wait and stopped
 periods. One contributor, no concurrency.
 
-The earlier preparation row is unchanged and is not added again. It is in
-`evidence/stage-b-01/effort.json`: 3,059 seconds, of which the check run was
-73 seconds, from 10:56 to 11:47 UTC on 8 October 2026.
+The earlier preparation rows are unchanged and are not added again.
 
-This revision's check run is in `evidence/stage-b-02/effort.json`.
+- `evidence/stage-b-01/effort.json`: 3,059 seconds, of which the check run was
+  73 seconds, from 10:56 to 11:47 UTC on 8 October 2026.
+- `evidence/stage-b-02/effort.json`: the D159 and D160 revision.
+
+This revision's check run is in `evidence/stage-b-03/effort.json`.
 
 ## How to reproduce
 
@@ -418,7 +436,7 @@ export CARGO_TARGET_DIR=/tmp/rob1333-stage-b
 cargo +1.98.1 build --locked \
     --manifest-path experiments/13-source-acceptance/stage-b-stub/Cargo.toml
 cd experiments/13-source-acceptance
-python3 stage_b_check.py evidence/stage-b-02 /tmp/rob1333-stage-b/debug
+python3 stage_b_check.py evidence/stage-b-03 /tmp/rob1333-stage-b/debug
 ```
 
 Use a new evidence directory; the existing one is refused rather than

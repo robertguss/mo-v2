@@ -25,8 +25,9 @@ import stage_b_delivery
 import stage_b_inventory
 import stage_b_link
 from closeoutcheck import check_resource
-from stage_b_large import (LargeVerifier, OBSERVATION_PERIOD, check_projected_record,
-                           observation_count, projected_record, run_large_linked)
+from stage_b_large import (ENVELOPE_SECONDS, LargeVerifier, OBSERVATION_PERIOD,
+                           check_amended_envelope, observation_count, projected_record,
+                           run_large_linked)
 from stage_b_workloads import (APPROVED_DEPTH, DiscardedList, NonTailSum, WORKLOADS,
                                linear_fit, state_growth, validate_schedule, validate_states)
 
@@ -77,26 +78,53 @@ def run_workloads(destination):
 
 
 def run_projected_records(destination):
-    """The frozen D151 predicate must accept the projected approved records."""
-    report = dict(accepted={}, rejected={})
+    """D162's envelope: 900 seconds for the recursive sum, 600 for the discard.
+
+    The frozen D151 predicate still rejects 601 seconds for both workloads.
+    That file is not edited. The package's own predicate is the envelope, and
+    the per-step transition cap of 100 million stays for both.
+    """
+    report = dict(envelope_seconds=dict(ENVELOPE_SECONDS), accepted={}, rejected={},
+                  sum_clock_widened={}, frozen_d151_still_rejects_601={})
     for name, workload_class in sorted(WORKLOADS.items()):
         workload = workload_class(APPROVED_DEPTH)
-        report["accepted"][name] = check_projected_record(workload)
-        good = projected_record(workload, elapsed_seconds=599, available_bytes=4 * 1024 ** 3)
+        limit = ENVELOPE_SECONDS[name]
+        accepted = projected_record(workload, elapsed_seconds=limit, available_bytes=4 * 1024 ** 3)
+        check_amended_envelope(accepted)
+        report["accepted"][name] = accepted
+        good = projected_record(workload, elapsed_seconds=0, available_bytes=4 * 1024 ** 3)
         rejections = {}
         for key, wrong in (("depth", APPROVED_DEPTH - 1), ("answer", "999999"),
-                           ("elapsed_seconds", 601), ("transitions", 100_000_001),
+                           ("elapsed_seconds", limit + 1), ("transitions", 100_000_001),
                            ("stack_bytes", 16 * 1024 ** 2), ("status", "suspended"),
                            ("remaining_owned_cells", 1), ("available_bytes", 1024)):
             bad = dict(good)
             bad[key] = wrong
             try:
-                check_resource(bad)
+                check_amended_envelope(bad)
             except AssertionError as error:
                 rejections[key] = str(error)
             else:
-                raise AssertionError("frozen D151 predicate accepted a wrong record: " + key)
+                raise AssertionError("amended envelope accepted a wrong record: " + key)
         report["rejected"][name] = rejections
+        widened = projected_record(workload, elapsed_seconds=601, available_bytes=4 * 1024 ** 3)
+        if name == "non-tail-sum":
+            check_amended_envelope(widened)
+            report["sum_clock_widened"] = dict(elapsed_seconds=601, accepted=True,
+                                               envelope_seconds=limit)
+        else:
+            try:
+                check_amended_envelope(widened)
+            except AssertionError as error:
+                assert "resource envelope" in str(error), str(error)
+            else:
+                raise AssertionError("discard envelope accepted 601 seconds")
+        try:
+            check_resource(widened)
+        except AssertionError as error:
+            report["frozen_d151_still_rejects_601"][name] = str(error)
+        else:
+            raise AssertionError("frozen D151 predicate accepted 601 seconds")
     (destination / "projected-records.json").write_text(json.dumps(report, indent=2) + "\n")
     return report
 
@@ -194,15 +222,23 @@ def scaling_model(runs):
         rows = cost["serialized_rows"]
         from_steps = MEASURED_SECONDS_PER_TRANSITION * workload.transitions()
         from_rows = MEASURED_SECONDS_PER_SERIALIZED_ROW * rows
+        # D162 keeps the per-step term. Dropping it would make the sum look
+        # cheaper than the record Robert required.
+        total = from_steps + from_rows
+        limit = ENVELOPE_SECONDS[name]
+        assert from_steps > 0 and total > from_rows, "per-step record dropped"
+        assert total <= limit, (name, total, limit)
         projected[name] = dict(
             transitions=workload.transitions(),
             schedule=cost,
             serialized_observation_rows=rows,
             seconds_from_transitions=from_steps,
             seconds_from_observation_rows=from_rows,
-            seconds_total=from_steps + from_rows,
-            fits_in_600_seconds=from_steps + from_rows <= 600,
-            watchdog_seconds=600)
+            seconds_total=total,
+            envelope_seconds=limit,
+            fits_in_envelope=True,
+            per_step_record_kept=True,
+            watchdog_seconds=limit)
     return dict(measured=[dict(depth=r["depth"], steps=r["committed_steps"],
                                summaries=r["summary_observations"],
                                seconds=r["elapsed_seconds"])
@@ -212,7 +248,9 @@ def scaling_model(runs):
                 rate_source="evidence/stage-b-01/adapter.json",
                 projection=projected,
                 note="Rates from the previous full-photograph runs of this harness. "
-                     "Row counts are the D159/D160 schedule. Not a measurement of a candidate.")
+                     "Row counts are the D159/D160 schedule, and the per-step term is kept. "
+                     "D162 sets the recursive sum's limit at 900 seconds and leaves the "
+                     "discard at 600. Not a measurement of a candidate.")
 
 
 def write_effort(destination, started, check_seconds):

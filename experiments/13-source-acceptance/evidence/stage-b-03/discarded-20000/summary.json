@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "large": true,
+  "workload": "discarded-list",
+  "depth": 20000,
+  "available_bytes": 4971143168,
+  "stack_bytes": 8388608,
+  "observation_period": 10000,
+  "exit_code": 0,
+  "peak_rss_kib": 43604,
+  "committed_steps": 40003,
+  "advances": 1,
+  "destroy_calls": 2,
+  "full_observations": 2,
+  "summary_observations": 4,
+  "deepest_photographed": false,
+  "streamed_commits": 40003,
+  "evaluation_cell_counts": [
+    0,
+    0,
+    20000
+  ],
+  "cleanup_frees": 0,
+  "teardown_frees": 0,
+  "peak_live_cells": 20000,
+  "peak_explicit_frames": 0,
+  "peak_cleanup_chain": 20000,
+  "peak_identity_rows": 2,
+  "peak_retained_rows": 60003,
+  "retained_rows_at_end": 2,
+  "resource_attempts": {
+    "number": 20001
+  },
+  "elapsed_ns": 1756008096,
+  "elapsed_seconds": 1.756008096,
+  "phase_count": 40013,
+  "scaled_resource_record": {
+    "case": "discarded-list",
+    "status": "finished",
+    "depth": 20000,
+    "answer": "0",
+    "available_bytes": 4971143168,
+    "stack_bytes": 8388608,
+    "elapsed_seconds": 1.756008096,
+    "transitions": 40003,
+    "evaluation_cell_counts": [
+      0,
+      0,
+      20000
+    ],
+    "remaining_owned_cells": 0,
+    "peak_explicit_frames": 0
+  },
+  "verifier_peak_kib": 56076
+}

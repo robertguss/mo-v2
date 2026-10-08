@@ -1,0 +1,640 @@
+{
+  "deferred_controls": [
+    {
+      "control": "always-copy",
+      "capability": "physical",
+      "obligation": "unique C10 zero creates",
+      "required_capability": "decide reuse from the actual holder count of a unique list",
+      "trigger_examples": [
+        "C10-empty",
+        "C10-retained",
+        "C10-single",
+        "C10-sum",
+        "C10-unique"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by unique C10 zero creates"
+      ]
+    },
+    {
+      "control": "hidden-entry-copy",
+      "capability": "physical",
+      "obligation": "invocation entry creates",
+      "required_capability": "enter an invocation without copying its arguments",
+      "trigger_examples": [
+        "C10-empty",
+        "C10-retained",
+        "C10-single",
+        "C10-sum",
+        "C10-unique",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C8",
+        "C9"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by invocation entry creates"
+      ]
+    },
+    {
+      "control": "fixture-provenance",
+      "capability": "physical",
+      "obligation": "fixture/literal route consistency",
+      "required_capability": "treat an installed fixture list and a source literal list alike",
+      "trigger_examples": [
+        "fixture-route",
+        "literal-route"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by fixture/literal route consistency"
+      ]
+    },
+    {
+      "control": "caller-reservation-theft",
+      "capability": "physical",
+      "obligation": "C1 reservation origin",
+      "required_capability": "keep a caller's reservation out of reach of the callee",
+      "trigger_examples": [
+        "C1"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by C1 reservation origin"
+      ]
+    },
+    {
+      "control": "early-cleanup",
+      "capability": "physical",
+      "obligation": "C14 reservation lifetime",
+      "required_capability": "hold a reservation for as long as its originating branch needs it",
+      "trigger_examples": [
+        "C14"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by C14 reservation lifetime"
+      ]
+    },
+    {
+      "control": "omitted-entry-create",
+      "capability": "calls",
+      "obligation": "entry creates",
+      "required_capability": "create the cells an invocation entry genuinely needs",
+      "trigger_examples": [],
+      "status": "not-applicable",
+      "applicable": false,
+      "not_applicable_reason": "Not applicable under the frozen rules. The frozen predictor never allocates on Enter: entering a call only binds arguments that are already finished. No public, reserved or generated example can reach this control without editing a frozen file. D164 records that gap and supersedes the D161 fallback of adding a public example. Nine of the ten deferred controls stay active.",
+      "baseline_required": false,
+      "executed": false,
+      "evidence_still_needed": []
+    },
+    {
+      "control": "omitted-nested-create",
+      "capability": "calls",
+      "obligation": "C9 descendant creates",
+      "required_capability": "attribute a descendant invocation's creates to its ancestors",
+      "trigger_examples": [
+        "C9"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by C9 descendant creates"
+      ]
+    },
+    {
+      "control": "omitted-transient-create",
+      "capability": "calls",
+      "obligation": "C7 transient creates",
+      "required_capability": "count a cell created and freed inside one invocation",
+      "trigger_examples": [
+        "C7"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by C7 transient creates"
+      ]
+    },
+    {
+      "control": "early-enter",
+      "capability": "calls",
+      "obligation": "arguments before enter",
+      "required_capability": "finish every explicit argument before entering the invocation",
+      "trigger_examples": [
+        "C1",
+        "C10-empty",
+        "C10-retained",
+        "C10-single",
+        "C10-sum",
+        "C10-unique",
+        "C11-0",
+        "C11-1",
+        "C11-2",
+        "C11-7",
+        "C12",
+        "C13",
+        "C14",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by arguments before enter"
+      ]
+    },
+    {
+      "control": "skipped-return-cleanup",
+      "capability": "calls",
+      "obligation": "return cleanup state",
+      "required_capability": "run the return cleanup an invocation owes before returning",
+      "trigger_examples": [
+        "C10-retained",
+        "C10-sum",
+        "C13",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "status": "active",
+      "applicable": true,
+      "not_applicable_reason": null,
+      "baseline_required": true,
+      "executed": false,
+      "evidence_still_needed": [
+        "source patch applied to the Stage B candidate",
+        "passing baseline with the mutation disabled",
+        "recorded marker that the mutated path ran",
+        "rejection by return cleanup state"
+      ]
+    }
+  ],
+  "case_features": {
+    "C1": {
+      "executed_calls": 1,
+      "executed_calls_with_arguments": 1,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 1,
+      "reservations": true
+    },
+    "C2": {
+      "executed_calls": 1,
+      "executed_calls_with_arguments": 1,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 1,
+      "reservations": true
+    },
+    "C3": {
+      "executed_calls": 4,
+      "executed_calls_with_arguments": 4,
+      "executed_calls_with_list_arguments": 4,
+      "entry_creates": 0,
+      "cleanup_inside_call": 6,
+      "descendant_creates": 2,
+      "reservations": false
+    },
+    "C4": {
+      "executed_calls": 5,
+      "executed_calls_with_arguments": 5,
+      "executed_calls_with_list_arguments": 5,
+      "entry_creates": 0,
+      "cleanup_inside_call": 8,
+      "descendant_creates": 2,
+      "reservations": true
+    },
+    "C5": {
+      "executed_calls": 3,
+      "executed_calls_with_arguments": 3,
+      "executed_calls_with_list_arguments": 3,
+      "entry_creates": 0,
+      "cleanup_inside_call": 4,
+      "descendant_creates": 0,
+      "reservations": true
+    },
+    "C6": {
+      "executed_calls": 5,
+      "executed_calls_with_arguments": 5,
+      "executed_calls_with_list_arguments": 5,
+      "entry_creates": 0,
+      "cleanup_inside_call": 5,
+      "descendant_creates": 1,
+      "reservations": true
+    },
+    "C7": {
+      "executed_calls": 2,
+      "executed_calls_with_arguments": 2,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 2,
+      "descendant_creates": 1,
+      "reservations": false
+    },
+    "C8": {
+      "executed_calls": 1,
+      "executed_calls_with_arguments": 1,
+      "executed_calls_with_list_arguments": 1,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": false
+    },
+    "C9": {
+      "executed_calls": 2,
+      "executed_calls_with_arguments": 2,
+      "executed_calls_with_list_arguments": 1,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 1,
+      "reservations": false
+    },
+    "C10-unique": {
+      "executed_calls": 4,
+      "executed_calls_with_arguments": 4,
+      "executed_calls_with_list_arguments": 4,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": true
+    },
+    "C10-retained": {
+      "executed_calls": 4,
+      "executed_calls_with_arguments": 4,
+      "executed_calls_with_list_arguments": 4,
+      "entry_creates": 0,
+      "cleanup_inside_call": 3,
+      "descendant_creates": 3,
+      "reservations": false
+    },
+    "C10-sum": {
+      "executed_calls": 4,
+      "executed_calls_with_arguments": 4,
+      "executed_calls_with_list_arguments": 4,
+      "entry_creates": 0,
+      "cleanup_inside_call": 3,
+      "descendant_creates": 0,
+      "reservations": true
+    },
+    "C10-empty": {
+      "executed_calls": 1,
+      "executed_calls_with_arguments": 1,
+      "executed_calls_with_list_arguments": 1,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": false
+    },
+    "C10-single": {
+      "executed_calls": 2,
+      "executed_calls_with_arguments": 2,
+      "executed_calls_with_list_arguments": 2,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": true
+    },
+    "C11-0": {
+      "executed_calls": 1,
+      "executed_calls_with_arguments": 1,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": false
+    },
+    "C11-1": {
+      "executed_calls": 2,
+      "executed_calls_with_arguments": 2,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": false
+    },
+    "C11-2": {
+      "executed_calls": 3,
+      "executed_calls_with_arguments": 3,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": false
+    },
+    "C11-7": {
+      "executed_calls": 8,
+      "executed_calls_with_arguments": 8,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": false
+    },
+    "C12": {
+      "executed_calls": 59,
+      "executed_calls_with_arguments": 59,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": false
+    },
+    "C13": {
+      "executed_calls": 18,
+      "executed_calls_with_arguments": 18,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 16,
+      "descendant_creates": 9,
+      "reservations": false
+    },
+    "C14": {
+      "executed_calls": 55,
+      "executed_calls_with_arguments": 55,
+      "executed_calls_with_list_arguments": 0,
+      "entry_creates": 0,
+      "cleanup_inside_call": 0,
+      "descendant_creates": 0,
+      "reservations": true
+    }
+  },
+  "deferred_expectations": [
+    {
+      "module": "refusalcheck",
+      "source": "main = missing(7)",
+      "class": "unknown-function",
+      "start": [
+        1,
+        8
+      ],
+      "end": [
+        1,
+        15
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Int = 7 end def f(): Int = 9 end main = f()",
+      "class": "duplicate-function",
+      "start": [
+        1,
+        26
+      ],
+      "end": [
+        1,
+        27
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Int, x: Int): Int = x end main = 7",
+      "class": "duplicate-parameter",
+      "start": [
+        1,
+        15
+      ],
+      "end": [
+        1,
+        16
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Int): Int = x end main = f()",
+      "class": "arity",
+      "start": [
+        1,
+        35
+      ],
+      "end": [
+        1,
+        38
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Int): Int = x end main = f(false)",
+      "class": "argument-kind",
+      "start": [
+        1,
+        37
+      ],
+      "end": [
+        1,
+        42
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Int = false end main = 7",
+      "class": "result-kind",
+      "start": [
+        1,
+        16
+      ],
+      "end": [
+        1,
+        21
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "input n: Int; def f(): Int = n end main = 7",
+      "class": "unbound-variable",
+      "start": [
+        1,
+        30
+      ],
+      "end": [
+        1,
+        31
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Int = 7 end main = f",
+      "class": "unbound-variable",
+      "start": [
+        1,
+        29
+      ],
+      "end": [
+        1,
+        30
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(x: Other): Int = 7 end main = 7",
+      "class": "type",
+      "start": [
+        1,
+        10
+      ],
+      "end": [
+        1,
+        15
+      ]
+    },
+    {
+      "module": "refusalcheck",
+      "source": "def f(): Other = 7 end main = 7",
+      "class": "type",
+      "start": [
+        1,
+        10
+      ],
+      "end": [
+        1,
+        15
+      ]
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(x: Int, x: Int): Int = x end main = 7",
+      "class": "duplicate-parameter",
+      "start": [
+        1,
+        15
+      ],
+      "end": [
+        1,
+        16
+      ]
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(): Int = 7 end def f(): Int = 9 end main = 1",
+      "class": "duplicate-function",
+      "start": [
+        1,
+        26
+      ],
+      "end": [
+        1,
+        27
+      ]
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(x: Other): Int = 7 end main = 7",
+      "class": "type",
+      "start": [
+        1,
+        10
+      ],
+      "end": [
+        1,
+        15
+      ]
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(): Other = 7 end main = 7",
+      "class": "type",
+      "start": [
+        1,
+        10
+      ],
+      "end": [
+        1,
+        15
+      ]
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(): Int = false end main = 7",
+      "class": "result-kind",
+      "start": [
+        1,
+        16
+      ],
+      "end": [
+        1,
+        21
+      ]
+    },
+    {
+      "module": "phasecheck",
+      "source": "def f(x: Int): Int = x end main = f(false)",
+      "class": "argument-kind",
+      "start": [
+        1,
+        37
+      ],
+      "end": [
+        1,
+        42
+      ]
+    }
+  ]
+}

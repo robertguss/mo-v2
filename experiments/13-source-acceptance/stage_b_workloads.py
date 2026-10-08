@@ -12,11 +12,12 @@ depths. That is the only thing that makes them trustworthy: they are not a
 second opinion about Mo, they are a compression of the existing prediction.
 
 D151 approves the two workloads and does not authorize running them.
-D159 (summaries between boundaries, full photographs at boundaries) and D160
-(the cleanup chain in full only at those photographs, its length in between)
-are the observation schedule this module implements. `stage_b_large` refuses
-any depth at or above the approved million, so an adapter test cannot become
-an unauthorized run.
+D162 amends the clock only: 900 seconds for the recursive sum, 600 seconds for
+the discard, and the per-step record stays. D159 (summaries between boundaries,
+full photographs at boundaries) and D160 (the cleanup chain in full only at
+those photographs, its length in between) are the observation schedule this
+module implements. `stage_b_large` refuses any depth at or above the approved
+million, so an adapter test cannot become an unauthorized run.
 """
 from copy import deepcopy
 
