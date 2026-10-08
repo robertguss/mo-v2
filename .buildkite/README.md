@@ -5,17 +5,16 @@ and none should be added.
 
 | File | What it is |
 | --- | --- |
-| `pipeline.yml` | The pipeline the UI step uploads: two parallel steps. |
+| `pipeline.yml` | The pipeline the upload step reads: two parallel steps. |
 | `checks.sh` | Runs one group of checks, `rust` or `lean`. |
 | `toolchains.sh` | Installs the pinned Rust and Lean toolchains. Sourced by `checks.sh`. |
 | `coverage.txt` | Every experiment, named `checked` or `excluded`, with a reason. Enforced. |
 
-The whole of the Buildkite UI's Steps setting is:
-
-```yaml
-steps:
-  - command: buildkite-agent pipeline upload
-```
+The pipeline is `robert-guss/mo-v2`, connected to `robertguss/mo-v2` by GitHub
+webhook. It builds branch pushes and pull requests and publishes commit
+statuses back to GitHub. Its whole Steps setting is one line,
+`buildkite-agent pipeline upload`, so everything that decides what a build does
+lives in this directory and is reviewed with the code.
 
 ## What CI is for here
 
@@ -141,9 +140,14 @@ experiment a branch does not carry is fine; that branch skips it.
   specific experiment, decided per experiment, not a property of every push.
 
 If the native experiments should be checked rather than excluded, that needs a
-macOS agent. Buildkite hosted macOS agents exist; a queue of them plus a third
-step would do it, and `coverage.txt` is where that decision would be recorded.
-It is a cost and scope question for Robert, not something CI should assume.
+macOS agent. The Default cluster already has `macos-medium` and `macos-large`,
+so it would be a third step with `agents: queue: macos-medium` running
+`check.py` for experiments 6 to 9, and four `coverage.txt` lines changed from
+`excluded` to `checked`. Two reasons it is not here: it costs macOS minutes on
+every push, and those trials hinge on 200ms–950ms deadline windows and
+deliberately stalled threads, so they may be too timing-sensitive for per-push
+CI even on the right operating system. That is a decision for Robert, not
+something CI should assume.
 
 ## Toolchain pins
 
@@ -166,19 +170,28 @@ so CI installs the same things the same way. It installs no Koka (no Koka
 benchmark runs here) and no apt packages: Lean 4.34.0 for Linux needs only
 glibc and ships its own `clang` and `ld.lld`.
 
-## Changing the agent queue
+## The agent queue
 
-`pipeline.yml` targets:
+`pipeline.yml` targets `queue: "${MO_CI_QUEUE:-linux-small}"`. To move the work
+to another queue in the Default cluster — `linux-medium`, `linux-large` — set
+`MO_CI_QUEUE` in Pipeline Settings → Environment Variables; no file needs
+editing.
 
-```yaml
-agents:
-  queue: "${MO_CI_QUEUE:-default}"
-```
+`linux-small` fits, measured rather than assumed:
 
-`default` is the queue name Buildkite creates with a new cluster. To use a
-hosted queue under another name, set `MO_CI_QUEUE` in Pipeline Settings →
-Environment Variables; no file needs editing. If a build sits waiting for an
-agent, this is the first thing to check.
+| | Rust step | Lean step |
+| --- | --- | --- |
+| Wall clock, cold | 14.9s | 1m54s |
+| Peak resident memory | 625 MB | 535 MB |
+| CPU used ÷ wall clock | 1.23× | 1.06× |
+| Disk, mostly toolchain | ~640 MB | ~3.1 GB |
+
+Neither step is limited by cores or memory. The single longest command in the
+whole build is `lake env leanchecker --fresh Acceptance` at about 50s, and it
+runs at exactly 1.00× CPU — strictly single-threaded. A larger queue would cost
+more per minute without shortening the critical path, so the queue is not the
+lever here; if a two-minute build ever becomes the constraint, the Lean step's
+shape is what to look at.
 
 ## Branches without this directory
 
