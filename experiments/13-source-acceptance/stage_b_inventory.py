@@ -45,6 +45,9 @@ PROPOSED_NEW = [
     "stage-b-stub/Cargo.lock",
     "stage-b-stub/call_stub.rs",
     "stage-b-stub/large_stub.rs",
+    "BUILDER_STAGE_B_V19.md",
+    "BUILDER_STAGE_B_PREFLIGHT.md",
+    "STAGE_B_LOCK.md",
 ]
 
 # Gaps the Stage A freeze and result record as unfinished for Stage B.
