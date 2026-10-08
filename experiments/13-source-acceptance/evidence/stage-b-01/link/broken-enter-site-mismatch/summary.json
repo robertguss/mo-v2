@@ -2,45 +2,45 @@
   "passed": false,
   "candidate_executed": false,
   "fixture_stub": true,
-  "available_bytes": 5046714368,
+  "available_bytes": 5070012416,
   "stack_bytes": 8388608,
   "error": "AssertionError: extended call/event prefix",
-  "elapsed_ns": 4976995,
+  "elapsed_ns": 4176051,
   "phases": [
     {
       "phase": "launch",
-      "start_ns": 2846571818711,
-      "end_ns": 2846575407862
+      "start_ns": 3025159209010,
+      "end_ns": 3025162399202
     },
     {
       "phase": "check",
-      "start_ns": 2846575407862,
-      "end_ns": 2846575959081
+      "start_ns": 3025162399202,
+      "end_ns": 3025162720663
     },
     {
       "phase": "frontend",
-      "start_ns": 2846575959081,
-      "end_ns": 2846576032874
+      "start_ns": 3025162720663,
+      "end_ns": 3025162765581
     },
     {
       "phase": "fixture",
-      "start_ns": 2846576032874,
-      "end_ns": 2846576100322
+      "start_ns": 3025162765581,
+      "end_ns": 3025162812364
     },
     {
       "phase": "begin",
-      "start_ns": 2846576100322,
-      "end_ns": 2846576308167
+      "start_ns": 3025162812364,
+      "end_ns": 3025162986997
     },
     {
       "phase": "commit",
-      "start_ns": 2846576308167,
-      "end_ns": 2846576456354
+      "start_ns": 3025162986997,
+      "end_ns": 3025163112718
     },
     {
       "phase": "commit",
-      "start_ns": 2846576456354,
-      "end_ns": 2846576630488
+      "start_ns": 3025163112718,
+      "end_ns": 3025163256513
     }
   ]
 }

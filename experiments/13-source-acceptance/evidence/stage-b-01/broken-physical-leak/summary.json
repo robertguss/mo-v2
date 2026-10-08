@@ -5,10 +5,10 @@
   "large": true,
   "workload": "discarded-list",
   "depth": 12,
-  "available_bytes": 5041029120,
+  "available_bytes": 5057888256,
   "stack_bytes": 8388608,
   "observation_period": 10000,
   "error": "AssertionError: reported a cell event the storage never performed",
-  "elapsed_ns": 4716277,
+  "elapsed_ns": 4109466,
   "phase_count": 6
 }

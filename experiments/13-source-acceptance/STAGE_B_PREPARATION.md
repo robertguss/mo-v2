@@ -117,8 +117,8 @@ leaves each one:
 | `stage_b_check.py` | `61a1ef4ca27fb40abad110fe73196b6916b5f5f285b311903d1d1bd3c97b4d19` |
 | `stage-b-stub/Cargo.toml` | `58761dee9c8acb728bf12c36e6f0506418480e8f05208899cec87f3e55dfa623` |
 | `stage-b-stub/Cargo.lock` | `ea010bb20deb61ec3b859d28e17c682ebc55a1559bcbe50d8375ba40e3c6cdf5` |
-| `stage-b-stub/call_stub.rs` | `41d96e94a462153334356e529dfa43ca3e8e5f5ad7ab777baca4f5551718ff46` |
-| `stage-b-stub/large_stub.rs` | `840d4a1bf6c8a538b630e2ac04b3bec5ad0a5b459a00acc32b29b557b5174333` |
+| `stage-b-stub/call_stub.rs` | `4e36b774ac4895fb95b8e731003b798bd477245626ee2f5d23798112d3cfde7a` |
+| `stage-b-stub/large_stub.rs` | `e81bd4fedabfbec6f860d672d18e69e23573250998c184769d97dd96b94bc02c` |
 
 These are review fingerprints, not a scientific lock. A lock comes after you
 approve the package.
@@ -375,11 +375,11 @@ periods. One contributor, no concurrency.
 
 | Row | Seconds |
 | --- | ---: |
-| Stage B acceptance preparation (this session) | 2,880 |
+| Stage B acceptance preparation (this session) | 3,059 |
 | of which, the final evidence run | 73 |
 | Recorded owner-wait | 0 |
 
-That is 48 minutes, from 10:56 to 11:44 UTC on 8 October 2026. The machine
+That is 51 minutes, from 10:56 to 11:47 UTC on 8 October 2026. The machine
 figures are in `evidence/stage-b-01/effort.json`. Earlier preparation and Stage
 A effort are recorded in their own files and are not restated or reconstructed
 here. Host wall time, processor time and memory use are different measurements

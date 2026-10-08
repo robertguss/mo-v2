@@ -56,6 +56,6 @@
   "new_in_stage_b": [
     "BUILDER_STAGE_B_V18.md"
   ],
-  "public_runtime_check": "cargo +1.98.1 check --locked --offline --manifest-path /tmp/rob1333-stage-b-public-ust4iwn6/runtime/Cargo.toml",
+  "public_runtime_check": "cargo +1.98.1 check --locked --offline --manifest-path /tmp/rob1333-stage-b-public-riqms0ln/runtime/Cargo.toml",
   "qualification": "A proposed package for owner review. Assembling it does not dispatch a builder, verify a future builder's starting context, or make the separation technically enforced; same-account retrieval of excluded material remains possible."
 }

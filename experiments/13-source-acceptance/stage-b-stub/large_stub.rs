@@ -153,7 +153,9 @@ impl Candidate for Stub {
                 let id = run.chain[index];
                 if step % 2 == 1 {
                     // Give up the holder: bookkeeping only, never a cell event.
-                    run.cells.metadata(id, 0, false).expect("holder bookkeeping");
+                    run.cells
+                        .metadata(id, 0, false)
+                        .expect("holder bookkeeping");
                     run.released.push(id);
                 } else if control() == "physical-leak" {
                     // Report the free without performing it.
@@ -186,7 +188,11 @@ impl Candidate for Stub {
         } else if step == 0 {
             Json::Null
         } else if step <= cleanup {
-            json!(if step % 2 == 1 { "holderGivenUp" } else { "cellFreed" })
+            json!(if step % 2 == 1 {
+                "holderGivenUp"
+            } else {
+                "cellFreed"
+            })
         } else if step == cleanup + 1 {
             json!("start")
         } else if step == cleanup + 3 {
@@ -244,7 +250,9 @@ impl Candidate for Stub {
 
     fn public_output(run: &Run) -> Vec<u8> {
         match status(run) {
-            Status::Finished => b"{\"status\":\"finished\",\"type\":\"Int\",\"value\":\"0\"}\n".to_vec(),
+            Status::Finished => {
+                b"{\"status\":\"finished\",\"type\":\"Int\",\"value\":\"0\"}\n".to_vec()
+            }
             _ => format!("{{\"status\":\"suspended\",\"steps\":\"{}\"}}\n", run.step).into_bytes(),
         }
     }

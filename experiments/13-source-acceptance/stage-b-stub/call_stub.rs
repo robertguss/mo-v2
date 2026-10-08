@@ -143,7 +143,11 @@ fn metadata(step: u64) -> Json {
         5 => vec![return_event()],
         _ => vec![],
     };
-    let born: Vec<Json> = if step == 3 { vec![frame_birth()] } else { vec![] };
+    let born: Vec<Json> = if step == 3 {
+        vec![frame_birth()]
+    } else {
+        vec![]
+    };
     json!({"step":step,"transition":transition,"site":site,
         "event_end":events(step).len(),"landmark":landmark,
         "events_added":added,"births_added":born})
@@ -234,7 +238,9 @@ impl Candidate for Stub {
 
     fn public_output(run: &Run) -> Vec<u8> {
         match status(run) {
-            Status::Finished => b"{\"status\":\"finished\",\"type\":\"Int\",\"value\":\"7\"}\n".to_vec(),
+            Status::Finished => {
+                b"{\"status\":\"finished\",\"type\":\"Int\",\"value\":\"7\"}\n".to_vec()
+            }
             _ => format!("{{\"status\":\"suspended\",\"steps\":\"{}\"}}\n", run.step).into_bytes(),
         }
     }
