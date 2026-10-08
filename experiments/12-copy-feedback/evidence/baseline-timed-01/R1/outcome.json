@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "task": "R1",
+  "baseline": true,
+  "controlled_helper": false,
+  "source_sha256": "cb33ac4fcc94111cd793a9f43ac78060911d05abeecb9ab79c2c368a8eafc57f",
+  "helper_sha256": "6a700842e502c576037ace183c7376f6ce86252dce8258329739b3902b618d05",
+  "rustc": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)\nbinary: rustc\ncommit-hash: b940084d7eb6a299eb4bfeb8e34901bc051e7ac4\ncommit-date: 2026-09-28\nhost: aarch64-apple-darwin\nrelease: 1.99.0\nLLVM version: 23.1.2\n",
+  "cost_goal": true
+}

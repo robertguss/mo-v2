@@ -1,0 +1,82 @@
+[
+  {
+    "category": "baseline-01",
+    "task": "U1",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 100000,
+    "profile_requested": 3200000,
+    "cell_bytes": 32,
+    "cost_goal": false
+  },
+  {
+    "category": "baseline-01",
+    "task": "U2",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 100000,
+    "profile_requested": 3200000,
+    "cell_bytes": 32,
+    "cost_goal": false
+  },
+  {
+    "category": "baseline-01",
+    "task": "R1",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 100000,
+    "profile_requested": 3200000,
+    "cell_bytes": 32,
+    "cost_goal": true
+  },
+  {
+    "category": "baseline-01",
+    "task": "R2",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 100000,
+    "profile_requested": 3200000,
+    "cell_bytes": 32,
+    "cost_goal": true
+  },
+  {
+    "category": "baseline-01",
+    "task": "H1",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 4,
+    "profile_requested": 128,
+    "cell_bytes": 32,
+    "cost_goal": true
+  },
+  {
+    "category": "baseline-01",
+    "task": "H2",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 8,
+    "profile_requested": 256,
+    "cell_bytes": 32,
+    "cost_goal": true
+  },
+  {
+    "category": "repair-01",
+    "task": "U1",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 0,
+    "profile_requested": 0,
+    "cell_bytes": 32,
+    "cost_goal": true
+  },
+  {
+    "category": "repair-01",
+    "task": "U2",
+    "cases": 20,
+    "timing_runs": 0,
+    "profile_calls": 0,
+    "profile_requested": 0,
+    "cell_bytes": 32,
+    "cost_goal": true
+  }
+]

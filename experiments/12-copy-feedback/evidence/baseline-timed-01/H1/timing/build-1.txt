@@ -1,0 +1,16 @@
+warning: struct `Meter` is never constructed
+ --> /Users/robertguss/Projects/startups/mo-v2/experiments/12-copy-feedback/acceptance/harness.rs:8:8
+  |
+8 | struct Meter;
+  |        ^^^^^
+  |
+  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `add` is never used
+ --> /Users/robertguss/Projects/startups/mo-v2/experiments/12-copy-feedback/acceptance/harness.rs:9:4
+  |
+9 | fn add(n: usize) { CALLS.fetch_add(1, SeqCst); BYTES.fetch_add(n, SeqCst); let live=LIVE.fetch_add(n, SeqCst)+n; PEAK.fetch_max(live,...
+  |    ^^^
+
+warning: 2 warnings emitted
+
