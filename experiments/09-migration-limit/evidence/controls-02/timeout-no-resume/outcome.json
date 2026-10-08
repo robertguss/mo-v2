@@ -1,0 +1,4 @@
+{
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/check.py\", line 224, in trial\n    require(s['active']==9 and s['frozen']==0 and s['queue']==before['queue'],'old queue not resumed after timeout')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/check.py\", line 23, in require\n    raise AssertionError(message)\nAssertionError: old queue not resumed after timeout\n"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "no-cap",
+    "caught": true,
+    "expected": "excess update not refused at resource limit",
+    "source_sha256": "6ecf9a66cdba4ab271e0423eff0ece2bc8b127efd7d8b1e800cbe4e7a7a6e6fb"
+  },
+  {
+    "name": "timeout-releases-capacity",
+    "caught": true,
+    "expected": "excess update not refused at resource limit",
+    "source_sha256": "fafde2027df50e89f7ab66e82a6ad08922d1c366ca54d80887d4832890848e66"
+  },
+  {
+    "name": "never-reap",
+    "caught": true,
+    "expected": "update refused",
+    "source_sha256": "bfe909be16fb4d2ef1fbe1c612302ddd1a9882c5f1b3c8da595c105f5aaa3b50"
+  },
+  {
+    "name": "unsafe-retire",
+    "caught": true,
+    "expected": "permanent native retired",
+    "source_sha256": "7cb1820e3ee9364db16696feebe03f9eaae14470c39635915c410a73c6f09f9e"
+  },
+  {
+    "name": "timeout-no-resume",
+    "caught": true,
+    "expected": "old queue not resumed after timeout",
+    "source_sha256": "7d3ea031f74419218dff0219c22725568c6610d5827f6fc900f1f659644a3f96"
+  }
+]
