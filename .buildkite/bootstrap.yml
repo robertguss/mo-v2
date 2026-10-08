@@ -10,9 +10,11 @@
 #
 # No step here needs a file from the repository, which is what lets it work on
 # a branch that has no .buildkite/ directory at all.
-
-agents:
-  queue: "${MO_CI_QUEUE:-default}"
+#
+# This file names no agent queue on purpose, so the upload step goes to the
+# cluster's own default queue and cannot be left waiting for an agent that does
+# not exist. MO_CI_QUEUE targets the queue that does the actual work; it is
+# honoured in pipeline.yml, which Buildkite interpolates on upload.
 
 steps:
   - label: ":pipeline: upload"

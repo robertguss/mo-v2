@@ -30,6 +30,23 @@ mkdir -p "$EVIDENCE"
 
 now() { date +%s.%N; }
 
+# Fail early and by name, rather than part-way through a check, when the agent
+# image is missing something the installers or the frozen checks need.
+preflight() {
+  printf '\n--- :mag: agent preflight\n'
+  local tool missing=()
+  for tool in curl git python3 tar diff; do
+    command -v "$tool" >/dev/null || missing+=("$tool")
+  done
+  if ((${#missing[@]})); then
+    echo "This agent image is missing: ${missing[*]}" >&2
+    return 1
+  fi
+  python3 --version
+  git --version
+  uname -srm
+}
+
 # run <label> <command...>: announce the command, run it, record wall clock.
 run() {
   local label="$1"
@@ -68,6 +85,7 @@ have() {
 # --------------------------------------------------------------------------
 
 rust_checks() {
+  preflight
   install_rust
 
   # Experiment 4, RESULT.md "Reproduction and retained files" (build only; its
@@ -123,6 +141,7 @@ rust_checks() {
 # --------------------------------------------------------------------------
 
 lean_checks() {
+  preflight
   install_lean
 
   # Experiment 1, RESULT.md: the Lake build kernel-checks the safety and
