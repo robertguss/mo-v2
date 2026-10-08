@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "fixture_stub": true,
+  "available_bytes": 5056860160,
+  "stack_bytes": 8388608,
+  "exit_code": 0,
+  "peak_rss_kib": 98124,
+  "committed_steps": 4,
+  "advances": 1,
+  "destroy_calls": 2,
+  "events_by_phase": {
+    "frontend": 0,
+    "fixture": 0,
+    "begin": 0,
+    "commit": 0,
+    "advance": 0,
+    "destroy": 0,
+    "destroy-again": 0,
+    "drop": 0,
+    "teardown": 0
+  },
+  "resource_attempts": {
+    "number": 1
+  },
+  "elapsed_ns": 5003023,
+  "start_ns": 2553944980736,
+  "stop_ns": 2553949983759,
+  "phases": [
+    {
+      "phase": "launch",
+      "start_ns": 2553944980736,
+      "end_ns": 2553947723069
+    },
+    {
+      "phase": "check",
+      "start_ns": 2553947723069,
+      "end_ns": 2553948659161
+    },
+    {
+      "phase": "frontend",
+      "start_ns": 2553948659161,
+      "end_ns": 2553948713188
+    },
+    {
+      "phase": "fixture",
+      "start_ns": 2553948713188,
+      "end_ns": 2553948759037
+    },
+    {
+      "phase": "begin",
+      "start_ns": 2553948759037,
+      "end_ns": 2553948931698
+    },
+    {
+      "phase": "commit",
+      "start_ns": 2553948931698,
+      "end_ns": 2553949072129
+    },
+    {
+      "phase": "commit",
+      "start_ns": 2553949072129,
+      "end_ns": 2553949224014
+    },
+    {
+      "phase": "commit",
+      "start_ns": 2553949224014,
+      "end_ns": 2553949379309
+    },
+    {
+      "phase": "commit",
+      "start_ns": 2553949379309,
+      "end_ns": 2553949533216
+    },
+    {
+      "phase": "advance",
+      "start_ns": 2553949533216,
+      "end_ns": 2553949684934
+    },
+    {
+      "phase": "destroy",
+      "start_ns": 2553949684934,
+      "end_ns": 2553949789607
+    },
+    {
+      "phase": "destroy-again",
+      "start_ns": 2553949789607,
+      "end_ns": 2553949891152
+    },
+    {
+      "phase": "drop",
+      "start_ns": 2553949891152,
+      "end_ns": 2553949918459
+    },
+    {
+      "phase": "teardown",
+      "start_ns": 2553949918459,
+      "end_ns": 2553949983759
+    }
+  ]
+}
