@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "stage_b_linked_stub_runs": 15,
+  "resume_cuts": 7,
+  "destroy_cuts": 7,
+  "controls": {
+    "compiled-stub/omitted-enter-event": "commit metadata",
+    "compiled-stub/enter-site-mismatch": "extended call/event prefix",
+    "compiled-stub/entry-birth-origin": "birth origin/domain/order",
+    "compiled-stub/duplicate-return-frame": "full committed execution/physical state"
+  },
+  "stage_boundary": {
+    "stage_a": "stage-unsupported",
+    "stage_b_result_type": "Int"
+  },
+  "link_proposal": [
+    {
+      "file": "Cargo.toml",
+      "changed_lines": [
+        [
+          "name = \"rob1333-stage-a-08-link\"",
+          "name = \"rob1333-stage-b-link\""
+        ],
+        [
+          "name = \"rob1333-stage-a-08-link\"",
+          "name = \"rob1333-stage-b-link\""
+        ],
+        [
+          "mo-stage-a = { path = \"../candidate\" }",
+          "mo-stage-b = { path = \"../candidate-stage-b\" }"
+        ]
+      ],
+      "same_line_count": true
+    },
+    {
+      "file": "main.rs",
+      "changed_lines": [
+        [
+          "    if let Err(error) = mo_acceptance_driver::serve::<mo_stage_a::StageA>() {",
+          "    if let Err(error) = mo_acceptance_driver::serve::<mo_stage_b::StageB>() {"
+        ]
+      ],
+      "same_line_count": true
+    }
+  ],
+  "qualification": "A canned interface fixture, not a Mo interpreter. These runs show that the frozen Stage B link, birth registry, invocation normalisation and enter/return comparison work end to end. They are not evidence about any candidate's semantics, and none of the ten deferred Stage B evaluator control paths ran."
+}

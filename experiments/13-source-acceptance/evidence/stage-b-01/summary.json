@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "candidate_executed": false,
+  "resource_workload_executed": false,
+  "private_corpus_used": false,
+  "builder_dispatched": false,
+  "stage_b_controls_executed": 0,
+  "inventory": true,
+  "link": true,
+  "controls": true,
+  "delivery": true,
+  "workload_schedule_comparisons": 873,
+  "workload_state_comparisons": 99,
+  "adapter_runs": 7
+}
