@@ -1,0 +1,899 @@
+{
+  "stage_a_controls_reviewed": 21,
+  "controls": [
+    {
+      "control": "token-reader",
+      "capability": "frontend",
+      "obligation": "canonical parsed structure",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "canonical parsed structure",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "token-reader",
+        "first_python_predicate": "checked structure/resolution",
+        "driver_error": "AssertionError: checked structure/resolution",
+        "differences": [
+          {
+            "path": "/main/children",
+            "actual": null,
+            "expected": [
+              {
+                "node": "Sub",
+                "path": "main/0",
+                "children": [
+                  {
+                    "node": "Int",
+                    "path": "main/0/0",
+                    "type": "Int",
+                    "value": "9"
+                  },
+                  {
+                    "node": "Int",
+                    "path": "main/0/1",
+                    "type": "Int",
+                    "value": "4"
+                  }
+                ],
+                "type": "Int"
+              },
+              {
+                "node": "Int",
+                "path": "main/1",
+                "type": "Int",
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "path": "/main/node",
+            "actual": "Int",
+            "expected": "Sub"
+          },
+          {
+            "path": "/main/value",
+            "actual": "0",
+            "expected": null
+          }
+        ],
+        "phase": "check",
+        "step": null
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/token-reader/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "9c00c501cdd70fd5327873ab6063c97bd47092fe32dfbe66f2767960afc92eb1"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/token-reader/mutant",
+        "passed": false,
+        "error": "AssertionError: checked structure/resolution",
+        "summary_sha256": "e962dcf80765d6618e0f1da606461e2766465b41e2c1e481cd0f3f6ae3326fe2"
+      }
+    },
+    {
+      "control": "accept-all",
+      "capability": "frontend",
+      "obligation": "must-refuse",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "must-refuse",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "accept-all",
+        "first_python_predicate": "unexpected checked source",
+        "driver_error": "AssertionError: unexpected checked source",
+        "differences": [],
+        "phase": "check",
+        "step": null
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/accept-all/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "ac0d26d345b492df0e986b20606fe22bbe28c383e939bc2d54c2b74c75e650e2"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/accept-all/mutant",
+        "passed": false,
+        "error": "AssertionError: unexpected checked source",
+        "summary_sha256": "1d97821971c377dfa0be95373c1fa8ff94ec1bdddc388cf4740c4804b10ec181"
+      }
+    },
+    {
+      "control": "refuse-all",
+      "capability": "frontend",
+      "obligation": "must-accept",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "must-accept",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "refuse-all",
+        "first_python_predicate": "unexpected refusal",
+        "driver_error": "AssertionError: unexpected refusal",
+        "differences": [],
+        "phase": "pre-run",
+        "step": 0
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/refuse-all/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "60e949b639e44107baeab76880145fdd6b27fe4081013cbe3a20f7daa7349e37"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/refuse-all/mutant",
+        "passed": false,
+        "error": "AssertionError: unexpected refusal",
+        "summary_sha256": "7c499e9b5f64f157bd955980086f259a85f3341ef764a7c4f811d29a3eb70c75"
+      }
+    },
+    {
+      "control": "wrong-scope",
+      "capability": "frontend",
+      "obligation": "checked binding/call scope",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "checked binding/call scope",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "wrong-scope",
+        "first_python_predicate": "checked structure/resolution",
+        "driver_error": "AssertionError: checked structure/resolution",
+        "differences": [
+          {
+            "path": "/main/children/1/children/1/children/0/binding",
+            "actual": "main/binding",
+            "expected": "main/1/binding"
+          }
+        ],
+        "phase": "check",
+        "step": null
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/wrong-scope/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "10dc0cee93bb0023e72b34ebeaf021d737f5d97b01482de4a1af5746e9769742"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/wrong-scope/mutant",
+        "passed": false,
+        "error": "AssertionError: checked structure/resolution",
+        "summary_sha256": "9adb381edd41e128c5024d28a252403129eafd7e231251020566d6535a974e32"
+      }
+    },
+    {
+      "control": "whole-file-span",
+      "capability": "frontend",
+      "obligation": "exact refusal span",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "exact refusal span",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "whole-file-span",
+        "first_python_predicate": "independent public bytes",
+        "driver_error": "AssertionError: independent public bytes",
+        "differences": [
+          {
+            "path": "/span/end/1",
+            "actual": 44,
+            "expected": 41
+          },
+          {
+            "path": "/span/start/1",
+            "actual": 1,
+            "expected": 40
+          }
+        ],
+        "phase": "pre-run",
+        "step": 0
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/whole-file-span/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "ec57ba5fccad973458c51c9516d8e1be9febe54749c9f6de79dc1ea1e993d1b7"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/whole-file-span/mutant",
+        "passed": false,
+        "error": "AssertionError: independent public bytes",
+        "summary_sha256": "87ce2725f37b51886f2a11bbb35dd4bc5fb023ddbf9048e09955df2fe1c4a12e"
+      }
+    },
+    {
+      "control": "frontend-list-preallocation",
+      "capability": "frontend",
+      "obligation": "zero frontend managed cells",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "zero frontend managed cells",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "frontend-list-preallocation",
+        "first_python_predicate": null,
+        "driver_error": "AssertionError: linked process abnormal termination",
+        "differences": [],
+        "frozen_driver_guard": "frontend managed-cell/frame activity"
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/frontend-list-preallocation/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "1e494f15dbab12d38a55d76dc53334202cf0f90d6ce043a9d14168a912f20459"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/frontend-list-preallocation/mutant",
+        "passed": false,
+        "error": "AssertionError: linked process abnormal termination",
+        "summary_sha256": "0cf24892afabbe134d5ee30ae9f87f66e28311fa24287ffcd5ce70aeb4b881c1"
+      }
+    },
+    {
+      "control": "fixed-i128",
+      "capability": "frontend",
+      "obligation": "exact growing answer",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "exact growing answer",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "fixed-i128",
+        "first_python_predicate": "full committed execution/physical state",
+        "driver_error": "AssertionError: full committed execution/physical state",
+        "differences": [
+          {
+            "path": "/ready/1",
+            "actual": "7",
+            "expected": "340282366920938463463374607431768211463"
+          }
+        ],
+        "phase": "commit",
+        "step": 7
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/fixed-i128/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "2b1a41b2730128285f3bf177723590939a7f9af1b195aa473b5f70b9b3e3b334"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/fixed-i128/mutant",
+        "passed": false,
+        "error": "AssertionError: full committed execution/physical state",
+        "summary_sha256": "e75345ae54fc76ff48f3ce979b30ac86b8171147f4466d611d482cce7526ad80"
+      }
+    },
+    {
+      "control": "shared-mutation",
+      "capability": "physical",
+      "obligation": "continuous live values",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "continuous live values",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "shared-mutation",
+        "first_python_predicate": "full committed execution/physical state",
+        "driver_error": "AssertionError: full committed execution/physical state",
+        "differences": [
+          {
+            "path": "/state/memory/0/1",
+            "actual": "2",
+            "expected": "1"
+          }
+        ],
+        "phase": "commit",
+        "step": 5
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/shared-mutation/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "d2bdd112c15a60e0662a265b4e499846e4da8f538f067cae1c67be9c0c3d181c"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/shared-mutation/mutant",
+        "passed": false,
+        "error": "AssertionError: full committed execution/physical state",
+        "summary_sha256": "6c8cbf6e5519f32b51b20571b8e952c4b4baf6f773600f94de2ff66d6c275c40"
+      }
+    },
+    {
+      "control": "shadow-reporter",
+      "capability": "physical",
+      "obligation": "reported/actual physical graph",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "reported/actual physical graph",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "shadow-reporter",
+        "first_python_predicate": "full committed execution/physical state",
+        "driver_error": "AssertionError: full committed execution/physical state",
+        "differences": [
+          {
+            "path": "/state/memory/0/1",
+            "actual": "1",
+            "expected": "2"
+          },
+          {
+            "path": "/state/memory/0/2",
+            "actual": null,
+            "expected": 2
+          }
+        ],
+        "phase": "commit",
+        "step": 17
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/shadow-reporter/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "5e66f3def39327e04b8eae7f5007aa217caffc11d7b3a32a87e67b5ab85079b1"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/shadow-reporter/mutant",
+        "passed": false,
+        "error": "AssertionError: full committed execution/physical state",
+        "summary_sha256": "2e52e7ef65145cc7746e759b39eab085dc3227469b0c0d271a58400107c873d1"
+      }
+    },
+    {
+      "control": "premature-free",
+      "capability": "physical",
+      "obligation": "live lifetime readability",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "live lifetime readability",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "premature-free",
+        "first_python_predicate": "full committed execution/physical state",
+        "driver_error": "AssertionError: full committed execution/physical state",
+        "differences": [
+          {
+            "path": "/state/memory",
+            "actual": [
+              [
+                2,
+                "2",
+                3,
+                1,
+                "live"
+              ],
+              [
+                3,
+                "3",
+                null,
+                1,
+                "live"
+              ]
+            ],
+            "expected": [
+              [
+                1,
+                "1",
+                2,
+                1,
+                "live"
+              ],
+              [
+                2,
+                "2",
+                3,
+                1,
+                "live"
+              ],
+              [
+                3,
+                "3",
+                null,
+                1,
+                "live"
+              ]
+            ]
+          }
+        ],
+        "phase": "commit",
+        "step": 3
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/premature-free/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "f7c8ba041157267fc20c526464e4b1433848caec42f7281c784d4673466e83d8"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/premature-free/mutant",
+        "passed": false,
+        "error": "AssertionError: full committed execution/physical state",
+        "summary_sha256": "3cf31e872d41554b1f539c196ebe277d7ae2329f346b0fe36398c8574bb1c025"
+      }
+    },
+    {
+      "control": "tail-leak",
+      "capability": "physical",
+      "obligation": "final reachability/destroy free set",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "final reachability/destroy free set",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "tail-leak",
+        "first_python_predicate": "destroy outside graph/counts",
+        "driver_error": "AssertionError: destroy outside graph/counts",
+        "differences": [],
+        "phase": "destroy",
+        "step": 0
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/tail-leak/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "b7096811706e1ec9b0e4cdf3b762c55e2df1bf18a320deb3a53bcaadc1b577ac"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/tail-leak/mutant",
+        "passed": false,
+        "error": "AssertionError: destroy outside graph/counts",
+        "summary_sha256": "01643e2039445f740fb030e2e71476cde9ce6942966babed6773f3eec4a35113"
+      }
+    },
+    {
+      "control": "lost-live-holder",
+      "capability": "physical",
+      "obligation": "pending/binding counts",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "pending/binding counts",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "lost-live-holder",
+        "first_python_predicate": "full committed execution/physical state",
+        "driver_error": "AssertionError: full committed execution/physical state",
+        "differences": [
+          {
+            "path": "/state/pending",
+            "actual": [],
+            "expected": [
+              [
+                "l",
+                1
+              ]
+            ]
+          }
+        ],
+        "phase": "commit",
+        "step": 3
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/lost-live-holder/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "0bb2c41c2a9e9f03043cf9875acf8e2e00183242a86df0ef4a812327083cc875"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/lost-live-holder/mutant",
+        "passed": false,
+        "error": "AssertionError: full committed execution/physical state",
+        "summary_sha256": "aacc53ffbd59cb7c1fcd4364b2ed943379d94c2d67d47b3c3a6f164d3fc4ad28"
+      }
+    },
+    {
+      "control": "wrong-reservation-order",
+      "capability": "physical",
+      "obligation": "nested reservation identity/order",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "nested reservation identity/order",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "wrong-reservation-order",
+        "first_python_predicate": "full committed execution/physical state",
+        "driver_error": "AssertionError: full committed execution/physical state",
+        "differences": [
+          {
+            "path": "/ready/1",
+            "actual": 1,
+            "expected": 2
+          },
+          {
+            "path": "/state/aside/0/0",
+            "actual": 1,
+            "expected": 0
+          },
+          {
+            "path": "/state/aside/0/1",
+            "actual": 2,
+            "expected": 1
+          },
+          {
+            "path": "/state/memory/0/2",
+            "actual": 3,
+            "expected": null
+          },
+          {
+            "path": "/state/memory/0/3",
+            "actual": 1,
+            "expected": 0
+          },
+          {
+            "path": "/state/memory/0/4",
+            "actual": "live",
+            "expected": "aside"
+          },
+          {
+            "path": "/state/memory/1/1",
+            "actual": "2",
+            "expected": "1"
+          },
+          {
+            "path": "/state/memory/1/2",
+            "actual": null,
+            "expected": 3
+          },
+          {
+            "path": "/state/memory/1/3",
+            "actual": 0,
+            "expected": 1
+          },
+          {
+            "path": "/state/memory/1/4",
+            "actual": "aside",
+            "expected": "live"
+          },
+          {
+            "path": "/state/pending/0/1",
+            "actual": 1,
+            "expected": 2
+          }
+        ],
+        "phase": "commit",
+        "step": 20
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/wrong-reservation-order/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "8fdecccb3c2ae2f9f9f4099c32a47e76a9b2cdc8fb041c960668151e3a28eb01"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/wrong-reservation-order/mutant",
+        "passed": false,
+        "error": "AssertionError: full committed execution/physical state",
+        "summary_sha256": "01635e6fc6c416a5c8acf34909dd4b6b1e7d2c055eaca995b99be31d9b8febf7"
+      }
+    },
+    {
+      "control": "replay",
+      "capability": "resume",
+      "obligation": "normalized predicted suffix",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "normalized predicted suffix",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "replay",
+        "first_python_predicate": "commit metadata",
+        "driver_error": "AssertionError: commit metadata",
+        "differences": [
+          {
+            "path": "/control",
+            "actual": [],
+            "expected": [
+              {
+                "site": "main",
+                "scope": [],
+                "invocation": 0,
+                "operands": []
+              },
+              {
+                "site": "main/0",
+                "scope": [],
+                "invocation": 0,
+                "operands": []
+              },
+              {
+                "site": "main/0/0",
+                "scope": [],
+                "invocation": 0,
+                "operands": []
+              }
+            ]
+          },
+          {
+            "path": "/ready",
+            "actual": null,
+            "expected": [
+              "n",
+              "9"
+            ]
+          },
+          {
+            "path": "/state/kind",
+            "actual": "start",
+            "expected": null
+          }
+        ],
+        "phase": "commit",
+        "step": 4,
+        "metadata_differences": [
+          {
+            "path": "/landmark",
+            "actual": 1,
+            "expected": null
+          },
+          {
+            "path": "/site",
+            "actual": "root",
+            "expected": "main/0/0"
+          },
+          {
+            "path": "/transition",
+            "actual": "Start",
+            "expected": "Leaf"
+          }
+        ]
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/replay/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "e904f240a9d5b05ce513352e0d0323fdddee7dbcb6ff4bed95b18a6aec3da725"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/replay/mutant",
+        "passed": false,
+        "error": "AssertionError: commit metadata",
+        "summary_sha256": "f25e214e13ce1d1c2737df154e9dfc303cbdf529fa0e3267e95dc45087dcbae8"
+      }
+    },
+    {
+      "control": "counter-reset",
+      "capability": "resume",
+      "obligation": "cumulative prefix",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "cumulative prefix",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "counter-reset",
+        "first_python_predicate": null,
+        "driver_error": "AssertionError: linked process abnormal termination",
+        "differences": [],
+        "frozen_driver_guard": "nonconsecutive callback"
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/counter-reset/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "50920ab69b9d4efea875b96dec63965b56666ab2e59191ed403044f71fd152b1"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/counter-reset/mutant",
+        "passed": false,
+        "error": "AssertionError: linked process abnormal termination",
+        "summary_sha256": "956e602299709cadd110b310f893e76d7f4d7eb9f9c3ff70ccfade495f18766c"
+      }
+    },
+    {
+      "control": "call-boundary-only",
+      "capability": "resume",
+      "obligation": "every transition cut",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "every transition cut",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "call-boundary-only",
+        "first_python_predicate": "advance undershot budget",
+        "driver_error": "AssertionError: advance undershot budget",
+        "differences": [],
+        "phase": "advance",
+        "step": 0
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/call-boundary-only/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "054ce99fec65e55e327c2f2d35c8c36c5e83cd846553a91171cfe8c13b1b7c69"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/call-boundary-only/mutant",
+        "passed": false,
+        "error": "AssertionError: advance undershot budget",
+        "summary_sha256": "aa31326df636bda50a3e10cf31359180703ecbb8f8fe33592be1cfd79647e2d6"
+      }
+    },
+    {
+      "control": "suspended-as-finished",
+      "capability": "resume",
+      "obligation": "terminal classification",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "terminal classification",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "suspended-as-finished",
+        "first_python_predicate": "exact-boundary terminal classification",
+        "driver_error": "AssertionError: exact-boundary terminal classification",
+        "differences": [],
+        "phase": "commit",
+        "step": 1
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/suspended-as-finished/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "626ced4f37c8c83daeac3e757edac3a8d9d6f2b277e6d72176b03fbe21555747"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/suspended-as-finished/mutant",
+        "passed": false,
+        "error": "AssertionError: exact-boundary terminal classification",
+        "summary_sha256": "e3d56ebe0cb934491c06414dc3f57e310f93d801892aa38454cd952caf9a3d58"
+      }
+    },
+    {
+      "control": "resource-as-suspended",
+      "capability": "resume",
+      "obligation": "resource failure classification",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "resource failure classification",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "resource-as-suspended",
+        "first_python_predicate": "failure status",
+        "driver_error": "AssertionError: failure status",
+        "differences": [],
+        "phase": "advance",
+        "step": 0
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/resource-as-suspended/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "82b55c557ffe73aad975131a8f8c5a2ffd316269b278e6841974d60bead930f5"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/resource-as-suspended/mutant",
+        "passed": false,
+        "error": "AssertionError: failure status",
+        "summary_sha256": "dd907a15600b528bf76c5e70ebaa27bb144738cc6bc6213d3ccfd7929a6320a5"
+      }
+    },
+    {
+      "control": "physical-leak",
+      "capability": "destroy",
+      "obligation": "destroy outside exact graph",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "destroy outside exact graph",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "physical-leak",
+        "first_python_predicate": "destroy outside graph/counts",
+        "driver_error": "AssertionError: destroy outside graph/counts",
+        "differences": [],
+        "phase": "destroy",
+        "step": 0
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/physical-leak/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "accc980d08bd293cfbfb53258048f1811d292abfb09b723d51f1d02400fd0565"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/physical-leak/mutant",
+        "passed": false,
+        "error": "AssertionError: destroy outside graph/counts",
+        "summary_sha256": "7bc75497deb251be08324c44d40f81277fe0faed35b527c34e04c83e91b5b639"
+      }
+    },
+    {
+      "control": "double-free",
+      "capability": "destroy",
+      "obligation": "destroy free set/duplicate",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "destroy free set/duplicate",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "double-free",
+        "first_python_predicate": "logical/native cleanup events",
+        "driver_error": "AssertionError: logical/native cleanup events",
+        "differences": [],
+        "phase": "destroy-again",
+        "step": 0,
+        "frozen_destroy_predicate_on_actual_rows": "destroy free set/duplicate"
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/double-free/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "d18fb2b8dc6bf719629771ec18a5297553489ff462069ca3056e74420f9c9dae"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/double-free/mutant",
+        "passed": false,
+        "error": "AssertionError: logical/native cleanup events",
+        "summary_sha256": "4bdaca703710c2e4faf04c442f46a71d743fc434f753d96f144855c1457882cb"
+      }
+    },
+    {
+      "control": "outside-drop",
+      "capability": "destroy",
+      "obligation": "outside value/lifetime continuity",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "outside value/lifetime continuity",
+      "unrelated_failure": false,
+      "evidence": {
+        "control": "outside-drop",
+        "first_python_predicate": "destroy outside graph/counts",
+        "driver_error": "AssertionError: destroy outside graph/counts",
+        "differences": [],
+        "phase": "destroy",
+        "step": 0
+      },
+      "baseline": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/outside-drop/baseline",
+        "passed": true,
+        "error": null,
+        "summary_sha256": "f86eddabb72c31fe94818c605f5fe13fe98d1895e8b0f693df530bd9c772fb45"
+      },
+      "mutant": {
+        "destination": "/home/user/workspace/repo/experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation/control-runs/outside-drop/mutant",
+        "passed": false,
+        "error": "AssertionError: destroy outside graph/counts",
+        "summary_sha256": "fd588519f528bc05864e18b41862ddee90d17b41b659932e1e140213958ad7e2"
+      }
+    }
+  ],
+  "deferred_stage_b": [
+    "always-copy",
+    "hidden-entry-copy",
+    "fixture-provenance",
+    "caller-reservation-theft",
+    "early-cleanup",
+    "omitted-entry-create",
+    "omitted-nested-create",
+    "omitted-transient-create",
+    "early-enter",
+    "skipped-return-cleanup"
+  ],
+  "qualifications": [
+    "Frontend preallocation and counter reset are rejected by named frozen Rust driver guards, not inferred solely from exit status.",
+    "Premature-free and lost-live-holder stderr includes later consequences of the injected fault; the first recorded verifier rejection is the intended missing-cell/pending-holder discrepancy.",
+    "Double-free native attempt returns UnknownCell; no second physical deallocation occurs. Duplicate claimed cleanup is rejected by logical/native comparison and unchanged check_destroy on captured real rows.",
+    "No stub or synthetic trace generator was counted."
+  ]
+}

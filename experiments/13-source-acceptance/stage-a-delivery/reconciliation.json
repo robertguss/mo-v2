@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "total": 197085,
+  "skipped_already_passed": {
+    "resume": 18360,
+    "destroy": 18360,
+    "deny": 23863
+  },
+  "completed_new": {
+    "deny": 57078,
+    "resume": 39712,
+    "destroy": 39712
+  },
+  "combined": {
+    "resume": 58072,
+    "destroy": 58072,
+    "deny": 80941
+  },
+  "unexecuted": 0,
+  "duplicate_ids": 0,
+  "orphan_new_destinations": 0,
+  "max_runs_per_shard": 500,
+  "plan_sha256": "d9b95cfa14cfa4cc04ba97032888ad1994a7d14d0610b79b4e177f03d66e9324",
+  "completed_ledger_sha256": "a91161f58ec145b1a75646269e39a4dfb41435c8b3f5ef14c274bbe26586bb10"
+}
