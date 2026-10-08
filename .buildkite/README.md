@@ -45,11 +45,15 @@ Two steps, in parallel.
 | Experiment 11 allocator calibration | same |
 | Experiment 10: 4,276 cases and 27,721 snapshots against the Lean model's frozen export | `10-finite-rust/RESULT.md` |
 | Experiment 13: Rust 1.98.1 locked native link build and 41 builder-owned development tests | `13-source-acceptance/STAGE_A_RESULT.md` |
+| Experiment 13 Stage B baseline build and development tests | `13-source-acceptance/candidate-stage-b/HANDOFF.md` |
+| Experiment 13 Stage B observation adaptation: locked native link, 54 development tests and three collector tests | `13-source-acceptance/stage-b-adaptation-01/README.md` |
 
 Experiment 13's CI checks are not its separately authored native acceptance
 campaign. CI does not rerun the 199,039 lifecycle/denial runs, compiled controls,
-private cases or archive restoration. Its temporary Cargo target directory is
-outside the checkout and removed after a successful check.
+private cases, million-element workloads or archive restoration. Its temporary
+Cargo target directories are outside the checkout and removed after successful
+checks. The retained Stage B baseline and the observation adaptation are built
+separately; neither passing CI nor merging an evidence-only PR accepts Stage B.
 
 **`:lean: Lean proofs and kernel re-check`**
 

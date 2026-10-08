@@ -188,6 +188,24 @@ rust_checks() {
         cargo +1.98.1 test --locked --offline --manifest-path candidate-stage-b/Cargo.toml
       rm -rf "$stage_b_target"
     fi
+    # Keep the submitted baseline above; also build the additive observation
+    # adaptation against its version-matched, frozen collector/runtime.
+    if [[ -f stage-b-adaptation-01/candidate/Cargo.toml ]]; then
+      local adapted_target
+      adapted_target=$(mktemp -d)
+      run "13-source-acceptance: adapted Stage B locked dependencies" \
+        cargo +1.98.1 fetch --locked --manifest-path stage-b-adaptation-01/link/Cargo.toml
+      run "13-source-acceptance: adapted Stage B native link build" \
+        env CARGO_TARGET_DIR="$adapted_target" \
+        cargo +1.98.1 build --locked --offline --manifest-path stage-b-adaptation-01/link/Cargo.toml
+      run "13-source-acceptance: adapted Stage B development tests (not independent acceptance)" \
+        env CARGO_TARGET_DIR="$adapted_target" \
+        cargo +1.98.1 test --locked --offline --manifest-path stage-b-adaptation-01/candidate/Cargo.toml
+      run "13-source-acceptance: revised Stage B collector tests" \
+        env CARGO_TARGET_DIR="$adapted_target" \
+        cargo +1.98.1 test --locked --offline --manifest-path stage-b-revision-02/driver/Cargo.toml
+      rm -rf "$adapted_target"
+    fi
   fi
 
   summary
