@@ -1,0 +1,10 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7 (main, Sep  2 2025, 14:05:52) [Clang 20.1.4 ]",
+  "sources": {
+    "host.rs": "dde131b958b3db51b256e85727187c7efdfecaa8a3c0086b343743d27815fb74",
+    "module.c": "528db9cce43b993da2f605ae2b7ae785d82ac4b509a0d2f76c8ba8aba09f4c8c",
+    "SPEC.md": "1bbacef051be5d0cb4dcb3274108bc38237ef3b6931e9b7acb929c9ad62b945d",
+    "check.py": "63f796fc1c9df3405c6b7642cc853ca98466e703b27ff9906637cd7509ed42ad"
+  }
+}
