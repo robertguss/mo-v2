@@ -1,0 +1,101 @@
+{
+  "trials": [
+    {
+      "trial": "trial-1",
+      "jobs": 90,
+      "refused_updates": 80,
+      "baseline_threads": 8,
+      "saturated_threads": 10,
+      "permanent_timeout_us": [
+        200695,
+        201215
+      ],
+      "cleanup": {
+        "t": 6.083546125000794,
+        "cleanup_exit": -9,
+        "process_gone": true
+      },
+      "attempts": 10
+    },
+    {
+      "trial": "trial-2",
+      "jobs": 90,
+      "refused_updates": 80,
+      "baseline_threads": 8,
+      "saturated_threads": 10,
+      "permanent_timeout_us": [
+        200366,
+        200124
+      ],
+      "cleanup": {
+        "t": 5.365781624999727,
+        "cleanup_exit": -9,
+        "process_gone": true
+      },
+      "attempts": 10
+    },
+    {
+      "trial": "trial-3",
+      "jobs": 90,
+      "refused_updates": 80,
+      "baseline_threads": 8,
+      "saturated_threads": 10,
+      "permanent_timeout_us": [
+        200454,
+        201061
+      ],
+      "cleanup": {
+        "t": 6.68074125000021,
+        "cleanup_exit": -9,
+        "process_gone": true
+      },
+      "attempts": 10
+    }
+  ],
+  "controls": [
+    {
+      "name": "no-cap",
+      "caught": true,
+      "expected": "excess update not refused at resource limit",
+      "source_sha256": "6ecf9a66cdba4ab271e0423eff0ece2bc8b127efd7d8b1e800cbe4e7a7a6e6fb"
+    },
+    {
+      "name": "timeout-releases-capacity",
+      "caught": true,
+      "expected": "excess update not refused at resource limit",
+      "source_sha256": "fafde2027df50e89f7ab66e82a6ad08922d1c366ca54d80887d4832890848e66"
+    },
+    {
+      "name": "never-reap",
+      "caught": true,
+      "expected": "update refused",
+      "source_sha256": "bfe909be16fb4d2ef1fbe1c612302ddd1a9882c5f1b3c8da595c105f5aaa3b50"
+    },
+    {
+      "name": "unsafe-retire",
+      "caught": true,
+      "expected": "permanent native retired",
+      "source_sha256": "7cb1820e3ee9364db16696feebe03f9eaae14470c39635915c410a73c6f09f9e"
+    },
+    {
+      "name": "timeout-no-resume",
+      "caught": true,
+      "expected": "old queue not resumed after timeout",
+      "source_sha256": "7d3ea031f74419218dff0219c22725568c6610d5827f6fc900f1f659644a3f96"
+    }
+  ],
+  "forced_cleanup": {
+    "t": 4.2338644999999815,
+    "cleanup_exit": -9,
+    "process_gone": true
+  },
+  "previous_trial": {
+    "passed": true,
+    "error": null
+  },
+  "toolchain": {
+    "rustc": "rustc 1.99.0 (b940084d7 2026-09-28) (Homebrew)",
+    "clang": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+    "python3": "Python 3.13.7"
+  }
+}

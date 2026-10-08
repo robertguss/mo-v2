@@ -1,0 +1,6 @@
+
+thread '<unnamed>' (966819) panicked at /Users/robertguss/Projects/startups/mo-v2/experiments/09-migration-limit/evidence/controls-01/unsafe-retire.rs:48:9:
+assertion `left == right` failed: dlclose failed
+  left: -1
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
