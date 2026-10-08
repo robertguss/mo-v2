@@ -1,9 +1,14 @@
 # Mo v2 CI, uploaded by the `buildkite-agent pipeline upload` step in the
 # robert-guss/mo-v2 pipeline. See .buildkite/README.md for what runs and why.
 #
-# Queue: `linux-small` is the Default cluster's default hosted queue, and it
-# fits. Neither step is limited by cores or memory -- measured peaks are 625 MB
-# for Rust and 535 MB for Lean, and the longest command in the build
+# Queue: must name a real hosted queue in the Default cluster. The options are
+# linux-small (the cluster default), linux-medium, linux-large, macos-medium,
+# macos-large and the versioned macOS queues. There is no queue called
+# `default`; naming one that does not exist is rejected when this file is
+# uploaded, before any step runs, which is how builds 1 and 2 failed.
+#
+# linux-small fits both steps. Measured peaks are 625 MB resident for Rust and
+# 535 MB for Lean, and the longest command in the build
 # (`leanchecker --fresh`, about 50s) is strictly single-threaded, so a larger
 # queue would cost more without shortening the critical path. Override with
 # MO_CI_QUEUE in Pipeline Settings -> Environment Variables.
