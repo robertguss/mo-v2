@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "review_only": true,
+  "status": "answered from the frozen name-and-type rule; documentation ready for parent review; builder remains paused",
+  "answer": "ANSWERED",
+  "addendum": "BUILDER_STAGE_B_FORWARD_TYPE.md",
+  "addendum_sha256": "41a63dd14d5b66e55f4129ae81a3b1e47b5a3a7c4006de68b8f311963fa1ca4e",
+  "archive": "stage-b-delivery/rob-1333-stage-b-public-v20.tar.gz",
+  "archive_sha256": "29c9478b9f382b2bed86850fb59c281d057082e6e6d54a35f8bbc0e56b5f0e1b",
+  "archive_bytes": 32158,
+  "scientific_lock_unchanged_sha256": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+  "all_frozen_file_hashes_match": 496,
+  "stage_b_lock_file_hashes_match": 967,
+  "previous_archive_unchanged_sha256": "ac82bf2cbdec81823550f6af4a64744f1a0689bb923d850f96f00cc4936c4bba",
+  "new_source_cases": 0,
+  "candidate_execution": false,
+  "new_policy_or_contradiction_found": false,
+  "scan_findings": 0,
+  "prose_control_mentions": [
+    {
+      "file": "BUILDER_BRIEF.md",
+      "pattern": "control identifier",
+      "match": "early-cleanup",
+      "line": 33,
+      "context": "first tail-call/early-cleanup alternatives are deferred."
+    },
+    {
+      "file": "BUILDER_AMENDMENT_D154.md",
+      "pattern": "control identifier",
+      "match": "fixture-provenance",
+      "line": 16,
+      "context": "root or fixture-provenance information is added to Candidate.begin or RuntimeCells."
+    }
+  ],
+  "probe": [
+    {
+      "name": "bad-param",
+      "kind": "argument-kind",
+      "text": "n"
+    },
+    {
+      "name": "bad-result-body",
+      "kind": "result-kind",
+      "text": "later()"
+    },
+    {
+      "name": "bad-result-operand",
+      "kind": "operand-kind",
+      "text": "later()"
+    },
+    {
+      "name": "bad-result-let-unused",
+      "kind": "type",
+      "text": "Bogus"
+    },
+    {
+      "name": "bad-result-let-used",
+      "kind": "result-kind",
+      "text": "let x = later() in x"
+    },
+    {
+      "name": "no-call-bad-param",
+      "kind": "type",
+      "text": "Bogus"
+    },
+    {
+      "name": "no-call-bad-result",
+      "kind": "type",
+      "text": "Bogus"
+    },
+    {
+      "name": "bad-result-only-in-main",
+      "kind": "type",
+      "text": "Bogus"
+    },
+    {
+      "name": "bad-param-arity",
+      "kind": "arity",
+      "text": "later()"
+    },
+    {
+      "name": "bad-param-illtyped-arg",
+      "kind": "operand-kind",
+      "text": "true"
+    },
+    {
+      "name": "earlier-result-also-bad",
+      "kind": "type",
+      "text": "Bogus"
+    },
+    {
+      "name": "bad-result-condition",
+      "kind": "condition-kind",
+      "text": "later()"
+    },
+    {
+      "name": "bad-result-passed-on",
+      "kind": "argument-kind",
+      "text": "later()"
+    },
+    {
+      "name": "bad-result-both-branches",
+      "kind": "result-kind",
+      "text": "if true then later() else later() end"
+    },
+    {
+      "name": "valid-forward",
+      "kind": null,
+      "text": null
+    },
+    {
+      "name": "bad-param-second",
+      "kind": "argument-kind",
+      "text": "0"
+    },
+    {
+      "name": "bad-result-scrutinee",
+      "kind": "scrutinee-kind",
+      "text": "later()"
+    },
+    {
+      "name": "bad-result-head",
+      "kind": "head-kind",
+      "text": "later()"
+    }
+  ],
+  "review_source_map": {
+    "any identifier is a type name at parse time": [
+      "syntax.py:93-97"
+    ],
+    "function table stores written parameter and result names before bodies": [
+      "syntax.py:223-225"
+    ],
+    "a call compares arguments with the written parameter name and returns the written result name": [
+      "syntax.py:255-262"
+    ],
+    "annotation is checked only when the declaration is reached, before its body": [
+      "syntax.py:267-276"
+    ],
+    "execution looks up the body and does not classify type names": [
+      "call_reference.py:112-115"
+    ],
+    "public order already stated": [
+      "BUILDER_STAGE_B_PREFLIGHT.md:27-57"
+    ]
+  },
+  "public_update_sha256": "43e72709fe36e08fec2131aace263bc1425cef70815c751288b71f8e44a54024"
+}
