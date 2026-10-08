@@ -5,11 +5,11 @@
   "large": true,
   "workload": "discarded-list",
   "depth": 100000,
-  "available_bytes": 5077086208,
+  "available_bytes": 5078003712,
   "stack_bytes": 8388608,
   "observation_period": 10000,
   "exit_code": 0,
-  "peak_rss_kib": 204112,
+  "peak_rss_kib": 204056,
   "committed_steps": 200003,
   "advances": 1,
   "destroy_calls": 2,
@@ -31,17 +31,17 @@
   "resource_attempts": {
     "number": 100001
   },
-  "elapsed_ns": 15699330350,
-  "elapsed_seconds": 15.69933035,
+  "elapsed_ns": 15595102511,
+  "elapsed_seconds": 15.595102511,
   "phase_count": 200013,
   "scaled_resource_record": {
     "case": "discarded-list",
     "status": "finished",
     "depth": 100000,
     "answer": "0",
-    "available_bytes": 5077086208,
+    "available_bytes": 5078003712,
     "stack_bytes": 8388608,
-    "elapsed_seconds": 15.69933035,
+    "elapsed_seconds": 15.595102511,
     "transitions": 200003,
     "evaluation_cell_counts": [
       0,
@@ -51,5 +51,5 @@
     "remaining_owned_cells": 0,
     "peak_explicit_frames": 0
   },
-  "verifier_peak_kib": 195220
+  "verifier_peak_kib": 190052
 }

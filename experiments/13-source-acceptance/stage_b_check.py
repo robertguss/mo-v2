@@ -13,9 +13,11 @@ Nothing here runs a Mo interpreter, executes one of the ten deferred Stage B
 control paths, touches the acceptance-private corpus, or runs either approved
 million-cell workload.
 """
+from datetime import datetime, timezone
 import json
 from pathlib import Path
 import sys
+import time
 import traceback
 
 import stage_b_controls
@@ -205,9 +207,30 @@ def scaling_model(runs):
                 note="A measurement of this acceptance harness on this machine, not of a candidate.")
 
 
-def run(destination, binaries):
+def write_effort(destination, started, check_seconds):
+    """D152's ledger row: elapsed contributor time, one contributor, no concurrency."""
+    stopped = datetime.now(timezone.utc)
+    row = dict(
+        row="ROB-1333 Stage B acceptance preparation",
+        convention="elapsed contributor seconds from explicit start to stop, including tool, "
+                   "build and test waits, excluding timestamped owner-wait and stopped periods",
+        contributors=1,
+        concurrent=False,
+        started=None if started is None else started.isoformat(),
+        stopped=stopped.isoformat(),
+        elapsed_seconds=None if started is None else round((stopped - started).total_seconds(), 3),
+        check_run_seconds=round(check_seconds, 3),
+        owner_wait_seconds=0,
+        note="Earlier preparation and Stage A effort are recorded in their own files and are "
+             "not reconstructed here.")
+    (destination / "effort.json").write_text(json.dumps(row, indent=2) + "\n")
+    return row
+
+
+def run(destination, binaries, started=None):
     destination = Path(destination)
     destination.mkdir(parents=True, exist_ok=False)
+    began = time.monotonic()
     report = dict(passed=False, candidate_executed=False, resource_workload_executed=False,
                   private_corpus_used=False, builder_dispatched=False, stage_b_controls_executed=0)
     try:
@@ -224,6 +247,7 @@ def run(destination, binaries):
         report["passed"] = True
     except Exception:
         report["error"] = traceback.format_exc()
+    report["effort"] = write_effort(destination, started, time.monotonic() - began)
     summary = {k: v for k, v in report.items() if k not in ("workloads", "adapter", "projected_records")}
     summary["workload_schedule_comparisons"] = report.get("workloads", {}).get("schedule_comparisons")
     summary["workload_state_comparisons"] = report.get("workloads", {}).get("state_comparisons")
@@ -234,4 +258,7 @@ def run(destination, binaries):
 
 
 if __name__ == "__main__":
-    sys.exit(not run(Path(sys.argv[1]), sys.argv[2]))
+    # Optional third argument: the ISO start of this contributor session, for
+    # the D152 ledger. Without it the ledger records the check run only.
+    begin = datetime.fromisoformat(sys.argv[3]) if len(sys.argv) > 3 else None
+    sys.exit(not run(Path(sys.argv[1]), sys.argv[2], begin))
