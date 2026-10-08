@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "volumes": 51,
+  "regular_files": 831636,
+  "content_bytes": 4946455087,
+  "sealed_entries_matched": 831627,
+  "sealed_manifests": 9,
+  "compared_with_originals": true,
+  "restored_and_rehashed": true,
+  "elapsed_seconds": 370.974
+}

@@ -1,0 +1,702 @@
+{
+  "format": "ROB-1333 lossless non-private Stage A evidence package 1",
+  "scope": "Packaging only; no candidate execution, result or criterion changes",
+  "source_prefix": "experiments/13-source-acceptance/candidate-runs",
+  "source_roots": [
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-01",
+      "regular_files": 25,
+      "sealed_entries": 24,
+      "manifest_sha256": "6535c55d031ec90382c8cc35988683c7e3fd57cd32e35f30b08628dc0ba2c5f1"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-02",
+      "regular_files": 23,
+      "sealed_entries": 22,
+      "manifest_sha256": "2d7aadca4d0302e8bbdce72dd454ee8860f28d4fd12d42ae3658f3ea83b2a42b"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-03",
+      "regular_files": 24,
+      "sealed_entries": 23,
+      "manifest_sha256": "59004ccaa6df35937cdaf3cc0b684932f9d15655745bad71ecc9da44cdf96285"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-04",
+      "regular_files": 40,
+      "sealed_entries": 39,
+      "manifest_sha256": "ea2d2cac05a9f6284dc60056cd35d8a43b182b11c2cf26f55ce08d8ca8c2e060"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-05",
+      "regular_files": 76,
+      "sealed_entries": 75,
+      "manifest_sha256": "805fa0a6865b5656b82e421ffce3694c74513bff1d577fcfc73af7ba0c86d1cc"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-06",
+      "regular_files": 124,
+      "sealed_entries": 123,
+      "manifest_sha256": "e22b8cc7d83302cb48dd0eac193c56be245aedbc5f2d170f480fb6e7972b32ec"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-07",
+      "regular_files": 17236,
+      "sealed_entries": 17235,
+      "manifest_sha256": "491ac65fed9f1ec700b64c5f4d0924d53d4fe117bcadcdd739ec40a5a4b9242c"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08",
+      "regular_files": 260030,
+      "sealed_entries": 260029,
+      "manifest_sha256": "b74b5e1774283b685c2de0646220347a839cb3c181a2b949e0da5f0a8462965b"
+    },
+    {
+      "path": "experiments/13-source-acceptance/candidate-runs/stage-a-08-continuation",
+      "regular_files": 554058,
+      "sealed_entries": 554057,
+      "manifest_sha256": "6d77198eb2b7c1f5a564561bb83dd9f6c8289efd3b019264ead7390ed622cb3c"
+    }
+  ],
+  "scientific_lock_sha256": "09c64493ba65f94451dc17c5bde7c4b54554d6990b23b8c877f2f9741f120c9e",
+  "max_individual_compressed_bytes_exclusive": 20971520,
+  "volumes": [
+    {
+      "archive": "volumes/evidence-0001.tar.gz",
+      "archive_bytes": 7258541,
+      "archive_sha256": "138b04b749a0dfc7fe2d69fc664c436674fd8300851a456b2139535e67889aa1",
+      "index": "indexes/evidence-0001.jsonl.gz",
+      "index_bytes": 674676,
+      "index_sha256": "3511554d0cfdaaeb9d60cdde518696c5d62caf378ca39c48c496c74a410a6e67",
+      "regular_files": 17548,
+      "content_bytes": 120251865
+    },
+    {
+      "archive": "volumes/evidence-0002.tar.gz",
+      "archive_bytes": 13149012,
+      "archive_sha256": "6a86dd60b54e7f78d8e3260abb2df344e845d8e05dd71e4c2ee8a9a62becb291",
+      "index": "indexes/evidence-0002.jsonl.gz",
+      "index_bytes": 779799,
+      "index_sha256": "ecc540bcb024b073b60c7f1d7138ba7566e9b764f32c6bbb74921f2d27e8ad4f",
+      "regular_files": 20204,
+      "content_bytes": 119546153
+    },
+    {
+      "archive": "volumes/evidence-0003.tar.gz",
+      "archive_bytes": 4983865,
+      "archive_sha256": "285f3ffdbc1dd355f331249b68d7d75ec459d153d35f5873af0f59190991a9e7",
+      "index": "indexes/evidence-0003.jsonl.gz",
+      "index_bytes": 1087611,
+      "index_sha256": "d025a6ff3e66943a550865f9630fd986c045e660bd565fe6d31f1412b6901c42",
+      "regular_files": 28384,
+      "content_bytes": 113680946
+    },
+    {
+      "archive": "volumes/evidence-0004.tar.gz",
+      "archive_bytes": 5224392,
+      "archive_sha256": "515cacf677619ae606723f33a8c72beeb4039508108e3172923df038b8ab3c83",
+      "index": "indexes/evidence-0004.jsonl.gz",
+      "index_bytes": 1018641,
+      "index_sha256": "88118ec5f354825645c617087459dbd1ebfdb8b0940b43c5b78b428c778f7ace",
+      "regular_files": 26478,
+      "content_bytes": 115084901
+    },
+    {
+      "archive": "volumes/evidence-0005.tar.gz",
+      "archive_bytes": 5755308,
+      "archive_sha256": "9a5c315a8087fb9a39c15f494efc7c5f853a4cf57c3460556bf1736e3c7ec96c",
+      "index": "indexes/evidence-0005.jsonl.gz",
+      "index_bytes": 927036,
+      "index_sha256": "74bbb33d025d9ee76a676c5afd08ed7dbcb8b0ab3d38355f036a86c8682c2189",
+      "regular_files": 23863,
+      "content_bytes": 116916152
+    },
+    {
+      "archive": "volumes/evidence-0006.tar.gz",
+      "archive_bytes": 4641186,
+      "archive_sha256": "9cbb6e609ae52a8f2c4709a56054e7441d780b5db7118b11bce4c396d4a22498",
+      "index": "indexes/evidence-0006.jsonl.gz",
+      "index_bytes": 1171386,
+      "index_sha256": "25a405be970202abace989d43c59695d52dae057e312a91ccb4485237b0e8583",
+      "regular_files": 29712,
+      "content_bytes": 112425517
+    },
+    {
+      "archive": "volumes/evidence-0007.tar.gz",
+      "archive_bytes": 5053503,
+      "archive_sha256": "9dcbfeb50a950636eea47a8d3cdc78fa723e8df263e666d6dd7d5d4b40bff3c9",
+      "index": "indexes/evidence-0007.jsonl.gz",
+      "index_bytes": 1077378,
+      "index_sha256": "0b9c15916b92a3468a90fddcef744c6e48223aab0afb22e75fc04f856c72eeae",
+      "regular_files": 27260,
+      "content_bytes": 114486540
+    },
+    {
+      "archive": "volumes/evidence-0008.tar.gz",
+      "archive_bytes": 5709860,
+      "archive_sha256": "438ddccc1edc707d973c11c8537a5400ba076fcfb78409c9b568b4de2da7863f",
+      "index": "indexes/evidence-0008.jsonl.gz",
+      "index_bytes": 879014,
+      "index_sha256": "878ef9196dc71326a0e68b3439af0f4d2eded9fbde2d2af2255b84014b5fdf25",
+      "regular_files": 22470,
+      "content_bytes": 118121799
+    },
+    {
+      "archive": "volumes/evidence-0009.tar.gz",
+      "archive_bytes": 6639622,
+      "archive_sha256": "815e899197fa30a62178c4743ef7887b2d46a5433108a28d52f2ca726292fe5b",
+      "index": "indexes/evidence-0009.jsonl.gz",
+      "index_bytes": 602748,
+      "index_sha256": "29ed4f800b23063aa0f4062fa3353c0697aaf3012b423f443d6b48a4199b4d14",
+      "regular_files": 15434,
+      "content_bytes": 123034649
+    },
+    {
+      "archive": "volumes/evidence-0010.tar.gz",
+      "archive_bytes": 4110968,
+      "archive_sha256": "690fc35c7e334cc57004aec4c6c8b3ddf8a715586a61977688ba7cc1662e1274",
+      "index": "indexes/evidence-0010.jsonl.gz",
+      "index_bytes": 760629,
+      "index_sha256": "8333b113d1891ea59a515f55f0a739f5bd05d199a3f770bb9b93d7ee472d4d10",
+      "regular_files": 19350,
+      "content_bytes": 120432183
+    },
+    {
+      "archive": "volumes/evidence-0011.tar.gz",
+      "archive_bytes": 6259330,
+      "archive_sha256": "6454092d7c6a3d3cf1e1e0ff1a8d852615bc97d1d8a0b32c333d156a5bb043f2",
+      "index": "indexes/evidence-0011.jsonl.gz",
+      "index_bytes": 686866,
+      "index_sha256": "349ba527b6a229a4b019f0e53a01083c10d37bc10a803dd10d98dc8eaf708ca4",
+      "regular_files": 17436,
+      "content_bytes": 120891198
+    },
+    {
+      "archive": "volumes/evidence-0012.tar.gz",
+      "archive_bytes": 6566110,
+      "archive_sha256": "9eed45cfc521e3bb7810718675bb7d6445f10561e30d122461b3021d7218a2aa",
+      "index": "indexes/evidence-0012.jsonl.gz",
+      "index_bytes": 653253,
+      "index_sha256": "4331abcb57f616e1dea11d5f57dbf1a8dd846fb952166ed2ef5888c1c27ea6f1",
+      "regular_files": 16546,
+      "content_bytes": 122089965
+    },
+    {
+      "archive": "volumes/evidence-0013.tar.gz",
+      "archive_bytes": 5256446,
+      "archive_sha256": "91c98b0d3d4567f5372220841d888d761f6826e0bba3a6b725715ccb09d1d9b5",
+      "index": "indexes/evidence-0013.jsonl.gz",
+      "index_bytes": 509533,
+      "index_sha256": "68d6d1fc038612ec562fcd1fcbe29e2acdd22386ba22fc6caf0285ecb64be214",
+      "regular_files": 12893,
+      "content_bytes": 96521821
+    },
+    {
+      "archive": "volumes/evidence-0014.tar.gz",
+      "archive_bytes": 20868910,
+      "archive_sha256": "fb237a670ac1b9b526b2778a734c668ec6bec7e14550fff5b48a5af9842400fa",
+      "index": "indexes/evidence-0014.jsonl.gz",
+      "index_bytes": 228651,
+      "index_sha256": "0049fd0ce6737ff8220bff005d21b263fdf5d507e61b2aea8ea027c8474ec138",
+      "regular_files": 5770,
+      "content_bytes": 95446101
+    },
+    {
+      "archive": "volumes/evidence-0015.tar.gz",
+      "archive_bytes": 1963845,
+      "archive_sha256": "491a78b712987448893b7a6da567ef9701a7b913b20a3a4dca7120d493f44e11",
+      "index": "indexes/evidence-0015.jsonl.gz",
+      "index_bytes": 227531,
+      "index_sha256": "475988b5137284814b78868dce9fe3cb98c93b4be161f89dfc42c25c67e0e676",
+      "regular_files": 5770,
+      "content_bytes": 30407684
+    },
+    {
+      "archive": "volumes/evidence-0016.tar.gz",
+      "archive_bytes": 7904622,
+      "archive_sha256": "00519662113ce01f278388351952f720e21bfefd78ec9923645914639232d66b",
+      "index": "indexes/evidence-0016.jsonl.gz",
+      "index_bytes": 824851,
+      "index_sha256": "1eed4405eab8aa1d59ab5a1ba9fb5fb1ad21c2cbfd029c77b5478e1350f35bc7",
+      "regular_files": 20868,
+      "content_bytes": 119308917
+    },
+    {
+      "archive": "volumes/evidence-0017.tar.gz",
+      "archive_bytes": 8059150,
+      "archive_sha256": "c71beeb982abc3d03ef9adc88ec6872971739292e0d7cef412119188cc5ecf33",
+      "index": "indexes/evidence-0017.jsonl.gz",
+      "index_bytes": 817637,
+      "index_sha256": "70293c5ccdad81b76c7d94ca98b92c19cddf81c67d429cc337c3e54842ab6363",
+      "regular_files": 20720,
+      "content_bytes": 119526411
+    },
+    {
+      "archive": "volumes/evidence-0018.tar.gz",
+      "archive_bytes": 8062662,
+      "archive_sha256": "e34c1d6215e0d17a1b3de5e2df326f957153d0f308d392376abfe85f38d5f675",
+      "index": "indexes/evidence-0018.jsonl.gz",
+      "index_bytes": 801968,
+      "index_sha256": "ec5423c6f89528f9adf35adf86cfa21b7a7755c45bb5e3a8208875f8db91e42f",
+      "regular_files": 20286,
+      "content_bytes": 119791032
+    },
+    {
+      "archive": "volumes/evidence-0019.tar.gz",
+      "archive_bytes": 8193693,
+      "archive_sha256": "d0c720c35364f400f3e5ca4bfb5c7da75a000e7c76e6ac4aecd5a0cd8ad8c09a",
+      "index": "indexes/evidence-0019.jsonl.gz",
+      "index_bytes": 802883,
+      "index_sha256": "dbac865894819ce9e3e4a0b17298a27ab1350cbe803f63e988d80db78502d930",
+      "regular_files": 20306,
+      "content_bytes": 119832895
+    },
+    {
+      "archive": "volumes/evidence-0020.tar.gz",
+      "archive_bytes": 8014075,
+      "archive_sha256": "099a63af9ae42da4bece6324c4c9d27798f8b708965f9e089a102dde54a98a60",
+      "index": "indexes/evidence-0020.jsonl.gz",
+      "index_bytes": 808224,
+      "index_sha256": "6c78aa99992f992593930b6e4ec0cbe4941b5e357ce403e1143e8ee197966c74",
+      "regular_files": 20496,
+      "content_bytes": 119624688
+    },
+    {
+      "archive": "volumes/evidence-0021.tar.gz",
+      "archive_bytes": 8237057,
+      "archive_sha256": "d8df90077c903239f6372d726916d100fdbdbf9abaf0474505b5720ecab1a39f",
+      "index": "indexes/evidence-0021.jsonl.gz",
+      "index_bytes": 776922,
+      "index_sha256": "62da79b50e35e2bd49f2bae365e10a3c9e78f2424f2d23e8dad55b674b3a56cf",
+      "regular_files": 19616,
+      "content_bytes": 120324838
+    },
+    {
+      "archive": "volumes/evidence-0022.tar.gz",
+      "archive_bytes": 7908037,
+      "archive_sha256": "5c51a424c49a41780db60aeff2140ead3b415f2db7b273bf48be692d9b6f5946",
+      "index": "indexes/evidence-0022.jsonl.gz",
+      "index_bytes": 843123,
+      "index_sha256": "dffc88fd8d053845746417d953539d49e6d4badfe2f2fb9a3664f59f0e835025",
+      "regular_files": 21418,
+      "content_bytes": 118593089
+    },
+    {
+      "archive": "volumes/evidence-0023.tar.gz",
+      "archive_bytes": 8370316,
+      "archive_sha256": "e14f8bfa70948afa46f7b5ed9d75c38e46382fcaf59417fb45b1d17e03c60e7f",
+      "index": "indexes/evidence-0023.jsonl.gz",
+      "index_bytes": 744375,
+      "index_sha256": "880e6c15d2ab2122a28fdfe3486c40eb3ab1b3a9c6bf2e9469b3760ef41b26ae",
+      "regular_files": 18738,
+      "content_bytes": 120733592
+    },
+    {
+      "archive": "volumes/evidence-0024.tar.gz",
+      "archive_bytes": 7879415,
+      "archive_sha256": "22e362716071259a042079cd7742816e77327156a7f7c513807e9eb1f1a741d0",
+      "index": "indexes/evidence-0024.jsonl.gz",
+      "index_bytes": 841857,
+      "index_sha256": "0255c5ad8cff7ab1c90a1c5d22d6797c86b7ada4098fd2ab3154a4f7db386bab",
+      "regular_files": 21412,
+      "content_bytes": 118549034
+    },
+    {
+      "archive": "volumes/evidence-0025.tar.gz",
+      "archive_bytes": 8246763,
+      "archive_sha256": "75cc80a0072b32e552f5c01f22d02a9a66e8f28da6914453837a46fe1a7a1eb1",
+      "index": "indexes/evidence-0025.jsonl.gz",
+      "index_bytes": 752909,
+      "index_sha256": "b591603277036cfccf647cf68658e117265389a3d60746e8c497aec2a2a9b2d5",
+      "regular_files": 18988,
+      "content_bytes": 120548991
+    },
+    {
+      "archive": "volumes/evidence-0026.tar.gz",
+      "archive_bytes": 8009883,
+      "archive_sha256": "81ac7095005b69848dc535d964455613bdd7f5dc41b38727f816df43e7c72539",
+      "index": "indexes/evidence-0026.jsonl.gz",
+      "index_bytes": 830867,
+      "index_sha256": "904262fc19014cbfbe78f0b001a1de72bf22431f2bf8d9dd06e9bf179488ddb4",
+      "regular_files": 21128,
+      "content_bytes": 118751046
+    },
+    {
+      "archive": "volumes/evidence-0027.tar.gz",
+      "archive_bytes": 8230457,
+      "archive_sha256": "aee1469c42f128ca6cc6d088844827541fa7951aa94be227a13745b7bed6b5d8",
+      "index": "indexes/evidence-0027.jsonl.gz",
+      "index_bytes": 754547,
+      "index_sha256": "081595dffc5738c9db9da512585fef754598a39fbb57bf4ce42dc12af99df7c3",
+      "regular_files": 19040,
+      "content_bytes": 120493614
+    },
+    {
+      "archive": "volumes/evidence-0028.tar.gz",
+      "archive_bytes": 8260323,
+      "archive_sha256": "55de85de40636cf1ac6ee0a85c124ee9e3a56873fe5cec7a3f22eaeb99c26057",
+      "index": "indexes/evidence-0028.jsonl.gz",
+      "index_bytes": 810009,
+      "index_sha256": "4c7e744774668075002b5ced5a4723f37c13ae7885ffaac63c0df276b7f1587f",
+      "regular_files": 20624,
+      "content_bytes": 119062299
+    },
+    {
+      "archive": "volumes/evidence-0029.tar.gz",
+      "archive_bytes": 8440948,
+      "archive_sha256": "99b2d25fd8c36f95f61048f4e6f7b475991f1fcd618fe92e9f9c1e3cd7e35023",
+      "index": "indexes/evidence-0029.jsonl.gz",
+      "index_bytes": 741897,
+      "index_sha256": "a8420e9b4d20f37494d507d3b14bf1630c92ad3628671d48500dd0b831d1a5ec",
+      "regular_files": 18696,
+      "content_bytes": 120667616
+    },
+    {
+      "archive": "volumes/evidence-0030.tar.gz",
+      "archive_bytes": 8251579,
+      "archive_sha256": "ada4d713f6e7066dbb057b04e8ee0e9cd8f353577e306dba46eecc0d5f552af2",
+      "index": "indexes/evidence-0030.jsonl.gz",
+      "index_bytes": 810789,
+      "index_sha256": "26d435eb2a713aeef62a3c2f4d460b88c3358e82bda92bd7c8d82684837ae7a1",
+      "regular_files": 20648,
+      "content_bytes": 119015664
+    },
+    {
+      "archive": "volumes/evidence-0031.tar.gz",
+      "archive_bytes": 8425387,
+      "archive_sha256": "86fc0acd302aae320e0d04984f30e30748c4cd45b428dfd8776da7e2d6ec89e6",
+      "index": "indexes/evidence-0031.jsonl.gz",
+      "index_bytes": 746570,
+      "index_sha256": "6c1347fe650793c734ca1d83e9fa1683f71c8efe7e57bd3c62800e6d7e8c15ad",
+      "regular_files": 18828,
+      "content_bytes": 120599768
+    },
+    {
+      "archive": "volumes/evidence-0032.tar.gz",
+      "archive_bytes": 8261190,
+      "archive_sha256": "02f5fdac5fab2a1d40335b922e91f9e927eeb612ab99ff8896bc1b59e62232bf",
+      "index": "indexes/evidence-0032.jsonl.gz",
+      "index_bytes": 806368,
+      "index_sha256": "b1ad4e4a2e04d2cae2eda9f40b87809c1f59604dad8d0192ffe9c87d75deedb7",
+      "regular_files": 20507,
+      "content_bytes": 119099099
+    },
+    {
+      "archive": "volumes/evidence-0033.tar.gz",
+      "archive_bytes": 8450947,
+      "archive_sha256": "814061c4a83272df3c5b4c8d3e887bc5a6780b073a6f8e64d5ddced0e40c4e87",
+      "index": "indexes/evidence-0033.jsonl.gz",
+      "index_bytes": 753966,
+      "index_sha256": "68b850843cde9f93d27f87b4261d32d0634ab77819a8a0353a14d11298583aeb",
+      "regular_files": 18999,
+      "content_bytes": 120517459
+    },
+    {
+      "archive": "volumes/evidence-0034.tar.gz",
+      "archive_bytes": 6616468,
+      "archive_sha256": "acfdd104306270b5293e3d18e6f85f13b1713b6bd054eadc2d25c542f9f0525d",
+      "index": "indexes/evidence-0034.jsonl.gz",
+      "index_bytes": 890368,
+      "index_sha256": "5a852d10e872926b20c1fd9d43e8e018eadced165052d6de1a2a309bfb3a3c14",
+      "regular_files": 22662,
+      "content_bytes": 118240430
+    },
+    {
+      "archive": "volumes/evidence-0035.tar.gz",
+      "archive_bytes": 6910196,
+      "archive_sha256": "fd281be0a2f8ce700ae13692fc72dc90d11a2aa102cea020b4eda278f19cc3bb",
+      "index": "indexes/evidence-0035.jsonl.gz",
+      "index_bytes": 866741,
+      "index_sha256": "55f8604347b91c4d96c7795da8877ad6b5809aeb5940aececdbbc3a86171cdce",
+      "regular_files": 22000,
+      "content_bytes": 118692020
+    },
+    {
+      "archive": "volumes/evidence-0036.tar.gz",
+      "archive_bytes": 6915838,
+      "archive_sha256": "413a657a6dd85f311376c6e106febe6469b1880c4ea634ee719c822eeadfcd0a",
+      "index": "indexes/evidence-0036.jsonl.gz",
+      "index_bytes": 862998,
+      "index_sha256": "8fd3130491fe66d13c14977dae01707813d91adca64eb4569d30929a22dab084",
+      "regular_files": 21884,
+      "content_bytes": 118779531
+    },
+    {
+      "archive": "volumes/evidence-0037.tar.gz",
+      "archive_bytes": 7235291,
+      "archive_sha256": "8b793840cf731866037347b119d48b4afc379bbbd1eda3912f7c2d0b588c631f",
+      "index": "indexes/evidence-0037.jsonl.gz",
+      "index_bytes": 851882,
+      "index_sha256": "a06110c8091c2d9852b52470d8a6705f3ca4a680c1c76211d94a7f1e333fd55d",
+      "regular_files": 21584,
+      "content_bytes": 118796139
+    },
+    {
+      "archive": "volumes/evidence-0038.tar.gz",
+      "archive_bytes": 7912582,
+      "archive_sha256": "b67e4cd9b0d16614b634a2e81238f13c61a9f9c7b69e96fe46de187f64280ca0",
+      "index": "indexes/evidence-0038.jsonl.gz",
+      "index_bytes": 830637,
+      "index_sha256": "99bed30a711c5d67c903cd550abdbee0a37046832021705081c0da65242d6372",
+      "regular_files": 21060,
+      "content_bytes": 118975612
+    },
+    {
+      "archive": "volumes/evidence-0039.tar.gz",
+      "archive_bytes": 7719580,
+      "archive_sha256": "3731375a3c70d5a789cd0eac7837ce8437dedd71c824744281ec278b613731a7",
+      "index": "indexes/evidence-0039.jsonl.gz",
+      "index_bytes": 864050,
+      "index_sha256": "a937137fb7a28d262ac94ff363f159bc4d9aa993cd70566670eb95de5491a097",
+      "regular_files": 21954,
+      "content_bytes": 118316323
+    },
+    {
+      "archive": "volumes/evidence-0040.tar.gz",
+      "archive_bytes": 7742333,
+      "archive_sha256": "42e03b665606f3bb8c1c7f65ee4ccc2366fcb45660cd57f3e6b642eae32b2e6c",
+      "index": "indexes/evidence-0040.jsonl.gz",
+      "index_bytes": 846315,
+      "index_sha256": "719605f051d93637f0b63440aeb7376dd6ca969cfe0104944a4b0e55c8e761a2",
+      "regular_files": 21444,
+      "content_bytes": 118790634
+    },
+    {
+      "archive": "volumes/evidence-0041.tar.gz",
+      "archive_bytes": 7926944,
+      "archive_sha256": "d47387ce4655ade5845036cf13d5e900144692fbc9f944a567e65fb4e9f29e32",
+      "index": "indexes/evidence-0041.jsonl.gz",
+      "index_bytes": 820846,
+      "index_sha256": "324a9776eba9dac24768c1362ba7acf67f68f52ae8bde207e2a695cf4fb0b651",
+      "regular_files": 20766,
+      "content_bytes": 119270052
+    },
+    {
+      "archive": "volumes/evidence-0042.tar.gz",
+      "archive_bytes": 7704,
+      "archive_sha256": "fbe4bb1b3d0c3f62cf291a1225620f8c5cc2422c1b31bfe2651d172d3710c951",
+      "index": "indexes/evidence-0042.jsonl.gz",
+      "index_bytes": 635,
+      "index_sha256": "05f95a985efb4a90190849c936a839360ccb9d0a56790a9298f491a18bbf31a3",
+      "regular_files": 10,
+      "content_bytes": 91311
+    },
+    {
+      "archive": "volumes/evidence-0043.tar.gz",
+      "archive_bytes": 12240637,
+      "archive_sha256": "29a84a15deeec75ed160008a1ca0992f9eefb8c2da60dcc0c69c6b3efc5fc5c6",
+      "index": "indexes/evidence-0043.jsonl.gz",
+      "index_bytes": 473,
+      "index_sha256": "c4935138f767873e7f04ced4b47faa60b534a0cf9669869307d63f211d9cfe52",
+      "regular_files": 5,
+      "content_bytes": 48901974
+    },
+    {
+      "archive": "volumes/evidence-0044.tar.gz",
+      "archive_bytes": 10298863,
+      "archive_sha256": "ef4671c96cf23ec3fb706a1850073f08ba703477a9c4f0bcd00bff1c50435cde",
+      "index": "indexes/evidence-0044.jsonl.gz",
+      "index_bytes": 504,
+      "index_sha256": "ba98ecf04be503dd2072e7c111c3815dbb15f4d3d441e523663a4b821585534f",
+      "regular_files": 5,
+      "content_bytes": 71118795
+    },
+    {
+      "archive": "volumes/evidence-0045.tar.gz",
+      "archive_bytes": 4603,
+      "archive_sha256": "d64d5ebf9c8496595e4bd215e208f5c6e20ff6712c72e194f8e971aa5fdd98bf",
+      "index": "indexes/evidence-0045.jsonl.gz",
+      "index_bytes": 1048,
+      "index_sha256": "320e47aa1cdebb9c4c5bcdf34f795ee588010d9df09aa9af664de8e656998cc3",
+      "regular_files": 20,
+      "content_bytes": 95860
+    },
+    {
+      "archive": "volumes/evidence-0046.tar.gz",
+      "archive_bytes": 10040,
+      "archive_sha256": "e0823017f995c9574b1b58e0218273354b873b5f9dc5c43d080a1703be31e3ee",
+      "index": "indexes/evidence-0046.jsonl.gz",
+      "index_bytes": 1856,
+      "index_sha256": "2d6635b730d4fcd0c1ff657ce73a833f9d80f3d9a931739714ab634443f35d6b",
+      "regular_files": 41,
+      "content_bytes": 171308
+    },
+    {
+      "archive": "volumes/evidence-0047.tar.gz",
+      "archive_bytes": 17567,
+      "archive_sha256": "6f6b9f90857948cd049ca4eb64bd7c57492a7d517d393be92d3af23111c02d36",
+      "index": "indexes/evidence-0047.jsonl.gz",
+      "index_bytes": 3479,
+      "index_sha256": "2d7bd8fa12e54eaa5cd1cc93cb0cdfacdedc2c1ce910dfb1e60535e864da6413",
+      "regular_files": 81,
+      "content_bytes": 371020
+    },
+    {
+      "archive": "volumes/evidence-0048.tar.gz",
+      "archive_bytes": 48367,
+      "archive_sha256": "7e91d3cb9a5da0887336c7c16a6798938258bfbbe18e9dbf4bc073344c5b19fe",
+      "index": "indexes/evidence-0048.jsonl.gz",
+      "index_bytes": 6785,
+      "index_sha256": "bd019ea725638ef118fd28b44e1cd98be6f32caae1c4da97426b77f4132af304",
+      "regular_files": 162,
+      "content_bytes": 1161117
+    },
+    {
+      "archive": "volumes/evidence-0049.tar.gz",
+      "archive_bytes": 147379,
+      "archive_sha256": "b46d4325bbc28cb5fb705d74f9f0c379677adaaebd10cacf60da183181c1d377",
+      "index": "indexes/evidence-0049.jsonl.gz",
+      "index_bytes": 13226,
+      "index_sha256": "fbb8494f3fbbafe95e101c0590f865c31f74bfde4691928d102b4cc3acb0537a",
+      "regular_files": 325,
+      "content_bytes": 4229513
+    },
+    {
+      "archive": "volumes/evidence-0050.tar.gz",
+      "archive_bytes": 254860,
+      "archive_sha256": "755ea5807463def9c127e10d74c3eb97abf4caed4dac7a7c2bf4963c893ed2f4",
+      "index": "indexes/evidence-0050.jsonl.gz",
+      "index_bytes": 26484,
+      "index_sha256": "d7ad97c7d70220ed054b4b2475265edf70764e7bceec1e269f80ef3a54579291",
+      "regular_files": 650,
+      "content_bytes": 7120229
+    },
+    {
+      "archive": "volumes/evidence-0051.tar.gz",
+      "archive_bytes": 2527659,
+      "archive_sha256": "3dcbf690cefbda3c66b1daea163b6f18fbd509b2c79bfec975b8ee30ac74f3f9",
+      "index": "indexes/evidence-0051.jsonl.gz",
+      "index_bytes": 261634,
+      "index_sha256": "fd39f20789319e4c0642ddd85a223bef72919b4af8e9d7d47238c6cfaaf45d52",
+      "regular_files": 6547,
+      "content_bytes": 68955693
+    }
+  ],
+  "regular_files": 831636,
+  "content_bytes": 4946455087,
+  "archive_bytes": 335184313,
+  "compressed_index_bytes": 32704475,
+  "preserved_small_archives_not_duplicated_in_volumes": [
+    {
+      "path": "rob1333-stage-a-candidate-final-01.tar.gz",
+      "bytes": 24780,
+      "sha256": "22ab6d216977176e34859d5101f1783fa8523058baf46cdf1bf4175a1f4ec002"
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-02.tar.gz",
+      "bytes": 26454,
+      "sha256": "7332eaad9ade0984b68a97a97e638dd339e69660340b8b9fd99e61b3067644a4"
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-03.tar.gz",
+      "bytes": 28515,
+      "sha256": "df35cb0a094d84f494d43c0f192c1aab0f7f158526bc708fb8bd44f7f8048718"
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-04.tar.gz",
+      "bytes": 30073,
+      "sha256": "1069848d4cf78d66b6ff33646a5a8cab08558b7e52fee366b73ab06222d46a30"
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-05.tar.gz",
+      "bytes": 31827,
+      "sha256": "c6b8ac01150bdca10815e631e3af9d9be0f7d053eba50eee92a3ab65027ba9eb"
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-06.tar.gz",
+      "bytes": 33246,
+      "sha256": "4e560790cde6482296b671f2f5fa87e4052e79187e740bf4234434a7dae62783"
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-07.tar.gz",
+      "bytes": 35180,
+      "sha256": "9fe792c138a6900a7c32f76ee36f051c08410163d693b0d7601b85f0918158cd"
+    },
+    {
+      "path": "rob1333-stage-a-candidate-final-08.tar.gz",
+      "bytes": 36392,
+      "sha256": "f79ea749d7a0ed2b7b1d94bd9daf1ebc6997845a1d2d3dcd4726128eb64f2eb8"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-final-review-v12-final.tar.gz",
+      "bytes": 2183211,
+      "sha256": "6fd025a6174354bf162556f2567ba13c735f8a17483e475649ec6405dbd51c77"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-final-review-v12.tar.gz",
+      "bytes": 2183032,
+      "sha256": "c6caaca99a3b5561f16e1e677197a610b6dcd6a2f53078b21f6384ee6c3e92a7"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-integration-blocked-01.tar.gz",
+      "bytes": 27578,
+      "sha256": "8eda83d24c9cd35b32593313af9c52faa474473ed85a5a9767e3d08372475d4f"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-integration-review-v13.tar.gz",
+      "bytes": 2536049,
+      "sha256": "65083e8e5738abd74b3c77124553efbac6dddde2b421aa51315dde47f9148763"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-preparation-checkpoint.tar.gz",
+      "bytes": 40841,
+      "sha256": "0a4c54bd59423975024e774ca872727fec379cf92be629e0da7a23fe1426863f"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-preparation-v10-review.tar.gz",
+      "bytes": 1435207,
+      "sha256": "4ac412f32023800480716c8b5913c78aff45a48dd7a515b61f74623c4857a87e"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-preparation-v11-review.tar.gz",
+      "bytes": 2170046,
+      "sha256": "e169c9957fbb2440092e74a298a90709102d90628150f5c10fcf9c17e23378b1"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-preparation-v9-checkpoint.tar.gz",
+      "bytes": 333085,
+      "sha256": "c7ea52f97360901e6a84de3676124f6918597a1510337325010044a380edfe98"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-08-controls-review-01.tar.gz",
+      "bytes": 114027,
+      "sha256": "492f13896aefd16b30c743e4daed4b327db56b3ddfe62e7250826aea09aa0f1f"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v13.tar.gz",
+      "bytes": 18017,
+      "sha256": "80343fc7be0171f1ed133de786ea10f1b25e5dca70ebff24fe5defa54712ea2d"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v14.tar.gz",
+      "bytes": 19610,
+      "sha256": "3327ee87f52316bec571f91c81b20f556f030614d41a681699a6cdc8f49c94de"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v15.tar.gz",
+      "bytes": 21271,
+      "sha256": "fa7969d102fb1607b81059522307982e5aa180ed509bbb4fc9ad3d588070a898"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v16.tar.gz",
+      "bytes": 24605,
+      "sha256": "52ee52f3304f80c23c7f7b60c323491e97cb9961d7a2eb44e2700832d18ddc1c"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-stage-a-public-v17.tar.gz",
+      "bytes": 26074,
+      "sha256": "95570ef6a4003c1322005afd5492365de997c5e5742b5a0ea9c355b04b84ec08"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-v7-preparation-checkpoint.tar.gz",
+      "bytes": 63887,
+      "sha256": "1069d24ac3a25cfbece1ad2f8e051d92a0b96d5654d6e8e574134c7c1351b3de"
+    },
+    {
+      "path": ".amp/in/artifacts/rob-1333-v8-preparation-checkpoint.tar.gz",
+      "bytes": 85334,
+      "sha256": "d6bc7f560b3f1133ffbe225b0d4f0bc7efd165ae398ed8b21d42f19537fd06c4"
+    }
+  ],
+  "build_elapsed_seconds": 248.934
+}
