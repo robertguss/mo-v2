@@ -1,0 +1,93 @@
+✔ [3/55] Built Trial.Language (441ms)
+✔ [4/55] Built Trial.Plain (429ms)
+✔ [5/55] Built Trial.Memory (832ms)
+✔ [6/55] Built Trial.Counted (1.6s)
+✔ [7/55] Built Trial.Broken (284ms)
+✔ [8/55] Built Trial (244ms)
+✔ [9/55] Built Promises (414ms)
+✔ [10/55] Built Full.Language (1.3s)
+✔ [11/55] Built Full.Plain (593ms)
+✔ [12/55] Built Proofs.Plain (3.1s)
+✔ [13/55] Built Full.Counted (2.2s)
+✔ [14/55] Built Proofs.Memory (529ms)
+✔ [15/55] Built Full.Control (539ms)
+✔ [16/55] Built Full.Lifecycle (523ms)
+✔ [17/55] Built Proofs.Ownership (485ms)
+✔ [18/55] Built Full.Inspect (564ms)
+✔ [19/55] Built Full.Statements (399ms)
+✔ [20/55] Built Proofs.Start (1.0s)
+✔ [21/55] Built Proofs.Heap (352ms)
+✔ [22/55] Built Proofs.Release (1.3s)
+✔ [23/55] Built Proofs.Build (757ms)
+✔ [24/55] Built Proofs.Closed (322ms)
+✔ [25/55] Built Proofs.Reserve (429ms)
+✔ [26/55] Built Proofs.Reachability (424ms)
+✔ [27/55] Built Proofs.Initial (835ms)
+✔ [28/55] Built Proofs.Healthy (421ms)
+✔ [29/55] Built Proofs.Operations (400ms)
+✔ [30/55] Built Proofs.Liveness (647ms)
+✔ [31/55] Built Proofs.Bindings (456ms)
+✔ [32/55] Built Full.Proofs (8.6s)
+✔ [33/55] Built Proofs.Variables (1.9s)
+✔ [34/55] Built Proofs.Construction (1.3s)
+✔ [35/55] Built Proofs.Disposal (615ms)
+✔ [36/55] Built Proofs.Snapshots (317ms)
+✔ [37/55] Built Proofs.Cleanup (666ms)
+✔ [38/55] Built Proofs.Meanings (300ms)
+✔ [39/55] Built Proofs.NewBinding (548ms)
+✔ [40/55] Built Proofs.Views (966ms)
+✔ [41/55] Built Proofs.CleanupViews (730ms)
+✔ [42/55] Built Proofs.DisposalViews (590ms)
+✔ [43/55] Built Proofs.Match (573ms)
+✔ [44/55] Built Proofs.LiveBindings (712ms)
+✔ [45/55] Built Proofs.Final (329ms)
+✔ [46/55] Built Proofs.Inputs (521ms)
+✔ [47/55] Built Proofs.Induction (444ms)
+✔ [48/55] Built Proofs.Arithmetic (1.6s)
+✔ [49/55] Built Proofs.StateSteps (306ms)
+✔ [50/55] Built Proofs.Environment (394ms)
+✔ [51/55] Built Proofs.Initialization (384ms)
+✔ [52/55] Built Full.Proofs.Initial (839ms)
+✔ [53/55] Built Full.Proofs.Lifecycle (8.1s)
+✔ [54/55] Built Full.Proofs.Scope (33s)
+ℹ [55/55] Built Full.Proofs.PartialGate (401ms)
+info: Full/Proofs/PartialGate.lean:20:0: Full.Proofs.f5 : Full.Statements.F5
+info: Full/Proofs/PartialGate.lean:21:0: Full.Proofs.l1 : Full.Statements.L1
+info: Full/Proofs/PartialGate.lean:22:0: Full.Proofs.Initial.initialized_invariant (p : Full.Program) (initial : Trial.Start) (first : Full.Counted.State)
+  (h : Full.Counted.begin p initial = Except.ok first) : Full.Inspect.invariant initial first = true
+info: Full/Proofs/PartialGate.lean:23:0: Full.Proofs.transition_scope (p : Full.Program) (s : Full.Counted.State) (change : Full.Counted.Change)
+  (h : Full.Counted.transition p s = Except.ok change) : Full.Inspect.nextScope p s = Except.ok change.state.entered
+info: Full/Proofs/PartialGate.lean:24:0: Full.Proofs.lifecycleReachable_outside (p : Full.Program) (initial : Trial.Start) (s : Full.Lifecycle.State)
+  (h : Full.Statements.lifecycleReachable p initial s) : s.execution.outside = initial.outside
+info: Full/Proofs/PartialGate.lean:25:0: Full.Proofs.destroy_idempotent (s : Full.Lifecycle.State) :
+  Full.Lifecycle.destroy (Full.Lifecycle.destroy s) = Full.Lifecycle.destroy s
+info: Full/Proofs/PartialGate.lean:26:0: Full.Proofs.destroy_preserves_observations (s : Full.Lifecycle.State) :
+  (Full.Lifecycle.destroy s).execution.events = s.execution.events ∧
+    (Full.Lifecycle.destroy s).execution.history = s.execution.history ∧
+      (Full.Lifecycle.destroy s).execution.mem.record = s.execution.mem.record ∧
+        (Full.Lifecycle.destroy s).execution.outside = s.execution.outside
+info: Full/Proofs/PartialGate.lean:27:0: Full.Proofs.lifecycleReachable_clears_control (p : Full.Program) (initial : Trial.Start) (s : Full.Lifecycle.State)
+  (h : Full.Statements.lifecycleReachable p initial s) :
+  (Full.Lifecycle.destroy s).execution.bindings = [] ∧
+    (Full.Lifecycle.destroy s).execution.entered = [] ∧
+      (Full.Lifecycle.destroy s).execution.slots = [] ∧
+        (Full.Lifecycle.destroy s).execution.reservations = [] ∧
+          (Full.Lifecycle.destroy s).execution.frames = [] ∧
+            (Full.Lifecycle.destroy s).execution.tasks = [] ∧
+              (Full.Lifecycle.destroy s).execution.releaseChain = [] ∧
+                (Full.Lifecycle.destroy s).execution.answer = none
+info: Full/Proofs/PartialGate.lean:28:0: Full.Proofs.lifecycleReachable_cleanup_membership (p : Full.Program) (initial : Trial.Start) (s : Full.Lifecycle.State)
+  (h : Full.Statements.lifecycleReachable p initial s) (addr : Nat) :
+  addr ∈ (Full.Lifecycle.destroy s).cleanup ↔
+    (∃ c, c ∈ s.execution.mem.cells ∧ c.addr = addr) ∧
+      ¬∃ c, c ∈ (Full.Lifecycle.destroy s).execution.mem.cells ∧ c.addr = addr
+info: Full/Proofs/PartialGate.lean:29:0: 'Full.Proofs.f5' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/PartialGate.lean:30:0: 'Full.Proofs.l1' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:31:0: 'Full.Proofs.Initial.initialized_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/PartialGate.lean:32:0: 'Full.Proofs.transition_scope' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/PartialGate.lean:33:0: 'Full.Proofs.lifecycleReachable_outside' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:34:0: 'Full.Proofs.destroy_idempotent' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:35:0: 'Full.Proofs.destroy_preserves_observations' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:36:0: 'Full.Proofs.lifecycleReachable_clears_control' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:37:0: 'Full.Proofs.lifecycleReachable_cleanup_membership' depends on axioms: [propext, Quot.sound]
+Build completed successfully (55 jobs).

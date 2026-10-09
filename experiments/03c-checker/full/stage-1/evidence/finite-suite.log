@@ -1,0 +1,16 @@
+Build completed successfully (15 jobs).
+PASS: 40 typed library declarations; 16 valid starts; 90 exact cases; C1-C22 and all 27 categories
+PASS: 84 finished manual ledgers/answers/retained graphs
+PASS fixture-negative: Bool is not Int
+PASS fixture-negative: unselected branch checked
+PASS fixture-negative: function cannot capture caller input
+PASS fixture-negative: bad initial multiplicity
+PASS fixture-negative: cycle
+PASS fixture-negative: wrong answer vs ledger
+PASS fixture-negative: omitted Free retains garbage
+PASS fixture-negative: Create relabeled as Write
+PASS summary observations; boundary/lifetime/F5/lifecycle checks STILL REQUIRED
+CHECKS: 820 passed; 0 failed; 12/12 consumer corruptions rejected
+COVERAGE: {"cases": 90, "cons": 126, "multipleEligibleCons": 7, "snapshots": 4591, "tracedCases": 90, "transitions": {"denial": 3, "step": 3008, "stutter": 1490}}
+Finite export evidence only; see report limits. No proof/freeze/native fidelity claim.
+{"status": "PASS", "counts": {"traces": 90, "internalEqualities": 4498, "visibleViews": 9680}, "controls": [{"name": "hidden nextBinding", "status": "REJECTED", "reason": "complete internal equality against actual metadata-restored commit"}, {"name": "omitted visible entry", "status": "REJECTED", "reason": "exact entered/holding ordered view"}, {"name": "reordered visible entries", "status": "REJECTED", "reason": "exact entered/holding ordered view"}], "rawSha256": "fb58e371ad25ad3c5733b9e6e45b365040411d35e1b53bd717345b8feda1028e", "limits": ["Repr equality, not kernel equality proof", "View formula checked from exposed IDs; active-scope correctness is a separate source/spec question", "Data corruption controls, not executed machine mutants"]}

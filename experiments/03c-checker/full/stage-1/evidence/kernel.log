@@ -1,0 +1,3 @@
+
+$ lake env leanchecker --fresh Full.Proofs.PartialGate
+PASS: clean partial gate kernel recheck, exit 0
