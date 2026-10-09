@@ -1,0 +1,60 @@
+{
+  "preservation_before": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  },
+  "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+  "runs": [
+    {
+      "passed": false,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "non-tail-sum",
+      "depth": 1000000,
+      "budgets": [
+        12000005,
+        6000009
+      ],
+      "limit_seconds": 900,
+      "available_bytes": 44922679296,
+      "stack_bytes": 8388608,
+      "error": "TimeoutError: inclusive watchdog",
+      "elapsed_seconds": 900.001081354,
+      "phase_count": 12000010,
+      "checked_steps": 12000005,
+      "streamed_rows_sha256": "01583dc882fb930d9b6966217499011eee8b4a7e96e60ce951c9937f12350102",
+      "verifier_peak_kib": 11873660
+    }
+  ],
+  "disk_free_bytes": 52826554368,
+  "cgroup": {
+    "memory.max": "45097156608\n",
+    "memory.current": "10088476672\n",
+    "memory.stat": "anon 43233280\nfile 9705533440\nkernel 339537920\nkernel_stack 278528\npagetables 815104\nsec_pagetables 0\npercpu 545904\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 11378688\nfile_dirty 98304\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 43167744\nactive_anon 32768\ninactive_file 5196574720\nactive_file 4508954624\nunevictable 0\nslab_reclaimable 337479184\nslab_unreclaimable 263576\nslab 337742760\nworkingset_refault_anon 0\nworkingset_refault_file 3352\nworkingset_activate_anon 0\nworkingset_activate_file 1363\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgsteal_kswapd 0\npgsteal_direct 0\npgfault 1358440\npgmajfault 1079\npgrefill 0\npgactivate 1349735\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nthp_fault_alloc 4\nthp_collapse_alloc 0\n",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "preservation_after": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  }
+}
