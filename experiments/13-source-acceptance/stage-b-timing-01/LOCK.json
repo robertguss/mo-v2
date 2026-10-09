@@ -1,0 +1,143 @@
+{
+  "format": "ROB-1333 timing implementation freeze 01",
+  "status": "frozen",
+  "created_at": "2026-10-09T15:09:47.753276+00:00",
+  "authorization": {
+    "owner_reply": "approved",
+    "thread": "https://ampcode.com/threads/T-01a120a8-5f89-72d7-a894-b48b82ed155c",
+    "proposal_commit": "c38f48f4c0b6205cb464a9709433f6444798a466",
+    "scope": "Implement/validate/freeze timing separation, sum1800 then discard600 only if sum passes; all correctness checks retained."
+  },
+  "limits_seconds": {
+    "non-tail-sum": 1800,
+    "discarded-list": 600
+  },
+  "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+  "binary_sha256": "5306bd3de522461be0e4789ba374ccc96c97cbdca7a22fa67dc69b12a0fee7b0",
+  "files": {
+    "FREEZE.md": {
+      "bytes": 8167,
+      "sha256": "890fd3fce5a8300ca16e68cb35cc86a9da1d4ce18403a47529c996e6bbd7d27b"
+    },
+    "PROPOSAL.md": {
+      "bytes": 9497,
+      "sha256": "5520d09c16e7fdb5a68fa900d37fbddc532a1145bea8d25c31178e66f2ecfd08"
+    },
+    "driver/Cargo.lock": {
+      "bytes": 2871,
+      "sha256": "a00049527df4c26fc162db06c5970bb3947e77dcd8568ea29320ec3c437ea366"
+    },
+    "driver/Cargo.toml": {
+      "bytes": 294,
+      "sha256": "c6191829ea5a4b9e1549151ff7d247ff41b7805bdb841fd8c79a823d76c48d7c"
+    },
+    "driver/examples/protocol_probe.rs": {
+      "bytes": 5040,
+      "sha256": "7797bc2d2367956e2e676f42d8c3b7714638f5c060263a20f9996f48094d135b"
+    },
+    "driver/lib.rs": {
+      "bytes": 22974,
+      "sha256": "a3d853d66584dbd9e4f59ca5135a75abf6e5410ce4c2451bce58f09c37075c4f"
+    },
+    "driver/snapshot.rs": {
+      "bytes": 3310,
+      "sha256": "fc5b9b89ea216d9170459a7e607da8b46e692b6e47da8f5a109d84150764d1d8"
+    },
+    "driver/timing.rs": {
+      "bytes": 6568,
+      "sha256": "9371a9c74d3ddba12d874e9ca0726113c7ac9d6c85384f2efdca71283417db53"
+    },
+    "envelope.py": {
+      "bytes": 1666,
+      "sha256": "b978132c3c0f8bfa1de22b2a49de71108540e478b5d9078cb6869beb0a7f647b"
+    },
+    "evidence/validation/package.log": {
+      "bytes": 233,
+      "sha256": "901f5faf15c4fb0d2cd3aea53d97ebc41372aba698a26c9d86fdc0d473483305"
+    },
+    "evidence/validation/public/INDEX.json": {
+      "bytes": 108416,
+      "sha256": "076d4cf108764c1d5e42295bf8d1564fdcf4ab26554b9dba66cdb08d6c40e1e3"
+    },
+    "evidence/validation/public/public-000.tar.gz": {
+      "bytes": 9555761,
+      "sha256": "c18b455882a22ff32e0da38e85a635396f9f823468f4c06c7e631e6bfb5fd208"
+    },
+    "evidence/validation/public/public-001.tar.gz": {
+      "bytes": 7244027,
+      "sha256": "0a0f18457e5500e25466f2caaf8746d683e1128be9078d40c09aceeb0ee46633"
+    },
+    "evidence/validation/public/public-002.tar.gz": {
+      "bytes": 12309621,
+      "sha256": "ee152aec3b43ef50300bfe006925856026401fbda8ff72bf485759899eb2ff87"
+    },
+    "evidence/validation/public/public-003.tar.gz": {
+      "bytes": 2139175,
+      "sha256": "af213e2cadaa152767eefaba7424a74ac406ee567964ec3c73eeb4b8a49f6c30"
+    },
+    "evidence/validation/public/public-004.tar.gz": {
+      "bytes": 12303359,
+      "sha256": "c769ed460edf32c2c657159ad2a555ba96779bbfa39494d63272c4433714c2f2"
+    },
+    "evidence/validation/public/public-005.tar.gz": {
+      "bytes": 2202970,
+      "sha256": "b82be977b59ec060bd9c26bbc2154e971a09ff86d8f20fc4df2e5a3dd4eb8869"
+    },
+    "evidence/validation/public/public-006.tar.gz": {
+      "bytes": 13253754,
+      "sha256": "8192bb03482a3816d4a132240b425d432a9f6344e9d0f8cefcd78e864fb02489"
+    },
+    "evidence/validation/public/public-007.tar.gz": {
+      "bytes": 11081473,
+      "sha256": "8680f87f8104367aa12d44981877850e4e197b2e61a80335ed1cba4244b47a99"
+    },
+    "evidence/validation/public/public-008.tar.gz": {
+      "bytes": 4131093,
+      "sha256": "e4c9bededf5b7fbb26f8699558f2b1fd984e2458109fcbb2eaa735856836446b"
+    },
+    "evidence/validation/public/public-009.tar.gz": {
+      "bytes": 13273959,
+      "sha256": "110356fbd2639bb6b3c45e03dfd76db454199dc9b7af21e8cbf4fcc2b34858fa"
+    },
+    "evidence/validation/public/public-010.tar.gz": {
+      "bytes": 11090749,
+      "sha256": "1e314d18dc604633b91ab3fa52fb2899fa7d75d0ee3fe2acf2b61304de8fca8a"
+    },
+    "evidence/validation/public/public-011.tar.gz": {
+      "bytes": 4157442,
+      "sha256": "b01b98544b13c174196dc3ff4463badc6863a0d327babceb32a2babb02a8a7d3"
+    },
+    "evidence/validation/report.json": {
+      "bytes": 65443,
+      "sha256": "33668d88f64d81a3dddb20d7f321b769d3c7ecc8aae9050e65a7f2c224dadab9"
+    },
+    "link/Cargo.lock": {
+      "bytes": 5325,
+      "sha256": "f01901a4119ece0bc6c8e2421b5dd6e9b2fd92b73c19ad1ee9c95a65fcf717e1"
+    },
+    "link/Cargo.toml": {
+      "bytes": 273,
+      "sha256": "91bf97a6c2e95654fadf5e9eacbe4cca29cc1f4a5210d9c8561dff2a88cb0356"
+    },
+    "link/main.rs": {
+      "bytes": 159,
+      "sha256": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993"
+    },
+    "package.py": {
+      "bytes": 1017,
+      "sha256": "fe74db76cfee7b231f243675d5ee75626aff7969618d15ac045b03537f787404"
+    },
+    "run_resources.py": {
+      "bytes": 3112,
+      "sha256": "5907fd6969828a8e0235f3ef88d776fd51e0ce496dda345142c3de36fb607dbc"
+    },
+    "run_timed.py": {
+      "bytes": 10865,
+      "sha256": "edcd399be1b9d4354fa21ffec309233974f8113370a275f96ea0f7ade6baca5f"
+    },
+    "validate.py": {
+      "bytes": 10806,
+      "sha256": "60f9c5dbc479b68040667e93cb79289e096de1e69b2f668b5f34b7513ca356fd"
+    }
+  }
+}
