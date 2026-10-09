@@ -1,0 +1,53 @@
+{
+  "source_hashes": {
+    "stage-b-adaptation-01/candidate/CANDIDATE.sha256": "cc1e09dac565f67341bffee062fa0abbd080f9c60ebeac2fed522f56ff14317e",
+    "stage-b-adaptation-01/candidate/Cargo.lock": "40f2087ad4249831f9da973f7080ce7f4a13a9bbedb7cf7bc50558b693e0f574",
+    "stage-b-adaptation-01/candidate/Cargo.toml": "93ce8e7350142548a7f54ccf7c8ab0449addb109a229af3d887358655a38729e",
+    "stage-b-adaptation-01/candidate/HANDOFF.md": "44b1280168cc236ead72b5bbe6f91c365346807a0f4a4e767b335cfe7bbb66d8",
+    "stage-b-adaptation-01/candidate/execution.rs": "b21590e771bffda20511a362a4e8df0b7b5112cc136e4b4592643ee29a6004c2",
+    "stage-b-adaptation-01/candidate/frontend.rs": "3df2eeebf2ca8163873f18be0e07caa45d62dd36f1c060047b64d4d8de4cad83",
+    "stage-b-adaptation-01/candidate/lib.rs": "ae101c8fad863ca55bf036ff19ace0b5a4102fe71597836fa25821d7cd30883a",
+    "stage-b-adaptation-01/candidate/number.rs": "cd89f942c600698114262b44dd035c13ddfa74c06d4d187368f39a97e7594a29",
+    "stage-b-adaptation-01/link/Cargo.lock": "41df729167291f4bd74071be956a8f9f555b371973d2431f3e03f70db27e00c0",
+    "stage-b-adaptation-01/link/Cargo.toml": "707820bbce6f86575e36f3ae47c612d201881abdb5141354963b1950c01b02f4",
+    "stage-b-adaptation-01/link/main.rs": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993",
+    "stage-b-revision-02/cells/Cargo.lock": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+    "stage-b-revision-02/cells/Cargo.toml": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+    "stage-b-revision-02/cells/examples/bridge_probe.rs": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+    "stage-b-revision-02/cells/host.rs": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+    "stage-b-revision-02/cells/lib.rs": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+    "stage-b-revision-02/cells/linkage.rs": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6",
+    "stage-b-revision-02/driver/Cargo.lock": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+    "stage-b-revision-02/driver/Cargo.toml": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+    "stage-b-revision-02/driver/examples/fixture_stub.rs": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+    "stage-b-revision-02/driver/lib.rs": "0fc346304826833f2cb2d721cad3b177d896e56ec23333b13c518e1552f9efbb",
+    "stage-b-revision-02/driver/memory_probe.rs": "22679bfc86de64eacf59d8550813dc723f1c032e13f22cbb7342618a05ae20eb",
+    "stage-b-revision-02/runtime/Cargo.lock": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+    "stage-b-revision-02/runtime/Cargo.toml": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+    "stage-b-revision-02/runtime/abi.rs": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+    "stage-b-revision-02/runtime/lib.rs": "8f9bda9e49a1ff956de2f5329d5fbeb135b52a2393d65fd9108cb23cdd229c80"
+  },
+  "changed_copy_files": [
+    "stage-b-revision-02/driver/lib.rs",
+    "stage-b-revision-02/driver/memory_probe.rs"
+  ],
+  "preservation": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "baseline_binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+  "diagnostic_binary_sha256": "207ff6d801e0a28100442ac567039e58b6b385f370cd160f7be70f4b0cbec188",
+  "scripts": {
+    "profile.py": "a65511bf4338dc55a5d5c79ccc14edf963bb1b81ad64aa4b511504db99adabb4",
+    "analyze.py": "43682c8e2551fede7e2d9135f2099b167a267d6cb792b4a3e13aa8c3501dd749",
+    "identity.py": "cfe4ce850f6131c0a59fb43fb19e3fe6d9632d697236f46f7340ee5da96820a1",
+    "package.py": "56cf9abd1147e755aff9defe636a519d143ac866c343fe7dfb00a8f0f3f05a97"
+  },
+  "package_helper_sha256": "63ca19b4eba81ea43b34fd7e1800c0d1511d1fbeeafff2a39534dc52776c4ebe"
+}

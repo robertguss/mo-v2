@@ -1,0 +1,35 @@
+{
+  "status": "unfrozen proposal",
+  "preservation": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+  "source_hashes": {
+    "driver/Cargo.lock": "a00049527df4c26fc162db06c5970bb3947e77dcd8568ea29320ec3c437ea366",
+    "driver/Cargo.toml": "c6191829ea5a4b9e1549151ff7d247ff41b7805bdb841fd8c79a823d76c48d7c",
+    "driver/examples/protocol_probe.rs": "7797bc2d2367956e2e676f42d8c3b7714638f5c060263a20f9996f48094d135b",
+    "driver/lib.rs": "e69ac40b9e7ab2bcda85a8a2b21139fe625cd7168a888d9e0511cb2dad0e3461",
+    "driver/snapshot.rs": "fc5b9b89ea216d9170459a7e607da8b46e692b6e47da8f5a109d84150764d1d8",
+    "link/Cargo.lock": "f01901a4119ece0bc6c8e2421b5dd6e9b2fd92b73c19ad1ee9c95a65fcf717e1",
+    "link/Cargo.toml": "91bf97a6c2e95654fadf5e9eacbe4cca29cc1f4a5210d9c8561dff2a88cb0356",
+    "link/main.rs": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993"
+  },
+  "serde_json_features": [
+    "default",
+    "std"
+  ],
+  "registry_dependencies_unchanged": true,
+  "reports": {
+    "profiles-01/report.json": "6b90bfc77fd347591f93244a3f32ba0e2dd3ba32195fe3513510ec2258c40fb0",
+    "public-01/report.json": "dd18fb66364c4c01a7480a0e81543d277f2feb4ea18074299a0574d15a31d55f",
+    "protocol-01/report.json": "c90f15b7896937edb1d8d3ebabe43244ca697f4ed4972915e35a584a3301f4e9"
+  },
+  "strict_clippy": "Same three pre-existing failures in frozen and proposed collectors; see both logs."
+}
