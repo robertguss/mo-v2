@@ -1,0 +1,561 @@
+{
+  "public_roots": [
+    "/home/user/rob1333-stage-b-terminal-profile-01"
+  ],
+  "files": [
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/README.md",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/README.md",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/README.md",
+      "offset": 0,
+      "bytes": 8104,
+      "sha256": "73141e50ee92052a26d98f15e2f773cab5689ea70e351078334985861958e6ae",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.prof",
+      "offset": 0,
+      "bytes": 12938,
+      "sha256": "cf19c15b93a0f658a9b1cde7849239155fbd2f9b22b57c4fcca2dc5c14687c15",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.txt",
+      "offset": 0,
+      "bytes": 3923,
+      "sha256": "d6bfb37e1d160f7052df0e699fa65489c2f5a1ba767960380d7210c7c175e573",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.prof",
+      "offset": 0,
+      "bytes": 11650,
+      "sha256": "f2299e1502fac13ceed580f8a515d44be965ba298bff01741adda85b264fbdca",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.txt",
+      "offset": 0,
+      "bytes": 3747,
+      "sha256": "25c133c9d54a417281c4f595f55984cd8c575a654d12588abe30af7a105eef5e",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-begin.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-begin.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-begin.prof",
+      "offset": 0,
+      "bytes": 10404,
+      "sha256": "600efaea94e18e2e77132e85f49af632877d619d19b745c998fa835e2c58d189",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-begin.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-begin.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-begin.txt",
+      "offset": 0,
+      "bytes": 3547,
+      "sha256": "27920e05092f4becb37649c1b159f789f0681fdeebf7b145ee35b92ea3c55ec1",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.prof",
+      "offset": 0,
+      "bytes": 5875,
+      "sha256": "670fb05825d41ec3eb509fb0a7a6a67697aecfb86bf1410d4c3b5fabb2838f83",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.txt",
+      "offset": 0,
+      "bytes": 3704,
+      "sha256": "b2442764f9d5df3607b6244384a15c0abe66341014add4547645ef23e84db7ff",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.prof",
+      "offset": 0,
+      "bytes": 5904,
+      "sha256": "3742f63d0b8d648157ded6f8f07982ef2a4c696b3d58d26c7e68c4a765850f85",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.txt",
+      "offset": 0,
+      "bytes": 3698,
+      "sha256": "e631075b5946e713db89a6cea5e208590b34f666a66f871fb6f5843eb0735356",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.prof",
+      "offset": 0,
+      "bytes": 12938,
+      "sha256": "eed0b5a53c37d99af41aef6c000c5b7047a31c9a49a9d5c5c8bc400b1d4b558e",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.txt",
+      "offset": 0,
+      "bytes": 4030,
+      "sha256": "56ff0443192a5ad337db7c56403d163162e2b1c49eac01393dfd2b6f06a22ee1",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.prof",
+      "offset": 0,
+      "bytes": 11650,
+      "sha256": "f1cecd9ee838499dc4f091b50cd32521e80fad7bd4e9b0f0d184d8a169b3cc89",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.txt",
+      "offset": 0,
+      "bytes": 3705,
+      "sha256": "3d93a487dc61c0a8c843544ccf4aae54f232ad8bb7edc67860c510b34c8654ff",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-begin.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-begin.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-begin.prof",
+      "offset": 0,
+      "bytes": 9854,
+      "sha256": "d9f6376aae442d50f8b51ddbc53e30fd9b70781fa49be0d5f51e41303ec5a1f1",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-begin.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-begin.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-begin.txt",
+      "offset": 0,
+      "bytes": 3665,
+      "sha256": "084325687b424310d9cdaed92408b3ac4190aa5e2d0995afe0ff50d3d529ebfd",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.prof",
+      "offset": 0,
+      "bytes": 5875,
+      "sha256": "f3596b6a44b57403ffc98429dd5b039bda72c552a7f28cd36354e26b56cdea4f",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.txt",
+      "offset": 0,
+      "bytes": 3646,
+      "sha256": "b2af37ba17978b90c0cbe620ca955e3cedb7d11130ec3332a36ec24244752e14",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.prof",
+      "offset": 0,
+      "bytes": 5904,
+      "sha256": "71d8d3659891780eaf7670675e6044814ccfaaf687b0b43076d75cb07f50a857",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.txt",
+      "offset": 0,
+      "bytes": 3646,
+      "sha256": "1d8c99416bad07603c0076eaaaf1bb6f50584778b6d4439ba15dc3302e3afe67",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.prof",
+      "offset": 0,
+      "bytes": 12938,
+      "sha256": "3a8ac33b390eafb1905bbebca655be130c6b37c7912b2e7b759924b0d3dd366f",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.txt",
+      "offset": 0,
+      "bytes": 3923,
+      "sha256": "8a485f9368da00924cbfe8937f0e5815389f73563281aa742b22ab0e9cc3bcfa",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.prof",
+      "offset": 0,
+      "bytes": 11650,
+      "sha256": "1e69576919dee7825d45727b507aa6994af7668988f3634240c764e605febcd7",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.txt",
+      "offset": 0,
+      "bytes": 3643,
+      "sha256": "8dd35bf663b9c58e9e01a7b5e9ba7c697182cfaa4363e01d80fd6e76b21e4f34",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-begin.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-begin.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-begin.prof",
+      "offset": 0,
+      "bytes": 9854,
+      "sha256": "4ae6178f58c22c0c798895b3c1475ab9d5b0c003ee7dc9f8f4971dfba256e6ca",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-begin.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-begin.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-begin.txt",
+      "offset": 0,
+      "bytes": 3645,
+      "sha256": "e270c296242d6949031a41f5b210802144f19c928f21418c9642dfae6d2c5749",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.prof",
+      "offset": 0,
+      "bytes": 5875,
+      "sha256": "2e708852ff70a876a319b159aa50a6fff5b51df961883aa75756e3bc1b630b7a",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.txt",
+      "offset": 0,
+      "bytes": 3659,
+      "sha256": "90a80f4b1c66f1c10874ad852d360b4ff041629b09a5bc439c3700f98efecee3",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.prof",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.prof",
+      "offset": 0,
+      "bytes": 5904,
+      "sha256": "01219d92c6192bfd48bed6523c12ec7892d29c0addf9f7701331c618857f4252",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.txt",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.txt",
+      "offset": 0,
+      "bytes": 3653,
+      "sha256": "4f62df1e3c6c27d394a055e7e5cafc078047989a6b78d9eed5278d3d0629cfd1",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/report.json",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded/report.json",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/report.json",
+      "offset": 0,
+      "bytes": 10933,
+      "sha256": "b28d04e1142cb4719745dd048d956b2a7ac7913ffcb9fa766459e576b0afe6ee",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded.log",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/bounded.log",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded.log",
+      "offset": 0,
+      "bytes": 267,
+      "sha256": "af20fa96174056838b0deec1d0267f41d79f2a772abe5afca7be6a672ab39533",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/profile_terminal.py",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/profile_terminal.py",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/profile_terminal.py",
+      "offset": 0,
+      "bytes": 8988,
+      "sha256": "6c3e537ff964f266c3055c32b0022db9d98e86f3f68d73e4e07e6f408cda0d95",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/terminal/report.json",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/terminal/report.json",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/terminal/report.json",
+      "offset": 0,
+      "bytes": 4053,
+      "sha256": "36137f189aad4ae9650ab4625b975be22b0179994411dcde316129cc738e926e",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/terminal.log",
+      "logical_path": "rob1333-stage-b-terminal-profile-01/terminal.log",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/terminal.log",
+      "offset": 0,
+      "bytes": 620,
+      "sha256": "a183d26f80c525b52ee77afb66e0e225a8f82819f3bbc0cf719972f606302365",
+      "volume": "public-000.tar.gz"
+    }
+  ],
+  "sources": [
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/README.md",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/README.md",
+      "bytes": 8104,
+      "sha256": "73141e50ee92052a26d98f15e2f773cab5689ea70e351078334985861958e6ae"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.prof",
+      "bytes": 12938,
+      "sha256": "cf19c15b93a0f658a9b1cde7849239155fbd2f9b22b57c4fcca2dc5c14687c15"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-deepest.txt",
+      "bytes": 3923,
+      "sha256": "d6bfb37e1d160f7052df0e699fa65489c2f5a1ba767960380d7210c7c175e573"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.prof",
+      "bytes": 11650,
+      "sha256": "f2299e1502fac13ceed580f8a515d44be965ba298bff01741adda85b264fbdca"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-advance-terminal.txt",
+      "bytes": 3747,
+      "sha256": "25c133c9d54a417281c4f595f55984cd8c575a654d12588abe30af7a105eef5e"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-begin.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-begin.prof",
+      "bytes": 10404,
+      "sha256": "600efaea94e18e2e77132e85f49af632877d619d19b745c998fa835e2c58d189"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-begin.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-begin.txt",
+      "bytes": 3547,
+      "sha256": "27920e05092f4becb37649c1b159f789f0681fdeebf7b145ee35b92ea3c55ec1"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.prof",
+      "bytes": 5875,
+      "sha256": "670fb05825d41ec3eb509fb0a7a6a67697aecfb86bf1410d4c3b5fabb2838f83"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy-again.txt",
+      "bytes": 3704,
+      "sha256": "b2442764f9d5df3607b6244384a15c0abe66341014add4547645ef23e84db7ff"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.prof",
+      "bytes": 5904,
+      "sha256": "3742f63d0b8d648157ded6f8f07982ef2a4c696b3d58d26c7e68c4a765850f85"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/10003-destroy.txt",
+      "bytes": 3698,
+      "sha256": "e631075b5946e713db89a6cea5e208590b34f666a66f871fb6f5843eb0735356"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.prof",
+      "bytes": 12938,
+      "sha256": "eed0b5a53c37d99af41aef6c000c5b7047a31c9a49a9d5c5c8bc400b1d4b558e"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-deepest.txt",
+      "bytes": 4030,
+      "sha256": "56ff0443192a5ad337db7c56403d163162e2b1c49eac01393dfd2b6f06a22ee1"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.prof",
+      "bytes": 11650,
+      "sha256": "f1cecd9ee838499dc4f091b50cd32521e80fad7bd4e9b0f0d184d8a169b3cc89"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-advance-terminal.txt",
+      "bytes": 3705,
+      "sha256": "3d93a487dc61c0a8c843544ccf4aae54f232ad8bb7edc67860c510b34c8654ff"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-begin.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-begin.prof",
+      "bytes": 9854,
+      "sha256": "d9f6376aae442d50f8b51ddbc53e30fd9b70781fa49be0d5f51e41303ec5a1f1"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-begin.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-begin.txt",
+      "bytes": 3665,
+      "sha256": "084325687b424310d9cdaed92408b3ac4190aa5e2d0995afe0ff50d3d529ebfd"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.prof",
+      "bytes": 5875,
+      "sha256": "f3596b6a44b57403ffc98429dd5b039bda72c552a7f28cd36354e26b56cdea4f"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy-again.txt",
+      "bytes": 3646,
+      "sha256": "b2af37ba17978b90c0cbe620ca955e3cedb7d11130ec3332a36ec24244752e14"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.prof",
+      "bytes": 5904,
+      "sha256": "71d8d3659891780eaf7670675e6044814ccfaaf687b0b43076d75cb07f50a857"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/20003-destroy.txt",
+      "bytes": 3646,
+      "sha256": "1d8c99416bad07603c0076eaaaf1bb6f50584778b6d4439ba15dc3302e3afe67"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.prof",
+      "bytes": 12938,
+      "sha256": "3a8ac33b390eafb1905bbebca655be130c6b37c7912b2e7b759924b0d3dd366f"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-deepest.txt",
+      "bytes": 3923,
+      "sha256": "8a485f9368da00924cbfe8937f0e5815389f73563281aa742b22ab0e9cc3bcfa"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.prof",
+      "bytes": 11650,
+      "sha256": "1e69576919dee7825d45727b507aa6994af7668988f3634240c764e605febcd7"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-advance-terminal.txt",
+      "bytes": 3643,
+      "sha256": "8dd35bf663b9c58e9e01a7b5e9ba7c697182cfaa4363e01d80fd6e76b21e4f34"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-begin.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-begin.prof",
+      "bytes": 9854,
+      "sha256": "4ae6178f58c22c0c798895b3c1475ab9d5b0c003ee7dc9f8f4971dfba256e6ca"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-begin.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-begin.txt",
+      "bytes": 3645,
+      "sha256": "e270c296242d6949031a41f5b210802144f19c928f21418c9642dfae6d2c5749"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.prof",
+      "bytes": 5875,
+      "sha256": "2e708852ff70a876a319b159aa50a6fff5b51df961883aa75756e3bc1b630b7a"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy-again.txt",
+      "bytes": 3659,
+      "sha256": "90a80f4b1c66f1c10874ad852d360b4ff041629b09a5bc439c3700f98efecee3"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.prof",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.prof",
+      "bytes": 5904,
+      "sha256": "01219d92c6192bfd48bed6523c12ec7892d29c0addf9f7701331c618857f4252"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.txt",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/40003-destroy.txt",
+      "bytes": 3653,
+      "sha256": "4f62df1e3c6c27d394a055e7e5cafc078047989a6b78d9eed5278d3d0629cfd1"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded/report.json",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded/report.json",
+      "bytes": 10933,
+      "sha256": "b28d04e1142cb4719745dd048d956b2a7ac7913ffcb9fa766459e576b0afe6ee"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/bounded.log",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/bounded.log",
+      "bytes": 267,
+      "sha256": "af20fa96174056838b0deec1d0267f41d79f2a772abe5afca7be6a672ab39533"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/profile_terminal.py",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/profile_terminal.py",
+      "bytes": 8988,
+      "sha256": "6c3e537ff964f266c3055c32b0022db9d98e86f3f68d73e4e07e6f408cda0d95"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/terminal/report.json",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/terminal/report.json",
+      "bytes": 4053,
+      "sha256": "36137f189aad4ae9650ab4625b975be22b0179994411dcde316129cc738e926e"
+    },
+    {
+      "path": "rob1333-stage-b-terminal-profile-01/terminal.log",
+      "source": "/home/user/rob1333-stage-b-terminal-profile-01/terminal.log",
+      "bytes": 620,
+      "sha256": "a183d26f80c525b52ee77afb66e0e225a8f82819f3bbc0cf719972f606302365"
+    }
+  ],
+  "volumes": [
+    {
+      "path": "public-000.tar.gz",
+      "bytes": 59396,
+      "sha256": "b6177b7f5f425a976bff64e55762510a310c790e2a93cb273bf187ec033a0342"
+    }
+  ],
+  "omitted_dependency_links": [],
+  "build_cache_omitted": true,
+  "private_raw_included": false,
+  "readback_verified": true,
+  "original_files_preserved": true
+}

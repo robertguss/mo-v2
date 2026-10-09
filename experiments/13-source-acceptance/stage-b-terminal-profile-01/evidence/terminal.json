@@ -1,0 +1,95 @@
+{
+  "mode": "terminal",
+  "candidate_executed": false,
+  "resource_acceptance": false,
+  "private_access": false,
+  "preservation_before": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "source_sha256": "6c3e537ff964f266c3055c32b0022db9d98e86f3f68d73e4e07e6f408cda0d95",
+  "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+  "python_sha256": "241bf774a81580bb760adf960b48df7e6b23b1de026c9c912d4ca6be1a08241e",
+  "jit_enabled": false,
+  "input": {
+    "compressed_sha256": "5cb7fc0476002205e65bb1e4bb8448ab35b8e45af599167123eaa7c465eaaf95",
+    "source": "/home/user/rob1333-stage-b-ownership-approved-01/million/non-tail-sum/rows.jsonl.gz",
+    "decoded_offset": 9987783757,
+    "record_bytes": 595556697,
+    "decoded_stream_bytes": 10583340454,
+    "record_sha256": "98cfeb5a5a1e879097f34e7ba209951b694e1147170990d1decbca0e0e58b238"
+  },
+  "measurements": [
+    {
+      "operation": "strict outer record decode",
+      "seconds": 1.9107255869994333,
+      "process_peak_rss_kib": 1732288
+    },
+    {
+      "operation": "strict inner snapshot decode",
+      "seconds": 11.235942962000081,
+      "process_peak_rss_kib": 3256276
+    },
+    {
+      "operation": "frozen snapshot_schema",
+      "seconds": 4.2302000110794324e-05,
+      "process_peak_rss_kib": 3256276
+    },
+    {
+      "operation": "frozen births canonical hashing",
+      "seconds": 9.478074184999969,
+      "process_peak_rss_kib": 3765532
+    },
+    {
+      "operation": "frozen events canonical hashing",
+      "seconds": 4.064340920999712,
+      "process_peak_rss_kib": 3765532
+    }
+  ],
+  "snapshot": {
+    "bytes": 521556278,
+    "status": "finished",
+    "event_count": 3000002,
+    "birth_count": 5000004,
+    "binding_count": 1,
+    "control_count": 0,
+    "graph_count": 0,
+    "cleanup_count": 0,
+    "births_recomputed_sha256": "5aa7b20e21b46d5bbd279eb1b0c6de0f8d7444368e855290279e2507b5aa54d8",
+    "events_recomputed_sha256": "722043f891ec735c69d6f4b3369c3b68367cabd66cb7f21b6238bd4737271f46"
+  },
+  "limitations": "Isolated decode/schema/hash measurements only. No prior incremental digest/state, full-verifier verdict, native execution, cleanup run or inclusive acceptance timing.",
+  "preservation_after": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "completed": true
+}
