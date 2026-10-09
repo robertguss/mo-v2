@@ -1,0 +1,24 @@
+programs.json: OK
+starts.json: OK
+predictions.json: OK
+DERIVATIONS.md: OK
+BOUNDARIES.md: OK
+S1A01 compile 1 answers None
+S1A02 compile 1 answers None
+S1A03 compile 1 answers None
+S1A04 compile 1 answers None
+S1A05 compile 1 answers None
+S1A06 compile 1 answers None
+S1A07 compile 1 answers None
+S1A08 compile 1 answers None
+S1A09 compile 1 answers None
+S1A10 compile 1 answers None
+S1A11 compile 1 answers None
+S1A12 compile 1 answers None
+S1R01 compile 1 answers None
+S1R02 compile 1 answers None
+S1R03 compile 1 answers None
+S1R04 compile 1 answers None
+S1R05 compile 1 answers None
+S1R06 compile 1 answers None
+S1O01 compile 1 answers None

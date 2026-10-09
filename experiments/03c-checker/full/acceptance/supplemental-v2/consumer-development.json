@@ -1,0 +1,11 @@
+{
+  "classification": "Consumer Repr layout mismatch; no model semantic discrepancy or expectation change.",
+  "firstRunFailedGroups": 67,
+  "firstRunExactPredictedHistoriesPassed": 90,
+  "representativeFailure": {
+    "name": "C3 independent Plain/internal",
+    "status": "FAIL",
+    "detail": "decoded projections agree: actual='Except.ok { focus := Full.Plain.Focus.eval\\n             (Full.Expr.call \"bump\" [Full.Expr.var \"xs\"])\\n             [(\"xs\", Trial.PlainValue.list [1, 2])],\\n  kont := [Full.Plain.Kont.arguments\\n             \"choose\"\\n             [Trial.PlainValue.list [1, 2]]\\n             []\\n             [(\"xs\", Trial.PlainValue.list [1, 2])]] }'; expected='Except.ok { focus := Full.Plain.Focus.eval (Full.Expr.call \"bump\" [Full.Expr.var \"xs\"]) [(\"xs\", Trial.PlainValue.list [1, 2])],\\n  kont := [Full.Plain.Kont.arguments\\n             \"choose\"\\n             [Trial.PlainValue.list [1, 2]]\\n             []\\n             [(\"xs\", Trial.PlainValue.list [1, 2])]] }'"
+  },
+  "resolution": "Compare wrapped/unwrapped Plain Repr tokens, ignoring whitespace only outside quoted strings. Full completeState comparisons stay exact. Final full run recorded separately."
+}

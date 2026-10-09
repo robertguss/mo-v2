@@ -1,0 +1,4096 @@
+{
+  "checks": [
+    {
+      "name": "exact case sets",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool input",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias input",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control input",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 input",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias result",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 result",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward begun",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single begun",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 begun",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 all committed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 complete predicted event history",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 independent Plain/internal",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 newest eligible reservations",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 actual double destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "selected source lifetimes",
+      "status": "PASS"
+    },
+    {
+      "name": "C16/C17 schedules",
+      "status": "PASS"
+    },
+    {
+      "name": "finite prefixes",
+      "status": "PASS"
+    },
+    {
+      "name": "original C19 cuts",
+      "status": "PASS"
+    },
+    {
+      "name": "original C20 operands",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 full resume and observations",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 29+4",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 paused resume/destroy",
+      "status": "PASS"
+    },
+    {
+      "name": "C20 complete denial",
+      "status": "PASS"
+    }
+  ],
+  "coverage": {
+    "cases": 90,
+    "tracedCases": 90,
+    "snapshots": 4591,
+    "transitions": {
+      "stutter": 1490,
+      "step": 3008,
+      "denial": 3
+    },
+    "cons": 126,
+    "multipleEligibleCons": 7
+  },
+  "details": {
+    "C1 independent Plain/internal": {
+      "stutter": 8,
+      "step": 13
+    },
+    "C1 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C2 independent Plain/internal": {
+      "stutter": 8,
+      "step": 17
+    },
+    "C2 newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "C3 independent Plain/internal": {
+      "stutter": 28,
+      "step": 45
+    },
+    "C3 newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "C4 independent Plain/internal": {
+      "stutter": 41,
+      "step": 60
+    },
+    "C4 newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "C5 independent Plain/internal": {
+      "stutter": 18,
+      "step": 26
+    },
+    "C5 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C6 independent Plain/internal": {
+      "stutter": 37,
+      "step": 60
+    },
+    "C6 newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "C7 independent Plain/internal": {
+      "stutter": 7,
+      "step": 17
+    },
+    "C7 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C8 independent Plain/internal": {
+      "stutter": 3,
+      "step": 10
+    },
+    "C8 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C9 independent Plain/internal": {
+      "stutter": 4,
+      "step": 14
+    },
+    "C9 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C10-bump-empty independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "C10-bump-empty newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C10-bump-single independent Plain/internal": {
+      "stutter": 12,
+      "step": 24
+    },
+    "C10-bump-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C10-bump-mixed independent Plain/internal": {
+      "stutter": 26,
+      "step": 54
+    },
+    "C10-bump-mixed newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 0
+    },
+    "C10-bump-outside independent Plain/internal": {
+      "stutter": 32,
+      "step": 54
+    },
+    "C10-bump-outside newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 0
+    },
+    "C10-sum-empty independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "C10-sum-empty newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C10-sum-single independent Plain/internal": {
+      "stutter": 12,
+      "step": 20
+    },
+    "C10-sum-single newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C10-sum-mixed independent Plain/internal": {
+      "stutter": 26,
+      "step": 42
+    },
+    "C10-sum-mixed newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C10-sum-outside independent Plain/internal": {
+      "stutter": 29,
+      "step": 42
+    },
+    "C10-sum-outside newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C11-even4 independent Plain/internal": {
+      "stutter": 25,
+      "step": 73
+    },
+    "C11-even4 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C11-even5 independent Plain/internal": {
+      "stutter": 30,
+      "step": 88
+    },
+    "C11-even5 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C11-negative independent Plain/internal": {
+      "stutter": 5,
+      "step": 13
+    },
+    "C11-negative newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C11-bool independent Plain/internal": {
+      "stutter": 7,
+      "step": 16
+    },
+    "C11-bool newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C12 independent Plain/internal": {
+      "stutter": 8,
+      "step": 21
+    },
+    "C12 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C13 independent Plain/internal": {
+      "stutter": 9,
+      "step": 20
+    },
+    "C13 newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "C14 independent Plain/internal": {
+      "stutter": 6,
+      "step": 12
+    },
+    "C14 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C15 independent Plain/internal": {
+      "stutter": 6,
+      "step": 16
+    },
+    "C15 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C16 independent Plain/internal": {
+      "stutter": 6,
+      "step": 5
+    },
+    "C16 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C17 independent Plain/internal": {
+      "stutter": 6,
+      "step": 8
+    },
+    "C17 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C17-alias independent Plain/internal": {
+      "stutter": 3,
+      "step": 8
+    },
+    "C17-alias newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C18 independent Plain/internal": {
+      "stutter": 43,
+      "step": 67
+    },
+    "C18 newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "C19 independent Plain/internal": {
+      "stutter": 4,
+      "step": 14
+    },
+    "C19 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C20-number independent Plain/internal": {
+      "stutter": 3,
+      "step": 11,
+      "denial": 1
+    },
+    "C20-number newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C20-frame independent Plain/internal": {
+      "stutter": 4,
+      "step": 12,
+      "denial": 1
+    },
+    "C20-frame newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C20-create independent Plain/internal": {
+      "stutter": 5,
+      "step": 17,
+      "denial": 1
+    },
+    "C20-create newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "C20-control independent Plain/internal": {
+      "stutter": 8,
+      "step": 24
+    },
+    "C20-control newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "C21 independent Plain/internal": {
+      "stutter": 35,
+      "step": 87
+    },
+    "C21 newest eligible reservations": {
+      "cons": 6,
+      "multipleEligible": 0
+    },
+    "U-reverse independent Plain/internal": {
+      "stutter": 24,
+      "step": 54
+    },
+    "U-reverse newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 0
+    },
+    "U-totals independent Plain/internal": {
+      "stutter": 30,
+      "step": 78
+    },
+    "U-totals newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 0
+    },
+    "U-append independent Plain/internal": {
+      "stutter": 17,
+      "step": 37
+    },
+    "U-append newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "U-swap independent Plain/internal": {
+      "stutter": 21,
+      "step": 34
+    },
+    "U-swap newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 1
+    },
+    "U-rotate independent Plain/internal": {
+      "stutter": 23,
+      "step": 48
+    },
+    "U-rotate newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 0
+    },
+    "U-merge independent Plain/internal": {
+      "stutter": 61,
+      "step": 119
+    },
+    "U-merge newest eligible reservations": {
+      "cons": 8,
+      "multipleEligible": 4
+    },
+    "U-sort independent Plain/internal": {
+      "stutter": 69,
+      "step": 128
+    },
+    "U-sort newest eligible reservations": {
+      "cons": 9,
+      "multipleEligible": 2
+    },
+    "U-keep-first independent Plain/internal": {
+      "stutter": 11,
+      "step": 13
+    },
+    "U-keep-first newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "U-remove independent Plain/internal": {
+      "stutter": 19,
+      "step": 38
+    },
+    "U-remove newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "U-positive independent Plain/internal": {
+      "stutter": 32,
+      "step": 59
+    },
+    "U-positive newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "U-duplicate independent Plain/internal": {
+      "stutter": 26,
+      "step": 54
+    },
+    "U-duplicate newest eligible reservations": {
+      "cons": 6,
+      "multipleEligible": 0
+    },
+    "U-prepend independent Plain/internal": {
+      "stutter": 3,
+      "step": 12
+    },
+    "U-prepend newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "U-insert-new independent Plain/internal": {
+      "stutter": 20,
+      "step": 46
+    },
+    "U-insert-new newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 0
+    },
+    "U-build independent Plain/internal": {
+      "stutter": 23,
+      "step": 70
+    },
+    "U-build newest eligible reservations": {
+      "cons": 3,
+      "multipleEligible": 0
+    },
+    "U-twice independent Plain/internal": {
+      "stutter": 40,
+      "step": 78
+    },
+    "U-twice newest eligible reservations": {
+      "cons": 4,
+      "multipleEligible": 0
+    },
+    "U-ordinary-alloc independent Plain/internal": {
+      "stutter": 4,
+      "step": 14
+    },
+    "U-ordinary-alloc newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "U-ordinary-arithmetic independent Plain/internal": {
+      "stutter": 5,
+      "step": 18
+    },
+    "U-ordinary-arithmetic newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "U-fresh-demand independent Plain/internal": {
+      "stutter": 21,
+      "step": 47
+    },
+    "U-fresh-demand newest eligible reservations": {
+      "cons": 4,
+      "multipleEligible": 0
+    },
+    "U-chain independent Plain/internal": {
+      "stutter": 49,
+      "step": 106
+    },
+    "U-chain newest eligible reservations": {
+      "cons": 6,
+      "multipleEligible": 0
+    },
+    "U-ordinary-shared independent Plain/internal": {
+      "stutter": 41,
+      "step": 60
+    },
+    "U-ordinary-shared newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "U-retained-demand independent Plain/internal": {
+      "stutter": 41,
+      "step": 60
+    },
+    "U-retained-demand newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "U-alias-demand independent Plain/internal": {
+      "stutter": 58,
+      "step": 117
+    },
+    "U-alias-demand newest eligible reservations": {
+      "cons": 6,
+      "multipleEligible": 0
+    },
+    "U-tail-demand independent Plain/internal": {
+      "stutter": 49,
+      "step": 82
+    },
+    "U-tail-demand newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "U-drop-extra independent Plain/internal": {
+      "stutter": 28,
+      "step": 52
+    },
+    "U-drop-extra newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "U-forward independent Plain/internal": {
+      "stutter": 14,
+      "step": 32
+    },
+    "U-forward newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "boundary-0-nil independent Plain/internal": {
+      "stutter": 6,
+      "step": 15
+    },
+    "boundary-0-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-0-single independent Plain/internal": {
+      "stutter": 12,
+      "step": 28
+    },
+    "boundary-0-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-1-nil independent Plain/internal": {
+      "stutter": 6,
+      "step": 15
+    },
+    "boundary-1-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-1-single independent Plain/internal": {
+      "stutter": 14,
+      "step": 36
+    },
+    "boundary-1-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-2-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 11
+    },
+    "boundary-2-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-2-single independent Plain/internal": {
+      "stutter": 11,
+      "step": 24
+    },
+    "boundary-2-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-3-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "boundary-3-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-3-single independent Plain/internal": {
+      "stutter": 10,
+      "step": 16
+    },
+    "boundary-3-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-4-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "boundary-4-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-4-single independent Plain/internal": {
+      "stutter": 11,
+      "step": 22
+    },
+    "boundary-4-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-5-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 11
+    },
+    "boundary-5-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-5-single independent Plain/internal": {
+      "stutter": 10,
+      "step": 18
+    },
+    "boundary-5-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-6-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "boundary-6-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-6-single independent Plain/internal": {
+      "stutter": 20,
+      "step": 36
+    },
+    "boundary-6-single newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "boundary-7-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "boundary-7-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-7-single independent Plain/internal": {
+      "stutter": 7,
+      "step": 13
+    },
+    "boundary-7-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-8-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 11
+    },
+    "boundary-8-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-8-single independent Plain/internal": {
+      "stutter": 14,
+      "step": 31
+    },
+    "boundary-8-single newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "boundary-9-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 11
+    },
+    "boundary-9-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-9-single independent Plain/internal": {
+      "stutter": 10,
+      "step": 18
+    },
+    "boundary-9-single newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-10-nil independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "boundary-10-nil newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "boundary-10-single independent Plain/internal": {
+      "stutter": 14,
+      "step": 23
+    },
+    "boundary-10-single newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "additional-0 independent Plain/internal": {
+      "stutter": 5,
+      "step": 9
+    },
+    "additional-0 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "additional-1 independent Plain/internal": {
+      "stutter": 12,
+      "step": 24
+    },
+    "additional-1 newest eligible reservations": {
+      "cons": 2,
+      "multipleEligible": 0
+    },
+    "additional-2 independent Plain/internal": {
+      "stutter": 3,
+      "step": 12
+    },
+    "additional-2 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "additional-3 independent Plain/internal": {
+      "stutter": 6,
+      "step": 15
+    },
+    "additional-3 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "additional-4 independent Plain/internal": {
+      "stutter": 5,
+      "step": 13
+    },
+    "additional-4 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "additional-5 independent Plain/internal": {
+      "stutter": 11,
+      "step": 32
+    },
+    "additional-5 newest eligible reservations": {
+      "cons": 1,
+      "multipleEligible": 0
+    },
+    "additional-6 independent Plain/internal": {
+      "stutter": 5,
+      "step": 13
+    },
+    "additional-6 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    },
+    "additional-7 independent Plain/internal": {
+      "stutter": 10,
+      "step": 22
+    },
+    "additional-7 newest eligible reservations": {
+      "cons": 0,
+      "multipleEligible": 0
+    }
+  },
+  "consumerNegatives": [
+    {
+      "name": "reset independent Plain carrier",
+      "status": "REJECTED",
+      "reason": "Plain carrier cannot reset to decode: actual=['reset']; expected=['{', 'focus', ':=', 'Full.Plain.Focus.eval', '(Full.Expr.call', '\"identity\"', '[Full.Expr.call', '\"one\"', '[Full.Expr.num', '7]])', '[],', 'kont', ':=', '[]', '}']"
+    },
+    {
+      "name": "nondecreasing stutter rank",
+      "status": "REJECTED",
+      "reason": "stutter must strictly decrease rank"
+    },
+    {
+      "name": "internal boundary loses slot",
+      "status": "REJECTED",
+      "reason": "metadata commit must preserve all exported semantic fields: actual={'cells': [[0, 7, None, 1, 'live']], 'events': [['E', 'one', 1, 0, [['I', 7]], 'main/0'], ['C', 0, 7, None]], 'outside': [], 'bindings': [[0, 'n', ['I', 7], 'Trial.BStatus.noHolder', 7, 1, 'one/parameter/n']], 'visibleBindings': [0], 'slots': [], 'holders': [{'value': [7], 'role': 'operand', 'raw': ['L', 0], 'id': 0}], 'requiredBindings': [], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.value (Trial.PlainValue.list [7]),\\n  kont := [Full.Plain.Kont.returning \"one\", Full.Plain.Kont.arguments \"identity\" [] [] []] }', 'release': [], 'memoryOperations': [['C', 0]], 'frames': [[1, 'one', 0]], 'reservations': [], 'tasks': '[Full.Counted.Task.returning\\n   { id := 1,\\n     name := \"one\",\\n     parent := 0,\\n     args := [{ raw := Trial.RawValue.num 7, value := Trial.PlainValue.num 7 }],\\n     site := \"main/0\" }\\n   { env := [], invocation := 0, branches := [], site := \"main/0\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"identity\" 1 { env := [], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'status': 'suspended', 'raw': None, 'rank': 8, 'consContext': None}; expected={'cells': [[0, 7, None, 1, 'live']], 'events': [['E', 'one', 1, 0, [['I', 7]], 'main/0'], ['C', 0, 7, None]], 'outside': [], 'bindings': [[0, 'n', ['I', 7], 'Trial.BStatus.noHolder', 7, 1, 'one/parameter/n']], 'visibleBindings': [0], 'slots': [[['L', 0], [7]]], 'holders': [{'value': [7], 'role': 'operand', 'raw': ['L', 0], 'id': 0}], 'requiredBindings': [], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.value (Trial.PlainValue.list [7]),\\n  kont := [Full.Plain.Kont.returning \"one\", Full.Plain.Kont.arguments \"identity\" [] [] []] }', 'release': [], 'memoryOperations': [['C', 0]], 'frames': [[1, 'one', 0]], 'reservations': [], 'tasks': '[Full.Counted.Task.returning\\n   { id := 1,\\n     name := \"one\",\\n     parent := 0,\\n     args := [{ raw := Trial.RawValue.num 7, value := Trial.PlainValue.num 7 }],\\n     site := \"main/0\" }\\n   { env := [], invocation := 0, branches := [], site := \"main/0\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"identity\" 1 { env := [], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'status': 'suspended', 'raw': None, 'rank': 8, 'consContext': None}"
+    },
+    {
+      "name": "forged active branch list",
+      "status": "REJECTED",
+      "reason": "Cons active lexical branches: actual=[]; expected=[1, 0]"
+    },
+    {
+      "name": "choose older eligible reservation",
+      "status": "REJECTED",
+      "reason": "newest same-invocation active-branch Cons effect: actual=[['W', 0, -1, 4]]; expected=[['W', 3, -1, 4]]"
+    },
+    {
+      "name": "changed hidden resume field",
+      "status": "REJECTED",
+      "reason": "full state/observer equality: whole: actual={'visibleBindings': [], 'tasks': '[]', 'steps': 18, 'status': 'finished', 'slots': [[['L', 0], [7]]], 'reservations': [], 'requiredBindings': [], 'release': [], 'raw': ['L', 0], 'rank': 4, 'outside': [], 'memoryOperations': [['C', 0]], 'holders': [{'value': [7], 'role': 'answer', 'raw': ['L', 0], 'id': 0}], 'frames': [], 'events': [['E', 'one', 1, 0, [['I', 7]], 'main/0'], ['C', 0, 7, None], ['R', 1, ['L', 0]], ['E', 'identity', 2, 0, [['L', 0]], 'main'], ['R', 2, ['L', 0]]], 'entered': [], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.finished (Trial.PlainValue.list [7]), kont := [] }', 'consContext': None, 'completeState': '{ mem := { cells := [{ addr := 0, item := 7, link := none, count := 1, status := Trial.Status.live }],\\n           next := 1,\\n           record := [Trial.MemEvent.created 0] },\\n  outside := [],\\n  edges := [(0, Trial.PlainValue.list [])],\\n  releaseChain := [],\\n  bindings := [{ record := { id := 0, name := \"n\", value := Trial.RawValue.num 7, status := Trial.BStatus.noHolder },\\n                 value := Trial.PlainValue.num 7,\\n                 invocation := 1,\\n                 origin := \"one/parameter/n\" },\\n               { record := { id := 1,\\n                             name := \"xs\",\\n                             value := Trial.RawValue.list (some 0),\\n                             status := Trial.BStatus.movedOn },\\n                 value := Trial.PlainValue.list [7],\\n                 invocation := 2,\\n                 origin := \"identity/parameter/xs\" }],\\n  entered := [],\\n  slots := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [7] }],\\n  reservations := [],\\n  frames := [],\\n  tasks := [],\\n  nextBinding := 2,\\n  nextBranch := 0,\\n  nextInvocation := 3,\\n  events := [Full.Counted.Event.enter\\n               { id := 1,\\n                 name := \"one\",\\n                 parent := 0,\\n                 args := [{ raw := Trial.RawValue.num 7, value := Trial.PlainValue.num 7 }],\\n                 site := \"main/0\" },\\n             Full.Counted.Event.create 0 7 none,\\n             Full.Counted.Event.returning 1 { raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [7] },\\n             Full.Counted.Event.enter\\n               { id := 2,\\n                 name := \"identity\",\\n                 parent := 0,\\n                 args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [7] }],\\n                 site := \"main\" },\\n             Full.Counted.Event.returning\\n               2\\n               { raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [7] }],\\n  history := [{ name := \"Start\", landmark := some (Trial.StepKind.start) },\\n              { name := \"Dispatch\", landmark := none },\\n              { name := \"Dispatch\", landmark := none },\\n              { name := \"Leaf\", landmark := none },\\n              { name := \"Capture\", landmark := none },\\n              { name := \"Enter\", land"
+    },
+    {
+      "name": "observer changes state",
+      "status": "REJECTED",
+      "reason": "full state/observer equality: afterObservation: actual={'visibleBindings': [], 'tasks': '[Full.Counted.Task.start,\\n Full.Counted.Task.eval\\n   (Full.Expr.call \"identity\" [Full.Expr.call \"one\" [Full.Expr.num 7]])\\n   { env := [], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'steps': 1, 'status': 'suspended', 'slots': [], 'reservations': [], 'requiredBindings': [], 'release': [], 'raw': None, 'rank': 2, 'outside': [], 'memoryOperations': [], 'holders': [], 'frames': [], 'events': [], 'entered': [], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.eval (Full.Expr.call \"identity\" [Full.Expr.call \"one\" [Full.Expr.num 7]]) [],\\n  kont := [] }', 'consContext': None, 'completeState': '{ mem := { cells := [], next := 0, record := [] },\\n  outside := [],\\n  edges := [],\\n  releaseChain := [],\\n  bindings := [],\\n  entered := [],\\n  slots := [],\\n  reservations := [],\\n  frames := [],\\n  tasks := [Full.Counted.Task.start,\\n            Full.Counted.Task.eval\\n              (Full.Expr.call \"identity\" [Full.Expr.call \"one\" [Full.Expr.num 7]])\\n              { env := [], invocation := 0, branches := [], site := \"main\" },\\n            Full.Counted.Task.finish],\\n  nextBinding := 0,\\n  nextBranch := 0,\\n  nextInvocation := 1,\\n  events := [],\\n  history := [],\\n  landmarks := [],\\n  steps := 0,\\n  answer := none }', 'cells': [], 'bindings': [], 'actions': []}; expected={'visibleBindings': [], 'tasks': '[Full.Counted.Task.start,\\n Full.Counted.Task.eval\\n   (Full.Expr.call \"identity\" [Full.Expr.call \"one\" [Full.Expr.num 7]])\\n   { env := [], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'steps': 0, 'status': 'suspended', 'slots': [], 'reservations': [], 'requiredBindings': [], 'release': [], 'raw': None, 'rank': 2, 'outside': [], 'memoryOperations': [], 'holders': [], 'frames': [], 'events': [], 'entered': [], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.eval (Full.Expr.call \"identity\" [Full.Expr.call \"one\" [Full.Expr.num 7]]) [],\\n  kont := [] }', 'consContext': None, 'completeState': '{ mem := { cells := [], next := 0, record := [] },\\n  outside := [],\\n  edges := [],\\n  releaseChain := [],\\n  bindings := [],\\n  entered := [],\\n  slots := [],\\n  reservations := [],\\n  frames := [],\\n  tasks := [Full.Counted.Task.start,\\n            Full.Counted.Task.eval\\n              (Full.Expr.call \"identity\" [Full.Expr.call \"one\" [Full.Expr.num 7]])\\n              { env := [], invocation := 0, branches := [], site := \"main\" },\\n            Full.Counted.Task.finish],\\n  nextBinding := 0,\\n  nextBranch := 0,\\n  nextInvocation := 1,\\n  events := [],\\n  history := [],\\n  landmarks := [],\\n  steps := 0,\\n  answer := none }', 'cells': [], 'bindings': [], 'actions': []}"
+    },
+    {
+      "name": "second destroy appends duplicate free",
+      "status": "REJECTED",
+      "reason": "actual second destruction must be fully idempotent: actual={'requests': [['Full.Lifecycle.Domain.frame', 'spin'], ['Full.Lifecycle.Domain.frame', 'spin'], ['Full.Lifecycle.Domain.frame', 'spin']], 'failure': None, 'execution': {'visibleBindings': [], 'tasks': '[]', 'steps': 18, 'status': 'suspended', 'slots': [], 'reservations': [], 'requiredBindings': [], 'release': [], 'raw': None, 'rank': 0, 'outside': [], 'memoryOperations': [], 'holders': [], 'frames': [], 'events': [['E', 'spin', 1, 0, [['I', 1]], 'main/2'], ['E', 'spin', 2, 1, [['I', 1]], 'spin'], ['E', 'spin', 3, 2, [['I', 1]], 'spin']], 'entered': [], 'decodedPlain': 'Except.error \"missing focused value\"', 'consContext': None, 'completeState': '{ mem := { cells := [], next := 1, record := [] },\\n  outside := [],\\n  edges := [],\\n  releaseChain := [],\\n  bindings := [],\\n  entered := [],\\n  slots := [],\\n  reservations := [],\\n  frames := [],\\n  tasks := [],\\n  nextBinding := 6,\\n  nextBranch := 1,\\n  nextInvocation := 4,\\n  events := [Full.Counted.Event.enter\\n               { id := 1,\\n                 name := \"spin\",\\n                 parent := 0,\\n                 args := [{ raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }],\\n                 site := \"main/2\" },\\n             Full.Counted.Event.enter\\n               { id := 2,\\n                 name := \"spin\",\\n                 parent := 1,\\n                 args := [{ raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }],\\n                 site := \"spin\" },\\n             Full.Counted.Event.enter\\n               { id := 3,\\n                 name := \"spin\",\\n                 parent := 2,\\n                 args := [{ raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }],\\n                 site := \"spin\" }],\\n  history := [{ name := \"Start\", landmark := some (Trial.StepKind.start) },\\n              { name := \"Dispatch\", landmark := none },\\n              { name := \"Leaf\", landmark := some (Trial.StepKind.holderMoved) },\\n              { name := \"Choose\", landmark := some (Trial.StepKind.branchChosen) },\\n              { name := \"Decompose\", landmark := some (Trial.StepKind.matchStep4Done) },\\n              { name := \"BranchStart\", landmark := some (Trial.StepKind.branchStarts) },\\n              { name := \"Dispatch\", landmark := none },\\n              { name := \"Leaf\", landmark := none },\\n              { name := \"Capture\", landmark := none },\\n              { name := \"Enter\", landmark := none },\\n              { name := \"Dispatch\", landmark := none },\\n              { name := \"Leaf\", landmark := none },\\n              { name := \"Capture\", landmark := none },\\n              { name := \"Enter\", landmark := none },\\n              { name := \"Dispatch\", landmark := none },\\n              { name := \"Leaf\", landmark := none },\\n              { name := \"Capture\", landmark := none },\\n              { name := \"Enter\", landmark := none }],\\n  landmarks := [{ kind := Trial.StepKind.start,\\n                  memory :="
+    },
+    {
+      "name": "pause destroy runs evaluation",
+      "status": "REJECTED",
+      "reason": "destroy preserves events: actual=[['F', 0]]; expected=[]"
+    },
+    {
+      "name": "extra spin budget restarts",
+      "status": "REJECTED",
+      "reason": "full state/observer equality: whole: actual={'visibleBindings': [7], 'tasks': '[Full.Counted.Task.eval\\n   (Full.Expr.call \"spin\" [Full.Expr.var \"n\"])\\n   { env := [(\"n\", 7)], invocation := 8, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 8,\\n     name := \"spin\",\\n     parent := 7,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"spin\" }\\n   { env := [(\"n\", 6)], invocation := 7, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 7,\\n     name := \"spin\",\\n     parent := 6,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"spin\" }\\n   { env := [(\"n\", 5)], invocation := 6, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 6,\\n     name := \"spin\",\\n     parent := 5,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"spin\" }\\n   { env := [(\"n\", 4)], invocation := 5, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 5,\\n     name := \"spin\",\\n     parent := 4,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"spin\" }\\n   { env := [(\"n\", 3)], invocation := 4, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 4,\\n     name := \"spin\",\\n     parent := 3,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"spin\" }\\n   { env := [(\"n\", 2)], invocation := 3, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 3,\\n     name := \"spin\",\\n     parent := 2,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"spin\" }\\n   { env := [(\"n\", 1)], invocation := 2, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 2,\\n     name := \"spin\",\\n     parent := 1,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"spin\" }\\n   { env := [(\"n\", 0)], invocation := 1, branches := [], site := \"spin\" },\\n Full.Counted.Task.returning\\n   { id := 1,\\n     name := \"spin\",\\n     parent := 0,\\n     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],\\n     site := \"main\" }\\n   { env := [], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'steps': 33, 'status': 'suspended', 'slots': [], 'reservations': [], 'requiredBindings': [[7, 0]], 'release': [], 'raw': None, 'rank': 9, 'outside': [], 'memoryOperations': [], 'holders': [], 'frames': [[8, 'spin', 7], [7, 'spin', 6], [6, 'spin', 5], [5, 'spin', 4], [4, 'spin', 3], [3, 'spin', 2], [2, 'spin', 1], [1, 'spin', 0]], 'events': [['E', 'spin', 1, 0, [['I', 0]], 'main'], ['E', 'spin', 2, 1, [['I', 0]], 'spin'], ['E', 'spin', 3, 2, [['I', 0]], 'spin'], ['E', 'spin', 4, 3, [['I', 0]], 'spin'], ['E', 'spin', 5, 4, [['I', 0]], 'spin'], ['E', 'spin', 6, 5, [['I', 0]], 'spin'], ['E', 'spin', 7, 6, [['I',"
+    },
+    {
+      "name": "wrong usefulness call argument",
+      "status": "REJECTED",
+      "reason": "mismatch: actual=[['E', 'merge', 1, 0, [['L', 1], ['L', 3]]], ['W', 3, -1, 4], ['E', 'merge', 2, 1, [['L', 1], ['L', 3]]], ['W', 3, 4, None], ['E', 'merge', 3, 2, [['L', 3], ['L', 4]]], ['W', 4, 4, None], ['E', 'merge', 4, 3, [['L', 4], ['L', 5]]], ['W', 5, 8, None], ['E', 'merge', 5, 4, [['L', None], ['L', 5]]], ['R', 5, ['L', 5]], ['W', 4, 4, 5], ['R', 4, ['L', 4]], ['W', 3, 2, 4], ['R', 3, ['L', 3]], ['W', 1, -1, 3], ['R', 2, ['L', 1]], ['W', 0, -3, 1], ['R', 1, ['L', 0]]]; expected=[['E', 'merge', 1, 0, [['L', 0], ['L', 3]]], ['W', 3, -1, 4], ['E', 'merge', 2, 1, [['L', 1], ['L', 3]]], ['W', 3, 4, None], ['E', 'merge', 3, 2, [['L', 3], ['L', 4]]], ['W', 4, 4, None], ['E', 'merge', 4, 3, [['L', 4], ['L', 5]]], ['W', 5, 8, None], ['E', 'merge', 5, 4, [['L', None], ['L', 5]]], ['R', 5, ['L', 5]], ['W', 4, 4, 5], ['R', 4, ['L', 4]], ['W', 3, 2, 4], ['R', 3, ['L', 3]], ['W', 1, -1, 3], ['R', 2, ['L', 1]], ['W', 0, -3, 1], ['R', 1, ['L', 0]]]"
+    },
+    {
+      "name": "denial mutates hidden state",
+      "status": "REJECTED",
+      "reason": "denial preserves complete execution: actual={'visibleBindings': [1], 'tasks': '[Full.Counted.Task.primitive\\n   (Full.Op.add)\\n   { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1/0\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"one\" 1 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"choose\" 2 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail\" },\\n Full.Counted.Task.returning\\n   { id := 1,\\n     name := \"outerFail\",\\n     parent := 0,\\n     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],\\n     site := \"main\" }\\n   { env := [(\"xs\", 0)], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'steps': 14, 'status': 'suspended', 'slots': [[['I', 3], 3], [['I', 20], 20], [['L', 0], [1, 2]]], 'reservations': [], 'requiredBindings': [], 'release': [], 'raw': None, 'rank': 15, 'outside': [0, 0], 'memoryOperations': [], 'holders': [{'value': [1, 2], 'role': 'operand', 'raw': ['L', 0], 'id': 0}, {'value': [2], 'role': 'edge', 'raw': ['L', 1], 'id': 0}, {'value': [1, 2], 'role': 'outside', 'raw': ['L', 0], 'id': 0}, {'value': [1, 2], 'role': 'outside', 'raw': ['L', 0], 'id': 1}], 'frames': [[1, 'outerFail', 0]], 'events': [['E', 'outerFail', 1, 0, [['L', 0]], 'main']], 'entered': [['xs', 1]], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.value (Trial.PlainValue.num 3),\\n  kont := [Full.Plain.Kont.right (Full.Op.add) (Trial.PlainValue.num 20),\\n           Full.Plain.Kont.arguments \"one\" [] [] [(\"xs\", Trial.PlainValue.list [1, 2])],\\n           Full.Plain.Kont.arguments \"choose\" [Trial.PlainValue.list [1, 2]] [] [(\"xs\", Trial.PlainValue.list [1, 2])],\\n           Full.Plain.Kont.returning \"outerFail\"] }', 'consContext': None, 'completeState': 'changed', 'cells': [[0, 1, 1, 3, 'live'], [1, 2, None, 1, 'live']], 'bindings': [[0, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [1, 2], 0, 'main/input/xs'], [1, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [1, 2], 1, 'outerFail/parameter/xs']], 'actions': ['Start', 'Dispatch', 'Leaf', 'Capture', 'Enter', 'Dispatch', 'Leaf', 'Capture', 'Dispatch', 'Dispatch', 'Leaf', 'Capture', 'Leaf', 'Capture']}; expected={'visibleBindings': [1], 'tasks': '[Full.Counted.Task.primitive\\n   (Full.Op.add)\\n   { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1/0\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"one\" 1 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"choose\" 2 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail\" },\\n Full.Counted.Task.returning\\n   { id := 1,\\n     name := \"outerFail\",\\n     parent := 0,\\n     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],\\n     site := \"main\" }\\n   { env := [(\"xs\", 0)], invocation := 0, b"
+    }
+  ],
+  "inputHashes": {
+    "inputs.json": "9a604ff2a932c32c5715c99bf7e69a53dd82f44117c2a4d8c4e6a06505a14ec1",
+    "raw.json": "fb58e371ad25ad3c5733b9e6e45b365040411d35e1b53bd717345b8feda1028e",
+    "summary.json": "7c4863e180961eb3460774cbd7200cfd7388da6b956ced7674bd123216c4afd9"
+  },
+  "limits": [
+    "Finite mathematical exports, not universal proofs or native observer fidelity.",
+    "Plain.next and decode are parent-authored functions; equality checked, not independently reimplemented.",
+    "Required binding IDs still derive from counted tasks; no separately exported plain obligation ID/lifetime bijection. Selected source-required owners checked independently.",
+    "Pre-commit exports omit completeState; semantic projections checked, not every hidden metadata field.",
+    "Exact visible binding acquisition order and holding inclusion checked; complete source-derived ordered active-scope view not independently reconstructed.",
+    "No kernel/axiom audit, checker verdicts, native model execution, trial rerun, or executed machine mutants by this author."
+  ]
+}

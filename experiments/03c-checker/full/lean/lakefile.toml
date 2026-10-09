@@ -1,0 +1,9 @@
+name = "full3c"
+defaultTargets = ["Full"]
+
+[[require]]
+name = "trial"
+path = "../../trial/lean"
+
+[[lean_lib]]
+name = "Full"

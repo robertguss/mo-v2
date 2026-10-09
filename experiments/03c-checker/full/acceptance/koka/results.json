@@ -1,0 +1,416 @@
+[
+  {
+    "category": "S1A01",
+    "utc": "2026-10-09T19:24:12.637545+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a01",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a01.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "C10-bump-empty",
+      "C10-bump-single",
+      "C10-bump-mixed"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A02",
+    "utc": "2026-10-09T19:24:13.080016+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a02",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a02.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-reverse",
+      "boundary-0-nil",
+      "boundary-0-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A03",
+    "utc": "2026-10-09T19:24:13.485741+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a03",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a03.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-totals",
+      "boundary-1-nil",
+      "boundary-1-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A04",
+    "utc": "2026-10-09T19:24:13.913220+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a04",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a04.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-append",
+      "boundary-2-nil",
+      "boundary-2-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A05",
+    "utc": "2026-10-09T19:24:14.331327+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a05",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a05.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-swap",
+      "boundary-3-nil",
+      "boundary-3-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A06",
+    "utc": "2026-10-09T19:24:14.822215+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a06",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a06.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-rotate",
+      "boundary-4-nil",
+      "boundary-4-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A07",
+    "utc": "2026-10-09T19:24:15.304316+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a07",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a07.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-merge",
+      "boundary-5-nil",
+      "boundary-5-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A08",
+    "utc": "2026-10-09T19:24:15.841913+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a08",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a08.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-sort",
+      "boundary-6-nil",
+      "boundary-6-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A09",
+    "utc": "2026-10-09T19:24:16.286778+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a09",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a09.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "C10-sum-empty",
+      "C10-sum-single",
+      "C10-sum-mixed"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A10",
+    "utc": "2026-10-09T19:24:16.713183+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a10",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a10.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-keep-first",
+      "boundary-7-nil",
+      "boundary-7-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A11",
+    "utc": "2026-10-09T19:24:17.140986+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a11",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a11.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-remove",
+      "boundary-8-nil",
+      "boundary-8-single",
+      "boundary-9-nil",
+      "boundary-9-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1A12",
+    "utc": "2026-10-09T19:24:17.588082+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1a12",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1a12.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-positive",
+      "boundary-10-nil",
+      "boundary-10-single"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1R01",
+    "utc": "2026-10-09T19:24:18.047254+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1r01",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1r01.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-duplicate",
+      "additional-0",
+      "additional-1"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1R02",
+    "utc": "2026-10-09T19:24:18.521720+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1r02",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1r02.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-prepend",
+      "additional-2"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1R03",
+    "utc": "2026-10-09T19:24:19.030242+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1r03",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1r03.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-insert-new",
+      "additional-3"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1R04",
+    "utc": "2026-10-09T19:24:19.480873+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1r04",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1r04.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-build",
+      "additional-4",
+      "additional-5",
+      "additional-6"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1R05",
+    "utc": "2026-10-09T19:24:19.933058+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1r05",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1r05.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-twice",
+      "additional-7"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1R06",
+    "utc": "2026-10-09T19:24:20.351558+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1r06",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1r06.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-ordinary-alloc"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  },
+  {
+    "category": "S1O01",
+    "utc": "2026-10-09T19:24:20.850708+00:00",
+    "command": [
+      "koka",
+      "-O2",
+      "-c",
+      "--console=raw",
+      "--builddir=/tmp/full3c-koka-516ksfys/cache",
+      "-o",
+      "/tmp/full3c-koka-516ksfys/s1o01",
+      "/home/user/workspace/repo/experiments/03c-checker/full/acceptance/koka/s1o01.kk"
+    ],
+    "compile_exit": 1,
+    "cases": [
+      "U-ordinary-arithmetic"
+    ],
+    "run_exit": null,
+    "answers_match": null
+  }
+]

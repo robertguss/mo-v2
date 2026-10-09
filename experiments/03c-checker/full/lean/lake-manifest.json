@@ -1,0 +1,13 @@
+{"version": "1.2.0",
+ "packagesDir": ".lake/packages",
+ "packages":
+ [{"type": "path",
+   "scope": "",
+   "name": "trial",
+   "manifestFile": "lake-manifest.json",
+   "inherited": false,
+   "dir": "../../trial/lean",
+   "configFile": "lakefile.toml"}],
+ "name": "full3c",
+ "lakeDir": ".lake",
+ "fixedToolchain": false}

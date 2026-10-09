@@ -1,0 +1,232 @@
+$ python3 -B supplemental/boundary_check.py /tmp/full3c-boundary-observations --report supplemental/results.json
+CHECKS: 582 passed; 0 failed; 9/9 consumer corruptions rejected
+COVERAGE: 90 cases; 37 traced; 1793 snapshots; 8 evidence-gap groups remain
+NOT a scientific freeze, proof, independent plain simulation, or executed machine-mutant test
+
+$ python3 -B check.py --observations /tmp/full3c-boundary-observations/summary.json
+PASS: 40 typed library declarations; 16 valid starts; 90 exact cases; C1-C22 and all 27 categories
+PASS: 84 finished manual ledgers/answers/retained graphs
+PASS fixture-negative: Bool is not Int
+PASS fixture-negative: unselected branch checked
+PASS fixture-negative: function cannot capture caller input
+PASS fixture-negative: bad initial multiplicity
+PASS fixture-negative: cycle
+PASS fixture-negative: wrong answer vs ledger
+PASS fixture-negative: omitted Free retains garbage
+PASS fixture-negative: Create relabeled as Write
+PASS summary observations; boundary/lifetime/F5/lifecycle checks STILL REQUIRED
+
+$ sha256sum -c PREDICTIONS.sha256
+programs.json: OK
+starts.json: OK
+predictions.json: OK
+DERIVATIONS.md: OK
+BOUNDARIES.md: OK
+
+$ sha256sum -c MANIFEST.sha256
+./BOUNDARIES.md: OK
+./CHECKPOINT.md: OK
+./CHECKS.md: OK
+./DERIVATIONS.md: OK
+./HANDOFF.md: OK
+./KOKA.md: OK
+./PREDICTIONS.sha256: OK
+./check.py: OK
+./checks.log: OK
+./compare_koka.py: OK
+./comparison-r2.log: OK
+./comparison-r3.log: OK
+./comparison.log: OK
+./consumer-unit.log: OK
+./koka-r2/S1A01.compile.stderr: OK
+./koka-r2/S1A01.compile.stdout: OK
+./koka-r2/S1A01.run.stderr: OK
+./koka-r2/S1A01.run.stdout: OK
+./koka-r2/S1A02.compile.stderr: OK
+./koka-r2/S1A02.compile.stdout: OK
+./koka-r2/S1A02.run.stderr: OK
+./koka-r2/S1A02.run.stdout: OK
+./koka-r2/S1A03.compile.stderr: OK
+./koka-r2/S1A03.compile.stdout: OK
+./koka-r2/S1A03.run.stderr: OK
+./koka-r2/S1A03.run.stdout: OK
+./koka-r2/S1A04.compile.stderr: OK
+./koka-r2/S1A04.compile.stdout: OK
+./koka-r2/S1A04.run.stderr: OK
+./koka-r2/S1A04.run.stdout: OK
+./koka-r2/S1A05.compile.stderr: OK
+./koka-r2/S1A05.compile.stdout: OK
+./koka-r2/S1A05.run.stderr: OK
+./koka-r2/S1A05.run.stdout: OK
+./koka-r2/S1A06.compile.stderr: OK
+./koka-r2/S1A06.compile.stdout: OK
+./koka-r2/S1A06.run.stderr: OK
+./koka-r2/S1A06.run.stdout: OK
+./koka-r2/S1A07.compile.stderr: OK
+./koka-r2/S1A07.compile.stdout: OK
+./koka-r2/S1A08.compile.stderr: OK
+./koka-r2/S1A08.compile.stdout: OK
+./koka-r2/S1A08.run.stderr: OK
+./koka-r2/S1A08.run.stdout: OK
+./koka-r2/S1A09.compile.stderr: OK
+./koka-r2/S1A09.compile.stdout: OK
+./koka-r2/S1A09.run.stderr: OK
+./koka-r2/S1A09.run.stdout: OK
+./koka-r2/S1A10.compile.stderr: OK
+./koka-r2/S1A10.compile.stdout: OK
+./koka-r2/S1A10.run.stderr: OK
+./koka-r2/S1A10.run.stdout: OK
+./koka-r2/S1A11.compile.stderr: OK
+./koka-r2/S1A11.compile.stdout: OK
+./koka-r2/S1A11.run.stderr: OK
+./koka-r2/S1A11.run.stdout: OK
+./koka-r2/S1A12.compile.stderr: OK
+./koka-r2/S1A12.compile.stdout: OK
+./koka-r2/S1A12.run.stderr: OK
+./koka-r2/S1A12.run.stdout: OK
+./koka-r2/S1O01.compile.stderr: OK
+./koka-r2/S1O01.compile.stdout: OK
+./koka-r2/S1O01.run.stderr: OK
+./koka-r2/S1O01.run.stdout: OK
+./koka-r2/S1R01.compile.stderr: OK
+./koka-r2/S1R01.compile.stdout: OK
+./koka-r2/S1R01.run.stderr: OK
+./koka-r2/S1R01.run.stdout: OK
+./koka-r2/S1R02.compile.stderr: OK
+./koka-r2/S1R02.compile.stdout: OK
+./koka-r2/S1R02.run.stderr: OK
+./koka-r2/S1R02.run.stdout: OK
+./koka-r2/S1R03.compile.stderr: OK
+./koka-r2/S1R03.compile.stdout: OK
+./koka-r2/S1R03.run.stderr: OK
+./koka-r2/S1R03.run.stdout: OK
+./koka-r2/S1R04.compile.stderr: OK
+./koka-r2/S1R04.compile.stdout: OK
+./koka-r2/S1R05.compile.stderr: OK
+./koka-r2/S1R05.compile.stdout: OK
+./koka-r2/S1R05.run.stderr: OK
+./koka-r2/S1R05.run.stdout: OK
+./koka-r2/S1R06.compile.stderr: OK
+./koka-r2/S1R06.compile.stdout: OK
+./koka-r2/S1R06.run.stderr: OK
+./koka-r2/S1R06.run.stdout: OK
+./koka-r2/generator.py: OK
+./koka-r2/results.json: OK
+./koka-r2/s1a01.kk: OK
+./koka-r2/s1a02.kk: OK
+./koka-r2/s1a03.kk: OK
+./koka-r2/s1a04.kk: OK
+./koka-r2/s1a05.kk: OK
+./koka-r2/s1a06.kk: OK
+./koka-r2/s1a07.kk: OK
+./koka-r2/s1a08.kk: OK
+./koka-r2/s1a09.kk: OK
+./koka-r2/s1a10.kk: OK
+./koka-r2/s1a11.kk: OK
+./koka-r2/s1a12.kk: OK
+./koka-r2/s1o01.kk: OK
+./koka-r2/s1r01.kk: OK
+./koka-r2/s1r02.kk: OK
+./koka-r2/s1r03.kk: OK
+./koka-r2/s1r04.kk: OK
+./koka-r2/s1r05.kk: OK
+./koka-r2/s1r06.kk: OK
+./koka-r2/version.txt: OK
+./koka-r3/S1A07.compile.stderr: OK
+./koka-r3/S1A07.compile.stdout: OK
+./koka-r3/S1A07.run.stderr: OK
+./koka-r3/S1A07.run.stdout: OK
+./koka-r3/S1R04.compile.stderr: OK
+./koka-r3/S1R04.compile.stdout: OK
+./koka-r3/S1R04.run.stderr: OK
+./koka-r3/S1R04.run.stdout: OK
+./koka-r3/results.json: OK
+./koka-r3/s1a07.kk: OK
+./koka-r3/s1r04.kk: OK
+./koka-r3/version.txt: OK
+./koka/S1A01.compile.stderr: OK
+./koka/S1A01.compile.stdout: OK
+./koka/S1A02.compile.stderr: OK
+./koka/S1A02.compile.stdout: OK
+./koka/S1A03.compile.stderr: OK
+./koka/S1A03.compile.stdout: OK
+./koka/S1A04.compile.stderr: OK
+./koka/S1A04.compile.stdout: OK
+./koka/S1A05.compile.stderr: OK
+./koka/S1A05.compile.stdout: OK
+./koka/S1A06.compile.stderr: OK
+./koka/S1A06.compile.stdout: OK
+./koka/S1A07.compile.stderr: OK
+./koka/S1A07.compile.stdout: OK
+./koka/S1A08.compile.stderr: OK
+./koka/S1A08.compile.stdout: OK
+./koka/S1A09.compile.stderr: OK
+./koka/S1A09.compile.stdout: OK
+./koka/S1A10.compile.stderr: OK
+./koka/S1A10.compile.stdout: OK
+./koka/S1A11.compile.stderr: OK
+./koka/S1A11.compile.stdout: OK
+./koka/S1A12.compile.stderr: OK
+./koka/S1A12.compile.stdout: OK
+./koka/S1O01.compile.stderr: OK
+./koka/S1O01.compile.stdout: OK
+./koka/S1R01.compile.stderr: OK
+./koka/S1R01.compile.stdout: OK
+./koka/S1R02.compile.stderr: OK
+./koka/S1R02.compile.stdout: OK
+./koka/S1R03.compile.stderr: OK
+./koka/S1R03.compile.stdout: OK
+./koka/S1R04.compile.stderr: OK
+./koka/S1R04.compile.stdout: OK
+./koka/S1R05.compile.stderr: OK
+./koka/S1R05.compile.stdout: OK
+./koka/S1R06.compile.stderr: OK
+./koka/S1R06.compile.stdout: OK
+./koka/generator.py: OK
+./koka/results.json: OK
+./koka/s1a01.kk: OK
+./koka/s1a02.kk: OK
+./koka/s1a03.kk: OK
+./koka/s1a04.kk: OK
+./koka/s1a05.kk: OK
+./koka/s1a06.kk: OK
+./koka/s1a07.kk: OK
+./koka/s1a08.kk: OK
+./koka/s1a09.kk: OK
+./koka/s1a10.kk: OK
+./koka/s1a11.kk: OK
+./koka/s1a12.kk: OK
+./koka/s1o01.kk: OK
+./koka/s1r01.kk: OK
+./koka/s1r02.kk: OK
+./koka/s1r03.kk: OK
+./koka/s1r04.kk: OK
+./koka/s1r05.kk: OK
+./koka/s1r06.kk: OK
+./koka/version.txt: OK
+./predictions.json: OK
+./programs.json: OK
+./starts.json: OK
+./verification.log: OK
+
+$ sha256sum PREDICTIONS.sha256 MANIFEST.sha256
+ee9b4aa5477da5b9aa379172edcbd01b0dca840b3ff64a74705e78f57d82767a  PREDICTIONS.sha256
+2a00d558a360b5fdec78600d6997a90044c8912eb9ab7609b08475391b1dabce  MANIFEST.sha256
+
+Parent source byte comparison with uploaded archive:
+PASS: 13 parent source files byte-identical to uploaded archive
+
+$ sha256sum -c supplemental/SOURCE.sha256
+../lean/lakefile.toml: OK
+../lean/Full/Statements.lean: OK
+../lean/Full/Inspect.lean: OK
+../lean/Full/Plain.lean: OK
+../lean/Full/Language.lean: OK
+../lean/Export.lean: OK
+../lean/Full/Lifecycle.lean: OK
+../lean/TrialCompatibility.lean: OK
+../lean/Full/Control.lean: OK
+../lean/Full/Counted.lean: OK
+../lean/lean-toolchain: OK
+../run_spec.py: OK
+../lean/Full.lean: OK
