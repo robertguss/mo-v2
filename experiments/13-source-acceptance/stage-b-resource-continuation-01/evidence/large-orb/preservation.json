@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-10-09T13:02:53.897660+00:00",
+  "frozen_identity": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  },
+  "before_after_match": true,
+  "stream_hash_agrees": true,
+  "archive_bytes": 639727305,
+  "archive_sha256": "c0d18b2f60ad9590c6631f7c75b422252285515364dbf50be31b17e12a481281",
+  "discard_executed": false,
+  "completed_deepest_verification_established": false,
+  "completion_established": false,
+  "cleanup_established": false,
+  "semantic_replay_performed": false
+}
