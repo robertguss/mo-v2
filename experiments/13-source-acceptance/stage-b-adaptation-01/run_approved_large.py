@@ -28,11 +28,11 @@ from stage_b_workloads import APPROVED_DEPTH, DiscardedList, NonTailSum
 from validate_public import frozen, sha
 
 
-def run(command, workload, destination):
+def run(command, workload, destination, *, verifier_type=LargeVerifier, decode=load):
     destination.mkdir(parents=True, exist_ok=False)
     timeout = ENVELOPE_SECONDS[workload.name]
     budgets = [workload.deepest_step(), workload.transitions() - workload.deepest_step()]
-    verifier = LargeVerifier(workload, budgets)
+    verifier = verifier_type(workload, budgets)
     case = workload.case()
     payload = dict(source=list(case["source"].encode()), cells=case["cells"],
                    inputs=case["inputs"], outside=case["outside"], budgets=budgets,
@@ -77,7 +77,7 @@ def run(command, workload, destination):
                 assert line.endswith(b"\n"), "partial driver record"
                 rows.write(line)
                 digest.update(line)
-                record = load(line)
+                record = decode(line)
                 now = time.monotonic_ns()
                 check_clock(boundary, now,
                             [dict(phase=phase, start_ns=boundary, end_ns=now)],
