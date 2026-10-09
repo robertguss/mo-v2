@@ -204,6 +204,18 @@ rust_checks() {
       run "13-source-acceptance: revised Stage B collector tests" \
         env CARGO_TARGET_DIR="$adapted_target" \
         cargo +1.98.1 test --locked --offline --manifest-path stage-b-revision-02/driver/Cargo.toml
+      # Timing-01 FREEZE.md/RESULT.md: build and test the final accepted
+      # collector too, without rerunning private or resource acceptance.
+      if [[ -f stage-b-timing-01/link/Cargo.toml ]]; then
+        run "13-source-acceptance: final Stage B locked dependencies" \
+          cargo +1.98.1 fetch --locked --manifest-path stage-b-timing-01/link/Cargo.toml
+        run "13-source-acceptance: final Stage B release native link" \
+          env CARGO_TARGET_DIR="$adapted_target" \
+          cargo +1.98.1 build --release --locked --offline --manifest-path stage-b-timing-01/link/Cargo.toml
+        run "13-source-acceptance: final Stage B collector and timing tests" \
+          env CARGO_TARGET_DIR="$adapted_target" \
+          cargo +1.98.1 test --release --locked --offline --all-targets --manifest-path stage-b-timing-01/driver/Cargo.toml
+      fi
       rm -rf "$adapted_target"
     fi
   fi
