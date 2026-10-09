@@ -1,0 +1,1049 @@
+{
+  "public_roots": [
+    "/home/user/rob1333-stage-b-performance-01"
+  ],
+  "files": [
+    {
+      "path": "rob1333-stage-b-performance-01/IDENTITY.json",
+      "logical_path": "rob1333-stage-b-performance-01/IDENTITY.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/IDENTITY.json",
+      "offset": 0,
+      "bytes": 2165,
+      "sha256": "64d7fc299db7f1c837e25f2da3d1c06ad309e5a25280f87b22f67fcd0a518799",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/METHODS.md",
+      "logical_path": "rob1333-stage-b-performance-01/METHODS.md",
+      "source": "/home/user/rob1333-stage-b-performance-01/METHODS.md",
+      "offset": 0,
+      "bytes": 3513,
+      "sha256": "72f55b6acd989879a90fcff3ff53bebcc1a0445e2a5d0c827497dd68aec524a1",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/buffered-runner.py",
+      "logical_path": "rob1333-stage-b-performance-01/buffered-runner.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/buffered-runner.py",
+      "offset": 0,
+      "bytes": 7141,
+      "sha256": "dfb5a4ac7c606e89440e565243cf2088bf74a16b3d00972976e4e425a1e186ea",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/request.json.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/request.json.gz",
+      "offset": 0,
+      "bytes": 55092,
+      "sha256": "b7f8dab4702f599d9e2a5648461edef5a3240fbfba62109885fb1606c2f18126",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 1654361,
+      "sha256": "d8cf0fbed39d2dc45598064cc50eb5bc92c55e8ab90388399ce7bfec5738a7ff",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/stderr.txt",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/summary.json",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/summary.json",
+      "offset": 0,
+      "bytes": 1162,
+      "sha256": "22250ac0da19cfa9d968c85c8dfcbeb3f06fc7479672be686d4d07d5190ff2fb",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/request.json.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/request.json.gz",
+      "offset": 0,
+      "bytes": 55092,
+      "sha256": "b784d82fc407bf2dba8d79fff8b74df773b07b3cd46ac9e5b066dca2a765a777",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 1653355,
+      "sha256": "1c7bc10d2a3a78abe03f8f01e4e1c42e8981f34e94bd2e587d67481c68127e08",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/stderr.txt",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/summary.json",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/summary.json",
+      "offset": 0,
+      "bytes": 1092,
+      "sha256": "379de96e46f1c6d3aeb2d49a97393537f486805706d3a7a04a9fc9ac988f0e56",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/request.json.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/request.json.gz",
+      "offset": 0,
+      "bytes": 112513,
+      "sha256": "67ce032b023632b51195ae4c1468f5c54f3a18395980a18bed97c103ef5520c3",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "bd51832fb2c56467f40baedbc6b7efd548987ced5bba43f08a646b6d42b30494",
+      "volume": "public-001.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 4240867,
+      "sha256": "73a0519fa34c68db9cfbf390c5e84b7788dbe21d5bdd4865c74f8f5ba2e11c5c",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/stderr.txt",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/summary.json",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/summary.json",
+      "offset": 0,
+      "bytes": 1180,
+      "sha256": "3115613abda78f76b788c17fe2e51dc947e107b62724be26ae1409f1c60f2068",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/request.json.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/request.json.gz",
+      "offset": 0,
+      "bytes": 112513,
+      "sha256": "3164ef6c2f0477094a6ecfd468e5daba4dd8734149c946d1fc1364a2043ae88d",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "b95874673a373410baba20eb2400229bc9f053549d92f9a8b1a8bd4f313a7935",
+      "volume": "public-003.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 4234399,
+      "sha256": "91c9572af73a41fd20b4cc6294029e2f220f3f6d8dc088b7a53f10890c713fdb",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/stderr.txt",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/summary.json",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/summary.json",
+      "offset": 0,
+      "bytes": 1111,
+      "sha256": "b101c7c030b6a38353e52a3746427fbd1ce278b62bf9483c420b67fa4d2db325",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/request.json.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/request.json.gz",
+      "offset": 0,
+      "bytes": 489,
+      "sha256": "1d909f0032e99fa2cffa52edd958d2b97ab7caa7655a8d6d17fdf74be3b8bbf3",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 31,
+      "sha256": "9ec214b840016c0c1c2406b2ce3685339daaa348efea0fde6cc9c318096daf34",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/stderr.txt",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/summary.json",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/summary.json",
+      "offset": 0,
+      "bytes": 487,
+      "sha256": "555aa2f682edbf54ae6a4c1dbf63038ba62c141f46d6c2a5fdad3104761e52b5",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/report.json",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/report.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/report.json",
+      "offset": 0,
+      "bytes": 7974,
+      "sha256": "94c9443716c22b31faa998f4697c675bf0f2fdb37c096451e1a6ddc4823a5137",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/request.json.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/unterminated/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/request.json.gz",
+      "offset": 0,
+      "bytes": 447,
+      "sha256": "c460f8d7adefe434d8bfc82adbf9406b07cacc3ba090f7481723ab13a1744edf",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/unterminated/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 31,
+      "sha256": "9ec214b840016c0c1c2406b2ce3685339daaa348efea0fde6cc9c318096daf34",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/stderr.txt",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/unterminated/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/summary.json",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation/unterminated/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/summary.json",
+      "offset": 0,
+      "bytes": 493,
+      "sha256": "63d1c840d63c917a548d6d0ec7532b6ae23143ad3662018990377ecbf37f155e",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation.log",
+      "logical_path": "rob1333-stage-b-performance-01/framing-validation.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation.log",
+      "offset": 0,
+      "bytes": 567,
+      "sha256": "ee1a4fd2b22b05be71dca808ca3ed5b56791f18064a9bea948465d5a2800f91f",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/check_equivalence.py",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/check_equivalence.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/check_equivalence.py",
+      "offset": 0,
+      "bytes": 3026,
+      "sha256": "aad9e37b5c735500c2563a4391acf15c686789b82590d4bae5f559f6acf44660",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/check_replays.py",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/check_replays.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/check_replays.py",
+      "offset": 0,
+      "bytes": 7601,
+      "sha256": "49bf22aaddfee88299bb4c72fbf1f0a4fb72cc19702460f9418ea27bf72a3fd0",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/equivalence-v1.json",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/equivalence-v1.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/equivalence-v1.json",
+      "offset": 0,
+      "bytes": 178,
+      "sha256": "2fd8e1bc49a4548e2511a142090074d5264bb925b0cd06051d85bc57a617b933",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/equivalence-v2.json",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/equivalence-v2.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/equivalence-v2.json",
+      "offset": 0,
+      "bytes": 178,
+      "sha256": "a77abc5395e56e4d959e0dd9a94f1201931b031ed984dc2248f8e2a10550ffe4",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/equivalence.json",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/equivalence.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/equivalence.json",
+      "offset": 0,
+      "bytes": 178,
+      "sha256": "2fd8e1bc49a4548e2511a142090074d5264bb925b0cd06051d85bc57a617b933",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/fast_json.py",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/fast_json.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/fast_json.py",
+      "offset": 0,
+      "bytes": 2130,
+      "sha256": "f0f70b3b1c76d85911bac5e122ca46a6712dbf5df52028b90e52e36f8a69d4fd",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/fast_json_v1.py",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/fast_json_v1.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/fast_json_v1.py",
+      "offset": 0,
+      "bytes": 1810,
+      "sha256": "61d4aabfe30ff3a0acf13a4316e65b95c396dffd7b06f6645b58773daa7b0cad",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/native-replays.json",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/native-replays.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/native-replays.json",
+      "offset": 0,
+      "bytes": 208657,
+      "sha256": "3972b4c0996199e4a3e6298bf345d528dfc9bcad65f149329d71933b9f771172",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/native-replays.log",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/native-replays.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/native-replays.log",
+      "offset": 0,
+      "bytes": 125,
+      "sha256": "096e662403841b67863786a7db3b6d819fe32627708303a1e8a5f0291ce0854e",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/replay-large-pypy.log",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/replay-large-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/replay-large-pypy.log",
+      "offset": 0,
+      "bytes": 554,
+      "sha256": "7012b3a4c8f8b0a91c3768ab4a18d5b3271ee2cf9d14b3a763237a88d3881c68",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/replay-large-python314-v2.log",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/replay-large-python314-v2.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/replay-large-python314-v2.log",
+      "offset": 0,
+      "bytes": 553,
+      "sha256": "bd8154bc5c8e737d051b18ffd192846b6de66ed376c111f201ed9f64634ece88",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/replay-large-python314.log",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/replay-large-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/replay-large-python314.log",
+      "offset": 0,
+      "bytes": 554,
+      "sha256": "6b6ff2854b5b40f49f8c0849ab9895eeb927746e31c4857016ef27c0009dffeb",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/repository-equivalence-python311.json",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/repository-equivalence-python311.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/repository-equivalence-python311.json",
+      "offset": 0,
+      "bytes": 178,
+      "sha256": "a77abc5395e56e4d959e0dd9a94f1201931b031ed984dc2248f8e2a10550ffe4",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/repository-equivalence-python314.json",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/repository-equivalence-python314.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/repository-equivalence-python314.json",
+      "offset": 0,
+      "bytes": 178,
+      "sha256": "a77abc5395e56e4d959e0dd9a94f1201931b031ed984dc2248f8e2a10550ffe4",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/stage_b_large.py",
+      "logical_path": "rob1333-stage-b-performance-01/proposal/stage_b_large.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/stage_b_large.py",
+      "offset": 0,
+      "bytes": 37206,
+      "sha256": "92a94969fdacae10baee8a3fc60bc5282f86a1b83a7d65b2f0047d50294bcefc",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/pypy-install.log",
+      "logical_path": "rob1333-stage-b-performance-01/pypy-install.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/pypy-install.log",
+      "offset": 0,
+      "bytes": 194,
+      "sha256": "91284f5dccb906cd3994a41faa1746895881c070731f2e2c093d3e7673ccd14e",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/python314-install.log",
+      "logical_path": "rob1333-stage-b-performance-01/python314-install.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/python314-install.log",
+      "offset": 0,
+      "bytes": 201,
+      "sha256": "f8670ed465b156ac601cba38e531f077440e3f4ec5c2993ac527ca4007954df8",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/release-build.log",
+      "logical_path": "rob1333-stage-b-performance-01/release-build.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/release-build.log",
+      "offset": 0,
+      "bytes": 1299,
+      "sha256": "94c225f8af9455f4eb0aa51b1cb24e0f98702d624fa9933b479cf73c0417656e",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/release-driver-tests.log",
+      "logical_path": "rob1333-stage-b-performance-01/release-driver-tests.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/release-driver-tests.log",
+      "offset": 0,
+      "bytes": 892,
+      "sha256": "42c96023e50068ba36d6d3f99ccbbef011e74ad5f971f0ee5e7020e2fd681505",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/release-tests.log",
+      "logical_path": "rob1333-stage-b-performance-01/release-tests.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/release-tests.log",
+      "offset": 0,
+      "bytes": 5012,
+      "sha256": "44c823a3b4a569b655a4437e688abcd4b31b05cb003757d43dbd01effb10ebc2",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-large-profile-python314.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-large-profile-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-large-profile-python314.log",
+      "offset": 0,
+      "bytes": 3064,
+      "sha256": "92bd09c145b9a637898d90f244c757fad6a26273c6939f959c5eced958ad1a22",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-large-pypy.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-large-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-large-pypy.log",
+      "offset": 0,
+      "bytes": 553,
+      "sha256": "ee88cbfe12fa433192ab10dad3055d8040e8725f4dd05f2e2e5bbe62edfff21d",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-large-python314.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-large-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-large-python314.log",
+      "offset": 0,
+      "bytes": 553,
+      "sha256": "13e41fd96e3a1e72de175db5aa4b5c9ee2a3ce01204b25dec44a9074047964a8",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-profile-pypy.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-profile-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-profile-pypy.log",
+      "offset": 0,
+      "bytes": 3046,
+      "sha256": "86bd772abd4d96d970b6501a0dbe7fa9c21c2fbd6494af4e7dcb18e84530b932",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-profile.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-profile.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-profile.log",
+      "offset": 0,
+      "bytes": 3048,
+      "sha256": "e967d26d0ef18a99109902a5a3253e79d8f02b71fdbae91e92005ceab204b215",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-python3.14.prof",
+      "logical_path": "rob1333-stage-b-performance-01/replay-python3.14.prof",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-python3.14.prof",
+      "offset": 0,
+      "bytes": 32452,
+      "sha256": "c23dfae0f58781a39e4febea040ebc9d6dcf3e8aef6e70db262e17c23a38965f",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-warm-pypy.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-warm-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-warm-pypy.log",
+      "offset": 0,
+      "bytes": 1630,
+      "sha256": "61f8f3322d84043be3222eb1fd1e3badcb062b17113c2ff8396fa2af92a5683a",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-warm-python314-jit.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-warm-python314-jit.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-warm-python314-jit.log",
+      "offset": 0,
+      "bytes": 1631,
+      "sha256": "d5a21e57df0dd38613d6ddeb3c5151187486f142f3de793d1a7ca320464ae75f",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-warm-python314.log",
+      "logical_path": "rob1333-stage-b-performance-01/replay-warm-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-warm-python314.log",
+      "offset": 0,
+      "bytes": 1628,
+      "sha256": "aab956047eac3e6b67cae58f9e42955bc016c857b6269211e80dbf62d3d6f242",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay.prof",
+      "logical_path": "rob1333-stage-b-performance-01/replay.prof",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay.prof",
+      "offset": 0,
+      "bytes": 58068,
+      "sha256": "d31ffcb285b5eb13b6f57b7571a18366bf67e5a481616d3b934388bf287b5d88",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay_profile.py",
+      "logical_path": "rob1333-stage-b-performance-01/replay_profile.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay_profile.py",
+      "offset": 0,
+      "bytes": 2114,
+      "sha256": "ce31511684b2462df4a92b9fcf7a76113385b10cf9cf8bbac1155f5ab8831d16",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay_profile_frozen.py",
+      "logical_path": "rob1333-stage-b-performance-01/replay_profile_frozen.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay_profile_frozen.py",
+      "offset": 0,
+      "bytes": 1700,
+      "sha256": "476e0604f239b6c540fe2d03c8c170d80becad3c36bbbd2018596fb030ca356e",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay_profile_small.py",
+      "logical_path": "rob1333-stage-b-performance-01/replay_profile_small.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay_profile_small.py",
+      "offset": 0,
+      "bytes": 1356,
+      "sha256": "183a35d1d38e8db2a14360bbfb1c3f1a83880434b74ad662ca973ff3fa05810f",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/small-release/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-performance-01/small-release/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/small-release/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 1972572,
+      "sha256": "ce1c0721eee8b05f6c88e6905ce406e334dd8526911860ed4e7d30be53191af8",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/small-release/stderr.txt",
+      "logical_path": "rob1333-stage-b-performance-01/small-release/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/small-release/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/small-release/summary.json",
+      "logical_path": "rob1333-stage-b-performance-01/small-release/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/small-release/summary.json",
+      "offset": 0,
+      "bytes": 1316,
+      "sha256": "2e25120bbf815a669e82d140ca0f4c94b8302d30a53fe7795861324a4946c5e2",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/validate_framing.py",
+      "logical_path": "rob1333-stage-b-performance-01/validate_framing.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/validate_framing.py",
+      "offset": 0,
+      "bytes": 3533,
+      "sha256": "8662b0fb84c817f7b34dc417dfec3d232a959994c7d9c80eee5963697c78e75f",
+      "volume": "public-004.tar.gz"
+    }
+  ],
+  "sources": [
+    {
+      "path": "rob1333-stage-b-performance-01/IDENTITY.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/IDENTITY.json",
+      "bytes": 2165,
+      "sha256": "64d7fc299db7f1c837e25f2da3d1c06ad309e5a25280f87b22f67fcd0a518799"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/METHODS.md",
+      "source": "/home/user/rob1333-stage-b-performance-01/METHODS.md",
+      "bytes": 3513,
+      "sha256": "72f55b6acd989879a90fcff3ff53bebcc1a0445e2a5d0c827497dd68aec524a1"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/buffered-runner.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/buffered-runner.py",
+      "bytes": 7141,
+      "sha256": "dfb5a4ac7c606e89440e565243cf2088bf74a16b3d00972976e4e425a1e186ea"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/request.json.gz",
+      "bytes": 55092,
+      "sha256": "b7f8dab4702f599d9e2a5648461edef5a3240fbfba62109885fb1606c2f18126"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/rows.jsonl.gz",
+      "bytes": 1654361,
+      "sha256": "d8cf0fbed39d2dc45598064cc50eb5bc92c55e8ab90388399ce7bfec5738a7ff"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-buffered/summary.json",
+      "bytes": 1162,
+      "sha256": "22250ac0da19cfa9d968c85c8dfcbeb3f06fc7479672be686d4d07d5190ff2fb"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/request.json.gz",
+      "bytes": 55092,
+      "sha256": "b784d82fc407bf2dba8d79fff8b74df773b07b3cd46ac9e5b066dca2a765a777"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/rows.jsonl.gz",
+      "bytes": 1653355,
+      "sha256": "1c7bc10d2a3a78abe03f8f01e4e1c42e8981f34e94bd2e587d67481c68127e08"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/DiscardedList-prior/summary.json",
+      "bytes": 1092,
+      "sha256": "379de96e46f1c6d3aeb2d49a97393537f486805706d3a7a04a9fc9ac988f0e56"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/request.json.gz",
+      "bytes": 112513,
+      "sha256": "67ce032b023632b51195ae4c1468f5c54f3a18395980a18bed97c103ef5520c3"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/rows.jsonl.gz",
+      "bytes": 21018083,
+      "sha256": "bc801a418d0385400940aba75cb3e787fe5bc9198530db52b29cf2fdb491d5f7"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-buffered/summary.json",
+      "bytes": 1180,
+      "sha256": "3115613abda78f76b788c17fe2e51dc947e107b62724be26ae1409f1c60f2068"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/request.json.gz",
+      "bytes": 112513,
+      "sha256": "3164ef6c2f0477094a6ecfd468e5daba4dd8734149c946d1fc1364a2043ae88d"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/rows.jsonl.gz",
+      "bytes": 21011615,
+      "sha256": "c9b7b93a060c8a39d358227c68ba9b2f1bca4607dbabe03c5ee5aa78321c03d7"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/NonTailSum-prior/summary.json",
+      "bytes": 1111,
+      "sha256": "b101c7c030b6a38353e52a3746427fbd1ce278b62bf9483c420b67fa4d2db325"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/request.json.gz",
+      "bytes": 489,
+      "sha256": "1d909f0032e99fa2cffa52edd958d2b97ab7caa7655a8d6d17fdf74be3b8bbf3"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/rows.jsonl.gz",
+      "bytes": 31,
+      "sha256": "9ec214b840016c0c1c2406b2ce3685339daaa348efea0fde6cc9c318096daf34"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/blocked-read/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/blocked-read/summary.json",
+      "bytes": 487,
+      "sha256": "555aa2f682edbf54ae6a4c1dbf63038ba62c141f46d6c2a5fdad3104761e52b5"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/report.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/report.json",
+      "bytes": 7974,
+      "sha256": "94c9443716c22b31faa998f4697c675bf0f2fdb37c096451e1a6ddc4823a5137"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/request.json.gz",
+      "bytes": 447,
+      "sha256": "c460f8d7adefe434d8bfc82adbf9406b07cacc3ba090f7481723ab13a1744edf"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/rows.jsonl.gz",
+      "bytes": 31,
+      "sha256": "9ec214b840016c0c1c2406b2ce3685339daaa348efea0fde6cc9c318096daf34"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation/unterminated/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation/unterminated/summary.json",
+      "bytes": 493,
+      "sha256": "63d1c840d63c917a548d6d0ec7532b6ae23143ad3662018990377ecbf37f155e"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/framing-validation.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/framing-validation.log",
+      "bytes": 567,
+      "sha256": "ee1a4fd2b22b05be71dca808ca3ed5b56791f18064a9bea948465d5a2800f91f"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/check_equivalence.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/check_equivalence.py",
+      "bytes": 3026,
+      "sha256": "aad9e37b5c735500c2563a4391acf15c686789b82590d4bae5f559f6acf44660"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/check_replays.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/check_replays.py",
+      "bytes": 7601,
+      "sha256": "49bf22aaddfee88299bb4c72fbf1f0a4fb72cc19702460f9418ea27bf72a3fd0"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/equivalence-v1.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/equivalence-v1.json",
+      "bytes": 178,
+      "sha256": "2fd8e1bc49a4548e2511a142090074d5264bb925b0cd06051d85bc57a617b933"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/equivalence-v2.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/equivalence-v2.json",
+      "bytes": 178,
+      "sha256": "a77abc5395e56e4d959e0dd9a94f1201931b031ed984dc2248f8e2a10550ffe4"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/equivalence.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/equivalence.json",
+      "bytes": 178,
+      "sha256": "2fd8e1bc49a4548e2511a142090074d5264bb925b0cd06051d85bc57a617b933"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/fast_json.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/fast_json.py",
+      "bytes": 2130,
+      "sha256": "f0f70b3b1c76d85911bac5e122ca46a6712dbf5df52028b90e52e36f8a69d4fd"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/fast_json_v1.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/fast_json_v1.py",
+      "bytes": 1810,
+      "sha256": "61d4aabfe30ff3a0acf13a4316e65b95c396dffd7b06f6645b58773daa7b0cad"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/native-replays.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/native-replays.json",
+      "bytes": 208657,
+      "sha256": "3972b4c0996199e4a3e6298bf345d528dfc9bcad65f149329d71933b9f771172"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/native-replays.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/native-replays.log",
+      "bytes": 125,
+      "sha256": "096e662403841b67863786a7db3b6d819fe32627708303a1e8a5f0291ce0854e"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/replay-large-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/replay-large-pypy.log",
+      "bytes": 554,
+      "sha256": "7012b3a4c8f8b0a91c3768ab4a18d5b3271ee2cf9d14b3a763237a88d3881c68"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/replay-large-python314-v2.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/replay-large-python314-v2.log",
+      "bytes": 553,
+      "sha256": "bd8154bc5c8e737d051b18ffd192846b6de66ed376c111f201ed9f64634ece88"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/replay-large-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/replay-large-python314.log",
+      "bytes": 554,
+      "sha256": "6b6ff2854b5b40f49f8c0849ab9895eeb927746e31c4857016ef27c0009dffeb"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/repository-equivalence-python311.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/repository-equivalence-python311.json",
+      "bytes": 178,
+      "sha256": "a77abc5395e56e4d959e0dd9a94f1201931b031ed984dc2248f8e2a10550ffe4"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/repository-equivalence-python314.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/repository-equivalence-python314.json",
+      "bytes": 178,
+      "sha256": "a77abc5395e56e4d959e0dd9a94f1201931b031ed984dc2248f8e2a10550ffe4"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/proposal/stage_b_large.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/proposal/stage_b_large.py",
+      "bytes": 37206,
+      "sha256": "92a94969fdacae10baee8a3fc60bc5282f86a1b83a7d65b2f0047d50294bcefc"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/pypy-install.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/pypy-install.log",
+      "bytes": 194,
+      "sha256": "91284f5dccb906cd3994a41faa1746895881c070731f2e2c093d3e7673ccd14e"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/python314-install.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/python314-install.log",
+      "bytes": 201,
+      "sha256": "f8670ed465b156ac601cba38e531f077440e3f4ec5c2993ac527ca4007954df8"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/release-build.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/release-build.log",
+      "bytes": 1299,
+      "sha256": "94c225f8af9455f4eb0aa51b1cb24e0f98702d624fa9933b479cf73c0417656e"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/release-driver-tests.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/release-driver-tests.log",
+      "bytes": 892,
+      "sha256": "42c96023e50068ba36d6d3f99ccbbef011e74ad5f971f0ee5e7020e2fd681505"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/release-tests.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/release-tests.log",
+      "bytes": 5012,
+      "sha256": "44c823a3b4a569b655a4437e688abcd4b31b05cb003757d43dbd01effb10ebc2"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-large-profile-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-large-profile-python314.log",
+      "bytes": 3064,
+      "sha256": "92bd09c145b9a637898d90f244c757fad6a26273c6939f959c5eced958ad1a22"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-large-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-large-pypy.log",
+      "bytes": 553,
+      "sha256": "ee88cbfe12fa433192ab10dad3055d8040e8725f4dd05f2e2e5bbe62edfff21d"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-large-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-large-python314.log",
+      "bytes": 553,
+      "sha256": "13e41fd96e3a1e72de175db5aa4b5c9ee2a3ce01204b25dec44a9074047964a8"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-profile-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-profile-pypy.log",
+      "bytes": 3046,
+      "sha256": "86bd772abd4d96d970b6501a0dbe7fa9c21c2fbd6494af4e7dcb18e84530b932"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-profile.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-profile.log",
+      "bytes": 3048,
+      "sha256": "e967d26d0ef18a99109902a5a3253e79d8f02b71fdbae91e92005ceab204b215"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-python3.14.prof",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-python3.14.prof",
+      "bytes": 32452,
+      "sha256": "c23dfae0f58781a39e4febea040ebc9d6dcf3e8aef6e70db262e17c23a38965f"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-warm-pypy.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-warm-pypy.log",
+      "bytes": 1630,
+      "sha256": "61f8f3322d84043be3222eb1fd1e3badcb062b17113c2ff8396fa2af92a5683a"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-warm-python314-jit.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-warm-python314-jit.log",
+      "bytes": 1631,
+      "sha256": "d5a21e57df0dd38613d6ddeb3c5151187486f142f3de793d1a7ca320464ae75f"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay-warm-python314.log",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay-warm-python314.log",
+      "bytes": 1628,
+      "sha256": "aab956047eac3e6b67cae58f9e42955bc016c857b6269211e80dbf62d3d6f242"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay.prof",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay.prof",
+      "bytes": 58068,
+      "sha256": "d31ffcb285b5eb13b6f57b7571a18366bf67e5a481616d3b934388bf287b5d88"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay_profile.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay_profile.py",
+      "bytes": 2114,
+      "sha256": "ce31511684b2462df4a92b9fcf7a76113385b10cf9cf8bbac1155f5ab8831d16"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay_profile_frozen.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay_profile_frozen.py",
+      "bytes": 1700,
+      "sha256": "476e0604f239b6c540fe2d03c8c170d80becad3c36bbbd2018596fb030ca356e"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/replay_profile_small.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/replay_profile_small.py",
+      "bytes": 1356,
+      "sha256": "183a35d1d38e8db2a14360bbfb1c3f1a83880434b74ad662ca973ff3fa05810f"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/small-release/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-performance-01/small-release/rows.jsonl.gz",
+      "bytes": 1972572,
+      "sha256": "ce1c0721eee8b05f6c88e6905ce406e334dd8526911860ed4e7d30be53191af8"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/small-release/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-performance-01/small-release/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/small-release/summary.json",
+      "source": "/home/user/rob1333-stage-b-performance-01/small-release/summary.json",
+      "bytes": 1316,
+      "sha256": "2e25120bbf815a669e82d140ca0f4c94b8302d30a53fe7795861324a4946c5e2"
+    },
+    {
+      "path": "rob1333-stage-b-performance-01/validate_framing.py",
+      "source": "/home/user/rob1333-stage-b-performance-01/validate_framing.py",
+      "bytes": 3533,
+      "sha256": "8662b0fb84c817f7b34dc417dfec3d232a959994c7d9c80eee5963697c78e75f"
+    }
+  ],
+  "volumes": [
+    {
+      "path": "public-000.tar.gz",
+      "bytes": 2154744,
+      "sha256": "4006ebf0820d72f807331e8508ab7d9ce24ee750fa9578a73cfece97f7dd0365"
+    },
+    {
+      "path": "public-001.tar.gz",
+      "bytes": 12284199,
+      "sha256": "96009e439a8f834298d86f29d60ae2e821a5aa3c7761dff59c4d59d12c952e1c"
+    },
+    {
+      "path": "public-002.tar.gz",
+      "bytes": 2164758,
+      "sha256": "8262ebf210399881650b98a94d2a53b82b3f36ceb068768ab0ee9eb1a2fc35cf"
+    },
+    {
+      "path": "public-003.tar.gz",
+      "bytes": 12282404,
+      "sha256": "6363b403df3fbe06306056ebf7fa3277f3d2b985c2f5f251c0ce96b4f37f6184"
+    },
+    {
+      "path": "public-004.tar.gz",
+      "bytes": 3382991,
+      "sha256": "91d3da0b28d80cc95ce3354340e148d4632bb831a8b9093a476c0dd773b7845a"
+    }
+  ],
+  "omitted_dependency_links": [],
+  "build_cache_omitted": true,
+  "private_raw_included": false,
+  "readback_verified": true,
+  "original_files_preserved": true
+}

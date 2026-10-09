@@ -1,0 +1,268 @@
+{
+  "passed": true,
+  "synthetic_probes_are_evaluator_controls": false,
+  "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+  "preservation_before": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "runs": [
+    {
+      "workload": "NonTailSum",
+      "reader": "prior",
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 20003,
+        "budgets": [
+          240041,
+          120027
+        ],
+        "limit_seconds": 900,
+        "available_bytes": 15543578624,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 430120,
+        "committed_steps": 360068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 36,
+        "deepest_photographed": true,
+        "streamed_commits": 360068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          20003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 20003,
+        "peak_explicit_frames": 20004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 100020,
+        "peak_retained_rows": 300057,
+        "retained_rows_at_end": 220043,
+        "resource_attempts": {
+          "number": 60011,
+          "frame": 360070
+        },
+        "error": "AssertionError: resource completion/depth",
+        "elapsed_seconds": 28.329325106,
+        "phase_count": 360078,
+        "checked_steps": 360068,
+        "streamed_rows_sha256": "33ba93f330f8c60a70939d42787e86be881c6c2843e5e75f10a65ef5d2ad0197",
+        "verifier_peak_kib": 276852
+      }
+    },
+    {
+      "workload": "NonTailSum",
+      "reader": "buffered",
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 20003,
+        "budgets": [
+          240041,
+          120027
+        ],
+        "limit_seconds": 900,
+        "available_bytes": 15549054976,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 430088,
+        "child_user_seconds": 6.924695,
+        "child_system_seconds": 0.50276,
+        "committed_steps": 360068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 36,
+        "deepest_photographed": true,
+        "streamed_commits": 360068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          20003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 20003,
+        "peak_explicit_frames": 20004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 100020,
+        "peak_retained_rows": 300057,
+        "retained_rows_at_end": 220043,
+        "resource_attempts": {
+          "number": 60011,
+          "frame": 360070
+        },
+        "error": "AssertionError: resource completion/depth",
+        "elapsed_seconds": 27.192868231,
+        "phase_count": 360078,
+        "checked_steps": 360068,
+        "streamed_rows_sha256": "88540fd326d22edb45c43c2c640467f78d86fe6c1b0314acc79a58adad4b9153",
+        "verifier_peak_kib": 308620
+      }
+    },
+    {
+      "workload": "DiscardedList",
+      "reader": "prior",
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "discarded-list",
+        "depth": 10003,
+        "budgets": [
+          20005,
+          4
+        ],
+        "limit_seconds": 600,
+        "available_bytes": 15555584000,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 74032,
+        "committed_steps": 20009,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 2,
+        "deepest_photographed": true,
+        "streamed_commits": 20009,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          10003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 10003,
+        "peak_explicit_frames": 0,
+        "peak_cleanup_chain": 10003,
+        "peak_identity_rows": 2,
+        "peak_retained_rows": 40017,
+        "retained_rows_at_end": 10007,
+        "resource_attempts": {
+          "number": 30011,
+          "frame": 20011
+        },
+        "error": "AssertionError: resource completion/depth",
+        "elapsed_seconds": 1.328788184,
+        "phase_count": 20019,
+        "checked_steps": 20009,
+        "streamed_rows_sha256": "516d064428486a2808f89439da3a5f1635aa62baf8715c771443c280f2e0bb37",
+        "verifier_peak_kib": 308620
+      }
+    },
+    {
+      "workload": "DiscardedList",
+      "reader": "buffered",
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "discarded-list",
+        "depth": 10003,
+        "budgets": [
+          20005,
+          4
+        ],
+        "limit_seconds": 600,
+        "available_bytes": 15515709440,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 74172,
+        "child_user_seconds": 0.366128,
+        "child_system_seconds": 0.037203,
+        "committed_steps": 20009,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 2,
+        "deepest_photographed": true,
+        "streamed_commits": 20009,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          10003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 10003,
+        "peak_explicit_frames": 0,
+        "peak_cleanup_chain": 10003,
+        "peak_identity_rows": 2,
+        "peak_retained_rows": 40017,
+        "retained_rows_at_end": 10007,
+        "resource_attempts": {
+          "number": 30011,
+          "frame": 20011
+        },
+        "error": "AssertionError: resource completion/depth",
+        "elapsed_seconds": 1.311584481,
+        "phase_count": 20019,
+        "checked_steps": 20009,
+        "streamed_rows_sha256": "c4804b05602873f1589eb9d472a3c4ce554d0fc705f02db7f001a753511e7575",
+        "verifier_peak_kib": 308620
+      }
+    }
+  ],
+  "unterminated": {
+    "passed": false,
+    "candidate_executed": true,
+    "fixture_stub": false,
+    "workload": "non-tail-sum",
+    "depth": 3,
+    "budgets": [
+      41,
+      27
+    ],
+    "limit_seconds": 900,
+    "available_bytes": 15424753664,
+    "stack_bytes": 8388608,
+    "error": "AssertionError: partial driver record",
+    "elapsed_seconds": 0.017862292,
+    "phase_count": 0,
+    "checked_steps": 0,
+    "streamed_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier_peak_kib": 308620
+  },
+  "blocked-read": {
+    "passed": false,
+    "candidate_executed": true,
+    "fixture_stub": false,
+    "workload": "non-tail-sum",
+    "depth": 3,
+    "budgets": [
+      41,
+      27
+    ],
+    "limit_seconds": 900,
+    "available_bytes": 15421661184,
+    "stack_bytes": 8388608,
+    "error": "TimeoutError: inclusive watchdog",
+    "elapsed_seconds": 0.06786868,
+    "phase_count": 0,
+    "checked_steps": 0,
+    "streamed_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verifier_peak_kib": 308620
+  },
+  "elapsed_seconds": 110.13145959599933,
+  "preservation_after": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  }
+}
