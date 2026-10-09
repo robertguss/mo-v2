@@ -1,0 +1,2065 @@
+{
+  "public_roots": [
+    "/home/user/rob1333-stage-b-timing-validation-01"
+  ],
+  "files": [
+    {
+      "path": "rob1333-stage-b-timing-validation-01/build.log",
+      "logical_path": "rob1333-stage-b-timing-validation-01/build.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/build.log",
+      "offset": 0,
+      "bytes": 314,
+      "sha256": "c9094e5a1cbd3739631c1e9b3d045d3e1fe60676955bc9f2eea0b1aea7be7828",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-check/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/native-timing.json",
+      "offset": 0,
+      "bytes": 255,
+      "sha256": "32c9c8339f6473089b8223848ec2179276b079f3b48a3f53aaaa987549442a1e",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-check/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/request.json.gz",
+      "offset": 0,
+      "bytes": 721,
+      "sha256": "850775fe2a1bce11733e428e52034220cf1dbb676218ad54deaea38751fc31e4",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-check/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 72318,
+      "sha256": "45603aecf861dd0a6e30cdf4d2b9a6650ab51957e4c17225dd678f7327d9bd50",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-check/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-check/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/summary.json",
+      "offset": 0,
+      "bytes": 2578,
+      "sha256": "e0e871ecf3cc7ee9dbd0b1c219474bc22ad1611e33a00c81cb5c41cef6e7d62e",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/native-timing.json",
+      "offset": 0,
+      "bytes": 252,
+      "sha256": "0bf1c5c6b8b35724a62fc3c552cfd9ff7330a6ea4340046f69dcf09b407f132e",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/request.json.gz",
+      "offset": 0,
+      "bytes": 721,
+      "sha256": "d90a303765ec18fc1e02984b79aea69de0b3419186f265087da0b6122a69a8f3",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 72151,
+      "sha256": "6ed1ba166fb224c36d9ea754efd8faa2e543d9e0660a4599deca34651f5feaba",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/summary.json",
+      "offset": 0,
+      "bytes": 2553,
+      "sha256": "bfc0f1e4f4147caa08939cb50a6871cacad9ba3b7279e9f5f0ae96c5a3ec62ed",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/request.json.gz",
+      "offset": 0,
+      "bytes": 55092,
+      "sha256": "0bc1a4052ec91b9beef99399a73d5b7d581c2ab66e2d620f336070fb4aade79f",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 1652611,
+      "sha256": "8f3a2ebbfc8eb2b86fb28206764d720c1acd902a0e9e44a00dbc43c74d45a98b",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/summary.json",
+      "offset": 0,
+      "bytes": 1186,
+      "sha256": "16a56c5465467f8711eb9dcc41f785b11cfdda3810fdad0312cff653f18775cc",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/native-timing.json",
+      "offset": 0,
+      "bytes": 256,
+      "sha256": "7baf08fcffe10fd018358583f33232a4f178772d9604619c7415cbdc622aa63f",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/request.json.gz",
+      "offset": 0,
+      "bytes": 55088,
+      "sha256": "f7fcdec63961b8142e6f24a4a7117be6e05d2c115ed3474c073fb046339d4207",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 1653058,
+      "sha256": "39baa3e44dccfd07e4ca276f00cfcabce3d7986d9caeab4b5ef727cc7f6061a4",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/summary.json",
+      "offset": 0,
+      "bytes": 2589,
+      "sha256": "7cbdbd33b2f959325014bd9ccdbea62fa00d22ddee44ca7e785f7dac20b46e85",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/request.json.gz",
+      "offset": 0,
+      "bytes": 602,
+      "sha256": "78780b338ac02f844a8fbba5a5505b26dee891e1cbc4b47524d727dc1b2e4bdf",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 11016,
+      "sha256": "9a296f9479dc2c4bbf0857345a9f7a890f21863d7fe357aa1f1d187f75809486",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/summary.json",
+      "offset": 0,
+      "bytes": 1125,
+      "sha256": "94e98dd6d6b23bc80e4bbb56b98716c3e139642b9571ccbecc856d6f32ddc10c",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/native-timing.json",
+      "offset": 0,
+      "bytes": 244,
+      "sha256": "f6bf310dfd23dc8f98aef5515113e0a6d1517d3681310131e8a0d864d8a3e957",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/request.json.gz",
+      "offset": 0,
+      "bytes": 600,
+      "sha256": "4981e231c49325c6ebf9ba180d97fda6f23d06bbf56868ff17965995a1d2dbfa",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 10961,
+      "sha256": "7ac22f31c8b9541b2d915aad2f65ac39005a25a4ab3df847d3032f697b4c5117",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/summary.json",
+      "offset": 0,
+      "bytes": 2522,
+      "sha256": "29f527ab7a90fbfc7744e651db77350e960763c1997a336750e8a565d6615e1e",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/request.json.gz",
+      "offset": 0,
+      "bytes": 54907,
+      "sha256": "1fe04c42815a726f85c1abccd3f78562d51e92e3ed9e4e5a8027bdd8970bf373",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 10501388,
+      "sha256": "112124ea61716421ad8f6b2c0feca3fb0881b812c9292337c1fd3cfe6ec3818f",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/summary.json",
+      "offset": 0,
+      "bytes": 1177,
+      "sha256": "7f811ed5e31dd9efae19079a82d4bc65fe393d3ffb2d64a043508d98f96b1e26",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/native-timing.json",
+      "offset": 0,
+      "bytes": 266,
+      "sha256": "362c78ad28f1e8887938b952b09952bdcb836a19ca83d89f8fbdcb97797ce532",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/request.json.gz",
+      "offset": 0,
+      "bytes": 54903,
+      "sha256": "f78a9a223febb06554f8398c24fea6c191043bd9e34a43b6b324e14e56b955f7",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 10497530,
+      "sha256": "2e07dc89f88663e8de6ecc35b1e0a99c628404d80006ad936b31691f418a767d",
+      "volume": "public-001.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-001.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/summary.json",
+      "offset": 0,
+      "bytes": 2628,
+      "sha256": "9cf78ada1d87b7cf20ac58ab8f9c7ab341b06ebeab3329261948010acac56a74",
+      "volume": "public-001.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/request.json.gz",
+      "offset": 0,
+      "bytes": 112512,
+      "sha256": "6293c0bad7c9d68552700bb4a9ad6dd472e7723eb9ed76822c1635a063cdf549",
+      "volume": "public-001.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "6dc450113c912d12ffbd350957ae109533aaf3b6a2c3a3ab655dd7797c6bb6a5",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 4220791,
+      "sha256": "94f0b332f2efcf737480c35e76d04b92f6db13a8b85d06da1c60fee49dd05fb1",
+      "volume": "public-003.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-003.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/summary.json",
+      "offset": 0,
+      "bytes": 1192,
+      "sha256": "a194ee6cf6de2fef87a1f4c29787348bf857324bfbb121e195c6627e5e7eac0c",
+      "volume": "public-003.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/native-timing.json",
+      "offset": 0,
+      "bytes": 269,
+      "sha256": "d96a257523ae0b5ff911f0bf9e6ee3344c39c214d490481a15bf106639888952",
+      "volume": "public-003.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/request.json.gz",
+      "offset": 0,
+      "bytes": 112509,
+      "sha256": "ced93eb47f0b0cc23d042bf874ca47e988ece88511b44f4a607935a9f52bcc1d",
+      "volume": "public-003.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "8d6b6b612f453ef5fe03f9dc275a2de3b17b0520767ef1459b58274178d9d128",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 4230892,
+      "sha256": "31b0b2d29494ff6421ca763df44c0c90ee71ed5d1c780b2a1684b16b1e448485",
+      "volume": "public-005.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-005.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/summary.json",
+      "offset": 0,
+      "bytes": 2639,
+      "sha256": "6770f8af17f61cba989ed42b43025abd9017ae893bdcd0f07f19143fdd31c6e7",
+      "volume": "public-005.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/request.json.gz",
+      "offset": 0,
+      "bytes": 226988,
+      "sha256": "7c551cbb3a1c72faf272aa93796ef8fbc2c0be5cea04215edf1a3913ce55b287",
+      "volume": "public-005.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "360e6af4312b52cc42b81c8601cc5adc196da334d2b07e52184e7bac3786af2c",
+      "volume": "public-006.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 16777216,
+      "sha256": "90909a84fa2a6e1aa7934bb21e8c13e4d59b283b7f8f9087b6d930a35fcc8acd",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz.chunk-000033554432",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "offset": 33554432,
+      "bytes": 8439663,
+      "sha256": "7eba52c68758b7a62dbffb7234c88aad39462b078cac07d29341c61a8bc5b5b5",
+      "volume": "public-008.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-008.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/summary.json",
+      "offset": 0,
+      "bytes": 1193,
+      "sha256": "b52fb7e51d8f21b7548ea4233631397a903df9061191dd26fe8c9f13745e4ca5",
+      "volume": "public-008.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/native-timing.json",
+      "offset": 0,
+      "bytes": 269,
+      "sha256": "075c7fcdf15d0fad04f3d9b7a8f46ab15e29a6056e3bf0f5e272e2376783644c",
+      "volume": "public-008.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/request.json.gz",
+      "offset": 0,
+      "bytes": 226984,
+      "sha256": "53c01bcecd4ece82ae225b48ed3b154d5cc7dbf2fb0cb3155fc446b24908fc6a",
+      "volume": "public-008.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "52fe9add385ccfc6c7183b67c6cd53be237bc0632c6844b36f9c237220f2a8e2",
+      "volume": "public-009.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 16777216,
+      "sha256": "d91f11098f9b423c60d0ca46a46f8308e6510d1e22908cbb03264e53eb3a6086",
+      "volume": "public-010.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz.chunk-000033554432",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "offset": 33554432,
+      "bytes": 8436726,
+      "sha256": "b09559a2e609b6dc633558cff7cf7192365bab818b0cede26313c2a6d8b9e566",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/summary.json",
+      "offset": 0,
+      "bytes": 2653,
+      "sha256": "e6f9bdc468c6dc03b34761c394b47f99b7bf909d4d23d75f0a6520ed1159ce2c",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/request.json.gz",
+      "offset": 0,
+      "bytes": 723,
+      "sha256": "1fb89db8a7e15dad4057a5e8d374adbf0feb46141f5a9c26a5c0ce3a4ab7dc77",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 72229,
+      "sha256": "5a79760177b7ddb1cb1375d3e53e0e647160b8ee4377c2527fb29876bef332da",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/summary.json",
+      "offset": 0,
+      "bytes": 1133,
+      "sha256": "2ea7f403288055f5bb6e3ff32f2ecbd20bf93aaebadb95ad8a752859f2a9790d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/native-timing.json",
+      "offset": 0,
+      "bytes": 251,
+      "sha256": "ff0a930a7a2b532bc6d13be0e0cd6b3a9988cf97221b7aa64688b8f1c54838f1",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/request.json.gz",
+      "offset": 0,
+      "bytes": 721,
+      "sha256": "bbca95fc3f61b5f3f96285ddf709c0aaae93cad2f0bdd08f215771d2d0c0ecb4",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 72457,
+      "sha256": "9be7c32da5a6079d5b6c015e046960fc0e225ed209dd0eba6b52b71ac02085fe",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/summary.json",
+      "offset": 0,
+      "bytes": 2544,
+      "sha256": "cdee9d05bf6779c73cf15f8eec92e81fc062f7965e31ae255cbb04563b75abd8",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/report.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/report.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/report.json",
+      "offset": 0,
+      "bytes": 65443,
+      "sha256": "33668d88f64d81a3dddb20d7f321b769d3c7ecc8aae9050e65a7f2c224dadab9",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/request.json.gz",
+      "offset": 0,
+      "bytes": 1265,
+      "sha256": "0625135ca2621cbe6d17b8e8008bcae109d974401b45d7fa1e0e1b3ed8ceabd0",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/summary.json",
+      "offset": 0,
+      "bytes": 1149,
+      "sha256": "11f8cb475221557a3065df92a905576d88e7d05eafb7608fa0f47e805edc419d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/native-timing.json",
+      "offset": 0,
+      "bytes": 231,
+      "sha256": "bf7ad606b558a29eecc2617e45505ff7961c44d5b9d8483b38ce7551586bb8eb",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/request.json.gz",
+      "offset": 0,
+      "bytes": 1265,
+      "sha256": "289773e6872a447d1fe82e069d07666b2389a1db3ec925ea64855ba3fbca1598",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/summary.json",
+      "offset": 0,
+      "bytes": 1183,
+      "sha256": "3ffb53e45e581eaec20acbc875dc52b1f20e12ba5452210da27ed9b7acadba17",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/native-timing.json",
+      "offset": 0,
+      "bytes": 245,
+      "sha256": "bfac33d2be26f0f5ca95dabe6107721e5cb3f4c243b32f409611709bc3ea005c",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/request.json.gz",
+      "offset": 0,
+      "bytes": 1265,
+      "sha256": "d3f206ac019bfbe3d79fa482f1c04bb07161e1fb61d51b51f56aab211f768c00",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/summary.json",
+      "offset": 0,
+      "bytes": 1167,
+      "sha256": "77f858064863a40a2d69f4682b9597f46d4f48b5e40b75ee4dfb160a5f3c5d0b",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/native-timing.json",
+      "offset": 0,
+      "bytes": 240,
+      "sha256": "a7e9a967db6440b35cb32d8df6605fbd7a933012504488bc7bcc16f987f8b75d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/request.json.gz",
+      "offset": 0,
+      "bytes": 1265,
+      "sha256": "b7daffaba6a321764dcdd02ecbc63deae08c53f46306afa9c4cddc1d4b4b10a9",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/summary.json",
+      "offset": 0,
+      "bytes": 1167,
+      "sha256": "2ff9d98bf722e9532b2853d281ac8e680d1f56a4cefba429d767feb5337ebd81",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/native-timing.json",
+      "offset": 0,
+      "bytes": 268,
+      "sha256": "3d0b9629d807e08e7b1c053fee10d3f885330d8765cf27957ce054f56322d8c2",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/request.json.gz",
+      "offset": 0,
+      "bytes": 1266,
+      "sha256": "cdb86fd3a9211a966c14ff3f0867417e59ed90469a2c51d0d702da2bf0ffa34e",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/summary.json",
+      "offset": 0,
+      "bytes": 1578,
+      "sha256": "772a8f961b16f883d41261998d40c6c5cb9d5067ae4dc17f6a51bd1cf0d41e64",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/native-timing.json",
+      "offset": 0,
+      "bytes": 229,
+      "sha256": "ef0d374613085bb4da531693166a63a6d9a61c75c12d010468ec13f988905483",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/request.json.gz",
+      "offset": 0,
+      "bytes": 1267,
+      "sha256": "b41afa4aa9d7ca6c5ea174048e2f5cd358488853c6ed6ab9d9dcbdec27d3db95",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/summary.json",
+      "offset": 0,
+      "bytes": 1178,
+      "sha256": "8f4715daed85f6ac15163ddfc4589fbc947777f175d9c1e39372cfc2fb5dcb87",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/request.json.gz",
+      "offset": 0,
+      "bytes": 1266,
+      "sha256": "deb2c49f2ee908e82b62cc657730468e0f53edd3b3f1d2d88bd31096a3e214aa",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/summary.json",
+      "offset": 0,
+      "bytes": 1293,
+      "sha256": "82e8ae8dd60f49607ebdcac1e78cc1b81a92f3906a0c74dfadb7fb4741efc1e5",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/native-timing.json",
+      "offset": 0,
+      "bytes": 16613,
+      "sha256": "77f1810b39ce3c86bf7e339138731f123fb30ea301c09145a26796b33cde1d73",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/request.json.gz",
+      "offset": 0,
+      "bytes": 1265,
+      "sha256": "b0d68e4ef8cced102347db8d09191b25e807ecbbd33d09be1d2a1b347c0fa1db",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/summary.json",
+      "offset": 0,
+      "bytes": 1185,
+      "sha256": "efb7dcb20d6e8e1eb2a42306f66aa027343d835560b9251f02cac116467a6db3",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/native-timing.json",
+      "offset": 0,
+      "bytes": 228,
+      "sha256": "bc4aa93ee39a11ea9070b18a9328544845f2c6a2a72233b95108dc3dde5769f4",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/request.json.gz",
+      "offset": 0,
+      "bytes": 1263,
+      "sha256": "e45ef56769a6c3cf3c27d693c81c436e7dfc7622b81cd493c9d1bf04e25e5437",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/summary.json",
+      "offset": 0,
+      "bytes": 1177,
+      "sha256": "ff9bef9eef77c04e48473e2cdab6c9ee4e8179cf1e823bbd4922d8881cb3ed82",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/request.json.gz",
+      "offset": 0,
+      "bytes": 1265,
+      "sha256": "8586d5844fd6de52fba984beccb51aec1066fe170e1b5f116b723479ee3359fd",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 31,
+      "sha256": "38cfbd988eb448ddfb3ded12dde1add7a4ad2c858464df5602c303188765fe33",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/summary.json",
+      "offset": 0,
+      "bytes": 1092,
+      "sha256": "19f193616ee88f04ab8676a4f178bd3744771239eab6d31a268c8fcf27697380",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/native-timing.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/native-timing.json",
+      "offset": 0,
+      "bytes": 228,
+      "sha256": "6e001b2870c7ae0bb3ad54a3043e454f44c3de092661a861819f89f1c950bf45",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/request.json.gz",
+      "offset": 0,
+      "bytes": 1268,
+      "sha256": "b5ffa8c5d0e573216f7dd80aa7f1892074f0f7ae8a496647d2377e82fbf5db9a",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/summary.json",
+      "offset": 0,
+      "bytes": 2105,
+      "sha256": "0c4950a878142364aa19a334b6ea97116b40aaef55277d179deec6bdab8e63fe",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/request.json.gz",
+      "offset": 0,
+      "bytes": 721,
+      "sha256": "d90a303765ec18fc1e02984b79aea69de0b3419186f265087da0b6122a69a8f3",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 570,
+      "sha256": "1907edf91fa134a31037ee64cb22fff87aaa7d7310f0905126a038eb4450c97d",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/summary.json",
+      "offset": 0,
+      "bytes": 1100,
+      "sha256": "19f0755f295d3d7712026d43628f89bb1ed3278f644795f3c0dc1ff6bed6016c",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/request.json.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/request.json.gz",
+      "offset": 0,
+      "bytes": 721,
+      "sha256": "84af6ed9010db50dfc0671e53899a65dfccdb5177c38ebb42ead505e3fb22d3b",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 2680,
+      "sha256": "6f49c9804e8463e7238be90fcf9176de371ecf75fc766a761f28c36e9372038e",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/stderr.txt",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/summary.json",
+      "logical_path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/summary.json",
+      "offset": 0,
+      "bytes": 1112,
+      "sha256": "f4a39d754b88fd4d5496b65562759b86ab3ff2399d156de1f4cf88c5bd3903d6",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/fmt.log",
+      "logical_path": "rob1333-stage-b-timing-validation-01/fmt.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/fmt.log",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/rust-tests.log",
+      "logical_path": "rob1333-stage-b-timing-validation-01/rust-tests.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/rust-tests.log",
+      "offset": 0,
+      "bytes": 1090,
+      "sha256": "f0105c36287ad2a850e7df572de1a1c1546d7ef5be86790d34250e91ca105f99",
+      "volume": "public-011.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/validation.log",
+      "logical_path": "rob1333-stage-b-timing-validation-01/validation.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/validation.log",
+      "offset": 0,
+      "bytes": 480,
+      "sha256": "13094198d2a01f280c6a99db72f3609634cf39eb3923813a44346891357a0929",
+      "volume": "public-011.tar.gz"
+    }
+  ],
+  "sources": [
+    {
+      "path": "rob1333-stage-b-timing-validation-01/build.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/build.log",
+      "bytes": 314,
+      "sha256": "c9094e5a1cbd3739631c1e9b3d045d3e1fe60676955bc9f2eea0b1aea7be7828"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/native-timing.json",
+      "bytes": 255,
+      "sha256": "32c9c8339f6473089b8223848ec2179276b079f3b48a3f53aaaa987549442a1e"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/request.json.gz",
+      "bytes": 721,
+      "sha256": "850775fe2a1bce11733e428e52034220cf1dbb676218ad54deaea38751fc31e4"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/rows.jsonl.gz",
+      "bytes": 72318,
+      "sha256": "45603aecf861dd0a6e30cdf4d2b9a6650ab51957e4c17225dd678f7327d9bd50"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-check/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-check/summary.json",
+      "bytes": 2578,
+      "sha256": "e0e871ecf3cc7ee9dbd0b1c219474bc22ad1611e33a00c81cb5c41cef6e7d62e"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/native-timing.json",
+      "bytes": 252,
+      "sha256": "0bf1c5c6b8b35724a62fc3c552cfd9ff7330a6ea4340046f69dcf09b407f132e"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/request.json.gz",
+      "bytes": 721,
+      "sha256": "d90a303765ec18fc1e02984b79aea69de0b3419186f265087da0b6122a69a8f3"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/rows.jsonl.gz",
+      "bytes": 72151,
+      "sha256": "6ed1ba166fb224c36d9ea754efd8faa2e543d9e0660a4599deca34651f5feaba"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/delay-commit/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/delay-commit/summary.json",
+      "bytes": 2553,
+      "sha256": "bfc0f1e4f4147caa08939cb50a6871cacad9ba3b7279e9f5f0ae96c5a3ec62ed"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/request.json.gz",
+      "bytes": 55092,
+      "sha256": "0bc1a4052ec91b9beef99399a73d5b7d581c2ab66e2d620f336070fb4aade79f"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/rows.jsonl.gz",
+      "bytes": 1652611,
+      "sha256": "8f3a2ebbfc8eb2b86fb28206764d720c1acd902a0e9e44a00dbc43c74d45a98b"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-baseline/summary.json",
+      "bytes": 1186,
+      "sha256": "16a56c5465467f8711eb9dcc41f785b11cfdda3810fdad0312cff653f18775cc"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/native-timing.json",
+      "bytes": 256,
+      "sha256": "7baf08fcffe10fd018358583f33232a4f178772d9604619c7415cbdc622aa63f"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/request.json.gz",
+      "bytes": 55088,
+      "sha256": "f7fcdec63961b8142e6f24a4a7117be6e05d2c115ed3474c073fb046339d4207"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/rows.jsonl.gz",
+      "bytes": 1653058,
+      "sha256": "39baa3e44dccfd07e4ca276f00cfcabce3d7986d9caeab4b5ef727cc7f6061a4"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-10003-timed/summary.json",
+      "bytes": 2589,
+      "sha256": "7cbdbd33b2f959325014bd9ccdbea62fa00d22ddee44ca7e785f7dac20b46e85"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/request.json.gz",
+      "bytes": 602,
+      "sha256": "78780b338ac02f844a8fbba5a5505b26dee891e1cbc4b47524d727dc1b2e4bdf"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/rows.jsonl.gz",
+      "bytes": 11016,
+      "sha256": "9a296f9479dc2c4bbf0857345a9f7a890f21863d7fe357aa1f1d187f75809486"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-baseline/summary.json",
+      "bytes": 1125,
+      "sha256": "94e98dd6d6b23bc80e4bbb56b98716c3e139642b9571ccbecc856d6f32ddc10c"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/native-timing.json",
+      "bytes": 244,
+      "sha256": "f6bf310dfd23dc8f98aef5515113e0a6d1517d3681310131e8a0d864d8a3e957"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/request.json.gz",
+      "bytes": 600,
+      "sha256": "4981e231c49325c6ebf9ba180d97fda6f23d06bbf56868ff17965995a1d2dbfa"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/rows.jsonl.gz",
+      "bytes": 10961,
+      "sha256": "7ac22f31c8b9541b2d915aad2f65ac39005a25a4ab3df847d3032f697b4c5117"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/discarded-list-64-timed/summary.json",
+      "bytes": 2522,
+      "sha256": "29f527ab7a90fbfc7744e651db77350e960763c1997a336750e8a565d6615e1e"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/request.json.gz",
+      "bytes": 54907,
+      "sha256": "1fe04c42815a726f85c1abccd3f78562d51e92e3ed9e4e5a8027bdd8970bf373"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/rows.jsonl.gz",
+      "bytes": 10501388,
+      "sha256": "112124ea61716421ad8f6b2c0feca3fb0881b812c9292337c1fd3cfe6ec3818f"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-baseline/summary.json",
+      "bytes": 1177,
+      "sha256": "7f811ed5e31dd9efae19079a82d4bc65fe393d3ffb2d64a043508d98f96b1e26"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/native-timing.json",
+      "bytes": 266,
+      "sha256": "362c78ad28f1e8887938b952b09952bdcb836a19ca83d89f8fbdcb97797ce532"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/request.json.gz",
+      "bytes": 54903,
+      "sha256": "f78a9a223febb06554f8398c24fea6c191043bd9e34a43b6b324e14e56b955f7"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/rows.jsonl.gz",
+      "bytes": 10497530,
+      "sha256": "2e07dc89f88663e8de6ecc35b1e0a99c628404d80006ad936b31691f418a767d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-10003-timed/summary.json",
+      "bytes": 2628,
+      "sha256": "9cf78ada1d87b7cf20ac58ab8f9c7ab341b06ebeab3329261948010acac56a74"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/request.json.gz",
+      "bytes": 112512,
+      "sha256": "6293c0bad7c9d68552700bb4a9ad6dd472e7723eb9ed76822c1635a063cdf549"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/rows.jsonl.gz",
+      "bytes": 20998007,
+      "sha256": "e9ad06989524e0b979b9b51d65252afc9f2b820150d9e588afb9a25252cced1e"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-baseline/summary.json",
+      "bytes": 1192,
+      "sha256": "a194ee6cf6de2fef87a1f4c29787348bf857324bfbb121e195c6627e5e7eac0c"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/native-timing.json",
+      "bytes": 269,
+      "sha256": "d96a257523ae0b5ff911f0bf9e6ee3344c39c214d490481a15bf106639888952"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/request.json.gz",
+      "bytes": 112509,
+      "sha256": "ced93eb47f0b0cc23d042bf874ca47e988ece88511b44f4a607935a9f52bcc1d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/rows.jsonl.gz",
+      "bytes": 21008108,
+      "sha256": "da1a323f8f483ddb9553779cebfa00a60a4febba84b3caa458ca210c005c0fbc"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-20003-timed/summary.json",
+      "bytes": 2639,
+      "sha256": "6770f8af17f61cba989ed42b43025abd9017ae893bdcd0f07f19143fdd31c6e7"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/request.json.gz",
+      "bytes": 226988,
+      "sha256": "7c551cbb3a1c72faf272aa93796ef8fbc2c0be5cea04215edf1a3913ce55b287"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/rows.jsonl.gz",
+      "bytes": 41994095,
+      "sha256": "f0ccbd966e0042ff5bb6a661a0cb80177dd3c0f0bacc2ded86894a49aa396168"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-baseline/summary.json",
+      "bytes": 1193,
+      "sha256": "b52fb7e51d8f21b7548ea4233631397a903df9061191dd26fe8c9f13745e4ca5"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/native-timing.json",
+      "bytes": 269,
+      "sha256": "075c7fcdf15d0fad04f3d9b7a8f46ab15e29a6056e3bf0f5e272e2376783644c"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/request.json.gz",
+      "bytes": 226984,
+      "sha256": "53c01bcecd4ece82ae225b48ed3b154d5cc7dbf2fb0cb3155fc446b24908fc6a"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/rows.jsonl.gz",
+      "bytes": 41991158,
+      "sha256": "64212cf248b61723bf551316bd3aa246014c90c312df5d286f3d4153ca7232f7"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-40003-timed/summary.json",
+      "bytes": 2653,
+      "sha256": "e6f9bdc468c6dc03b34761c394b47f99b7bf909d4d23d75f0a6520ed1159ce2c"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/request.json.gz",
+      "bytes": 723,
+      "sha256": "1fb89db8a7e15dad4057a5e8d374adbf0feb46141f5a9c26a5c0ce3a4ab7dc77"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/rows.jsonl.gz",
+      "bytes": 72229,
+      "sha256": "5a79760177b7ddb1cb1375d3e53e0e647160b8ee4377c2527fb29876bef332da"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-baseline/summary.json",
+      "bytes": 1133,
+      "sha256": "2ea7f403288055f5bb6e3ff32f2ecbd20bf93aaebadb95ad8a752859f2a9790d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/native-timing.json",
+      "bytes": 251,
+      "sha256": "ff0a930a7a2b532bc6d13be0e0cd6b3a9988cf97221b7aa64688b8f1c54838f1"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/request.json.gz",
+      "bytes": 721,
+      "sha256": "bbca95fc3f61b5f3f96285ddf709c0aaae93cad2f0bdd08f215771d2d0c0ecb4"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/rows.jsonl.gz",
+      "bytes": 72457,
+      "sha256": "9be7c32da5a6079d5b6c015e046960fc0e225ed209dd0eba6b52b71ac02085fe"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/non-tail-sum-64-timed/summary.json",
+      "bytes": 2544,
+      "sha256": "cdee9d05bf6779c73cf15f8eec92e81fc062f7965e31ae255cbb04563b75abd8"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/report.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/report.json",
+      "bytes": 65443,
+      "sha256": "33668d88f64d81a3dddb20d7f321b769d3c7ecc8aae9050e65a7f2c224dadab9"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/request.json.gz",
+      "bytes": 1265,
+      "sha256": "0625135ca2621cbe6d17b8e8008bcae109d974401b45d7fa1e0e1b3ed8ceabd0"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-abnormal/summary.json",
+      "bytes": 1149,
+      "sha256": "11f8cb475221557a3065df92a905576d88e7d05eafb7608fa0f47e805edc419d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/native-timing.json",
+      "bytes": 231,
+      "sha256": "bf7ad606b558a29eecc2617e45505ff7961c44d5b9d8483b38ce7551586bb8eb"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/request.json.gz",
+      "bytes": 1265,
+      "sha256": "289773e6872a447d1fe82e069d07666b2389a1db3ec925ea64855ba3fbca1598"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-boolean/summary.json",
+      "bytes": 1183,
+      "sha256": "3ffb53e45e581eaec20acbc875dc52b1f20e12ba5452210da27ed9b7acadba17"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/native-timing.json",
+      "bytes": 245,
+      "sha256": "bfac33d2be26f0f5ca95dabe6107721e5cb3f4c243b32f409611709bc3ea005c"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/request.json.gz",
+      "bytes": 1265,
+      "sha256": "d3f206ac019bfbe3d79fa482f1c04bb07161e1fb61d51b51f56aab211f768c00"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-duplicate/summary.json",
+      "bytes": 1167,
+      "sha256": "77f858064863a40a2d69f4682b9597f46d4f48b5e40b75ee4dfb160a5f3c5d0b"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/native-timing.json",
+      "bytes": 240,
+      "sha256": "a7e9a967db6440b35cb32d8df6605fbd7a933012504488bc7bcc16f987f8b75d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/request.json.gz",
+      "bytes": 1265,
+      "sha256": "b7daffaba6a321764dcdd02ecbc63deae08c53f46306afa9c4cddc1d4b4b10a9"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-extra/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-extra/summary.json",
+      "bytes": 1167,
+      "sha256": "2ff9d98bf722e9532b2853d281ac8e680d1f56a4cefba429d767feb5337ebd81"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/native-timing.json",
+      "bytes": 268,
+      "sha256": "3d0b9629d807e08e7b1c053fee10d3f885330d8765cf27957ce054f56322d8c2"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/request.json.gz",
+      "bytes": 1266,
+      "sha256": "cdb86fd3a9211a966c14ff3f0867417e59ed90469a2c51d0d702da2bf0ffa34e"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-impossible/summary.json",
+      "bytes": 1578,
+      "sha256": "772a8f961b16f883d41261998d40c6c5cb9d5067ae4dc17f6a51bd1cf0d41e64"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/native-timing.json",
+      "bytes": 229,
+      "sha256": "ef0d374613085bb4da531693166a63a6d9a61c75c12d010468ec13f988905483"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/request.json.gz",
+      "bytes": 1267,
+      "sha256": "b41afa4aa9d7ca6c5ea174048e2f5cd358488853c6ed6ab9d9dcbdec27d3db95"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-incomplete/summary.json",
+      "bytes": 1178,
+      "sha256": "8f4715daed85f6ac15163ddfc4589fbc947777f175d9c1e39372cfc2fb5dcb87"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/request.json.gz",
+      "bytes": 1266,
+      "sha256": "deb2c49f2ee908e82b62cc657730468e0f53edd3b3f1d2d88bd31096a3e214aa"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-missing/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/summary.json",
+      "bytes": 1293,
+      "sha256": "82e8ae8dd60f49607ebdcac1e78cc1b81a92f3906a0c74dfadb7fb4741efc1e5"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/native-timing.json",
+      "bytes": 16613,
+      "sha256": "77f1810b39ce3c86bf7e339138731f123fb30ea301c09145a26796b33cde1d73"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/request.json.gz",
+      "bytes": 1265,
+      "sha256": "b0d68e4ef8cced102347db8d09191b25e807ecbbd33d09be1d2a1b347c0fa1db"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-oversize/summary.json",
+      "bytes": 1185,
+      "sha256": "efb7dcb20d6e8e1eb2a42306f66aa027343d835560b9251f02cac116467a6db3"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/native-timing.json",
+      "bytes": 228,
+      "sha256": "bc4aa93ee39a11ea9070b18a9328544845f2c6a2a72233b95108dc3dde5769f4"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/request.json.gz",
+      "bytes": 1263,
+      "sha256": "e45ef56769a6c3cf3c27d693c81c436e7dfc7622b81cd493c9d1bf04e25e5437"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-reconcile/summary.json",
+      "bytes": 1177,
+      "sha256": "ff9bef9eef77c04e48473e2cdab6c9ee4e8179cf1e823bbd4922d8881cb3ed82"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/request.json.gz",
+      "bytes": 1265,
+      "sha256": "8586d5844fd6de52fba984beccb51aec1066fe170e1b5f116b723479ee3359fd"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/rows.jsonl.gz",
+      "bytes": 31,
+      "sha256": "38cfbd988eb448ddfb3ded12dde1add7a4ad2c858464df5602c303188765fe33"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-stall/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-stall/summary.json",
+      "bytes": 1092,
+      "sha256": "19f193616ee88f04ab8676a4f178bd3744771239eab6d31a268c8fcf27697380"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/native-timing.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/native-timing.json",
+      "bytes": 228,
+      "sha256": "6e001b2870c7ae0bb3ad54a3043e454f44c3de092661a861819f89f1c950bf45"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/request.json.gz",
+      "bytes": 1268,
+      "sha256": "b5ffa8c5d0e573216f7dd80aa7f1892074f0f7ae8a496647d2377e82fbf5db9a"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/rows.jsonl.gz",
+      "bytes": 50,
+      "sha256": "8daa015361e8f3f998a8676858b948e4fdc7e9f63fc5f6bad76914248ac3746d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/synthetic-valid/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-valid/summary.json",
+      "bytes": 2105,
+      "sha256": "0c4950a878142364aa19a334b6ea97116b40aaef55277d179deec6bdab8e63fe"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/request.json.gz",
+      "bytes": 721,
+      "sha256": "d90a303765ec18fc1e02984b79aea69de0b3419186f265087da0b6122a69a8f3"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/rows.jsonl.gz",
+      "bytes": 570,
+      "sha256": "1907edf91fa134a31037ee64cb22fff87aaa7d7310f0905126a038eb4450c97d"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-check/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-check/summary.json",
+      "bytes": 1100,
+      "sha256": "19f0755f295d3d7712026d43628f89bb1ed3278f644795f3c0dc1ff6bed6016c"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/request.json.gz",
+      "bytes": 721,
+      "sha256": "84af6ed9010db50dfc0671e53899a65dfccdb5177c38ebb42ead505e3fb22d3b"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/rows.jsonl.gz",
+      "bytes": 2680,
+      "sha256": "6f49c9804e8463e7238be90fcf9176de371ecf75fc766a761f28c36e9372038e"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/checks/timeout-commit/summary.json",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/checks/timeout-commit/summary.json",
+      "bytes": 1112,
+      "sha256": "f4a39d754b88fd4d5496b65562759b86ab3ff2399d156de1f4cf88c5bd3903d6"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/fmt.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/rust-tests.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/rust-tests.log",
+      "bytes": 1090,
+      "sha256": "f0105c36287ad2a850e7df572de1a1c1546d7ef5be86790d34250e91ca105f99"
+    },
+    {
+      "path": "rob1333-stage-b-timing-validation-01/validation.log",
+      "source": "/home/user/rob1333-stage-b-timing-validation-01/validation.log",
+      "bytes": 480,
+      "sha256": "13094198d2a01f280c6a99db72f3609634cf39eb3923813a44346891357a0929"
+    }
+  ],
+  "volumes": [
+    {
+      "path": "public-000.tar.gz",
+      "bytes": 9555761,
+      "sha256": "c18b455882a22ff32e0da38e85a635396f9f823468f4c06c7e631e6bfb5fd208"
+    },
+    {
+      "path": "public-001.tar.gz",
+      "bytes": 7244027,
+      "sha256": "0a0f18457e5500e25466f2caaf8746d683e1128be9078d40c09aceeb0ee46633"
+    },
+    {
+      "path": "public-002.tar.gz",
+      "bytes": 12309621,
+      "sha256": "ee152aec3b43ef50300bfe006925856026401fbda8ff72bf485759899eb2ff87"
+    },
+    {
+      "path": "public-003.tar.gz",
+      "bytes": 2139175,
+      "sha256": "af213e2cadaa152767eefaba7424a74ac406ee567964ec3c73eeb4b8a49f6c30"
+    },
+    {
+      "path": "public-004.tar.gz",
+      "bytes": 12303359,
+      "sha256": "c769ed460edf32c2c657159ad2a555ba96779bbfa39494d63272c4433714c2f2"
+    },
+    {
+      "path": "public-005.tar.gz",
+      "bytes": 2202970,
+      "sha256": "b82be977b59ec060bd9c26bbc2154e971a09ff86d8f20fc4df2e5a3dd4eb8869"
+    },
+    {
+      "path": "public-006.tar.gz",
+      "bytes": 13253754,
+      "sha256": "8192bb03482a3816d4a132240b425d432a9f6344e9d0f8cefcd78e864fb02489"
+    },
+    {
+      "path": "public-007.tar.gz",
+      "bytes": 11081473,
+      "sha256": "8680f87f8104367aa12d44981877850e4e197b2e61a80335ed1cba4244b47a99"
+    },
+    {
+      "path": "public-008.tar.gz",
+      "bytes": 4131093,
+      "sha256": "e4c9bededf5b7fbb26f8699558f2b1fd984e2458109fcbb2eaa735856836446b"
+    },
+    {
+      "path": "public-009.tar.gz",
+      "bytes": 13273959,
+      "sha256": "110356fbd2639bb6b3c45e03dfd76db454199dc9b7af21e8cbf4fcc2b34858fa"
+    },
+    {
+      "path": "public-010.tar.gz",
+      "bytes": 11090749,
+      "sha256": "1e314d18dc604633b91ab3fa52fb2899fa7d75d0ee3fe2acf2b61304de8fca8a"
+    },
+    {
+      "path": "public-011.tar.gz",
+      "bytes": 4157442,
+      "sha256": "b01b98544b13c174196dc3ff4463badc6863a0d327babceb32a2babb02a8a7d3"
+    }
+  ],
+  "omitted_dependency_links": [],
+  "build_cache_omitted": true,
+  "private_raw_included": false,
+  "readback_verified": true,
+  "original_files_preserved": true
+}
