@@ -1,0 +1,229 @@
+{
+  "preservation_before": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  },
+  "outcomes": {
+    "accepted": 296,
+    "AssertionError: duplicate identity": 250,
+    "AssertionError: holder/link dangling": 250,
+    "AssertionError: duplicate reservation": 250,
+    "AssertionError: holder count mismatch": 250,
+    "AssertionError: invalid reservation": 500,
+    "AssertionError: invalid live status": 250,
+    "AssertionError: reservation dangling": 250,
+    "AssertionError: unowned cell outside pending free": 1,
+    "AssertionError: dangling/cycle": 1
+  },
+  "candidate_executed": false,
+  "private_access": false,
+  "native_streams": [
+    {
+      "source": "/home/user/rob1333-stage-b-collector-retained-02/rob1333-stage-b-collector-01/public-01/summary-NonTailSum-False",
+      "rows": 24056,
+      "stream_sha256": "670020165170f1ee253f08af2cbc7fece9a7aad5d68f05cde9dd4862aa5ecb65",
+      "result": {
+        "committed_steps": 24041,
+        "advances": 7,
+        "destroy_calls": 2,
+        "full_observations": 8,
+        "summary_observations": 2,
+        "deepest_photographed": true,
+        "streamed_commits": 24041,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          0
+        ],
+        "cleanup_frees": 2003,
+        "teardown_frees": 0,
+        "peak_live_cells": 2003,
+        "peak_explicit_frames": 2004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 10019,
+        "peak_retained_rows": 30055,
+        "retained_rows_at_end": 22041,
+        "resource_attempts": {
+          "number": 4007,
+          "frame": 26046
+        }
+      }
+    },
+    {
+      "source": "/home/user/rob1333-stage-b-collector-retained-02/rob1333-stage-b-collector-01/public-01/summary-NonTailSum-True",
+      "rows": 36085,
+      "stream_sha256": "92d255b8ca31b4e6f7454134ee7028279f286fd220f9ee49ed758982b307cfc0",
+      "result": {
+        "committed_steps": 36068,
+        "advances": 9,
+        "destroy_calls": 2,
+        "full_observations": 10,
+        "summary_observations": 3,
+        "deepest_photographed": true,
+        "streamed_commits": 36068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          2003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 2003,
+        "peak_explicit_frames": 2004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 10020,
+        "peak_retained_rows": 30057,
+        "retained_rows_at_end": 22043,
+        "resource_attempts": {
+          "number": 6011,
+          "frame": 36070
+        }
+      }
+    },
+    {
+      "source": "/home/user/rob1333-stage-b-collector-retained-02/rob1333-stage-b-collector-01/public-01/summary-DiscardedList-False",
+      "rows": 20020,
+      "stream_sha256": "80f1f1306a513e92cf893aadbdeef35d84b9c4d11b3ea68119b62888f40ee5e7",
+      "result": {
+        "committed_steps": 20005,
+        "advances": 7,
+        "destroy_calls": 2,
+        "full_observations": 8,
+        "summary_observations": 2,
+        "deepest_photographed": true,
+        "streamed_commits": 20005,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          10002
+        ],
+        "cleanup_frees": 1,
+        "teardown_frees": 0,
+        "peak_live_cells": 10003,
+        "peak_explicit_frames": 0,
+        "peak_cleanup_chain": 10003,
+        "peak_identity_rows": 2,
+        "peak_retained_rows": 40017,
+        "retained_rows_at_end": 10007,
+        "resource_attempts": {
+          "number": 30010,
+          "frame": 20008
+        }
+      }
+    },
+    {
+      "source": "/home/user/rob1333-stage-b-collector-retained-02/rob1333-stage-b-collector-01/public-01/summary-DiscardedList-True",
+      "rows": 20026,
+      "stream_sha256": "eb37f2dc8ca23373ab56d34fbd8dd93c6b8bd282cd7b1f5f71ab783a317e1a59",
+      "result": {
+        "committed_steps": 20009,
+        "advances": 9,
+        "destroy_calls": 2,
+        "full_observations": 10,
+        "summary_observations": 2,
+        "deepest_photographed": true,
+        "streamed_commits": 20009,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          10003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 10003,
+        "peak_explicit_frames": 0,
+        "peak_cleanup_chain": 10003,
+        "peak_identity_rows": 2,
+        "peak_retained_rows": 40017,
+        "retained_rows_at_end": 10007,
+        "resource_attempts": {
+          "number": 30011,
+          "frame": 20011
+        }
+      }
+    }
+  ],
+  "native_full_states": 44,
+  "predicate_timings": [
+    {
+      "depth": 10003,
+      "samples_seconds": {
+        "old": [
+          0.3246824060001927,
+          0.3108730819999437,
+          0.3137481239996305
+        ],
+        "proposal": [
+          0.003181958999903145,
+          0.003158164999604196,
+          0.003175697000187938
+        ]
+      },
+      "successful_list_search_positions": 50035006
+    },
+    {
+      "depth": 20003,
+      "samples_seconds": {
+        "old": [
+          1.2764188360001754,
+          1.2454351359997418,
+          1.319380639999963
+        ],
+        "proposal": [
+          0.006187486999806424,
+          0.006124739999904705,
+          0.007134413000130735
+        ]
+      },
+      "successful_list_search_positions": 200070006
+    },
+    {
+      "depth": 40003,
+      "samples_seconds": {
+        "old": [
+          5.1571791669998674,
+          5.490019211999879,
+          5.320151623000129
+        ],
+        "proposal": [
+          0.012962591999894357,
+          0.0120014839999385,
+          0.012559198000417382
+        ]
+      },
+      "successful_list_search_positions": 800140006
+    }
+  ],
+  "source_hashes": {
+    "profile_replays.py": "a4df01b1c05d1a4c738516acfd1c79611214819e4ae7dd5722f5b0d15be30b97",
+    "check_ownership.py": "388f531090081286df6a6cc00f807be4201438c5294095383cb4828fe9580b52",
+    "stage_b_large.py": "4e5a109e0dfa8cb51eb05878252f8ed718ad0a8f13caa7f7433ea1e96b1795d7",
+    "ownership.py": "3db5d97aa442894ae6503e9a55b7e18db908361e6e3ee1ac8d8652787e9fca42"
+  },
+  "synthetic_fixture_sha256": "ae1a5ab5da2c71c4ff954549399f6ff6c43868d11cd18332cbd290f5f2892078",
+  "preservation_after": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  },
+  "passed": true
+}

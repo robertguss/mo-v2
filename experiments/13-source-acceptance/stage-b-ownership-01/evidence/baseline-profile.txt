@@ -1,0 +1,71 @@
+         127709963 function calls (124069526 primitive calls) in 75.413 seconds
+
+   Ordered by: cumulative time
+   List reduced from 290 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   720078    6.114    0.000   59.310    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:336(row)
+   720068    5.745    0.000   28.800    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:394(phase_commit)
+  1440223    1.557    0.000   17.113    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:27(load)
+  1440228    2.266    0.000   13.787    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/decoder.py:340(decode)
+        2    0.046    0.023   12.089    6.045 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:435(phase_advance)
+        3    0.921    0.307   10.104    3.368 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:236(check_full)
+  1440228    6.473    0.000    9.940    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/decoder.py:351(raw_decode)
+  2160306    0.723    0.000    6.265    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:52(exact)
+  1840197    2.093    0.000    5.813    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/encoder.py:185(encode)
+5800675/2160306    3.932    0.000    5.542    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:36(_equal)
+        5    5.053    1.011    5.137    1.027 /home/user/workspace/repo/experiments/13-source-acceptance/predicates.py:28(state_ownership)
+   720069    1.315    0.000    4.854    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:310(register_births)
+   960114    1.298    0.000    4.543    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/__init__.py:185(dumps)
+   880083    0.280    0.000    4.146    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:306(hash_item)
+   720077    0.793    0.000    4.096    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:151(check_retention)
+   880083    0.730    0.000    3.866    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:65(hash_item)
+  3280481    2.752    0.000    3.468    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:12(_unique)
+   720070    1.072    0.000    3.409    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:509(landmark)
+27821943/27821941    3.263    0.000    3.263    0.000 {built-in method builtins.len}
+   720078    1.894    0.000    3.053    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:143(retained)
+  4800626    2.247    0.000    2.862    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:408(locate)
+  1840197    2.857    0.000    2.857    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/encoder.py:207(iterencode)
+   720079    0.515    0.000    1.921    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/gzip.py:463(readline)
+  1640308    1.336    0.000    1.647    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:61(fields)
+   800078    0.687    0.000    1.480    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:429(site)
+   720072    0.655    0.000    1.464    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:425(transition)
+  6961201    1.452    0.000    1.452    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/integration.py:39(natural)
+   720078    0.889    0.000    1.330    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/__init__.py:248(detect_encoding)
+   720069    0.536    0.000    1.139    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:346(births_at)
+  6120600    1.079    0.000    1.079    0.000 {built-in method builtins.getattr}
+   720079    0.366    0.000    1.015    0.000 {method 'readline' of '_io.BufferedReader' objects}
+  2320239    0.914    0.000    0.914    0.000 {method 'update' of '_hashlib.HASH' objects}
+  2880592    0.905    0.000    0.905    0.000 {method 'match' of 're.Pattern' objects}
+   720068    0.392    0.000    0.863    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:365(events_at)
+   720070    0.415    0.000    0.841    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:455(has_landmark)
+
+
+         127709963 function calls (124069526 primitive calls) in 75.413 seconds
+
+   Ordered by: internal time
+   List reduced from 290 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+  1440228    6.473    0.000    9.940    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/decoder.py:351(raw_decode)
+   720078    6.114    0.000   59.310    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:336(row)
+   720068    5.745    0.000   28.800    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:394(phase_commit)
+        5    5.053    1.011    5.137    1.027 /home/user/workspace/repo/experiments/13-source-acceptance/predicates.py:28(state_ownership)
+5800675/2160306    3.932    0.000    5.542    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:36(_equal)
+27821943/27821941    3.263    0.000    3.263    0.000 {built-in method builtins.len}
+  1840197    2.857    0.000    2.857    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/encoder.py:207(iterencode)
+  3280481    2.752    0.000    3.468    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:12(_unique)
+  1440228    2.266    0.000   13.787    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/decoder.py:340(decode)
+  4800626    2.247    0.000    2.862    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:408(locate)
+  1840197    2.093    0.000    5.813    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/encoder.py:185(encode)
+   720078    1.894    0.000    3.053    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:143(retained)
+  1440223    1.557    0.000   17.113    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:27(load)
+  6961201    1.452    0.000    1.452    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/integration.py:39(natural)
+  1640308    1.336    0.000    1.647    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/fast_json.py:61(fields)
+   720069    1.315    0.000    4.854    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:310(register_births)
+   960114    1.298    0.000    4.543    0.000 /home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/lib/python3.14/json/__init__.py:185(dumps)
+  6120600    1.079    0.000    1.079    0.000 {built-in method builtins.getattr}
+   720070    1.072    0.000    3.409    0.000 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/stage_b_workloads.py:509(landmark)
+        3    0.921    0.307   10.104    3.368 /home/user/workspace/repo/experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py:236(check_full)
+
+

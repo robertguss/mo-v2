@@ -1,0 +1,29 @@
+--- stage-b-performance-01/stage_b_large.py
++++ stage-b-ownership-01/stage_b_large.py
+@@ -1,4 +1,4 @@
+-"""Performance proposal derived from revision 02; NOT an approved frozen checker.
++"""Unadopted ownership lookup proposal derived from the performance freeze.
+ 
+ Uses constant-size per-step birth/event expectations, checks actual call events,
+ and normalizes branch identities as well as bindings and frames. Retained
+@@ -6,8 +6,8 @@
+ The observation schema and explicit host requests are documented in
+ OBSERVATIONS.md. Every reached deepest boundary must be photographed.
+ 
+-The small reference, ownership/destruction predicates and clock checker are
+-imported unchanged. This runner is for small validation only; it still refuses
++Only the ownership implementation import changes; other predicates stay frozen.
++This runner is for small validation only; it still refuses
+ the million-element workloads. Their 900/600-second limits are unchanged.
+ """
+ from collections import deque
+@@ -27,7 +27,8 @@
+ from integration import checked, natural, snapshot_schema, tagged
+ from fast_json import exact, fields, hash_item, load
+ from linked import available_bytes, check_clock
+-from predicates import state_ownership, walk
++from predicates import walk
++from ownership import state_ownership
+ from stage_b_workloads import APPROVED_DEPTH, VALIDATION_DEPTH_CAP
+ from wirecheck import check_public, public_bytes
+ 

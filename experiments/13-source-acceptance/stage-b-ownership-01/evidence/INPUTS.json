@@ -1,0 +1,234 @@
+{
+  "package": "experiments/13-source-acceptance/stage-b-collector-01/evidence/public",
+  "index_sha256": "70ab14fd34f6b1007de59395f563d90214fef6a8a3affacbc7444509b549dfb9",
+  "inputs": [
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-10003/request.json.gz",
+      "sha256": "c50af2c4cd8f63366dee4912e506e26f415cb8432cf8f394ba1e9d7b6bab9264",
+      "bytes": 54944,
+      "volumes": [
+        "public-000.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-10003/rows.jsonl.gz",
+      "sha256": "f54aaf3789644dd8b14dae07b1127cf8ae96532e15bc9b8dc6445d9c943e7ff8",
+      "bytes": 10507119,
+      "volumes": [
+        "public-000.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-10003/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "volumes": [
+        "public-000.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-10003/summary.json",
+      "sha256": "117701a74b11873caa6c1bf04917db18d278d2e115996520a5447c082759f0fb",
+      "bytes": 1177,
+      "volumes": [
+        "public-000.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-20003/request.json.gz",
+      "sha256": "b9d455e428463d3c516f828401039529cd6546e98e77d7518e81b14c935dc073",
+      "bytes": 112686,
+      "volumes": [
+        "public-000.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-20003/rows.jsonl.gz",
+      "sha256": "aa03f884a365fe5165d22f167ccf8353caa99d40416731044c596ba594f02e62",
+      "bytes": 21028573,
+      "volumes": [
+        "public-001.tar.gz",
+        "public-002.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-20003/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "volumes": [
+        "public-002.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-20003/summary.json",
+      "sha256": "57f0bfc31d06f76d9ae0607f8835568c6986d5ff39a7c4d4d65a15fc1624b427",
+      "bytes": 1179,
+      "volumes": [
+        "public-002.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-40003/request.json.gz",
+      "sha256": "1d8c8c87ae994766e87a69b5a6cc6706412589a8beaf278cb6a17c21c042e341",
+      "bytes": 226883,
+      "volumes": [
+        "public-002.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-40003/rows.jsonl.gz",
+      "sha256": "6042972ff1a1abf96da328a416f0d3e58ee3e35447eb5946fd636a6e3219ef74",
+      "bytes": 42009547,
+      "volumes": [
+        "public-003.tar.gz",
+        "public-004.tar.gz",
+        "public-005.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-40003/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "volumes": [
+        "public-005.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/profiles-01/sum-40003/summary.json",
+      "sha256": "e37e8797026c405c86229b33b50534927e46c60039b097cbc87b2dbfd8954805",
+      "bytes": 1180,
+      "volumes": [
+        "public-005.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-False/rows.jsonl.gz",
+      "sha256": "01d7175fb6420169243fd8210368eda1d329427f2ba17d5814083962d0d9d558",
+      "bytes": 1455821,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-False/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-False/summary.json",
+      "sha256": "2858bf8debbd378638c7344cce8ac2671023b1f99189a785288aa6b4fd2f44ba",
+      "bytes": 1313,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-False.request.json",
+      "sha256": "d608c953572fd30f9d31f821550ecbeae26b12ac10d37e4e0970d6cd95d2d302",
+      "bytes": 58227,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-True/rows.jsonl.gz",
+      "sha256": "db992eddc0417c4f86a5180d914770f51af76109c56a0cb144b6f340ae5e8ff3",
+      "bytes": 1973750,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-True/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-True/summary.json",
+      "sha256": "2807d3a998a7368a244b4c00863f9adcfb0c214355ef75fccfd853d3ef82f857",
+      "bytes": 1316,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-NonTailSum-True.request.json",
+      "sha256": "1b7b6032ab72f3bd0514dabda9a28e1bb3ff76e8e3281e91e36defe9e2604473",
+      "bytes": 58237,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-False/rows.jsonl.gz",
+      "sha256": "f31e86cf43a66ece9d71f53aab9016c428029cddcb8752fe8fdb746abdf6b107",
+      "bytes": 1647837,
+      "volumes": [
+        "public-145.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-False/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "volumes": [
+        "public-145.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-False/summary.json",
+      "sha256": "abbceba1c1c1141694a67a5bdfabb3c20fc55a5ed225cf1ab0e9bb764ec6d719",
+      "bytes": 1317,
+      "volumes": [
+        "public-145.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-False.request.json",
+      "sha256": "a595ccbeb17baf914d896ac4ca480c9e18d17bd8772e25d77f8f7a2df06507ed",
+      "bytes": 298144,
+      "volumes": [
+        "public-145.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-True/rows.jsonl.gz",
+      "sha256": "811dc4ef5418879b7816190d473c58e71f9ef620b6cd46b286518609bbe1ad40",
+      "bytes": 1697636,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-True/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-True/summary.json",
+      "sha256": "8c22f61a7d8e85efb7fe0919d9e827ee9541f80efe574ee0a54b28ac98094f02",
+      "bytes": 1317,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    },
+    {
+      "logical_path": "rob1333-stage-b-collector-01/public-01/summary-DiscardedList-True.request.json",
+      "sha256": "83a9ef546688e66206640f52e15867c72b2e99575f2ca5ce1100dd0f7e71d739",
+      "bytes": 298150,
+      "volumes": [
+        "public-146.tar.gz"
+      ]
+    }
+  ],
+  "all_restored_inputs_hash_verified": true
+}
