@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "candidate_executed": true,
+  "fixture_stub": false,
+  "workload": "non-tail-sum",
+  "depth": 1000000,
+  "budgets": [
+    12000005,
+    6000009
+  ],
+  "limit_seconds": 900,
+  "available_bytes": 44853555200,
+  "stack_bytes": 8388608,
+  "error": "TimeoutError: inclusive watchdog",
+  "elapsed_seconds": 900.516854128,
+  "phase_count": 18000020,
+  "checked_steps": 18000014,
+  "streamed_rows_sha256": "2e811c2231678f636f7f46a6780a822e490b847367596b8c60c326d19657eb6e",
+  "verifier_peak_kib": 11858640
+}

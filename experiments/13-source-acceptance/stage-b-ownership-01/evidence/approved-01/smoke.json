@@ -1,0 +1,120 @@
+{
+  "preservation": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "runs": [
+    {
+      "passed": false,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "non-tail-sum",
+      "depth": 64,
+      "budgets": [
+        773,
+        393
+      ],
+      "limit_seconds": 900,
+      "available_bytes": 45310160896,
+      "stack_bytes": 8388608,
+      "exit_code": 0,
+      "peak_rss_kib": 26940,
+      "child_user_seconds": 0.02519,
+      "child_system_seconds": 0.0,
+      "committed_steps": 1166,
+      "advances": 2,
+      "destroy_calls": 2,
+      "full_observations": 3,
+      "summary_observations": 0,
+      "deepest_photographed": true,
+      "streamed_commits": 1166,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        64
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 64,
+      "peak_explicit_frames": 65,
+      "peak_cleanup_chain": 0,
+      "peak_identity_rows": 325,
+      "peak_retained_rows": 972,
+      "retained_rows_at_end": 714,
+      "resource_attempts": {
+        "number": 194,
+        "frame": 1168
+      },
+      "error": "AssertionError: resource completion/depth",
+      "elapsed_seconds": 0.056857311,
+      "phase_count": 1176,
+      "checked_steps": 1166,
+      "streamed_rows_sha256": "03a1df780aa2f17a1daafa29f809a35f80b4bc51e1228e7400ca4a9b4aa94f02",
+      "verifier_peak_kib": 47192
+    },
+    {
+      "passed": false,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "discarded-list",
+      "depth": 64,
+      "budgets": [
+        127,
+        4
+      ],
+      "limit_seconds": 600,
+      "available_bytes": 45309644800,
+      "stack_bytes": 8388608,
+      "exit_code": 0,
+      "peak_rss_kib": 27184,
+      "child_user_seconds": 0.0,
+      "child_system_seconds": 0.004703,
+      "committed_steps": 131,
+      "advances": 2,
+      "destroy_calls": 2,
+      "full_observations": 3,
+      "summary_observations": 0,
+      "deepest_photographed": true,
+      "streamed_commits": 131,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        64
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 64,
+      "peak_explicit_frames": 0,
+      "peak_cleanup_chain": 64,
+      "peak_identity_rows": 2,
+      "peak_retained_rows": 261,
+      "retained_rows_at_end": 68,
+      "resource_attempts": {
+        "number": 194,
+        "frame": 133
+      },
+      "error": "AssertionError: resource completion/depth",
+      "elapsed_seconds": 0.009654559,
+      "phase_count": 141,
+      "checked_steps": 131,
+      "streamed_rows_sha256": "c6fb8fd618376487edaa2e032937ce7fe98552ef9108d1adef15de5adf3e87e4",
+      "verifier_peak_kib": 47192
+    }
+  ],
+  "scaled_semantics_pass": true,
+  "resource_acceptance": false
+}

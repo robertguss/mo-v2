@@ -1,0 +1,64 @@
+{
+  "captured_at": "2026-10-09T14:07:59.598654+00:00",
+  "status": "resource failure; stopped",
+  "error": "TimeoutError: inclusive watchdog",
+  "elapsed_seconds": 900.516854128,
+  "limit_seconds": 900,
+  "committed_step_counter": 18000014,
+  "phase_count": 18000020,
+  "final_retained_phase": "advance",
+  "final_retained_record_bytes": 595556696,
+  "final_retained_public": {
+    "status": "finished",
+    "type": "Int",
+    "value": "1000000"
+  },
+  "last_commit_driver_elapsed_ns": 877563337817,
+  "final_advance_driver_elapsed_ns": 881225491814,
+  "complete_final_observation_verification_established": false,
+  "destruction_teardown_normal_exit_established": false,
+  "passing_verifier_verdict": false,
+  "discard_executed": false,
+  "candidate_or_checker_repair": false,
+  "resource_retry": false,
+  "memory_max_bytes": 45097156608,
+  "cgroup_oom_events": 0,
+  "verifier_peak_kib": 11858640,
+  "native_peak_rss_unavailable": true,
+  "workload_cgroup_lifetime_peak_bytes": 32266416128,
+  "compressed_bytes": 959475914,
+  "compressed_sha256": "5cb7fc0476002205e65bb1e4bb8448ab35b8e45af599167123eaa7c465eaaf95",
+  "decoded_inspection": {
+    "decoded_bytes": 10583340454,
+    "complete_retained_records": 18000020,
+    "decoded_bytes_sha256": "2e811c2231678f636f7f46a6780a822e490b847367596b8c60c326d19657eb6e",
+    "trailing_partial_record_bytes": 0,
+    "small_complete_tail_records": [],
+    "inspection_only": true,
+    "candidate_executed": false
+  },
+  "preservation": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "kernel_window": {
+    "start": "2026-10-09T13:45:45+00:00",
+    "end": "2026-10-09T14:01:35+00:00"
+  },
+  "private_access": false,
+  "inspector_is_semantic_verification": false
+}
