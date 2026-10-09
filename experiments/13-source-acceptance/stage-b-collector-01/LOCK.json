@@ -1,0 +1,83 @@
+{
+  "format": "ROB-1333 collector implementation freeze 01",
+  "status": "frozen",
+  "created_at": "2026-10-09T12:11:35.589222+00:00",
+  "authorization": {
+    "owner_reply": "do it",
+    "thread": "https://ampcode.com/threads/T-01a11697-f670-71bc-bd5d-f6f57958fa55",
+    "scope": "Review/adopt collector, freeze exact bytes, retry both full resource workloads under unchanged limits."
+  },
+  "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+  "baseline_binary": "/home/user/rob1333-stage-b-performance-01/target/release/rob1333-stage-b-link",
+  "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+  "files": {
+    "stage-b-collector-01/FREEZE.md": {
+      "bytes": 2727,
+      "sha256": "4c57976bad18b8ab19f9bc586a75d27a25af7721dbef9fbd915e4d69284d620f"
+    },
+    "stage-b-collector-01/check_protocol.py": {
+      "bytes": 4658,
+      "sha256": "0f301d9683883640e2fd9bee1eaa95458d372e33d8fb2f3921b912dc6e8cbee6"
+    },
+    "stage-b-collector-01/driver/Cargo.lock": {
+      "bytes": 2871,
+      "sha256": "a00049527df4c26fc162db06c5970bb3947e77dcd8568ea29320ec3c437ea366"
+    },
+    "stage-b-collector-01/driver/Cargo.toml": {
+      "bytes": 294,
+      "sha256": "c6191829ea5a4b9e1549151ff7d247ff41b7805bdb841fd8c79a823d76c48d7c"
+    },
+    "stage-b-collector-01/driver/examples/protocol_probe.rs": {
+      "bytes": 5040,
+      "sha256": "7797bc2d2367956e2e676f42d8c3b7714638f5c060263a20f9996f48094d135b"
+    },
+    "stage-b-collector-01/driver/lib.rs": {
+      "bytes": 21948,
+      "sha256": "e69ac40b9e7ab2bcda85a8a2b21139fe625cd7168a888d9e0511cb2dad0e3461"
+    },
+    "stage-b-collector-01/driver/snapshot.rs": {
+      "bytes": 3310,
+      "sha256": "fc5b9b89ea216d9170459a7e607da8b46e692b6e47da8f5a109d84150764d1d8"
+    },
+    "stage-b-collector-01/evidence/IDENTITY.json": {
+      "bytes": 1928,
+      "sha256": "d2fe8632b7e75ba41322af8fcbc2aaefa01fcaab3a4ce94edf4068657c0be562"
+    },
+    "stage-b-collector-01/evidence/profiles.json": {
+      "bytes": 7741,
+      "sha256": "6b90bfc77fd347591f93244a3f32ba0e2dd3ba32195fe3513510ec2258c40fb0"
+    },
+    "stage-b-collector-01/evidence/protocol.json": {
+      "bytes": 398,
+      "sha256": "c90f15b7896937edb1d8d3ebabe43244ca697f4ed4972915e35a584a3301f4e9"
+    },
+    "stage-b-collector-01/evidence/public.json": {
+      "bytes": 1102,
+      "sha256": "dd18fb66364c4c01a7480a0e81543d277f2feb4ea18074299a0574d15a31d55f"
+    },
+    "stage-b-collector-01/link/Cargo.lock": {
+      "bytes": 5325,
+      "sha256": "f01901a4119ece0bc6c8e2421b5dd6e9b2fd92b73c19ad1ee9c95a65fcf717e1"
+    },
+    "stage-b-collector-01/link/Cargo.toml": {
+      "bytes": 273,
+      "sha256": "91bf97a6c2e95654fadf5e9eacbe4cca29cc1f4a5210d9c8561dff2a88cb0356"
+    },
+    "stage-b-collector-01/link/main.rs": {
+      "bytes": 159,
+      "sha256": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993"
+    },
+    "stage-b-collector-01/profile.py": {
+      "bytes": 4334,
+      "sha256": "5fdd52eb8d3b36992e6a2fa4cba027c952925b70b2b9dafe6dfce3381f99cccc"
+    },
+    "stage-b-collector-01/run_resources.py": {
+      "bytes": 3012,
+      "sha256": "1433478b5952fcc23c2d83ac761e72132a379436d3cdd9b9b13eafc2af355e3a"
+    },
+    "stage-b-collector-01/verify.py": {
+      "bytes": 3243,
+      "sha256": "e5f3d36f14d8d7d2cf4ac4dc3c7c896d5f6a67aa901e33fbcf7b959049823f98"
+    }
+  }
+}

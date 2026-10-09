@@ -1,0 +1,13 @@
+{
+  "probes": 2548,
+  "passed": true,
+  "mismatches": [],
+  "accepted": 240,
+  "rejected": 2308,
+  "synthetic_protocol_only": true,
+  "binaries": {
+    "old": "3b21768c1cd7ff4a09487ad65ad406abc6a573cf892b62ee62b3ab7f1c07ad2a",
+    "new": "8dd42648669d343c74cdd3d232fe997f470050a075a2989f5dc1d6b6995afbc7"
+  },
+  "runner_sha256": "0f301d9683883640e2fd9bee1eaa95458d372e33d8fb2f3921b912dc6e8cbee6"
+}
