@@ -1,0 +1,246 @@
+{
+  "public_roots": [
+    "/home/user/rob1333-stage-b-ownership-01"
+  ],
+  "files": [
+    {
+      "path": "rob1333-stage-b-ownership-01/INPUTS.json",
+      "logical_path": "rob1333-stage-b-ownership-01/INPUTS.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/INPUTS.json",
+      "offset": 0,
+      "bytes": 7901,
+      "sha256": "eaed1b4c5d9f35c44f8e2e08ca1abf0eaeeb3d12f18b04d5ec51109d67d2d522",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/METHODS.md",
+      "logical_path": "rob1333-stage-b-ownership-01/METHODS.md",
+      "source": "/home/user/rob1333-stage-b-ownership-01/METHODS.md",
+      "offset": 0,
+      "bytes": 7550,
+      "sha256": "c20f77dbb54d0c8d2869f49c867edb49890bb96a74bf6810627310064f93a9a6",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/SUMMARY.json",
+      "logical_path": "rob1333-stage-b-ownership-01/SUMMARY.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/SUMMARY.json",
+      "offset": 0,
+      "bytes": 2310,
+      "sha256": "8a9a4af966c49f9a6c15ec2eba40d882548438e66a975ca405f6626dd96572a9",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/checks-01/report.json",
+      "logical_path": "rob1333-stage-b-ownership-01/checks-01/report.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/checks-01/report.json",
+      "offset": 0,
+      "bytes": 7556,
+      "sha256": "b45680fd1737ececd88b9f748acf415f1c2f0f84667f06595d45f577d953f9f5",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/checks-01/synthetic-states.json.gz",
+      "logical_path": "rob1333-stage-b-ownership-01/checks-01/synthetic-states.json.gz",
+      "source": "/home/user/rob1333-stage-b-ownership-01/checks-01/synthetic-states.json.gz",
+      "offset": 0,
+      "bytes": 44894,
+      "sha256": "ae1a5ab5da2c71c4ff954549399f6ff6c43868d11cd18332cbd290f5f2892078",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/checks.log",
+      "logical_path": "rob1333-stage-b-ownership-01/checks.log",
+      "source": "/home/user/rob1333-stage-b-ownership-01/checks.log",
+      "offset": 0,
+      "bytes": 759,
+      "sha256": "a67b6d7144ffa821cea0006ab2fe085fe176d58d666f75e83efc35414b53da8a",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays-01/baseline-profile.txt",
+      "logical_path": "rob1333-stage-b-ownership-01/replays-01/baseline-profile.txt",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays-01/baseline-profile.txt",
+      "offset": 0,
+      "bytes": 8580,
+      "sha256": "805de0210989f79de45241185f20ecf22fe89c79caefc51749f6022907eb8464",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays-01/baseline.prof",
+      "logical_path": "rob1333-stage-b-ownership-01/replays-01/baseline.prof",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays-01/baseline.prof",
+      "offset": 0,
+      "bytes": 40644,
+      "sha256": "1127c8a205be8d87b6db29b1bc67049b4c9cef0e7db83d68a0a36f53263a3bb8",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays-01/report.json",
+      "logical_path": "rob1333-stage-b-ownership-01/replays-01/report.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays-01/report.json",
+      "offset": 0,
+      "bytes": 9142,
+      "sha256": "5931cb946c61994be9bbda16adf50d3545fc95d5d3ef22245a2cf0ddbaebda64",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays.log",
+      "logical_path": "rob1333-stage-b-ownership-01/replays.log",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays.log",
+      "offset": 0,
+      "bytes": 363,
+      "sha256": "3947388217a9c51e9055f42a4ef09152ae4acf4902c42eeab3b4bce3b8fdda6f",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/check_ownership.py",
+      "logical_path": "rob1333-stage-b-ownership-01/source/check_ownership.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/check_ownership.py",
+      "offset": 0,
+      "bytes": 9393,
+      "sha256": "388f531090081286df6a6cc00f807be4201438c5294095383cb4828fe9580b52",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/ownership.py",
+      "logical_path": "rob1333-stage-b-ownership-01/source/ownership.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/ownership.py",
+      "offset": 0,
+      "bytes": 1703,
+      "sha256": "3db5d97aa442894ae6503e9a55b7e18db908361e6e3ee1ac8d8652787e9fca42",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/profile_replays.py",
+      "logical_path": "rob1333-stage-b-ownership-01/source/profile_replays.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/profile_replays.py",
+      "offset": 0,
+      "bytes": 4408,
+      "sha256": "a4df01b1c05d1a4c738516acfd1c79611214819e4ae7dd5722f5b0d15be30b97",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/stage_b_large.py",
+      "logical_path": "rob1333-stage-b-ownership-01/source/stage_b_large.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/stage_b_large.py",
+      "offset": 0,
+      "bytes": 37205,
+      "sha256": "4e5a109e0dfa8cb51eb05878252f8ed718ad0a8f13caa7f7433ea1e96b1795d7",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/verifier.patch",
+      "logical_path": "rob1333-stage-b-ownership-01/verifier.patch",
+      "source": "/home/user/rob1333-stage-b-ownership-01/verifier.patch",
+      "offset": 0,
+      "bytes": 1410,
+      "sha256": "6edcf990242499a6929dc2a13076bbeb504f8d27b90229943b7e5753a76c850c",
+      "volume": "public-000.tar.gz"
+    }
+  ],
+  "sources": [
+    {
+      "path": "rob1333-stage-b-ownership-01/INPUTS.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/INPUTS.json",
+      "bytes": 7901,
+      "sha256": "eaed1b4c5d9f35c44f8e2e08ca1abf0eaeeb3d12f18b04d5ec51109d67d2d522"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/METHODS.md",
+      "source": "/home/user/rob1333-stage-b-ownership-01/METHODS.md",
+      "bytes": 7550,
+      "sha256": "c20f77dbb54d0c8d2869f49c867edb49890bb96a74bf6810627310064f93a9a6"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/SUMMARY.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/SUMMARY.json",
+      "bytes": 2310,
+      "sha256": "8a9a4af966c49f9a6c15ec2eba40d882548438e66a975ca405f6626dd96572a9"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/checks-01/report.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/checks-01/report.json",
+      "bytes": 7556,
+      "sha256": "b45680fd1737ececd88b9f748acf415f1c2f0f84667f06595d45f577d953f9f5"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/checks-01/synthetic-states.json.gz",
+      "source": "/home/user/rob1333-stage-b-ownership-01/checks-01/synthetic-states.json.gz",
+      "bytes": 44894,
+      "sha256": "ae1a5ab5da2c71c4ff954549399f6ff6c43868d11cd18332cbd290f5f2892078"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/checks.log",
+      "source": "/home/user/rob1333-stage-b-ownership-01/checks.log",
+      "bytes": 759,
+      "sha256": "a67b6d7144ffa821cea0006ab2fe085fe176d58d666f75e83efc35414b53da8a"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays-01/baseline-profile.txt",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays-01/baseline-profile.txt",
+      "bytes": 8580,
+      "sha256": "805de0210989f79de45241185f20ecf22fe89c79caefc51749f6022907eb8464"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays-01/baseline.prof",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays-01/baseline.prof",
+      "bytes": 40644,
+      "sha256": "1127c8a205be8d87b6db29b1bc67049b4c9cef0e7db83d68a0a36f53263a3bb8"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays-01/report.json",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays-01/report.json",
+      "bytes": 9142,
+      "sha256": "5931cb946c61994be9bbda16adf50d3545fc95d5d3ef22245a2cf0ddbaebda64"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/replays.log",
+      "source": "/home/user/rob1333-stage-b-ownership-01/replays.log",
+      "bytes": 363,
+      "sha256": "3947388217a9c51e9055f42a4ef09152ae4acf4902c42eeab3b4bce3b8fdda6f"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/check_ownership.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/check_ownership.py",
+      "bytes": 9393,
+      "sha256": "388f531090081286df6a6cc00f807be4201438c5294095383cb4828fe9580b52"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/ownership.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/ownership.py",
+      "bytes": 1703,
+      "sha256": "3db5d97aa442894ae6503e9a55b7e18db908361e6e3ee1ac8d8652787e9fca42"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/profile_replays.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/profile_replays.py",
+      "bytes": 4408,
+      "sha256": "a4df01b1c05d1a4c738516acfd1c79611214819e4ae7dd5722f5b0d15be30b97"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/source/stage_b_large.py",
+      "source": "/home/user/rob1333-stage-b-ownership-01/source/stage_b_large.py",
+      "bytes": 37205,
+      "sha256": "4e5a109e0dfa8cb51eb05878252f8ed718ad0a8f13caa7f7433ea1e96b1795d7"
+    },
+    {
+      "path": "rob1333-stage-b-ownership-01/verifier.patch",
+      "source": "/home/user/rob1333-stage-b-ownership-01/verifier.patch",
+      "bytes": 1410,
+      "sha256": "6edcf990242499a6929dc2a13076bbeb504f8d27b90229943b7e5753a76c850c"
+    }
+  ],
+  "volumes": [
+    {
+      "path": "public-000.tar.gz",
+      "bytes": 89751,
+      "sha256": "200649ae1fc668d5509aef4823ef5fd706b020a6fa578d26da4afc58ebf77240"
+    }
+  ],
+  "omitted_dependency_links": [],
+  "build_cache_omitted": true,
+  "private_raw_included": false,
+  "readback_verified": true,
+  "original_files_preserved": true
+}
