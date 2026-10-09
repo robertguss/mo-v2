@@ -1,5 +1,21 @@
 # Explicit observation candidate adaptation — resource gate not passed
 
+## Latest performance investigation
+
+The [separate performance proposal](../stage-b-performance-01/README.md) isolates
+the scaled bottleneck primarily to verification: a 360,068-transition native
+run takes 27.193 seconds, while replay without a candidate takes 25.473–26.506
+seconds. Buffered record framing is validated, and an additive JSON-helper
+proposal reduces that replay to 16.745 seconds. It matches 895 retained native
+streams and 15 rejection probes. Release-mode development tests pass (54
+candidate, three collector); candidate source and all frozen files are unchanged.
+
+This is **not a replacement freeze or resource acceptance**. The original
+million-element timeout below remains the latest full-depth result. Review and
+approval of the proposed checker implementation are required before adopting it
+for acceptance and rerunning both unchanged resource obligations. PR #9 remains
+draft; no merge is claimed. All new public evidence is preserved separately.
+
 ## Current continuation
 
 Robert authorized tracking reconciliation, continued Stage B work and merging

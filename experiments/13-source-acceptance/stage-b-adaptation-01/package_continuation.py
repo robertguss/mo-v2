@@ -1,6 +1,7 @@
 """Preserve public adaptation evidence; private raw evidence is never traversed.
 
 Usage: python3 package_continuation.py NEW_PACKAGE_DIRECTORY
+       python3 package_continuation.py --performance NEW_PACKAGE_DIRECTORY
 Only the named public roots and logs below are allowed. Every archived byte is
 read back and compared with its source hash. Independent volumes must be under
 20 MiB; a fresh destination is required, and originals are never changed.
@@ -15,6 +16,7 @@ import sys
 
 PUBLIC = Path("/home/user/rob1333-stage-b-adaptation-checks")
 CLOSEOUT = Path("/home/user/rob1333-stage-b-closeout-01")
+PERFORMANCE = Path("/home/user/rob1333-stage-b-performance-01")
 
 
 def sha(path):
@@ -22,7 +24,7 @@ def sha(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def main(destination):
+def main(destination, *, performance=False):
     destination.mkdir(parents=True, exist_ok=False)
     roots = [PUBLIC / "public-01", PUBLIC / "small-01",
              CLOSEOUT / "controls", CLOSEOUT / "controls-02",
@@ -31,6 +33,9 @@ def main(destination):
     paths += [CLOSEOUT / name for name in (
         "controls.log", "controls-02.log", "control-review.json", "million.log",
         "ci-build.log", "ci-candidate-test.log", "ci-driver-test.log")]
+    allowed = [PUBLIC, CLOSEOUT]
+    if performance:
+        roots, paths, allowed = [PERFORMANCE], [], [PERFORMANCE]
     links = []
     for root in roots:
         assert root.is_dir(), root
@@ -49,10 +54,10 @@ def main(destination):
     try:
         for path in paths:
             assert path.is_file() and not path.is_symlink()
-            assert path.is_relative_to(PUBLIC) or path.is_relative_to(CLOSEOUT)
+            assert any(path.is_relative_to(root) for root in allowed)
             assert "private" not in str(path)
             size = path.stat().st_size
-            root = PUBLIC if path.is_relative_to(PUBLIC) else CLOSEOUT
+            root = next(root for root in allowed if path.is_relative_to(root))
             name = root.name + "/" + path.relative_to(root).as_posix()
             sources.append(dict(path=name, source=str(path), bytes=size, sha256=sha(path)))
             # Bound input bytes even for already-compressed data. Large files
@@ -130,5 +135,7 @@ def restore(package, destination):
 if __name__ == "__main__":
     if sys.argv[1] == "--restore":
         restore(Path(sys.argv[2]).resolve(), Path(sys.argv[3]).resolve())
+    elif sys.argv[1] == "--performance":
+        main(Path(sys.argv[2]).resolve(), performance=True)
     else:
         main(Path(sys.argv[1]).resolve())

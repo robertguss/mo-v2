@@ -1,0 +1,32 @@
+{
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "build_command": "CARGO_TARGET_DIR=/home/user/rob1333-stage-b-performance-01/target cargo +1.98.1 build --release --locked --offline --manifest-path experiments/13-source-acceptance/stage-b-adaptation-01/link/Cargo.toml",
+  "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+  "source_hashes": {
+    "experiments/13-source-acceptance/stage-b-adaptation-01/candidate/CANDIDATE.sha256": "cc1e09dac565f67341bffee062fa0abbd080f9c60ebeac2fed522f56ff14317e",
+    "experiments/13-source-acceptance/stage-b-adaptation-01/link/Cargo.toml": "707820bbce6f86575e36f3ae47c612d201881abdb5141354963b1950c01b02f4",
+    "experiments/13-source-acceptance/stage-b-adaptation-01/link/Cargo.lock": "41df729167291f4bd74071be956a8f9f555b371973d2431f3e03f70db27e00c0",
+    "experiments/13-source-acceptance/stage-b-adaptation-01/link/main.rs": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993",
+    "experiments/13-source-acceptance/stage-b-adaptation-01/run_approved_large.py": "dfb5a4ac7c606e89440e565243cf2088bf74a16b3d00972976e4e425a1e186ea",
+    "experiments/13-source-acceptance/stage-b-revision-02/LOCK.json": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc",
+    "experiments/13-source-acceptance/stage-b-performance-01/fast_json.py": "f0f70b3b1c76d85911bac5e122ca46a6712dbf5df52028b90e52e36f8a69d4fd",
+    "experiments/13-source-acceptance/stage-b-performance-01/stage_b_large.py": "92a94969fdacae10baee8a3fc60bc5282f86a1b83a7d65b2f0047d50294bcefc"
+  },
+  "preservation": {
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "python_versions": {
+    "original": "CPython 3.11.6",
+    "diagnostic": "PyPy 3.11.15",
+    "selected_for_comparison": "CPython 3.14.7"
+  },
+  "candidate_modified": false,
+  "frozen_files_modified": false,
+  "proposed_checker_frozen": false,
+  "new_million_runs": 0
+}

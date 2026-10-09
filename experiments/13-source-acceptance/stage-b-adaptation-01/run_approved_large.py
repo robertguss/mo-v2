@@ -2,9 +2,11 @@
 
 This is orchestration, not a new predicate or profile. The original small-run
 adapter still refuses approved depths. Each run pauses at the deepest boundary
-and resumes to completion, retaining all streamed rows compressed. Uses the
-existing debug binary; no candidate, expectation or frozen file is modified.
-Usage: python3 run_approved_large.py NEW_EVIDENCE_DIRECTORY VERIFIED_BINARY
+and resumes to completion, retaining all streamed rows compressed. The original
+debug binary is the default; another build requires its explicit fingerprint.
+No candidate, expectation or frozen file is modified. The earlier executed
+orchestrator remains in the sealed continuation evidence.
+Usage: python3 run_approved_large.py NEW_EVIDENCE_DIRECTORY VERIFIED_BINARY [SHA256]
 """
 import gzip
 import hashlib
@@ -12,7 +14,6 @@ import json
 import os
 from pathlib import Path
 import resource
-import selectors
 import signal
 import subprocess
 import sys
@@ -70,40 +71,32 @@ def run(command, workload, destination):
             proc.stdin.write(json.dumps(payload).encode() + b"\n")
             proc.stdin.flush()
             del payload, case
-            pending = b""
-            with selectors.DefaultSelector() as selector:
-                selector.register(proc.stdout, selectors.EVENT_READ)
-                while True:
-                    if not selector.select(timeout):
-                        raise TimeoutError("inclusive watchdog")
-                    block = os.read(proc.stdout.fileno(), 1 << 20)
-                    if not block:
-                        break
-                    pending += block
-                    while b"\n" in pending:
-                        line, pending = pending.split(b"\n", 1)
-                        rows.write(line + b"\n")
-                        digest.update(line + b"\n")
-                        record = load(line)
-                        now = time.monotonic_ns()
-                        check_clock(boundary, now,
-                                    [dict(phase=phase, start_ns=boundary, end_ns=now)],
-                                    int(timeout * 1_000_000_000))
-                        assert now - start <= int(timeout * 1_000_000_000), "inclusive watchdog"
-                        phase_count += 1
-                        boundary = now
-                        phase = record["phase"]
-                        answer = verifier.row(record)
-                        del record
-                        if answer is not None:
-                            proc.stdin.write(json.dumps(answer).encode() + b"\n")
-                            proc.stdin.flush()
-                assert not pending, "partial driver record"
-                _, status, usage = os.wait4(proc.pid, 0)
-                proc.returncode = os.waitstatus_to_exitcode(status)
-                report.update(exit_code=proc.returncode, peak_rss_kib=usage.ru_maxrss)
-                assert proc.returncode == 0, "linked process abnormal termination"
-                report.update(verifier.finish())
+            # Buffered reads avoid quadratic copying/scanning of large full
+            # observations. The inclusive SIGALRM still interrupts blocked IO.
+            for line in proc.stdout:
+                assert line.endswith(b"\n"), "partial driver record"
+                rows.write(line)
+                digest.update(line)
+                record = load(line)
+                now = time.monotonic_ns()
+                check_clock(boundary, now,
+                            [dict(phase=phase, start_ns=boundary, end_ns=now)],
+                            int(timeout * 1_000_000_000))
+                assert now - start <= int(timeout * 1_000_000_000), "inclusive watchdog"
+                phase_count += 1
+                boundary = now
+                phase = record["phase"]
+                answer = verifier.row(record)
+                del record
+                if answer is not None:
+                    proc.stdin.write(json.dumps(answer).encode() + b"\n")
+                    proc.stdin.flush()
+            _, status, usage = os.wait4(proc.pid, 0)
+            proc.returncode = os.waitstatus_to_exitcode(status)
+            report.update(exit_code=proc.returncode, peak_rss_kib=usage.ru_maxrss,
+                          child_user_seconds=usage.ru_utime, child_system_seconds=usage.ru_stime)
+            assert proc.returncode == 0, "linked process abnormal termination"
+            report.update(verifier.finish())
         stop = time.monotonic_ns()
         check_clock(boundary, stop, [dict(phase=phase, start_ns=boundary, end_ns=stop)],
                     int(timeout * 1_000_000_000))
@@ -132,10 +125,10 @@ def run(command, workload, destination):
     return report
 
 
-def main(destination, binary):
+def main(destination, binary, binary_sha256="7b38989835db8ef6fd274477f625caf5c35e6438256d405f4b5242703427491a"):
     destination.mkdir(parents=True, exist_ok=False)
     before = frozen()
-    assert sha(binary) == "7b38989835db8ef6fd274477f625caf5c35e6438256d405f4b5242703427491a"
+    assert sha(binary) == binary_sha256, "binary fingerprint"
     results = []
     for cls in (NonTailSum, DiscardedList):
         workload = cls(APPROVED_DEPTH)
@@ -144,10 +137,11 @@ def main(destination, binary):
         print(json.dumps(result), flush=True)
         (destination / "report.json").write_text(json.dumps(dict(
             runs=results, preservation_before=before, preservation_after=frozen(),
-            binary_sha256=sha(binary), runner_sha256=sha(Path(__file__))), indent=2) + "\n")
+            binary_sha256=sha(binary), runner_sha256=sha(Path(__file__)),
+            python_version=sys.version, python_executable=sys.executable), indent=2) + "\n")
         if not result["passed"]:
             raise SystemExit("Approved workload did not pass; evidence retained.")
 
 
 if __name__ == "__main__":
-    main(Path(sys.argv[1]).resolve(), Path(sys.argv[2]).resolve())
+    main(Path(sys.argv[1]).resolve(), Path(sys.argv[2]).resolve(), *sys.argv[3:])
