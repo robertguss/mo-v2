@@ -1,0 +1,260 @@
+{
+  "preservation_before": {
+    "timing_lock": "9b7fdabe7734e78ec495da2dd2f5c1095a707a669cb6147cca7857ba0ecbe44c",
+    "binary_sha256": "5306bd3de522461be0e4789ba374ccc96c97cbdca7a22fa67dc69b12a0fee7b0",
+    "prior": {
+      "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+        "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+        "prior": {
+          "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+          "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+          "original_frozen_files": 967,
+          "historical_dependencies": 5,
+          "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+          "candidate_byte_identical": true,
+          "revised_files": 41,
+          "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+        }
+      }
+    }
+  },
+  "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+  "runs": [
+    {
+      "passed": true,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "non-tail-sum",
+      "depth": 1000000,
+      "limit_seconds": 1800,
+      "watchdog_seconds": 1800,
+      "budgets": [
+        12000005,
+        6000009
+      ],
+      "available_bytes": 44917313536,
+      "stack_bytes": 8388608,
+      "exit_code": 0,
+      "peak_rss_kib": 8137444,
+      "child_user_seconds": 317.48015,
+      "child_system_seconds": 18.99675,
+      "committed_steps": 18000014,
+      "advances": 2,
+      "destroy_calls": 2,
+      "full_observations": 3,
+      "summary_observations": 1800,
+      "deepest_photographed": true,
+      "streamed_commits": 18000014,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        1000000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 1000000,
+      "peak_explicit_frames": 1000001,
+      "peak_cleanup_chain": 0,
+      "peak_identity_rows": 5000005,
+      "peak_retained_rows": 15000012,
+      "retained_rows_at_end": 11000010,
+      "resource_attempts": {
+        "number": 3000002,
+        "frame": 18000016
+      },
+      "semantic_completed": true,
+      "native_timing": {
+        "completed": true,
+        "elapsed_ns": 978637608077,
+        "exclusive_wall_ns": {
+          "approval_wait": 1386510,
+          "cleanup": 2331025244,
+          "collector": 84082295702,
+          "evaluation": 151630702421,
+          "frontend": 31841096,
+          "observation": 8052956661,
+          "transport": 732507400443
+        },
+        "format": "ROB-1333 native timing 01",
+        "unit": "ns"
+      },
+      "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+      "resource_record": {
+        "case": "non-tail-sum",
+        "status": "finished",
+        "depth": 1000000,
+        "answer": "1000000",
+        "available_bytes": 44917313536,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 995.531388022,
+        "transitions": 18000014,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          1000000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 1000001
+      },
+      "phase_count": 18000024,
+      "checked_steps": 18000014,
+      "streamed_rows_sha256": "db10118d415850879f62090452ff3ee1ef5dc38eec312d14c3c444f484e53b7a",
+      "verifier_peak_kib": 11860312,
+      "parent_timing": {
+        "start_ns": 9365948361822,
+        "end_ns": 10361767756309,
+        "elapsed_ns": 995819394487,
+        "exclusive_wall_ns": {
+          "launch_request": 422473303,
+          "read_wait_framing": 45705286829,
+          "retention_hash": 61845063541,
+          "decode": 147438894329,
+          "predicates": 736799035673,
+          "reply_write": 32365,
+          "finalize": 288400321,
+          "orchestration": 3320208126
+        },
+        "interval": "runner entry through ledger snapshot before summary persistence"
+      },
+      "elapsed_seconds": 995.820047738,
+      "elapsed_scope": "snapshot before summary write; persistence/close and remainder guarded and rechecked; returned elapsed is authoritative",
+      "elapsed_ns": 995820047738,
+      "finalization_remainder_ns": 653251
+    },
+    {
+      "passed": true,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "discarded-list",
+      "depth": 1000000,
+      "limit_seconds": 600,
+      "watchdog_seconds": 600,
+      "budgets": [
+        1999999,
+        4
+      ],
+      "available_bytes": 44892119040,
+      "stack_bytes": 8388608,
+      "exit_code": 0,
+      "peak_rss_kib": 1722020,
+      "child_user_seconds": 25.588439,
+      "child_system_seconds": 2.525016,
+      "committed_steps": 2000003,
+      "advances": 2,
+      "destroy_calls": 2,
+      "full_observations": 3,
+      "summary_observations": 200,
+      "deepest_photographed": true,
+      "streamed_commits": 2000003,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        1000000
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 1000000,
+      "peak_explicit_frames": 0,
+      "peak_cleanup_chain": 1000000,
+      "peak_identity_rows": 2,
+      "peak_retained_rows": 4000005,
+      "retained_rows_at_end": 1000004,
+      "resource_attempts": {
+        "number": 3000002,
+        "frame": 2000005
+      },
+      "semantic_completed": true,
+      "native_timing": {
+        "completed": true,
+        "elapsed_ns": 78617993454,
+        "exclusive_wall_ns": {
+          "approval_wait": 773069,
+          "cleanup": 6979540,
+          "collector": 12516790774,
+          "evaluation": 5051398642,
+          "frontend": 803200,
+          "observation": 195775197,
+          "transport": 60845473032
+        },
+        "format": "ROB-1333 native timing 01",
+        "unit": "ns"
+      },
+      "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+      "resource_record": {
+        "case": "discarded-list",
+        "status": "finished",
+        "depth": 1000000,
+        "answer": "0",
+        "available_bytes": 44892119040,
+        "stack_bytes": 8388608,
+        "elapsed_seconds": 82.771581032,
+        "transitions": 2000003,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          1000000
+        ],
+        "remaining_owned_cells": 0,
+        "peak_explicit_frames": 0
+      },
+      "phase_count": 2000013,
+      "checked_steps": 2000003,
+      "streamed_rows_sha256": "8997094a060afebf71d277197f8084556261a551dddf9738194eefba5e37b5b0",
+      "verifier_peak_kib": 11860312,
+      "parent_timing": {
+        "start_ns": 10362235689678,
+        "end_ns": 10445068402501,
+        "elapsed_ns": 82832712823,
+        "exclusive_wall_ns": {
+          "launch_request": 472915368,
+          "read_wait_framing": 6016086397,
+          "retention_hash": 7302972113,
+          "decode": 16697182913,
+          "predicates": 48440326207,
+          "reply_write": 59646,
+          "finalize": 61368526,
+          "orchestration": 3841801653
+        },
+        "interval": "runner entry through ledger snapshot before summary persistence"
+      },
+      "elapsed_seconds": 82.833321094,
+      "elapsed_scope": "snapshot before summary write; persistence/close and remainder guarded and rechecked; returned elapsed is authoritative",
+      "elapsed_ns": 82833321094,
+      "finalization_remainder_ns": 608271
+    }
+  ],
+  "disk_free_bytes": 47018876928,
+  "cgroup": {
+    "memory.max": "45097156608\n",
+    "memory.current": "16367804416\n",
+    "memory.peak": "32266416128\n",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+    "memory.stat": "anon 44494848\nfile 15740850176\nkernel 582344704\nkernel_stack 278528\npagetables 815104\nsec_pagetables 0\npercpu 2087280\nsock 0\nvmalloc 0\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 9371648\nfile_dirty 102944768\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 0\nshmem_thp 0\ninactive_anon 44421120\nactive_anon 28672\ninactive_file 6846828544\nactive_file 8894021632\nunevictable 0\nslab_reclaimable 578536232\nslab_unreclaimable 241008\nslab 578777240\nworkingset_refault_anon 0\nworkingset_refault_file 10155\nworkingset_activate_anon 0\nworkingset_activate_file 8166\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgscan 0\npgsteal 0\npgscan_kswapd 0\npgscan_direct 0\npgsteal_kswapd 0\npgsteal_direct 0\npgfault 24844509\npgmajfault 1230\npgrefill 0\npgactivate 2578160\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nzswpin 0\nzswpout 0\nthp_fault_alloc 4\nthp_collapse_alloc 0\n",
+    "cpu.max": "max 100000\n"
+  },
+  "preservation_after": {
+    "timing_lock": "9b7fdabe7734e78ec495da2dd2f5c1095a707a669cb6147cca7857ba0ecbe44c",
+    "binary_sha256": "5306bd3de522461be0e4789ba374ccc96c97cbdca7a22fa67dc69b12a0fee7b0",
+    "prior": {
+      "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+        "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+        "prior": {
+          "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+          "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+          "original_frozen_files": 967,
+          "historical_dependencies": 5,
+          "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+          "candidate_byte_identical": true,
+          "revised_files": 41,
+          "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+        }
+      }
+    }
+  }
+}
