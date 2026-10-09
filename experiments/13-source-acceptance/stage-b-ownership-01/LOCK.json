@@ -1,0 +1,83 @@
+{
+  "format": "ROB-1333 ownership implementation freeze 01",
+  "status": "frozen",
+  "created_at": "2026-10-09T13:44:50.161879+00:00",
+  "authorization": {
+    "owner_reply": "yes",
+    "thread": "https://ampcode.com/threads/T-01a120a8-5f89-72d7-a894-b48b82ed155c",
+    "reviewed_commit": "faee45c6055aad2a180f0545dd117ea08e649bed",
+    "scope": "Adopt exact checker, freeze, sum900 then discard600 only after passing sum; keep larger orb and all checks."
+  },
+  "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+  "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+  "files": {
+    "stage-b-ownership-01/FREEZE.md": {
+      "bytes": 3639,
+      "sha256": "20b7c7e2c89882401881b0c6e8f18a1246cb6266d20c690184977b104d6aa117"
+    },
+    "stage-b-ownership-01/PACKAGE.sha256": {
+      "bytes": 1223,
+      "sha256": "463b8a7e9689401edcd23366d436d06a2159ffd9e4f3f5db893782a5c8002be7"
+    },
+    "stage-b-ownership-01/README.md": {
+      "bytes": 7913,
+      "sha256": "790f44334cfeef9d9d10e1f96e69de90adc73f6f903ec96654c7d2ac81960dac"
+    },
+    "stage-b-ownership-01/check_ownership.py": {
+      "bytes": 9393,
+      "sha256": "388f531090081286df6a6cc00f807be4201438c5294095383cb4828fe9580b52"
+    },
+    "stage-b-ownership-01/evidence/INPUTS.json": {
+      "bytes": 7901,
+      "sha256": "eaed1b4c5d9f35c44f8e2e08ca1abf0eaeeb3d12f18b04d5ec51109d67d2d522"
+    },
+    "stage-b-ownership-01/evidence/SUMMARY.json": {
+      "bytes": 2310,
+      "sha256": "8a9a4af966c49f9a6c15ec2eba40d882548438e66a975ca405f6626dd96572a9"
+    },
+    "stage-b-ownership-01/evidence/baseline-profile.txt": {
+      "bytes": 8580,
+      "sha256": "805de0210989f79de45241185f20ecf22fe89c79caefc51749f6022907eb8464"
+    },
+    "stage-b-ownership-01/evidence/checks.json": {
+      "bytes": 7556,
+      "sha256": "b45680fd1737ececd88b9f748acf415f1c2f0f84667f06595d45f577d953f9f5"
+    },
+    "stage-b-ownership-01/evidence/package.log": {
+      "bytes": 226,
+      "sha256": "e75517b8fefc9fe6cf6c69c3fc9ac094d7ee054130fb3ce76b94d153572f5bd2"
+    },
+    "stage-b-ownership-01/evidence/public/INDEX.json": {
+      "bytes": 10292,
+      "sha256": "931f4aead24fd317ad46daf0761072dc227048f197ddb6351c3bf16bff51aaf0"
+    },
+    "stage-b-ownership-01/evidence/public/public-000.tar.gz": {
+      "bytes": 89751,
+      "sha256": "200649ae1fc668d5509aef4823ef5fd706b020a6fa578d26da4afc58ebf77240"
+    },
+    "stage-b-ownership-01/evidence/report.json": {
+      "bytes": 9142,
+      "sha256": "5931cb946c61994be9bbda16adf50d3545fc95d5d3ef22245a2cf0ddbaebda64"
+    },
+    "stage-b-ownership-01/evidence/verifier.patch": {
+      "bytes": 1410,
+      "sha256": "6edcf990242499a6929dc2a13076bbeb504f8d27b90229943b7e5753a76c850c"
+    },
+    "stage-b-ownership-01/ownership.py": {
+      "bytes": 1703,
+      "sha256": "3db5d97aa442894ae6503e9a55b7e18db908361e6e3ee1ac8d8652787e9fca42"
+    },
+    "stage-b-ownership-01/profile_replays.py": {
+      "bytes": 4408,
+      "sha256": "a4df01b1c05d1a4c738516acfd1c79611214819e4ae7dd5722f5b0d15be30b97"
+    },
+    "stage-b-ownership-01/run_resources.py": {
+      "bytes": 3248,
+      "sha256": "5502ed816616722d25ff13bfcccc8b0006006687f88a715c1d62acd9927d5285"
+    },
+    "stage-b-ownership-01/stage_b_large.py": {
+      "bytes": 37205,
+      "sha256": "4e5a109e0dfa8cb51eb05878252f8ed718ad0a8f13caa7f7433ea1e96b1795d7"
+    }
+  }
+}
