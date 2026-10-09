@@ -1,0 +1,1916 @@
+{
+  "preservation_before": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "binary_sha256": "5306bd3de522461be0e4789ba374ccc96c97cbdca7a22fa67dc69b12a0fee7b0",
+  "envelope_assertions": 31,
+  "probes": [
+    {
+      "mode": "valid",
+      "expected_outcome": true,
+      "result": {
+        "passed": true,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45266288640,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29268,
+        "child_user_seconds": 0.019885999999999997,
+        "child_system_seconds": 0.003977,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "native_timing": {
+          "format": "ROB-1333 native timing 01",
+          "unit": "ns",
+          "completed": true,
+          "elapsed_ns": 0,
+          "exclusive_wall_ns": {
+            "frontend": 0,
+            "evaluation": 0,
+            "cleanup": 0,
+            "observation": 0,
+            "collector": 0,
+            "transport": 0,
+            "approval_wait": 0
+          }
+        },
+        "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+        "resource_record": {
+          "case": "non-tail-sum",
+          "depth": 1000000,
+          "available_bytes": 4294967296,
+          "stack_bytes": 8388608,
+          "transitions": 100000000,
+          "remaining_owned_cells": 0,
+          "peak_explicit_frames": 1000000,
+          "evaluation_cell_counts": [
+            0,
+            0,
+            1000000
+          ],
+          "status": "finished",
+          "answer": "1000000",
+          "elapsed_seconds": 0.025797195
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "verifier_peak_kib": 48600,
+        "parent_timing": {
+          "start_ns": 8959944064902,
+          "end_ns": 8959969910928,
+          "elapsed_ns": 25846026,
+          "exclusive_wall_ns": {
+            "launch_request": 2714706,
+            "read_wait_framing": 21808012,
+            "retention_hash": 19583,
+            "decode": 72397,
+            "predicates": 83796,
+            "reply_write": 0,
+            "finalize": 313409,
+            "orchestration": 834123
+          },
+          "interval": "runner entry through ledger snapshot before summary persistence"
+        },
+        "elapsed_seconds": 0.026234862,
+        "elapsed_scope": "snapshot before summary write; persistence/close and remainder guarded and rechecked; returned elapsed is authoritative",
+        "elapsed_ns": 26234862,
+        "finalization_remainder_ns": 388836
+      }
+    },
+    {
+      "mode": "missing",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45265256448,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.025408999999999998,
+        "child_system_seconds": 0.0,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "error_kind": "sidecar",
+        "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/user/rob1333-stage-b-timing-validation-01/checks/synthetic-missing/native-timing.json'",
+        "parent_timing": {
+          "start_ns": 8959970734072,
+          "end_ns": 8959997844227,
+          "elapsed_ns": 27110155,
+          "exclusive_wall_ns": {
+            "launch_request": 2153180,
+            "read_wait_framing": 23813429,
+            "retention_hash": 16194,
+            "decode": 29164,
+            "predicates": 27377,
+            "reply_write": 0,
+            "finalize": 255925,
+            "orchestration": 814886
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.02712127
+      }
+    },
+    {
+      "mode": "incomplete",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45261406208,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.018594,
+        "child_system_seconds": 0.003718,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "error_kind": "sidecar",
+        "error": "AssertionError: native timing incomplete",
+        "parent_timing": {
+          "start_ns": 8959998494440,
+          "end_ns": 8960022450199,
+          "elapsed_ns": 23955759,
+          "exclusive_wall_ns": {
+            "launch_request": 2056558,
+            "read_wait_framing": 20767850,
+            "retention_hash": 16582,
+            "decode": 48375,
+            "predicates": 50188,
+            "reply_write": 0,
+            "finalize": 205606,
+            "orchestration": 810600
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.023965897
+      }
+    },
+    {
+      "mode": "reconcile",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45262962688,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.021218,
+        "child_system_seconds": 0.0,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "error_kind": "sidecar",
+        "error": "AssertionError: native timing reconciliation",
+        "parent_timing": {
+          "start_ns": 8960023067317,
+          "end_ns": 8960045844558,
+          "elapsed_ns": 22777241,
+          "exclusive_wall_ns": {
+            "launch_request": 1654410,
+            "read_wait_framing": 19975800,
+            "retention_hash": 13891,
+            "decode": 43056,
+            "predicates": 50001,
+            "reply_write": 0,
+            "finalize": 207149,
+            "orchestration": 832934
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.022784684
+      }
+    },
+    {
+      "mode": "boolean",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45262475264,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.020669999999999997,
+        "child_system_seconds": 0.0,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "error_kind": "sidecar",
+        "error": "AssertionError: native timing counters",
+        "parent_timing": {
+          "start_ns": 8960046381970,
+          "end_ns": 8960068522266,
+          "elapsed_ns": 22140296,
+          "exclusive_wall_ns": {
+            "launch_request": 1579416,
+            "read_wait_framing": 19450862,
+            "retention_hash": 17031,
+            "decode": 49515,
+            "predicates": 54204,
+            "reply_write": 0,
+            "finalize": 209687,
+            "orchestration": 779581
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.022147866
+      }
+    },
+    {
+      "mode": "extra",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45261959168,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.021894,
+        "child_system_seconds": 0.0,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "error_kind": "sidecar",
+        "error": "AssertionError: native timing keys",
+        "parent_timing": {
+          "start_ns": 8960069191416,
+          "end_ns": 8960092660866,
+          "elapsed_ns": 23469450,
+          "exclusive_wall_ns": {
+            "launch_request": 1768789,
+            "read_wait_framing": 20504427,
+            "retention_hash": 18404,
+            "decode": 48857,
+            "predicates": 47753,
+            "reply_write": 0,
+            "finalize": 237391,
+            "orchestration": 843829
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.023504674
+      }
+    },
+    {
+      "mode": "impossible",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45261443072,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.019615999999999998,
+        "child_system_seconds": 0.003922999999999999,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "native_timing": {
+          "format": "ROB-1333 native timing 01",
+          "unit": "ns",
+          "completed": true,
+          "elapsed_ns": 100000000000000000000,
+          "exclusive_wall_ns": {
+            "frontend": 0,
+            "evaluation": 100000000000000000000,
+            "cleanup": 0,
+            "observation": 0,
+            "collector": 0,
+            "transport": 0,
+            "approval_wait": 0
+          }
+        },
+        "error_kind": "sidecar",
+        "error": "AssertionError: native interval exceeds parent interval",
+        "parent_timing": {
+          "start_ns": 8960093277159,
+          "end_ns": 8960118405707,
+          "elapsed_ns": 25128548,
+          "exclusive_wall_ns": {
+            "launch_request": 1792187,
+            "read_wait_framing": 22193590,
+            "retention_hash": 17538,
+            "decode": 52390,
+            "predicates": 65056,
+            "reply_write": 0,
+            "finalize": 222710,
+            "orchestration": 785077
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.025135986
+      }
+    },
+    {
+      "mode": "oversize",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45259931648,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.021183999999999998,
+        "child_system_seconds": 0.0,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "error_kind": "sidecar",
+        "error": "AssertionError: native timing size bound",
+        "parent_timing": {
+          "start_ns": 8960119075623,
+          "end_ns": 8960141881796,
+          "elapsed_ns": 22806173,
+          "exclusive_wall_ns": {
+            "launch_request": 1651455,
+            "read_wait_framing": 19963988,
+            "retention_hash": 19015,
+            "decode": 30038,
+            "predicates": 28525,
+            "reply_write": 0,
+            "finalize": 271943,
+            "orchestration": 841209
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.022815229
+      }
+    },
+    {
+      "mode": "duplicate",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45259427840,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.021303,
+        "child_system_seconds": 0.0,
+        "synthetic_pipeline_only": true,
+        "semantic_completed": true,
+        "error_kind": "sidecar",
+        "error": "AssertionError: duplicate JSON key",
+        "parent_timing": {
+          "start_ns": 8960142507011,
+          "end_ns": 8960165401899,
+          "elapsed_ns": 22894888,
+          "exclusive_wall_ns": {
+            "launch_request": 1666958,
+            "read_wait_framing": 20074020,
+            "retention_hash": 17297,
+            "decode": 75671,
+            "predicates": 23681,
+            "reply_write": 0,
+            "finalize": 217619,
+            "orchestration": 819642
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.022903396
+      }
+    },
+    {
+      "mode": "abnormal",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 10,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45258981376,
+        "stack_bytes": 8388608,
+        "exit_code": 7,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.008213999999999999,
+        "child_system_seconds": 0.012320999999999999,
+        "error_kind": "checking",
+        "error": "AssertionError: linked process abnormal termination",
+        "parent_timing": {
+          "start_ns": 8960166043431,
+          "end_ns": 8960188031510,
+          "elapsed_ns": 21988079,
+          "exclusive_wall_ns": {
+            "launch_request": 1636584,
+            "read_wait_framing": 19300779,
+            "retention_hash": 19127,
+            "decode": 30821,
+            "predicates": 19441,
+            "reply_write": 0,
+            "finalize": 161760,
+            "orchestration": 819567
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 1,
+        "streamed_rows_sha256": "d7fec91bd97a698a2c510af32986689d67b0e4a55cd5f13ed83cd063a03f1f47",
+        "elapsed_seconds": 0.021998022
+      }
+    },
+    {
+      "mode": "stall",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 0.2,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45258981376,
+        "stack_bytes": 8388608,
+        "error_kind": "timeout",
+        "error": "TimeoutError: inclusive watchdog",
+        "exit_code": -9,
+        "peak_rss_kib": 29204,
+        "child_user_seconds": 0.014114,
+        "child_system_seconds": 0.004704,
+        "parent_timing": {
+          "start_ns": 8960188764265,
+          "end_ns": 8960389982861,
+          "elapsed_ns": 201218596,
+          "exclusive_wall_ns": {
+            "launch_request": 1764644,
+            "read_wait_framing": 198621714,
+            "retention_hash": 0,
+            "decode": 0,
+            "predicates": 0,
+            "reply_write": 0,
+            "finalize": 0,
+            "orchestration": 832238
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 0,
+        "checked_steps": 0,
+        "streamed_rows_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "elapsed_seconds": 0.201237651
+      }
+    },
+    {
+      "mode": "delay-check",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 1800,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45189840896,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 107680,
+        "child_user_seconds": 0.024069999999999998,
+        "child_system_seconds": 0.008022999999999999,
+        "committed_steps": 1166,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 0,
+        "deepest_photographed": true,
+        "streamed_commits": 1166,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          64
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 64,
+        "peak_explicit_frames": 65,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 325,
+        "peak_retained_rows": 972,
+        "retained_rows_at_end": 714,
+        "resource_attempts": {
+          "number": 194,
+          "frame": 1168
+        },
+        "semantic_completed": true,
+        "native_timing": {
+          "completed": true,
+          "elapsed_ns": 858185732,
+          "exclusive_wall_ns": {
+            "approval_wait": 812213976,
+            "cleanup": 91857,
+            "collector": 7008638,
+            "evaluation": 12151970,
+            "frontend": 45841,
+            "observation": 530637,
+            "transport": 26142813
+          },
+          "format": "ROB-1333 native timing 01",
+          "unit": "ns"
+        },
+        "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+        "resource_record": {
+          "case": "non-tail-sum",
+          "status": "finished",
+          "depth": 64,
+          "answer": "64",
+          "available_bytes": 45189840896,
+          "stack_bytes": 8388608,
+          "elapsed_seconds": 0.868882671,
+          "transitions": 1166,
+          "evaluation_cell_counts": [
+            0,
+            0,
+            64
+          ],
+          "remaining_owned_cells": 0,
+          "peak_explicit_frames": 65
+        },
+        "error_kind": "resource",
+        "error": "AssertionError: resource completion/depth",
+        "parent_timing": {
+          "start_ns": 9105723264808,
+          "end_ns": 9106592202620,
+          "elapsed_ns": 868937812,
+          "exclusive_wall_ns": {
+            "launch_request": 5234116,
+            "read_wait_framing": 2830683,
+            "retention_hash": 3704545,
+            "decode": 9001446,
+            "predicates": 846298427,
+            "reply_write": 41337,
+            "finalize": 969654,
+            "orchestration": 857604
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1176,
+        "checked_steps": 1166,
+        "streamed_rows_sha256": "d53a2b971ab7decccc6f708050d4be4b0c33c6e188859711819ea2138a03d490",
+        "elapsed_seconds": 0.868943834
+      }
+    },
+    {
+      "mode": "timeout-check",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 0.2,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45196894208,
+        "stack_bytes": 8388608,
+        "error_kind": "timeout",
+        "error": "TimeoutError: inclusive watchdog",
+        "exit_code": -9,
+        "peak_rss_kib": 103648,
+        "child_user_seconds": 0.0,
+        "child_system_seconds": 0.00511,
+        "parent_timing": {
+          "start_ns": 9106593811573,
+          "end_ns": 9106794568932,
+          "elapsed_ns": 200757359,
+          "exclusive_wall_ns": {
+            "launch_request": 5366260,
+            "read_wait_framing": 1135519,
+            "retention_hash": 23209,
+            "decode": 59523,
+            "predicates": 193464489,
+            "reply_write": 0,
+            "finalize": 0,
+            "orchestration": 708359
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1,
+        "checked_steps": 0,
+        "streamed_rows_sha256": "89936129f2c0fd133e206b8e707b63dbb32b937540b368743e9294efe5bdd6dd",
+        "elapsed_seconds": 0.20077003
+      }
+    },
+    {
+      "mode": "delay-commit",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 1800,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45196898304,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 103648,
+        "child_user_seconds": 0.020888,
+        "child_system_seconds": 0.005222,
+        "committed_steps": 1166,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 0,
+        "deepest_photographed": true,
+        "streamed_commits": 1166,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          64
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 64,
+        "peak_explicit_frames": 65,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 325,
+        "peak_retained_rows": 972,
+        "retained_rows_at_end": 714,
+        "resource_attempts": {
+          "number": 194,
+          "frame": 1168
+        },
+        "semantic_completed": true,
+        "native_timing": {
+          "completed": true,
+          "elapsed_ns": 847974536,
+          "exclusive_wall_ns": {
+            "approval_wait": 980935,
+            "cleanup": 49371,
+            "collector": 5495551,
+            "evaluation": 9142765,
+            "frontend": 42619,
+            "observation": 453551,
+            "transport": 831809744
+          },
+          "format": "ROB-1333 native timing 01",
+          "unit": "ns"
+        },
+        "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+        "resource_record": {
+          "case": "non-tail-sum",
+          "status": "finished",
+          "depth": 64,
+          "answer": "64",
+          "available_bytes": 45196898304,
+          "stack_bytes": 8388608,
+          "elapsed_seconds": 0.860948316,
+          "transitions": 1166,
+          "evaluation_cell_counts": [
+            0,
+            0,
+            64
+          ],
+          "remaining_owned_cells": 0,
+          "peak_explicit_frames": 65
+        },
+        "error_kind": "resource",
+        "error": "AssertionError: resource completion/depth",
+        "parent_timing": {
+          "start_ns": 9106796140393,
+          "end_ns": 9107657146545,
+          "elapsed_ns": 861006152,
+          "exclusive_wall_ns": {
+            "launch_request": 4924034,
+            "read_wait_framing": 2877734,
+            "retention_hash": 3776355,
+            "decode": 9683084,
+            "predicates": 837250214,
+            "reply_write": 36392,
+            "finalize": 1415056,
+            "orchestration": 1043283
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 1176,
+        "checked_steps": 1166,
+        "streamed_rows_sha256": "38f93082cb62963eb85584d679b2ce307ee989eecc85c801586ae458403d9b10",
+        "elapsed_seconds": 0.861012787
+      }
+    },
+    {
+      "mode": "timeout-commit",
+      "expected_outcome": true,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 64,
+        "limit_seconds": 1800,
+        "watchdog_seconds": 0.2,
+        "budgets": [
+          773,
+          393
+        ],
+        "available_bytes": 45197312000,
+        "stack_bytes": 8388608,
+        "error_kind": "timeout",
+        "error": "TimeoutError: inclusive watchdog",
+        "exit_code": -9,
+        "peak_rss_kib": 102640,
+        "child_user_seconds": 0.003637,
+        "child_system_seconds": 0.003637,
+        "parent_timing": {
+          "start_ns": 9107658710343,
+          "end_ns": 9107859657775,
+          "elapsed_ns": 200947432,
+          "exclusive_wall_ns": {
+            "launch_request": 5347210,
+            "read_wait_framing": 1489068,
+            "retention_hash": 50654,
+            "decode": 315184,
+            "predicates": 192806162,
+            "reply_write": 28127,
+            "finalize": 0,
+            "orchestration": 911027
+          },
+          "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+        },
+        "phase_count": 5,
+        "checked_steps": 0,
+        "streamed_rows_sha256": "09b06c93022c575de65cf582fdf64565ffdbfc635a79ce5dec3912cd639e8167",
+        "elapsed_seconds": 0.200983025
+      }
+    }
+  ],
+  "runs": [
+    {
+      "case": "non-tail-sum",
+      "depth": 64,
+      "paired": [
+        {
+          "label": "baseline",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 64,
+            "budgets": [
+              773,
+              393
+            ],
+            "limit_seconds": 900,
+            "available_bytes": 45257977856,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 29204,
+            "child_user_seconds": 0.031609,
+            "child_system_seconds": 0.0,
+            "committed_steps": 1166,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 0,
+            "deepest_photographed": true,
+            "streamed_commits": 1166,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              64
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 64,
+            "peak_explicit_frames": 65,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 325,
+            "peak_retained_rows": 972,
+            "retained_rows_at_end": 714,
+            "resource_attempts": {
+              "number": 194,
+              "frame": 1168
+            },
+            "error": "AssertionError: resource completion/depth",
+            "elapsed_seconds": 0.060799666,
+            "phase_count": 1176,
+            "checked_steps": 1166,
+            "streamed_rows_sha256": "f74bf256d24e77d1dd001ded3b3fa22798d3c0ec384c1239f81317f3b7d547dc",
+            "verifier_peak_kib": 48600
+          },
+          "experiment_wall_seconds": 0.062136945
+        },
+        {
+          "label": "timed",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 64,
+            "limit_seconds": 1800,
+            "watchdog_seconds": 1800,
+            "budgets": [
+              773,
+              393
+            ],
+            "available_bytes": 45263020032,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 29212,
+            "child_user_seconds": 0.030923,
+            "child_system_seconds": 0.0,
+            "committed_steps": 1166,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 0,
+            "deepest_photographed": true,
+            "streamed_commits": 1166,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              64
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 64,
+            "peak_explicit_frames": 65,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 325,
+            "peak_retained_rows": 972,
+            "retained_rows_at_end": 714,
+            "resource_attempts": {
+              "number": 194,
+              "frame": 1168
+            },
+            "semantic_completed": true,
+            "native_timing": {
+              "completed": true,
+              "elapsed_ns": 52420106,
+              "exclusive_wall_ns": {
+                "approval_wait": 847908,
+                "cleanup": 61047,
+                "collector": 7213977,
+                "evaluation": 11642487,
+                "frontend": 61059,
+                "observation": 540731,
+                "transport": 32052897
+              },
+              "format": "ROB-1333 native timing 01",
+              "unit": "ns"
+            },
+            "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+            "resource_record": {
+              "case": "non-tail-sum",
+              "status": "finished",
+              "depth": 64,
+              "answer": "64",
+              "available_bytes": 45263020032,
+              "stack_bytes": 8388608,
+              "elapsed_seconds": 0.061241924,
+              "transitions": 1166,
+              "evaluation_cell_counts": [
+                0,
+                0,
+                64
+              ],
+              "remaining_owned_cells": 0,
+              "peak_explicit_frames": 65
+            },
+            "error_kind": "resource",
+            "error": "AssertionError: resource completion/depth",
+            "parent_timing": {
+              "start_ns": 8960453133474,
+              "end_ns": 8960514419070,
+              "elapsed_ns": 61285596,
+              "exclusive_wall_ns": {
+                "launch_request": 2662338,
+                "read_wait_framing": 3355115,
+                "retention_hash": 3991717,
+                "decode": 10298310,
+                "predicates": 39185319,
+                "reply_write": 31698,
+                "finalize": 1004046,
+                "orchestration": 757053
+              },
+              "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+            },
+            "phase_count": 1176,
+            "checked_steps": 1166,
+            "streamed_rows_sha256": "03a75d07c2c24bf2c13df9a7c54d0760d675b158909db5938243816dd9c3b974",
+            "elapsed_seconds": 0.061290604
+          },
+          "experiment_wall_seconds": 0.061673794
+        }
+      ],
+      "comparison": {
+        "rows": 1176,
+        "normalized_sha256": "f7d9f959f6e27cff83555be5be2790d65791956b2a788103cc93505234ff88a1",
+        "exact_match": true
+      }
+    },
+    {
+      "case": "discarded-list",
+      "depth": 64,
+      "paired": [
+        {
+          "label": "baseline",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "discarded-list",
+            "depth": 64,
+            "budgets": [
+              127,
+              4
+            ],
+            "limit_seconds": 600,
+            "available_bytes": 45261987840,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 29212,
+            "child_user_seconds": 0.006004,
+            "child_system_seconds": 0.0,
+            "committed_steps": 131,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 0,
+            "deepest_photographed": true,
+            "streamed_commits": 131,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              64
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 64,
+            "peak_explicit_frames": 0,
+            "peak_cleanup_chain": 64,
+            "peak_identity_rows": 2,
+            "peak_retained_rows": 261,
+            "retained_rows_at_end": 68,
+            "resource_attempts": {
+              "number": 194,
+              "frame": 133
+            },
+            "error": "AssertionError: resource completion/depth",
+            "elapsed_seconds": 0.010054531,
+            "phase_count": 141,
+            "checked_steps": 131,
+            "streamed_rows_sha256": "527fbce026b481ac861ab8937998943057c1b51e09cca0cfba468e5758aea4d1",
+            "verifier_peak_kib": 48600
+          },
+          "experiment_wall_seconds": 0.011206016
+        },
+        {
+          "label": "timed",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "discarded-list",
+            "depth": 64,
+            "limit_seconds": 600,
+            "watchdog_seconds": 600,
+            "budgets": [
+              127,
+              4
+            ],
+            "available_bytes": 45261471744,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 29212,
+            "child_user_seconds": 0.004932,
+            "child_system_seconds": 0.0,
+            "committed_steps": 131,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 0,
+            "deepest_photographed": true,
+            "streamed_commits": 131,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              64
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 64,
+            "peak_explicit_frames": 0,
+            "peak_cleanup_chain": 64,
+            "peak_identity_rows": 2,
+            "peak_retained_rows": 261,
+            "retained_rows_at_end": 68,
+            "resource_attempts": {
+              "number": 194,
+              "frame": 133
+            },
+            "semantic_completed": true,
+            "native_timing": {
+              "completed": true,
+              "elapsed_ns": 2731440,
+              "exclusive_wall_ns": {
+                "approval_wait": 624370,
+                "cleanup": 18658,
+                "collector": 851854,
+                "evaluation": 343203,
+                "frontend": 23273,
+                "observation": 62815,
+                "transport": 807267
+              },
+              "format": "ROB-1333 native timing 01",
+              "unit": "ns"
+            },
+            "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+            "resource_record": {
+              "case": "discarded-list",
+              "status": "finished",
+              "depth": 64,
+              "answer": "0",
+              "available_bytes": 45261471744,
+              "stack_bytes": 8388608,
+              "elapsed_seconds": 0.010092948,
+              "transitions": 131,
+              "evaluation_cell_counts": [
+                0,
+                0,
+                64
+              ],
+              "remaining_owned_cells": 0,
+              "peak_explicit_frames": 0
+            },
+            "error_kind": "resource",
+            "error": "AssertionError: resource completion/depth",
+            "parent_timing": {
+              "start_ns": 8960569260159,
+              "end_ns": 8960579384661,
+              "elapsed_ns": 10124502,
+              "exclusive_wall_ns": {
+                "launch_request": 2033193,
+                "read_wait_framing": 1721801,
+                "retention_hash": 243307,
+                "decode": 1148935,
+                "predicates": 3701930,
+                "reply_write": 27200,
+                "finalize": 513194,
+                "orchestration": 734942
+              },
+              "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+            },
+            "phase_count": 141,
+            "checked_steps": 131,
+            "streamed_rows_sha256": "567815506bbb7acd6c0aec7610f57416a18695df6f7d53ed390b05c71391d963",
+            "elapsed_seconds": 0.010127975
+          },
+          "experiment_wall_seconds": 0.010432519
+        }
+      ],
+      "comparison": {
+        "rows": 141,
+        "normalized_sha256": "270b3c2d478e394da4bdbe9b932fb703961a6a2011474260b8c1f73479e6f3ae",
+        "exact_match": true
+      }
+    },
+    {
+      "case": "non-tail-sum",
+      "depth": 10003,
+      "paired": [
+        {
+          "label": "baseline",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 10003,
+            "budgets": [
+              120041,
+              60027
+            ],
+            "limit_seconds": 900,
+            "available_bytes": 45258375168,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 83900,
+            "child_user_seconds": 3.292017,
+            "child_system_seconds": 0.207174,
+            "committed_steps": 180068,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 18,
+            "deepest_photographed": true,
+            "streamed_commits": 180068,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              10003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 10003,
+            "peak_explicit_frames": 10004,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 50020,
+            "peak_retained_rows": 150057,
+            "retained_rows_at_end": 110043,
+            "resource_attempts": {
+              "number": 30011,
+              "frame": 180070
+            },
+            "error": "AssertionError: resource completion/depth",
+            "elapsed_seconds": 7.285073539,
+            "phase_count": 180078,
+            "checked_steps": 180068,
+            "streamed_rows_sha256": "97532e7544e04159040b0b5986ff44e09a44b8a9ce735c9623d1fbe936b61207",
+            "verifier_peak_kib": 157060
+          },
+          "experiment_wall_seconds": 7.320723632
+        },
+        {
+          "label": "timed",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 10003,
+            "limit_seconds": 1800,
+            "watchdog_seconds": 1800,
+            "budgets": [
+              120041,
+              60027
+            ],
+            "available_bytes": 45218713600,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 83908,
+            "child_user_seconds": 3.249147,
+            "child_system_seconds": 0.236836,
+            "committed_steps": 180068,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 18,
+            "deepest_photographed": true,
+            "streamed_commits": 180068,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              10003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 10003,
+            "peak_explicit_frames": 10004,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 50020,
+            "peak_retained_rows": 150057,
+            "retained_rows_at_end": 110043,
+            "resource_attempts": {
+              "number": 30011,
+              "frame": 180070
+            },
+            "semantic_completed": true,
+            "native_timing": {
+              "completed": true,
+              "elapsed_ns": 8130457500,
+              "exclusive_wall_ns": {
+                "approval_wait": 1020516,
+                "cleanup": 14664093,
+                "collector": 864817131,
+                "evaluation": 1575123352,
+                "frontend": 425169,
+                "observation": 70160375,
+                "transport": 5604246864
+              },
+              "format": "ROB-1333 native timing 01",
+              "unit": "ns"
+            },
+            "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+            "resource_record": {
+              "case": "non-tail-sum",
+              "status": "finished",
+              "depth": 10003,
+              "answer": "10003",
+              "available_bytes": 45218713600,
+              "stack_bytes": 8388608,
+              "elapsed_seconds": 8.245996747,
+              "transitions": 180068,
+              "evaluation_cell_counts": [
+                0,
+                0,
+                10003
+              ],
+              "remaining_owned_cells": 0,
+              "peak_explicit_frames": 10004
+            },
+            "error_kind": "resource",
+            "error": "AssertionError: resource completion/depth",
+            "parent_timing": {
+              "start_ns": 8967905817420,
+              "end_ns": 8976151852055,
+              "elapsed_ns": 8246034635,
+              "exclusive_wall_ns": {
+                "launch_request": 13755788,
+                "read_wait_framing": 467093869,
+                "retention_hash": 633852134,
+                "decode": 1453825474,
+                "predicates": 5636265928,
+                "reply_write": 33974,
+                "finalize": 291700,
+                "orchestration": 40915768
+              },
+              "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+            },
+            "phase_count": 180078,
+            "checked_steps": 180068,
+            "streamed_rows_sha256": "a30939721df4792fb976e6e1299e961fe4326d63c82177b8c2cb65576dfdcf6b",
+            "elapsed_seconds": 8.246040639
+          },
+          "experiment_wall_seconds": 8.248496487
+        }
+      ],
+      "comparison": {
+        "rows": 180078,
+        "normalized_sha256": "24757caf22ad618c4c42dcc51410757a9be387eb8899eecc622be1e735794601",
+        "exact_match": true
+      }
+    },
+    {
+      "case": "non-tail-sum",
+      "depth": 20003,
+      "paired": [
+        {
+          "label": "baseline",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 20003,
+            "budgets": [
+              240041,
+              120027
+            ],
+            "limit_seconds": 900,
+            "available_bytes": 45260333056,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 165320,
+            "child_user_seconds": 6.157036,
+            "child_system_seconds": 0.33477799999999996,
+            "committed_steps": 360068,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 36,
+            "deepest_photographed": true,
+            "streamed_commits": 360068,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              20003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 20003,
+            "peak_explicit_frames": 20004,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 100020,
+            "peak_retained_rows": 300057,
+            "retained_rows_at_end": 220043,
+            "resource_attempts": {
+              "number": 60011,
+              "frame": 360070
+            },
+            "error": "AssertionError: resource completion/depth",
+            "elapsed_seconds": 14.589772451,
+            "phase_count": 360078,
+            "checked_steps": 360068,
+            "streamed_rows_sha256": "7719ea909eb257acc9531d04bba2052ecf3014016ec480a0c5ef7a14f6bc6dd5",
+            "verifier_peak_kib": 290516
+          },
+          "experiment_wall_seconds": 14.653085725
+        },
+        {
+          "label": "timed",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 20003,
+            "limit_seconds": 1800,
+            "watchdog_seconds": 1800,
+            "budgets": [
+              240041,
+              120027
+            ],
+            "available_bytes": 45224538112,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 165336,
+            "child_user_seconds": 6.313719,
+            "child_system_seconds": 0.342808,
+            "committed_steps": 360068,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 36,
+            "deepest_photographed": true,
+            "streamed_commits": 360068,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              20003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 20003,
+            "peak_explicit_frames": 20004,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 100020,
+            "peak_retained_rows": 300057,
+            "retained_rows_at_end": 220043,
+            "resource_attempts": {
+              "number": 60011,
+              "frame": 360070
+            },
+            "semantic_completed": true,
+            "native_timing": {
+              "completed": true,
+              "elapsed_ns": 15770716392,
+              "exclusive_wall_ns": {
+                "approval_wait": 758716,
+                "cleanup": 25499993,
+                "collector": 1657370075,
+                "evaluation": 2991671559,
+                "frontend": 355810,
+                "observation": 138462077,
+                "transport": 10956598162
+              },
+              "format": "ROB-1333 native timing 01",
+              "unit": "ns"
+            },
+            "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+            "resource_record": {
+              "case": "non-tail-sum",
+              "status": "finished",
+              "depth": 20003,
+              "answer": "20003",
+              "available_bytes": 45224538112,
+              "stack_bytes": 8388608,
+              "elapsed_seconds": 15.980511316,
+              "transitions": 360068,
+              "evaluation_cell_counts": [
+                0,
+                0,
+                20003
+              ],
+              "remaining_owned_cells": 0,
+              "peak_explicit_frames": 20004
+            },
+            "error_kind": "resource",
+            "error": "AssertionError: resource completion/depth",
+            "parent_timing": {
+              "start_ns": 8995555223842,
+              "end_ns": 9011535775502,
+              "elapsed_ns": 15980551660,
+              "exclusive_wall_ns": {
+                "launch_request": 12294389,
+                "read_wait_framing": 862631913,
+                "retention_hash": 1190420257,
+                "decode": 2802112697,
+                "predicates": 11048275213,
+                "reply_write": 30657,
+                "finalize": 396361,
+                "orchestration": 64390173
+              },
+              "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+            },
+            "phase_count": 360078,
+            "checked_steps": 360068,
+            "streamed_rows_sha256": "c59e10010e5c46e9b96675ff70f1bbe37b07698f910a36185c1360a57b926ea0",
+            "elapsed_seconds": 15.980557965
+          },
+          "experiment_wall_seconds": 15.984723335
+        }
+      ],
+      "comparison": {
+        "rows": 360078,
+        "normalized_sha256": "58e630f2d86d9346735f9ea5fdf7c5ccae6790d736654847f704997c16d31cd9",
+        "exact_match": true
+      }
+    },
+    {
+      "case": "non-tail-sum",
+      "depth": 40003,
+      "paired": [
+        {
+          "label": "baseline",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 40003,
+            "budgets": [
+              480041,
+              240027
+            ],
+            "limit_seconds": 900,
+            "available_bytes": 45200490496,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 328448,
+            "child_user_seconds": 12.736198,
+            "child_system_seconds": 0.7884099999999999,
+            "committed_steps": 720068,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 72,
+            "deepest_photographed": true,
+            "streamed_commits": 720068,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              40003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 40003,
+            "peak_explicit_frames": 40004,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 200020,
+            "peak_retained_rows": 600057,
+            "retained_rows_at_end": 440043,
+            "resource_attempts": {
+              "number": 120011,
+              "frame": 720070
+            },
+            "error": "AssertionError: resource completion/depth",
+            "elapsed_seconds": 30.223578097,
+            "phase_count": 720078,
+            "checked_steps": 720068,
+            "streamed_rows_sha256": "00f23d5be4b692856bdf72f9158c314f5d991ecb96f48de9dc29568fd079f9b7",
+            "verifier_peak_kib": 518076
+          },
+          "experiment_wall_seconds": 30.343345027
+        },
+        {
+          "label": "timed",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "non-tail-sum",
+            "depth": 40003,
+            "limit_seconds": 1800,
+            "watchdog_seconds": 1800,
+            "budgets": [
+              480041,
+              240027
+            ],
+            "available_bytes": 45169647616,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 328564,
+            "child_user_seconds": 13.168618,
+            "child_system_seconds": 0.6390939999999999,
+            "committed_steps": 720068,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 72,
+            "deepest_photographed": true,
+            "streamed_commits": 720068,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              40003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 40003,
+            "peak_explicit_frames": 40004,
+            "peak_cleanup_chain": 0,
+            "peak_identity_rows": 200020,
+            "peak_retained_rows": 600057,
+            "retained_rows_at_end": 440043,
+            "resource_attempts": {
+              "number": 120011,
+              "frame": 720070
+            },
+            "semantic_completed": true,
+            "native_timing": {
+              "completed": true,
+              "elapsed_ns": 31409688138,
+              "exclusive_wall_ns": {
+                "approval_wait": 740070,
+                "cleanup": 73066204,
+                "collector": 3387123585,
+                "evaluation": 6278311791,
+                "frontend": 798542,
+                "observation": 313653420,
+                "transport": 21355994526
+              },
+              "format": "ROB-1333 native timing 01",
+              "unit": "ns"
+            },
+            "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+            "resource_record": {
+              "case": "non-tail-sum",
+              "status": "finished",
+              "depth": 40003,
+              "answer": "40003",
+              "available_bytes": 45169647616,
+              "stack_bytes": 8388608,
+              "elapsed_seconds": 31.907582723,
+              "transitions": 720068,
+              "evaluation_cell_counts": [
+                0,
+                0,
+                40003
+              ],
+              "remaining_owned_cells": 0,
+              "peak_explicit_frames": 40004
+            },
+            "error_kind": "resource",
+            "error": "AssertionError: resource completion/depth",
+            "parent_timing": {
+              "start_ns": 9051240203622,
+              "end_ns": 9083147825070,
+              "elapsed_ns": 31907621448,
+              "exclusive_wall_ns": {
+                "launch_request": 21525897,
+                "read_wait_framing": 1743362391,
+                "retention_hash": 2379128306,
+                "decode": 5510310650,
+                "predicates": 22137224055,
+                "reply_write": 22523,
+                "finalize": 407901,
+                "orchestration": 115639725
+              },
+              "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+            },
+            "phase_count": 720078,
+            "checked_steps": 720068,
+            "streamed_rows_sha256": "e3e08549bd51d5feb263036e658ebfcd0b842c48fec548b04a18f9b6ed35859c",
+            "elapsed_seconds": 31.907627335
+          },
+          "experiment_wall_seconds": 31.916177759
+        }
+      ],
+      "comparison": {
+        "rows": 720078,
+        "normalized_sha256": "842c8c520aa7d94d64335c34fa3eaf5bb1fe218395fb4280afd211718291073f",
+        "exact_match": true
+      }
+    },
+    {
+      "case": "discarded-list",
+      "depth": 10003,
+      "paired": [
+        {
+          "label": "baseline",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "discarded-list",
+            "depth": 10003,
+            "budgets": [
+              20005,
+              4
+            ],
+            "limit_seconds": 600,
+            "available_bytes": 45197348864,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 107680,
+            "child_user_seconds": 0.30625399999999997,
+            "child_system_seconds": 0.034999999999999996,
+            "committed_steps": 20009,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 2,
+            "deepest_photographed": true,
+            "streamed_commits": 20009,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              10003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 10003,
+            "peak_explicit_frames": 0,
+            "peak_cleanup_chain": 10003,
+            "peak_identity_rows": 2,
+            "peak_retained_rows": 40017,
+            "retained_rows_at_end": 10007,
+            "resource_attempts": {
+              "number": 30011,
+              "frame": 20011
+            },
+            "error": "AssertionError: resource completion/depth",
+            "elapsed_seconds": 0.808665516,
+            "phase_count": 20019,
+            "checked_steps": 20009,
+            "streamed_rows_sha256": "1d267066fa6426ddb44ed5082089fcb18f722be2a1a3480393930b9835757806",
+            "verifier_peak_kib": 518076
+          },
+          "experiment_wall_seconds": 0.842137365
+        },
+        {
+          "label": "timed",
+          "result": {
+            "passed": false,
+            "candidate_executed": true,
+            "fixture_stub": false,
+            "workload": "discarded-list",
+            "depth": 10003,
+            "limit_seconds": 600,
+            "watchdog_seconds": 600,
+            "budgets": [
+              20005,
+              4
+            ],
+            "available_bytes": 45188378624,
+            "stack_bytes": 8388608,
+            "exit_code": 0,
+            "peak_rss_kib": 107680,
+            "child_user_seconds": 0.31116,
+            "child_system_seconds": 0.013729,
+            "committed_steps": 20009,
+            "advances": 2,
+            "destroy_calls": 2,
+            "full_observations": 3,
+            "summary_observations": 2,
+            "deepest_photographed": true,
+            "streamed_commits": 20009,
+            "evaluation_cell_counts": [
+              0,
+              0,
+              10003
+            ],
+            "cleanup_frees": 0,
+            "teardown_frees": 0,
+            "peak_live_cells": 10003,
+            "peak_explicit_frames": 0,
+            "peak_cleanup_chain": 10003,
+            "peak_identity_rows": 2,
+            "peak_retained_rows": 40017,
+            "retained_rows_at_end": 10007,
+            "resource_attempts": {
+              "number": 30011,
+              "frame": 20011
+            },
+            "semantic_completed": true,
+            "native_timing": {
+              "completed": true,
+              "elapsed_ns": 761997840,
+              "exclusive_wall_ns": {
+                "approval_wait": 500802,
+                "cleanup": 48014,
+                "collector": 142590794,
+                "evaluation": 56577238,
+                "frontend": 32267,
+                "observation": 1874370,
+                "transport": 560374355
+              },
+              "format": "ROB-1333 native timing 01",
+              "unit": "ns"
+            },
+            "native_interval": "native measured interval excludes process startup/exit and sidecar write; wall totals overlap parent",
+            "resource_record": {
+              "case": "discarded-list",
+              "status": "finished",
+              "depth": 10003,
+              "answer": "0",
+              "available_bytes": 45188378624,
+              "stack_bytes": 8388608,
+              "elapsed_seconds": 0.802468595,
+              "transitions": 20009,
+              "evaluation_cell_counts": [
+                0,
+                0,
+                10003
+              ],
+              "remaining_owned_cells": 0,
+              "peak_explicit_frames": 0
+            },
+            "error_kind": "resource",
+            "error": "AssertionError: resource completion/depth",
+            "parent_timing": {
+              "start_ns": 9104242919082,
+              "end_ns": 9105045428870,
+              "elapsed_ns": 802509788,
+              "exclusive_wall_ns": {
+                "launch_request": 9371693,
+                "read_wait_framing": 63899327,
+                "retention_hash": 73392998,
+                "decode": 158122608,
+                "predicates": 464571066,
+                "reply_write": 25351,
+                "finalize": 1839428,
+                "orchestration": 31287317
+              },
+              "interval": "runner entry through failure recovery ledger snapshot before summary persistence"
+            },
+            "phase_count": 20019,
+            "checked_steps": 20009,
+            "streamed_rows_sha256": "e73417b491f34516c4a4bb71c1b8404913d5580c467fd19eacf4ad9c983a9e34",
+            "elapsed_seconds": 0.802515183
+          },
+          "experiment_wall_seconds": 0.803716201
+        }
+      ],
+      "comparison": {
+        "rows": 20019,
+        "normalized_sha256": "c5eb8d4184a8ff4a67feeebff4f09d08facdbfe47a786fc7903dd704a278b39f",
+        "exact_match": true
+      }
+    }
+  ],
+  "preservation_after": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "passed": true,
+  "source_hashes": {
+    "run_timed.py": "edcd399be1b9d4354fa21ffec309233974f8113370a275f96ea0f7ade6baca5f",
+    "PROPOSAL.md": "5520d09c16e7fdb5a68fa900d37fbddc532a1145bea8d25c31178e66f2ecfd08",
+    "validate.py": "60f9c5dbc479b68040667e93cb79289e096de1e69b2f668b5f34b7513ca356fd",
+    "run_resources.py": "5907fd6969828a8e0235f3ef88d776fd51e0ce496dda345142c3de36fb607dbc",
+    "envelope.py": "b978132c3c0f8bfa1de22b2a49de71108540e478b5d9078cb6869beb0a7f647b",
+    "driver/lib.rs": "a3d853d66584dbd9e4f59ca5135a75abf6e5410ce4c2451bce58f09c37075c4f",
+    "driver/snapshot.rs": "fc5b9b89ea216d9170459a7e607da8b46e692b6e47da8f5a109d84150764d1d8",
+    "driver/Cargo.lock": "a00049527df4c26fc162db06c5970bb3947e77dcd8568ea29320ec3c437ea366",
+    "driver/timing.rs": "9371a9c74d3ddba12d874e9ca0726113c7ac9d6c85384f2efdca71283417db53",
+    "driver/Cargo.toml": "c6191829ea5a4b9e1549151ff7d247ff41b7805bdb841fd8c79a823d76c48d7c",
+    "link/main.rs": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993",
+    "link/Cargo.lock": "f01901a4119ece0bc6c8e2421b5dd6e9b2fd92b73c19ad1ee9c95a65fcf717e1",
+    "link/Cargo.toml": "91bf97a6c2e95654fadf5e9eacbe4cca29cc1f4a5210d9c8561dff2a88cb0356",
+    "driver/examples/protocol_probe.rs": "7797bc2d2367956e2e676f42d8c3b7714638f5c060263a20f9996f48094d135b"
+  }
+}

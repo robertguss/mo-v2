@@ -1,0 +1,251 @@
+{
+  "candidate": "experiments/13-source-acceptance/candidate-stage-b",
+  "candidate_source_edited": false,
+  "controls": [
+    {
+      "control": "always-copy",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C10-unique",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C10-unique",
+          "passed": false,
+          "error": "AssertionError: full committed execution/physical state",
+          "marker": true,
+          "panic": false
+        }
+      ],
+      "caught": true
+    },
+    {
+      "control": "hidden-entry-copy",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C8",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C8",
+          "passed": false,
+          "error": "AssertionError: commit metadata",
+          "marker": true,
+          "panic": false
+        }
+      ],
+      "caught": true
+    },
+    {
+      "control": "fixture-provenance",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "fixture-route",
+          "passed": true,
+          "error": null
+        },
+        {
+          "name": "literal-route",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "fixture-route",
+          "passed": false,
+          "error": "AssertionError: birth coverage",
+          "marker": true,
+          "panic": false
+        },
+        {
+          "name": "literal-route",
+          "passed": false,
+          "error": "AssertionError: birth coverage",
+          "marker": true,
+          "panic": false
+        }
+      ],
+      "caught": true
+    },
+    {
+      "control": "caller-reservation-theft",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C1",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C1",
+          "passed": false,
+          "error": "AssertionError: birth coverage",
+          "marker": true,
+          "panic": true
+        }
+      ],
+      "caught": false
+    },
+    {
+      "control": "early-cleanup",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C14",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C14",
+          "passed": false,
+          "error": "AssertionError: commit metadata",
+          "marker": true,
+          "panic": false
+        }
+      ],
+      "caught": true
+    },
+    {
+      "control": "omitted-nested-create",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C9",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C9",
+          "passed": false,
+          "error": "AssertionError: commit metadata",
+          "marker": true,
+          "panic": false
+        }
+      ],
+      "caught": true
+    },
+    {
+      "control": "omitted-transient-create",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C7",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C7",
+          "passed": false,
+          "error": "AssertionError: commit metadata",
+          "marker": true,
+          "panic": false
+        }
+      ],
+      "caught": true
+    },
+    {
+      "control": "early-enter",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C11-0",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C11-0",
+          "passed": false,
+          "error": "AssertionError: commit metadata",
+          "marker": true,
+          "panic": true
+        }
+      ],
+      "caught": false
+    },
+    {
+      "control": "skipped-return-cleanup",
+      "applicable": true,
+      "baseline_passed": true,
+      "baseline": [
+        {
+          "name": "C7",
+          "passed": true,
+          "error": null
+        }
+      ],
+      "mutant": [
+        {
+          "name": "C7",
+          "passed": false,
+          "error": "AssertionError: commit metadata",
+          "marker": true,
+          "panic": false
+        }
+      ],
+      "caught": true
+    },
+    {
+      "control": "omitted-entry-create",
+      "applicable": false,
+      "caught": null,
+      "reason": "Not applicable under D164. The frozen predictor never allocates on Enter, so this control cannot be reached. It was not run."
+    }
+  ],
+  "million_element_runs": [
+    {
+      "case": "non-tail-sum",
+      "depth": 1000000,
+      "limit_seconds": 900,
+      "elapsed_seconds": 68.585378221,
+      "passed": false,
+      "result": "did not finish",
+      "error": "NotImplementedError: ",
+      "available_bytes": 4268621824,
+      "phase_count": 4,
+      "committed_steps": null,
+      "candidate_executed": true
+    },
+    {
+      "case": "discarded-list",
+      "depth": 1000000,
+      "limit_seconds": 600,
+      "elapsed_seconds": 73.323642405,
+      "passed": false,
+      "result": "did not finish",
+      "error": "AssertionError: large full-observation schedule",
+      "available_bytes": 8595132416,
+      "phase_count": 10004,
+      "committed_steps": null,
+      "candidate_executed": true
+    }
+  ],
+  "elapsed_seconds": 149.873
+}

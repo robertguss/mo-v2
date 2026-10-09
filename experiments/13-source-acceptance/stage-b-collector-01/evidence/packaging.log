@@ -1,0 +1,8 @@
+{
+  "files": 30419,
+  "volumes": 147,
+  "compressed_bytes": 115522457,
+  "index_sha256": "32f6409a260aec0679285e7c831e1e69cd88ca2c5f6bc86e6f21ee46a6d84304"
+}
+Restored and content-verified 30416 original public files; links remain omitted
+{"originals": 30416, "members": 30419, "volumes": 147, "compressed_bytes": 115522457, "index_sha256": "70ab14fd34f6b1007de59395f563d90214fef6a8a3affacbc7444509b549dfb9", "original_files_preserved": true, "restored_content_verified": true, "binaries_and_private_data_included": false}

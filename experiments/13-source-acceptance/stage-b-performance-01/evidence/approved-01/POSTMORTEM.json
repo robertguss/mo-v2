@@ -1,0 +1,48 @@
+{
+  "passed": false,
+  "classification": "native-linked process OOM; execution scope killed before final verdict",
+  "shell_exit_code": 137,
+  "kernel_kill_utc": "2026-10-09T01:16:42Z",
+  "resource_clock_elapsed_seconds": null,
+  "last_retained_driver_elapsed_seconds": 607.8828899,
+  "last_retained_step": 11997679,
+  "required_deepest_step": 12000005,
+  "required_total_steps": 18000014,
+  "deepest_full_observation_verified": false,
+  "completion_verified": false,
+  "cleanup_verified": false,
+  "discard_executed": false,
+  "memory_cgroup_limit_bytes": 14763950080,
+  "native_linked_anon_rss_kib_at_kill": 12747092,
+  "native_linked_file_rss_kib_at_kill": 164,
+  "python_anon_rss_kib_at_kill": 1382084,
+  "python_file_rss_kib_at_kill": 92,
+  "inspection_agreement": true,
+  "preservation_before": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "preservation_after": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "notes": [
+    "Native linked RSS includes candidate, collector and runtime; allocation source not isolated.",
+    "Postmortem report, not a replacement for the missing runner summary.",
+    "Retained complete records do not prove that the last record finished verification.",
+    "Last retained record is near the deepest boundary; no completed full observation of that boundary is preserved.",
+    "Both resource obligations remain unsatisfied; no private or additional candidate cases were run."
+  ]
+}

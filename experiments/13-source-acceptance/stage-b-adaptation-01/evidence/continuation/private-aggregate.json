@@ -1,0 +1,91 @@
+{
+  "passed": 524,
+  "failed": 0,
+  "not_run": 0,
+  "groups": {
+    "reserved-family-1": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "reserved-family-2": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "reserved-family-3": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "reserved-family-4": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "reserved-family-5": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "reserved-family-6": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "reserved-family-7": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "reserved-family-8": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "not_run": 0
+    },
+    "generated-unlabelled": {
+      "total": 500,
+      "passed": 500,
+      "failed": 0,
+      "not_run": 0
+    }
+  },
+  "runs": {
+    "full": {
+      "passed": 524,
+      "failed": 0
+    },
+    "resume": {
+      "passed": 35030,
+      "failed": 0
+    },
+    "destroy": {
+      "passed": 35030,
+      "failed": 0
+    }
+  },
+  "failure_categories": {},
+  "completed_cases": 524,
+  "elapsed_seconds": 1544.24,
+  "runner_sha256": "ab888bf07ca5871e5440bc45f6ab86cfe19dc0c8e06d68b6608761b86f622a13",
+  "binary_sha256": "7b38989835db8ef6fd274477f625caf5c35e6438256d405f4b5242703427491a",
+  "schedule_source_sha256": "3687b77bf2f65081eb6535da2c2acfc3018fa986ace783c8b18e2087f2c00b43",
+  "projected_total_seconds": 3392.4056909304068,
+  "stop_reason": null,
+  "workers": 4,
+  "integrity_preserved": true,
+  "caveats": [
+    "Families anonymized in first-occurrence order; generated rows have no family labels.",
+    "Each case stops at its first failed run, matching the public wrapper.",
+    "Pilot cases count once and are not rerun.",
+    "Runtime is runner wall time, including pilot/projection/integrity checks, excluding compilation."
+  ]
+}

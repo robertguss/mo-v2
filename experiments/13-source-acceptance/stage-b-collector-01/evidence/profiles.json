@@ -1,0 +1,214 @@
+{
+  "preservation_before": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "source_hashes": {
+    "driver/Cargo.lock": "a00049527df4c26fc162db06c5970bb3947e77dcd8568ea29320ec3c437ea366",
+    "driver/Cargo.toml": "c6191829ea5a4b9e1549151ff7d247ff41b7805bdb841fd8c79a823d76c48d7c",
+    "driver/examples/protocol_probe.rs": "7797bc2d2367956e2e676f42d8c3b7714638f5c060263a20f9996f48094d135b",
+    "driver/lib.rs": "e69ac40b9e7ab2bcda85a8a2b21139fe625cd7168a888d9e0511cb2dad0e3461",
+    "driver/snapshot.rs": "fc5b9b89ea216d9170459a7e607da8b46e692b6e47da8f5a109d84150764d1d8",
+    "link/Cargo.lock": "f01901a4119ece0bc6c8e2421b5dd6e9b2fd92b73c19ad1ee9c95a65fcf717e1",
+    "link/Cargo.toml": "91bf97a6c2e95654fadf5e9eacbe4cca29cc1f4a5210d9c8561dff2a88cb0356",
+    "link/main.rs": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993"
+  },
+  "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+  "runner_sha256": "5fdd52eb8d3b36992e6a2fa4cba027c952925b70b2b9dafe6dfce3381f99cccc",
+  "runs": [
+    {
+      "depth": 10003,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 10003,
+        "budgets": [
+          120041,
+          60027
+        ],
+        "limit_seconds": 900,
+        "available_bytes": 15867224064,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 83900,
+        "child_user_seconds": 4.082532,
+        "child_system_seconds": 0.271487,
+        "committed_steps": 180068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 18,
+        "deepest_photographed": true,
+        "streamed_commits": 180068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          10003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 10003,
+        "peak_explicit_frames": 10004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 50020,
+        "peak_retained_rows": 150057,
+        "retained_rows_at_end": 110043,
+        "resource_attempts": {
+          "number": 30011,
+          "frame": 180070
+        },
+        "error": "AssertionError: resource completion/depth",
+        "elapsed_seconds": 9.570557849,
+        "phase_count": 180078,
+        "checked_steps": 180068,
+        "streamed_rows_sha256": "fba7b9ad64646792d2ad1a5619c1ef3a49bdf53c570f7adf89d40c502c56d2bc",
+        "verifier_peak_kib": 155152
+      },
+      "comparison": {
+        "rows": 180078,
+        "normalized_sha256": "24757caf22ad618c4c42dcc51410757a9be387eb8899eecc622be1e735794601",
+        "exact_match": true,
+        "excluded_fields": "elapsed_ns and native pointer addresses only; each complete stream independently verified"
+      },
+      "baseline_peak_rss_kib": 216544,
+      "peak_rss_reduction": 0.6125498743904241
+    },
+    {
+      "depth": 20003,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 20003,
+        "budgets": [
+          240041,
+          120027
+        ],
+        "limit_seconds": 900,
+        "available_bytes": 15850180608,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 165316,
+        "child_user_seconds": 8.82548,
+        "child_system_seconds": 0.566993,
+        "committed_steps": 360068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 36,
+        "deepest_photographed": true,
+        "streamed_commits": 360068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          20003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 20003,
+        "peak_explicit_frames": 20004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 100020,
+        "peak_retained_rows": 300057,
+        "retained_rows_at_end": 220043,
+        "resource_attempts": {
+          "number": 60011,
+          "frame": 360070
+        },
+        "error": "AssertionError: resource completion/depth",
+        "elapsed_seconds": 20.11381812,
+        "phase_count": 360078,
+        "checked_steps": 360068,
+        "streamed_rows_sha256": "53bbb7142469f3865c327d7d74b1b0a5eea2415c2d769f945b51dddd6467d542",
+        "verifier_peak_kib": 289492
+      },
+      "comparison": {
+        "rows": 360078,
+        "normalized_sha256": "58e630f2d86d9346735f9ea5fdf7c5ccae6790d736654847f704997c16d31cd9",
+        "exact_match": true,
+        "excluded_fields": "elapsed_ns and native pointer addresses only; each complete stream independently verified"
+      },
+      "baseline_peak_rss_kib": 430368,
+      "peak_rss_reduction": 0.6158729273551937
+    },
+    {
+      "depth": 40003,
+      "result": {
+        "passed": false,
+        "candidate_executed": true,
+        "fixture_stub": false,
+        "workload": "non-tail-sum",
+        "depth": 40003,
+        "budgets": [
+          480041,
+          240027
+        ],
+        "limit_seconds": 900,
+        "available_bytes": 15839989760,
+        "stack_bytes": 8388608,
+        "exit_code": 0,
+        "peak_rss_kib": 328540,
+        "child_user_seconds": 12.845746,
+        "child_system_seconds": 0.80052,
+        "committed_steps": 720068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 72,
+        "deepest_photographed": true,
+        "streamed_commits": 720068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          40003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 40003,
+        "peak_explicit_frames": 40004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 200020,
+        "peak_retained_rows": 600057,
+        "retained_rows_at_end": 440043,
+        "resource_attempts": {
+          "number": 120011,
+          "frame": 720070
+        },
+        "error": "AssertionError: resource completion/depth",
+        "elapsed_seconds": 41.0041168,
+        "phase_count": 720078,
+        "checked_steps": 720068,
+        "streamed_rows_sha256": "02bb8e33ec0492c36b49a63f409df5a8338e1f0a07bffb7104ae70d2d0109461",
+        "verifier_peak_kib": 518568
+      },
+      "comparison": {
+        "rows": 720078,
+        "normalized_sha256": "842c8c520aa7d94d64335c34fa3eaf5bb1fe218395fb4280afd211718291073f",
+        "exact_match": true,
+        "excluded_fields": "elapsed_ns and native pointer addresses only; each complete stream independently verified"
+      },
+      "baseline_peak_rss_kib": 848292,
+      "peak_rss_reduction": 0.612704116035516
+    }
+  ],
+  "preservation_after": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "elapsed_seconds": 111.41920532200311
+}

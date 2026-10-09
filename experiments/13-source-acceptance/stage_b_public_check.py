@@ -24,9 +24,9 @@ from syntax import parse
 
 
 HERE = Path(__file__).resolve().parent
-ARCHIVE_SHA = "7babb36cd741b44354157ee33fc1fd741f882c6bab314ebe9217197813fed590"
-ARCHIVE_BYTES = 38678
-MANIFEST_SHA = "9387747ac744896aa6eb9a906bcddb6c4597eed406fe2b9e47d1bbc7090e616e"
+ARCHIVE_SHA = "23d2a613023c5be28a18ba79ea8e2a7a00b49ec4974ef0e8ceb2ba7dc1dd84ad"
+ARCHIVE_BYTES = 40384
+MANIFEST_SHA = "f7492cd77c4a8e500840effede99d1e0573794877fa9838512fecb9303fb4b9d"
 TOOLCHAIN = "1.98.1"
 TARGET = Path("/tmp/mo-stage-b-public-target")
 

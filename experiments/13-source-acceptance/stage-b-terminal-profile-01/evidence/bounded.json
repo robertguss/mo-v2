@@ -1,0 +1,307 @@
+{
+  "mode": "bounded",
+  "candidate_executed": false,
+  "resource_acceptance": false,
+  "private_access": false,
+  "preservation_before": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "source_sha256": "6c3e537ff964f266c3055c32b0022db9d98e86f3f68d73e4e07e6f408cda0d95",
+  "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+  "python_sha256": "241bf774a81580bb760adf960b48df7e6b23b1de026c9c912d4ca6be1a08241e",
+  "jit_enabled": false,
+  "runs": [
+    {
+      "depth": 10003,
+      "rows": 180078,
+      "diagnostic_seconds": 8.451030843999433,
+      "input": {
+        "path": "rob1333-stage-b-collector-01/profiles-01/sum-10003/rows.jsonl.gz",
+        "source": "/home/user/rob1333-stage-b-collector-01/profiles-01/sum-10003/rows.jsonl.gz",
+        "bytes": 10507119,
+        "sha256": "f54aaf3789644dd8b14dae07b1127cf8ae96532e15bc9b8dc6445d9c943e7ff8"
+      },
+      "boundaries": [
+        {
+          "phase": "begin",
+          "step": 0,
+          "record_bytes": 687556,
+          "snapshot_bytes": 316,
+          "decode_seconds": 0.012517889999799081,
+          "profiled_check_seconds": 0.07777010799964046,
+          "native_clock_delta_ns": 20317864
+        },
+        {
+          "phase": "advance-deepest",
+          "step": 120041,
+          "record_bytes": 9269082,
+          "snapshot_bytes": 7719345,
+          "decode_seconds": 0.031813601999601815,
+          "profiled_check_seconds": 1.3457529209999848,
+          "native_clock_delta_ns": 81247656
+        },
+        {
+          "phase": "advance-terminal",
+          "step": 180068,
+          "record_bytes": 5658375,
+          "snapshot_bytes": 4917752,
+          "decode_seconds": 0.014492312000584207,
+          "profiled_check_seconds": 0.44404110400046193,
+          "native_clock_delta_ns": 40385530
+        },
+        {
+          "phase": "destroy",
+          "step": 180068,
+          "record_bytes": 5658299,
+          "snapshot_bytes": 4917717,
+          "decode_seconds": 0.01446240499990381,
+          "profiled_check_seconds": 0.09701139700064232,
+          "native_clock_delta_ns": 68275591
+        },
+        {
+          "phase": "destroy-again",
+          "step": 180068,
+          "record_bytes": 5658274,
+          "snapshot_bytes": 4917717,
+          "decode_seconds": 0.01414424999984476,
+          "profiled_check_seconds": 0.0895096869999179,
+          "native_clock_delta_ns": 326740515
+        }
+      ],
+      "result": {
+        "committed_steps": 180068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 18,
+        "deepest_photographed": true,
+        "streamed_commits": 180068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          10003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 10003,
+        "peak_explicit_frames": 10004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 50020,
+        "peak_retained_rows": 150057,
+        "retained_rows_at_end": 110043,
+        "resource_attempts": {
+          "number": 30011,
+          "frame": 180070
+        }
+      },
+      "decoded_sha256": "fba7b9ad64646792d2ad1a5619c1ef3a49bdf53c570f7adf89d40c502c56d2bc",
+      "replies_sha256": "fa5d5c70caf13fa461045b5b21111145a6e43a39cd88e3342ef35a21b68ae8e4"
+    },
+    {
+      "depth": 20003,
+      "rows": 360078,
+      "diagnostic_seconds": 17.42620319300022,
+      "input": {
+        "path": "rob1333-stage-b-collector-01/profiles-01/sum-20003/rows.jsonl.gz",
+        "source": "/home/user/rob1333-stage-b-collector-01/profiles-01/sum-20003/rows.jsonl.gz",
+        "bytes": 21028573,
+        "sha256": "aa03f884a365fe5165d22f167ccf8353caa99d40416731044c596ba594f02e62"
+      },
+      "boundaries": [
+        {
+          "phase": "begin",
+          "step": 0,
+          "record_bytes": 1407556,
+          "snapshot_bytes": 316,
+          "decode_seconds": 0.016375234999941313,
+          "profiled_check_seconds": 0.15967514299973118,
+          "native_clock_delta_ns": 42780520
+        },
+        {
+          "phase": "advance-deepest",
+          "step": 240041,
+          "record_bytes": 18749082,
+          "snapshot_bytes": 15639345,
+          "decode_seconds": 0.06794350200016197,
+          "profiled_check_seconds": 3.0512336190004135,
+          "native_clock_delta_ns": 195499863
+        },
+        {
+          "phase": "advance-terminal",
+          "step": 360068,
+          "record_bytes": 11458376,
+          "snapshot_bytes": 9977752,
+          "decode_seconds": 0.03852923500016914,
+          "profiled_check_seconds": 0.9784239750006236,
+          "native_clock_delta_ns": 140151198
+        },
+        {
+          "phase": "destroy",
+          "step": 360068,
+          "record_bytes": 11458300,
+          "snapshot_bytes": 9977717,
+          "decode_seconds": 0.03251735499998176,
+          "profiled_check_seconds": 0.20382241399966006,
+          "native_clock_delta_ns": 199842347
+        },
+        {
+          "phase": "destroy-again",
+          "step": 360068,
+          "record_bytes": 11458275,
+          "snapshot_bytes": 9977717,
+          "decode_seconds": 0.028787117999854672,
+          "profiled_check_seconds": 0.2477040859994304,
+          "native_clock_delta_ns": 655367519
+        }
+      ],
+      "result": {
+        "committed_steps": 360068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 36,
+        "deepest_photographed": true,
+        "streamed_commits": 360068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          20003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 20003,
+        "peak_explicit_frames": 20004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 100020,
+        "peak_retained_rows": 300057,
+        "retained_rows_at_end": 220043,
+        "resource_attempts": {
+          "number": 60011,
+          "frame": 360070
+        }
+      },
+      "decoded_sha256": "53bbb7142469f3865c327d7d74b1b0a5eea2415c2d769f945b51dddd6467d542",
+      "replies_sha256": "c7f53d8f7211f149d5bbacee0e411c4dddfe76894d557cba9817e8ed3f3c3db3"
+    },
+    {
+      "depth": 40003,
+      "rows": 720078,
+      "diagnostic_seconds": 35.84101082399957,
+      "input": {
+        "path": "rob1333-stage-b-collector-01/profiles-01/sum-40003/rows.jsonl.gz",
+        "source": "/home/user/rob1333-stage-b-collector-01/profiles-01/sum-40003/rows.jsonl.gz",
+        "bytes": 42009547,
+        "sha256": "6042972ff1a1abf96da328a416f0d3e58ee3e35447eb5946fd636a6e3219ef74"
+      },
+      "boundaries": [
+        {
+          "phase": "begin",
+          "step": 0,
+          "record_bytes": 2847557,
+          "snapshot_bytes": 316,
+          "decode_seconds": 0.04171281700018881,
+          "profiled_check_seconds": 0.31858108600044943,
+          "native_clock_delta_ns": 85832499
+        },
+        {
+          "phase": "advance-deepest",
+          "step": 480041,
+          "record_bytes": 37775785,
+          "snapshot_bytes": 31546047,
+          "decode_seconds": 0.15173893300016061,
+          "profiled_check_seconds": 6.8562258470001325,
+          "native_clock_delta_ns": 268874202
+        },
+        {
+          "phase": "advance-terminal",
+          "step": 720068,
+          "record_bytes": 23078390,
+          "snapshot_bytes": 20117764,
+          "decode_seconds": 0.07924777200059907,
+          "profiled_check_seconds": 1.9244973820004816,
+          "native_clock_delta_ns": 143927427
+        },
+        {
+          "phase": "destroy",
+          "step": 720068,
+          "record_bytes": 23078314,
+          "snapshot_bytes": 20117729,
+          "decode_seconds": 0.0671033440003157,
+          "profiled_check_seconds": 0.4781727960007629,
+          "native_clock_delta_ns": 274897552
+        },
+        {
+          "phase": "destroy-again",
+          "step": 720068,
+          "record_bytes": 23078289,
+          "snapshot_bytes": 20117729,
+          "decode_seconds": 0.05948499100031768,
+          "profiled_check_seconds": 0.5320606619998216,
+          "native_clock_delta_ns": 1365703751
+        }
+      ],
+      "result": {
+        "committed_steps": 720068,
+        "advances": 2,
+        "destroy_calls": 2,
+        "full_observations": 3,
+        "summary_observations": 72,
+        "deepest_photographed": true,
+        "streamed_commits": 720068,
+        "evaluation_cell_counts": [
+          0,
+          0,
+          40003
+        ],
+        "cleanup_frees": 0,
+        "teardown_frees": 0,
+        "peak_live_cells": 40003,
+        "peak_explicit_frames": 40004,
+        "peak_cleanup_chain": 0,
+        "peak_identity_rows": 200020,
+        "peak_retained_rows": 600057,
+        "retained_rows_at_end": 440043,
+        "resource_attempts": {
+          "number": 120011,
+          "frame": 720070
+        }
+      },
+      "decoded_sha256": "02bb8e33ec0492c36b49a63f409df5a8338e1f0a07bffb7104ae70d2d0109461",
+      "replies_sha256": "d686edabae5ed4e7eca42eea835e2f7aa3193d3385f4ec14f124f9c4dd1f85a2"
+    }
+  ],
+  "preservation_after": {
+    "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+        "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+        "original_frozen_files": 967,
+        "historical_dependencies": 5,
+        "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+        "candidate_byte_identical": true,
+        "revised_files": 41,
+        "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+      }
+    }
+  },
+  "completed": true
+}

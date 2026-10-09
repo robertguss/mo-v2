@@ -1,0 +1,5 @@
+   Compiling acceptance-cells v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/cells)
+   Compiling mo-stage-b v0.1.0 (/home/user/workspace/repo/experiments/13-source-acceptance/stage-b-adaptation-01/candidate)
+   Compiling mo-acceptance-driver v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/stage-b-revision-02/driver)
+   Compiling rob1333-stage-b-link v0.0.0 (/home/user/workspace/repo/experiments/13-source-acceptance/stage-b-adaptation-01/link)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.92s

@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "passed": false,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "non-tail-sum",
+      "depth": 1003,
+      "budgets": [
+        12041,
+        6027
+      ],
+      "limit_seconds": 900,
+      "available_bytes": 15572488192,
+      "stack_bytes": 8388608,
+      "exit_code": 0,
+      "peak_rss_kib": 27640,
+      "child_user_seconds": 0.351381,
+      "child_system_seconds": 0.033467,
+      "committed_steps": 18068,
+      "advances": 2,
+      "destroy_calls": 2,
+      "full_observations": 3,
+      "summary_observations": 1,
+      "deepest_photographed": true,
+      "streamed_commits": 18068,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        1003
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 1003,
+      "peak_explicit_frames": 1004,
+      "peak_cleanup_chain": 0,
+      "peak_identity_rows": 5020,
+      "peak_retained_rows": 15057,
+      "retained_rows_at_end": 11043,
+      "resource_attempts": {
+        "number": 3011,
+        "frame": 18070
+      },
+      "error": "AssertionError: resource completion/depth",
+      "elapsed_seconds": 0.844176359,
+      "phase_count": 18078,
+      "checked_steps": 18068,
+      "streamed_rows_sha256": "af9a4bf2ca8ef1fe2aadd505e4004e459ead1c6d78bd7cd0dfb0e4018ccd3f3e",
+      "verifier_peak_kib": 47752
+    },
+    {
+      "passed": false,
+      "candidate_executed": true,
+      "fixture_stub": false,
+      "workload": "discarded-list",
+      "depth": 1003,
+      "budgets": [
+        2005,
+        4
+      ],
+      "limit_seconds": 600,
+      "available_bytes": 15600939008,
+      "stack_bytes": 8388608,
+      "exit_code": 0,
+      "peak_rss_kib": 34528,
+      "child_user_seconds": 0.042339999999999996,
+      "child_system_seconds": 0.010584999999999999,
+      "committed_steps": 2009,
+      "advances": 2,
+      "destroy_calls": 2,
+      "full_observations": 3,
+      "summary_observations": 0,
+      "deepest_photographed": true,
+      "streamed_commits": 2009,
+      "evaluation_cell_counts": [
+        0,
+        0,
+        1003
+      ],
+      "cleanup_frees": 0,
+      "teardown_frees": 0,
+      "peak_live_cells": 1003,
+      "peak_explicit_frames": 0,
+      "peak_cleanup_chain": 1003,
+      "peak_identity_rows": 2,
+      "peak_retained_rows": 4017,
+      "retained_rows_at_end": 1007,
+      "resource_attempts": {
+        "number": 3011,
+        "frame": 2011
+      },
+      "error": "AssertionError: resource completion/depth",
+      "elapsed_seconds": 0.116346145,
+      "phase_count": 2019,
+      "checked_steps": 2009,
+      "streamed_rows_sha256": "5ba275ac4c2a85457c058b5255d3158a728a0eb6fdbacf6bc2b09d39c60cb86c",
+      "verifier_peak_kib": 47752
+    }
+  ],
+  "preservation_before": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  },
+  "preservation_after": {
+    "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+    "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+    "original_frozen_files": 967,
+    "historical_dependencies": 5,
+    "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+    "candidate_byte_identical": true,
+    "revised_files": 41,
+    "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+  }
+}

@@ -1,0 +1,902 @@
+{
+  "public_roots": [
+    "/home/user/rob1333-stage-b-memory-01"
+  ],
+  "files": [
+    {
+      "path": "rob1333-stage-b-memory-01/IDENTITY.json",
+      "logical_path": "rob1333-stage-b-memory-01/IDENTITY.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/IDENTITY.json",
+      "offset": 0,
+      "bytes": 4306,
+      "sha256": "48be2200f1adb0ee3ad122b648c29b6d0591ba0c2fcc4b68a538cee89d559d88",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/analysis.json",
+      "logical_path": "rob1333-stage-b-memory-01/analysis.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/analysis.json",
+      "offset": 0,
+      "bytes": 13188,
+      "sha256": "e2a729fe1a666708ba5c97c24e6cfd6817f7c8d29d4a4d60320cab68ba2f7da3",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/analysis.log",
+      "logical_path": "rob1333-stage-b-memory-01/analysis.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/analysis.log",
+      "offset": 0,
+      "bytes": 127,
+      "sha256": "341e34edb37392b8c0ae8fa16b575a0c56f5e5dfd3de31274647d9cfc9537eee",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/analyze.py",
+      "logical_path": "rob1333-stage-b-memory-01/analyze.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/analyze.py",
+      "offset": 0,
+      "bytes": 3113,
+      "sha256": "43682c8e2551fede7e2d9135f2099b167a267d6cb792b4a3e13aa8c3501dd749",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/request.json.gz",
+      "logical_path": "rob1333-stage-b-memory-01/baseline-20003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/request.json.gz",
+      "offset": 0,
+      "bytes": 112686,
+      "sha256": "f60277ab1ebc0ca2d4db99bbe805b7664e81beba78c0944333e5c288fb1abe79",
+      "volume": "public-000.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "cc0c7ba2311ab11673ab4da37c6274a846d0d90256fb7785e79115a2a6a27eb7",
+      "volume": "public-001.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 4245035,
+      "sha256": "c20df2c1bca10033bb94a386dad9cd1df707e8b56388e9e592f77aa2d2ff5eeb",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/stderr.txt",
+      "logical_path": "rob1333-stage-b-memory-01/baseline-20003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/stderr.txt",
+      "offset": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/summary.json",
+      "logical_path": "rob1333-stage-b-memory-01/baseline-20003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/summary.json",
+      "offset": 0,
+      "bytes": 1201,
+      "sha256": "9823b4fa08eba580339674df152c7ff8dabb0bcab5cc1360da96bb139860cc52",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/build.log",
+      "logical_path": "rob1333-stage-b-memory-01/build.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/build.log",
+      "offset": 0,
+      "bytes": 1224,
+      "sha256": "e65359d90d30b341eb686ff9565eeb6dc1bcc4ea14ff8a92dc8672314b780650",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/driver-tests.log",
+      "logical_path": "rob1333-stage-b-memory-01/driver-tests.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/driver-tests.log",
+      "offset": 0,
+      "bytes": 872,
+      "sha256": "423d96c285be60de6d22e95d488c28499260ec00f7370381e353f7097e8f568b",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/driver.patch",
+      "logical_path": "rob1333-stage-b-memory-01/driver.patch",
+      "source": "/home/user/rob1333-stage-b-memory-01/driver.patch",
+      "offset": 0,
+      "bytes": 2819,
+      "sha256": "7c74bc916b3cac406ce5e23a8aa46e360c73c9ddb0766f9c6c07bcdb1567bbf2",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/identity.py",
+      "logical_path": "rob1333-stage-b-memory-01/identity.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/identity.py",
+      "offset": 0,
+      "bytes": 1859,
+      "sha256": "cfe4ce850f6131c0a59fb43fb19e3fe6d9632d697236f46f7340ee5da96820a1",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/package.py",
+      "logical_path": "rob1333-stage-b-memory-01/package.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/package.py",
+      "offset": 0,
+      "bytes": 1073,
+      "sha256": "56cf9abd1147e755aff9defe636a519d143ac866c343fe7dfb00a8f0f3f05a97",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/request.json.gz",
+      "logical_path": "rob1333-stage-b-memory-01/probe-10003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/request.json.gz",
+      "offset": 0,
+      "bytes": 54941,
+      "sha256": "e31bb167265f7911b28c04095130b4da60d0aa129f8c90ee3346a81e4e666718",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/rows.jsonl.gz",
+      "logical_path": "rob1333-stage-b-memory-01/probe-10003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 10505685,
+      "sha256": "e020a41e94b7907db65c52d6318fa3109f32c4771a27f57b131069926843a8c7",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/stderr.txt",
+      "logical_path": "rob1333-stage-b-memory-01/probe-10003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/stderr.txt",
+      "offset": 0,
+      "bytes": 8917,
+      "sha256": "e6d7874c396e6ee403d2d1430ff670405ed796001ae9643a24bd30cce7052b50",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/summary.json",
+      "logical_path": "rob1333-stage-b-memory-01/probe-10003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/summary.json",
+      "offset": 0,
+      "bytes": 1178,
+      "sha256": "900f71d7f150abed9eb0c0a2b079e4f03a3a479ffedd0be51337854e487dd600",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/request.json.gz",
+      "logical_path": "rob1333-stage-b-memory-01/probe-20003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/request.json.gz",
+      "offset": 0,
+      "bytes": 112683,
+      "sha256": "3e359a8a6afe6895e32b91517d67e7600f5ffb18a5c57dd2e01b50c52fb879f3",
+      "volume": "public-002.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "9fb8a71170a41192b4fa06b512bda66c88b8713838026f55507b836c00ef336c",
+      "volume": "public-003.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 4252315,
+      "sha256": "cf72e7b326426c4bdf85146490432229dd8f751cead72c7a88bccfaf2441dee0",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/stderr.txt",
+      "logical_path": "rob1333-stage-b-memory-01/probe-20003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/stderr.txt",
+      "offset": 0,
+      "bytes": 11172,
+      "sha256": "d8ec94b73c8474c023b6a79e35420f3a93718e5d63a54602880e9bcfcad74d42",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/summary.json",
+      "logical_path": "rob1333-stage-b-memory-01/probe-20003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/summary.json",
+      "offset": 0,
+      "bytes": 1191,
+      "sha256": "68ee04fb2e3468e20a799a457aec50a7552436f5e7cbfeb7c44362ee2060ab23",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/request.json.gz",
+      "logical_path": "rob1333-stage-b-memory-01/probe-40003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/request.json.gz",
+      "offset": 0,
+      "bytes": 226880,
+      "sha256": "7cd55cf81947c4410aa8708b778568af036d910460be78c7d894fcc61d720f1f",
+      "volume": "public-004.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz.chunk-000000000000",
+      "logical_path": "rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "offset": 0,
+      "bytes": 16777216,
+      "sha256": "59f6e5f060df0356e1259685dce4f1a7f235f701c7c87a889b1ec2f1ebd6fc83",
+      "volume": "public-005.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz.chunk-000016777216",
+      "logical_path": "rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "offset": 16777216,
+      "bytes": 16777216,
+      "sha256": "2ac7e976c5b3ce3f86f25260ac00aacc573edddefa7469d236e82e2154557ec4",
+      "volume": "public-006.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz.chunk-000033554432",
+      "logical_path": "rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "offset": 33554432,
+      "bytes": 8496683,
+      "sha256": "226cc462108bcc36bc6d36fda95a320a860a2cf28ff6b3402e2072c983b794df",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/stderr.txt",
+      "logical_path": "rob1333-stage-b-memory-01/probe-40003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/stderr.txt",
+      "offset": 0,
+      "bytes": 15652,
+      "sha256": "5ba09f34261831de0482159ce8ffe7293c02462f4164f0d756b160c49d380093",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/summary.json",
+      "logical_path": "rob1333-stage-b-memory-01/probe-40003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/summary.json",
+      "offset": 0,
+      "bytes": 1183,
+      "sha256": "9d0e48e7418d3228cbbfc11611d1c642271694a088971baf48eec7361a3dc4d1",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/profile.log",
+      "logical_path": "rob1333-stage-b-memory-01/profile.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/profile.log",
+      "offset": 0,
+      "bytes": 522,
+      "sha256": "9692ab5c4da03cf9c1a4d33fe72381bc837f957a657ef856972036723d2a3681",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/profile.py",
+      "logical_path": "rob1333-stage-b-memory-01/profile.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/profile.py",
+      "offset": 0,
+      "bytes": 2535,
+      "sha256": "a65511bf4338dc55a5d5c79ccc14edf963bb1b81ad64aa4b511504db99adabb4",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/report.json",
+      "logical_path": "rob1333-stage-b-memory-01/report.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/report.json",
+      "offset": 0,
+      "bytes": 6927,
+      "sha256": "a4a48b7b6677ec39fd298b752c8944597c63d4ef6198817d09d2695809e5d7ae",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/CANDIDATE.sha256",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/CANDIDATE.sha256",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/CANDIDATE.sha256",
+      "offset": 0,
+      "bytes": 537,
+      "sha256": "cc1e09dac565f67341bffee062fa0abbd080f9c60ebeac2fed522f56ff14317e",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.lock",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.lock",
+      "offset": 0,
+      "bytes": 4951,
+      "sha256": "40f2087ad4249831f9da973f7080ce7f4a13a9bbedb7cf7bc50558b693e0f574",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.toml",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.toml",
+      "offset": 0,
+      "bytes": 308,
+      "sha256": "93ce8e7350142548a7f54ccf7c8ab0449addb109a229af3d887358655a38729e",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/HANDOFF.md",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/HANDOFF.md",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/HANDOFF.md",
+      "offset": 0,
+      "bytes": 13955,
+      "sha256": "44b1280168cc236ead72b5bbe6f91c365346807a0f4a4e767b335cfe7bbb66d8",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/execution.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/execution.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/execution.rs",
+      "offset": 0,
+      "bytes": 117783,
+      "sha256": "b21590e771bffda20511a362a4e8df0b7b5112cc136e4b4592643ee29a6004c2",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/frontend.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/frontend.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/frontend.rs",
+      "offset": 0,
+      "bytes": 48117,
+      "sha256": "3df2eeebf2ca8163873f18be0e07caa45d62dd36f1c060047b64d4d8de4cad83",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/lib.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/lib.rs",
+      "offset": 0,
+      "bytes": 2201,
+      "sha256": "ae101c8fad863ca55bf036ff19ace0b5a4102fe71597836fa25821d7cd30883a",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/number.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/number.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/number.rs",
+      "offset": 0,
+      "bytes": 3647,
+      "sha256": "cd89f942c600698114262b44dd035c13ddfa74c06d4d187368f39a97e7594a29",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.lock",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.lock",
+      "offset": 0,
+      "bytes": 5315,
+      "sha256": "41df729167291f4bd74071be956a8f9f555b371973d2431f3e03f70db27e00c0",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.toml",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.toml",
+      "offset": 0,
+      "bytes": 271,
+      "sha256": "707820bbce6f86575e36f3ae47c612d201881abdb5141354963b1950c01b02f4",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/main.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/main.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/main.rs",
+      "offset": 0,
+      "bytes": 159,
+      "sha256": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.lock",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.lock",
+      "offset": 0,
+      "bytes": 267,
+      "sha256": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.toml",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.toml",
+      "offset": 0,
+      "bytes": 174,
+      "sha256": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/examples/bridge_probe.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/examples/bridge_probe.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/examples/bridge_probe.rs",
+      "offset": 0,
+      "bytes": 1593,
+      "sha256": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/host.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/host.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/host.rs",
+      "offset": 0,
+      "bytes": 12835,
+      "sha256": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/lib.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/lib.rs",
+      "offset": 0,
+      "bytes": 12459,
+      "sha256": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/linkage.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/linkage.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/linkage.rs",
+      "offset": 0,
+      "bytes": 2258,
+      "sha256": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.lock",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.lock",
+      "offset": 0,
+      "bytes": 2861,
+      "sha256": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.toml",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.toml",
+      "offset": 0,
+      "bytes": 236,
+      "sha256": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/examples/fixture_stub.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/examples/fixture_stub.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/examples/fixture_stub.rs",
+      "offset": 0,
+      "bytes": 8062,
+      "sha256": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/lib.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/lib.rs",
+      "offset": 0,
+      "bytes": 22290,
+      "sha256": "0fc346304826833f2cb2d721cad3b177d896e56ec23333b13c518e1552f9efbb",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/memory_probe.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/memory_probe.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/memory_probe.rs",
+      "offset": 0,
+      "bytes": 1964,
+      "sha256": "22679bfc86de64eacf59d8550813dc723f1c032e13f22cbb7342618a05ae20eb",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.lock",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.lock",
+      "offset": 0,
+      "bytes": 165,
+      "sha256": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.toml",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.toml",
+      "offset": 0,
+      "bytes": 115,
+      "sha256": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/abi.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/abi.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/abi.rs",
+      "offset": 0,
+      "bytes": 962,
+      "sha256": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec",
+      "volume": "public-007.tar.gz"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/lib.rs",
+      "logical_path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/lib.rs",
+      "offset": 0,
+      "bytes": 4510,
+      "sha256": "8f9bda9e49a1ff956de2f5329d5fbeb135b52a2393d65fd9108cb23cdd229c80",
+      "volume": "public-007.tar.gz"
+    }
+  ],
+  "sources": [
+    {
+      "path": "rob1333-stage-b-memory-01/IDENTITY.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/IDENTITY.json",
+      "bytes": 4306,
+      "sha256": "48be2200f1adb0ee3ad122b648c29b6d0591ba0c2fcc4b68a538cee89d559d88"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/analysis.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/analysis.json",
+      "bytes": 13188,
+      "sha256": "e2a729fe1a666708ba5c97c24e6cfd6817f7c8d29d4a4d60320cab68ba2f7da3"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/analysis.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/analysis.log",
+      "bytes": 127,
+      "sha256": "341e34edb37392b8c0ae8fa16b575a0c56f5e5dfd3de31274647d9cfc9537eee"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/analyze.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/analyze.py",
+      "bytes": 3113,
+      "sha256": "43682c8e2551fede7e2d9135f2099b167a267d6cb792b4a3e13aa8c3501dd749"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/request.json.gz",
+      "bytes": 112686,
+      "sha256": "f60277ab1ebc0ca2d4db99bbe805b7664e81beba78c0944333e5c288fb1abe79"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/rows.jsonl.gz",
+      "bytes": 21022251,
+      "sha256": "07af9bb5640a9a299ab26aa72e2a5e93108b4b38aab17a207eab3b788f840788"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/baseline-20003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/baseline-20003/summary.json",
+      "bytes": 1201,
+      "sha256": "9823b4fa08eba580339674df152c7ff8dabb0bcab5cc1360da96bb139860cc52"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/build.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/build.log",
+      "bytes": 1224,
+      "sha256": "e65359d90d30b341eb686ff9565eeb6dc1bcc4ea14ff8a92dc8672314b780650"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/driver-tests.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/driver-tests.log",
+      "bytes": 872,
+      "sha256": "423d96c285be60de6d22e95d488c28499260ec00f7370381e353f7097e8f568b"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/driver.patch",
+      "source": "/home/user/rob1333-stage-b-memory-01/driver.patch",
+      "bytes": 2819,
+      "sha256": "7c74bc916b3cac406ce5e23a8aa46e360c73c9ddb0766f9c6c07bcdb1567bbf2"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/identity.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/identity.py",
+      "bytes": 1859,
+      "sha256": "cfe4ce850f6131c0a59fb43fb19e3fe6d9632d697236f46f7340ee5da96820a1"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/package.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/package.py",
+      "bytes": 1073,
+      "sha256": "56cf9abd1147e755aff9defe636a519d143ac866c343fe7dfb00a8f0f3f05a97"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/request.json.gz",
+      "bytes": 54941,
+      "sha256": "e31bb167265f7911b28c04095130b4da60d0aa129f8c90ee3346a81e4e666718"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/rows.jsonl.gz",
+      "bytes": 10505685,
+      "sha256": "e020a41e94b7907db65c52d6318fa3109f32c4771a27f57b131069926843a8c7"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/stderr.txt",
+      "bytes": 8917,
+      "sha256": "e6d7874c396e6ee403d2d1430ff670405ed796001ae9643a24bd30cce7052b50"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-10003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-10003/summary.json",
+      "bytes": 1178,
+      "sha256": "900f71d7f150abed9eb0c0a2b079e4f03a3a479ffedd0be51337854e487dd600"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/request.json.gz",
+      "bytes": 112683,
+      "sha256": "3e359a8a6afe6895e32b91517d67e7600f5ffb18a5c57dd2e01b50c52fb879f3"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/rows.jsonl.gz",
+      "bytes": 21029531,
+      "sha256": "efcb6897d106aede4fb8ab9a499d6937a35fb297463647c1d9d72d1957428047"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/stderr.txt",
+      "bytes": 11172,
+      "sha256": "d8ec94b73c8474c023b6a79e35420f3a93718e5d63a54602880e9bcfcad74d42"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-20003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-20003/summary.json",
+      "bytes": 1191,
+      "sha256": "68ee04fb2e3468e20a799a457aec50a7552436f5e7cbfeb7c44362ee2060ab23"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/request.json.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/request.json.gz",
+      "bytes": 226880,
+      "sha256": "7cd55cf81947c4410aa8708b778568af036d910460be78c7d894fcc61d720f1f"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/rows.jsonl.gz",
+      "bytes": 42051115,
+      "sha256": "8b1a02c830d5921fe2e134b2c7f5e002f44e461379ac6fbe444ecd8699c6e7e8"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/stderr.txt",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/stderr.txt",
+      "bytes": 15652,
+      "sha256": "5ba09f34261831de0482159ce8ffe7293c02462f4164f0d756b160c49d380093"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/probe-40003/summary.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/probe-40003/summary.json",
+      "bytes": 1183,
+      "sha256": "9d0e48e7418d3228cbbfc11611d1c642271694a088971baf48eec7361a3dc4d1"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/profile.log",
+      "source": "/home/user/rob1333-stage-b-memory-01/profile.log",
+      "bytes": 522,
+      "sha256": "9692ab5c4da03cf9c1a4d33fe72381bc837f957a657ef856972036723d2a3681"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/profile.py",
+      "source": "/home/user/rob1333-stage-b-memory-01/profile.py",
+      "bytes": 2535,
+      "sha256": "a65511bf4338dc55a5d5c79ccc14edf963bb1b81ad64aa4b511504db99adabb4"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/report.json",
+      "source": "/home/user/rob1333-stage-b-memory-01/report.json",
+      "bytes": 6927,
+      "sha256": "a4a48b7b6677ec39fd298b752c8944597c63d4ef6198817d09d2695809e5d7ae"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/CANDIDATE.sha256",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/CANDIDATE.sha256",
+      "bytes": 537,
+      "sha256": "cc1e09dac565f67341bffee062fa0abbd080f9c60ebeac2fed522f56ff14317e"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.lock",
+      "bytes": 4951,
+      "sha256": "40f2087ad4249831f9da973f7080ce7f4a13a9bbedb7cf7bc50558b693e0f574"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/Cargo.toml",
+      "bytes": 308,
+      "sha256": "93ce8e7350142548a7f54ccf7c8ab0449addb109a229af3d887358655a38729e"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/HANDOFF.md",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/HANDOFF.md",
+      "bytes": 13955,
+      "sha256": "44b1280168cc236ead72b5bbe6f91c365346807a0f4a4e767b335cfe7bbb66d8"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/execution.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/execution.rs",
+      "bytes": 117783,
+      "sha256": "b21590e771bffda20511a362a4e8df0b7b5112cc136e4b4592643ee29a6004c2"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/frontend.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/frontend.rs",
+      "bytes": 48117,
+      "sha256": "3df2eeebf2ca8163873f18be0e07caa45d62dd36f1c060047b64d4d8de4cad83"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/lib.rs",
+      "bytes": 2201,
+      "sha256": "ae101c8fad863ca55bf036ff19ace0b5a4102fe71597836fa25821d7cd30883a"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/number.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/candidate/number.rs",
+      "bytes": 3647,
+      "sha256": "cd89f942c600698114262b44dd035c13ddfa74c06d4d187368f39a97e7594a29"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.lock",
+      "bytes": 5315,
+      "sha256": "41df729167291f4bd74071be956a8f9f555b371973d2431f3e03f70db27e00c0"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/Cargo.toml",
+      "bytes": 271,
+      "sha256": "707820bbce6f86575e36f3ae47c612d201881abdb5141354963b1950c01b02f4"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/main.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-adaptation-01/link/main.rs",
+      "bytes": 159,
+      "sha256": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.lock",
+      "bytes": 267,
+      "sha256": "4a088f14fa8cb7a84c99051a131c1107ddbc302930fd969752f89dbb23c35a9a"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/Cargo.toml",
+      "bytes": 174,
+      "sha256": "53e14ef3045e6ae5239a2fc1866114ea5fcfe8e7490032bb5f265530184d9f1e"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/examples/bridge_probe.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/examples/bridge_probe.rs",
+      "bytes": 1593,
+      "sha256": "c188350eeae42963e13b6b8d80846caeec82a8d139a369ba409a544ff24f0976"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/host.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/host.rs",
+      "bytes": 12835,
+      "sha256": "47b371505d4ba65371c1a8be4e5caaafd223138c511d753e32ef6d63c222053e"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/lib.rs",
+      "bytes": 12459,
+      "sha256": "73e858943348416c769571c635dba737de7dbad7c6269bf4644c40df36abd738"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/linkage.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/cells/linkage.rs",
+      "bytes": 2258,
+      "sha256": "56afd563a1148cefa5cf739357077ac53c6cb74aaffbd25f63cf0196e57218f6"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.lock",
+      "bytes": 2861,
+      "sha256": "5a6959d4a66282bcddfb21f769d988842d5dbd6a8bd9ac7ffede9cd40b8bb45e"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/Cargo.toml",
+      "bytes": 236,
+      "sha256": "c9b1246c745717a56cb0a9fe89d2fdc319e0008aec0d305972c05ec606f42fb6"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/examples/fixture_stub.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/examples/fixture_stub.rs",
+      "bytes": 8062,
+      "sha256": "a6147c81ff5da57b1d38ff72a43af0585a6def5437402e6d925bab5f3c6db830"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/lib.rs",
+      "bytes": 22290,
+      "sha256": "0fc346304826833f2cb2d721cad3b177d896e56ec23333b13c518e1552f9efbb"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/memory_probe.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/driver/memory_probe.rs",
+      "bytes": 1964,
+      "sha256": "22679bfc86de64eacf59d8550813dc723f1c032e13f22cbb7342618a05ae20eb"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.lock",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.lock",
+      "bytes": 165,
+      "sha256": "1f78ac7337329cfb42c7a5bee162c311f3d101ac4b20a580ea13739bf23f1fee"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.toml",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/Cargo.toml",
+      "bytes": 115,
+      "sha256": "69f3b26e54e66debfb8c91a295b6a2e176e545f350be96267cfd9b56686d3e86"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/abi.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/abi.rs",
+      "bytes": 962,
+      "sha256": "985fd992c9a40a8f81c0807fe502ace4cb0a62da42790801f8b853f0dd98e0ec"
+    },
+    {
+      "path": "rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/lib.rs",
+      "source": "/home/user/rob1333-stage-b-memory-01/source/stage-b-revision-02/runtime/lib.rs",
+      "bytes": 4510,
+      "sha256": "8f9bda9e49a1ff956de2f5329d5fbeb135b52a2393d65fd9108cb23cdd229c80"
+    }
+  ],
+  "volumes": [
+    {
+      "path": "public-000.tar.gz",
+      "bytes": 65499,
+      "sha256": "c0b27b106eb43175bf90cb179f205005ded0a93e708b1286f2d80fcac3a4b3c9"
+    },
+    {
+      "path": "public-001.tar.gz",
+      "bytes": 12344406,
+      "sha256": "df8ba9afcec121552e9ade00f65ac4d3cbd9c97c294a986e381685ce25f9d886"
+    },
+    {
+      "path": "public-002.tar.gz",
+      "bytes": 9433070,
+      "sha256": "6a22960b75644e6bc2de771291bbf4e243e15cb9178018c4c8eda9deedd3d9d4"
+    },
+    {
+      "path": "public-003.tar.gz",
+      "bytes": 12323357,
+      "sha256": "39c3521811f3007bf34a5dcf60f6ebd03868f6935679a72fe8062e116f0e0be3"
+    },
+    {
+      "path": "public-004.tar.gz",
+      "bytes": 2229234,
+      "sha256": "382bec1d2485c27c19edde3f11add14e0b98b77819fe823989b2aa46afb5573d"
+    },
+    {
+      "path": "public-005.tar.gz",
+      "bytes": 13276789,
+      "sha256": "c4d752fb72a4e9e455f6d316fcc3897d1cba32b34289488ae7fb633b3cc55a5f"
+    },
+    {
+      "path": "public-006.tar.gz",
+      "bytes": 11152327,
+      "sha256": "07570b2cf9c3a442de553cb9f76551ccca96d1bfbbd71c6283e3e5b307492828"
+    },
+    {
+      "path": "public-007.tar.gz",
+      "bytes": 4114378,
+      "sha256": "a6f11ee9ce1fed816fc4d31d3d16ee827e6d839d9def2b49a0e30263022127eb"
+    }
+  ],
+  "omitted_dependency_links": [],
+  "build_cache_omitted": true,
+  "private_raw_included": false,
+  "readback_verified": true,
+  "original_files_preserved": true
+}

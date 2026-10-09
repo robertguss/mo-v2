@@ -1,0 +1,446 @@
+{
+  "measurements": [
+    {
+      "depth": 10003,
+      "deepest": {
+        "before-observe": {
+          "phase": "advance",
+          "point": "before-observe",
+          "step": 120041,
+          "live_bytes": 54894037,
+          "interval_peak_bytes": 54939003,
+          "rss_kib": 63764
+        },
+        "after-observe": {
+          "phase": "advance",
+          "point": "after-observe",
+          "step": 120041,
+          "live_bytes": 63282645,
+          "interval_peak_bytes": 68164573,
+          "rss_kib": 75692
+        },
+        "after-decode": {
+          "phase": "advance",
+          "point": "after-decode",
+          "step": 120041,
+          "live_bytes": 141998430,
+          "interval_peak_bytes": 141998430,
+          "rss_kib": 163436
+        },
+        "emit-start": {
+          "phase": "advance",
+          "point": "emit-start",
+          "step": 120041,
+          "live_bytes": 141329853,
+          "interval_peak_bytes": 149718415,
+          "rss_kib": 163544
+        },
+        "graph-built": {
+          "phase": "advance",
+          "point": "graph-built",
+          "step": 120041,
+          "live_bytes": 144030639,
+          "interval_peak_bytes": 144030664,
+          "rss_kib": 166708
+        },
+        "row-built": {
+          "phase": "advance",
+          "point": "row-built",
+          "step": 120041,
+          "live_bytes": 154053686,
+          "interval_peak_bytes": 154053686,
+          "rss_kib": 177268
+        },
+        "row-sent": {
+          "phase": "advance",
+          "point": "row-sent",
+          "step": 120041,
+          "live_bytes": 144030639,
+          "interval_peak_bytes": 154055734,
+          "rss_kib": 177268
+        },
+        "prior-replaced": {
+          "phase": "advance",
+          "point": "prior-replaced",
+          "step": 120041,
+          "live_bytes": 133607245,
+          "interval_peak_bytes": 144032687,
+          "rss_kib": 169872
+        }
+      },
+      "completed": {
+        "before-observe": {
+          "phase": "advance",
+          "point": "before-observe",
+          "step": 180068,
+          "live_bytes": 129058612,
+          "interval_peak_bytes": 129077309,
+          "rss_kib": 171452
+        },
+        "after-observe": {
+          "phase": "advance",
+          "point": "after-observe",
+          "step": 180068,
+          "live_bytes": 137447220,
+          "interval_peak_bytes": 137447516,
+          "rss_kib": 176204
+        },
+        "after-decode": {
+          "phase": "advance",
+          "point": "after-decode",
+          "step": 180068,
+          "live_bytes": 181529267,
+          "interval_peak_bytes": 181529267,
+          "rss_kib": 209204
+        },
+        "emit-start": {
+          "phase": "advance",
+          "point": "emit-start",
+          "step": 180068,
+          "live_bytes": 178059108,
+          "interval_peak_bytes": 186447659,
+          "rss_kib": 213956
+        },
+        "graph-built": {
+          "phase": "advance",
+          "point": "graph-built",
+          "step": 180068,
+          "live_bytes": 178059108,
+          "interval_peak_bytes": 178061156,
+          "rss_kib": 213956
+        },
+        "row-built": {
+          "phase": "advance",
+          "point": "row-built",
+          "step": 180068,
+          "live_bytes": 182979883,
+          "interval_peak_bytes": 182979883,
+          "rss_kib": 213956
+        },
+        "row-sent": {
+          "phase": "advance",
+          "point": "row-sent",
+          "step": 180068,
+          "live_bytes": 178059108,
+          "interval_peak_bytes": 182981931,
+          "rss_kib": 213956
+        },
+        "prior-replaced": {
+          "phase": "advance",
+          "point": "prior-replaced",
+          "step": 180068,
+          "live_bytes": 94424874,
+          "interval_peak_bytes": 178061156,
+          "rss_kib": 212588
+        }
+      },
+      "decoded_deepest_tree_bytes": 78715785,
+      "snapshot_buffer_bytes": 8388608,
+      "native_peak_rss_kib": 216544,
+      "verifier_peak_rss_kib": 154836
+    },
+    {
+      "depth": 20003,
+      "deepest": {
+        "before-observe": {
+          "phase": "advance",
+          "point": "before-observe",
+          "step": 240041,
+          "live_bytes": 109692997,
+          "interval_peak_bytes": 109748608,
+          "rss_kib": 125160
+        },
+        "after-observe": {
+          "phase": "advance",
+          "point": "after-observe",
+          "step": 240041,
+          "live_bytes": 126470213,
+          "interval_peak_bytes": 136232141,
+          "rss_kib": 149168
+        },
+        "after-decode": {
+          "phase": "advance",
+          "point": "after-decode",
+          "step": 240041,
+          "live_bytes": 283874590,
+          "interval_peak_bytes": 283874590,
+          "rss_kib": 324604
+        },
+        "emit-start": {
+          "phase": "advance",
+          "point": "emit-start",
+          "step": 240041,
+          "live_bytes": 282737405,
+          "interval_peak_bytes": 299514575,
+          "rss_kib": 324808
+        },
+        "graph-built": {
+          "phase": "advance",
+          "point": "graph-built",
+          "step": 240041,
+          "live_bytes": 288138191,
+          "interval_peak_bytes": 288138216,
+          "rss_kib": 331404
+        },
+        "row-built": {
+          "phase": "advance",
+          "point": "row-built",
+          "step": 240041,
+          "live_bytes": 308381238,
+          "interval_peak_bytes": 308381238,
+          "rss_kib": 352524
+        },
+        "row-sent": {
+          "phase": "advance",
+          "point": "row-sent",
+          "step": 240041,
+          "live_bytes": 288138191,
+          "interval_peak_bytes": 308383286,
+          "rss_kib": 352524
+        },
+        "prior-replaced": {
+          "phase": "advance",
+          "point": "prior-replaced",
+          "step": 240041,
+          "live_bytes": 267094797,
+          "interval_peak_bytes": 288140239,
+          "rss_kib": 337468
+        }
+      },
+      "completed": {
+        "before-observe": {
+          "phase": "advance",
+          "point": "before-observe",
+          "step": 360068,
+          "live_bytes": 257992468,
+          "interval_peak_bytes": 258011159,
+          "rss_kib": 340368
+        },
+        "after-observe": {
+          "phase": "advance",
+          "point": "after-observe",
+          "step": 360068,
+          "live_bytes": 274769684,
+          "interval_peak_bytes": 274769980,
+          "rss_kib": 350136
+        },
+        "after-decode": {
+          "phase": "advance",
+          "point": "after-decode",
+          "step": 360068,
+          "live_bytes": 362927459,
+          "interval_peak_bytes": 362927459,
+          "rss_kib": 415608
+        },
+        "emit-start": {
+          "phase": "advance",
+          "point": "emit-start",
+          "step": 360068,
+          "live_bytes": 356128692,
+          "interval_peak_bytes": 372905851,
+          "rss_kib": 425376
+        },
+        "graph-built": {
+          "phase": "advance",
+          "point": "graph-built",
+          "step": 360068,
+          "live_bytes": 356128692,
+          "interval_peak_bytes": 356130740,
+          "rss_kib": 425376
+        },
+        "row-built": {
+          "phase": "advance",
+          "point": "row-built",
+          "step": 360068,
+          "live_bytes": 366109467,
+          "interval_peak_bytes": 366109467,
+          "rss_kib": 425376
+        },
+        "row-sent": {
+          "phase": "advance",
+          "point": "row-sent",
+          "step": 360068,
+          "live_bytes": 356128692,
+          "interval_peak_bytes": 366111515,
+          "rss_kib": 425376
+        },
+        "prior-replaced": {
+          "phase": "advance",
+          "point": "prior-replaced",
+          "step": 360068,
+          "live_bytes": 188745866,
+          "interval_peak_bytes": 356130740,
+          "rss_kib": 422452
+        }
+      },
+      "decoded_deepest_tree_bytes": 157404377,
+      "snapshot_buffer_bytes": 16777216,
+      "native_peak_rss_kib": 430368,
+      "verifier_peak_rss_kib": 289092
+    },
+    {
+      "depth": 40003,
+      "deepest": {
+        "before-observe": {
+          "phase": "advance",
+          "point": "before-observe",
+          "step": 480041,
+          "live_bytes": 219312805,
+          "interval_peak_bytes": 219344048,
+          "rss_kib": 246180
+        },
+        "after-observe": {
+          "phase": "advance",
+          "point": "after-observe",
+          "step": 480041,
+          "live_bytes": 252867237,
+          "interval_peak_bytes": 272389165,
+          "rss_kib": 294628
+        },
+        "after-decode": {
+          "phase": "advance",
+          "point": "after-decode",
+          "step": 480041,
+          "live_bytes": 567648798,
+          "interval_peak_bytes": 567648798,
+          "rss_kib": 645656
+        },
+        "emit-start": {
+          "phase": "advance",
+          "point": "emit-start",
+          "step": 480041,
+          "live_bytes": 565641099,
+          "interval_peak_bytes": 599195485,
+          "rss_kib": 645888
+        },
+        "graph-built": {
+          "phase": "advance",
+          "point": "graph-built",
+          "step": 480041,
+          "live_bytes": 576441885,
+          "interval_peak_bytes": 576441910,
+          "rss_kib": 659084
+        },
+        "row-built": {
+          "phase": "advance",
+          "point": "row-built",
+          "step": 480041,
+          "live_bytes": 617191634,
+          "interval_peak_bytes": 617191634,
+          "rss_kib": 701852
+        },
+        "row-sent": {
+          "phase": "advance",
+          "point": "row-sent",
+          "step": 480041,
+          "live_bytes": 576441885,
+          "interval_peak_bytes": 617193682,
+          "rss_kib": 671204
+        },
+        "prior-replaced": {
+          "phase": "advance",
+          "point": "prior-replaced",
+          "step": 480041,
+          "live_bytes": 534091789,
+          "interval_peak_bytes": 576443933,
+          "rss_kib": 640396
+        }
+      },
+      "completed": {
+        "before-observe": {
+          "phase": "advance",
+          "point": "before-observe",
+          "step": 720068,
+          "live_bytes": 515866484,
+          "interval_peak_bytes": 515891987,
+          "rss_kib": 647256
+        },
+        "after-observe": {
+          "phase": "advance",
+          "point": "after-observe",
+          "step": 720068,
+          "live_bytes": 549420916,
+          "interval_peak_bytes": 549421212,
+          "rss_kib": 683160
+        },
+        "after-decode": {
+          "phase": "advance",
+          "point": "after-decode",
+          "step": 720068,
+          "live_bytes": 725730147,
+          "interval_peak_bytes": 725730147,
+          "rss_kib": 828624
+        },
+        "emit-start": {
+          "phase": "advance",
+          "point": "emit-start",
+          "step": 720068,
+          "live_bytes": 712294176,
+          "interval_peak_bytes": 745848551,
+          "rss_kib": 828760
+        },
+        "graph-built": {
+          "phase": "advance",
+          "point": "graph-built",
+          "step": 720068,
+          "live_bytes": 712294176,
+          "interval_peak_bytes": 712296224,
+          "rss_kib": 828760
+        },
+        "row-built": {
+          "phase": "advance",
+          "point": "row-built",
+          "step": 720068,
+          "live_bytes": 732414963,
+          "interval_peak_bytes": 732414963,
+          "rss_kib": 848292
+        },
+        "row-sent": {
+          "phase": "advance",
+          "point": "row-sent",
+          "step": 720068,
+          "live_bytes": 712294176,
+          "interval_peak_bytes": 732417011,
+          "rss_kib": 848292
+        },
+        "prior-replaced": {
+          "phase": "advance",
+          "point": "prior-replaced",
+          "step": 720068,
+          "live_bytes": 377394154,
+          "interval_peak_bytes": 712296224,
+          "rss_kib": 842160
+        }
+      },
+      "decoded_deepest_tree_bytes": 314781561,
+      "snapshot_buffer_bytes": 33554432,
+      "native_peak_rss_kib": 848292,
+      "verifier_peak_rss_kib": 515800
+    }
+  ],
+  "comparison": {
+    "rows": 360078,
+    "fields": [
+      "phase",
+      "step",
+      "raw",
+      "from",
+      "to",
+      "resources",
+      "creates",
+      "outside"
+    ],
+    "exact_match": true,
+    "digest_sha256": "b1df4303b68a609139aeac981857c69c5fb7d60519febdca844c2169b57ba8e9",
+    "omitted_fields": "Wall clocks and physical pointer-bearing graph/events/mutations; both streams independently verified by frozen verdict logic."
+  },
+  "caveats": [
+    "System allocator requested live bytes exclude allocation bookkeeping, fragmentation, stacks and Python.",
+    "Realloc counts its final requested size, not any transient internal allocator overlap.",
+    "RSS samples include allocator-retained pages; freeing live allocations need not reduce RSS.",
+    "Verifier max RSS is cumulative within the profiling Python process, not isolated per workload.",
+    "Scaled diagnostics do not prove the exact instruction at the original OOM or acceptance at a million elements.",
+    "Candidate plus native store/logs remain grouped in pre-observation retained memory.",
+    "No timing inference: diagnostic allocation counters and caps are not acceptance instrumentation."
+  ]
+}

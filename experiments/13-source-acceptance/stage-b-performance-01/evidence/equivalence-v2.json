@@ -1,0 +1,8 @@
+{
+  "exact": 11728,
+  "load": 20090,
+  "fields": 42,
+  "digests": 5000,
+  "passed": true,
+  "helper_sha256": "f0f70b3b1c76d85911bac5e122ca46a6712dbf5df52028b90e52e36f8a69d4fd"
+}

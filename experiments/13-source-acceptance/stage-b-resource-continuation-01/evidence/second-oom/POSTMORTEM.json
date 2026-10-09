@@ -1,0 +1,160 @@
+{
+  "passed": false,
+  "classification": "verifier OOM; entire execution scope killed before final verdict",
+  "shell_exit_code": 137,
+  "kernel_kill_utc": "2026-10-09T12:23:46.802+00:00",
+  "memory_cgroup_limit_bytes": 14763950080,
+  "verifier_anon_rss_kib": 7328164,
+  "native_anon_rss_kib": 6889832,
+  "oom_invoker": "external sampling python3, not the selected verifier",
+  "observer_effect": "An unmonitored run is not proven to fail at precisely the same point.",
+  "resource_clock_elapsed_seconds": null,
+  "last_retained_driver_elapsed_ns": 570223188952,
+  "last_retained_step": 12000005,
+  "deepest_full_observation_verified": false,
+  "completion_verified": false,
+  "cleanup_verified": false,
+  "completed_verifier_verdict": false,
+  "discard_executed": false,
+  "inspection_agreement": true,
+  "originals": [
+    {
+      "path": "originals/inspect_partial.py",
+      "bytes": 2227,
+      "sha256": "9094ade18ad363ed3cfe0f53be24959c175519f1cf069e3ae50dd288221b88d3"
+    },
+    {
+      "path": "originals/inspection.log",
+      "bytes": 792,
+      "sha256": "6f83239b6c9f46238756eacad1e8a5e3b500d1cc44a642bf69579190032419d4"
+    },
+    {
+      "path": "originals/kernel-oom.txt",
+      "bytes": 5391,
+      "sha256": "2e0f12dd9880ba0a2fb00f31009ccd604cde38c6f1ae6510dd90704f61c34976"
+    },
+    {
+      "path": "originals/memory-samples.jsonl",
+      "bytes": 3908,
+      "sha256": "eb93d4b70dbb964adbd460e064253236e2b668d5fffab62e815b849e5af8d424"
+    },
+    {
+      "path": "originals/million/LOCK.json",
+      "bytes": 3386,
+      "sha256": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5"
+    },
+    {
+      "path": "originals/million/non-tail-sum/request.json.gz",
+      "bytes": 4877828,
+      "sha256": "c6137dff61678a42ce7a2f3cfca190e3b51e6011fbc7975cee74e180697ba343"
+    },
+    {
+      "path": "originals/million/non-tail-sum/rows.jsonl.gz",
+      "bytes": 640032858,
+      "sha256": "7ca4f8f79c0c60e27848b8c6c0e7ace98e1ddd91dafec23eda45242f17c2683b"
+    },
+    {
+      "path": "originals/million/non-tail-sum/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "originals/million/preflight.json",
+      "bytes": 2052,
+      "sha256": "92f72a872427cc45f2935f25bb1ba0c84422c85d628ca9bbb743c61ebe89e27a"
+    },
+    {
+      "path": "originals/million.log",
+      "bytes": 69,
+      "sha256": "0b4cc586d190a8e79d0a2e250aadb7bd0790e7947d9594835a83eb83c5636fcd"
+    },
+    {
+      "path": "originals/partial-inspection.json",
+      "bytes": 792,
+      "sha256": "6f83239b6c9f46238756eacad1e8a5e3b500d1cc44a642bf69579190032419d4"
+    },
+    {
+      "path": "originals/pre-run-commit.log",
+      "bytes": 19432,
+      "sha256": "3a30459131f2d91c6ee750941488eb643fab6b687c9e83c5ad33a6e7d007f343"
+    },
+    {
+      "path": "originals/sample_memory.py",
+      "bytes": 1675,
+      "sha256": "0d8c3594495057966ce97f68f03a880d337d70908b860f46b9b4258dbda66771"
+    },
+    {
+      "path": "originals/smoke-discarded-list/request.json.gz",
+      "bytes": 602,
+      "sha256": "99ceee9ec513ddae369f7d17c176508cbf6a8028db9f7274ff3dbc90bb18e61d"
+    },
+    {
+      "path": "originals/smoke-discarded-list/rows.jsonl.gz",
+      "bytes": 11003,
+      "sha256": "22b3a330fa46d2ca1d4baa4ce900647f4bb090d4d73da4c16ddd52e76017850b"
+    },
+    {
+      "path": "originals/smoke-discarded-list/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "originals/smoke-discarded-list/summary.json",
+      "bytes": 1156,
+      "sha256": "a119737c63f30bde5758c2c1d8786163e6a7976fbd0ce9217824e85b14f47de5"
+    },
+    {
+      "path": "originals/smoke-non-tail-sum/request.json.gz",
+      "bytes": 723,
+      "sha256": "8ee83c65b2eb76b65e38d762c8999bc58b0766bc813e161b5a9d1b6839169a90"
+    },
+    {
+      "path": "originals/smoke-non-tail-sum/rows.jsonl.gz",
+      "bytes": 72367,
+      "sha256": "b9f590892340fc1a860fcd0ce30bd858daee61cfa480f73ddf01129af365635a"
+    },
+    {
+      "path": "originals/smoke-non-tail-sum/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "originals/smoke-non-tail-sum/summary.json",
+      "bytes": 1150,
+      "sha256": "8b596089f94ce1cf4463ae5a6597803e155bc0141c8af78b5db9f92e3d9e5f5b"
+    },
+    {
+      "path": "originals/smoke.json",
+      "bytes": 3505,
+      "sha256": "8b08fd7a7bbde77ffaed574b158103777427ad2b7376fbd0964c02a466827078"
+    }
+  ],
+  "preservation_before": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  },
+  "preservation_after": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  }
+}

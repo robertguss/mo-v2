@@ -1,0 +1,23 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling serde_core v1.0.229
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling zmij v1.0.23
+   Compiling bytemuck v1.25.2
+   Compiling serde_json v1.0.151
+   Compiling safe_arch v0.7.4
+   Compiling serde v1.0.229
+   Compiling rand_core v0.9.5
+   Compiling rand_xoshiro v0.7.0
+   Compiling syn v3.0.6
+   Compiling wide v0.7.33
+   Compiling equivalent v1.0.2
+   Compiling imbl-sized-chunks v0.2.0
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling archery v1.2.3
+   Compiling imbl v7.0.2
+   Compiling mo-acceptance-runtime v0.0.0 (/workspace/experiments/13-source-acceptance/runtime)
+   Compiling serde_derive v1.0.229
+   Compiling mo-stage-b v0.1.0 (/workspace/experiments/13-source-acceptance/candidate-stage-b)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.20s

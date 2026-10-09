@@ -1,0 +1,13 @@
+[package]
+name = "mo-acceptance-driver"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[lib]
+path = "lib.rs"
+
+[dependencies]
+acceptance-cells = { path = "../cells" }
+mo-acceptance-runtime = { path = "../runtime" }
+serde_json = "1"

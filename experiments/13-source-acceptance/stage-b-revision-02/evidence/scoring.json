@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "baselines_passed": 2,
+  "intended_rejections": 2,
+  "records": [
+    {
+      "control": "caller-reservation-theft",
+      "capability": "physical",
+      "obligation": "C1 reservation origin",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "C1 reservation origin",
+      "unrelated_failure": false,
+      "first_failed_step": 16,
+      "first_rejection": "birth coverage",
+      "later_panic_recorded": true,
+      "caught": true
+    },
+    {
+      "control": "early-enter",
+      "capability": "calls",
+      "obligation": "arguments before enter",
+      "compiled": true,
+      "executed_intended_path": true,
+      "baseline_passed": true,
+      "rejected_by": "arguments before enter",
+      "unrelated_failure": false,
+      "first_failed_step": 3,
+      "first_rejection": "commit metadata",
+      "later_panic_recorded": true,
+      "caught": true
+    }
+  ],
+  "raw_failures_replayed": true,
+  "original_results_modified": false,
+  "private_cases_executed": 0,
+  "million_element_runs": 0
+}

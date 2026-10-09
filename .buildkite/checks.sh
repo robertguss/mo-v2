@@ -173,6 +173,51 @@ rust_checks() {
       env CARGO_TARGET_DIR="$stage_a_target" \
       cargo +1.98.1 test --locked --offline --manifest-path candidate/Cargo.toml
     rm -rf "$stage_a_target"
+    # Stage B candidate: same pinned toolchain, locked fetch, and offline
+    # build. Development tests only; the public examples stay outside CI.
+    if [[ -f candidate-stage-b/Cargo.toml ]]; then
+      local stage_b_target
+      stage_b_target=$(mktemp -d)
+      run "13-source-acceptance: Stage B locked dependencies" \
+        cargo +1.98.1 fetch --locked --manifest-path candidate-stage-b/Cargo.toml
+      run "13-source-acceptance: Stage B candidate build" \
+        env CARGO_TARGET_DIR="$stage_b_target" \
+        cargo +1.98.1 build --locked --offline --manifest-path candidate-stage-b/Cargo.toml
+      run "13-source-acceptance: Stage B development tests (not independent acceptance)" \
+        env CARGO_TARGET_DIR="$stage_b_target" \
+        cargo +1.98.1 test --locked --offline --manifest-path candidate-stage-b/Cargo.toml
+      rm -rf "$stage_b_target"
+    fi
+    # Keep the submitted baseline above; also build the additive observation
+    # adaptation against its version-matched, frozen collector/runtime.
+    if [[ -f stage-b-adaptation-01/candidate/Cargo.toml ]]; then
+      local adapted_target
+      adapted_target=$(mktemp -d)
+      run "13-source-acceptance: adapted Stage B locked dependencies" \
+        cargo +1.98.1 fetch --locked --manifest-path stage-b-adaptation-01/link/Cargo.toml
+      run "13-source-acceptance: adapted Stage B native link build" \
+        env CARGO_TARGET_DIR="$adapted_target" \
+        cargo +1.98.1 build --locked --offline --manifest-path stage-b-adaptation-01/link/Cargo.toml
+      run "13-source-acceptance: adapted Stage B development tests (not independent acceptance)" \
+        env CARGO_TARGET_DIR="$adapted_target" \
+        cargo +1.98.1 test --locked --offline --manifest-path stage-b-adaptation-01/candidate/Cargo.toml
+      run "13-source-acceptance: revised Stage B collector tests" \
+        env CARGO_TARGET_DIR="$adapted_target" \
+        cargo +1.98.1 test --locked --offline --manifest-path stage-b-revision-02/driver/Cargo.toml
+      # Timing-01 FREEZE.md/RESULT.md: build and test the final accepted
+      # collector too, without rerunning private or resource acceptance.
+      if [[ -f stage-b-timing-01/link/Cargo.toml ]]; then
+        run "13-source-acceptance: final Stage B locked dependencies" \
+          cargo +1.98.1 fetch --locked --manifest-path stage-b-timing-01/link/Cargo.toml
+        run "13-source-acceptance: final Stage B release native link" \
+          env CARGO_TARGET_DIR="$adapted_target" \
+          cargo +1.98.1 build --release --locked --offline --manifest-path stage-b-timing-01/link/Cargo.toml
+        run "13-source-acceptance: final Stage B collector and timing tests" \
+          env CARGO_TARGET_DIR="$adapted_target" \
+          cargo +1.98.1 test --release --locked --offline --all-targets --manifest-path stage-b-timing-01/driver/Cargo.toml
+      fi
+      rm -rf "$adapted_target"
+    fi
   fi
 
   summary
