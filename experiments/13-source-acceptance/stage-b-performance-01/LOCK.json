@@ -1,0 +1,93 @@
+{
+  "format": "ROB-1333 performance implementation freeze 01",
+  "status": "frozen",
+  "created_at": "2026-10-09T01:05:02.026695+00:00",
+  "authorization": {
+    "thread": "https://ampcode.com/threads/T-01a11697-f670-71bc-bd5d-f6f57958fa55",
+    "owner_reply": "Yes",
+    "scope": "Freeze reviewed performance-only checker and run both full resource checks with unchanged 900/600-second limits."
+  },
+  "python_version": "3.14.7",
+  "python_executable_sha256": "241bf774a81580bb760adf960b48df7e6b23b1de026c9c912d4ca6be1a08241e",
+  "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+  "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+  "revision_02_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc",
+  "files": {
+    "stage-b-adaptation-01/candidate/CANDIDATE.sha256": {
+      "bytes": 537,
+      "sha256": "cc1e09dac565f67341bffee062fa0abbd080f9c60ebeac2fed522f56ff14317e"
+    },
+    "stage-b-adaptation-01/candidate/Cargo.lock": {
+      "bytes": 4951,
+      "sha256": "40f2087ad4249831f9da973f7080ce7f4a13a9bbedb7cf7bc50558b693e0f574"
+    },
+    "stage-b-adaptation-01/candidate/Cargo.toml": {
+      "bytes": 308,
+      "sha256": "93ce8e7350142548a7f54ccf7c8ab0449addb109a229af3d887358655a38729e"
+    },
+    "stage-b-adaptation-01/candidate/HANDOFF.md": {
+      "bytes": 13955,
+      "sha256": "44b1280168cc236ead72b5bbe6f91c365346807a0f4a4e767b335cfe7bbb66d8"
+    },
+    "stage-b-adaptation-01/candidate/execution.rs": {
+      "bytes": 117783,
+      "sha256": "b21590e771bffda20511a362a4e8df0b7b5112cc136e4b4592643ee29a6004c2"
+    },
+    "stage-b-adaptation-01/candidate/frontend.rs": {
+      "bytes": 48117,
+      "sha256": "3df2eeebf2ca8163873f18be0e07caa45d62dd36f1c060047b64d4d8de4cad83"
+    },
+    "stage-b-adaptation-01/candidate/lib.rs": {
+      "bytes": 2201,
+      "sha256": "ae101c8fad863ca55bf036ff19ace0b5a4102fe71597836fa25821d7cd30883a"
+    },
+    "stage-b-adaptation-01/candidate/number.rs": {
+      "bytes": 3647,
+      "sha256": "cd89f942c600698114262b44dd035c13ddfa74c06d4d187368f39a97e7594a29"
+    },
+    "stage-b-adaptation-01/link/Cargo.lock": {
+      "bytes": 5315,
+      "sha256": "41df729167291f4bd74071be956a8f9f555b371973d2431f3e03f70db27e00c0"
+    },
+    "stage-b-adaptation-01/link/Cargo.toml": {
+      "bytes": 271,
+      "sha256": "707820bbce6f86575e36f3ae47c612d201881abdb5141354963b1950c01b02f4"
+    },
+    "stage-b-adaptation-01/link/main.rs": {
+      "bytes": 159,
+      "sha256": "bcd6add80d6154c398a2615195996f7ba44e68fcd815a60d70640b63380ec993"
+    },
+    "stage-b-adaptation-01/run_approved_large.py": {
+      "bytes": 7188,
+      "sha256": "85bc07aa45a8644888d6d977f31c8f4ce7ce287507edcab49c33800fd73e0f6f"
+    },
+    "stage-b-adaptation-01/validate_public.py": {
+      "bytes": 6758,
+      "sha256": "4a6aa55bf812fb9a7a97cd8e1d108b73e7f0348f432ad2564dc0d0dffac2e281"
+    },
+    "stage-b-performance-01/FREEZE.md": {
+      "bytes": 2029,
+      "sha256": "f453b1537e02c8ee8cc18225ceca650aeb2423d12b6f6f5330069d60e4e5e3d1"
+    },
+    "stage-b-performance-01/check_equivalence.py": {
+      "bytes": 2998,
+      "sha256": "ae22d8e6bdfe1600b7648303952db6fce43015e3c513c84ee4c39e4e6ba4545e"
+    },
+    "stage-b-performance-01/check_replays.py": {
+      "bytes": 7601,
+      "sha256": "49bf22aaddfee88299bb4c72fbf1f0a4fb72cc19702460f9418ea27bf72a3fd0"
+    },
+    "stage-b-performance-01/fast_json.py": {
+      "bytes": 2130,
+      "sha256": "f0f70b3b1c76d85911bac5e122ca46a6712dbf5df52028b90e52e36f8a69d4fd"
+    },
+    "stage-b-performance-01/run_resources.py": {
+      "bytes": 3049,
+      "sha256": "cc95eb5c2c7efbe7eb07377253cb54e169840040fbac765c3a089c8698a75b71"
+    },
+    "stage-b-performance-01/stage_b_large.py": {
+      "bytes": 37206,
+      "sha256": "92a94969fdacae10baee8a3fc60bc5282f86a1b83a7d65b2f0047d50294bcefc"
+    }
+  }
+}
