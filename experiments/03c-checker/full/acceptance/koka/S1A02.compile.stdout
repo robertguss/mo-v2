@@ -1,0 +1,31 @@
+load    : std/core
+load    : std/core/types
+load    : std/core/unsafe
+load    : std/core/undiv
+load    : std/core/hnd
+load    : std/core/bool
+load    : std/core/char
+load    : std/core/int
+load    : std/core/order
+load    : std/core/vector
+load    : std/core/bslice
+load    : std/core/exn
+load    : std/core/string
+load    : std/core/sslice
+load    : std/core/bytes
+load    : std/core/maybe
+load    : std/core/list
+load    : std/core/maybe2
+load    : std/core/either
+load    : std/core/tuple
+load    : std/core/show
+load    : std/core/delayed
+load    : std/core/console
+load    : std/core/result
+load    : std/core/lazy
+load    : std/core/debug
+parse   : .../koka/s1a02.kk
+koka/s1a02.kk(9, 3): parse error: invalid syntax
+  unexpected "{"
+  expecting ";", "inline", "noinline", "tail", "fip", "fbip", "fun", "val", "var", "with", (basic) expression, "return" or "}"
+
