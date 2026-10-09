@@ -1,0 +1,209 @@
+{
+  "captured_at": "2026-10-09T15:31:46.426634+00:00",
+  "status": "Both approved resource obligations passed; final acceptance/integration review remains",
+  "runs": [
+    {
+      "case": "non-tail-sum",
+      "passed": true,
+      "elapsed_seconds": 995.820047738,
+      "limit_seconds": 1800,
+      "compressed_bytes": 1053258693,
+      "compressed_sha256": "db25ea2a3e58f400cc9c1df5283b28b792a5d37e5c78cbe2d21e6db5431faf1a",
+      "inspection": {
+        "decoded_bytes": 11774430901,
+        "complete_retained_records": 18000024,
+        "decoded_bytes_sha256": "db10118d415850879f62090452ff3ee1ef5dc38eec312d14c3c444f484e53b7a",
+        "trailing_partial_record_bytes": 0,
+        "small_complete_tail_records": [
+          {
+            "phase": "drop",
+            "step": 18000014,
+            "keys": [
+              "creates",
+              "elapsed_ns",
+              "events",
+              "from",
+              "graph",
+              "mutations",
+              "outside",
+              "phase",
+              "raw",
+              "resources",
+              "step",
+              "to"
+            ]
+          },
+          {
+            "phase": "teardown",
+            "step": 18000014,
+            "keys": [
+              "creates",
+              "elapsed_ns",
+              "events",
+              "from",
+              "graph",
+              "mutations",
+              "outside",
+              "phase",
+              "raw",
+              "resources",
+              "step",
+              "to"
+            ]
+          }
+        ],
+        "inspection_only": true,
+        "candidate_executed": false
+      },
+      "native_process_peak_rss_kib": 8137444,
+      "verifier_process_lifetime_peak_rss_kib": 11860312,
+      "native_timing": {
+        "completed": true,
+        "elapsed_ns": 978637608077,
+        "exclusive_wall_ns": {
+          "approval_wait": 1386510,
+          "cleanup": 2331025244,
+          "collector": 84082295702,
+          "evaluation": 151630702421,
+          "frontend": 31841096,
+          "observation": 8052956661,
+          "transport": 732507400443
+        },
+        "format": "ROB-1333 native timing 01",
+        "unit": "ns"
+      },
+      "parent_timing": {
+        "start_ns": 9365948361822,
+        "end_ns": 10361767756309,
+        "elapsed_ns": 995819394487,
+        "exclusive_wall_ns": {
+          "launch_request": 422473303,
+          "read_wait_framing": 45705286829,
+          "retention_hash": 61845063541,
+          "decode": 147438894329,
+          "predicates": 736799035673,
+          "reply_write": 32365,
+          "finalize": 288400321,
+          "orchestration": 3320208126
+        },
+        "interval": "runner entry through ledger snapshot before summary persistence"
+      }
+    },
+    {
+      "case": "discarded-list",
+      "passed": true,
+      "elapsed_seconds": 82.833321094,
+      "limit_seconds": 600,
+      "compressed_bytes": 165395184,
+      "compressed_sha256": "fda4440a07b05257f9e0c84936168c816b8da1ed88dac3b30a403a38d6240c9c",
+      "inspection": {
+        "decoded_bytes": 1364452360,
+        "complete_retained_records": 2000013,
+        "decoded_bytes_sha256": "8997094a060afebf71d277197f8084556261a551dddf9738194eefba5e37b5b0",
+        "trailing_partial_record_bytes": 0,
+        "small_complete_tail_records": [
+          {
+            "phase": "drop",
+            "step": 2000003,
+            "keys": [
+              "creates",
+              "elapsed_ns",
+              "events",
+              "from",
+              "graph",
+              "mutations",
+              "outside",
+              "phase",
+              "raw",
+              "resources",
+              "step",
+              "to"
+            ]
+          },
+          {
+            "phase": "teardown",
+            "step": 2000003,
+            "keys": [
+              "creates",
+              "elapsed_ns",
+              "events",
+              "from",
+              "graph",
+              "mutations",
+              "outside",
+              "phase",
+              "raw",
+              "resources",
+              "step",
+              "to"
+            ]
+          }
+        ],
+        "inspection_only": true,
+        "candidate_executed": false
+      },
+      "native_process_peak_rss_kib": 1722020,
+      "verifier_process_lifetime_peak_rss_kib": 11860312,
+      "native_timing": {
+        "completed": true,
+        "elapsed_ns": 78617993454,
+        "exclusive_wall_ns": {
+          "approval_wait": 773069,
+          "cleanup": 6979540,
+          "collector": 12516790774,
+          "evaluation": 5051398642,
+          "frontend": 803200,
+          "observation": 195775197,
+          "transport": 60845473032
+        },
+        "format": "ROB-1333 native timing 01",
+        "unit": "ns"
+      },
+      "parent_timing": {
+        "start_ns": 10362235689678,
+        "end_ns": 10445068402501,
+        "elapsed_ns": 82832712823,
+        "exclusive_wall_ns": {
+          "launch_request": 472915368,
+          "read_wait_framing": 6016086397,
+          "retention_hash": 7302972113,
+          "decode": 16697182913,
+          "predicates": 48440326207,
+          "reply_write": 59646,
+          "finalize": 61368526,
+          "orchestration": 3841801653
+        },
+        "interval": "runner entry through ledger snapshot before summary persistence"
+      }
+    }
+  ],
+  "preservation": {
+    "timing_lock": "9b7fdabe7734e78ec495da2dd2f5c1095a707a669cb6147cca7857ba0ecbe44c",
+    "binary_sha256": "5306bd3de522461be0e4789ba374ccc96c97cbdca7a22fa67dc69b12a0fee7b0",
+    "prior": {
+      "ownership_lock": "89e10c4cdd3007546960341a3862aa4366423eddaa5e48efabaf612b330105e4",
+      "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+      "prior": {
+        "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+        "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+        "prior": {
+          "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+          "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+          "original_frozen_files": 967,
+          "historical_dependencies": 5,
+          "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+          "candidate_byte_identical": true,
+          "revised_files": 41,
+          "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+        }
+      }
+    }
+  },
+  "full_semantic_replay_performed": false,
+  "byte_inspection_is_not_semantic_verification": true,
+  "previous_failed_attempts_unchanged": true,
+  "private_corpus_access": false,
+  "resource_retries": 0,
+  "old_source_orb_code_or_pr_branch_updated": false,
+  "merge_or_deployment": false
+}
