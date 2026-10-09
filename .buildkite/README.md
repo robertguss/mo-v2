@@ -47,13 +47,16 @@ Two steps, in parallel.
 | Experiment 13: Rust 1.98.1 locked native link build and 41 builder-owned development tests | `13-source-acceptance/STAGE_A_RESULT.md` |
 | Experiment 13 Stage B baseline build and development tests | `13-source-acceptance/candidate-stage-b/HANDOFF.md` |
 | Experiment 13 Stage B observation adaptation: locked native link, 54 development tests and three collector tests | `13-source-acceptance/stage-b-adaptation-01/README.md` |
+| Experiment 13 Stage B final timing collector: locked release native link and five collector/protocol/timing tests | `13-source-acceptance/stage-b-timing-01/FREEZE.md`, `RESULT.md` |
 
-Experiment 13's CI checks are not its separately authored native acceptance
-campaign. CI does not rerun the 199,039 lifecycle/denial runs, compiled controls,
+Experiment 13's CI checks do not replace its native acceptance campaigns.
+CI does not rerun the 199,039 lifecycle/denial runs, compiled controls,
 private cases, million-element workloads or archive restoration. Its temporary
 Cargo target directories are outside the checkout and removed after successful
-checks. The retained Stage B baseline and the observation adaptation are built
-separately; neither passing CI nor merging an evidence-only PR accepts Stage B.
+checks. The retained Stage B baseline, observation adaptation and final timing
+collector are built separately. The Stage B closeout record is
+`13-source-acceptance/STAGE_B_RESULT.md`; neither passing CI nor merging an
+evidence-only PR accepts Stage B by itself.
 
 **`:lean: Lean proofs and kernel re-check`**
 
