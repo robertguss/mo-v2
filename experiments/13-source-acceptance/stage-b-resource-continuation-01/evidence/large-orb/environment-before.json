@@ -1,0 +1,77 @@
+{
+  "captured_at": "2026-10-09T12:43:22.452823+00:00",
+  "base_commit": "7037f90dbac3b9d7cc5e1f41b52942228d07251e",
+  "cgroups": {
+    "/sys/fs/cgroup/amp.slice": {
+      "memory.max": "max\n",
+      "memory.high": "max\n",
+      "memory.current": "10432335872\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.swap.max": "max\n",
+      "cpu.max": "max 100000\n"
+    },
+    "/sys/fs/cgroup/amp.slice/amp-workload.slice": {
+      "memory.max": "45097156608\n",
+      "memory.high": "max\n",
+      "memory.current": "8956461056\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.swap.max": "max\n",
+      "cpu.max": "max 100000\n"
+    },
+    "/sys/fs/cgroup/amp.slice/amp-workload.slice/amp-run-52922-7508.scope": {
+      "memory.max": "max\n",
+      "memory.high": "max\n",
+      "memory.current": "23568384\n",
+      "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "memory.swap.max": "max\n"
+    }
+  },
+  "meminfo": "MemTotal:       45217936 kB\nMemFree:        34311652 kB\nMemAvailable:   44271344 kB\nBuffers:           28152 kB\nCached:         10123524 kB\nSwapCached:            0 kB\nActive:          5573292 kB\nInactive:        4792944 kB\nActive(anon):        356 kB\nInactive(anon):   214900 kB\nActive(file):    5572936 kB\nInactive(file):  4578044 kB\nUnevictable:           8 kB\nMlocked:               4 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:               104 kB\nWriteback:             0 kB\nAnonPages:        212332 kB\nMapped:           106744 kB\nShmem:              1080 kB\nKReclaimable:     372304 kB\nSlab:             452120 kB\nSReclaimable:     372304 kB\nSUnreclaim:        79816 kB\nKernelStack:        4080 kB\nPageTables:         4820 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    22608968 kB\nCommitted_AS:     430600 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:        9412 kB\nVmallocChunk:          0 kB\nPercpu:             5440 kB\nAnonHugePages:     10240 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       77824 kB\nDirectMap2M:     7262208 kB\nDirectMap1G:    40894464 kB\n",
+  "disk": {
+    "total": 68297543680,
+    "used": 13639843840,
+    "free": 54370426880
+  },
+  "cpu_count": 16,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "platform": "Linux-6.1.158+-x86_64-with-glibc2.36",
+  "python": "3.14.7 (main, Sep  1 2026, 14:18:09) [Clang 22.1.3 ]",
+  "python_executable": "/home/user/.local/share/uv/python/cpython-3.14.7-linux-x86_64-gnu/bin/python3.14",
+  "jit_enabled": false,
+  "identity": {
+    "collector_lock": "ebe29d7c59d03a3b8d9467c62640212bde8d4fc41ce0cff970e13827ad90ecd5",
+    "binary_sha256": "cb2045431f7086a6a63c47e5e7f4b5a1beabeb2fe08fef1557280f9220dee72a",
+    "prior": {
+      "performance_lock": "1aca07ef93577513ebe507ec38df65470b7bc153a2c125b6cf5f3a72b25196ef",
+      "binary_sha256": "b696980ee526fd774a3226ac2a4bc4041daa6f00ba65fd6455f75bc8d32afff8",
+      "original_frozen_files": 967,
+      "historical_dependencies": 5,
+      "original_lock": "2df4234fd86336b44307bee722972cf9f9c70a89b384d853db31e40d82ba5cbb",
+      "candidate_byte_identical": true,
+      "revised_files": 41,
+      "revised_lock": "5749ccb78db090744b9e96c6030e92a80b83776accbf21f5a1dc66e32fa523fc"
+    }
+  },
+  "authorization_sha256": "937e6275c54123256f5125d41885ad13828d4ee20acd563c318e23ad1fed8b70",
+  "runtime_transfer_sha256": "0406776ff99cebcacf2dda102a6304a89bf6516b100cb192f04677349f40b530",
+  "failed_attempt_transfer_sha256": "b57a223d88c997e5e65c81d12d5363fd0738acbe0098bc796361b34167ab8181",
+  "tar_compare_passed": true,
+  "no_private_transfer": true
+}

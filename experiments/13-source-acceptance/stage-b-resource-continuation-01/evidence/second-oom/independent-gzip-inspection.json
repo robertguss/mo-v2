@@ -1,0 +1,8 @@
+{
+  "decoded_bytes": 7114414775,
+  "complete_retained_records": 12000009,
+  "decoded_bytes_sha256": "8d315a7ad530520cce4aacdddced1b73ae1700d268f8e6dd11b05e3d98b9e366",
+  "trailing_partial_record_bytes": 978398346,
+  "inspection_only": true,
+  "candidate_executed": false
+}
