@@ -2,6 +2,7 @@
 
 Usage: python3 package_continuation.py NEW_PACKAGE_DIRECTORY
        python3 package_continuation.py --performance NEW_PACKAGE_DIRECTORY
+       python3 package_continuation.py --resources NEW_PACKAGE_DIRECTORY
 Only the named public roots and logs below are allowed. Every archived byte is
 read back and compared with its source hash. Independent volumes must be under
 20 MiB; a fresh destination is required, and originals are never changed.
@@ -24,7 +25,7 @@ def sha(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def main(destination, *, performance=False):
+def main(destination, *, performance=False, resources=False):
     destination.mkdir(parents=True, exist_ok=False)
     roots = [PUBLIC / "public-01", PUBLIC / "small-01",
              CLOSEOUT / "controls", CLOSEOUT / "controls-02",
@@ -36,6 +37,8 @@ def main(destination, *, performance=False):
     allowed = [PUBLIC, CLOSEOUT]
     if performance:
         roots, paths, allowed = [PERFORMANCE], [], [PERFORMANCE]
+    elif resources:
+        roots, paths, allowed = [PERFORMANCE / "approved-01"], [], [PERFORMANCE]
     links = []
     for root in roots:
         assert root.is_dir(), root
@@ -137,5 +140,7 @@ if __name__ == "__main__":
         restore(Path(sys.argv[2]).resolve(), Path(sys.argv[3]).resolve())
     elif sys.argv[1] == "--performance":
         main(Path(sys.argv[2]).resolve(), performance=True)
+    elif sys.argv[1] == "--resources":
+        main(Path(sys.argv[2]).resolve(), resources=True)
     else:
         main(Path(sys.argv[1]).resolve())

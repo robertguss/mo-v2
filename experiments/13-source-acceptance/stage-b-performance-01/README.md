@@ -1,4 +1,52 @@
-# Verifier optimization proposal — resource acceptance still blocked
+# Approved performance checker — resource run stopped on OOM
+
+Robert approved the reviewed checker and both full resource checks. The
+[performance freeze](FREEZE.md) pins 19 files, CPython 3.14.7 and the tested Rust
+1.98.1 release binary. The reviewed helper/verifier bytes are unchanged. Original
+and revision-02 locks, candidate source and all earlier failures remain intact.
+
+**The million-element sum did not pass.** The kernel killed the native linked
+process and then its execution group for cgroup OOM at 01:16:42 UTC on 9 October
+2026, before a final verifier report. The workload limit was **13.75 GiB**;
+native anonymous RSS at the kill was approximately **12.16 GiB**, and Python
+approximately **1.32 GiB**. Native RSS combines candidate, collector and runtime;
+the allocation source has not been isolated. This is an unsuccessful resource
+attempt, not a language-correctness rejection or a completed timing result.
+
+The last complete retained row is commit **11,997,679**, below the mandatory
+deepest pause at **12,000,005** and required completion at **18,000,014**. Its
+driver clock is 607.8828899 seconds, not the time of the kill. The deepest full
+observation, completion and cleanup remain unverified. No final summary could
+be written because the whole group was killed. The separate `POSTMORTEM.json`
+does not manufacture that missing verdict. **Discard was not run** after this
+first material failure; no candidate repair or retry followed.
+
+The unfinished compressed stream is preserved byte-for-byte (557,609,968 bytes,
+SHA256 `470ba573cdfb9e518e12c40101e8d6acc729740cee7bbdf1722c22fe5425d5b2`).
+Two bounded streaming inspections agree on 6,134,915,156 recoverable bytes and
+11,997,683 complete records, followed by 442 partial bytes; the gzip end marker
+is absent. `gzip -dc` correctly exits 1 for unexpected EOF. Retention occurs
+before checking, so the last retained row is not a claim of fully verified work.
+See [postmortem and exact method](evidence/approved-01/METHODS.md).
+
+The new attempt's 27 original public files are preserved as 60 members in
+35 independent volumes totaling **420,173,743 bytes** under
+`evidence/approved-01/public/`. Read-back and full restored-content verification
+pass; largest volume is 13,121,067 bytes. No links, private data or build caches
+are included. The index SHA256 is
+`af61f0feb95b5124dfc0dd0da8656c0ab9702b3c2605f3258ada182c1d147f99`.
+From `experiments/13-source-acceptance`, restore with:
+
+```sh
+python3 stage-b-adaptation-01/package_continuation.py --restore stage-b-performance-01/evidence/approved-01/public /home/user/NEW-resource-restored
+```
+
+Both resource obligations and final merge review remain unsatisfied; PR #9 stays
+draft. The next investigation is native linked memory growth near maximum depth,
+including snapshot construction as a hypothesis. No memory or time limit was
+raised. The earlier proposal and its finite validation are retained below.
+
+## Historical proposal checkpoint — superseded by the approval and run above
 
 This is a performance investigation and reviewable implementation proposal,
 **not a new scientific freeze or passing Stage B resource result**. Original
@@ -109,7 +157,7 @@ is unchanged. Investigation and preparation took approximately 40 minutes of
 elapsed agent work, including compilation, benchmarks, checks and preservation;
 this is not an acceptance execution-time claim.
 
-**Remaining gate:** review/approve this separately versioned checker
+**Gate at that historical checkpoint:** review/approve this separately versioned checker
 implementation before freezing or using it for acceptance. Then run both full
 resource obligations with the unchanged limits and review the complete result
 before merging PR #9. No million-element run, new freeze, new acceptance claim

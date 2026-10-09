@@ -1,0 +1,17 @@
+{
+  "inspection_only": true,
+  "candidate_executed": false,
+  "archive_bytes": 557609968,
+  "archive_sha256": "470ba573cdfb9e518e12c40101e8d6acc729740cee7bbdf1722c22fe5425d5b2",
+  "gzip_end_reached": false,
+  "decoded_bytes": 6134915156,
+  "complete_retained_records": 11997683,
+  "complete_records_sha256": "33f479dbc2279c9e73a16ee439d46a7c8bc3b3330ad1ea04ae8b331e9cde3a3c",
+  "decoded_bytes_sha256": "b11c5c14611387b0ddb6d730d2e1659eb7ce09d308c2e36441aa04dc65ee0f82",
+  "trailing_partial_record_bytes": 442,
+  "last_retained_phase": "commit",
+  "last_retained_step": 11997679,
+  "last_driver_elapsed_ns": 607882889900,
+  "completed_verifier_verdict": false,
+  "note": "Retained bytes are not proof that the last record finished verification; abrupt kill prevented final report."
+}

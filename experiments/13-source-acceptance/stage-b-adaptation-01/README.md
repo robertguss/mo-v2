@@ -10,11 +10,15 @@ proposal reduces that replay to 16.745 seconds. It matches 895 retained native
 streams and 15 rejection probes. Release-mode development tests pass (54
 candidate, three collector); candidate source and all frozen files are unchanged.
 
-This is **not a replacement freeze or resource acceptance**. The original
-million-element timeout below remains the latest full-depth result. Review and
-approval of the proposed checker implementation are required before adopting it
-for acceptance and rerunning both unchanged resource obligations. PR #9 remains
-draft; no merge is claimed. All new public evidence is preserved separately.
+Robert subsequently approved the [performance freeze and resource rerun](../stage-b-performance-01/README.md).
+The new sum attempt was killed for cgroup OOM before a completed verdict: the
+13.75-GiB workload limit was reached, with about 12.16 GiB in the native linked
+process and 1.32 GiB in Python. The linked process combines candidate, collector
+and runtime; the allocation source is not yet isolated. The last retained commit
+is 11,997,679, near but below the required deepest pause at 12,000,005. Full
+deepest observation, completion and cleanup are unverified; discard remains
+unrun. No memory/time limit was raised. The original timeout below and the new
+unfinished stream are preserved. PR #9 remains draft, not accepted or merged.
 
 ## Current continuation
 
