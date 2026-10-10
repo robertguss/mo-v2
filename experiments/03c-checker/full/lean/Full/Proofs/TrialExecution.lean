@@ -70,6 +70,39 @@ theorem future_append {a b : List Counted.Task} {f g : List Trial.Frame}
   intro id
   simp only [List.any_append, ha id, hb id, Trial.usedLater]
 
+/-- The cleanup queue uses exactly Trial's future-use decision, in the same
+oldest-first environment order. This is queue selection, not yet execution of
+the monadic cleanup loop. -/
+theorem dead_future (bindings : List Counted.Binding) (env : Trial.Env)
+    (tasks : List Counted.Task) (frames : List Trial.Frame) (h : Future tasks frames) :
+    Counted.dead bindings env tasks = env.reverse.filterMap (fun (_,id) =>
+      if bindings.any (fun b => b.record.id == id && b.record.status == .holding) &&
+          !Trial.usedLater frames id then some (.giveBinding id) else none) := by
+  unfold Counted.dead
+  congr 1
+  funext q
+  rcases q with ⟨name,id⟩
+  simp only [h id]
+
+/-- Dead-binding cleanup contributes no unevaluated source text. -/
+theorem future_dead (bindings : List Counted.Binding) (env : Trial.Env)
+    {tasks : List Counted.Task} {frames : List Trial.Frame} (h : Future tasks frames) :
+    Future (Counted.dead bindings env tasks ++ tasks) frames := by
+  have hzero : ∀ id, (Counted.dead bindings env tasks).any (Counted.taskUses id) = false := by
+    intro id
+    unfold Counted.dead
+    induction env.reverse with
+    | nil => rfl
+    | cons q qs ih =>
+      rcases q with ⟨name,bid⟩
+      simp only [List.filterMap_cons]
+      by_cases hc : (bindings.any (fun b => b.record.id == bid &&
+        b.record.status == .holding) && !tasks.any (Counted.taskUses bid)) = true
+      all_goals simp only [hc, Bool.false_eq_true, ↓reduceIte, List.any_cons, Counted.taskUses,
+        Bool.false_or, ih]
+  intro id
+  simp only [List.any_append, hzero, Bool.false_or, h id]
+
 /-- A numeric leaf runs with any saved task suffix and any operand prefix;
 the complete Trial observation, including ordered landmarks, is unchanged. -/
 theorem eval_num (p : Program) (s : Counted.State) (ctx : Counted.Context)
@@ -141,6 +174,8 @@ end Full.Proofs.TrialExecution
 #print axioms Full.Proofs.TrialExecution.future_decompose
 #print axioms Full.Proofs.TrialExecution.future_silent
 #print axioms Full.Proofs.TrialExecution.future_append
+#print axioms Full.Proofs.TrialExecution.dead_future
+#print axioms Full.Proofs.TrialExecution.future_dead
 #print axioms Full.Proofs.TrialExecution.eval_num
 #print axioms Full.Proofs.TrialExecution.eval_nil
 #print axioms Full.Proofs.TrialExecution.start

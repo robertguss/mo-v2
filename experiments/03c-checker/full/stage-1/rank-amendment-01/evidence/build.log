@@ -1,0 +1,142 @@
+✔ [73/93] Built Full.Control (1.0s)
+✔ [74/93] Built Full.Inspect (1.2s)
+✔ [75/93] Built Full.Statements (824ms)
+✔ [76/93] Built Full.Proofs.Heap (1.6s)
+✔ [77/93] Built Full.Proofs.Initial (1.7s)
+ℹ [78/93] Built Full.Proofs.TrialCompatibilitySimulation (1.3s)
+info: Full/Proofs/TrialCompatibilitySimulation.lean:140:0: 'Full.Proofs.TrialCompatibilitySimulation.uses_embed' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:141:0: 'Full.Proofs.TrialCompatibilitySimulation.eval_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:142:0: 'Full.Proofs.TrialCompatibilitySimulation.bind_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:143:0: 'Full.Proofs.TrialCompatibilitySimulation.if_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:144:0: 'Full.Proofs.TrialCompatibilitySimulation.match_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:145:0: 'Full.Proofs.TrialCompatibilitySimulation.scope_test' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:146:0: 'Full.Proofs.TrialCompatibilitySimulation.visible_projection' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:147:0: 'Full.Proofs.TrialCompatibilitySimulation.commit_snapshot' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:148:0: 'Full.Proofs.TrialCompatibilitySimulation.commit_no_landmark' depends on axioms: [propext]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:149:0: 'Full.Proofs.TrialCompatibilitySimulation.commit_record' depends on axioms: [propext]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:150:0: 'Full.Proofs.TrialCompatibilitySimulation.trial_answer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:151:0: 'Full.Proofs.TrialCompatibilitySimulation.capture_stutter' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:152:0: 'Full.Proofs.TrialCompatibilitySimulation.handoff_stutter' depends on axioms: [propext, Quot.sound]
+ℹ [79/93] Built Full.Proofs.RankRegression (1.2s)
+info: Full/Proofs/RankRegression.lean:92:0: 'Full.Proofs.RankRegression.unique_decrease' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/RankRegression.lean:93:0: 'Full.Proofs.RankRegression.shared_decrease' depends on axioms: [propext, Quot.sound]
+ℹ [80/93] Built Full.Proofs.TrialExecution (812ms)
+info: Full/Proofs/TrialExecution.lean:136:0: 'Full.Proofs.TrialExecution.future_nil' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:137:0: 'Full.Proofs.TrialExecution.future_eval' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:138:0: 'Full.Proofs.TrialExecution.future_bind' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:139:0: 'Full.Proofs.TrialExecution.future_if' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:140:0: 'Full.Proofs.TrialExecution.future_match' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:141:0: 'Full.Proofs.TrialExecution.future_decompose' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:142:0: 'Full.Proofs.TrialExecution.future_silent' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:143:0: 'Full.Proofs.TrialExecution.future_append' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:144:0: 'Full.Proofs.TrialExecution.eval_num' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:145:0: 'Full.Proofs.TrialExecution.eval_nil' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:146:0: 'Full.Proofs.TrialExecution.start' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:147:0: 'Full.Proofs.TrialExecution.finish' depends on axioms: [propext, Quot.sound]
+✔ [81/93] Built Full.Proofs.DestructionGraph (1.6s)
+✔ [82/93] Built Full.Proofs.Control (5.0s)
+✔ [83/93] Built Full.Proofs.Free (890ms)
+✔ [84/93] Built Full.Proofs.SimulationInitial (1.3s)
+✔ [85/93] Built Full.Proofs (10s)
+✔ [86/93] Built Full.Proofs.Lifecycle (11s)
+✔ [87/93] Built Full.Proofs.Destruction (2.4s)
+✔ [88/93] Built Full.Proofs.ControlShape (12s)
+✔ [89/93] Built Full.Proofs.Simulation (11s)
+✔ [90/93] Built Full.Proofs.Scope (42s)
+ℹ [91/93] Built Full.Proofs.PartialGate (322ms)
+info: Full/Proofs/PartialGate.lean:20:0: Full.Proofs.f5 : Full.Statements.F5
+info: Full/Proofs/PartialGate.lean:21:0: Full.Proofs.l1 : Full.Statements.L1
+info: Full/Proofs/PartialGate.lean:22:0: Full.Proofs.Initial.initialized_invariant (p : Full.Program) (initial : Trial.Start) (first : Full.Counted.State)
+  (h : Full.Counted.begin p initial = Except.ok first) : Full.Inspect.invariant initial first = true
+info: Full/Proofs/PartialGate.lean:23:0: Full.Proofs.transition_scope (p : Full.Program) (s : Full.Counted.State) (change : Full.Counted.Change)
+  (h : Full.Counted.transition p s = Except.ok change) : Full.Inspect.nextScope p s = Except.ok change.state.entered
+info: Full/Proofs/PartialGate.lean:24:0: Full.Proofs.lifecycleReachable_outside (p : Full.Program) (initial : Trial.Start) (s : Full.Lifecycle.State)
+  (h : Full.Statements.lifecycleReachable p initial s) : s.execution.outside = initial.outside
+info: Full/Proofs/PartialGate.lean:25:0: Full.Proofs.destroy_idempotent (s : Full.Lifecycle.State) :
+  Full.Lifecycle.destroy (Full.Lifecycle.destroy s) = Full.Lifecycle.destroy s
+info: Full/Proofs/PartialGate.lean:26:0: Full.Proofs.destroy_preserves_observations (s : Full.Lifecycle.State) :
+  (Full.Lifecycle.destroy s).execution.events = s.execution.events ∧
+    (Full.Lifecycle.destroy s).execution.history = s.execution.history ∧
+      (Full.Lifecycle.destroy s).execution.mem.record = s.execution.mem.record ∧
+        (Full.Lifecycle.destroy s).execution.outside = s.execution.outside
+info: Full/Proofs/PartialGate.lean:27:0: Full.Proofs.lifecycleReachable_clears_control (p : Full.Program) (initial : Trial.Start) (s : Full.Lifecycle.State)
+  (h : Full.Statements.lifecycleReachable p initial s) :
+  (Full.Lifecycle.destroy s).execution.bindings = [] ∧
+    (Full.Lifecycle.destroy s).execution.entered = [] ∧
+      (Full.Lifecycle.destroy s).execution.slots = [] ∧
+        (Full.Lifecycle.destroy s).execution.reservations = [] ∧
+          (Full.Lifecycle.destroy s).execution.frames = [] ∧
+            (Full.Lifecycle.destroy s).execution.tasks = [] ∧
+              (Full.Lifecycle.destroy s).execution.releaseChain = [] ∧
+                (Full.Lifecycle.destroy s).execution.answer = none
+info: Full/Proofs/PartialGate.lean:28:0: Full.Proofs.lifecycleReachable_cleanup_membership (p : Full.Program) (initial : Trial.Start) (s : Full.Lifecycle.State)
+  (h : Full.Statements.lifecycleReachable p initial s) (addr : Nat) :
+  addr ∈ (Full.Lifecycle.destroy s).cleanup ↔
+    (∃ c, c ∈ s.execution.mem.cells ∧ c.addr = addr) ∧
+      ¬∃ c, c ∈ (Full.Lifecycle.destroy s).execution.mem.cells ∧ c.addr = addr
+info: Full/Proofs/PartialGate.lean:29:0: 'Full.Proofs.f5' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/PartialGate.lean:30:0: 'Full.Proofs.l1' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:31:0: 'Full.Proofs.Initial.initialized_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/PartialGate.lean:32:0: 'Full.Proofs.transition_scope' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/PartialGate.lean:33:0: 'Full.Proofs.lifecycleReachable_outside' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:34:0: 'Full.Proofs.destroy_idempotent' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:35:0: 'Full.Proofs.destroy_preserves_observations' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:36:0: 'Full.Proofs.lifecycleReachable_clears_control' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/PartialGate.lean:37:0: 'Full.Proofs.lifecycleReachable_cleanup_membership' depends on axioms: [propext, Quot.sound]
+✔ [92/93] Built Full.Proofs.Effects (85s)
+ℹ [93/93] Built Full.Proofs.ProgressGate (415ms)
+info: Full/Proofs/ProgressGate.lean:15:0: Full.Proofs.invariant_heap (initial : Trial.Start) (s : Full.Counted.State)
+  (h : Full.Inspect.invariant initial s = true) :
+  Trial.Proofs.HeapSafe s.mem (Full.Proofs.executionRoots s) ∧
+    Trial.Proofs.LivePaths s.mem ∧ Trial.Proofs.FreshBound s.mem
+info: Full/Proofs/ProgressGate.lean:16:0: Full.Proofs.free_from_invariant (p : Full.Program) (initial : Trial.Start) (s : Full.Counted.State) (a : Trial.Addr)
+  (c : Trial.Cell) (rest : List Full.Counted.Task) (hi : Full.Inspect.invariant initial s = true)
+  (ht : s.tasks = Full.Counted.Task.free a :: rest) (hf : s.mem.find? a = some c) (hl : c.status = Trial.Status.live)
+  (hz : c.count = 0) :
+  ∃ change,
+    Full.Counted.transition p s = Except.ok change ∧
+      ∀ (t : Full.Counted.State),
+        t = change.state ∨ t = Full.Counted.commit change →
+          Trial.Proofs.HeapSafe t.mem (Full.Proofs.executionRoots t) ∧
+            Trial.Proofs.LivePaths t.mem ∧
+              Trial.Proofs.FreshBound t.mem ∧
+                (∀ (r : Option Trial.Addr),
+                    r ∈ Full.Proofs.executionRoots s →
+                      Trial.readBack t.mem (Trial.RawValue.list r) = Trial.readBack s.mem (Trial.RawValue.list r)) ∧
+                  Full.Control.decode t = Full.Control.decode s ∧ Full.Control.rank t < Full.Control.rank s
+info: Full/Proofs/ProgressGate.lean:17:0: Full.Proofs.transition_effects (p : Full.Program) (s : Full.Counted.State) (change : Full.Counted.Change)
+  (ha : s.answer = none) (h : Full.Counted.transition p s = Except.ok change) :
+  ∃ effects,
+    Full.Inspect.effects s = Except.ok effects ∧
+      change.state.events = s.events ++ effects ∧
+        change.state.mem.record = s.mem.record ++ Full.Inspect.cellEffects effects
+info: Full/Proofs/ProgressGate.lean:18:0: Full.Proofs.SimulationInitial.initial_simulation (p : Full.Program) (initial : Trial.Start) (first : Full.Counted.State)
+  (h : Full.Counted.begin p initial = Except.ok first) :
+  ∃ plain, Full.Statements.plainBegin p initial = Except.ok plain ∧ Full.Control.decode first = Except.ok plain
+info: Full/Proofs/ProgressGate.lean:20:0: 'Full.Proofs.control_env_bindings' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:21:0: 'Full.Proofs.continuations_bindings' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:22:0: 'Full.Proofs.focus_bindings' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:23:0: 'Full.Proofs.callTail_rest_length' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:24:0: 'Full.Proofs.continuations_fuel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:25:0: 'Full.Proofs.focus_fuel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:26:0: 'Full.Proofs.decode_commit' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:27:0: 'Full.Proofs.executionRoots_holders' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:28:0: 'Full.Proofs.invariant_heap' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:29:0: 'Full.Proofs.invariant_live_edge' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:30:0: 'Full.Proofs.release_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:31:0: 'Full.Proofs.free_transition' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:32:0: 'Full.Proofs.free_preserves_heap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:33:0: 'Full.Proofs.free_decode' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:34:0: 'Full.Proofs.free_rank' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:35:0: 'Full.Proofs.free_from_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:36:0: 'Full.Proofs.SimulationInitial.input_lookup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:37:0: 'Full.Proofs.SimulationInitial.mapM_map_ok' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:38:0: 'Full.Proofs.SimulationInitial.input_environment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:39:0: 'Full.Proofs.SimulationInitial.focus_giveBinding_prefix' depends on axioms: [propext]
+info: Full/Proofs/ProgressGate.lean:40:0: 'Full.Proofs.SimulationInitial.mapM_transfer' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:41:0: 'Full.Proofs.SimulationInitial.input_values' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:42:0: 'Full.Proofs.SimulationInitial.dead_is_prefix' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:43:0: 'Full.Proofs.SimulationInitial.initial_simulation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:44:0: 'Full.Proofs.transition_effects' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/ProgressGate.lean:45:0: 'Full.Proofs.commit_effects' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (93 jobs).

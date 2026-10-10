@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "counts": {
+    "traces": 90,
+    "internalEqualities": 4498,
+    "visibleViews": 9680
+  },
+  "controls": [
+    {
+      "name": "hidden nextBinding",
+      "status": "REJECTED",
+      "reason": "complete internal equality against actual metadata-restored commit"
+    },
+    {
+      "name": "omitted visible entry",
+      "status": "REJECTED",
+      "reason": "exact entered/holding ordered view"
+    },
+    {
+      "name": "reordered visible entries",
+      "status": "REJECTED",
+      "reason": "exact entered/holding ordered view"
+    }
+  ],
+  "rawSha256": "d358ba51249cf260882eb437f1fbc9103260c0ef8f76849da2ed361a057ac78a",
+  "limits": [
+    "Repr equality, not kernel equality proof",
+    "View formula checked from exposed IDs; active-scope correctness is a separate source/spec question",
+    "Data corruption controls, not executed machine mutants"
+  ]
+}

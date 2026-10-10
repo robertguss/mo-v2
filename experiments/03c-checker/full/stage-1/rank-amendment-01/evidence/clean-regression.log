@@ -1,0 +1,3 @@
+unique unused tail: reachable steps 14->15; rank 21->19; equal decode; Plain step differs; both invariants true; final answer 3; finalGraph true; full trace accepted
+shared unused tail: reachable steps 4->5; rank 21->20; equal decode; Plain step differs; both invariants true; final answer 3; finalGraph true; full trace accepted
+PASS: both historical counterexamples satisfy the amended local rank obligation; universal F2 is not yet proved

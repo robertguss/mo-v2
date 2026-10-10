@@ -1,0 +1,3 @@
+PASS: exact 237-entry candidate inventory differs only at ./lean/Full/Control.lean
+5e805da8c2b7f86fbf4e3f4fffb0f192aa773e5774a1f96c13eaea1d79a3ba15  ./lean/Full/Control.lean
+c4f95e4d50044803b6daa6b5800bbd86850ce32995c9a221b908ff8afd1edde1  ./lean/Full/Control.lean

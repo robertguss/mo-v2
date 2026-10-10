@@ -1,0 +1,15 @@
+✔ [3/14] Built Trial.Language (570ms)
+✔ [4/14] Built Trial.Plain (512ms)
+✔ [5/14] Built Trial.Memory (1.1s)
+✔ [6/14] Built Trial.Counted (2.5s)
+✔ [7/14] Built Full.Language (1.9s)
+✔ [8/14] Built Full.Plain (749ms)
+✔ [9/14] Built Full.Counted (2.7s)
+✔ [10/14] Built Full.Lifecycle (622ms)
+✔ [11/14] Built Full.Control (675ms)
+✔ [12/14] Built Full.Inspect (823ms)
+✔ [13/14] Built Full.Statements (410ms)
+ℹ [14/14] Built Full.Proofs.RankRegression (763ms)
+info: Full/Proofs/RankRegression.lean:92:0: 'Full.Proofs.RankRegression.unique_decrease' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/RankRegression.lean:93:0: 'Full.Proofs.RankRegression.shared_decrease' depends on axioms: [propext, Quot.sound]
+Build completed successfully (14 jobs).
