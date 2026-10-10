@@ -9,12 +9,34 @@ and none should be added.
 | `checks.sh` | Runs one group of checks, `rust` or `lean`. |
 | `toolchains.sh` | Installs the pinned Rust and Lean toolchains. Sourced by `checks.sh`. |
 | `coverage.txt` | Every experiment, named `checked` or `excluded`, with a reason. Enforced. |
+| `history-guard.sh` | Fails a build whose history holds the archived `.gz` evidence. Run from `main`; see below. |
 
 The pipeline is `robert-guss/mo-v2`, connected to `robertguss/mo-v2` by GitHub
 webhook. It builds branch pushes and pull requests and publishes commit
-statuses back to GitHub. Its whole Steps setting is one line,
+statuses back to GitHub. Its Steps setting is the history guard below plus
 `buildkite-agent pipeline upload`, so everything that decides what a build does
 lives in this directory and is reviewed with the code.
+
+## History guard
+
+The 3.5 GB of `.gz` evidence was moved out of git history into the
+`gz-evidence-archive` release on 10 Oct 2026 (`experiments/GZ_ARCHIVE.md`).
+`history-guard.sh` fails any build whose commit history contains one of those
+files again, from a clone made before the rewrite or from a new commit.
+
+A branch's own `pipeline.yml` cannot carry this check: a branch from an old
+clone has an old `pipeline.yml` without it. So the pipeline's Steps setting in
+Buildkite runs `main`'s copy first, whatever branch is being built:
+
+```yaml
+steps:
+  - label: ":git: No archived .gz evidence in history"
+    command: git fetch --quiet origin main && git show origin/main:.buildkite/history-guard.sh > .git/history-guard.sh && bash .git/history-guard.sh
+  - command: buildkite-agent pipeline upload
+```
+
+`main`'s branch protection requires the `buildkite/mo-v2` status, so a failing
+guard blocks the merge.
 
 ## What CI is for here
 
