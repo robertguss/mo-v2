@@ -1,4 +1,4 @@
-import Full.Proofs
+import Full.Proofs.Basic
 import Full.Proofs.Lifecycle
 import Full.Proofs.Heap
 import Full.Proofs.DestructionGraph

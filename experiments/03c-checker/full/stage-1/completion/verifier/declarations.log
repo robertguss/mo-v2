@@ -1,0 +1,178 @@
+lean/Full/Proofs.lean:8:namespace Full.Proofs
+lean/Full/Proofs.lean:10:theorem f4 : Statements.F4 := Final.f4_of_f1 f1
+lean/Full/Proofs.lean:12:theorem l2 : Statements.L2 := l2_of_f1 f1
+lean/Full/Proofs/PreservationReleaseHeap.lean:3:namespace Full.Proofs.PreservationRelease
+lean/Full/Proofs/TrialExecutionContract.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExecutionContract.lean:8:def Enclosing (ctx : Context) (s : State) : Prop :=
+lean/Full/Proofs/TrialExecutionContract.lean:14:def Evaluation (e : Trial.Expr) : Prop :=
+lean/Full/Proofs/PreservationCells.lean:4:namespace Full.Proofs.PreservationCells
+lean/Full/Proofs/ReservationAccounted.lean:3:namespace Full.Proofs.ReservationAccounted
+lean/Full/Proofs/ReservationAccounted.lean:7:def Cleans (r : Reservation) : Task → Prop
+lean/Full/Proofs/ReservationAccounted.lean:12:def Accounted (s : State) : Prop :=
+lean/Full/Proofs/EnvironmentIdentity.lean:4:namespace Full.Proofs.EnvironmentIdentity
+lean/Full/Proofs/EnvironmentIdentity.lean:7:def EnvOK (next : Nat) (env : Env) : Prop :=
+lean/Full/Proofs/EnvironmentIdentity.lean:10:def TaskOK (next : Nat) : Task → Prop
+lean/Full/Proofs/EnvironmentIdentity.lean:18:def TasksOK (next : Nat) (tasks : List Task) : Prop := ∀ task ∈ tasks, TaskOK next task
+lean/Full/Proofs/EnvironmentIdentity.lean:20:def Invariant (s : State) : Prop := EnvOK s.nextBinding s.entered ∧ TasksOK s.nextBinding s.tasks
+lean/Full/Proofs/TrialExpressionMatch.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/Control.lean:3:namespace Full.Proofs
+lean/Full/Proofs/TrialExecutionDead.lean:8:namespace Full.Proofs.TrialExecutionDead
+lean/Full/Proofs/TrialExecutionDead.lean:13:def ReleaseSuccess (p : Program) (initial : Trial.Start) : Prop :=
+lean/Full/Proofs/ProgressHeap.lean:6:namespace Full.Proofs.Progress
+lean/Full/Proofs/ControlShape.lean:4:namespace Full.Proofs.ControlShape
+lean/Full/Proofs/ControlShape.lean:9:def FinishTail : List Task → Prop
+lean/Full/Proofs/ForwardBindingsDecompose.lean:3:namespace Full.Proofs.ForwardBindings
+lean/Full/Proofs/Observer.lean:3:namespace Full.Proofs.Observer
+lean/Full/Proofs/Observer.lean:6:def EnvOK (bs : List Binding) (env : Env) : Prop :=
+lean/Full/Proofs/Observer.lean:9:def TaskOK (bs : List Binding) : Task → Prop
+lean/Full/Proofs/Observer.lean:17:def TasksOK (bs : List Binding) (ts : List Task) : Prop := ∀ t ∈ ts, TaskOK bs t
+lean/Full/Proofs/Observer.lean:18:def Invariant (s : State) : Prop := EnvOK s.bindings s.entered ∧ TasksOK s.bindings s.tasks
+lean/Full/Proofs/PreservationDecomposeShared.lean:4:namespace Full.Proofs.PreservationDecomposeShared
+lean/Full/Proofs/TrialInitialization.lean:4:namespace Full.Proofs.TrialInitialization
+lean/Full/Proofs/TrialInitialization.lean:159:def InitialCleanupBridge : Prop :=
+lean/Full/Proofs/TrialInitialization.lean:245:theorem f6_of_evaluation (evaluation : ∀ e, Evaluation e)
+lean/Full/Proofs/TrialExpressionIf.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/BranchReservations.lean:3:namespace Full.Proofs.BranchReservations
+lean/Full/Proofs/BranchReservations.lean:8:def pending : List Task → List Nat
+lean/Full/Proofs/BranchReservations.lean:40:def Invariant (s : State) : Prop :=
+lean/Full/Proofs/Progress.lean:11:namespace Full.Proofs.Progress
+lean/Full/Proofs/Progress.lean:14:def StructuralTask : Task → Prop
+lean/Full/Proofs/Progress.lean:20:def StructuralReady (s : State) : Prop :=
+lean/Full/Proofs/TrialRelease.lean:5:namespace Full.Proofs.TrialRelease
+lean/Full/Proofs/TrialRelease.lean:10:def eraseLog (s : Trial.RunState) : Trial.RunState := { s with log := [] }
+lean/Full/Proofs/TrialRelease.lean:12:def logged (s : Counted.State) (log : List Trial.LogEvent) : Trial.RunState :=
+lean/Full/Proofs/TrialRelease.lean:15:def giveChange (s : Counted.State) (a : Nat) (c : Trial.Cell)
+lean/Full/Proofs/TrialRelease.lean:47:def freeChange (s : Counted.State) (a : Nat) (c : Trial.Cell)
+lean/Full/Proofs/TrialRelease.lean:84:def input (s : Counted.State) (slots : List Counted.Slot)
+lean/Full/Proofs/TrialRelease.lean:231:def Ready (rest : List Counted.Task) (slots : List Counted.Slot) :
+lean/Full/Proofs/TrialRelease.lean:289:def bindingInput (s : Counted.State) (id : Nat) (b : Counted.Binding)
+lean/Full/Proofs/TrialExpression.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ForwardCalls.lean:5:namespace Full.Proofs.ForwardCalls
+lean/Full/Proofs/PreservationCons.lean:3:namespace Full.Proofs.PreservationCons
+lean/Full/Proofs/TrialCompatibilitySimulation.lean:8:namespace Full.Proofs.TrialCompatibilitySimulation
+lean/Full/Proofs/TrialCompatibilitySimulation.lean:53:def observe (s : Counted.State) : Trial.RunState :=
+lean/Full/Proofs/ForwardBindingsEnvironment.lean:4:namespace Full.Proofs.ForwardBindings
+lean/Full/Proofs/TrialExpressionMatchShared.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExpressionMatchShared.lean:8:def matchSharedSetup (head tail : String) (body : Trial.Expr) (env : Trial.Env)
+lean/Full/Proofs/PreservationOwnership.lean:3:namespace Full.Proofs.PreservationOwnership
+lean/Full/Proofs/Simulation.lean:5:namespace Full.Proofs.Simulation
+lean/Full/Proofs/Simulation.lean:10:def Forward : Prop :=
+lean/Full/Proofs/Simulation.lean:175:theorem f2_of_f1_forward (hf : F1) (hsim : Forward) : F2 := by
+lean/Full/Proofs/PreservationDecomposeUnique.lean:6:namespace Full.Proofs.PreservationDecomposeUnique
+lean/Full/Proofs/TrialExpressionMatchDecompose.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExpressionMatchDecompose.lean:9:def matchDecomposePrefix (head tail : String) (body : Trial.Expr)
+lean/Full/Proofs/TrialExpressionMatchDecompose.lean:107:def matchDecomposeChange (s : State) (ctx : Context) (head tail : String)
+lean/Full/Proofs/ForwardValue.lean:4:namespace Full.Proofs.ForwardValue
+lean/Full/Proofs/TrialExpressionMatchFinish.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/PreservationConsHeap.lean:5:namespace Full.Proofs.PreservationCons
+lean/Full/Proofs/ReservedReadiness.lean:3:namespace Full.Proofs.ReservedReadiness
+lean/Full/Proofs/ReservedReadiness.lean:6:def Allocated (m : Trial.Memory) (rs : List Reservation) : Prop :=
+lean/Full/Proofs/ReservedReadiness.lean:9:def Unique (rs : List Reservation) : Prop := (rs.map Reservation.addr).Nodup
+lean/Full/Proofs/ReservedReadiness.lean:123:def ids : List Task → List Nat
+lean/Full/Proofs/ReservedReadiness.lean:128:def Prefix : List Task → Prop
+lean/Full/Proofs/ReservedReadiness.lean:186:def Ready (rs : List Reservation) (ts : List Task) : Prop :=
+lean/Full/Proofs/ReservedReadiness.lean:244:def Invariant (s : State) : Prop :=
+lean/Full/Proofs/TrialInitialCleanup.lean:4:namespace Full.Proofs.TrialInitialization
+lean/Full/Proofs/PlainTyping.lean:3:namespace Full.Proofs.PlainTyping
+lean/Full/Proofs/PlainTyping.lean:23:def EnvTyped (ctx : List (String × Kind)) (env : Plain.Env) : Prop :=
+lean/Full/Proofs/PlainTyping.lean:38:def rightKind (op : Op) : Kind := if op == .cons then .list else .number
+lean/Full/Proofs/PlainTyping.lean:39:def resultKind : Op → Kind
+lean/Full/Proofs/PlainTyping.lean:44:def FunctionsTyped (p : Program) : Prop :=
+lean/Full/Proofs/DestructionGraph.lean:3:namespace Full.Proofs.Destruction
+lean/Full/Proofs/DestructionGraph.lean:6:def project (c : Cell) : StartCell := ⟨c.addr, c.item, c.link, c.count⟩
+lean/Full/Proofs/DestructionGraph.lean:25:def reached (m : Memory) (roots : List (Option Addr)) : List Addr :=
+lean/Full/Proofs/DestructionGraph.lean:28:def retained (m : Memory) (roots : List (Option Addr)) : Memory :=
+lean/Full/Proofs/DestructionGraph.lean:242:def recount (roots : List (Option Addr)) (m : Memory) : Memory :=
+lean/Full/Proofs/ForwardCapture.lean:4:namespace Full.Proofs.ForwardCapture
+lean/Full/Proofs/ForwardCapture.lean:74:def Certificate : List Task → Prop
+lean/Full/Proofs/CountedTyping.lean:5:namespace Full.Proofs.CountedTyping
+lean/Full/Proofs/CountedTyping.lean:10:def SlotTyped (v : Slot) (k : Kind) : Prop :=
+lean/Full/Proofs/CountedTyping.lean:15:def EnvTyped (bs : List Binding) (env : Env) (static : List (String × Kind)) : Prop :=
+lean/Full/Proofs/CountedTyping.lean:120:def StateTyped (p : Program) (out : Kind) (s : State) : Prop :=
+lean/Full/Proofs/PreservationRelease.lean:3:namespace Full.Proofs.PreservationRelease
+lean/Full/Proofs/PreservationRelease.lean:6:def bindingCount (bs : List Counted.Binding) (a : Nat) : Nat :=
+lean/Full/Proofs/SimulationInitial.lean:5:namespace Full.Proofs.SimulationInitial
+lean/Full/Proofs/HoldingAccounted.lean:5:namespace Full.Proofs.HoldingAccounted
+lean/Full/Proofs/HoldingAccounted.lean:10:def Accounted (s : State) : Prop :=
+lean/Full/Proofs/HoldingAccounted.lean:65:def useEnv : Task → Env
+lean/Full/Proofs/HoldingAccounted.lean:343:def HolderForm (bs : List Binding) : Prop :=
+lean/Full/Proofs/LiveBindings.lean:3:namespace Full.Proofs.LiveBindings
+lean/Full/Proofs/LiveBindings.lean:56:def Live (s : State) : Prop :=
+lean/Full/Proofs/Lifecycle.lean:14:namespace Full.Proofs
+lean/Full/Proofs/Heap.lean:5:namespace Full.Proofs
+lean/Full/Proofs/Heap.lean:10:def executionRoots (s : Counted.State) : List (Option Addr) :=
+lean/Full/Proofs/TrialExecution.lean:5:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExecution.lean:9:def Future (tasks : List Counted.Task) (frames : List Trial.Frame) : Prop :=
+lean/Full/Proofs/Destruction.lean:6:namespace Full.Proofs
+lean/Full/Proofs/Destruction.lean:136:theorem l2_of_f1 : Statements.F1 → Statements.L2 := by
+lean/Full/Proofs/ForwardCallEnter.lean:3:namespace Full.Proofs.ForwardCallEnter
+lean/Full/Proofs/TrialExpressionMatchEvaluation.lean:5:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ReleaseQueue.lean:4:namespace Full.Proofs.ReleaseQueue
+lean/Full/Proofs/ReleaseQueue.lean:7:def ids : List Task → List Nat
+lean/Full/Proofs/ReleaseQueue.lean:14:def Prefix : List Task → Prop
+lean/Full/Proofs/ReleaseQueue.lean:151:def Ready (bs : List Binding) (tasks : List Task) : Prop :=
+lean/Full/Proofs/ReleaseQueue.lean:273:def Quiet (tasks : List Task) : Prop :=
+lean/Full/Proofs/Effects.lean:5:namespace Full.Proofs
+lean/Full/Proofs/DecomposeRank.lean:3:namespace Full.Proofs
+lean/Full/Proofs/Correspondence.lean:7:namespace Full.Proofs.Correspondence
+lean/Full/Proofs/Correspondence.lean:92:namespace Full.Proofs
+lean/Full/Proofs/Correspondence.lean:95:theorem f2 : Statements.F2 := Simulation.f2_of_f1_forward f1 Correspondence.forward
+lean/Full/Proofs/Correspondence.lean:97:theorem f3 : Statements.F3 := by
+lean/Full/Proofs/TrialExpressionValuesCons.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialSimulationRelease.lean:5:namespace Full.Proofs.TrialSimulationRelease
+lean/Full/Proofs/BindingIdentity.lean:4:namespace Full.Proofs.BindingIdentity
+lean/Full/Proofs/BindingIdentity.lean:92:def data (b : Binding) : Nat × String × Raw × Value :=
+lean/Full/Proofs/Initial.lean:5:namespace Full.Proofs.Initial
+lean/Full/Proofs/TrialCompatibility.lean:8:namespace Full.Proofs
+lean/Full/Proofs/TrialCompatibility.lean:28:theorem f6 : Statements.F6 :=
+lean/Full/Proofs/Free.lean:4:namespace Full.Proofs
+lean/Full/Proofs/TrialExpressionLet.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExpressionLet.lean:15:def letChange (s : State) (ctx : Context) (name : String) (body : Trial.Expr)
+lean/Full/Proofs/TrialExpressionLet.lean:32:def letBind (name : String) (r : Raw) (env : Env) : Trial.M Env := do
+lean/Full/Proofs/ForwardCleanup.lean:5:namespace Full.Proofs.ForwardCleanup
+lean/Full/Proofs/RankRegression.lean:6:namespace Full.Proofs.RankRegression
+lean/Full/Proofs/RankRegression.lean:8:def program : Program :=
+lean/Full/Proofs/RankRegression.lean:13:def initial : Trial.Start := ⟨[],[],[]⟩
+lean/Full/Proofs/RankRegression.lean:15:def first : Counted.State :=
+lean/Full/Proofs/RankRegression.lean:19:def source : Counted.State :=
+lean/Full/Proofs/RankRegression.lean:22:def target : Counted.State :=
+lean/Full/Proofs/RankRegression.lean:25:def plain : Plain.State :=
+lean/Full/Proofs/RankRegression.lean:56:def sharedProgram : Program :=
+lean/Full/Proofs/RankRegression.lean:59:def sharedInitial : Trial.Start :=
+lean/Full/Proofs/RankRegression.lean:62:def sharedFirst : Counted.State :=
+lean/Full/Proofs/RankRegression.lean:66:def sharedSource : Counted.State :=
+lean/Full/Proofs/RankRegression.lean:69:def sharedTarget : Counted.State :=
+lean/Full/Proofs/ForwardBindingsControl.lean:8:namespace Full.Proofs.ForwardBindings
+lean/Full/Proofs/Preservation.lean:7:namespace Full.Proofs.Preservation
+lean/Full/Proofs/TrialExpressionMatchUnique.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialCleanup.lean:6:namespace Full.Proofs.TrialCleanup
+lean/Full/Proofs/Final.lean:9:namespace Full.Proofs.Final
+lean/Full/Proofs/Final.lean:13:def ChainWork (s : State) : Prop :=
+lean/Full/Proofs/Final.lean:92:theorem f4_of_f1 (hf : Statements.F1) : Statements.F4 := by
+lean/Full/Proofs/Scope.lean:4:namespace Full.Proofs
+lean/Full/Proofs/ProgressControl.lean:5:namespace Full.Proofs.Progress
+lean/Full/Proofs/ProgressControl.lean:8:def HeapTask : Task → Prop
+lean/Full/Proofs/ReleaseReadiness.lean:3:namespace Full.Proofs.ReleaseReadiness
+lean/Full/Proofs/ReleaseReadiness.lean:6:def special : Task → Bool
+lean/Full/Proofs/ReleaseReadiness.lean:10:def Clear (ts : List Task) : Prop := ts.all (fun t => !special t) = true
+lean/Full/Proofs/ReleaseReadiness.lean:12:def Nonempty (vs : List Slot) : Prop :=
+lean/Full/Proofs/ReleaseReadiness.lean:17:def Ready : List Task → List Slot → Prop
+lean/Full/Proofs/ReleaseReadiness.lean:95:def NoFree (ts : List Task) : Prop := ∀ a, Task.free a ∉ ts
+lean/Full/Proofs/ReleaseReadiness.lean:97:def FreeReady (s : State) : Prop :=
+lean/Full/Proofs/Residual.lean:3:namespace Full.Proofs.Residual
+lean/Full/Proofs/Residual.lean:118:def operands : Task → Nat
+lean/Full/Proofs/Residual.lean:164:def Waiting : List Task → Prop
+lean/Full/Proofs/TrialExpressionArithmetic.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExpressionArithmetic.lean:6:def numericRaw (op : Op) (x y : Int) : Raw :=
+lean/Full/Proofs/TrialExpressionValues.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExpressionControl.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExpressionControl.lean:8:def CleanupBridge : Prop :=
+lean/Full/Proofs/Basic.lean:3:namespace Full.Proofs
+lean/Full/Proofs/Basic.lean:17:theorem l1 : Statements.L1 := by
+lean/Full/Proofs/Basic.lean:82:theorem f5 : Statements.F5 := by
+lean/Full/Proofs/TrialExpressionBinary.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ForwardLeaves.lean:3:namespace Full.Proofs.ForwardLeaves
+lean/Full/Proofs/Forward.lean:5:namespace Full.Proofs.Forward
+lean/Full/Proofs/Invariance.lean:8:namespace Full.Proofs.Invariance
+lean/Full/Proofs/Invariance.lean:77:namespace Full.Proofs
+lean/Full/Proofs/Invariance.lean:80:theorem f1 : Statements.F1 := by

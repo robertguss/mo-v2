@@ -192,11 +192,12 @@ theorem cascade_pending (p : Program) (rest : List Counted.Task)
     ∃ ticks t finalLog, Counted.advance p ticks s = .ok t ∧
       t.tasks = rest ∧ t.slots = slots ∧ t.answer = none ∧
       Trial.giveUp .approved fuel a (input s slots log) = (.ok (), logged t finalLog) ∧
-      0 < ticks ∧ ticks ≤ 2*fuel := by
+      0 < ticks ∧ ticks ≤ 2*fuel ∧ t.bindings = s.bindings ∧
+      t.reservations = s.reservations := by
   induction path generalizing v log with
   | shared s a c fuel hf hl hn =>
     refine ⟨1, Counted.commit (giveChange s a c rest slots), log, ?_, ?_, rfl, ha,
-      trial_shared s a c rest slots log fuel hf hl hn, by omega, by omega⟩
+      trial_shared s a c rest slots log fuel hf hl hn, by omega, by omega, rfl, rfl⟩
     · have h := pending_transition p s a c v slots rest ht hs hv hf hl (by omega)
       simp [Counted.advance, Counted.step, ha, h]
     · have hne : c.count ≠ 1 := by omega
@@ -206,19 +207,19 @@ theorem cascade_pending (p : Program) (rest : List Counted.Task)
     let f := Counted.commit (freeChange g a { c with count := 0 } tail rest)
     refine ⟨2, f, log ++ [.free a],
       exclusive_steps p s a c tail rest v slots ht hs hv ha hf hl hn he,
-      ?_, ?_, ha, ?_, by omega, by omega⟩
+      ?_, ?_, ha, ?_, by omega, by omega, rfl, rfl⟩
     · simp [f, g, Counted.commit, freeChange, hc]
     · simp [f, g, Counted.commit, freeChange, giveChange, hc]
     · simpa [f, g, hc] using trial_exclusive s a c tail rest slots log fuel hf hl hn
   | next s a b c tail fuel hf hl hn he hr hc more ih =>
     let g := Counted.commit (giveChange s a c rest slots)
     let f := Counted.commit (freeChange g a { c with count := 0 } tail rest)
-    obtain ⟨ticks, t, finalLog, hex, ht', hs', ha', htrial, hpos, hbound⟩ :=
+    obtain ⟨ticks, t, finalLog, hex, ht', hs', ha', htrial, hpos, hbound, hbs, hrs⟩ :=
       ih ⟨.list c.link,tail⟩
         (by simp [Counted.commit, freeChange, hc])
         (by simp [Counted.commit, freeChange, giveChange, hc])
         (by simp [hc]) ha (log ++ [.free a])
-    refine ⟨2+ticks, t, finalLog, ?_, ht', hs', ha', ?_, by omega, by omega⟩
+    refine ⟨2+ticks, t, finalLog, ?_, ht', hs', ha', ?_, by omega, by omega, hbs, hrs⟩
     · rw [advance_add, exclusive_steps p s a c tail rest v slots ht hs hv ha hf hl hn he]
       exact hex
     · rw [trial_exclusive s a c tail rest slots log fuel hf hl hn]
@@ -333,11 +334,12 @@ theorem cascade_binding (p : Program) (s : Counted.State) (id : Nat)
     (log : List Trial.LogEvent) :
     ∃ ticks t finalLog, Counted.advance p ticks s = .ok t ∧
       t.tasks = rest ∧ t.slots = s.slots ∧ t.answer = none ∧
-      Trial.giveUpBinding .approved id (logged s log) = (.ok (), logged t finalLog) := by
-  obtain ⟨ticks, t, finalLog, hex, ht', hs', ha', htrial, hpos, _⟩ :=
+      Trial.giveUpBinding .approved id (logged s log) = (.ok (), logged t finalLog) ∧
+      t.bindings = (bindingInput s id b rest).bindings ∧ t.reservations = s.reservations := by
+  obtain ⟨ticks, t, finalLog, hex, ht', hs', ha', htrial, hpos, _, hbs, hrs⟩ :=
     cascade_pending p rest s.slots s.mem.cells.length (bindingInput s id b rest) a path
       ⟨b.record.value,b.value⟩ rfl rfl hv ha log
-  refine ⟨ticks, t, finalLog, ?_, ht', hs', ha', ?_⟩
+  refine ⟨ticks, t, finalLog, ?_, ht', hs', ha', ?_, hbs, hrs⟩
   · obtain ⟨n, rfl⟩ := Nat.exists_eq_succ_of_ne_zero (by omega : ticks ≠ 0)
     have hfirst := binding_first p s id b rest ht hb hh
     have hba : (bindingInput s id b rest).answer = none := ha
@@ -367,7 +369,7 @@ theorem pending_release (p : Program) (rest : List Counted.Task)
       (do Trial.popPending (.list (some a)); Trial.giveUp .approved fuel a : Trial.M Unit)
         (observe s) = (.ok (), u) ∧ eraseLog u = observe t ∧
       u.mem = t.mem ∧ u.mem.record = t.mem.record ∧ u.snaps = t.landmarks := by
-  obtain ⟨ticks, t, log, hex, htasks, hslots, hans, htrial, hpos, hbound⟩ :=
+  obtain ⟨ticks, t, log, hex, htasks, hslots, hans, htrial, hpos, hbound, _, _⟩ :=
     cascade_pending p rest slots fuel s a path v ht hs hv ha []
   refine ⟨ticks, t, logged t log, hpos, hbound, hex, htasks, hslots, hans,
     ?_, erase_logged t log, rfl, rfl, rfl⟩
@@ -388,7 +390,7 @@ theorem binding_release (p : Program) (s : Counted.State) (id : Nat)
       Trial.giveUpBinding .approved id (observe s) = (.ok (), u) ∧
       eraseLog u = observe t ∧ u.mem = t.mem ∧
       u.mem.record = t.mem.record ∧ u.snaps = t.landmarks := by
-  obtain ⟨ticks, t, log, hex, ht', hs', ha', htrial⟩ :=
+  obtain ⟨ticks, t, log, hex, ht', hs', ha', htrial, _, _⟩ :=
     cascade_binding p s id b a rest ht ha hb hh hv path []
   exact ⟨ticks, t, logged t log, hex, ht', hs', ha', htrial,
     erase_logged t log, rfl, rfl, rfl⟩

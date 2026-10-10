@@ -1,4 +1,4 @@
-import Full.Proofs
+import Full.Proofs.Basic
 import Full.Proofs.SimulationInitial
 import Full.Proofs.Control
 

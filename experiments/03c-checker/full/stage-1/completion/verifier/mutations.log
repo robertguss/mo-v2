@@ -1,0 +1,38 @@
+COMMAND lake env lean ../stage-1/completion/verifier/Baseline.lean
+import Full.Proofs
+namespace VerifierControl
+theorem candidate : Full.Statements.F1 := Full.Proofs.f1
+end VerifierControl
+#print axioms VerifierControl.candidate
+'VerifierControl.candidate' depends on axioms: [propext, Classical.choice, Quot.sound]
+Baseline EXIT=0
+COMMAND lake env lean ../stage-1/completion/verifier/Invalid.lean
+import Full.Proofs
+namespace VerifierControl
+theorem candidate : Full.Statements.F1 := True.intro
+end VerifierControl
+../stage-1/completion/verifier/Invalid.lean:3:42: error: Type mismatch
+  True.intro
+has type
+  True
+but is expected to have type
+  Full.Statements.F1
+Invalid EXIT=1
+COMMAND lake env lean ../stage-1/completion/verifier/Placeholder.lean
+import Full.Proofs
+namespace VerifierControl
+theorem candidate : Full.Statements.F1 := by sorry
+end VerifierControl
+#print axioms VerifierControl.candidate
+../stage-1/completion/verifier/Placeholder.lean:3:8: warning: declaration uses `sorry`
+'VerifierControl.candidate' depends on axioms: [propext, sorryAx, Quot.sound]
+Placeholder EXIT=0
+COMMAND lake env lean ../stage-1/completion/verifier/AdditionalAxiom.lean
+import Full.Proofs
+namespace VerifierControl
+axiom unsupported : Full.Statements.F1
+theorem candidate : Full.Statements.F1 := unsupported
+end VerifierControl
+#print axioms VerifierControl.candidate
+'VerifierControl.candidate' depends on axioms: [propext, Quot.sound, VerifierControl.unsupported]
+AdditionalAxiom EXIT=0

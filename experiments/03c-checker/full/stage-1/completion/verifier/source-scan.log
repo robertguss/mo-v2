@@ -1,0 +1,89 @@
+lean/Full/Proofs/Control.lean:3:namespace Full.Proofs
+lean/Full/Proofs/PreservationConsHeap.lean:5:namespace Full.Proofs.PreservationCons
+lean/Full/Proofs/TrialExpressionMatch.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ReservationAccounted.lean:3:namespace Full.Proofs.ReservationAccounted
+lean/Full/Proofs/TrialExpressionArithmetic.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ProgressControl.lean:5:namespace Full.Proofs.Progress
+lean/Full/Proofs/TrialExpressionLet.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ForwardBindingsControl.lean:8:namespace Full.Proofs.ForwardBindings
+lean/Full/Proofs/Progress.lean:7:`StructuralReady` names those facts explicitly; it is not an axiom and is not
+lean/Full/Proofs/Progress.lean:11:namespace Full.Proofs.Progress
+lean/Full/Proofs/ProgressHeap.lean:6:namespace Full.Proofs.Progress
+lean/Full/Proofs/ReservedReadiness.lean:3:namespace Full.Proofs.ReservedReadiness
+lean/Full/Proofs/EnvironmentIdentity.lean:4:namespace Full.Proofs.EnvironmentIdentity
+lean/Full/Proofs/TrialRelease.lean:5:namespace Full.Proofs.TrialRelease
+lean/Full/Proofs/CountedTyping.lean:5:namespace Full.Proofs.CountedTyping
+lean/Full/Proofs/Destruction.lean:6:namespace Full.Proofs
+lean/Full/Proofs/BindingIdentity.lean:4:namespace Full.Proofs.BindingIdentity
+lean/Full/Proofs/TrialSimulationRelease.lean:5:namespace Full.Proofs.TrialSimulationRelease
+lean/Full/Proofs/TrialExpression.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialCleanup.lean:6:namespace Full.Proofs.TrialCleanup
+lean/Full/Proofs/DecomposeRank.lean:3:namespace Full.Proofs
+lean/Full/Proofs/PreservationCons.lean:3:namespace Full.Proofs.PreservationCons
+lean/Full/Proofs/ForwardBindingsEnvironment.lean:4:namespace Full.Proofs.ForwardBindings
+lean/Full/Proofs/Initial.lean:5:namespace Full.Proofs.Initial
+lean/Full/Proofs/PreservationRelease.lean:3:namespace Full.Proofs.PreservationRelease
+lean/Full/Proofs/TrialExpressionMatchShared.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/RankRegression.lean:6:namespace Full.Proofs.RankRegression
+lean/Full/Proofs/Lifecycle.lean:14:namespace Full.Proofs
+lean/Full/Proofs/Scope.lean:4:namespace Full.Proofs
+lean/Full/Proofs/TrialCompatibilitySimulation.lean:8:namespace Full.Proofs.TrialCompatibilitySimulation
+lean/Full/Proofs/Residual.lean:3:namespace Full.Proofs.Residual
+lean/Full/Proofs/TrialExpressionValuesCons.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExpressionControl.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/PreservationOwnership.lean:3:namespace Full.Proofs.PreservationOwnership
+lean/Full/Proofs/Effects.lean:5:namespace Full.Proofs
+lean/Full/Proofs/TrialExpressionBinary.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ForwardCallEnter.lean:3:namespace Full.Proofs.ForwardCallEnter
+lean/Full/Proofs/TrialExpressionValues.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/PreservationDecomposeUnique.lean:6:namespace Full.Proofs.PreservationDecomposeUnique
+lean/Full/Proofs/TrialCompatibility.lean:8:namespace Full.Proofs
+lean/Full/Proofs/TrialExpressionMatchFinish.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/Simulation.lean:5:namespace Full.Proofs.Simulation
+lean/Full/Proofs/Simulation.lean:9:below, not an axiom or an additional condition on valid programs. -/
+lean/Full/Proofs/TrialExpressionMatchUnique.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ForwardValue.lean:4:namespace Full.Proofs.ForwardValue
+lean/Full/Proofs/ReleaseQueue.lean:4:namespace Full.Proofs.ReleaseQueue
+lean/Full/Proofs/PlainTyping.lean:3:namespace Full.Proofs.PlainTyping
+lean/Full/Proofs/ReleaseReadiness.lean:3:namespace Full.Proofs.ReleaseReadiness
+lean/Full/Proofs/ControlShape.lean:4:namespace Full.Proofs.ControlShape
+lean/Full/Proofs/TrialInitialCleanup.lean:4:namespace Full.Proofs.TrialInitialization
+lean/Full/Proofs/TrialExecutionDead.lean:8:namespace Full.Proofs.TrialExecutionDead
+lean/Full/Proofs/SimulationInitial.lean:5:namespace Full.Proofs.SimulationInitial
+lean/Full/Proofs/SimulationInitial.lean:122:    -- The read-back kind property follows directly from raw syntax.
+lean/Full/Proofs/ForwardCleanup.lean:5:namespace Full.Proofs.ForwardCleanup
+lean/Full/Proofs/Observer.lean:3:namespace Full.Proofs.Observer
+lean/Full/Proofs/PreservationReleaseHeap.lean:3:namespace Full.Proofs.PreservationRelease
+lean/Full/Proofs/Preservation.lean:7:namespace Full.Proofs.Preservation
+lean/Full/Proofs/Heap.lean:5:namespace Full.Proofs
+lean/Full/Proofs/Final.lean:9:namespace Full.Proofs.Final
+lean/Full/Proofs/TrialInitialization.lean:4:namespace Full.Proofs.TrialInitialization
+lean/Full/Proofs/TrialExpressionMatchEvaluation.lean:5:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/Free.lean:4:namespace Full.Proofs
+lean/Full/Proofs/PreservationCells.lean:4:namespace Full.Proofs.PreservationCells
+lean/Full/Proofs/BranchReservations.lean:3:namespace Full.Proofs.BranchReservations
+lean/Full/Proofs/BranchReservations.lean:7:fresh branch-id namespace. Consuming a ticket may turn it into a reservation. -/
+lean/Full/Proofs/LiveBindings.lean:3:namespace Full.Proofs.LiveBindings
+lean/Full/Proofs/Correspondence.lean:7:namespace Full.Proofs.Correspondence
+lean/Full/Proofs/Correspondence.lean:92:namespace Full.Proofs
+lean/Full/Proofs/PreservationDecomposeShared.lean:4:namespace Full.Proofs.PreservationDecomposeShared
+lean/Full/Proofs/TrialExpressionMatchDecompose.lean:4:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ForwardCapture.lean:4:namespace Full.Proofs.ForwardCapture
+lean/Full/Proofs/TrialExecutionContract.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExecutionContract.lean:8:def Enclosing (ctx : Context) (s : State) : Prop :=
+lean/Full/Proofs/TrialExecutionContract.lean:13:field required by F6 is retained. This is an induction goal, not an axiom. -/
+lean/Full/Proofs/TrialExecutionContract.lean:14:def Evaluation (e : Trial.Expr) : Prop :=
+lean/Full/Proofs/ForwardLeaves.lean:3:namespace Full.Proofs.ForwardLeaves
+lean/Full/Proofs/DestructionGraph.lean:3:namespace Full.Proofs.Destruction
+lean/Full/Proofs/ForwardBindingsDecompose.lean:3:namespace Full.Proofs.ForwardBindings
+lean/Full/Proofs/HoldingAccounted.lean:5:namespace Full.Proofs.HoldingAccounted
+lean/Full/Proofs/TrialExpressionIf.lean:3:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/ProgressGate.lean:6:/-! Further partial stage-1 evidence, not the frozen eight-target ProofGate.
+lean/Full/Proofs/ForwardCalls.lean:5:namespace Full.Proofs.ForwardCalls
+lean/Full/Proofs/Forward.lean:5:namespace Full.Proofs.Forward
+lean/Full/Proofs/TrialExecution.lean:5:namespace Full.Proofs.TrialExecution
+lean/Full/Proofs/TrialExecution.lean:9:def Future (tasks : List Counted.Task) (frames : List Trial.Frame) : Prop :=
+lean/Full/Proofs/Basic.lean:3:namespace Full.Proofs
+lean/Full/Proofs/Basic.lean:15:attribute [local simp] pure_ok bind_ok bind_error map_ok map_error
+lean/Full/Proofs/Invariance.lean:8:namespace Full.Proofs.Invariance
+lean/Full/Proofs/Invariance.lean:77:namespace Full.Proofs
