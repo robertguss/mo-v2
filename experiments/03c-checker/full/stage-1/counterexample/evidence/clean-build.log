@@ -1,0 +1,15 @@
+✔ [3/14] Built Trial.Language (458ms)
+✔ [4/14] Built Trial.Plain (404ms)
+✔ [5/14] Built Trial.Memory (948ms)
+✔ [6/14] Built Trial.Counted (1.6s)
+✔ [7/14] Built Full.Language (1.7s)
+✔ [8/14] Built Full.Plain (718ms)
+✔ [9/14] Built Full.Counted (1.0s)
+✔ [10/14] Built Full.Control (498ms)
+✔ [11/14] Built Full.Lifecycle (529ms)
+✔ [12/14] Built Full.Inspect (585ms)
+✔ [13/14] Built Full.Statements (384ms)
+ℹ [14/14] Built Full.Proofs.RankCounterexample (687ms)
+info: Full/Proofs/RankCounterexample.lean:101:0: 'Full.Proofs.RankCounterexample.not_f2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/RankCounterexample.lean:102:0: 'Full.Proofs.RankCounterexample.shared_ranks' depends on axioms: [propext, Quot.sound]
+Build completed successfully (14 jobs).

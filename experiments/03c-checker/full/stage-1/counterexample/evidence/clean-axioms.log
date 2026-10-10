@@ -1,0 +1,2 @@
+'Full.Proofs.RankCounterexample.not_f2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.RankCounterexample.shared_ranks' depends on axioms: [propext, Quot.sound]

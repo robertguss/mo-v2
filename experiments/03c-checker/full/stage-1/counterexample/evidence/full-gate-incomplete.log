@@ -1,0 +1,22 @@
+ProofGate.lean:7:32: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f1`
+ProofGate.lean:8:32: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f2`
+ProofGate.lean:9:32: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f3`
+ProofGate.lean:10:32: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f4`
+ProofGate.lean:12:32: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f6`
+ProofGate.lean:14:32: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.l2`
+ProofGate.lean:16:7: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f1`
+ProofGate.lean:17:7: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f2`
+ProofGate.lean:18:7: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f3`
+ProofGate.lean:19:7: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f4`
+Full.Proofs.f5 : Full.Statements.F5
+ProofGate.lean:21:7: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.f6`
+Full.Proofs.l1 : Full.Statements.L1
+ProofGate.lean:23:7: error(lean.unknownIdentifier): Unknown identifier `Full.Proofs.l2`
+ProofGate.lean:25:14: error(lean.unknownIdentifier): Unknown constant `Full.Proofs.f1`
+ProofGate.lean:26:14: error(lean.unknownIdentifier): Unknown constant `Full.Proofs.f2`
+ProofGate.lean:27:14: error(lean.unknownIdentifier): Unknown constant `Full.Proofs.f3`
+ProofGate.lean:28:14: error(lean.unknownIdentifier): Unknown constant `Full.Proofs.f4`
+'Full.Proofs.f5' depends on axioms: [propext, Classical.choice, Quot.sound]
+ProofGate.lean:30:14: error(lean.unknownIdentifier): Unknown constant `Full.Proofs.f6`
+'Full.Proofs.l1' depends on axioms: [propext, Quot.sound]
+ProofGate.lean:32:14: error(lean.unknownIdentifier): Unknown constant `Full.Proofs.l2`
