@@ -6,3 +6,7 @@
 
 # Python bytecode from the acceptance preparation scripts.
 __pycache__/
+
+# Gzip evidence lives in the gz-evidence-archive release; see experiments/GZ_ARCHIVE.md.
+/experiments/13-source-acceptance/**/*.gz
+/experiments/03c-checker/full/verification/evidence/raw.json.gz
