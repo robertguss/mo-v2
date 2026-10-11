@@ -1,0 +1,19 @@
+$ lake env lean --version
+Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+$ lake build Full.Demand Full.Statements
+⚠ [14/14] Built Full.Demand (798ms)
+warning: Full/Demand.lean:25:28: Variable name `kind` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _kind
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Full/Demand.lean:25:42: Variable name `body` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _body
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Build completed successfully (14 jobs).
+$ lake env lean -o .lake/build/lib/lean/Export.olean Export.lean
+$ lake env lean stage-2-run.lean

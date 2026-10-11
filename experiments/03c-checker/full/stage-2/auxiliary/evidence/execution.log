@@ -1,0 +1,2 @@
+$ lake env lean -o .lake/build/lib/lean/Export.olean Export.lean
+$ lake env lean stage-2-run.lean

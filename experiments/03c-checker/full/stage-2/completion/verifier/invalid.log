@@ -1,0 +1,10 @@
+$ lake env lean /tmp/conditional-verifier-5jl8fr97/invalid.lean
+/tmp/conditional-verifier-5jl8fr97/invalid.lean:3:71: error: Type mismatch
+  True.intro
+has type
+  True
+but is expected to have type
+  Full.Statements.Conditional Full.Demand.accepts
+'IndependentControl.candidate' depends on axioms: [propext, sorryAx, Quot.sound]
+
+EXIT=1

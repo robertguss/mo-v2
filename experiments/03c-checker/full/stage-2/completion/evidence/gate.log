@@ -1,0 +1,6 @@
+$ lake env lean -o .lake/build/lib/lean/DemandGate.olean DemandGate.lean
+Full.Demand.Soundness.conditional : Full.Statements.Conditional Full.Demand.accepts
+'Full.Demand.Soundness.conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+DemandGate.lean:11:15: error: unknown namespace `Command`
+DemandGate.lean:12:0: error: to use this command, include `import Lean.Elab.Command`
+EXIT=1

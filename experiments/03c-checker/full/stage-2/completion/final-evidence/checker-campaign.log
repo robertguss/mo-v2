@@ -1,0 +1,552 @@
+{
+  "rows": 90,
+  "slice1_row_coverage": {
+    "S1A01": 3,
+    "S1A09": 3,
+    "S1A02": 3,
+    "S1A03": 3,
+    "S1A04": 3,
+    "S1A05": 3,
+    "S1A06": 3,
+    "S1A07": 3,
+    "S1A08": 3,
+    "S1A10": 3,
+    "S1A11": 5,
+    "S1A12": 3,
+    "S1R01": 3,
+    "S1R02": 2,
+    "S1R03": 2,
+    "S1R04": 4,
+    "S1R05": 2,
+    "S1R06": 1,
+    "S1O01": 1
+  },
+  "all_27_categories": [
+    "S1A01",
+    "S1A02",
+    "S1A03",
+    "S1A04",
+    "S1A05",
+    "S1A06",
+    "S1A07",
+    "S1A08",
+    "S1A09",
+    "S1A10",
+    "S1A11",
+    "S1A12",
+    "S1O01",
+    "S1R01",
+    "S1R02",
+    "S1R03",
+    "S1R04",
+    "S1R05",
+    "S1R06",
+    "S2A01",
+    "S2A02",
+    "S2A03",
+    "S2O01",
+    "S2O02",
+    "S2R01",
+    "S2R02",
+    "S2R03"
+  ],
+  "source_sha256": "f83b33773c280697a36b2610a9a450a2813bb743240e3e5d26971ffe40aa5105",
+  "mutants": {
+    "accept-all": [
+      [
+        "C7",
+        "makeThenDrop",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "makeThenDrop",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "C9",
+        "outer",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "outer",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "C13",
+        "allocateForever",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "allocateForever",
+          "id": 1,
+          "creates": 2
+        }
+      ],
+      [
+        "C13",
+        "allocateForever",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "allocateForever",
+          "id": 2,
+          "creates": 1
+        }
+      ],
+      [
+        "U-duplicate",
+        "S1R01",
+        "must refuse"
+      ],
+      [
+        "U-duplicate",
+        "duplicate",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "duplicate",
+          "id": 1,
+          "creates": 3
+        }
+      ],
+      [
+        "U-duplicate",
+        "duplicate",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "duplicate",
+          "id": 2,
+          "creates": 2
+        }
+      ],
+      [
+        "U-duplicate",
+        "duplicate",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "duplicate",
+          "id": 3,
+          "creates": 1
+        }
+      ],
+      [
+        "U-prepend",
+        "S1R02",
+        "must refuse"
+      ],
+      [
+        "U-prepend",
+        "prepend",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "prepend",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "U-insert-new",
+        "S1R03",
+        "must refuse"
+      ],
+      [
+        "U-insert-new",
+        "insertNew",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "insertNew",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "U-insert-new",
+        "insertNew",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "insertNew",
+          "id": 2,
+          "creates": 1
+        }
+      ],
+      [
+        "U-build",
+        "S1R04",
+        "must refuse"
+      ],
+      [
+        "U-build",
+        "build",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "build",
+          "id": 1,
+          "creates": 3
+        }
+      ],
+      [
+        "U-build",
+        "build",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "build",
+          "id": 2,
+          "creates": 2
+        }
+      ],
+      [
+        "U-build",
+        "build",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "build",
+          "id": 3,
+          "creates": 1
+        }
+      ],
+      [
+        "U-twice",
+        "S1R05",
+        "must refuse"
+      ],
+      [
+        "U-twice",
+        "twice",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "twice",
+          "id": 1,
+          "creates": 2
+        }
+      ],
+      [
+        "U-ordinary-alloc",
+        "S1R06",
+        "must refuse"
+      ],
+      [
+        "U-ordinary-alloc",
+        "allocHelper",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "allocHelper",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "additional-0",
+        "S1R01",
+        "must refuse"
+      ],
+      [
+        "additional-1",
+        "S1R01",
+        "must refuse"
+      ],
+      [
+        "additional-1",
+        "duplicate",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "duplicate",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "additional-2",
+        "S1R02",
+        "must refuse"
+      ],
+      [
+        "additional-2",
+        "prepend",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "prepend",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "additional-3",
+        "S1R03",
+        "must refuse"
+      ],
+      [
+        "additional-3",
+        "insertNew",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "insertNew",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "additional-4",
+        "S1R04",
+        "must refuse"
+      ],
+      [
+        "additional-5",
+        "S1R04",
+        "must refuse"
+      ],
+      [
+        "additional-5",
+        "build",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "build",
+          "id": 1,
+          "creates": 1
+        }
+      ],
+      [
+        "additional-6",
+        "S1R04",
+        "must refuse"
+      ],
+      [
+        "additional-7",
+        "S1R05",
+        "must refuse"
+      ]
+    ],
+    "reject-all": [
+      [
+        "C10-bump-empty",
+        "S1A01",
+        "must accept"
+      ],
+      [
+        "C10-bump-single",
+        "S1A01",
+        "must accept"
+      ],
+      [
+        "C10-bump-mixed",
+        "S1A01",
+        "must accept"
+      ],
+      [
+        "C10-sum-empty",
+        "S1A09",
+        "must accept"
+      ],
+      [
+        "C10-sum-single",
+        "S1A09",
+        "must accept"
+      ],
+      [
+        "C10-sum-mixed",
+        "S1A09",
+        "must accept"
+      ],
+      [
+        "U-reverse",
+        "S1A02",
+        "must accept"
+      ],
+      [
+        "U-totals",
+        "S1A03",
+        "must accept"
+      ],
+      [
+        "U-append",
+        "S1A04",
+        "must accept"
+      ],
+      [
+        "U-swap",
+        "S1A05",
+        "must accept"
+      ],
+      [
+        "U-rotate",
+        "S1A06",
+        "must accept"
+      ],
+      [
+        "U-merge",
+        "S1A07",
+        "must accept"
+      ],
+      [
+        "U-sort",
+        "S1A08",
+        "must accept"
+      ],
+      [
+        "U-keep-first",
+        "S1A10",
+        "must accept"
+      ],
+      [
+        "U-remove",
+        "S1A11",
+        "must accept"
+      ],
+      [
+        "U-positive",
+        "S1A12",
+        "must accept"
+      ],
+      [
+        "boundary-0-nil",
+        "S1A02",
+        "must accept"
+      ],
+      [
+        "boundary-0-single",
+        "S1A02",
+        "must accept"
+      ],
+      [
+        "boundary-1-nil",
+        "S1A03",
+        "must accept"
+      ],
+      [
+        "boundary-1-single",
+        "S1A03",
+        "must accept"
+      ],
+      [
+        "boundary-2-nil",
+        "S1A04",
+        "must accept"
+      ],
+      [
+        "boundary-2-single",
+        "S1A04",
+        "must accept"
+      ],
+      [
+        "boundary-3-nil",
+        "S1A05",
+        "must accept"
+      ],
+      [
+        "boundary-3-single",
+        "S1A05",
+        "must accept"
+      ],
+      [
+        "boundary-4-nil",
+        "S1A06",
+        "must accept"
+      ],
+      [
+        "boundary-4-single",
+        "S1A06",
+        "must accept"
+      ],
+      [
+        "boundary-5-nil",
+        "S1A07",
+        "must accept"
+      ],
+      [
+        "boundary-5-single",
+        "S1A07",
+        "must accept"
+      ],
+      [
+        "boundary-6-nil",
+        "S1A08",
+        "must accept"
+      ],
+      [
+        "boundary-6-single",
+        "S1A08",
+        "must accept"
+      ],
+      [
+        "boundary-7-nil",
+        "S1A10",
+        "must accept"
+      ],
+      [
+        "boundary-7-single",
+        "S1A10",
+        "must accept"
+      ],
+      [
+        "boundary-8-nil",
+        "S1A11",
+        "must accept"
+      ],
+      [
+        "boundary-8-single",
+        "S1A11",
+        "must accept"
+      ],
+      [
+        "boundary-9-nil",
+        "S1A11",
+        "must accept"
+      ],
+      [
+        "boundary-9-single",
+        "S1A11",
+        "must accept"
+      ],
+      [
+        "boundary-10-nil",
+        "S1A12",
+        "must accept"
+      ],
+      [
+        "boundary-10-single",
+        "S1A12",
+        "must accept"
+      ]
+    ],
+    "missing-affine": [
+      [
+        "U-twice",
+        "S1R05",
+        "must refuse"
+      ],
+      [
+        "U-twice",
+        "twice",
+        "conditional finite counterexample",
+        {
+          "unique": true,
+          "name": "twice",
+          "id": 1,
+          "creates": 2
+        }
+      ],
+      [
+        "additional-7",
+        "S1R05",
+        "must refuse"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+$ lake env leanchecker --fresh DemandAudit
+EXIT=0

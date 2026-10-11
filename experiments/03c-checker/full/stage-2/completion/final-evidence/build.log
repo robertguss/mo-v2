@@ -1,0 +1,1514 @@
+$ lake env lean --version
+Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+EXIT=0
+$ lake build Full Full.Proofs Full.Demand Full.Demand.Affinity Full.Demand.Births Full.Demand.Certificates Full.Demand.CreditExecution Full.Demand.CreditWork Full.Demand.Credits Full.Demand.Entry Full.Demand.Events Full.Demand.Framing Full.Demand.LocalIds Full.Demand.Region Full.Demand.RegionExecution Full.Demand.RegionWork Full.Demand.Scopes Full.Demand.Soundness Full.Demand.Tickets Full.Demand.Usage Full.Demand.UsageTransition
+✔ [3/172] Built Trial.Language (440ms)
+✔ [4/172] Built Trial.Plain (446ms)
+✔ [5/172] Built Trial.Memory (766ms)
+✔ [6/172] Built Trial.Counted (1.5s)
+✔ [7/172] Built Trial.Broken (278ms)
+✔ [8/172] Built Trial (224ms)
+✔ [9/172] Built Promises (388ms)
+✔ [10/172] Built Full.Language (1.2s)
+✔ [11/172] Built Full.Plain (513ms)
+✔ [12/172] Built Full.Demand (706ms)
+✔ [13/172] Built Full.Proofs.PlainTyping (881ms)
+✔ [14/172] Built Full.Demand.Credits (761ms)
+✔ [15/172] Built Full.Counted (1.8s)
+✔ [16/172] Built Proofs.Plain (2.7s)
+✔ [17/172] Built Full.Demand.Certificates (464ms)
+✔ [18/172] Built Full.Control (446ms)
+✔ [19/172] Built Full.Lifecycle (453ms)
+✔ [20/172] Built Proofs.Memory (514ms)
+✔ [21/172] Built Full.Demand.Usage (653ms)
+⚠ [22/172] Built Full.Demand.Tickets (577ms)
+warning: Full/Demand/Tickets.lean:112:49: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.cons_append, List.find?_cons, hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Tickets.lean:136:52: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.filter_cons, bne_self_eq_false, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Tickets.lean:136:63: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.filter_cons, bne_self_eq_false, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Tickets.lean:262:53: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [reservations, List.filterMap_cons, List.filterMap_nil, Option.map_some, Option.map_none,
+    List.cons_append, List.filter_cons, beq_self_eq_true, Bool.true_and, ↓reduceIte, List.filter_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Tickets.lean:263:46: This simp argument is unused:
+  List.filter_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [reservations, List.filterMap_cons, List.filterMap_nil, Option.map_some, Option.map_none,
+    List.cons_append, List.nil_append, List.filter_cons, beq_self_eq_true, Bool.true_and, ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [23/172] Built Full.Inspect (544ms)
+✔ [24/172] Built Proofs.Ownership (479ms)
+✔ [25/172] Built Full.Statements (345ms)
+✔ [26/172] Built Full (218ms)
+✔ [28/172] Built Proofs.Start (948ms)
+✔ [29/172] Built Proofs.Heap (329ms)
+✔ [30/172] Built Full.Proofs.Control (2.6s)
+✔ [31/172] Built Proofs.Release (1.3s)
+✔ [32/172] Built Proofs.Build (780ms)
+✔ [33/172] Built Proofs.Closed (327ms)
+✔ [34/172] Built Proofs.Reserve (423ms)
+✔ [35/172] Built Proofs.Reachability (427ms)
+✔ [36/172] Built Proofs.Initial (805ms)
+✔ [37/172] Built Proofs.Healthy (393ms)
+✔ [38/172] Built Proofs.Operations (352ms)
+✔ [39/172] Built Full.Proofs.DecomposeRank (6.7s)
+✔ [40/172] Built Full.Proofs.Heap (880ms)
+✔ [41/172] Built Proofs.Liveness (545ms)
+✔ [42/172] Built Full.Proofs.Free (522ms)
+✔ [43/172] Built Full.Proofs.DestructionGraph (712ms)
+✔ [44/172] Built Proofs.Bindings (409ms)
+✔ [45/172] Built Full.Proofs.Basic (7.4s)
+✔ [46/172] Built Proofs.Variables (1.7s)
+✔ [47/172] Built Proofs.Construction (1.2s)
+✔ [48/172] Built Proofs.Disposal (628ms)
+✔ [49/172] Built Proofs.Snapshots (404ms)
+✔ [50/172] Built Proofs.Cleanup (737ms)
+✔ [51/172] Built Proofs.Meanings (386ms)
+✔ [52/172] Built Proofs.NewBinding (551ms)
+✔ [53/172] Built Proofs.Views (1.0s)
+✔ [54/172] Built Proofs.CleanupViews (792ms)
+✔ [55/172] Built Proofs.DisposalViews (612ms)
+✔ [56/172] Built Proofs.Match (513ms)
+✔ [57/172] Built Proofs.LiveBindings (683ms)
+✔ [58/172] Built Proofs.Final (345ms)
+✔ [59/172] Built Proofs.Inputs (514ms)
+⚠ [60/172] Built Full.Demand.Events (9.4s)
+warning: Full/Demand/Events.lean:90:23: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bind, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Events.lean:90:42: This simp argument is unused:
+  Except.pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bind, pure, Except.bind] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Events.lean:163:16: This simp argument is unused:
+  List.contains_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [beq_iff_eq, Ne.symm he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Events.lean:163:36: This simp argument is unused:
+  beq_iff_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [List.contains_cons, Ne.symm he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Events.lean:189:31: This simp argument is unused:
+  hne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hne, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [61/172] Built Proofs.Induction (411ms)
+✔ [62/172] Built Proofs.Arithmetic (1.6s)
+✔ [63/172] Built Proofs.StateSteps (322ms)
+✔ [64/172] Built Proofs.Environment (457ms)
+✔ [65/172] Built Proofs.Initialization (397ms)
+✔ [66/172] Built Full.Proofs.Initial (893ms)
+✔ [67/172] Built Proofs.VariableContract (1.1s)
+✔ [68/172] Built Full.Proofs.SimulationInitial (826ms)
+✔ [69/172] Built Proofs.ReleaseFrame (1.7s)
+✔ [70/172] Built Proofs.ReleaseContract (653ms)
+✔ [71/172] Built Proofs.CleanupContract (571ms)
+✔ [72/172] Built Proofs.IfContract (1.5s)
+✔ [73/172] Built Proofs.BindContract (517ms)
+✔ [74/172] Built Proofs.LetSetup (776ms)
+✔ [75/172] Built Proofs.LetContract (506ms)
+✔ [76/172] Built Proofs.BuildContract (1.2s)
+✔ [77/172] Built Full.Proofs.BindingIdentity (7.8s)
+✔ [78/172] Built Proofs.ConsContract (601ms)
+✔ [79/172] Built Full.Proofs.Lifecycle (8.2s)
+✔ [80/172] Built Full.Proofs.Destruction (1.7s)
+✔ [81/172] Built Proofs.InputCleanup (1.7s)
+✔ [82/172] Built Full.Proofs.Simulation (9.3s)
+✔ [83/172] Built Proofs.RunContract (503ms)
+✔ [84/172] Built Proofs.BranchContract (537ms)
+✔ [85/172] Built Full.Proofs.ControlShape (10s)
+✔ [86/172] Built Proofs.MatchNil (867ms)
+✔ [87/172] Built Proofs.MatchBindings (491ms)
+✔ [88/172] Built Proofs.ReserveContract (797ms)
+✔ [89/172] Built Proofs.SharedContract (495ms)
+✔ [90/172] Built Proofs.PendingRelease (542ms)
+✔ [91/172] Built Proofs.MatchLiveness (441ms)
+✔ [92/172] Built Proofs.ExclusiveSetup (812ms)
+✔ [93/172] Built Proofs.SharedSetup (811ms)
+✔ [94/172] Built Full.Proofs.EnvironmentIdentity (8.8s)
+✔ [95/172] Built Proofs.MatchSetup (808ms)
+⚠ [96/172] Built Full.Proofs.Forward (7.4s)
+warning: Full/Proofs/Forward.lean:270:14: This simp argument is unused:
+  hen
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hk]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [97/172] Built Full.Proofs.Scope (33s)
+✔ [98/172] Built Proofs.MatchCell (897ms)
+✔ [99/172] Built Full.Proofs.ReservationAccounted (7.2s)
+✔ [100/172] Built Proofs.MatchContract (421ms)
+⚠ [101/172] Built Full.Proofs.ForwardValue (1.4s)
+warning: Full/Proofs/ForwardValue.lean:18:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardValue.lean:18:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardValue.lean:18:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardValue.lean:18:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardValue.lean:18:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardValue.lean:18:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardValue.lean:18:20: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardValue.lean:25:42: This simp argument is unused:
+  Control.focus
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [102/172] Built Full.Proofs.HoldingAccounted (7.8s)
+warning: Full/Proofs/HoldingAccounted.lean:365:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Full/Proofs/HoldingAccounted.lean:467:14: This simp argument is unused:
+  htasks
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [taskUses, uses, Trial.Proofs.lookup_frame_env]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [103/172] Built Full.Proofs.TrialCompatibilitySimulation (731ms)
+info: Full/Proofs/TrialCompatibilitySimulation.lean:140:0: 'Full.Proofs.TrialCompatibilitySimulation.uses_embed' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:141:0: 'Full.Proofs.TrialCompatibilitySimulation.eval_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:142:0: 'Full.Proofs.TrialCompatibilitySimulation.bind_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:143:0: 'Full.Proofs.TrialCompatibilitySimulation.if_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:144:0: 'Full.Proofs.TrialCompatibilitySimulation.match_task_uses' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:145:0: 'Full.Proofs.TrialCompatibilitySimulation.scope_test' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:146:0: 'Full.Proofs.TrialCompatibilitySimulation.visible_projection' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:147:0: 'Full.Proofs.TrialCompatibilitySimulation.commit_snapshot' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:148:0: 'Full.Proofs.TrialCompatibilitySimulation.commit_no_landmark' depends on axioms: [propext]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:149:0: 'Full.Proofs.TrialCompatibilitySimulation.commit_record' depends on axioms: [propext]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:150:0: 'Full.Proofs.TrialCompatibilitySimulation.trial_answer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:151:0: 'Full.Proofs.TrialCompatibilitySimulation.capture_stutter' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialCompatibilitySimulation.lean:152:0: 'Full.Proofs.TrialCompatibilitySimulation.handoff_stutter' depends on axioms: [propext, Quot.sound]
+ℹ [104/172] Built Full.Proofs.TrialExecution (524ms)
+info: Full/Proofs/TrialExecution.lean:169:0: 'Full.Proofs.TrialExecution.future_nil' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:170:0: 'Full.Proofs.TrialExecution.future_eval' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:171:0: 'Full.Proofs.TrialExecution.future_bind' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:172:0: 'Full.Proofs.TrialExecution.future_if' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:173:0: 'Full.Proofs.TrialExecution.future_match' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:174:0: 'Full.Proofs.TrialExecution.future_decompose' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:175:0: 'Full.Proofs.TrialExecution.future_silent' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:176:0: 'Full.Proofs.TrialExecution.future_append' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:177:0: 'Full.Proofs.TrialExecution.dead_future' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:178:0: 'Full.Proofs.TrialExecution.future_dead' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:179:0: 'Full.Proofs.TrialExecution.eval_num' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:180:0: 'Full.Proofs.TrialExecution.eval_nil' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:181:0: 'Full.Proofs.TrialExecution.start' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExecution.lean:182:0: 'Full.Proofs.TrialExecution.finish' depends on axioms: [propext, Quot.sound]
+⚠ [105/172] Built Full.Proofs.ForwardBindingsEnvironment (2.1s)
+warning: Full/Proofs/ForwardBindingsEnvironment.lean:48:40: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [env_success ht]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [106/172] Built Full.Proofs.TrialRelease (2.1s)
+info: Full/Proofs/TrialRelease.lean:424:0: 'Full.Proofs.TrialRelease.pending_transition' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:425:0: 'Full.Proofs.TrialRelease.give_observe' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:426:0: 'Full.Proofs.TrialRelease.free_observe' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:427:0: 'Full.Proofs.TrialRelease.edge_from_invariant' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:428:0: 'Full.Proofs.TrialRelease.trial_shared' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:429:0: 'Full.Proofs.TrialRelease.trial_exclusive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:430:0: 'Full.Proofs.TrialRelease.exclusive_steps' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:431:0: 'Full.Proofs.TrialRelease.advance_add' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:432:0: 'Full.Proofs.TrialRelease.cascade_pending' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:433:0: 'Full.Proofs.TrialRelease.cascade_of_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:434:0: 'Full.Proofs.TrialRelease.binding_first' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:435:0: 'Full.Proofs.TrialRelease.binding_trial' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:436:0: 'Full.Proofs.TrialRelease.cascade_binding' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:437:0: 'Full.Proofs.TrialRelease.erase_logged' depends on axioms: [propext]
+info: Full/Proofs/TrialRelease.lean:438:0: 'Full.Proofs.TrialRelease.exact_fields' depends on axioms: [propext]
+info: Full/Proofs/TrialRelease.lean:439:0: 'Full.Proofs.TrialRelease.pending_release' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:440:0: 'Full.Proofs.TrialRelease.binding_release' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialRelease.lean:441:0: 'Full.Proofs.TrialRelease.binding_release_of_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [107/172] Built Full.Proofs.Residual (11s)
+✔ [108/172] Built Full.Proofs.ForwardLeaves (2.2s)
+✔ [109/172] Built Full.Proofs.Observer (9.5s)
+⚠ [110/172] Built Full.Proofs.ReleaseQueue (10s)
+warning: Full/Proofs/ReleaseQueue.lean:66:29: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [Prefix, prefix_dead, ids]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:66:51: This simp argument is unused:
+  ids
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, prefix_dead]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:114:29: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [Prefix, ids, ids_append, ids_arguments, ids_reserved, EnvironmentIdentity.TaskOK,
+    List.nil_append, List.append_nil, List.nodup_cons, List.nodup_nil, List.not_mem_nil, true_and, and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:116:23: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_append, ids_arguments, ids_reserved, EnvironmentIdentity.TaskOK,
+    List.nil_append, List.append_nil, List.nodup_cons, List.nodup_nil, List.not_mem_nil, and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:205:29: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [Prefix, ids, ids_append, ids_arguments, ids_reserved, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:205:43: This simp argument is unused:
+  ids_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_arguments, ids_reserved, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:205:54: This simp argument is unused:
+  ids_arguments
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_append, ids_reserved, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:205:68: This simp argument is unused:
+  ids_reserved
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_append, ids_arguments, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:206:22: This simp argument is unused:
+  List.append_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_append, ids_arguments, ids_reserved, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:312:29: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [Prefix, ids, ids_append, ids_arguments, ids_reserved, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:312:39: This simp argument is unused:
+  ids
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids_append, ids_arguments, ids_reserved, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:312:43: This simp argument is unused:
+  ids_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_arguments, ids_reserved, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:312:54: This simp argument is unused:
+  ids_arguments
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_append, ids_reserved, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:312:68: This simp argument is unused:
+  ids_reserved
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_append, ids_arguments, List.nil_append, List.append_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:313:22: This simp argument is unused:
+  List.append_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all only [he, Prefix, ids, ids_append, ids_arguments, ids_reserved, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseQueue.lean:323:19: This simp argument is unused:
+  List.any_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [taskUses, child]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [111/172] Built Full.Proofs.Final (7.6s)
+warning: Full/Proofs/Final.lean:62:36: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [ht]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Final.lean:62:40: This simp argument is unused:
+  ht
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Final.lean:117:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Final.lean:124:6: This simp argument is unused:
+  List.any_eq_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Inspect.finalGraph, he, ht, hres, hframes, hchain, hs, hv, List.all_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Final.lean:124:25: This simp argument is unused:
+  List.all_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Inspect.finalGraph, he, ht, hres, hframes, hchain, hs, hv, List.any_eq_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Final.lean:125:33: This simp argument is unused:
+  Bool.not_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.isEmpty_nil, beq_iff_eq, Bool.and_eq_true, Except.isOk, Except.toBool, List.isEmpty_cons,
+    List.cons.injEq, and_true, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Final.lean:126:52: This simp argument is unused:
+  List.isEmpty_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.isEmpty_nil, Bool.not_eq_true, beq_iff_eq, Bool.and_eq_true, Except.isOk, Except.toBool,
+    List.cons.injEq, and_true, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Final.lean:127:6: This simp argument is unused:
+  List.cons.injEq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.isEmpty_nil, Bool.not_eq_true, beq_iff_eq, Bool.and_eq_true, Except.isOk, Except.toBool,
+    List.isEmpty_cons, and_true, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [112/172] Built Full.Demand.Scopes (7.9s)
+warning: Full/Demand/Scopes.lean:75:39: This simp argument is unused:
+  child
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [task, after]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Scopes.lean:86:62: This simp argument is unused:
+  Functor.map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Counted.advance, Counted.step, ha, hc, Except.map] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Scopes.lean:86:74: This simp argument is unused:
+  Except.map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Counted.advance, Counted.step, ha, hc, Functor.map] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Scopes.lean:88:49: This simp argument is unused:
+  Functor.map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Counted.advance, Counted.step, ha, hc, Except.map] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Scopes.lean:88:61: This simp argument is unused:
+  Except.map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Counted.advance, Counted.step, ha, hc, Functor.map] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [113/172] Built Full.Proofs.CountedTyping (16s)
+warning: Full/Proofs/CountedTyping.lean:43:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/CountedTyping.lean:489:46: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hsl, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/CountedTyping.lean:489:56: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hsl, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/CountedTyping.lean:518:28: This simp argument is unused:
+  Bool.true_eq_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hsl, bind, pure, Except.bind, Except.pure, beq_self_eq_true,
+    ↓reduceIte] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/CountedTyping.lean:739:17: Local variable 'nil' resembles constructor 'Full.Expr.nil' - write '.nil' (with a dot) or 'Full.Expr.nil' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: Full/Proofs/CountedTyping.lean:879:18: Local variable 'nil' resembles constructor 'Full.Expr.nil' - write '.nil' (with a dot) or 'Full.Expr.nil' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [114/172] Built Full.Proofs.ProgressControl (2.2s)
+warning: Full/Proofs/ProgressControl.lean:50:54: This simp argument is unused:
+  Trial.RawValue.kind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ProgressControl.lean:53:24: This simp argument is unused:
+  Trial.PlainValue.kind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [Counted.transition, Plain.primitive]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [115/172] Built Full.Proofs.LiveBindings (12s)
+warning: Full/Proofs/LiveBindings.lean:49:20: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [taskUses, uses, child, List.any_append, Trial.toFEnv] at hu ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/LiveBindings.lean:49:37: This simp argument is unused:
+  child
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [he, taskUses, uses, List.any_append, Trial.toFEnv] at hu ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/LiveBindings.lean:49:43: This simp argument is unused:
+  List.any_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [he, taskUses, uses, child, Trial.toFEnv] at hu ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/LiveBindings.lean:124:51: This simp argument is unused:
+  List.any_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [makeBinding, taskUses, child]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [116/172] Built Full.Proofs.ProgressHeap (869ms)
+warning: Full/Proofs/ProgressHeap.lean:107:42: This simp argument is unused:
+  RawValue.kind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ProgressHeap.lean:109:44: This simp argument is unused:
+  PlainValue.kind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ProgressHeap.lean:114:43: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Counted.transition, ht, he, hra, hrb, hva, hvb, Plain.primitive, hel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ProgressHeap.lean:118:43: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Counted.transition, ht, he, hra, hrb, hva, hvb, Plain.primitive, hel, Memory.writeInPlace, hf, hl]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [117/172] Built Full.Proofs.Progress (524ms)
+warning: Full/Proofs/Progress.lean:37:28: This simp argument is unused:
+  HeapTask
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Progress.lean:40:29: This simp argument is unused:
+  HeapTask
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [118/172] Built Full.Proofs.Effects (69s)
+⚠ [119/172] Built Full.Demand.UsageTransition (7.2s)
+warning: Full/Demand/UsageTransition.lean:37:62: This simp argument is unused:
+  Nat.zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.flatMap_cons, List.map_cons, List.sum_cons, future_append, future_cons, future_nil,
+    taskOccurrences, Nat.add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/UsageTransition.lean:73:25: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [future_append, future_cons, future_nil, future_dead, freeReserved_occurrences]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [120/172] Built Full.Demand.Births (3.2s)
+warning: Full/Demand/Births.lean:99:35: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, hs, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Births.lean:99:45: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, hs, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [121/172] Built Full.Proofs.ReleaseReadiness (10s)
+warning: Full/Proofs/ReleaseReadiness.lean:46:22: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ReleaseReadiness.lean:68:18: This simp argument is unused:
+  clear_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [arguments_clear, reserved_clear, Clear, special]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseReadiness.lean:68:31: This simp argument is unused:
+  arguments_clear
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [clear_append, reserved_clear, Clear, special]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ReleaseReadiness.lean:68:47: This simp argument is unused:
+  reserved_clear
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [clear_append, arguments_clear, Clear, special]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [122/172] Built Full.Demand.Affinity (15s)
+warning: Full/Demand/Affinity.lean:241:46: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hsl, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/Affinity.lean:241:56: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hsl, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [123/172] Built Full.Proofs.ReservedReadiness (20s)
+✔ [124/172] Built Full.Demand.Entry (7.0s)
+✔ [125/172] Built Full.Proofs.BranchReservations (7.5s)
+✔ [126/172] Built Full.Demand.LocalIds (8.3s)
+✔ [127/172] Built Full.Demand.CreditWork (2.6s)
+✔ [128/172] Built Full.Demand.Framing (11s)
+⚠ [129/172] Built Full.Proofs.Preservation (65s)
+warning: Full/Proofs/Preservation.lean:34:33: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.link]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:35:34: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.link]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:38:34: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.link]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:41:23: This simp argument is unused:
+  hu
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:78:17: This simp argument is unused:
+  cellEffects_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [Inspect.cellEffects, Trial.Memory.create, Trial.Memory.updateCell, pure, Except.pure, throw,
+    -List.find?_eq_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:79:33: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [cellEffects_append, Inspect.cellEffects, Trial.Memory.create, Trial.Memory.updateCell, Except.pure,
+    throw, -List.find?_eq_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:79:39: This simp argument is unused:
+  Except.pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [cellEffects_append, Inspect.cellEffects, Trial.Memory.create, Trial.Memory.updateCell, pure, throw,
+    -List.find?_eq_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:84:22: This simp argument is unused:
+  cellEffects_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [Inspect.cellEffects, Trial.Memory.updateCell, pure, Except.pure, throw, -List.find?_eq_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:85:29: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [cellEffects_append, Inspect.cellEffects, Trial.Memory.updateCell, Except.pure, throw,
+    -List.find?_eq_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:85:35: This simp argument is unused:
+  Except.pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [cellEffects_append, Inspect.cellEffects, Trial.Memory.updateCell, pure, throw, -List.find?_eq_none]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/Preservation.lean:248:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [130/172] Built Full.Proofs.PreservationOwnership (1.0s)
+✔ [131/172] Built Full.Proofs.PreservationCells (622ms)
+⚠ [132/172] Built Full.Proofs.PreservationReleaseHeap (9.8s)
+warning: Full/Proofs/PreservationReleaseHeap.lean:74:19: This simp argument is unused:
+  hstatus
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [reduceCtorEq, ↓reduceIte, Bool.and_eq_true, Bool.or_eq_true, bne_iff_ne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationReleaseHeap.lean:143:42: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Memory.setCount, hf, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationReleaseHeap.lean:143:54: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Memory.setCount, hf, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationReleaseHeap.lean:226:37: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Memory.release, hf, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationReleaseHeap.lean:226:49: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Memory.release, hf, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationReleaseHeap.lean:293:30: This simp argument is unused:
+  hstatus
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationReleaseHeap.lean:494:32: This simp argument is unused:
+  hstatus
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [133/172] Built Full.Proofs.PreservationDecomposeShared (2.2s)
+warning: Full/Proofs/PreservationDecomposeShared.lean:52:23: This simp argument is unused:
+  pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hlink, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeShared.lean:52:28: This simp argument is unused:
+  Except.pure
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hlink, pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeShared.lean:60:73: This simp argument is unused:
+  hlink
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.owners, List.filter_append, makeBinding, Inspect.link, hslots]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeShared.lean:82:39: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [htc, Memory.setCount, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeShared.lean:82:49: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [htc, Memory.setCount, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeShared.lean:97:27: This simp argument is unused:
+  hlink
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.owners, PreservationRelease.count_links, makeBinding, Inspect.link, hcount, List.filter_append,
+    hslots, Nat.add_assoc, Nat.add_comm, Nat.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeShared.lean:98:14: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.owners, PreservationRelease.count_links, makeBinding, Inspect.link, hlink, hcount,
+    List.filter_append, hslots, Nat.add_comm, Nat.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeShared.lean:100:27: This simp argument is unused:
+  hlink
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.owners, PreservationRelease.count_links, makeBinding, Inspect.link, ha, Ne.symm ha,
+    List.filter_append, hslots]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [134/172] Built Full.Proofs.PreservationDecomposeUnique (4.5s)
+warning: Full/Proofs/PreservationDecomposeUnique.lean:74:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/PreservationDecomposeUnique.lean:77:4: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, hs, hslots, hv, hvalue, hf, hl, hc, hm, bne_self_eq_false, beq_self_eq_true,
+    Bool.false_or, Bool.true_or, ↓reduceIte, bind, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeUnique.lean:99:6: This simp argument is unused:
+  Nat.add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [List.length_append, List.length_map, Nat.add_comm, Nat.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeUnique.lean:187:31: This simp argument is unused:
+  Bool.true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hca, beq_self_eq_true, ↓reduceIte, Inspect.owners, howners, hzero, List.filter_cons, hfilter,
+    List.length_cons, List.length_nil, Option.isNone_none, and_true, Bool.and_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeUnique.lean:204:71: This simp argument is unused:
+  Memory.updateCell
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationDecomposeUnique.lean:224:12: This simp argument is unused:
+  Memory.updateCell
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hda, hrne r hrmem]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [135/172] Built Full.Proofs.PreservationRelease (4.8s)
+warning: Full/Proofs/PreservationRelease.lean:34:38: This simp argument is unused:
+  hmap
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bindingCount, hh, hstatus, he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:64:45: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.link, hstatus]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:176:48: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Memory.setCount, hf, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:176:58: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Memory.setCount, hf, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:189:46: This simp argument is unused:
+  hlater
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Inspect.owners, ↓reduceIte, count_links, List.map_cons, List.filter_append, List.length_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:189:53: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Inspect.owners, hlater, count_links, List.map_cons, List.filter_append, List.length_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:195:56: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.owners, Inspect.link, Nat.add_assoc, Nat.add_comm, Nat.add_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:196:41: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.link, ha, Ne.symm ha]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:228:55: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.owners, Inspect.link]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationRelease.lean:240:53: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Inspect.owners, Inspect.link]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [136/172] Built Full.Proofs.PreservationConsHeap (371ms)
+warning: Full/Proofs/PreservationConsHeap.lean:17:61: This simp argument is unused:
+  List.filter_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [executionRoots, hs, ha, hb, Inspect.link, holders, he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationConsHeap.lean:25:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/PreservationConsHeap.lean:60:42: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.find?_cons, show (addr == other) = false from beq_eq_false_iff_ne.mpr (Ne.symm hn),
+    ↓reduceIte, List.find?_filter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/PreservationConsHeap.lean:60:62: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.find?_cons, show (addr == other) = false from beq_eq_false_iff_ne.mpr (Ne.symm hn),
+    Bool.false_eq_true, List.find?_filter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [137/172] Built Full.Proofs.PreservationCons (836ms)
+✔ [138/172] Built Full.Proofs.Invariance (396ms)
+✔ [139/172] Built Full.Demand.Region (568ms)
+✔ [140/172] Built Full.Proofs.ForwardBindingsControl (743ms)
+ℹ [141/172] Built Full.Proofs.TrialSimulationRelease (874ms)
+info: Full/Proofs/TrialSimulationRelease.lean:218:0: 'Full.Proofs.TrialSimulationRelease.reachable_advance' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialSimulationRelease.lean:219:0: 'Full.Proofs.TrialSimulationRelease.cascade_of_success_f1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialSimulationRelease.lean:220:0: 'Full.Proofs.TrialSimulationRelease.pending_release_of_success_f1' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Full/Proofs/TrialSimulationRelease.lean:221:0: 'Full.Proofs.TrialSimulationRelease.pending_release_of_success' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Full/Proofs/TrialSimulationRelease.lean:222:0: 'Full.Proofs.TrialSimulationRelease.binding_cascade_of_success' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Full/Proofs/TrialSimulationRelease.lean:223:0: 'Full.Proofs.TrialSimulationRelease.binding_release_of_success' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [142/172] Built Full.Demand.RegionWork (524ms)
+✔ [143/172] Built Full.Proofs.TrialExecutionContract (285ms)
+⚠ [144/172] Built Full.Proofs.ForwardCalls (866ms)
+warning: Full/Proofs/ForwardCalls.lean:67:73: This simp argument is unused:
+  List.flatMap_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.zipIdx_cons, List.zipIdx_nil, List.flatMap_cons, List.flatMap_nil, List.append_assoc,
+    List.cons_append, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCalls.lean:68:26: This simp argument is unused:
+  List.append_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.zipIdx_cons, List.zipIdx_nil, List.flatMap_cons, List.flatMap_append, List.flatMap_nil,
+    List.cons_append, List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCalls.lean:73:53: This simp argument is unused:
+  Nat.add_sub_add_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.length_map, List.length_zipIdx, List.length_cons, List.length_nil, Nat.add_sub_cancel,
+    Nat.add_sub_cancel_left, Nat.sub_self, List.take_zero, List.reverse_nil, List.map_nil, List.drop_zero,
+    List.map_cons, Nat.sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCalls.lean:74:38: This simp argument is unused:
+  List.map_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.length_map, List.length_zipIdx, List.length_cons, List.length_nil, Nat.add_sub_cancel,
+    Nat.add_sub_cancel_left, Nat.add_sub_add_right, Nat.sub_self, List.take_zero, List.reverse_nil, List.map_nil,
+    List.drop_zero, Nat.sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCalls.lean:75:23: This simp argument is unused:
+  List.map_map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Function.comp_def, List.zipIdx_map_fst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCalls.lean:75:37: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_map, List.zipIdx_map_fst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCalls.lean:102:8: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.length_nil, Nat.sub_zero, Nat.add_sub_cancel, Nat.add_eq_zero_iff, Nat.one_ne_zero, and_false,
+    beq_iff_eq, ↓reduceIte] at hrel ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [145/172] Built Full.Proofs.TrialExpression (384ms)
+info: Full/Proofs/TrialExpression.lean:51:0: 'Full.Proofs.TrialExecution.evaluation_num' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpression.lean:52:0: 'Full.Proofs.TrialExecution.evaluation_nil' depends on axioms: [propext, Quot.sound]
+ℹ [146/172] Built Full.Proofs.TrialExpressionBinary (655ms)
+info: Full/Proofs/TrialExpressionBinary.lean:91:0: 'Full.Proofs.TrialExecution.trial_bind_success' does not depend on any axioms
+info: Full/Proofs/TrialExpressionBinary.lean:92:0: 'Full.Proofs.TrialExecution.binary_operands' depends on axioms: [propext, Quot.sound]
+⚠ [147/172] Built Full.Proofs.ForwardCallEnter (999ms)
+warning: Full/Proofs/ForwardCallEnter.lean:77:53: This simp argument is unused:
+  ↓reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, hs, hf, hg, bind, pure, Except.bind, Except.pure] at hc
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCallEnter.lean:98:58: This simp argument is unused:
+  List.zip_map_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_reverse, List.zip_map_left, List.map_map, Function.comp_def, makeBinding, Prod.map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCallEnter.lean:99:58: This simp argument is unused:
+  Prod.map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.map_reverse, List.zip_map_left, List.zip_map_right, List.map_map, Function.comp_def,
+    makeBinding]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [148/172] Built Full.Proofs.TrialExpressionControl (636ms)
+warning: Full/Proofs/TrialExpressionControl.lean:27:34: Variable name `ht` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ht
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Full/Proofs/TrialExpressionControl.lean:140:0: 'Full.Proofs.TrialExecution.control_operand' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionControl.lean:141:0: 'Full.Proofs.TrialExecution.let_operand' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionControl.lean:142:0: 'Full.Proofs.TrialExecution.if_operand' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionControl.lean:143:0: 'Full.Proofs.TrialExecution.match_operand' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionControl.lean:144:0: 'Full.Proofs.TrialExecution.control_handoff' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionControl.lean:145:0: 'Full.Proofs.TrialExecution.control_branch_start' depends on axioms: [propext, Quot.sound]
+ℹ [149/172] Built Full.Proofs.TrialExpressionArithmetic (963ms)
+info: Full/Proofs/TrialExpressionArithmetic.lean:98:0: 'Full.Proofs.TrialExecution.numeric_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionArithmetic.lean:99:0: 'Full.Proofs.TrialExecution.numeric_contracts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionArithmetic.lean:100:0: 'Full.Proofs.TrialExecution.evaluation_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionArithmetic.lean:101:0: 'Full.Proofs.TrialExecution.evaluation_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionArithmetic.lean:102:0: 'Full.Proofs.TrialExecution.evaluation_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionArithmetic.lean:103:0: 'Full.Proofs.TrialExecution.evaluation_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionArithmetic.lean:104:0: 'Full.Proofs.TrialExecution.evaluation_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [150/172] Built Full.Proofs.ForwardBindingsDecompose (3.3s)
+warning: Full/Proofs/ForwardBindingsDecompose.lean:62:33: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [child, List.nil_append, List.cons_append, Bool.true_or, Bool.false_or, Bool.true_and] at hec hkc ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:66:49: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode, List.length_cons, List.length_append, List.nil_append, List.cons_append,
+    Control.focus, hv, hval, child, Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:67:14: This simp argument is unused:
+  List.length_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode, ha, List.length_cons, List.nil_append, List.cons_append, Control.focus, hv, hval,
+    child, Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:67:34: This simp argument is unused:
+  List.nil_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode, ha, List.length_cons, List.length_append, List.cons_append, Control.focus, hv,
+    hval, child, Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:67:51: This simp argument is unused:
+  List.cons_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode, ha, List.length_cons, List.length_append, List.nil_append, Control.focus, hv, hval,
+    child, Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:68:29: This simp argument is unused:
+  hv
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode, ha, List.length_cons, List.length_append, List.nil_append, List.cons_append,
+    Control.focus, hval, child, Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:68:33: This simp argument is unused:
+  hval
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode, ha, List.length_cons, List.length_append, List.nil_append, List.cons_append,
+    Control.focus, hv, child, Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:68:39: This simp argument is unused:
+  child
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode, ha, List.length_cons, List.length_append, List.nil_append, List.cons_append,
+    Control.focus, hv, hval, Control.continuations]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:77:40: This simp argument is unused:
+  Nat.add_one_ne_self
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [makeBinding, List.mapM_cons, List.find?_append, hn0, hn1, List.find?_cons, List.find?_nil,
+    beq_self_eq_true, Option.none_or, ite_true, beq_eq_false_iff_ne] at hec ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:77:61: This simp argument is unused:
+  beq_eq_false_iff_ne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [makeBinding, List.mapM_cons, List.find?_append, hn0, hn1, List.find?_cons, List.find?_nil,
+    beq_self_eq_true, Option.none_or, ite_true, Nat.add_one_ne_self] at hec ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardBindingsDecompose.lean:79:14: This simp argument is unused:
+  reduceIte
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [show (s.nextBinding == s.nextBinding + 1) = false from by simp] at hec ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [151/172] Built Full.Proofs.TrialExpressionValuesCons (1.0s)
+info: Full/Proofs/TrialExpressionValuesCons.lean:131:0: 'Full.Proofs.TrialExecution.values_cons_primitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [152/172] Built Full.Proofs.ForwardBindings (262ms)
+ℹ [153/172] Built Full.Proofs.TrialInitialization (3.1s)
+info: Full/Proofs/TrialInitialization.lean:309:0: 'Full.Proofs.TrialInitialization.f6_of_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:310:0: 'Full.Proofs.TrialInitialization.check_embed' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:311:0: 'Full.Proofs.TrialInitialization.validate_embed' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:312:0: 'Full.Proofs.TrialInitialization.valid_start_num' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:313:0: 'Full.Proofs.TrialInitialization.begin_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:314:0: 'Full.Proofs.TrialInitialization.input_records' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:315:0: 'Full.Proofs.TrialInitialization.begin_observe' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:316:0: 'Full.Proofs.TrialInitialization.start_step' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:317:0: 'Full.Proofs.TrialInitialization.finish_step' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialInitialization.lean:318:0: 'Full.Proofs.TrialInitialization.runner_of_cleanup' depends on axioms: [propext, Quot.sound]
+⚠ [154/172] Built Full.Proofs.TrialCleanup (2.6s)
+warning: Full/Proofs/TrialCleanup.lean:21:35: This simp argument is unused:
+  hm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Trial.giveUp, Trial.getCell, Trial.memOp, Trial.snapshot, Trial.logEvent, Trial.pushPending,
+    Trial.popPending, Trial.Variant.approved, Trial.Memory.setCount, hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Full/Proofs/TrialCleanup.lean:199:0: 'Full.Proofs.TrialCleanup.cleanup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialCleanup.lean:200:0: 'Full.Proofs.TrialCleanup.cleanup_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [155/172] Built Full.Proofs.TrialInitialCleanup (404ms)
+info: Full/Proofs/TrialInitialCleanup.lean:52:0: 'Full.Proofs.TrialInitialization.initial_cleanup_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [156/172] Built Full.Proofs.TrialExpressionMatch (674ms)
+warning: Full/Proofs/TrialExpressionMatch.lean:77:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Full/Proofs/TrialExpressionMatch.lean:119:0: 'Full.Proofs.TrialExecution.match_choose' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionMatch.lean:120:0: 'Full.Proofs.TrialExecution.match_reservation_filter' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionMatch.lean:121:0: 'Full.Proofs.TrialExecution.match_branch_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionMatch.lean:122:0: 'Full.Proofs.TrialExecution.match_handoff' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionMatch.lean:123:0: 'Full.Proofs.TrialExecution.match_complete' depends on axioms: [propext, Quot.sound]
+ℹ [157/172] Built Full.Proofs.TrialExpressionValues (2.0s)
+info: Full/Proofs/TrialExpressionValues.lean:154:0: 'Full.Proofs.TrialExecution.evaluation_var' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionValues.lean:155:0: 'Full.Proofs.TrialExecution.evaluation_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [158/172] Built Full.Proofs.TrialExpressionIf (929ms)
+info: Full/Proofs/TrialExpressionIf.lean:108:0: 'Full.Proofs.TrialExecution.evaluation_if' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [159/172] Built Full.Proofs.TrialExpressionLet (1.3s)
+info: Full/Proofs/TrialExpressionLet.lean:177:0: 'Full.Proofs.TrialExecution.let_rest_unused' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionLet.lean:178:0: 'Full.Proofs.TrialExecution.let_bind_step' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionLet.lean:179:0: 'Full.Proofs.TrialExecution.let_bind_exact' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionLet.lean:180:0: 'Full.Proofs.TrialExecution.evaluation_let' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [160/172] Built Full.Demand.RegionExecution (5.8s)
+warning: Full/Demand/RegionExecution.lean:472:48: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hsl, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/RegionExecution.lean:472:58: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hsl, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [161/172] Built Full.Proofs.TrialExpressionMatchFinish (1.4s)
+info: Full/Proofs/TrialExpressionMatchFinish.lean:181:0: 'Full.Proofs.TrialExecution.match_finish_filter_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionMatchFinish.lean:182:0: 'Full.Proofs.TrialExecution.match_finish_dispose' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionMatchFinish.lean:183:0: 'Full.Proofs.TrialExecution.match_finishBranch' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [162/172] Built Full.Proofs.ForwardCapture (9.5s)
+warning: Full/Proofs/ForwardCapture.lean:37:28: This simp argument is unused:
+  List.map_cons
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hv, Control.continuations, Control.callTail, callTail_arguments, List.map_nil, List.length_cons,
+    List.length_nil] at hrel ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCapture.lean:37:43: This simp argument is unused:
+  List.map_nil
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hv, Control.continuations, Control.callTail, callTail_arguments, List.map_cons, List.length_cons,
+    List.length_nil] at hrel ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCapture.lean:43:17: This simp argument is unused:
+  control_env_bindings _ s rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [continuations_bindings _ s rfl, henv, argument_order, List.drop_succ_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCapture.lean:43:47: This simp argument is unused:
+  continuations_bindings _ s rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [control_env_bindings _ s rfl, henv, argument_order, List.drop_succ_cons]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCapture.lean:62:16: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hk, Except.bind, Except.pure, Plain.step]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCapture.lean:62:20: This simp argument is unused:
+  hk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [he, Except.bind, Except.pure, Plain.step]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [163/172] Built Full.Proofs.TrialExpressionMatchDecompose (6.9s)
+info: Full/Proofs/TrialExpressionMatchDecompose.lean:317:0: 'Full.Proofs.TrialExecution.eval_match_decompose' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionMatchDecompose.lean:318:0: 'Full.Proofs.TrialExecution.match_decompose_progress' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Full/Proofs/TrialExpressionMatchDecompose.lean:319:0: 'Full.Proofs.TrialExecution.match_decompose_snapshot' depends on axioms: [propext, Quot.sound]
+info: Full/Proofs/TrialExpressionMatchDecompose.lean:320:0: 'Full.Proofs.TrialExecution.match_decompose_unique_nil' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [164/172] Built Full.Demand.CreditExecution (8.0s)
+warning: Full/Demand/CreditExecution.lean:68:38: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/CreditExecution.lean:68:48: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/CreditExecution.lean:87:38: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/CreditExecution.lean:87:48: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/CreditExecution.lean:189:40: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/CreditExecution.lean:189:50: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/CreditExecution.lean:266:16: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Demand/CreditExecution.lean:315:50: This simp argument is unused:
+  bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hfilter, pure, Except.bind, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Demand/CreditExecution.lean:315:60: This simp argument is unused:
+  Except.bind
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Counted.transition, htask, hfilter, bind, pure, Except.pure] at ht
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [165/172] Built Full.Proofs.TrialExpressionMatchShared (2.1s)
+info: Full/Proofs/TrialExpressionMatchShared.lean:247:0: 'Full.Proofs.TrialExecution.match_decompose_shared' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [166/172] Built Full.Proofs.TrialExpressionMatchUnique (2.4s)
+info: Full/Proofs/TrialExpressionMatchUnique.lean:139:0: 'Full.Proofs.TrialExecution.match_decompose_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [167/172] Built Full.Proofs.TrialExpressionMatchEvaluation (1.1s)
+info: Full/Proofs/TrialExpressionMatchEvaluation.lean:232:0: 'Full.Proofs.TrialExecution.evaluation_match' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [168/172] Built Full.Proofs.TrialCompatibility (278ms)
+⚠ [169/172] Built Full.Proofs.ForwardCleanup (17s)
+warning: Full/Proofs/ForwardCleanup.lean:21:48: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [ForwardBindings.env_success ht, ForwardBindings.continuations_success ht]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCleanup.lean:67:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardCleanup.lean:67:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardCleanup.lean:67:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Full/Proofs/ForwardCleanup.lean:35:40: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Full/Proofs/ForwardCleanup.lean:64:33: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCleanup.lean:84:27: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Full/Proofs/ForwardCleanup.lean:108:27: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Full/Proofs/ForwardCleanup.lean:126:33: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Control.decode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Full/Proofs/ForwardCleanup.lean:144:30: Variable name `hr` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [170/172] Built Full.Proofs.Correspondence (354ms)
+✔ [171/172] Built Full.Proofs (266ms)
+⚠ [172/172] Built Full.Demand.Soundness (7.6s)
+warning: Full/Demand/Soundness.lean:147:12: This simp argument is unused:
+  hframes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hf]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (172 jobs).
+EXIT=0

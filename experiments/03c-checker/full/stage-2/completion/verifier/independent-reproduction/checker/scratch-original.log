@@ -1,0 +1,18 @@
+$ lake env lean --version
+Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+$ lake build Full.Demand Full.Statements
+✔ [3/14] Built Trial.Language (445ms)
+✔ [4/14] Built Trial.Plain (404ms)
+✔ [5/14] Built Trial.Memory (767ms)
+✔ [6/14] Built Trial.Counted (1.4s)
+✔ [7/14] Built Full.Language (1.2s)
+✔ [8/14] Built Full.Plain (546ms)
+✔ [9/14] Built Full.Demand (734ms)
+✔ [10/14] Built Full.Counted (1.9s)
+✔ [11/14] Built Full.Control (475ms)
+✔ [12/14] Built Full.Lifecycle (467ms)
+✔ [13/14] Built Full.Inspect (544ms)
+✔ [14/14] Built Full.Statements (341ms)
+Build completed successfully (14 jobs).
+$ lake env lean -o .lake/build/lib/lean/Export.olean Export.lean
+$ lake env lean stage-2-run.lean

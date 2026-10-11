@@ -1,0 +1,2 @@
+$ lake env leanchecker --fresh ProofGate
+EXIT=0

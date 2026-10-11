@@ -1,0 +1,6 @@
+import Full.Demand.Soundness
+namespace IndependentControl
+axiom unsupported : Full.Statements.Conditional Full.Demand.accepts
+theorem candidate : Full.Statements.Conditional Full.Demand.accepts := unsupported
+#print axioms candidate
+end IndependentControl
