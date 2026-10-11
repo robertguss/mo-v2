@@ -1,5 +1,18 @@
 # Mo v2
 
+> **Research archive since 11 Oct 2026.**
+>
+> - **Where the work moved.** Mo is being built at
+>   [robertguss/mo](https://github.com/robertguss/mo). Planning, status and
+>   decisions now live in Robert's private Notion (D199).
+> - **Linear is retired.** Its full history (decisions D102–D191, status
+>   documents, versioned plans, and all 19 issues with their comments) is
+>   exported to [history/linear](history/linear/README.md).
+> - **What stays here.** The 13 experiments, their evidence, and the full-3c
+>   Lean proofs.
+>
+> Everything below is the historical record, kept as it was.
+
 A programming language for AI agents to write reliable, safe software that no
 human writes or reads. Robert designs it; AI agents build it.
 
