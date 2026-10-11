@@ -1,0 +1,6 @@
+../stage-1/completion/verifier/Invalid.lean:3:42: error: Type mismatch
+  True.intro
+has type
+  True
+but is expected to have type
+  Full.Statements.F1

@@ -1,0 +1,13 @@
+{
+  "auxiliary_theorems": 64,
+  "cache_free_build": true,
+  "axiom_allowlist": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_kernel": true,
+  "checker_rows_equal_to_separate_preflight": 90,
+  "conditional_theorem_delivered": false,
+  "stage_2_complete": false
+}

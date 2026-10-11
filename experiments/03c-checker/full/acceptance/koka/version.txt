@@ -1,0 +1,13 @@
+Koka 3.2.9, 05:27:08 Sep 18 2026 (ghc release version)
+version: 3.2.9
+bin    : /home/user/.local/bin
+lib    : /home/user/.local/lib/koka/v3.2.9
+share  : /home/user/.local/share/koka/v3.2.9
+output : .koka/v3.2.9/gcc-debug-6a093e
+cc     : /usr/bin/gcc
+flags  : 6a093e
+Copyright 2019-2024, Microsoft Research, Daan Leijen, and others.
+This program is free software; see the source for copying conditions.
+This program is distributed in the hope that it will be useful,
+but without any warranty; without even the implied warranty
+of merchantability or fitness for a particular purpose.

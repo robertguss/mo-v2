@@ -1,0 +1,8 @@
+$ lake env lean --run ../verification/ReviewCases.lean
+PASS zero-arity Bool forward call: answer=some { raw := Trial.RawValue.bool true, value := Trial.PlainValue.bool true }; plain=Full.Plain.Focus.finished (Trial.PlainValue.bool true)
+PASS three heterogeneous arguments: answer=some { raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [-17] }; plain=Full.Plain.Focus.finished (Trial.PlainValue.list [-17])
+PASS sparse IDs shared tails repeated outside: answer=some { raw := Trial.RawValue.num 7, value := Trial.PlainValue.num 7 }; plain=Full.Plain.Focus.finished (Trial.PlainValue.num 7)
+PASS outside-only repeated roots: answer=some { raw := Trial.RawValue.num 3, value := Trial.PlainValue.num 3 }; plain=Full.Plain.Focus.finished (Trial.PlainValue.num 3)
+CONDITIONAL DOMAIN: demanded=false; last=some { name := "Enter", landmark := none }; unique=true; creates=1
+TRANSFER BOUNDARY: source/output/commit invariant=true; source operand readable=true; source owners=[some 5, none, none]; output owners=[some 6, none, some 5]; exact full effects=true; independent plain step=true
+EXIT=0

@@ -1,0 +1,10 @@
+{
+  "working_equals_clean_inventory": true,
+  "theorems": 525,
+  "axiom_sets": {
+    "empty": 34,
+    "Quot.sound,propext": 295,
+    "Classical.choice,Quot.sound,propext": 80,
+    "propext": 116
+  }
+}

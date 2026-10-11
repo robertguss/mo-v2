@@ -1,0 +1,19 @@
+2026-10-09T19:30:31Z
+programs.json: OK
+starts.json: OK
+predictions.json: OK
+DERIVATIONS.md: OK
+BOUNDARIES.md: OK
+PASS: 40 typed library declarations; 16 valid starts; 90 exact cases; C1-C22 and all 27 categories
+PASS: 84 finished manual ledgers/answers/retained graphs
+PASS fixture-negative: Bool is not Int
+PASS fixture-negative: unselected branch checked
+PASS fixture-negative: function cannot capture caller input
+PASS fixture-negative: bad initial multiplicity
+PASS fixture-negative: cycle
+PASS fixture-negative: wrong answer vs ledger
+PASS fixture-negative: omitted Free retains garbage
+PASS fixture-negative: Create relabeled as Write
+NOT RUN: formal execution, boundary assertions, theorem/axiom checks, scientific mutants
+PASS final Koka selection: 19 categories; 53 answers; 12 no-demand-warning, 6 required warnings, 1 observed conservative warning
+PASS: no tracked or staged historical changes

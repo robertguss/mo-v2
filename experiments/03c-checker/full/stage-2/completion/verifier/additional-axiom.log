@@ -1,0 +1,4 @@
+$ lake env lean /tmp/conditional-verifier-5jl8fr97/additional-axiom.lean
+'IndependentControl.candidate' depends on axioms: [propext, unsupported, Quot.sound]
+
+EXIT=0

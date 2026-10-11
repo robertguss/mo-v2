@@ -1,0 +1,5 @@
+$ python3 -B /tmp/rob1139-stage2-complete-5zz69gnu/experiments/03c-checker/full/acceptance/supplemental-v2/check_expanded.py /tmp/rob1139-stage2-complete-5zz69gnu/observations --report /home/user/workspace/repo/experiments/03c-checker/full/stage-2/completion/verifier/independent-reproduction/expanded-results.json
+CHECKS: 820 passed; 0 failed; 12/12 consumer corruptions rejected
+COVERAGE: {"cases": 90, "cons": 126, "multipleEligibleCons": 7, "snapshots": 4591, "tracedCases": 90, "transitions": {"denial": 3, "step": 3008, "stutter": 1490}}
+Finite export evidence only; see report limits. No proof/freeze/native fidelity claim.
+EXIT=0

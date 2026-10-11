@@ -1,0 +1,36 @@
+$ lake env lean --version
+Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+$ lake build Full.Demand Full.Statements
+✔ [3/14] Built Trial.Language (509ms)
+✔ [4/14] Built Trial.Plain (378ms)
+✔ [5/14] Built Trial.Memory (724ms)
+✔ [6/14] Built Trial.Counted (1.3s)
+✔ [7/14] Built Full.Language (1.1s)
+✔ [8/14] Built Full.Plain (489ms)
+✔ [9/14] Built Full.Demand (669ms)
+✔ [10/14] Built Full.Counted (1.8s)
+✔ [11/14] Built Full.Control (468ms)
+✔ [12/14] Built Full.Lifecycle (474ms)
+✔ [13/14] Built Full.Inspect (571ms)
+✔ [14/14] Built Full.Statements (369ms)
+Build completed successfully (14 jobs).
+$ lake env lean -o .lake/build/lib/lean/Export.olean Export.lean
+$ lake env lean stage-2-run.lean
+$ lake env lean --version
+Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+$ lake build Full.Demand Full.Statements
+✔ [3/14] Built Trial.Language (411ms)
+✔ [4/14] Built Trial.Plain (379ms)
+✔ [5/14] Built Trial.Memory (725ms)
+✔ [6/14] Built Trial.Counted (1.3s)
+✔ [7/14] Built Full.Language (1.2s)
+✔ [8/14] Built Full.Plain (492ms)
+✔ [9/14] Built Full.Demand (674ms)
+✔ [10/14] Built Full.Counted (1.9s)
+✔ [11/14] Built Full.Control (470ms)
+✔ [12/14] Built Full.Lifecycle (492ms)
+✔ [13/14] Built Full.Inspect (534ms)
+✔ [14/14] Built Full.Statements (370ms)
+Build completed successfully (14 jobs).
+$ lake env lean -o .lake/build/lib/lean/Export.olean Export.lean
+$ lake env lean stage-2-run.lean

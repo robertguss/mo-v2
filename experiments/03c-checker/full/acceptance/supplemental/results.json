@@ -1,0 +1,2398 @@
+{
+  "source": "uploaded parent uncommitted exports, not origin/main",
+  "inputHashes": {
+    "inputs.json": "78abc755248e2b7501e615f2315684f60b8374e110f40eff94c9cec6d0238c02",
+    "raw.json": "0c19f9d1073c75d69ab9698360e2d45f6118bfe09f88ceeb2c60d83c2403fdbe",
+    "summary.json": "7c4863e180961eb3460774cbd7200cfd7388da6b956ced7674bd123216c4afd9"
+  },
+  "cases": 90,
+  "tracedCases": 37,
+  "traceSnapshots": 1793,
+  "checks": [
+    {
+      "name": "case set",
+      "status": "PASS"
+    },
+    {
+      "name": "input IDs",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 exact input",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C1 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C2 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C3 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C4 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C5 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C6 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C7 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C8 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C9 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-empty exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-single exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-mixed exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-bump-outside exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-empty exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-single exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-mixed exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C10-sum-outside exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even4 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-even5 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-negative exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C11-bool exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C12 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C13 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C14 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C15 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C16 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C17 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C17-alias exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C18 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-number exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-frame exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-create exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C20-control exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "C21 exact interleaving",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-reverse destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-totals destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-append destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-swap destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-rotate destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-merge destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-sort destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-keep-first destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-remove destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-positive destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-duplicate destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-prepend destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-insert-new destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-build destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-twice destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-alloc destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-arithmetic destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-fresh-demand destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-chain destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-ordinary-shared destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-retained-demand destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-alias-demand destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-tail-demand destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-drop-extra destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "U-forward destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-0-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-1-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-2-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-3-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-4-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-5-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-6-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-7-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-8-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-9-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-nil destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "boundary-10-single destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-0 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-1 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-2 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-3 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-4 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-5 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-6 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 status/result",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 primitive ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 snapshots",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 accounting",
+      "status": "PASS"
+    },
+    {
+      "name": "additional-7 destruction",
+      "status": "PASS"
+    },
+    {
+      "name": "selected source-required lifetime cuts",
+      "status": "PASS"
+    },
+    {
+      "name": "C16/C17 cleanup schedule",
+      "status": "PASS"
+    },
+    {
+      "name": "C12/C13/C22 finite prefixes",
+      "status": "PASS"
+    },
+    {
+      "name": "C19 budgets (projection)",
+      "status": "PASS"
+    },
+    {
+      "name": "C20 denial (projection)",
+      "status": "PASS"
+    }
+  ],
+  "consumerNegatives": [
+    {
+      "name": "lost required suspended root",
+      "status": "REJECTED",
+      "reason": "required binder/value/status: actual=[['L', 0], 'Trial.BStatus.movedOn', [1, 2]]; expected=[['L', 0], 'Trial.BStatus.holding', [1, 2]]"
+    },
+    {
+      "name": "changed pending argument value",
+      "status": "REJECTED",
+      "reason": "mismatch: actual=[[['L', 0], [9, 2]]]; expected=[[['L', 0], [1, 2]]]"
+    },
+    {
+      "name": "wrong queued count",
+      "status": "REJECTED",
+      "reason": "mismatch: actual=[[0, 1, 1, 1, 'live'], [1, 2, None, 1, 'live']]; expected=[[0, 1, 1, 0, 'live'], [1, 2, None, 1, 'live']]"
+    },
+    {
+      "name": "reset saved scalar",
+      "status": "REJECTED",
+      "reason": "distinct ancestor saved scalars: actual=[[['I', 11], 11], [['I', 15], 11], [['I', 8], 8]]; expected=[[['I', 11], 11], [['I', 15], 15], [['I', 8], 8]]"
+    },
+    {
+      "name": "restart after suspension",
+      "status": "REJECTED",
+      "reason": "resume vs uninterrupted exported projection: actual={'visibleBindings': [], 'tasks': '[]', 'steps': 1, 'slots': [[['L', 0], [7]]], 'reservations': [], 'requiredBindings': [], 'release': [], 'outside': [], 'memoryOperations': [['C', 0]], 'holders': [{'value': [7], 'role': 'answer', 'raw': ['L', 0], 'id': 0}], 'frames': [], 'events': [['E', 'one', 1, 0, [['I', 7]], 'main/0'], ['C', 0, 7, None], ['R', 1, ['L', 0]], ['E', 'identity', 2, 0, [['L', 0]], 'main'], ['R', 2, ['L', 0]]], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.finished (Trial.PlainValue.list [7]), kont := [] }', 'cells': [[0, 7, None, 1, 'live']], 'bindings': [[0, 'n', ['I', 7], 'Trial.BStatus.noHolder', 7, 1, 'one/parameter/n'], [1, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [7], 2, 'identity/parameter/xs']], 'actions': ['Start', 'Dispatch', 'Dispatch', 'Leaf', 'Capture', 'Enter', 'Dispatch', 'Leaf', 'Capture', 'Leaf', 'Capture', 'Primitive', 'Return', 'Capture', 'Enter', 'Leaf', 'Return', 'Finish']}; expected={'visibleBindings': [], 'tasks': '[]', 'steps': 18, 'slots': [[['L', 0], [7]]], 'reservations': [], 'requiredBindings': [], 'release': [], 'outside': [], 'memoryOperations': [['C', 0]], 'holders': [{'value': [7], 'role': 'answer', 'raw': ['L', 0], 'id': 0}], 'frames': [], 'events': [['E', 'one', 1, 0, [['I', 7]], 'main/0'], ['C', 0, 7, None], ['R', 1, ['L', 0]], ['E', 'identity', 2, 0, [['L', 0]], 'main'], ['R', 2, ['L', 0]]], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.finished (Trial.PlainValue.list [7]), kont := [] }', 'cells': [[0, 7, None, 1, 'live']], 'bindings': [[0, 'n', ['I', 7], 'Trial.BStatus.noHolder', 7, 1, 'one/parameter/n'], [1, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [7], 2, 'identity/parameter/xs']], 'actions': ['Start', 'Dispatch', 'Dispatch', 'Leaf', 'Capture', 'Enter', 'Dispatch', 'Leaf', 'Capture', 'Leaf', 'Capture', 'Primitive', 'Return', 'Capture', 'Enter', 'Leaf', 'Return', 'Finish']}"
+    },
+    {
+      "name": "denial commits an action",
+      "status": "REJECTED",
+      "reason": "denial preserves projected pre-request execution: actual={'visibleBindings': [1], 'tasks': '[Full.Counted.Task.primitive\\n   (Full.Op.add)\\n   { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1/0\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"one\" 1 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"choose\" 2 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail\" },\\n Full.Counted.Task.returning\\n   { id := 1,\\n     name := \"outerFail\",\\n     parent := 0,\\n     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],\\n     site := \"main\" }\\n   { env := [(\"xs\", 0)], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'steps': 15, 'slots': [[['I', 3], 3], [['I', 20], 20], [['L', 0], [1, 2]]], 'reservations': [], 'requiredBindings': [], 'release': [], 'outside': [0, 0], 'memoryOperations': [], 'holders': [{'value': [1, 2], 'role': 'operand', 'raw': ['L', 0], 'id': 0}, {'value': [2], 'role': 'edge', 'raw': ['L', 1], 'id': 0}, {'value': [1, 2], 'role': 'outside', 'raw': ['L', 0], 'id': 0}, {'value': [1, 2], 'role': 'outside', 'raw': ['L', 0], 'id': 1}], 'frames': [[1, 'outerFail', 0]], 'events': [['E', 'outerFail', 1, 0, [['L', 0]], 'main']], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.value (Trial.PlainValue.num 3),\\n  kont := [Full.Plain.Kont.right (Full.Op.add) (Trial.PlainValue.num 20),\\n           Full.Plain.Kont.arguments \"one\" [] [] [(\"xs\", Trial.PlainValue.list [1, 2])],\\n           Full.Plain.Kont.arguments \"choose\" [Trial.PlainValue.list [1, 2]] [] [(\"xs\", Trial.PlainValue.list [1, 2])],\\n           Full.Plain.Kont.returning \"outerFail\"] }', 'cells': [[0, 1, 1, 3, 'live'], [1, 2, None, 1, 'live']], 'bindings': [[0, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [1, 2], 0, 'main/input/xs'], [1, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [1, 2], 1, 'outerFail/parameter/xs']], 'actions': ['Start', 'Dispatch', 'Leaf', 'Capture', 'Enter', 'Dispatch', 'Leaf', 'Capture', 'Dispatch', 'Dispatch', 'Leaf', 'Capture', 'Leaf', 'Capture']}; expected={'visibleBindings': [1], 'tasks': '[Full.Counted.Task.primitive\\n   (Full.Op.add)\\n   { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1/0\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"one\" 1 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail/1\" },\\n Full.Counted.Task.capture,\\n Full.Counted.Task.enter \"choose\" 2 { env := [(\"xs\", 1)], invocation := 1, branches := [], site := \"outerFail\" },\\n Full.Counted.Task.returning\\n   { id := 1,\\n     name := \"outerFail\",\\n     parent := 0,\\n     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],\\n     site := \"main\" }\\n   { env := [(\"xs\", 0)], invocation := 0, branches := [], site := \"main\" },\\n Full.Counted.Task.finish]', 'steps': 14, 'slots': [[['I', 3], 3], [['I', 20], 20], [['L', 0], [1, 2]]], 'reservations': [], 'requiredBindings': [], 'release': [], 'outside': [0, 0], 'memoryOperations': [], 'holders': [{'value': [1, 2], 'role': 'operand', 'raw': ['L', 0], 'id': 0}, {'value': [2], 'role': 'edge', 'raw': ['L', 1], 'id': 0}, {'value': [1, 2], 'role': 'outside', 'raw': ['L', 0], 'id': 0}, {'value': [1, 2], 'role': 'outside', 'raw': ['L', 0], 'id': 1}], 'frames': [[1, 'outerFail', 0]], 'events': [['E', 'outerFail', 1, 0, [['L', 0]], 'main']], 'decodedPlain': 'Except.ok { focus := Full.Plain.Focus.value (Trial.PlainValue.num 3),\\n  kont := [Full.Plain.Kont.right (Full.Op.add) (Trial.PlainValue.num 20),\\n           Full.Plain.Kont.arguments \"one\" [] [] [(\"xs\", Trial.PlainValue.list [1, 2])],\\n           Full.Plain.Kont.arguments \"choose\" [Trial.PlainValue.list [1, 2]] [] [(\"xs\", Trial.PlainValue.list [1, 2])],\\n           Full.Plain.Kont.returning \"outerFail\"] }', 'cells': [[0, 1, 1, 3, 'live'], [1, 2, None, 1, 'live']], 'bindings': [[0, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [1, 2], 0, 'main/input/xs'], [1, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [1, 2], 1, 'outerFail/parameter/xs']], 'actions': ['Start', 'Dispatch', 'Leaf', 'Capture', 'Enter', 'Dispatch', 'Leaf', 'Capture', 'Dispatch', 'Dispatch', 'Leaf', 'Capture', 'Leaf', 'Capture']}"
+    },
+    {
+      "name": "no-op destroy",
+      "status": "REJECTED",
+      "reason": "destroy clears bindings: actual=[[0, 'xs', ['L', 0], 'Trial.BStatus.movedOn', [1], 0, 'main/input/xs'], [1, 'h', ['I', 1], 'Trial.BStatus.noHolder', 1, 0, 'main/head'], [2, 't', ['L', None], 'Trial.BStatus.noHolder', [], 0, 'main/tail'], [3, 'n', ['I', 1], 'Trial.BStatus.noHolder', 1, 1, 'spin/parameter/n'], [4, 'n', ['I', 1], 'Trial.BStatus.noHolder', 1, 2, 'spin/parameter/n'], [5, 'n', ['I', 1], 'Trial.BStatus.noHolder', 1, 3, 'spin/parameter/n']]; expected=[]"
+    },
+    {
+      "name": "destroy frees outside graph",
+      "status": "REJECTED",
+      "reason": "exact outside-only destroyed graph: actual=[]; expected=[[0, 1, 1, 2, 'live'], [1, 2, None, 1, 'live']]"
+    },
+    {
+      "name": "omitted descendant Create provenance",
+      "status": "REJECTED",
+      "reason": "primitive provenance: actual=[['F', 0]]; expected=[['C', 0], ['F', 0]]"
+    }
+  ],
+  "gaps": {
+    "C16-pause-destroy-resume": "No destroy/second-destroy at cuts 5 and 6, or fresh resumed executions at each cleanup cut; continuous trace is not resume evidence.",
+    "C12-extra-budget4": "No resume from action29 by budget4; seven-entry finite prefix only.",
+    "C19-full-state-observation": "Split/whole omit completeState (next IDs, entered scopes, edge associations, landmarks). No repeated observer operation transcript. Partial equality and fixed budgets checked, not complete F5.",
+    "C20-full-transaction": "Pre-denial trace omits completeState; projected equality checked, not all Counted.State fields. Request history is not exported.",
+    "second-destroy": "Only destroyTwiceEqual Bool supplied; second lifecycle state, destroyed/status flag, failure retention and second cleanup stream absent.",
+    "independent-F2-F3": "requiredBindings and decodedPlain derive from counted tasks. Independent plain successive states, required-value lifetimes/correspondence and administrative rank transitions absent. Selected source-derived owners are checked directly; no universal F2/F3 claim.",
+    "all-usefulness-call-predictions": "All 90 call logs checked for source site, kinds, invocation nesting and inclusive accounting; complete independently predicted call sequences only for 35 C rows. Usefulness-only traces missing except U-drop-extra/U-tail-demand, so not all internal usefulness boundaries checked.",
+    "proof-checker-mutants": "No proofs, axiom audit, demand checker, executed machine mutants or fresh Lean/trial reconstruction run by acceptance author. Export-consumer negative tests are not machine mutants. Parent-reported trial comparison not independently rerun."
+  }
+}

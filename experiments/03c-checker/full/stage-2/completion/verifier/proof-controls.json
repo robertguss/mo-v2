@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "exit": 0,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "invalid": {
+    "exit": 1,
+    "axioms": [
+      "Quot.sound",
+      "propext",
+      "sorryAx"
+    ]
+  },
+  "placeholder": {
+    "exit": 0,
+    "axioms": [
+      "Quot.sound",
+      "propext",
+      "sorryAx"
+    ]
+  },
+  "additional-axiom": {
+    "exit": 0,
+    "axioms": [
+      "Quot.sound",
+      "propext",
+      "unsupported"
+    ]
+  }
+}

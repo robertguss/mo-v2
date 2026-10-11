@@ -1,0 +1,18 @@
+COMMAND lake env lean -o .lake/build/lib/lean/ProofGate.olean ProofGate.lean
+Full.Proofs.f1 : Full.Statements.F1
+Full.Proofs.f2 : Full.Statements.F2
+Full.Proofs.f3 : Full.Statements.F3
+Full.Proofs.f4 : Full.Statements.F4
+Full.Proofs.f5 : Full.Statements.F5
+Full.Proofs.f6 : Full.Statements.F6
+Full.Proofs.l1 : Full.Statements.L1
+Full.Proofs.l2 : Full.Statements.L2
+'Full.Proofs.f1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.f2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.f3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.f4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.f5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.f6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.l1' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.l2' depends on axioms: [propext, Classical.choice, Quot.sound]
+EXIT=0

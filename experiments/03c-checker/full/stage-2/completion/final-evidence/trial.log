@@ -1,0 +1,3 @@
+$ lake env lean --run TrialCompatibility.lean
+PASS: all 28 trial answers, primitive cell events and complete ordered landmark snapshots
+EXIT=0

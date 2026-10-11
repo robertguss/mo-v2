@@ -1,0 +1,16 @@
+gate.log Full.Proofs.f1 axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+gate.log Full.Proofs.f2 axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+gate.log Full.Proofs.f3 axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+gate.log Full.Proofs.f4 axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+gate.log Full.Proofs.f5 axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+gate.log Full.Proofs.f6 axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+gate.log Full.Proofs.l1 axioms= ['Quot.sound', 'propext'] forbidden= []
+gate.log Full.Proofs.l2 axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+PASS expected policy outcome gate.log ACCEPT
+Baseline.log VerifierControl.candidate axioms= ['Classical.choice', 'Quot.sound', 'propext'] forbidden= []
+PASS expected policy outcome Baseline.log ACCEPT
+Placeholder.log VerifierControl.candidate axioms= ['Quot.sound', 'propext', 'sorryAx'] forbidden= ['sorryAx']
+PASS expected policy outcome Placeholder.log REJECT
+AdditionalAxiom.log VerifierControl.candidate axioms= ['Quot.sound', 'VerifierControl.unsupported', 'propext'] forbidden= ['VerifierControl.unsupported']
+PASS expected policy outcome AdditionalAxiom.log REJECT
+PASS invalid concrete term rejected by elaboration

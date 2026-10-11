@@ -1,0 +1,264 @@
+$ lake env lean -o .lake/build/lib/lean/AuxiliaryGate.olean AuxiliaryGate.lean
+Full.Demand.accepts_certificates {p : Full.Program} {name : String} (h : Full.Demand.accepts p name = true) :
+  Full.Demand.CertifiedTable p
+'Full.Demand.accepts_certificates' depends on axioms: [propext, Quot.sound]
+Full.Demand.affine_list_bound {name : String} {body : Full.Expr}
+  (h : Full.Demand.affine name Trial.Kind.list body = Except.ok ()) :
+  Full.Demand.occurrences body [(name, some 0)] 0 ≤ 1
+'Full.Demand.affine_list_bound' depends on axioms: [propext, Quot.sound]
+Full.Demand.spend_length (xs ys : List Nat) (h : Full.Demand.spend xs = Except.ok ys) : ys.length = xs.length
+'Full.Demand.spend_length' depends on axioms: [propext, Quot.sound]
+Full.Demand.fold_length.{u_1} {α : Type u_1} {a b : List Nat} (xs : List α)
+  (f : List Nat → α → Except String (List Nat))
+  (step : ∀ (x : α), x ∈ xs → ∀ (a b : List Nat), f a x = Except.ok b → b.length = a.length)
+  (h : List.foldlM f a xs = Except.ok b) : b.length = a.length
+'Full.Demand.fold_length' depends on axioms: [propext, Quot.sound]
+Full.Demand.expression_length (e : Full.Expr) (fs : List Full.Function) (env : List (String × Full.Kind))
+  (a b : List Nat) (h : Full.Demand.expression fs env a e = Except.ok b) : b.length = a.length
+'Full.Demand.expression_length' depends on axioms: [propext, Quot.sound]
+Full.Demand.Lower.refl (xs : List Nat) : Full.Demand.Lower xs xs
+'Full.Demand.Lower.refl' does not depend on any axioms
+Full.Demand.Lower.trans {a b c : List Nat} (ha : Full.Demand.Lower a b) (hb : Full.Demand.Lower b c) :
+  Full.Demand.Lower a c
+'Full.Demand.Lower.trans' does not depend on any axioms
+Full.Demand.Lower.length {a b : List Nat} (h : Full.Demand.Lower a b) : a.length = b.length
+'Full.Demand.Lower.length' depends on axioms: [propext]
+Full.Demand.Lower.tail {a b : List Nat} (h : Full.Demand.Lower a b) : Full.Demand.Lower a.tail b.tail
+'Full.Demand.Lower.tail' does not depend on any axioms
+Full.Demand.join_lower (a b : List Nat) (hl : a.length = b.length) :
+  Full.Demand.Lower (List.zipWith min a b) a ∧ Full.Demand.Lower (List.zipWith min a b) b
+'Full.Demand.join_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.spend_lower {a b : List Nat} (h : Full.Demand.spend a = Except.ok b) : Full.Demand.Lower b a
+'Full.Demand.spend_lower' depends on axioms: [propext, Quot.sound]
+Full.Demand.spend_monotone {a b a' : List Nat} (hl : Full.Demand.Lower a b) (ha : Full.Demand.spend a = Except.ok a') :
+  ∃ b', Full.Demand.spend b = Except.ok b' ∧ Full.Demand.Lower a' b'
+'Full.Demand.spend_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Events.Extension.trace {es : List Full.Counted.Event} {ids : List Nat} {next : Nat}
+  {es' : List Full.Counted.Event} {ids' : List Nat} {next' : Nat} (hs : Full.Demand.Events.Trace es ids next)
+  (h : Full.Demand.Events.Extension es ids next es' ids' next') : Full.Demand.Events.Trace es' ids' next'
+'Full.Demand.Events.Extension.trace' does not depend on any axioms
+Full.Demand.Events.begin_invariant {p : Full.Program} {initial : Trial.Start} {s : Full.Counted.State}
+  (hb : Full.Counted.begin p initial = Except.ok s) : Full.Demand.Events.Invariant s
+'Full.Demand.Events.begin_invariant' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.transition_extension {p : Full.Program} {s : Full.Counted.State} {c : Full.Counted.Change}
+  (ht : Full.Counted.transition p s = Except.ok c) :
+  Full.Demand.Events.Extension s.events (List.map Full.Counted.Frame.id s.frames) s.nextInvocation c.state.events
+    (List.map Full.Counted.Frame.id c.state.frames) c.state.nextInvocation
+'Full.Demand.Events.transition_extension' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.transition_invariant {s : Full.Counted.State} {p : Full.Program} {c : Full.Counted.Change}
+  (hs : Full.Demand.Events.Invariant s) (ht : Full.Counted.transition p s = Except.ok c) :
+  Full.Demand.Events.Invariant c.state
+'Full.Demand.Events.transition_invariant' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.step_invariant {s : Full.Counted.State} {p : Full.Program} {t : Full.Counted.State}
+  (hs : Full.Demand.Events.Invariant s) (ht : Full.Counted.step p s = Except.ok t) : Full.Demand.Events.Invariant t
+'Full.Demand.Events.step_invariant' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.advance_invariant {s : Full.Counted.State} {p : Full.Program} {n : Nat} {t : Full.Counted.State}
+  (hs : Full.Demand.Events.Invariant s) (ht : Full.Counted.advance p n s = Except.ok t) : Full.Demand.Events.Invariant t
+'Full.Demand.Events.advance_invariant' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.reachable_invariant {p : Full.Program} {initial : Trial.Start} {s : Full.Counted.State}
+  (hr : Full.Statements.Reachable p initial s) : Full.Demand.Events.Invariant s
+'Full.Demand.Events.reachable_invariant' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.frame_bound {es : List Full.Counted.Event} {ids : List Nat} {next : Nat}
+  (h : Full.Demand.Events.Trace es ids next) (id : Nat) : id ∈ ids → id < next
+'Full.Demand.Events.frame_bound' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.next_positive {es : List Full.Counted.Event} {ids : List Nat} {next : Nat}
+  (h : Full.Demand.Events.Trace es ids next) : 0 < next
+'Full.Demand.Events.next_positive' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.frames_ordered {es : List Full.Counted.Event} {ids : List Nat} {next : Nat}
+  (h : Full.Demand.Events.Trace es ids next) : List.Pairwise (fun a b => b < a) ids
+'Full.Demand.Events.frames_ordered' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.head_ge {es : List Full.Counted.Event} {ids : List Nat} {next id top : Nat}
+  (h : Full.Demand.Events.Trace es (top :: ids) next) (hm : id ∈ top :: ids) : id ≤ top
+'Full.Demand.Events.head_ge' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.frames_nodup {es : List Full.Counted.Event} {ids : List Nat} {next : Nat}
+  (h : Full.Demand.Events.Trace es ids next) : ids.Nodup
+'Full.Demand.Events.frames_nodup' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.creates_eq (id : Nat) (es : List Full.Counted.Event) :
+  Full.Statements.creates id es = (Full.Demand.Events.tally id es).snd
+'Full.Demand.Events.creates_eq' depends on axioms: [propext]
+Full.Demand.Events.tally_active {es : List Full.Counted.Event} {ids : List Nat} {next id : Nat}
+  (h : Full.Demand.Events.Trace es ids next) : (Full.Demand.Events.tally id es).fst = ids.contains id
+'Full.Demand.Events.tally_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Events.future_zero {es : List Full.Counted.Event} {ids : List Nat} {next id : Nat}
+  (h : Full.Demand.Events.Trace es ids next) (hf : next ≤ id) : Full.Demand.Events.tally id es = (false, 0)
+'Full.Demand.Events.future_zero' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.Extension.closed {es : List Full.Counted.Event} {ids : List Nat} {next : Nat}
+  {es' : List Full.Counted.Event} {ids' : List Nat} {next' id : Nat} (hs : Full.Demand.Events.Trace es ids next)
+  (h : Full.Demand.Events.Extension es ids next es' ids' next') (hf : id < next) (hn : ¬id ∈ ids) :
+  id < next' ∧ ¬id ∈ ids' ∧ Full.Demand.Events.tally id es' = Full.Demand.Events.tally id es
+'Full.Demand.Events.Extension.closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Events.step_closed {s : Full.Counted.State} {p : Full.Program} {t : Full.Counted.State} {id : Nat}
+  (hs : Full.Demand.Events.Invariant s) (hf : id < s.nextInvocation)
+  (hn : ¬id ∈ List.map Full.Counted.Frame.id s.frames) (ht : Full.Counted.step p s = Except.ok t) :
+  id < t.nextInvocation ∧
+    ¬id ∈ List.map Full.Counted.Frame.id t.frames ∧
+      Full.Demand.Events.tally id t.events = Full.Demand.Events.tally id s.events
+'Full.Demand.Events.step_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Events.advance_closed {s : Full.Counted.State} {p : Full.Program} {n : Nat} {t : Full.Counted.State}
+  {id : Nat} (hs : Full.Demand.Events.Invariant s) (hf : id < s.nextInvocation)
+  (hn : ¬id ∈ List.map Full.Counted.Frame.id s.frames) (ht : Full.Counted.advance p n s = Except.ok t) :
+  id < t.nextInvocation ∧
+    ¬id ∈ List.map Full.Counted.Frame.id t.frames ∧
+      Full.Demand.Events.tally id t.events = Full.Demand.Events.tally id s.events
+'Full.Demand.Events.advance_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Events.transition_history {p : Full.Program} {s : Full.Counted.State} {c : Full.Counted.Change}
+  (ht : Full.Counted.transition p s = Except.ok c) : c.state.history = s.history
+'Full.Demand.Events.transition_history' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.begin_history {p : Full.Program} {initial : Trial.Start} {s : Full.Counted.State}
+  (hb : Full.Counted.begin p initial = Except.ok s) : s.history = []
+'Full.Demand.Events.begin_history' depends on axioms: [propext, Quot.sound]
+Full.Demand.Events.last_enter {p : Full.Program} {initial : Trial.Start} {s : Full.Counted.State}
+  (hr : Full.Statements.Reachable p initial s)
+  (hl : Option.map Full.Counted.Action.name s.history.getLast? = some "Enter") :
+  ∃ before c,
+    Full.Statements.Reachable p initial before ∧
+      Full.Counted.transition p before = Except.ok c ∧ c.action.name = "Enter" ∧ s = Full.Counted.commit c
+'Full.Demand.Events.last_enter' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Events.transition_enter_zero {s : Full.Counted.State} {p : Full.Program} {c : Full.Counted.Change}
+  {f : Full.Counted.Frame} (hs : Full.Demand.Events.Invariant s) (ht : Full.Counted.transition p s = Except.ok c)
+  (ha : c.action.name = "Enter") (hf : c.state.frames.head? = some f) :
+  Full.Demand.Events.tally f.id c.state.events = (true, 0)
+'Full.Demand.Events.transition_enter_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Events.entry_zero {p : Full.Program} {initial : Trial.Start} {s : Full.Counted.State}
+  {f : Full.Counted.Frame} (hr : Full.Statements.Reachable p initial s)
+  (hl : Option.map Full.Counted.Action.name s.history.getLast? = some "Enter") (hf : s.frames.head? = some f) :
+  Full.Demand.Events.tally f.id s.events = (true, 0)
+'Full.Demand.Events.entry_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.Scopes.dead_prefix {ts : List Full.Counted.Task} {fs : List Nat} (bs : List Full.Counted.Binding)
+  (env : Full.Counted.Env) (future : List Full.Counted.Task) (hs : Full.Demand.Scopes.Work ts fs) :
+  Full.Demand.Scopes.Work (Full.Counted.dead bs env future ++ ts) fs
+'Full.Demand.Scopes.dead_prefix' depends on axioms: [propext, Quot.sound]
+Full.Demand.Scopes.reserved_prefix {ts : List Full.Counted.Task} {fs : List Nat} (rs : List Full.Counted.Reservation)
+  (hs : Full.Demand.Scopes.Work ts fs) :
+  Full.Demand.Scopes.Work (List.map (fun r => Full.Counted.Task.freeReserved r.addr) rs ++ ts) fs
+'Full.Demand.Scopes.reserved_prefix' depends on axioms: [propext]
+Full.Demand.Scopes.arguments {ts : List Full.Counted.Task} {fs : List Nat} (args : List (Full.Expr × Nat))
+  (ctx : Full.Counted.Context) (hc : ctx.invocation = fs.headD 0) (hs : Full.Demand.Scopes.Work ts fs) :
+  Full.Demand.Scopes.Work
+    (List.flatMap
+        (fun x =>
+          match x with
+          | (a, i) => [Full.Counted.Task.eval a (Full.Counted.child ctx i), Full.Counted.Task.capture])
+        args ++
+      ts)
+    fs
+'Full.Demand.Scopes.arguments' depends on axioms: [propext]
+Full.Demand.Scopes.begin_work {p : Full.Program} {initial : Trial.Start} {first : Full.Counted.State}
+  (hb : Full.Counted.begin p initial = Except.ok first) :
+  Full.Demand.Scopes.Work first.tasks (List.map Full.Counted.Frame.id first.frames)
+'Full.Demand.Scopes.begin_work' depends on axioms: [propext, Quot.sound]
+Full.Demand.Scopes.transition_work {p : Full.Program} {s : Full.Counted.State} {c : Full.Counted.Change}
+  (hs : Full.Demand.Scopes.Work s.tasks (List.map Full.Counted.Frame.id s.frames))
+  (ht : Full.Counted.transition p s = Except.ok c) :
+  Full.Demand.Scopes.Work c.state.tasks (List.map Full.Counted.Frame.id c.state.frames)
+'Full.Demand.Scopes.transition_work' depends on axioms: [propext, Quot.sound]
+Full.Demand.Scopes.advance_work {p : Full.Program} {n : Nat} {s t : Full.Counted.State}
+  (hs : Full.Demand.Scopes.Work s.tasks (List.map Full.Counted.Frame.id s.frames))
+  (ht : Full.Counted.advance p n s = Except.ok t) :
+  Full.Demand.Scopes.Work t.tasks (List.map Full.Counted.Frame.id t.frames)
+'Full.Demand.Scopes.advance_work' depends on axioms: [propext, Quot.sound]
+Full.Demand.Scopes.reachable_work {p : Full.Program} {initial : Trial.Start} {s : Full.Counted.State}
+  (hr : Full.Statements.Reachable p initial s) :
+  Full.Demand.Scopes.Work s.tasks (List.map Full.Counted.Frame.id s.frames)
+'Full.Demand.Scopes.reachable_work' depends on axioms: [propext, Quot.sound]
+Full.Demand.Scopes.headD_bound {next : Nat} (ids : List Nat) (hn : 0 < next) (hb : ∀ (id : Nat), id ∈ ids → id < next) :
+  ids.headD 0 < next
+'Full.Demand.Scopes.headD_bound' depends on axioms: [propext]
+Full.Demand.Scopes.task_bound {fs : List Nat} {t : Full.Counted.Task} {next : Nat} (h : Full.Demand.Scopes.task fs t)
+  (hn : 0 < next) (hb : ∀ (id : Nat), id ∈ fs → id < next) (ctx : Full.Counted.Context) :
+  ctx ∈ Full.Demand.Scopes.contexts t → ctx.invocation < next
+'Full.Demand.Scopes.task_bound' depends on axioms: [propext, Quot.sound]
+Full.Demand.Scopes.Work.contexts_bound {ts : List Full.Counted.Task} {fs : List Nat} {next : Nat}
+  (hs : Full.Demand.Scopes.Work ts fs) (hn : 0 < next) (hb : ∀ (id : Nat), id ∈ fs → id < next)
+  (t : Full.Counted.Task) :
+  t ∈ ts → ∀ (ctx : Full.Counted.Context), ctx ∈ Full.Demand.Scopes.contexts t → ctx.invocation < next
+'Full.Demand.Scopes.Work.contexts_bound' depends on axioms: [propext, Quot.sound]
+Full.Demand.Scopes.reachable_contexts_bound {p : Full.Program} {initial : Trial.Start} {s : Full.Counted.State}
+  {t : Full.Counted.Task} {ctx : Full.Counted.Context} (hr : Full.Statements.Reachable p initial s) (hm : t ∈ s.tasks)
+  (hc : ctx ∈ Full.Demand.Scopes.contexts t) : ctx.invocation < s.nextInvocation
+'Full.Demand.Scopes.reachable_contexts_bound' depends on axioms: [propext, Quot.sound]
+Full.Demand.sum_map_zero.{u_1} {α : Type u_1} (xs : List α) (f : α → Nat) :
+  (List.map f xs).sum = 0 ↔ ∀ (x : α), x ∈ xs → f x = 0
+'Full.Demand.sum_map_zero' depends on axioms: [propext, Quot.sound]
+Full.Demand.uses_zero (e : Full.Expr) (env : Trial.FEnv) (id : Nat) :
+  Full.uses e env id = false ↔ Full.Demand.occurrences e env id = 0
+'Full.Demand.uses_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.taskUses_zero (id : Nat) (task : Full.Counted.Task) :
+  Full.Counted.taskUses id task = false ↔ Full.Demand.taskOccurrences id task = 0
+'Full.Demand.taskUses_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.futureUses_zero (id : Nat) (tasks : List Full.Counted.Task) :
+  tasks.any (Full.Counted.taskUses id) = false ↔ Full.Demand.futureOccurrences id tasks = 0
+'Full.Demand.futureUses_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.last_use (env : Trial.Env) (id : Nat) (name : String) (ctx : Full.Counted.Context)
+  (rest : List Full.Counted.Task) (he : ctx.env = env) (hx : Trial.lookupF (Trial.toFEnv env) name = some (some id))
+  (hb : Full.Demand.futureOccurrences id (Full.Counted.Task.eval (Full.Expr.var name) ctx :: rest) ≤ 1) :
+  rest.any (Full.Counted.taskUses id) = false
+'Full.Demand.last_use' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.hide_lookup (a b : Trial.FEnv) (i j : Nat) (name : String)
+  (h : ∀ (x : String), (Trial.lookupF a x == some (some i)) = (Trial.lookupF b x == some (some j))) (x : String) :
+  (Trial.lookupF ((name, none) :: a) x == some (some i)) = (Trial.lookupF ((name, none) :: b) x == some (some j))
+'Full.Demand.hide_lookup' depends on axioms: [propext]
+Full.Demand.occurrences_ext (e : Full.Expr) (a b : Trial.FEnv) (i j : Nat)
+  (h : ∀ (x : String), (Trial.lookupF a x == some (some i)) = (Trial.lookupF b x == some (some j))) :
+  Full.Demand.occurrences e a i = Full.Demand.occurrences e b j
+'Full.Demand.occurrences_ext' depends on axioms: [propext, Quot.sound]
+Full.Demand.occurrences_fresh_shadow (e : Full.Expr) (env : Trial.FEnv) (name : String) (fresh id : Nat)
+  (hne : fresh ≠ id) :
+  Full.Demand.occurrences e ((name, some fresh) :: env) id = Full.Demand.occurrences e ((name, none) :: env) id
+'Full.Demand.occurrences_fresh_shadow' depends on axioms: [propext, Quot.sound]
+Full.Demand.occurrences_fresh_pair (e : Full.Expr) (env : Trial.FEnv) (head tail : String) (hid tid id : Nat)
+  (hh : hid ≠ id) (ht : tid ≠ id) :
+  Full.Demand.occurrences e ((tail, some tid) :: (head, some hid) :: env) id =
+    Full.Demand.occurrences e ((tail, none) :: (head, none) :: env) id
+'Full.Demand.occurrences_fresh_pair' depends on axioms: [propext, Quot.sound]
+Full.Demand.future_nil (id : Nat) : Full.Demand.futureOccurrences id [] = 0
+'Full.Demand.future_nil' depends on axioms: [propext, Quot.sound]
+Full.Demand.future_cons (id : Nat) (t : Full.Counted.Task) (ts : List Full.Counted.Task) :
+  Full.Demand.futureOccurrences id (t :: ts) = Full.Demand.taskOccurrences id t + Full.Demand.futureOccurrences id ts
+'Full.Demand.future_cons' depends on axioms: [propext, Quot.sound]
+Full.Demand.future_append (id : Nat) (a b : List Full.Counted.Task) :
+  Full.Demand.futureOccurrences id (a ++ b) = Full.Demand.futureOccurrences id a + Full.Demand.futureOccurrences id b
+'Full.Demand.future_append' depends on axioms: [propext, Quot.sound]
+Full.Demand.future_dead (id : Nat) (bs : List Full.Counted.Binding) (env : Full.Counted.Env)
+  (ts : List Full.Counted.Task) : Full.Demand.futureOccurrences id (Full.Counted.dead bs env ts) = 0
+'Full.Demand.future_dead' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.parameter_occurrences {id : Nat} (pairs : List ((String × Full.Kind) × Full.Counted.Slot))
+  (next invocation : Nat) (name : String) (e : Full.Expr) (hb : id < next) :
+  Full.Demand.occurrences e
+      (Trial.toFEnv
+        (List.map (fun b => (b.record.name, b.record.id))
+          (List.map
+              (fun x =>
+                match x with
+                | (((x, snd), v), i) =>
+                  Full.Counted.makeBinding (next + i) x v invocation
+                    (toString name ++ toString "/parameter/" ++ toString x))
+              pairs.zipIdx).reverse))
+      id =
+    0
+'Full.Demand.parameter_occurrences' depends on axioms: [propext, Classical.choice, Quot.sound]
+Full.Demand.arguments_occurrences (id : Nat) (args : List (Full.Expr × Nat)) (ctx : Full.Counted.Context) :
+  Full.Demand.futureOccurrences id
+      (List.flatMap
+        (fun x =>
+          match x with
+          | (a, i) => [Full.Counted.Task.eval a (Full.Counted.child ctx i), Full.Counted.Task.capture])
+        args) =
+    (List.map (fun a => Full.Demand.occurrences a.fst (Trial.toFEnv ctx.env) id) args).sum
+'Full.Demand.arguments_occurrences' depends on axioms: [propext, Quot.sound]
+Full.Demand.call_occurrences (id : Nat) (args : List Full.Expr) (ctx : Full.Counted.Context) :
+  Full.Demand.futureOccurrences id
+      (List.flatMap
+        (fun x =>
+          match x with
+          | (a, i) => [Full.Counted.Task.eval a (Full.Counted.child ctx i), Full.Counted.Task.capture])
+        args.zipIdx) =
+    (List.map (fun a => Full.Demand.occurrences a.val (Trial.toFEnv ctx.env) id) args.attach).sum
+'Full.Demand.call_occurrences' depends on axioms: [propext, Quot.sound]
+Full.Demand.freeReserved_occurrences (id : Nat) (rs : List Full.Counted.Reservation) :
+  Full.Demand.futureOccurrences id (List.map (fun r => Full.Counted.Task.freeReserved r.addr) rs) = 0
+'Full.Demand.freeReserved_occurrences' depends on axioms: [propext, Quot.sound]
+Full.Demand.transition_old_occurrences {p : Full.Program} {s : Full.Counted.State} {c : Full.Counted.Change} {id : Nat}
+  (hb : id < s.nextBinding) (ht : Full.Counted.transition p s = Except.ok c) :
+  Full.Demand.futureOccurrences id c.state.tasks ≤ Full.Demand.futureOccurrences id s.tasks
+'Full.Demand.transition_old_occurrences' depends on axioms: [propext, Classical.choice, Quot.sound]

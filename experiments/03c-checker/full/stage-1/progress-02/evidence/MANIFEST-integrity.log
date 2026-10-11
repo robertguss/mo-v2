@@ -1,0 +1,17 @@
+lean/Full/Proofs.lean: OK
+lean/Full/Proofs/Initial.lean: OK
+lean/Full/Proofs/Lifecycle.lean: OK
+lean/Full/Proofs/PartialGate.lean: OK
+lean/Full/Proofs/Scope.lean: OK
+stage-1/BRIEF.md: OK
+stage-1/RESULT.md: OK
+stage-1/REVIEW.md: OK
+stage-1/evidence/axioms.log: OK
+stage-1/evidence/baseline-integrity.log: OK
+stage-1/evidence/clean-build.log: OK
+stage-1/evidence/controls.log: OK
+stage-1/evidence/finite-suite.log: OK
+stage-1/evidence/full-gate-incomplete.log: OK
+stage-1/evidence/kernel.log: OK
+stage-1/evidence/preparation-integrity.log: OK
+stage-1/evidence/trial-compatibility.log: OK

@@ -1,0 +1,16 @@
+✔ [14/15] Built Full (421ms)
+Build completed successfully (15 jobs).
+PASS: 40 typed library declarations; 16 valid starts; 90 exact cases; C1-C22 and all 27 categories
+PASS: 84 finished manual ledgers/answers/retained graphs
+PASS fixture-negative: Bool is not Int
+PASS fixture-negative: unselected branch checked
+PASS fixture-negative: function cannot capture caller input
+PASS fixture-negative: bad initial multiplicity
+PASS fixture-negative: cycle
+PASS fixture-negative: wrong answer vs ledger
+PASS fixture-negative: omitted Free retains garbage
+PASS fixture-negative: Create relabeled as Write
+PASS summary observations; boundary/lifetime/F5/lifecycle checks STILL REQUIRED
+CHECKS: 820 passed; 0 failed; 12/12 consumer corruptions rejected
+COVERAGE: {"cases": 90, "cons": 126, "multipleEligibleCons": 7, "snapshots": 4591, "tracedCases": 90, "transitions": {"denial": 3, "step": 3008, "stutter": 1490}}
+Finite export evidence only; see report limits. No proof/freeze/native fidelity claim.

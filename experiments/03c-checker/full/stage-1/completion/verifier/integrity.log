@@ -1,0 +1,20 @@
+COMMAND git diff --name-only
+experiments/03c-checker/full/lean/Full/Proofs.lean
+experiments/03c-checker/full/lean/Full/Proofs/Destruction.lean
+experiments/03c-checker/full/lean/Full/Proofs/Simulation.lean
+experiments/03c-checker/full/lean/Full/Proofs/TrialRelease.lean
+experiments/03c-checker/full/lean/Full/Proofs/TrialSimulationRelease.lean
+COMMAND proof manifest coverage
+listed 81 actual 81 missing [] extra []
+COMMAND forbidden source token scan (hits inspected in REVIEW)
+lean/Full/Proofs/SimulationInitial.lean:122:    -- The read-back kind property follows directly from raw syntax.
+lean/Full/Proofs/TrialExecutionContract.lean:13:field required by F6 is retained. This is an induction goal, not an axiom. -/
+lean/Full/Proofs/Progress.lean:7:`StructuralReady` names those facts explicitly; it is not an axiom and is not
+lean/Full/Proofs/ProgressGate.lean:6:/-! Further partial stage-1 evidence, not the frozen eight-target ProofGate.
+lean/Full/Proofs/Basic.lean:15:attribute [local simp] pure_ok bind_ok bind_error map_ok map_error
+lean/Full/Proofs/Simulation.lean:9:below, not an axiom or an additional condition on valid programs. -/
+COMMAND lake env lean --version
+Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+COMMAND kernel log
+COMMAND lake env leanchecker --fresh ProofGate
+EXIT=0

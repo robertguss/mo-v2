@@ -1,0 +1,3 @@
+unique unused tail: reachable steps 14->15; rank 19->19; equal decode; Plain step differs; both invariants true; final answer 3; finalGraph true; trace rejects: administrative rank at 14
+shared unused tail: reachable steps 4->5; rank 19->20; equal decode; Plain step differs; both invariants true; final answer 3; finalGraph true; trace rejects: administrative rank at 4
+CONFIRMED: exact frozen F2 one-step obligation fails; no memory-safety failure claimed

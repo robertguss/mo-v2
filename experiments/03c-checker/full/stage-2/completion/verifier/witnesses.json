@@ -1,0 +1,152 @@
+{
+  "U-duplicate": {
+    "target": "duplicate",
+    "invocation": 1,
+    "unique": true,
+    "creates": 3,
+    "refusal": "Cons has no eligible reservation in this invocation",
+    "all_event_prefix_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3
+    ],
+    "return_count": 3
+  },
+  "U-prepend": {
+    "target": "prepend",
+    "invocation": 1,
+    "unique": true,
+    "creates": 1,
+    "refusal": "Cons has no eligible reservation in this invocation",
+    "all_event_prefix_counts": [
+      0,
+      1,
+      1
+    ],
+    "return_count": 1
+  },
+  "U-insert-new": {
+    "target": "insertNew",
+    "invocation": 1,
+    "unique": true,
+    "creates": 1,
+    "refusal": "Cons has no eligible reservation in this invocation",
+    "all_event_prefix_counts": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "return_count": 1
+  },
+  "U-build": {
+    "target": "build",
+    "invocation": 1,
+    "unique": true,
+    "creates": 3,
+    "refusal": "Cons has no eligible reservation in this invocation",
+    "all_event_prefix_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3
+    ],
+    "return_count": 3
+  },
+  "U-twice": {
+    "target": "twice",
+    "invocation": 1,
+    "unique": true,
+    "creates": 2,
+    "refusal": "list used more than once: xs",
+    "all_event_prefix_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "return_count": 2
+  },
+  "U-ordinary-alloc": {
+    "target": "allocHelper",
+    "invocation": 1,
+    "unique": true,
+    "creates": 1,
+    "refusal": "ordinary callee has no demand certificate: one",
+    "all_event_prefix_counts": [
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "return_count": 1
+  },
+  "missing-affine-twice": {
+    "accepted": true,
+    "unique": true,
+    "creates": 2
+  },
+  "expanded-results.json": {
+    "checks": {
+      "PASS": 820
+    },
+    "negative_controls": 12,
+    "coverage": {
+      "cases": 90,
+      "tracedCases": 90,
+      "snapshots": 4591,
+      "transitions": {
+        "stutter": 1490,
+        "step": 3008,
+        "denial": 3
+      },
+      "cons": 126,
+      "multipleEligibleCons": 7
+    }
+  },
+  "boundary-results.json": {
+    "checks": {},
+    "negative_controls": 3,
+    "coverage": {
+      "traces": 90,
+      "internalEqualities": 4498,
+      "visibleViews": 9680
+    }
+  }
+}

@@ -1,0 +1,7 @@
+$ lake -d ../../trial/lean build Checks
+✔ [7/11] Built Checks.Examples (373ms)
+✔ [8/11] Built Checks.Predictions (434ms)
+✔ [9/11] Built Checks.Run (1.1s)
+✔ [10/11] Built Checks (218ms)
+Build completed successfully (11 jobs).
+EXIT=0

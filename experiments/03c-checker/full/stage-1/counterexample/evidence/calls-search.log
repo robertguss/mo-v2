@@ -1,0 +1,21 @@
+checked 0
+uncaught exception: trace 59: administrative rank at 28
+{ functions := [{ name := "f0",
+                  params := [("x", Trial.Kind.number), ("y", Trial.Kind.list), ("z", Trial.Kind.bool)],
+                  result := Trial.Kind.number,
+                  body := Full.Expr.var "x",
+                  demanded := false },
+                { name := "f1",
+                  params := [],
+                  result := Trial.Kind.bool,
+                  body := Full.Expr.matchE (Full.Expr.nil) (Full.Expr.bool true) "h" "t" (Full.Expr.bool true),
+                  demanded := false }],
+  main := Full.Expr.matchE
+            (Full.Expr.bin
+              (Full.Op.cons)
+              (Full.Expr.call "f0" [Full.Expr.num 2, Full.Expr.nil, Full.Expr.bool true])
+              (Full.Expr.matchE (Full.Expr.var "x") (Full.Expr.var "y") "h" "t" (Full.Expr.var "y")))
+            (Full.Expr.bool false)
+            "h"
+            "t"
+            (Full.Expr.call "f1" []) }

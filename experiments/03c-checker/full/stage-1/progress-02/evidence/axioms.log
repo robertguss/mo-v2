@@ -1,0 +1,54 @@
+Full.Proofs.invariant_heap (initial : Trial.Start) (s : Full.Counted.State)
+  (h : Full.Inspect.invariant initial s = true) :
+  Trial.Proofs.HeapSafe s.mem (Full.Proofs.executionRoots s) ∧
+    Trial.Proofs.LivePaths s.mem ∧ Trial.Proofs.FreshBound s.mem
+Full.Proofs.free_from_invariant (p : Full.Program) (initial : Trial.Start) (s : Full.Counted.State) (a : Trial.Addr)
+  (c : Trial.Cell) (rest : List Full.Counted.Task) (hi : Full.Inspect.invariant initial s = true)
+  (ht : s.tasks = Full.Counted.Task.free a :: rest) (hf : s.mem.find? a = some c) (hl : c.status = Trial.Status.live)
+  (hz : c.count = 0) :
+  ∃ change,
+    Full.Counted.transition p s = Except.ok change ∧
+      ∀ (t : Full.Counted.State),
+        t = change.state ∨ t = Full.Counted.commit change →
+          Trial.Proofs.HeapSafe t.mem (Full.Proofs.executionRoots t) ∧
+            Trial.Proofs.LivePaths t.mem ∧
+              Trial.Proofs.FreshBound t.mem ∧
+                (∀ (r : Option Trial.Addr),
+                    r ∈ Full.Proofs.executionRoots s →
+                      Trial.readBack t.mem (Trial.RawValue.list r) = Trial.readBack s.mem (Trial.RawValue.list r)) ∧
+                  Full.Control.decode t = Full.Control.decode s ∧ Full.Control.rank t < Full.Control.rank s
+Full.Proofs.transition_effects (p : Full.Program) (s : Full.Counted.State) (change : Full.Counted.Change)
+  (ha : s.answer = none) (h : Full.Counted.transition p s = Except.ok change) :
+  ∃ effects,
+    Full.Inspect.effects s = Except.ok effects ∧
+      change.state.events = s.events ++ effects ∧
+        change.state.mem.record = s.mem.record ++ Full.Inspect.cellEffects effects
+Full.Proofs.SimulationInitial.initial_simulation (p : Full.Program) (initial : Trial.Start) (first : Full.Counted.State)
+  (h : Full.Counted.begin p initial = Except.ok first) :
+  ∃ plain, Full.Statements.plainBegin p initial = Except.ok plain ∧ Full.Control.decode first = Except.ok plain
+'Full.Proofs.control_env_bindings' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.continuations_bindings' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.focus_bindings' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.callTail_rest_length' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.continuations_fuel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.focus_fuel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.decode_commit' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.executionRoots_holders' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.invariant_heap' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.invariant_live_edge' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.release_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.free_transition' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.free_preserves_heap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.free_decode' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.free_rank' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.free_from_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.SimulationInitial.input_lookup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.SimulationInitial.mapM_map_ok' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.SimulationInitial.input_environment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.SimulationInitial.focus_giveBinding_prefix' depends on axioms: [propext]
+'Full.Proofs.SimulationInitial.mapM_transfer' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.SimulationInitial.input_values' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.SimulationInitial.dead_is_prefix' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.SimulationInitial.initial_simulation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.transition_effects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Full.Proofs.commit_effects' depends on axioms: [propext, Classical.choice, Quot.sound]

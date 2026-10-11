@@ -1,0 +1,11 @@
+PASS CONSUMER UNIT ONLY: synthetic complete summary accepted (not model evidence)
+PASS CONSUMER UNIT ONLY: rejected Bool/Int distinction for observed answer mismatch
+PASS CONSUMER UNIT ONLY: rejected wrong answer for observed answer mismatch
+PASS CONSUMER UNIT ONLY: rejected missing Create for observed cellEvents mismatch
+PASS CONSUMER UNIT ONLY: rejected wrong final count for final heap mismatch
+PASS CONSUMER UNIT ONLY: rejected prefix called finished for observed status mismatch
+PASS CONSUMER UNIT ONLY: rejected missing case
+No formal/candidate program ran; temporary synthetic payloads removed.
+PASS CONSUMER UNIT ONLY: final consumer accepts complete synthetic summary
+PASS CONSUMER UNIT ONLY: duplicate JSON case key rejected before matching
+Temporary synthetic payloads removed; not model evidence.

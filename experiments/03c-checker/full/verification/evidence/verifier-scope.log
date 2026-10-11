@@ -1,0 +1,2 @@
+C12/5 expected=[("n", 0)]; good=[{ id := 0, name := "n", value := Trial.RawValue.num 0, status := Trial.BStatus.noHolder }]; bad=[]; observer(bad)=true protection(bad)=true nextScope rejects=true
+PASS 90 fixture starts; 4542 source/output/commit scope+observer checks; suspended-holding Enter=30; delayed shared Decompose=13; MatchComplete=24

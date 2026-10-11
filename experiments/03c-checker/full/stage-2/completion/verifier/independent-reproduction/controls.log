@@ -1,0 +1,172 @@
+$ lake env lean -o .lake/build/lib/lean/Export.olean Export.lean
+EXIT=0
+$ lake env lean ../verification/Controls.lean
+REJECT Controls.Fault.callerReservation: C1 route executed at action 16; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "one",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }],
+     site := "main/2" },
+ Full.Counted.Event.create 1 1 none]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "one",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }],
+     site := "main/2" },
+ Full.Counted.Event.write 0 1 none]
+REJECT Controls.Fault.sharedReuse: C3 route executed at action 12; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/1" }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/1" }]
+REJECT Controls.Fault.pendingHolder: C3 route executed at action 8; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/1" }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/1" }]
+REJECT Controls.Fault.suspendedHolder: C4 route executed at action 6; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/0" }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/0" }]
+REJECT Controls.Fault.administrativeLoop: C19 route executed at action 5; baseline=true mutant=false; good-events=[]; bad-events=[]
+REJECT Controls.Fault.skipFree: C16 route executed at action 6; baseline=true mutant=false; good-events=[Full.Counted.Event.free 0]; bad-events=[]
+REJECT Controls.Fault.hiddenEntryCopy: C8 route executed at action 10; baseline=true mutant=false; good-events=[Full.Counted.Event.create 0 1 none,
+ Full.Counted.Event.enter
+   { id := 1,
+     name := "identity",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1] }],
+     site := "main" }]; bad-events=[Full.Counted.Event.create 0 1 none,
+ Full.Counted.Event.create 1 1 none,
+ Full.Counted.Event.free 0,
+ Full.Counted.Event.enter
+   { id := 1,
+     name := "identity",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 1), value := Trial.PlainValue.list [1] }],
+     site := "main" }]
+REJECT Controls.Fault.returnPayload: C7 route executed at action 23; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "makeThenDrop",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num (-6), value := Trial.PlainValue.num (-6) }],
+     site := "main" },
+ Full.Counted.Event.enter
+   { id := 2,
+     name := "one",
+     parent := 1,
+     args := [{ raw := Trial.RawValue.num (-6), value := Trial.PlainValue.num (-6) }],
+     site := "makeThenDrop/0" },
+ Full.Counted.Event.create 0 (-6) none,
+ Full.Counted.Event.returning 2 { raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [-6] },
+ Full.Counted.Event.free 0,
+ Full.Counted.Event.returning 1 { raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "makeThenDrop",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num (-6), value := Trial.PlainValue.num (-6) }],
+     site := "main" },
+ Full.Counted.Event.enter
+   { id := 2,
+     name := "one",
+     parent := 1,
+     args := [{ raw := Trial.RawValue.num (-6), value := Trial.PlainValue.num (-6) }],
+     site := "makeThenDrop/0" },
+ Full.Counted.Event.create 0 (-6) none,
+ Full.Counted.Event.returning 2 { raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [-6] },
+ Full.Counted.Event.free 0,
+ Full.Counted.Event.returning 1 { raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }]
+REJECT Controls.Fault.cellPayload: C8 route executed at action 8; baseline=true mutant=false; good-events=[Full.Counted.Event.create 0 1 none]; bad-events=[Full.Counted.Event.create 0 2 none]
+REJECT Controls.Fault.skipBranchCleanup: C1 route executed at action 18; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "one",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }],
+     site := "main/2" },
+ Full.Counted.Event.create 1 1 none,
+ Full.Counted.Event.returning 1 { raw := Trial.RawValue.list (some 1), value := Trial.PlainValue.list [1] }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "one",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num 1, value := Trial.PlainValue.num 1 }],
+     site := "main/2" },
+ Full.Counted.Event.create 1 1 none,
+ Full.Counted.Event.returning 1 { raw := Trial.RawValue.list (some 1), value := Trial.PlainValue.list [1] }]
+REJECT Controls.Fault.skipReturnCleanup: C8 route executed at action 12; baseline=true mutant=false; good-events=[Full.Counted.Event.create 0 1 none,
+ Full.Counted.Event.enter
+   { id := 1,
+     name := "identity",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1] }],
+     site := "main" },
+ Full.Counted.Event.returning 1 { raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1] }]; bad-events=[Full.Counted.Event.create 0 1 none,
+ Full.Counted.Event.enter
+   { id := 1,
+     name := "identity",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1] }],
+     site := "main" },
+ Full.Counted.Event.returning 1 { raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1] }]
+REJECT Controls.Fault.skipUnusedParameter: C17 route executed at action 7; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "choose",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1] },
+              { raw := Trial.RawValue.list (some 24), value := Trial.PlainValue.list [9, -4] }],
+     site := "main" }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "choose",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1] },
+              { raw := Trial.RawValue.list (some 24), value := Trial.PlainValue.list [9, -4] }],
+     site := "main" }]
+REJECT Controls.Fault.hiddenScope: C12 route executed at action 5; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "spin",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],
+     site := "main" }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "spin",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.num 0, value := Trial.PlainValue.num 0 }],
+     site := "main" }]
+REJECT Controls.Fault.observerOrder: C4 route executed at action 6; baseline=true mutant=false; good-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/0" }]; bad-events=[Full.Counted.Event.enter
+   { id := 1,
+     name := "bump",
+     parent := 0,
+     args := [{ raw := Trial.RawValue.list (some 0), value := Trial.PlainValue.list [1, 2] }],
+     site := "main/0" }]
+REJECT accounting C7: actual Create=1, faulty counter=0, expected=1; descendant-reset=false
+REJECT accounting C9: actual Create=1, faulty counter=0, expected=1; descendant-reset=true
+REJECT accounting C13: actual Create=2, faulty counter=0, expected=2; descendant-reset=false
+REJECT false Finish C12: seven active frames, no source answer; mutant answer violates final graph
+REJECT restart C19: correct steps=18, restarted steps=1; correct Finished=true
+REJECT late denial C20-number: last committed steps=14, mutant=15
+REJECT no-op destroy C20-number: baseline cleared control; mutant retains failed execution
+PASS: 21 executed faulty routes rejected; baseline controls passed. No proof/checker mutation claimed.
+EXIT=0

@@ -1,0 +1,2 @@
+'Full.Proofs.RankRegression.unique_decrease' depends on axioms: [propext, Quot.sound]
+'Full.Proofs.RankRegression.shared_decrease' depends on axioms: [propext, Quot.sound]

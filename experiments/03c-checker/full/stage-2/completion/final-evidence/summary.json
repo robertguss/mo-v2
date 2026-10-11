@@ -1,0 +1,1964 @@
+{
+  "C1": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 1 -",
+      "F A"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C2": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1,
+      1
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "C N0 1 -",
+      "W A 1 N0"
+    ],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "N0",
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C3": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1,
+      2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "C N0 3 -",
+      "C N1 2 N0",
+      "F N1",
+      "F N0"
+    ],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C4": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 3,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 3 -",
+      "C N1 2 N0",
+      "F N0",
+      "F N1",
+      "F B",
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "C5": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 2,
+    "rawListRoot": null,
+    "cellEvents": [
+      "F B",
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "C6": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 4,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 3 -",
+      "W A 2 N0",
+      "F N0",
+      "F A",
+      "F B"
+    ],
+    "finalCells": []
+  },
+  "C7": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 0,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 -6 -",
+      "F N0"
+    ],
+    "finalCells": []
+  },
+  "C8": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 1 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C9": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -6
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 -6 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        -6,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C10-bump-empty": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "C10-bump-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -1
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -1 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C10-bump-mixed": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -1,
+      6,
+      2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W C 2 -",
+      "W B 6 C",
+      "W A -1 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -1,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        6,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C10-bump-outside": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -1,
+      6,
+      2
+    ],
+    "rawListRoot": "N2",
+    "cellEvents": [
+      "C N0 2 -",
+      "C N1 6 N0",
+      "C N2 -1 N1"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        5,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        2,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N1",
+        6,
+        "N0",
+        1,
+        "live"
+      ],
+      [
+        "N2",
+        -1,
+        "N1",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C10-sum-empty": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 0,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "C10-sum-single": {
+    "status": "finished",
+    "kind": "I",
+    "answer": -2,
+    "rawListRoot": null,
+    "cellEvents": [
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "C10-sum-mixed": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 4,
+    "rawListRoot": null,
+    "cellEvents": [
+      "F C",
+      "F B",
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "C10-sum-outside": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 4,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        5,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C11-even4": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 1,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "C11-even5": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 0,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "C11-negative": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 0,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "C11-bool": {
+    "status": "finished",
+    "kind": "B",
+    "answer": true,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "C12": {
+    "status": "suspended:after-7th-spin-Enter;action-29",
+    "kind": "I",
+    "answer": null,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "C13": {
+    "status": "suspended:after-2nd-Free;action-29",
+    "kind": "I",
+    "answer": null,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 0 -",
+      "F N0",
+      "C N1 0 -",
+      "F N1"
+    ],
+    "finalCells": []
+  },
+  "C14": {
+    "status": "suspended:after-3rd-spin-Enter",
+    "kind": "I",
+    "answer": null,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": [
+      [
+        "A",
+        1,
+        null,
+        0,
+        "aside"
+      ]
+    ]
+  },
+  "C15": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "C N0 9 -",
+      "F N0"
+    ],
+    "finalCells": [
+      [
+        "A",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C16": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 7,
+    "rawListRoot": null,
+    "cellEvents": [
+      "F A",
+      "F B"
+    ],
+    "finalCells": []
+  },
+  "C17": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "F Y",
+      "F Z"
+    ],
+    "finalCells": [
+      [
+        "A",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C17-alias": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [],
+    "finalCells": [
+      [
+        "A",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C18": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 3,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 3 -",
+      "C N1 2 N0",
+      "F B",
+      "F A",
+      "F N0",
+      "F N1"
+    ],
+    "finalCells": []
+  },
+  "C19": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      7
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 7 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        7,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C20-number": {
+    "status": "failed:deny-number-before-add-20-3",
+    "kind": "L",
+    "answer": null,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "B",
+        3,
+        "live"
+      ],
+      [
+        "B",
+        2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C20-frame": {
+    "status": "failed:deny-frame-before-one-Enter",
+    "kind": "L",
+    "answer": null,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "B",
+        3,
+        "live"
+      ],
+      [
+        "B",
+        2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C20-create": {
+    "status": "failed:deny-cell-before-one-Create",
+    "kind": "L",
+    "answer": null,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "B",
+        3,
+        "live"
+      ],
+      [
+        "B",
+        2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C20-control": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1,
+      2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "C N0 23 -",
+      "F N0"
+    ],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "B",
+        3,
+        "live"
+      ],
+      [
+        "B",
+        2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "C21": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      8,
+      -12,
+      15,
+      -5,
+      11,
+      -9
+    ],
+    "rawListRoot": "N2",
+    "cellEvents": [
+      "W C -9 -",
+      "C N0 11 C",
+      "W B -5 N0",
+      "C N1 15 B",
+      "W A -12 N1",
+      "C N2 8 A"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -12,
+        "N1",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        -5,
+        "N0",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        -9,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        11,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "N1",
+        15,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "N2",
+        8,
+        "A",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-reverse": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1,
+      5,
+      -2
+    ],
+    "rawListRoot": "C",
+    "cellEvents": [
+      "W A -2 -",
+      "W B 5 A",
+      "W C 1 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "B",
+        5,
+        "A",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        "B",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-totals": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2,
+      3,
+      4
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W C 4 -",
+      "W B 3 C",
+      "W A -2 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        3,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        4,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-append": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2,
+      5,
+      1,
+      7
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W B 5 D",
+      "W A -2 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        5,
+        "D",
+        1,
+        "live"
+      ],
+      [
+        "D",
+        1,
+        "E",
+        1,
+        "live"
+      ],
+      [
+        "E",
+        7,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-swap": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      5,
+      -2,
+      1
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W C 1 -",
+      "W B -2 C",
+      "W A 5 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        5,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        -2,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-rotate": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      5,
+      1,
+      -2
+    ],
+    "rawListRoot": "B",
+    "cellEvents": [
+      "W A -2 -",
+      "W C 1 A",
+      "W B 5 C"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "B",
+        5,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        "A",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-merge": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -3,
+      -1,
+      2,
+      4,
+      8
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W D -1 E",
+      "W D 4 -",
+      "W E 4 -",
+      "W F 8 -",
+      "W E 4 F",
+      "W D 2 E",
+      "W B -1 D",
+      "W A -3 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -3,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        -1,
+        "D",
+        1,
+        "live"
+      ],
+      [
+        "D",
+        2,
+        "E",
+        1,
+        "live"
+      ],
+      [
+        "E",
+        4,
+        "F",
+        1,
+        "live"
+      ],
+      [
+        "F",
+        8,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-sort": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2,
+      1,
+      5
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -",
+      "W B 5 -",
+      "W C 1 -",
+      "W C 1 -",
+      "W C 5 -",
+      "W C 5 -",
+      "W B 1 C",
+      "W B 1 C",
+      "W A -2 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        1,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        5,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-keep-first": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "F B",
+      "F C",
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-remove": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2,
+      1
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "F B",
+      "W A -2 C"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-positive": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      5,
+      1
+    ],
+    "rawListRoot": "B",
+    "cellEvents": [
+      "W C 1 -",
+      "W B 5 C",
+      "F A"
+    ],
+    "finalCells": [
+      [
+        "B",
+        5,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-duplicate": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2,
+      -2,
+      5,
+      5,
+      1,
+      1
+    ],
+    "rawListRoot": "N2",
+    "cellEvents": [
+      "W C 1 -",
+      "C N0 1 C",
+      "W B 5 N0",
+      "C N1 5 B",
+      "W A -2 N1",
+      "C N2 -2 A"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        "N1",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        5,
+        "N0",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        1,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        1,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "N1",
+        5,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "N2",
+        -2,
+        "A",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-prepend": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -7,
+      1,
+      2
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 -7 A"
+    ],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        2,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        -7,
+        "A",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-insert-new": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -3,
+      2,
+      4,
+      8
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W B 4 C",
+      "C N0 2 B",
+      "W A -3 N0"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -3,
+        "N0",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        4,
+        "C",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        8,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        2,
+        "B",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-build": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      3,
+      2,
+      1
+    ],
+    "rawListRoot": "N2",
+    "cellEvents": [
+      "C N0 1 -",
+      "C N1 2 N0",
+      "C N2 3 N1"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        1,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N1",
+        2,
+        "N0",
+        1,
+        "live"
+      ],
+      [
+        "N2",
+        3,
+        "N1",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-twice": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1,
+      2,
+      2,
+      3
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "C N0 3 -",
+      "C N1 2 N0",
+      "W B 2 N1",
+      "W A 1 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        1,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        2,
+        "N1",
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        3,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N1",
+        2,
+        "N0",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-ordinary-alloc": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -9
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 -9 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        -9,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-ordinary-arithmetic": {
+    "status": "finished",
+    "kind": "I",
+    "answer": -6,
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "U-fresh-demand": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -1,
+      6
+    ],
+    "rawListRoot": "N1",
+    "cellEvents": [
+      "C N0 5 -",
+      "C N1 -2 N0",
+      "W N0 6 -",
+      "W N1 -1 N0"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        6,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N1",
+        -1,
+        "N0",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-chain": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      2,
+      6,
+      -1
+    ],
+    "rawListRoot": "C",
+    "cellEvents": [
+      "W C 2 -",
+      "W B 6 C",
+      "W A -1 B",
+      "W A -1 -",
+      "W B 6 A",
+      "W C 2 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -1,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "B",
+        6,
+        "A",
+        1,
+        "live"
+      ],
+      [
+        "C",
+        2,
+        "B",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-ordinary-shared": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 3,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 3 -",
+      "C N1 2 N0",
+      "F N0",
+      "F N1",
+      "F B",
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "U-retained-demand": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 3,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 3 -",
+      "C N1 2 N0",
+      "F N0",
+      "F N1",
+      "F B",
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "U-alias-demand": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      2,
+      3,
+      2,
+      3
+    ],
+    "rawListRoot": "N1",
+    "cellEvents": [
+      "C N0 3 -",
+      "C N1 2 N0",
+      "W B 3 -",
+      "W A 2 B",
+      "W N0 3 A",
+      "W N1 2 N0"
+    ],
+    "finalCells": [
+      [
+        "A",
+        2,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        3,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        3,
+        "A",
+        1,
+        "live"
+      ],
+      [
+        "N1",
+        2,
+        "N0",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-tail-demand": {
+    "status": "finished",
+    "kind": "I",
+    "answer": 12,
+    "rawListRoot": null,
+    "cellEvents": [
+      "C N0 5 -",
+      "W A -1 N0",
+      "F N0",
+      "F A",
+      "F C",
+      "F B"
+    ],
+    "finalCells": []
+  },
+  "U-drop-extra": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      2,
+      3
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W B 3 -",
+      "W A 2 B"
+    ],
+    "finalCells": [
+      [
+        "A",
+        2,
+        "B",
+        1,
+        "live"
+      ],
+      [
+        "B",
+        3,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "U-forward": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -3
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 -4 -",
+      "W N0 -3 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        -3,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-0-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-0-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-1-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-1-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-2-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-2-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-3-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-3-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-4-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-4-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-5-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-5-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-6-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-6-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -",
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-7-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-7-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-8-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-8-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2
+    ],
+    "rawListRoot": "A",
+    "cellEvents": [
+      "W A -2 -"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "boundary-9-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-9-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "boundary-10-nil": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "boundary-10-single": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [
+      "F A"
+    ],
+    "finalCells": []
+  },
+  "additional-0": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "additional-1": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -2,
+      -2
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "W A -2 -",
+      "C N0 -2 A"
+    ],
+    "finalCells": [
+      [
+        "A",
+        -2,
+        null,
+        1,
+        "live"
+      ],
+      [
+        "N0",
+        -2,
+        "A",
+        1,
+        "live"
+      ]
+    ]
+  },
+  "additional-2": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      -7
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 -7 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        -7,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "additional-3": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      2
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 2 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        2,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "additional-4": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "additional-5": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [
+      1
+    ],
+    "rawListRoot": "N0",
+    "cellEvents": [
+      "C N0 1 -"
+    ],
+    "finalCells": [
+      [
+        "N0",
+        1,
+        null,
+        1,
+        "live"
+      ]
+    ]
+  },
+  "additional-6": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  },
+  "additional-7": {
+    "status": "finished",
+    "kind": "L",
+    "answer": [],
+    "rawListRoot": null,
+    "cellEvents": [],
+    "finalCells": []
+  }
+}

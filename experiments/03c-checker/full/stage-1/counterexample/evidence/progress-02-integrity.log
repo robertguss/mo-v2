@@ -1,0 +1,17 @@
+lean/Full/Proofs/Control.lean: OK
+lean/Full/Proofs/Heap.lean: OK
+lean/Full/Proofs/Free.lean: OK
+lean/Full/Proofs/Effects.lean: OK
+lean/Full/Proofs/SimulationInitial.lean: OK
+lean/Full/Proofs/ProgressGate.lean: OK
+stage-1/progress-02/RESULT.md: OK
+stage-1/progress-02/REVIEW.md: OK
+stage-1/progress-02/evidence/BASELINE-integrity.log: OK
+stage-1/progress-02/evidence/FREEZE-integrity.log: OK
+stage-1/progress-02/evidence/MANIFEST-integrity.log: OK
+stage-1/progress-02/evidence/PREPARATION-integrity.log: OK
+stage-1/progress-02/evidence/axioms.log: OK
+stage-1/progress-02/evidence/clean-build.log: OK
+stage-1/progress-02/evidence/full-gate-incomplete.log: OK
+stage-1/progress-02/evidence/kernel.log: OK
+stage-1/progress-02/evidence/verifier-axioms.log: OK

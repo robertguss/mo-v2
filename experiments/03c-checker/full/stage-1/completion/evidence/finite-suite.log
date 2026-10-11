@@ -1,0 +1,12 @@
+Build completed successfully (15 jobs).
+PASS: 40 typed library declarations; 16 valid starts; 90 exact cases; C1-C22 and all 27 categories
+PASS: 84 finished manual ledgers/answers/retained graphs
+PASS fixture-negative: Bool is not Int
+PASS fixture-negative: unselected branch checked
+PASS fixture-negative: function cannot capture caller input
+PASS fixture-negative: bad initial multiplicity
+PASS fixture-negative: cycle
+PASS fixture-negative: wrong answer vs ledger
+PASS fixture-negative: omitted Free retains garbage
+PASS fixture-negative: Create relabeled as Write
+PASS summary observations; boundary/lifetime/F5/lifecycle checks STILL REQUIRED

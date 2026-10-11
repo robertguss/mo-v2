@@ -1,0 +1,31 @@
+load    : std/core from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core.kki
+load    : std/core/types from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_types.kki
+load    : std/core/undiv from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_undiv.kki
+load    : std/core/unsafe from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_unsafe.kki
+load    : std/core/int from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_int.kki
+load    : std/core/vector from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_vector.kki
+load    : std/core/bool from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_bool.kki
+load    : std/core/exn from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_exn.kki
+load    : std/core/hnd from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_hnd.kki
+load    : std/core/bytes from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_bytes.kki
+load    : std/core/order from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_order.kki
+load    : std/core/char from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_char.kki
+load    : std/core/bslice from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_bslice.kki
+load    : std/core/string from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_string.kki
+load    : std/core/sslice from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_sslice.kki
+load    : std/core/list from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_list.kki
+load    : std/core/maybe from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_maybe.kki
+load    : std/core/either from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_either.kki
+load    : std/core/result from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_result.kki
+load    : std/core/tuple from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_tuple.kki
+load    : std/core/lazy from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_lazy.kki
+load    : std/core/maybe2 from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_maybe2.kki
+load    : std/core/show from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_show.kki
+load    : std/core/debug from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_debug.kki
+load    : std/core/delayed from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_delayed.kki
+load    : std/core/console from: /home/user/.local/lib/koka/v3.2.9/gcc-drelease/std_core_console.kki
+parse   : .../koka-r3/s1a07.kk
+check   : koka-r3/s1a07
+linking : koka-r3/s1a07/@main
+compile : kklib from: /home/user/.local/share/koka/v3.2.9/kklib
+created : /tmp/full3c-koka-hvgm_dro/s1a07

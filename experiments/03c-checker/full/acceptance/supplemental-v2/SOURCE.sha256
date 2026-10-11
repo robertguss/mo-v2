@@ -1,0 +1,14 @@
+12527fb034a4e4e606a29b628efd80483ec393e5eca12222525b15772600bc12  ../lean/Full/Inspect.lean
+18067a5d45413b694bccaad6d37914adac540788fa7bd24fb7f983077473bc7a  ../run_spec.py
+1caaeaf669086dd313142758ae02bf6caca27961bd7f519991c55921cf66be3d  ../lean/lakefile.toml
+20958d381dce14478b02ad1062dc26f2969fc6f6225e81d3dfaac3930af45541  ../lean/Full/Plain.lean
+226ae9db76d0a78ff5094679c2595847bc4ca0b910b7c18e572b0685e7a37fa4  ../lean/Full/Language.lean
+36e6caeb5ecfa2dc019ca5b52c689ce4d4b9c99270bb451ef8a39eae25ac0f63  ../lean/Full/Lifecycle.lean
+53e500b2137d3ff12b1d7990c1cc130530172b56c2a9a479657571edf1f1bdd3  ../lean/TrialCompatibility.lean
+5e805da8c2b7f86fbf4e3f4fffb0f192aa773e5774a1f96c13eaea1d79a3ba15  ../lean/Full/Control.lean
+8733782dc070a99b312039cda424f601b80f3be6f6f512627da5ba25adc27632  ../lean/lean-toolchain
+9c6ccc591eecc490962a6e900240613608dfdfbc19b1998e5468cb3ff9a0b2bd  ../lean/Full.lean
+9ea490149015e0d69a34485ee8b46178172134b18954d9b005600b4ac8cef10a  ../lean/Full/Statements.lean
+c5e8b754ebb63592422de0a24c52f543442af917000f248662a2c2140440af2b  ../SPEC-ENCODING-BRIEF.md
+d151c7cab24687fe344d775ad3719a161cddd792d4eded9e13a4a385f40b1b6e  ../lean/Export.lean
+f2288ca4c6a72ca7e1193454ee0141208e3c6ad6854a523cf3fd99621a67e699  ../lean/Full/Counted.lean

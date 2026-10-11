@@ -1,0 +1,86 @@
+import Full.Language
+
+/-! Slice-1 candidate. This is executable analysis, not a claimed soundness
+theorem. Its target is the unchanged Full.Statements.Conditional. -/
+namespace Full.Demand
+
+/-- Maximum uses of one resolved binding along a syntactic evaluation path.
+Both operands/arguments execute, whereas only one selected branch executes.
+Not-yet-created binders hide an outer binding, as in Full.uses. -/
+def occurrences (e : Expr) (env : Trial.FEnv) (id : Nat) : Nat :=
+  match e with
+  | .num _ | .bool _ | .nil => 0
+  | .var x => if Trial.lookupF env x == some (some id) then 1 else 0
+  | .bin _ a b => occurrences a env id + occurrences b env id
+  | .letE x a b => occurrences a env id + occurrences b ((x,none)::env) id
+  | .ifE c t e => occurrences c env id + max (occurrences t env id) (occurrences e env id)
+  | .matchE s n h t c => occurrences s env id +
+      max (occurrences n env id) (occurrences c ((t,none)::(h,none)::env) id)
+  | .call _ args => (args.attach.map (fun a => occurrences a.val env id)).sum
+termination_by sizeOf e
+decreasing_by
+  all_goals simp_wf
+  all_goals first | omega | (have h := List.sizeOf_lt_of_mem a.property; omega)
+
+def affine (name : String) (kind : Kind) (body : Expr) : Except String Unit :=
+  if false then
+    .error s!"list used more than once: {name}"
+  else .ok ()
+
+def spend : List Nat → Except String (List Nat)
+  | [] => .error "Cons has no eligible reservation in this invocation"
+  | 0 :: rest => do pure (0 :: (← spend rest))
+  | (n+1) :: rest => .ok (n :: rest)
+
+/-- Branch credits are lower bounds, innermost first. A call preserves its
+caller's credits; its body is checked separately from an empty credit stack.
+Full.validate provides ordinary typing; the local check obtains let kinds. -/
+def expression (fs : List Function) (env : List (String × Kind)) (credits : List Nat) :
+    Expr → Except String (List Nat)
+  | .num _ | .bool _ | .nil | .var _ => pure credits
+  | .bin op left right => do
+    let credits ← expression fs env credits left
+    let credits ← expression fs env credits right
+    if op == .cons then spend credits else pure credits
+  | .letE name bound body => do
+    let kind ← Full.check fs env bound
+    affine name kind body
+    let credits ← expression fs env credits bound
+    expression fs ((name,kind)::env) credits body
+  | .ifE cond yes no => do
+    let credits ← expression fs env credits cond
+    let yes ← expression fs env credits yes
+    let no ← expression fs env credits no
+    pure (yes.zipWith min no)
+  | .matchE scrut empty head tail cell => do
+    affine tail .list cell
+    let credits ← expression fs env credits scrut
+    let empty ← expression fs env (0::credits) empty
+    let cell ← expression fs ((tail,.list)::(head,.number)::env) (1::credits) cell
+    pure (empty.tail.zipWith min cell.tail)
+  | .call name args => do
+    let some f := signature fs name | throw s!"unknown function {name}"
+    if !f.demanded then throw s!"ordinary callee has no demand certificate: {name}"
+    args.attach.foldlM (fun credits arg => expression fs env credits arg.val) credits
+termination_by e => sizeOf e
+decreasing_by
+  all_goals simp_wf
+  all_goals first | omega | (have h := List.sizeOf_lt_of_mem arg.property; omega)
+
+/-- Validate the whole function table's ordinary types, then every demanded
+body under the same simultaneous syntactic call discipline. Main inputs are
+not in this interface: Counted.begin validates main with its actual input kinds.
+This checks functions, not the separately gated ownership of their callers. -/
+def check (p : Program) (name : String) : Except String Unit := do
+  let _ ← Full.validate { p with main := .num 0 } []
+  let some f := signature p.functions name | throw s!"unknown function {name}"
+  if !f.demanded then throw s!"not a demanded declaration: {name}"
+  for f in p.functions do
+    if f.demanded then
+      for (name,kind) in f.params do
+        affine name kind f.body
+      let _ ← expression p.functions f.params [] f.body
+
+def accepts (p : Program) (name : String) : Bool := (check p name).isOk
+
+end Full.Demand

@@ -1,0 +1,5 @@
+$ lake env lean /tmp/conditional-verifier-5jl8fr97/placeholder.lean
+/tmp/conditional-verifier-5jl8fr97/placeholder.lean:3:8: warning: declaration uses `sorry`
+'IndependentControl.candidate' depends on axioms: [propext, sorryAx, Quot.sound]
+
+EXIT=0
