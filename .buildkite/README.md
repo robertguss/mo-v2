@@ -1,5 +1,20 @@
 # Buildkite CI
 
+> **Paused since 11 Oct 2026.** Buildkite ran out of runtime minutes. The
+> pipeline's GitHub webhook is disabled, and `main` no longer requires the
+> `buildkite/mo-v2` check. Until CI returns, run the same checks locally before
+> pushing:
+>
+> ```sh
+> bash .buildkite/history-guard.sh
+> bash .buildkite/checks.sh rust
+> bash .buildkite/checks.sh lean
+> ```
+>
+> Builds 87 to 92 were canceled for lack of minutes, not because anything
+> failed. To resume CI, re-enable the webhook, restore the required check on
+> `main`, and rebuild.
+
 This directory holds the whole CI setup. There is no GitHub Actions workflow
 and none should be added.
 
