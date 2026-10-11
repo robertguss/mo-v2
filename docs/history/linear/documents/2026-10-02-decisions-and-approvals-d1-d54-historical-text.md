@@ -1,0 +1,72 @@
+# Decisions and approvals — D1–D54 (historical text)
+
+> Exported from Linear on 2026-10-11 (D199: Linear retired; tracking moved to Notion).
+> Original: https://linear.app/robert-guss/document/decisions-and-approvals-d1-d54-historical-text-04a4b28df5f9
+> Created: 2026-10-02
+> Updated: 2026-10-02
+> Author: Robert Guss
+> Attached to: the Mo v2 project
+
+---
+
+Imported historical decision text; table whitespace normalized, wording retained. These rows are not new approvals. Later decisions and the live decisions document control subsequent changes. Numbers inside the imported text are preserved literally; new discussion must spell out what each decision means.
+
+Source: [https://github.com/robertguss/mo-v2/blob/13ca4c99334c3c6fa0ac157a6a5165b0882d7eb4/docs/DECISIONS.md](<https://github.com/robertguss/mo-v2/blob/13ca4c99334c3c6fa0ac157a6a5165b0882d7eb4/docs/DECISIONS.md>)
+
+| \# | Date | Decision |
+| -- | -- | -- |
+| D1 | 22 Sep 2026 | v2 is Robert's own language. If "build my own language" and "make AI-written code verifiably correct" ever conflict, building the language wins. |
+| D2 | 22 Sep 2026 | Purpose: a language designed for AI agents, not human authors, so they can write reliable, safe software that no human writes or reads. Verification is the central problem it solves. |
+| D3 | 22 Sep 2026 | Guiding principle (Robert's words): make it really hard to do the wrong thing and very easy to do the right thing. |
+| D4 | 22 Sep 2026 | General purpose. No single target domain. |
+| D5 | 22 Sep 2026 | Robert does not read v2's code, including the code of the language itself. He verifies through specs, tests, simulation and proofs. v2 has to prove its own premise. |
+| D6 | 22 Sep 2026 | Robert makes every design decision. AI agents propose options and build what is decided. |
+| D7 | 22 Sep 2026 | v2 starts in a fresh repo, `~/Projects/startups/mo-v2`, local git only; a remote comes when Robert chooses. v1 is archived as reference. |
+| D8 | 22 Sep 2026 | ~~Answer the decision map before building anything.~~ Superseded by D10 the same day. |
+| D9 | 22 Sep 2026 | Robert is new to language design and formal methods. For every decision, the AI guides: it explains the concepts, lays out options and tradeoffs, and makes a recommendation. Robert still decides. |
+| D10 | 22 Sep 2026 | Build in small steps with quick feedback: pick a small idea, then implement, validate and verify it before adding the next. No large upfront brainstorming. |
+| D11 | 22 Sep 2026 | Run Experiment 1: a tiny language (numbers, booleans, `+`, `==`, `if`) with a type checker and interpreter in Lean, a proof that approved programs don't get stuck, and a plain-English explanation Robert reads. Stops if the proof won't go through or Robert can't follow what it promises. |
+| D12 | 22 Sep 2026 | Experiment 1's spec is approved and locked: no mixing numbers and booleans, comparisons only between the same type, `if` conditions must be true/false, and both branches of an `if` must have the same type. |
+| D13 | 22 Sep 2026 | Models will write Mo worse than Go, Python or TypeScript because they have never seen it; comparing writing cost or token count against those languages is not a relevant measure. What matters is feedback helpful and fast enough that agents reach correct Mo programs. Token efficiency is not a goal. |
+| D14 | 22 Sep 2026 | Builder agents run as separate Claude Code sessions in visible Herdr panes, never as hidden subagents, so Robert can watch the work. |
+| D15 | 22 Sep 2026 | Experiment 1 is closed as a success: Lean proved the toy checker safe, and Robert can follow what was and wasn't proven. Conclusion: Lean alone is not enough. It proves "won't break in these ways", not "does what was meant"; v2 needs other verification methods too, each tried on tiny programs. |
+| D16 | 22 Sep 2026 | Experiment 2: verify one small function (a refund) four ways (example tests, property testing, a Lean proof, AI council review), then plant deliberate bugs and count which methods catch which. |
+| D17 | 22 Sep 2026 | Experiment 2 uses seven methods: example tests, property testing, a Lean proof, AI council review, exhaustive small-range checking, contracts and differential testing. For each planted bug, record which methods caught it, so methods that add nothing new show up. Correct-by-construction types are an Experiment 3 candidate. |
+| D18 | 22 Sep 2026 | Experiment 2's function is `withdraw(balance, amount)`, in whole cents. Locked promises: (1) success leaves exactly balance minus amount; (2) it succeeds when 0 < amount <= balance; (3) amount > balance fails with insufficient funds; (4) a zero amount fails with invalid amount. The six examples in `experiments/02-withdraw` are locked too. |
+| D19 | 23 Sep 2026 | Step back from experiments to the conceptual level: settle what Mo is, what its main features are and how they fit together, then go granular. Experiments resume to test concepts once the big picture is clear. |
+| D20 | 23 Sep 2026 | Working picture accepted (`PICTURE.md`): Mo is a spec language Robert reads plus a code language agents write, joined by a checker, across seven areas: spec layer, code layer, feedback loop, built-in verification, effects and authority, running programs, ecosystem. *(The two-languages part is superseded by D34.)* |
+| D21 | 23 Sep 2026 | The AI council uses Codex, not Gemini. |
+| D22 | 23 Sep 2026 | ~~TheBrain (the Mo Research brain) is the source of truth for Mo's research documents. The repo holds no copies of the Design Doc or Glossary.~~ Superseded by D54. |
+| D23 | 23 Sep 2026 | ~~TheBrain's Mo Research brain is organised by the Big Picture's seven areas. Earlier research is filed under the areas it feeds, as proposals, not decisions. The Big Picture lives only in TheBrain; ~~`~~docs/PICTURE.md~~`~~ is removed.~~ Superseded by D54. |
+| D24 | 23 Sep 2026 | When mistakes are caught: no program runs unless it passes the checker, which cannot be switched off. Promises about logic can be stated; they are proven before running where possible and checked while running where not (the SPARK approach). |
+| D25 | 23 Sep 2026 | Mo never guesses: every conversion between kinds of values is written explicitly, conditions must be true or false, values of different kinds cannot be compared, and any conversion that could lose information or fail (text to number, a big number into a small container) gives success or failure, which must be handled. |
+| D26 | 23 Sep 2026 | For now, and to be tested by experiments: Mo is fully pure (no value is ever changed in place). The compiler may update a value in place when it can prove nothing else holds it, invisibly to the program, and the writer can demand in-place updating for a function, which the checker must prove or refuse (as in Koka's fip). |
+| D27 | 23 Sep 2026 | Speed is very important, but Mo does not aim to be the fastest language possible. |
+| D28 | 23 Sep 2026 | Mo has no null. "Might be missing" is an ordinary value (like Option or Maybe), and the checker makes sure both cases are handled. |
+| D29 | 23 Sep 2026 | Errors: failures (the world misbehaved) are returned as success-or-failure values that the checker makes sure are handled, with a short shortcut to pass them upward, and each function lists the failures it can produce. Bugs (the program misbehaved) stop that part of the program immediately and are reported. No thrown exceptions. |
+| D30 | 23 Sep 2026 | Effects: every function's description lists the kinds of effects it has, checked to be complete (no effects listed means it only calculates). Code can touch only what it is handed (capabilities); the program starts with the keys the runtime gives it. Tests and replays can swap in pretend worlds. Long-lived state is held by the runtime or long-running parts of the program; details belong to running programs. |
+| D31 | 23 Sep 2026 | Program organisation: plain data (records and choice types, with the checker making sure every case is covered) plus functions grouped in modules. No classes, no objects, no inheritance; Robert prefers composability. A small, deliberately limited system of shared abilities; how limited is a later question. |
+| D32 | 23 Sep 2026 | Memory is cleaned up by counting holders (reference counting), the same mechanism behind D26's in-place updates. Pools (regions, Erlang-style per-process memory) are a later question that Robert wants to explore. |
+| D33 | 23 Sep 2026 | The code language uses the keywords-and-end family of syntax, in the spirit of Ruby and Elixir (Robert's favourite languages), with one official formatter, no alternative spellings for the same thing, and an unambiguous grammar that gives precise errors for half-broken programs. The spec language's look is a separate question. |
+| D34 | 23 Sep 2026 | Mo is a single programming language with a familiar Ruby/Elixir-like syntax, and it does everything decided in D24–D33 through its compiler and runtime. This supersedes the two-languages part of D20. Robert is more interested in the compiler and runtime ideas than in the syntax and language surface. |
+| D35 | 23 Sep 2026 | Defer syntax, the language surface and how promises are written. Next: write small programs and experiments to verify and validate the D24–D33 ideas. |
+| D36 | 23 Sep 2026 | The first experiment after the design choices tests D26 (pure, with invisible in-place updates and provable in-place demands). |
+| D37 | 23 Sep 2026 | Experiment 3, claim A: pure code with invisible in-place updates must run within 2× of the edit-in-place version to count as fast enough. |
+| D38 | 23 Sep 2026 | Mo's design decisions are based on real tests, measurements and data. After an idea is tested, the realistic alternatives are tested the same way and compared with its results. Data and benchmarks are documented and kept. |
+| D39 | 23 Sep 2026 | Experiment 3, claim D: the in-place demand must work on at least 7 of the 10 realistic functions to pass. |
+| D40 | 23 Sep 2026 | Experiment 3 uses Koka (Perceus counting and the fip in-place demand) to test D26, with edit-in-place Rust as the baseline. |
+| D41 | 23 Sep 2026 | Experiment 3, claim C: Koka only warns about a broken in-place demand, so the experiment counts that warning as a refusal. Claim C tests whether every broken demand is detected and every correct one accepted. The result notes that Koka only warns and that Mo must refuse. |
+| D42 | 23 Sep 2026 | Test D26 several ways and compare the results. After Experiment 3 (Koka): Experiment 3b builds the in-place helper in Rust (counted values that are copied only when shared) on the same benchmarks. Experiment 3c, a toy pure language with a checker for in-place demands, runs only if 3b looks promising. (The 3c gate is replaced by D66; the rest stands.) |
+| D43 | 23 Sep 2026 | ~~Experiment 3 also runs the four benchmarks in Lean 4 (same counting-and-in-place trick) for claims A and B, and records Lean's runtime alarm for shared values (dbgTraceIfShared) as part of claim B. Lean has no in-place demand, so it takes no part in claims C and D.~~ Superseded by D47. |
+| D44 | 23 Sep 2026 | Experiment 3's plan (`experiments/03-in-place/PLAN.md`) is approved, including the four benchmarks and the ten realistic functions for claim D. |
+| D45 | 23 Sep 2026 | Experiment 3, claim A: the 2× rule applies to the same-container comparison (Rust uses the same kind of linked structure, edited in place). Rust using its best container is measured too and recorded as extra data. |
+| D46 | 23 Sep 2026 | Experiment 3, claim D: a function counts as a success if it passes Koka's relaxed in-place demand (fbip: may free memory it is finished with, never copies). The result also records which functions pass the strict demand (fip). Claim C stays as approved. |
+| D47 | 23 Sep 2026 | Supersedes D43: Lean 4 is not part of Experiment 3's benchmarks; its speed is not a concern. Lean's role is proving that the in-place rules are correct, in Experiment 3c and when Mo implements them. |
+| D48 | 23 Sep 2026 | The 2× line for claim A (D37) is kept after checking the published Koka results: about 1–1.3× of C/C++ where reuse works, about 1.8× where it cannot. |
+| D49 | 23 Sep 2026 | Experiment 3, claim A: the 2× pass rule compares pure Koka with same-container Rust using the mimalloc allocator (the one Koka uses). Rust with the standard allocator, in both container forms, is recorded as extra data. |
+| D50 | 23 Sep 2026 | Experiment 3's acceptance file (`experiments/03-in-place/ACCEPTANCE.md`) is approved. |
+| D51 | 23 Sep 2026 | After the Codex review of Experiment 3's setup: fix five findings. Compare exact ratios with 2×; count a strict-demand pass only if the strict compile succeeds; pin and record the mimalloc versions on both sides; each broken claim C test must trigger the specific warning for its violation, and "calls an ordinary function" no longer creates its own list; interleave timing runs in a recorded random order. |
+| D52 | 23 Sep 2026 | Experiment 3, claim A: the same algorithm on both sides for every benchmark (inputs built from the back; one walk per round for benchmarks 1 and 4; cell-by-cell reversal; Okasaki red-black insertion with the same comparisons and four rebalancing cases; everything freed at the end, with long Rust lists freed in a loop). The lead checks the correspondence before timing. |
+| D53 | 23 Sep 2026 | Experiment 3, claim B, "keep an extra holder": lists keep the starting list until the end; the tree keeps a snapshot after the first 500,000 insertions. Each prints an extra last line computed from the kept contents after the work (b1 original-sum 500000500000; b2 snapshot-count 500000 and snapshot-sum 249986389805; b3 original-weighted 333333833333500000; b4 original-sum 499500000). The lead checks Koka's compiled program once to confirm the kept value is held during the work. |
+| D54 | 23 Sep 2026 | Supersedes D22 and D23: all of Mo's research documents and data live in this repo, under version control. TheBrain is no longer used; its contents move into the repo. |
+
