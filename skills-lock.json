@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "skills": {
+    "audit-agents": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/authoring/audit-agents/SKILL.md",
+      "computedHash": "f0bc48aa6685b9fa7c350c7b8a1db4c912b13604228295e2aba04c1e2f1d0431"
+    },
+    "audit-choices": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/audit-choices/SKILL.md",
+      "computedHash": "edd93febd25731f148d51ea14557ee564cc694e0257d5ff20e8022bc4787565c"
+    },
+    "audit-performance": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/audit-performance/SKILL.md",
+      "computedHash": "ec711096109abc533de2715c5f3d38fd74883c7ac2adfe5ecc68fbc3ed1d0e9f"
+    },
+    "audit-tests": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/audit-tests/SKILL.md",
+      "computedHash": "e6987cb430f87767be409016a1c35ba0adbabc7777314b0030b88b80b632128a"
+    },
+    "auto-research": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/auto-research/SKILL.md",
+      "computedHash": "81983f1f83b1ce16cff6390fcaa35fe5131e111d92f769840d9d26a4ba039d41"
+    },
+    "claude": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/claude/SKILL.md",
+      "computedHash": "ae63e0a90453e99298108c61b3836ac1387f92deb04468df9fb31bc5706edb7a"
+    },
+    "close-spec": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/close-spec/SKILL.md",
+      "computedHash": "bfc1ef92ed007dd2912f25f338f4e80d2c651d9cba104fca7e4e4fc4da217fa3"
+    },
+    "code-review": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "computedHash": "c0d0ef2db482f8674e9d7ab9b583dc10d2140cce1f85fe52fe087122b9128fcc"
+    },
+    "codex": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/codex/SKILL.md",
+      "computedHash": "8db94a704dd1222f369a2f71d04dc43e6710d60743817be7ab3af644e287e630"
+    },
+    "compare-screenshots": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/visual/compare-screenshots/SKILL.md",
+      "computedHash": "fe3152af44c26cd10601ad07274057ea9ee8fe33f511fe91c2f4a402964686df"
+    },
+    "design-with-images": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/visual/design-with-images/SKILL.md",
+      "computedHash": "5ef250b862411aa6fb9c21f5164aeb029c2bc420dc1c3524f19975062a4864f3"
+    },
+    "eli5": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/eli5/SKILL.md",
+      "computedHash": "e36fe79d46a12c75b2a490a14d44c1b8cfe9c3bb5d6a342bb26251413cf950aa"
+    },
+    "eval-skills": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/authoring/eval-skills/SKILL.md",
+      "computedHash": "97b98a522f8cd0eaa9a5e151996d124bf8193a5abc0d0e301b505c66ba38ce1f"
+    },
+    "explore-unknowns": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/explore-unknowns/SKILL.md",
+      "computedHash": "cbf6defe063152f0a8ca16523d39dea96f6970537c9e3406af5f1824439c3126"
+    },
+    "handoff-spec": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/handoff-spec/SKILL.md",
+      "computedHash": "9c35cc84ba046600cad224a66fc58409a3258ff694ad17df74c4a7f4ba1f324b"
+    },
+    "implement-spec": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/implement-spec/SKILL.md",
+      "computedHash": "e3c438b16d012e9427c951fad377e12fc428c84192292f4ba41dbb16df5c6f7f"
+    },
+    "implement-spec-with-codex": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/implement-spec-with-codex/SKILL.md",
+      "computedHash": "329fc991c4f7de59852e7fa32005ae10da014a152f63286924072aac2e6ac782"
+    },
+    "implement-spec-with-goal": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/implement-spec-with-goal/SKILL.md",
+      "computedHash": "6b94ff620e467a4657c7de008b131f4bf255e1118a46fa94b6a4e0547c6c21a6"
+    },
+    "launch-video": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/graphics/launch-video/SKILL.md",
+      "computedHash": "96c44f675364b55e7a7e6d4e58b93d19bcd0ff8f47fc6544e320f9341f459d15"
+    },
+    "marketing-pages": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/marketing-pages/SKILL.md",
+      "computedHash": "faa51930c3e4b27e5c04e96f479ae07e536e1348b98bc2836f7b842ed68f99cc"
+    },
+    "preview-shots": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/visual/preview-shots/SKILL.md",
+      "computedHash": "0144216dc6025327d206cdc381b3e46dfe6e92870cc1f85f4ce7c4dcbe7e3417"
+    },
+    "refactor-clean": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/refactor-clean/SKILL.md",
+      "computedHash": "c0aee499ed934c4b08b7981d133c68f69d528334d4544f29e684011689a357bb"
+    },
+    "renderer": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/graphics/renderer/SKILL.md",
+      "computedHash": "d56036e289ec8995d34d9b3db666d45e52028cceb19a6a0b6944b6f1ed57eb4c"
+    },
+    "retro": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/retro/SKILL.md",
+      "computedHash": "aa37593e2116cfe1d51d0a491a9cdeef529163bac49e041d384e8d8933c426bf"
+    },
+    "review": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/review/SKILL.md",
+      "computedHash": "227f15cbe64c1af4586d101c339a1b051851f10a90c2d23315c1bc329c18b3db"
+    },
+    "screenshot-critique": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/visual/screenshot-critique/SKILL.md",
+      "computedHash": "85a533aa99a0ff265c1e6f9b3767f0107168855e3335f28a4ab50c20829cf700"
+    },
+    "write-docs": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/write-docs/SKILL.md",
+      "computedHash": "a9ce90659e12de5f3ba290e67ce6f6475f11987573823fa98a28be485c14aedd"
+    },
+    "write-skills": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/authoring/write-skills/SKILL.md",
+      "computedHash": "1d37d9822c54f05633c6ff95e7c1451dda802c9b13fcff353cf7dd7e17c4641d"
+    },
+    "write-spec": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/write-spec/SKILL.md",
+      "computedHash": "14734cf867d6ab467560e00eb3b3f1f42fe9ff7e35b4cca06e9b0cf9b731d616"
+    },
+    "write-tests": {
+      "source": "dzhng/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/write-tests/SKILL.md",
+      "computedHash": "abfe1ad42934249962eb41d48d5db11a461e94bea2b18a72e4c89cf260b28cbf"
+    }
+  }
+}
